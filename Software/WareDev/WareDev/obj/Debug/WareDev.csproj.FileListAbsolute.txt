@@ -1,0 +1,76 @@
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.csproj.CoreCompileInputs.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Forms\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CoreCompileInputs.cache
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Inicio.resources
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Inicio.resources
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\Jessica\Downloads\Empacadora\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Inicio.resources
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\Jessica\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InventarioMP.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Inicio.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InventarioMP.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CoreCompileInputs.cache
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
+C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
