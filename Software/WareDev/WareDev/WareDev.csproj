@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuInicio.Designer.cs">
+      <DependentUpon>MenuInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,12 +75,6 @@
     </Compile>
     <Compile Include="ModalUsuario.Designer.cs">
       <DependentUpon>ModalUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="olvidoContra.cs">
       <SubType>Form</SubType>
@@ -102,6 +102,9 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MenuInicio.resx">
+      <DependentUpon>MenuInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InfoClient.resx">
       <DependentUpon>InfoClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModalUsuario.resx">
       <DependentUpon>ModalUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="olvidoContra.resx">
       <DependentUpon>olvidoContra.cs</DependentUpon>

@@ -34,7 +34,7 @@ namespace WareDev
         private void perfil_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuPrincipal inv = new MenuPrincipal();
+            MenuInicio inv = new MenuInicio();
             inv.Hide();
             registro re = new registro();
             re.Show();
@@ -43,7 +43,7 @@ namespace WareDev
         private void CerrarSesion_Click(object sender, EventArgs e)
         {
             var tam = this.WindowState;
-            MenuPrincipal inv = new MenuPrincipal(tam);
+            MenuInicio inv = new MenuInicio(tam);
             inv.Visible = false;
             inv.Hide();
             this.Hide();

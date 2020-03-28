@@ -74,3 +74,18 @@ C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\War
 C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
 C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
 C:\Users\AdriFdez18\Desktop\Extra\WareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources

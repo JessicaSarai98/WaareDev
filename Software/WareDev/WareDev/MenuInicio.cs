@@ -11,12 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace WareDev
 {
-    public partial class MenuPrincipal : Form
+    public partial class MenuInicio : Form
     {
         private Button currentButton;
-        private int tempIndex;
-        private Form activeForm; 
-        public MenuPrincipal(FormWindowState tam)
+        public MenuInicio(FormWindowState tam)
         {
             InitializeComponent();
             this.WindowState = tam;
@@ -24,8 +22,7 @@ namespace WareDev
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
-        public MenuPrincipal()
+        public MenuInicio()
         {
             InitializeComponent();
         }
@@ -44,10 +41,10 @@ namespace WareDev
                 {
                     DisableButton();
                     currentButton = (Button)btnSender;
-                    currentButton.BackColor = Color.FromArgb(124, 211, 84);
+                    currentButton.BackColor = Color.FromArgb(109, 252, 51);
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Tai Le", 15.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    
+
                 }
             }
         }
@@ -57,53 +54,56 @@ namespace WareDev
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(104, 176, 70);
+                    previousBtn.BackColor = Color.FromArgb(91, 210, 43);
                     previousBtn.ForeColor = SystemColors.ControlLightLight;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
 
-        private void btnexit_Click_1(object sender, EventArgs e)
+        //Funcion para crear Forms hijos 
+        private void AbrirFormInPanel(object Formhijo)
         {
-            Application.Exit();
+            if (this.contenedor.Controls.Count > 0)
+                this.contenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            this.contenedor.Controls.Add(fh);
+            this.contenedor.Tag = fh;
+            fh.BringToFront();
+            fh.Show();
+
         }
 
-      
-        //restaurar
-        private void btnrestaur_Click(object sender, EventArgs e)
+        private void btnuser_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnrestaur.Visible = false;
-            btnmaximizar.Visible = true;
-          
+            ActivateButton(sender);
+            AbrirFormInPanel(new registro());
         }
 
-
-        private void btnminimizar_Click_1(object sender, EventArgs e)
+        private void btnClient_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            ActivateButton(sender);
+            AbrirFormInPanel(new InfoClient());
         }
 
-        private void btnmaximizar_Click_1(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btnrestaur.Visible = true;
-            btnmaximizar.Visible = false;
+            Settings set = new Settings();
+            set.ShowDialog();
         }
 
-        private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
+        private void btnNombreUsuario_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            AbrirFormInPanel(new ModalUsuario());
         }
-
-
-       
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if (menu.Width == 250) {
+            if (menu.Width == 250)
+            {
                 menu.Width = 80;
                 btnInicio.Text = " ";
                 btnInven.Text = " ";
@@ -113,7 +113,8 @@ namespace WareDev
                 btnClient.Text = " ";
                 btnProve.Text = " ";
             }
-            else {
+            else
+            {
                 menu.Width = 250;
                 btnInicio.Text = "Start";
                 btnInven.Text = "Inventary";
@@ -125,63 +126,28 @@ namespace WareDev
             }
         }
 
-
-        //Funcion para crear Forms hijos 
-        private void AbrirFormInPanel(object Formhijo)
+        private void btnmaximizar_Click(object sender, EventArgs e)
         {
-            if (this.contenedor.Controls.Count > 0)
-                this.contenedor.Controls.RemoveAt(0);
-            Form fh = Formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.contenedor.Controls.Add(fh);
-            this.contenedor.Tag = fh;
-            fh.Show();
-
+            this.WindowState = FormWindowState.Maximized;
+            btnrestaur.Visible = true;
+            btnmaximizar.Visible = false;
         }
 
-
-        private void menu_Paint(object sender, PaintEventArgs e)
+        private void btnrestaur_Click_1(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Normal;
+            btnrestaur.Visible = false;
+            btnmaximizar.Visible = true;
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void btnminimizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void top_Paint(object sender, PaintEventArgs e)
+        private void btnexit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSupport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNombreUsuario_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new ModalUsuario());
-        }
-        
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            Settings set = new Settings();
-            set.ShowDialog();
-        }
-
-        private void btnClient_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            AbrirFormInPanel(new InfoClient());
-        }
-
-        private void btnuser_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            AbrirFormInPanel(new registro());
+            Application.Exit();
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -209,9 +175,10 @@ namespace WareDev
             ActivateButton(sender);
         }
 
-        private void btnInicio_Click_1(object sender, EventArgs e)
+        private void top_Paint_MouseDown(object sender, MouseEventArgs e)
         {
-
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -32,8 +32,8 @@
             this.perfil = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.usuario = new System.Windows.Forms.Panel();
-            this.NombreUsuario = new System.Windows.Forms.Label();
             this.fotouser = new System.Windows.Forms.PictureBox();
+            this.NombreUsuario = new System.Windows.Forms.Label();
             this.usuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotouser)).BeginInit();
             this.SuspendLayout();
@@ -86,20 +86,10 @@
             this.usuario.Controls.Add(this.CerrarSesion);
             this.usuario.Controls.Add(this.NombreUsuario);
             this.usuario.Controls.Add(this.panel1);
-            this.usuario.Location = new System.Drawing.Point(376, 43);
+            this.usuario.Location = new System.Drawing.Point(657, 3);
             this.usuario.Name = "usuario";
-            this.usuario.Size = new System.Drawing.Size(381, 508);
+            this.usuario.Size = new System.Drawing.Size(381, 399);
             this.usuario.TabIndex = 0;
-            // 
-            // NombreUsuario
-            // 
-            this.NombreUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreUsuario.Location = new System.Drawing.Point(48, 238);
-            this.NombreUsuario.Name = "NombreUsuario";
-            this.NombreUsuario.Size = new System.Drawing.Size(288, 26);
-            this.NombreUsuario.TabIndex = 2;
-            this.NombreUsuario.Text = "Inserte nombre del usuario";
-            this.NombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fotouser
             // 
@@ -110,6 +100,16 @@
             this.fotouser.TabIndex = 3;
             this.fotouser.TabStop = false;
             this.fotouser.Click += new System.EventHandler(this.fotouser_Click);
+            // 
+            // NombreUsuario
+            // 
+            this.NombreUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreUsuario.Location = new System.Drawing.Point(48, 238);
+            this.NombreUsuario.Name = "NombreUsuario";
+            this.NombreUsuario.Size = new System.Drawing.Size(288, 26);
+            this.NombreUsuario.TabIndex = 2;
+            this.NombreUsuario.Text = "Inserte nombre del usuario";
+            this.NombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ModalUsuario
             // 

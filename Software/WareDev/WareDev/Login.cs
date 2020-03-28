@@ -17,6 +17,9 @@ namespace WareDev
         public Login()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
         }
 
@@ -33,42 +36,6 @@ namespace WareDev
 
         }
 
-
-        /*Funcion erronea Ignorar*/
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /*Texbox para la entrada de usuario */
-        private void textUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnexit_Click(object sender, EventArgs e)
-        {
-            /*boton superior*/
-            Application.Exit();
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            /*boton a lado de settings*/
-            Application.Exit();
-        }
-
-        private void btnminimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             registro reg = new registro();
@@ -76,43 +43,67 @@ namespace WareDev
             reg.Show();
 
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+                
+        private void btnmaximizar_Click(object sender, EventArgs e)
         {
-//            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-//            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
-//            DataTable dt = new DataTable();
-//            sda.Fill(dt);
-//            if (dt.Rows[0][0].ToString() == "1")
-//            {
-                this.Hide();
-                var tam = this.WindowState;
-                MenuPrincipal ini = new MenuPrincipal(tam);
-////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
-               ini.Show();
-//            }
-//            else
-//            {
-//                MessageBox.Show("Invalid username or password");
-//            }
-            
-            
+            this.WindowState = FormWindowState.Maximized;
+            btnrestaur.Visible = true;
+            btnmaximizar.Visible = false;
         }
 
-        private void buthelp_Click(object sender, EventArgs e)
+        private void btnrestaur_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            this.WindowState = FormWindowState.Normal;
+            btnrestaur.Visible = false;
+            btnmaximizar.Visible = true;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             olvidoContra contra = new olvidoContra();
             contra.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+            //            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
+            //            DataTable dt = new DataTable();
+            //            sda.Fill(dt);
+            //            if (dt.Rows[0][0].ToString() == "1")
+            //            {
+            this.Hide();
+            var tam = this.WindowState;
+            MenuInicio ini = new MenuInicio(tam);
+            ////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            ini.Show();
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Invalid username or password");
+            //            }
+        }
+
+        private void titulo2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void titulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnminimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
