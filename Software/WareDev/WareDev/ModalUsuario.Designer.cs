@@ -86,7 +86,7 @@
             this.usuario.Controls.Add(this.CerrarSesion);
             this.usuario.Controls.Add(this.NombreUsuario);
             this.usuario.Controls.Add(this.panel1);
-            this.usuario.Location = new System.Drawing.Point(657, 3);
+            this.usuario.Location = new System.Drawing.Point(294, 54);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(381, 399);
             this.usuario.TabIndex = 0;

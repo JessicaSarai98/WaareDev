@@ -38,8 +38,6 @@
             this.User = new System.Windows.Forms.Panel();
             this.titulo2 = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.PictureBox();
-            this.btnrestaur = new System.Windows.Forms.PictureBox();
-            this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -56,8 +54,6 @@
             this.User.SuspendLayout();
             this.titulo2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnrestaur)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -161,8 +157,6 @@
             // titulo2
             // 
             this.titulo2.Controls.Add(this.btnexit);
-            this.titulo2.Controls.Add(this.btnrestaur);
-            this.titulo2.Controls.Add(this.btnmaximizar);
             this.titulo2.Controls.Add(this.btnminimizar);
             this.titulo2.Controls.Add(this.btnSettings);
             this.titulo2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -185,36 +179,11 @@
             this.btnexit.TabStop = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // btnrestaur
-            // 
-            this.btnrestaur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnrestaur.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaur.Image")));
-            this.btnrestaur.Location = new System.Drawing.Point(608, 12);
-            this.btnrestaur.Name = "btnrestaur";
-            this.btnrestaur.Size = new System.Drawing.Size(32, 32);
-            this.btnrestaur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnrestaur.TabIndex = 22;
-            this.btnrestaur.TabStop = false;
-            this.btnrestaur.Visible = false;
-            this.btnrestaur.Click += new System.EventHandler(this.btnrestaur_Click);
-            // 
-            // btnmaximizar
-            // 
-            this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(608, 12);
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(32, 32);
-            this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnmaximizar.TabIndex = 21;
-            this.btnmaximizar.TabStop = false;
-            this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
-            // 
             // btnminimizar
             // 
             this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(570, 12);
+            this.btnminimizar.Location = new System.Drawing.Point(608, 12);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(32, 32);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -249,7 +218,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(247, 491);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(149, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(169, 15);
             this.linkLabel1.TabIndex = 28;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado tu contraseña?";
@@ -349,8 +318,6 @@
             this.titulo2.ResumeLayout(false);
             this.titulo2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnrestaur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -367,8 +334,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel User;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox btnrestaur;
-        private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.PictureBox btnexit;
         private System.Windows.Forms.PictureBox btnSettings;

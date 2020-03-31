@@ -89,3 +89,20 @@ C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\
 C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
 C:\Users\William carmona\Documents\Desarrollo\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CoreCompileInputs.cache
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb

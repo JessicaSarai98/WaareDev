@@ -47,15 +47,13 @@ namespace WareDev
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            btnrestaur.Visible = true;
-            btnmaximizar.Visible = false;
+           
         }
 
         private void btnrestaur_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            btnrestaur.Visible = false;
-            btnmaximizar.Visible = true;
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

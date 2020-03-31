@@ -15,6 +15,12 @@ namespace WareDev
         public InfoClient()
         {
             InitializeComponent();
+            
+        }
+
+        private void InfoClient_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
