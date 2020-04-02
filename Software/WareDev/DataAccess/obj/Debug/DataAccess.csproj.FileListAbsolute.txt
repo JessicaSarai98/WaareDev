@@ -1,0 +1,12 @@
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb

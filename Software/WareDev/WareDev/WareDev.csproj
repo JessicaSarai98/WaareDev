@@ -230,5 +230,15 @@
   <ItemGroup>
     <None Include="Resources\Logo2.JPG" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9324bc5a-6981-4db9-87c9-6fb225ba523e}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{4d36e115-8b79-43b3-b256-44d5a6d1f0b4}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

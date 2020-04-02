@@ -1,0 +1,8 @@
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe.config
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\bin\Debug\Common.pdb
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\obj\Debug\Common.Properties.Resources.resources
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
+C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Common\obj\Debug\Common.csprojAssemblyReference.cache
