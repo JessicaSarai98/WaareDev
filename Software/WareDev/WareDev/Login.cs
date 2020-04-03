@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using Domain;
+using Common.cache;
 
 namespace WareDev
 {
@@ -43,19 +45,19 @@ namespace WareDev
             reg.Show();
 
         }
-                
+
         private void btnmaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-           
+
         }
 
         private void btnrestaur_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            
-        }
 
+        }
+        //olvido contraseña
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             olvidoContra contra = new olvidoContra();
@@ -64,16 +66,47 @@ namespace WareDev
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //NO MUEVAN NADA DE AQUI PLOX o los mato :)
+
             //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
             //            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
             //            DataTable dt = new DataTable();
             //            sda.Fill(dt);
             //            if (dt.Rows[0][0].ToString() == "1")
             //            {
+            //Empezando otro codigo 
+            //if (textUser.Text != "username" && textUser.TextLength >0)
+            //{
+            //    if (textKey.Text != "password")
+            //    {
+            //        UserModel user = new UserModel();
+            //        var validLogin = user.LoginUser(textUser.Text, textKey.Text);
+            //        if (validLogin == true)
+            //        {
+            //            //MessageBox.Show("Bienvenido" + UserCache.firstName + "," + UserCache.lastName);
+
+            //            var tam = this.WindowState;
+            //            MenuInicio ini = new MenuInicio(tam);
+            //            ini.Show();
+            //            this.Hide();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Invalid username or password");
+            //            textKey.Text = "Password";
+            //            textKey.UseSystemPasswordChar = false;
+            //            textUser.Focus();
+
+            //        }
+            //    }
+
+
+            //}
+
             this.Hide();
             var tam = this.WindowState;
             MenuInicio ini = new MenuInicio(tam);
-            ////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
             ini.Show();
             //            }
             //            else
@@ -82,6 +115,7 @@ namespace WareDev
             //            }
         }
 
+        
         private void titulo2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

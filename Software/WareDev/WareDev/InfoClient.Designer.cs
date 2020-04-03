@@ -31,27 +31,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.note = new System.Windows.Forms.TextBox();
+            this.cfditxt = new System.Windows.Forms.TextBox();
+            this.paytxt = new System.Windows.Forms.TextBox();
+            this.statustxt = new System.Windows.Forms.TextBox();
+            this.tasatxt = new System.Windows.Forms.TextBox();
+            this.identytxt = new System.Windows.Forms.TextBox();
+            this.CPtxt = new System.Windows.Forms.TextBox();
+            this.countrytxt = new System.Windows.Forms.TextBox();
+            this.statettxt = new System.Windows.Forms.TextBox();
+            this.citytxt = new System.Windows.Forms.TextBox();
+            this.addrestxt = new System.Windows.Forms.TextBox();
+            this.mailtxt = new System.Windows.Forms.TextBox();
+            this.phonetxt = new System.Windows.Forms.TextBox();
+            this.RFCtxt = new System.Windows.Forms.TextBox();
+            this.Nametxt = new System.Windows.Forms.TextBox();
+            this.IDtxtbox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -66,6 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Imprimir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,29 +76,28 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.Imprimir);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox17);
-            this.panel1.Controls.Add(this.textBox16);
-            this.panel1.Controls.Add(this.textBox15);
-            this.panel1.Controls.Add(this.textBox14);
-            this.panel1.Controls.Add(this.textBox13);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.note);
+            this.panel1.Controls.Add(this.cfditxt);
+            this.panel1.Controls.Add(this.paytxt);
+            this.panel1.Controls.Add(this.statustxt);
+            this.panel1.Controls.Add(this.tasatxt);
+            this.panel1.Controls.Add(this.identytxt);
+            this.panel1.Controls.Add(this.CPtxt);
+            this.panel1.Controls.Add(this.countrytxt);
+            this.panel1.Controls.Add(this.statettxt);
+            this.panel1.Controls.Add(this.citytxt);
+            this.panel1.Controls.Add(this.addrestxt);
+            this.panel1.Controls.Add(this.mailtxt);
+            this.panel1.Controls.Add(this.phonetxt);
+            this.panel1.Controls.Add(this.RFCtxt);
+            this.panel1.Controls.Add(this.Nametxt);
+            this.panel1.Controls.Add(this.IDtxtbox);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -121,15 +119,16 @@
             this.panel1.Size = new System.Drawing.Size(1250, 740);
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(839, 640);
+            this.button2.Location = new System.Drawing.Point(829, 613);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 48);
+            this.button2.Size = new System.Drawing.Size(115, 48);
             this.button2.TabIndex = 36;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
@@ -140,166 +139,157 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(1017, 640);
+            this.button1.Location = new System.Drawing.Point(1110, 613);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 48);
+            this.button1.Size = new System.Drawing.Size(115, 44);
             this.button1.TabIndex = 35;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
             // 
-            // textBox17
+            // note
             // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.Location = new System.Drawing.Point(820, 542);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(357, 62);
-            this.textBox17.TabIndex = 34;
-            this.textBox17.UseWaitCursor = true;
+            this.note.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.note.Location = new System.Drawing.Point(829, 515);
+            this.note.Multiline = true;
+            this.note.Name = "note";
+            this.note.Size = new System.Drawing.Size(357, 62);
+            this.note.TabIndex = 34;
+            this.note.UseWaitCursor = true;
             // 
-            // textBox16
+            // cfditxt
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.Location = new System.Drawing.Point(1017, 439);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(174, 20);
-            this.textBox16.TabIndex = 33;
-            this.textBox16.UseWaitCursor = true;
+            this.cfditxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cfditxt.Location = new System.Drawing.Point(1017, 411);
+            this.cfditxt.Name = "cfditxt";
+            this.cfditxt.Size = new System.Drawing.Size(174, 20);
+            this.cfditxt.TabIndex = 33;
+            this.cfditxt.UseWaitCursor = true;
             // 
-            // textBox15
+            // paytxt
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.Location = new System.Drawing.Point(1017, 363);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(174, 20);
-            this.textBox15.TabIndex = 32;
-            this.textBox15.UseWaitCursor = true;
+            this.paytxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.paytxt.Location = new System.Drawing.Point(1017, 327);
+            this.paytxt.Name = "paytxt";
+            this.paytxt.Size = new System.Drawing.Size(174, 20);
+            this.paytxt.TabIndex = 32;
+            this.paytxt.UseWaitCursor = true;
             // 
-            // textBox14
+            // statustxt
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Location = new System.Drawing.Point(1017, 296);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(174, 20);
-            this.textBox14.TabIndex = 31;
-            this.textBox14.UseWaitCursor = true;
+            this.statustxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.statustxt.Location = new System.Drawing.Point(1017, 242);
+            this.statustxt.Name = "statustxt";
+            this.statustxt.Size = new System.Drawing.Size(174, 20);
+            this.statustxt.TabIndex = 30;
+            this.statustxt.UseWaitCursor = true;
             // 
-            // textBox13
+            // tasatxt
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(1017, 231);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(174, 20);
-            this.textBox13.TabIndex = 30;
-            this.textBox13.UseWaitCursor = true;
+            this.tasatxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tasatxt.Location = new System.Drawing.Point(1017, 178);
+            this.tasatxt.Name = "tasatxt";
+            this.tasatxt.Size = new System.Drawing.Size(174, 20);
+            this.tasatxt.TabIndex = 29;
+            this.tasatxt.UseWaitCursor = true;
             // 
-            // textBox12
+            // identytxt
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(1017, 167);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(174, 20);
-            this.textBox12.TabIndex = 29;
-            this.textBox12.UseWaitCursor = true;
+            this.identytxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.identytxt.Location = new System.Drawing.Point(1017, 108);
+            this.identytxt.Name = "identytxt";
+            this.identytxt.Size = new System.Drawing.Size(174, 20);
+            this.identytxt.TabIndex = 28;
+            this.identytxt.UseWaitCursor = true;
             // 
-            // textBox11
+            // CPtxt
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Location = new System.Drawing.Point(1017, 108);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(174, 20);
-            this.textBox11.TabIndex = 28;
-            this.textBox11.UseWaitCursor = true;
+            this.CPtxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CPtxt.Location = new System.Drawing.Point(1017, 53);
+            this.CPtxt.Name = "CPtxt";
+            this.CPtxt.Size = new System.Drawing.Size(174, 20);
+            this.CPtxt.TabIndex = 27;
+            this.CPtxt.UseWaitCursor = true;
             // 
-            // textBox10
+            // countrytxt
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(1017, 53);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(174, 20);
-            this.textBox10.TabIndex = 27;
-            this.textBox10.UseWaitCursor = true;
+            this.countrytxt.Location = new System.Drawing.Point(203, 628);
+            this.countrytxt.Name = "countrytxt";
+            this.countrytxt.Size = new System.Drawing.Size(191, 20);
+            this.countrytxt.TabIndex = 26;
+            this.countrytxt.UseWaitCursor = true;
             // 
-            // textBox9
+            // statettxt
             // 
-            this.textBox9.Location = new System.Drawing.Point(203, 628);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(191, 20);
-            this.textBox9.TabIndex = 26;
-            this.textBox9.UseWaitCursor = true;
+            this.statettxt.Location = new System.Drawing.Point(203, 567);
+            this.statettxt.Name = "statettxt";
+            this.statettxt.Size = new System.Drawing.Size(191, 20);
+            this.statettxt.TabIndex = 25;
+            this.statettxt.UseWaitCursor = true;
             // 
-            // textBox8
+            // citytxt
             // 
-            this.textBox8.Location = new System.Drawing.Point(203, 567);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(191, 20);
-            this.textBox8.TabIndex = 25;
-            this.textBox8.UseWaitCursor = true;
+            this.citytxt.Location = new System.Drawing.Point(203, 504);
+            this.citytxt.Name = "citytxt";
+            this.citytxt.Size = new System.Drawing.Size(191, 20);
+            this.citytxt.TabIndex = 24;
+            this.citytxt.UseWaitCursor = true;
             // 
-            // textBox7
+            // addrestxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(203, 500);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 20);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.UseWaitCursor = true;
+            this.addrestxt.Location = new System.Drawing.Point(203, 422);
+            this.addrestxt.Multiline = true;
+            this.addrestxt.Name = "addrestxt";
+            this.addrestxt.Size = new System.Drawing.Size(286, 58);
+            this.addrestxt.TabIndex = 23;
+            this.addrestxt.UseWaitCursor = true;
             // 
-            // textBox6
+            // mailtxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(203, 422);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(286, 58);
-            this.textBox6.TabIndex = 23;
-            this.textBox6.UseWaitCursor = true;
+            this.mailtxt.Location = new System.Drawing.Point(203, 370);
+            this.mailtxt.Name = "mailtxt";
+            this.mailtxt.Size = new System.Drawing.Size(213, 20);
+            this.mailtxt.TabIndex = 22;
+            this.mailtxt.UseWaitCursor = true;
             // 
-            // textBox5
+            // phonetxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(203, 370);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(213, 20);
-            this.textBox5.TabIndex = 22;
-            this.textBox5.UseWaitCursor = true;
+            this.phonetxt.Location = new System.Drawing.Point(203, 296);
+            this.phonetxt.Name = "phonetxt";
+            this.phonetxt.Size = new System.Drawing.Size(213, 20);
+            this.phonetxt.TabIndex = 21;
+            this.phonetxt.UseWaitCursor = true;
             // 
-            // textBox4
+            // RFCtxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(203, 296);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(213, 20);
-            this.textBox4.TabIndex = 21;
-            this.textBox4.UseWaitCursor = true;
+            this.RFCtxt.Location = new System.Drawing.Point(203, 231);
+            this.RFCtxt.Name = "RFCtxt";
+            this.RFCtxt.Size = new System.Drawing.Size(213, 20);
+            this.RFCtxt.TabIndex = 20;
+            this.RFCtxt.UseWaitCursor = true;
             // 
-            // textBox3
+            // Nametxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(203, 231);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.UseWaitCursor = true;
+            this.Nametxt.Location = new System.Drawing.Point(203, 167);
+            this.Nametxt.Name = "Nametxt";
+            this.Nametxt.Size = new System.Drawing.Size(213, 20);
+            this.Nametxt.TabIndex = 19;
+            this.Nametxt.UseWaitCursor = true;
             // 
-            // textBox2
+            // IDtxtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(203, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.UseWaitCursor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(203, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.UseWaitCursor = true;
+            this.IDtxtbox.Location = new System.Drawing.Point(203, 112);
+            this.IDtxtbox.Name = "IDtxtbox";
+            this.IDtxtbox.Size = new System.Drawing.Size(213, 20);
+            this.IDtxtbox.TabIndex = 18;
+            this.IDtxtbox.UseWaitCursor = true;
             // 
             // label18
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(816, 504);
+            this.label18.Location = new System.Drawing.Point(825, 477);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 24);
             this.label18.TabIndex = 17;
@@ -311,7 +301,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(816, 435);
+            this.label17.Location = new System.Drawing.Point(826, 407);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(56, 24);
             this.label17.TabIndex = 16;
@@ -323,31 +313,19 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(816, 359);
+            this.label16.Location = new System.Drawing.Point(816, 323);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(166, 24);
             this.label16.TabIndex = 15;
             this.label16.Text = "Payment Method";
             this.label16.UseWaitCursor = true;
             // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(816, 297);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 24);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Seller";
-            this.label15.UseWaitCursor = true;
-            // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(816, 233);
+            this.label14.Location = new System.Drawing.Point(816, 244);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 24);
             this.label14.TabIndex = 13;
@@ -359,7 +337,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(816, 168);
+            this.label13.Location = new System.Drawing.Point(816, 179);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 24);
             this.label13.TabIndex = 12;
@@ -500,6 +478,19 @@
             this.label1.Text = "CLIENT INFORMATION";
             this.label1.UseWaitCursor = true;
             // 
+            // Imprimir
+            // 
+            this.Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Imprimir.BackColor = System.Drawing.Color.Black;
+            this.Imprimir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Imprimir.Location = new System.Drawing.Point(974, 613);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(114, 48);
+            this.Imprimir.TabIndex = 37;
+            this.Imprimir.Text = "Imprimir ";
+            this.Imprimir.UseVisualStyleBackColor = false;
+            this.Imprimir.UseWaitCursor = true;
+            // 
             // InfoClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,27 +509,8 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -555,5 +527,23 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button Imprimir;
+        public System.Windows.Forms.TextBox countrytxt;
+        public System.Windows.Forms.TextBox statettxt;
+        public System.Windows.Forms.TextBox citytxt;
+        public System.Windows.Forms.TextBox addrestxt;
+        public System.Windows.Forms.TextBox mailtxt;
+        public System.Windows.Forms.TextBox phonetxt;
+        public System.Windows.Forms.TextBox RFCtxt;
+        public System.Windows.Forms.TextBox Nametxt;
+        public System.Windows.Forms.TextBox IDtxtbox;
+        public System.Windows.Forms.TextBox note;
+        public System.Windows.Forms.TextBox cfditxt;
+        public System.Windows.Forms.TextBox paytxt;
+        public System.Windows.Forms.TextBox statustxt;
+        public System.Windows.Forms.TextBox tasatxt;
+        public System.Windows.Forms.TextBox identytxt;
+        public System.Windows.Forms.TextBox CPtxt;
+        public System.Windows.Forms.Label label16;
     }
 }
