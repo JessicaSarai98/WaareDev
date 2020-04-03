@@ -105,7 +105,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(635, 353);
+            this.button6.Location = new System.Drawing.Point(551, 315);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(157, 56);
@@ -123,7 +123,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(827, 353);
+            this.button5.Location = new System.Drawing.Point(743, 315);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(157, 56);
@@ -142,7 +142,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(762, 510);
+            this.button1.Location = new System.Drawing.Point(769, 444);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(161, 42);
@@ -154,7 +154,7 @@
             // 
             this.Fotouser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Fotouser.BackColor = System.Drawing.Color.Silver;
-            this.Fotouser.Location = new System.Drawing.Point(694, 76);
+            this.Fotouser.Location = new System.Drawing.Point(610, 38);
             this.Fotouser.Name = "Fotouser";
             this.Fotouser.Size = new System.Drawing.Size(210, 189);
             this.Fotouser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(533, 510);
+            this.button2.Location = new System.Drawing.Point(540, 444);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(148, 41);
@@ -201,7 +201,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(318, 510);
+            this.button3.Location = new System.Drawing.Point(325, 444);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 42);
             this.button3.TabIndex = 23;
@@ -252,7 +252,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(100, 510);
+            this.button4.Location = new System.Drawing.Point(107, 444);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(144, 42);

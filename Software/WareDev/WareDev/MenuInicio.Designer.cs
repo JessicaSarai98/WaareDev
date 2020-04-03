@@ -47,11 +47,11 @@
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.PictureBox();
             this.btnexit = new System.Windows.Forms.PictureBox();
-            this.contenedor = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hora = new System.Windows.Forms.Label();
-            this.fecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.fecha = new System.Windows.Forms.Label();
+            this.hora = new System.Windows.Forms.Label();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -60,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
-            this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,10 +90,10 @@
             this.btnCotizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCotizar.Image = ((System.Drawing.Image)(resources.GetObject("btnCotizar.Image")));
             this.btnCotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCotizar.Location = new System.Drawing.Point(0, 556);
+            this.btnCotizar.Location = new System.Drawing.Point(0, 520);
             this.btnCotizar.Name = "btnCotizar";
             this.btnCotizar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCotizar.Size = new System.Drawing.Size(250, 60);
+            this.btnCotizar.Size = new System.Drawing.Size(250, 46);
             this.btnCotizar.TabIndex = 19;
             this.btnCotizar.Text = "Quotations";
             this.btnCotizar.UseVisualStyleBackColor = false;
@@ -110,10 +109,10 @@
             this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 496);
+            this.btnReportes.Location = new System.Drawing.Point(0, 466);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(250, 60);
+            this.btnReportes.Size = new System.Drawing.Size(250, 54);
             this.btnReportes.TabIndex = 18;
             this.btnReportes.Text = "Reports";
             this.btnReportes.UseVisualStyleBackColor = false;
@@ -129,10 +128,10 @@
             this.btnInven.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnInven.Image = ((System.Drawing.Image)(resources.GetObject("btnInven.Image")));
             this.btnInven.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInven.Location = new System.Drawing.Point(0, 436);
+            this.btnInven.Location = new System.Drawing.Point(0, 412);
             this.btnInven.Name = "btnInven";
             this.btnInven.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInven.Size = new System.Drawing.Size(250, 60);
+            this.btnInven.Size = new System.Drawing.Size(250, 54);
             this.btnInven.TabIndex = 17;
             this.btnInven.Text = "Inventory";
             this.btnInven.UseVisualStyleBackColor = false;
@@ -148,10 +147,10 @@
             this.btnProve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnProve.Image = ((System.Drawing.Image)(resources.GetObject("btnProve.Image")));
             this.btnProve.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProve.Location = new System.Drawing.Point(0, 376);
+            this.btnProve.Location = new System.Drawing.Point(0, 358);
             this.btnProve.Name = "btnProve";
             this.btnProve.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnProve.Size = new System.Drawing.Size(250, 60);
+            this.btnProve.Size = new System.Drawing.Size(250, 54);
             this.btnProve.TabIndex = 16;
             this.btnProve.Text = "Suppliers";
             this.btnProve.UseVisualStyleBackColor = false;
@@ -167,10 +166,10 @@
             this.btnClient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnClient.Image = ((System.Drawing.Image)(resources.GetObject("btnClient.Image")));
             this.btnClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Location = new System.Drawing.Point(0, 316);
+            this.btnClient.Location = new System.Drawing.Point(0, 304);
             this.btnClient.Name = "btnClient";
             this.btnClient.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnClient.Size = new System.Drawing.Size(250, 60);
+            this.btnClient.Size = new System.Drawing.Size(250, 54);
             this.btnClient.TabIndex = 15;
             this.btnClient.Text = "Customers";
             this.btnClient.UseVisualStyleBackColor = false;
@@ -186,10 +185,10 @@
             this.btnuser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnuser.Image = ((System.Drawing.Image)(resources.GetObject("btnuser.Image")));
             this.btnuser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnuser.Location = new System.Drawing.Point(0, 256);
+            this.btnuser.Location = new System.Drawing.Point(0, 250);
             this.btnuser.Name = "btnuser";
             this.btnuser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnuser.Size = new System.Drawing.Size(250, 60);
+            this.btnuser.Size = new System.Drawing.Size(250, 54);
             this.btnuser.TabIndex = 14;
             this.btnuser.Text = "Users";
             this.btnuser.UseVisualStyleBackColor = false;
@@ -208,7 +207,7 @@
             this.btnInicio.Location = new System.Drawing.Point(0, 196);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnInicio.Size = new System.Drawing.Size(250, 60);
+            this.btnInicio.Size = new System.Drawing.Size(250, 54);
             this.btnInicio.TabIndex = 13;
             this.btnInicio.Text = "Start";
             this.btnInicio.UseVisualStyleBackColor = false;
@@ -338,15 +337,10 @@
             this.btnexit.TabStop = false;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // contenedor
+            // timer1
             // 
-            this.contenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.contenedor.Controls.Add(this.panel1);
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(250, 57);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1034, 592);
-            this.contenedor.TabIndex = 5;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -354,37 +348,42 @@
             this.panel1.Controls.Add(this.fecha);
             this.panel1.Controls.Add(this.hora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 505);
+            this.panel1.Location = new System.Drawing.Point(250, 572);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1034, 87);
-            this.panel1.TabIndex = 0;
-            // 
-            // hora
-            // 
-            this.hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hora.AutoSize = true;
-            this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hora.Location = new System.Drawing.Point(731, 10);
-            this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(159, 39);
-            this.hora.TabIndex = 0;
-            this.hora.Text = "17:52:00";
+            this.panel1.Size = new System.Drawing.Size(1034, 77);
+            this.panel1.TabIndex = 5;
             // 
             // fecha
             // 
             this.fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fecha.AutoSize = true;
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecha.Location = new System.Drawing.Point(677, 49);
+            this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(278, 29);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
-            // timer1
+            // hora
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.hora.AutoSize = true;
+            this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hora.Location = new System.Drawing.Point(697, 0);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(159, 39);
+            this.hora.TabIndex = 0;
+            this.hora.Text = "17:52:00";
+            // 
+            // contenedor
+            // 
+            this.contenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contenedor.Location = new System.Drawing.Point(250, 57);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1034, 515);
+            this.contenedor.TabIndex = 6;
             // 
             // MenuInicio
             // 
@@ -392,6 +391,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 649);
             this.Controls.Add(this.contenedor);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.top);
             this.Controls.Add(this.menu);
             this.MinimumSize = new System.Drawing.Size(850, 500);
@@ -406,7 +406,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
-            this.contenedor.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -432,10 +431,10 @@
         private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.PictureBox btnSettings;
         private System.Windows.Forms.PictureBox btnexit;
-        private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label hora;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel contenedor;
     }
 }
