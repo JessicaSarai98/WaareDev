@@ -63,7 +63,7 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1050, 0);
+            this.barraTitulo.Size = new System.Drawing.Size(1018, 0);
             this.barraTitulo.TabIndex = 7;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
@@ -92,7 +92,7 @@
             this.User.Dock = System.Windows.Forms.DockStyle.Fill;
             this.User.Location = new System.Drawing.Point(0, 0);
             this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(1050, 603);
+            this.User.Size = new System.Drawing.Size(1018, 476);
             this.User.TabIndex = 21;
             // 
             // button6
@@ -104,7 +104,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(561, 315);
+            this.button6.Location = new System.Drawing.Point(529, 315);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(157, 56);
@@ -122,7 +122,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(753, 315);
+            this.button5.Location = new System.Drawing.Point(721, 315);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(157, 56);
@@ -141,7 +141,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(774, 447);
+            this.button1.Location = new System.Drawing.Point(764, 409);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(161, 42);
@@ -153,7 +153,7 @@
             // 
             this.Fotouser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Fotouser.BackColor = System.Drawing.Color.Silver;
-            this.Fotouser.Location = new System.Drawing.Point(620, 38);
+            this.Fotouser.Location = new System.Drawing.Point(588, 38);
             this.Fotouser.Name = "Fotouser";
             this.Fotouser.Size = new System.Drawing.Size(210, 189);
             this.Fotouser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +170,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(545, 447);
+            this.button2.Location = new System.Drawing.Point(557, 409);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(148, 41);
@@ -200,7 +200,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(330, 447);
+            this.button3.Location = new System.Drawing.Point(353, 408);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 42);
             this.button3.TabIndex = 23;
@@ -251,7 +251,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(112, 447);
+            this.button4.Location = new System.Drawing.Point(159, 409);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(144, 42);
@@ -333,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 603);
+            this.ClientSize = new System.Drawing.Size(1018, 476);
             this.Controls.Add(this.User);
             this.Controls.Add(this.barraTitulo);
             this.Name = "registro";
