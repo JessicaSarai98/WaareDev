@@ -1,7 +1,11 @@
 01/04/2020
 Jessica
-	Utilize capas para la conexion a la base de datos con el login de otra manera
+	Utilicé capas para la conexion a la base de datos con el login de otra manera
 	para que se pueda hacer el envio de la contraseña por email
 	Añadi 3 proyectos: common, domain, accessData 
 	Modifique la parte de inicio de sesión 
+	
+05/04/2020
+	Agregue carpetas MasterMailServer
+	SystemSupportMail
 	

@@ -67,15 +67,15 @@ namespace WareDev
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //NO MUEVAN NADA DE AQUI PLOX o los mato :)
-
-            //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-            //            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
-            //            DataTable dt = new DataTable();
-            //            sda.Fill(dt);
-            //            if (dt.Rows[0][0].ToString() == "1")
-            //            {
-            //Empezando otro codigo 
-            //if (textUser.Text != "username" && textUser.TextLength >0)
+            /*
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {*/
+            //Empezando otro codigo
+            //if (textUser.Text != "username" && textUser.TextLength > 0)
             //{
             //    if (textKey.Text != "password")
             //    {
@@ -99,43 +99,39 @@ namespace WareDev
 
             //        }
             //    }
-
-
             //}
 
             this.Hide();
             var tam = this.WindowState;
             MenuInicio ini = new MenuInicio(tam);
-            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            MessageBox.Show("Bienvenido: " + textUser.Text + ".");
             ini.Show();
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Invalid username or password");
-            //            }
-        }
 
+        }
         
-        private void titulo2_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
-        private void titulo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
 
-        private void btnexit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+            private void titulo2_MouseDown(object sender, MouseEventArgs e)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
 
-        private void btnminimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
+            private void titulo_MouseDown(object sender, MouseEventArgs e)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+
+            private void btnexit_Click(object sender, EventArgs e)
+            {
+                Application.Exit();
+            }
+
+            private void btnminimizar_Click(object sender, EventArgs e)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
-}
+

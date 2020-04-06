@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Domain; 
 
 namespace WareDev
 {
@@ -17,12 +17,19 @@ namespace WareDev
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            /*var user = new UserModel();
+            var user = new UserModel();
             var result = user.recoverPassword(txtEmail.Text);
-            lblResult.Text = result; */
+            MessageBox.Show("Enviado: " + txtEmail.Text + ".");
+            //lblResult.Text = result; 
         }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
