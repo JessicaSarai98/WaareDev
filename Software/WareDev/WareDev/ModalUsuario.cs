@@ -42,13 +42,25 @@ namespace WareDev
 
         private void CerrarSesion_Click(object sender, EventArgs e)
         {
+
+            //Checar el cerrar sesion con mensaje de confirmacion 
             var tam = this.WindowState;
             MenuInicio inv = new MenuInicio(tam);
-            inv.Visible = false;
-            inv.Hide();
-            this.Hide();
-            Login login = new Login();
-            login.Show();
+            //inv.Visible = false;
+            //inv.Hide();
+            //this.Hide();
+            this.Close();
+
+            if (MessageBox.Show("¿Desea cerrar sesion ?", "Confirmacion", MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+            {
+              
+                Login login = new Login();
+                login.Show();
+                inv.Close();
+                inv.Hide();
+
+            }
+
         }
 
         private void fotouser_Click(object sender, EventArgs e)

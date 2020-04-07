@@ -40,11 +40,12 @@
             // 
             // CerrarSesion
             // 
+            this.CerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarSesion.BackColor = System.Drawing.Color.Silver;
             this.CerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CerrarSesion.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CerrarSesion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CerrarSesion.Location = new System.Drawing.Point(212, 336);
+            this.CerrarSesion.Location = new System.Drawing.Point(337, 277);
             this.CerrarSesion.Name = "CerrarSesion";
             this.CerrarSesion.Size = new System.Drawing.Size(145, 64);
             this.CerrarSesion.TabIndex = 0;
@@ -54,12 +55,13 @@
             // 
             // perfil
             // 
+            this.perfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.perfil.BackColor = System.Drawing.Color.Silver;
             this.perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.perfil.FlatAppearance.BorderSize = 0;
             this.perfil.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.perfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.perfil.Location = new System.Drawing.Point(27, 336);
+            this.perfil.Location = new System.Drawing.Point(109, 277);
             this.perfil.Name = "perfil";
             this.perfil.Size = new System.Drawing.Size(144, 64);
             this.perfil.TabIndex = 0;
@@ -74,26 +76,30 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 33);
+            this.panel1.Size = new System.Drawing.Size(568, 33);
             this.panel1.TabIndex = 1;
             // 
             // usuario
             // 
-            this.usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
             this.usuario.Controls.Add(this.fotouser);
             this.usuario.Controls.Add(this.perfil);
             this.usuario.Controls.Add(this.CerrarSesion);
             this.usuario.Controls.Add(this.NombreUsuario);
             this.usuario.Controls.Add(this.panel1);
-            this.usuario.Location = new System.Drawing.Point(294, 54);
+            this.usuario.Location = new System.Drawing.Point(3, 2);
             this.usuario.Name = "usuario";
-            this.usuario.Size = new System.Drawing.Size(381, 399);
+            this.usuario.Size = new System.Drawing.Size(568, 382);
             this.usuario.TabIndex = 0;
             // 
             // fotouser
             // 
-            this.fotouser.Location = new System.Drawing.Point(111, 60);
+            this.fotouser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fotouser.Location = new System.Drawing.Point(192, 49);
             this.fotouser.Name = "fotouser";
             this.fotouser.Size = new System.Drawing.Size(166, 142);
             this.fotouser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -103,8 +109,10 @@
             // 
             // NombreUsuario
             // 
+            this.NombreUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NombreUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreUsuario.Location = new System.Drawing.Point(48, 238);
+            this.NombreUsuario.Location = new System.Drawing.Point(148, 218);
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.Size = new System.Drawing.Size(288, 26);
             this.NombreUsuario.TabIndex = 2;
@@ -115,11 +123,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 603);
+            this.ClientSize = new System.Drawing.Size(574, 387);
             this.Controls.Add(this.usuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModalUsuario";
-            this.Text = "Form1";
+            this.Text = "Perfil";
             this.usuario.ResumeLayout(false);
             this.usuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotouser)).EndInit();

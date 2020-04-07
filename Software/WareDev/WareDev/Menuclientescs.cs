@@ -51,6 +51,11 @@ namespace WareDev
                 MessageBox.Show("seleccione una fila por favor");
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            InfoClient client= new InfoClient();
+            client.ShowDialog();
+        }
     }
 }
 

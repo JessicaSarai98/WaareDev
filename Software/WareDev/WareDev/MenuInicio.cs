@@ -85,7 +85,7 @@ namespace WareDev
         private void btnuser_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            AbrirFormInPanel(new registro());
+            AbrirFormInPanel(new UsersListcs());
         }
 
         private void btnClient_Click(object sender, EventArgs e)
@@ -103,7 +103,8 @@ namespace WareDev
 
         private void btnNombreUsuario_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new ModalUsuario());
+            ModalUsuario user = new ModalUsuario();
+            user.ShowDialog();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -208,6 +209,7 @@ namespace WareDev
         private void btnInicio_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            AbrirFormInPanel(new Start());
         }
 
         private void btnProve_Click(object sender, EventArgs e)
