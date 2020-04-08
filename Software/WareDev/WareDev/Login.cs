@@ -101,10 +101,10 @@ namespace WareDev
             //    }
             //}
 
-            this.Hide();
-            var tam = this.WindowState;
+            this.Hide(); 
+             var tam = this.WindowState;
             MenuInicio ini = new MenuInicio(tam);
-            MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
             ini.Show();
 
         }

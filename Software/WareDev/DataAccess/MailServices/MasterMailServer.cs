@@ -12,7 +12,7 @@ namespace DataAccess.MailServices
     public abstract class MasterMailServer
     {
         private SmtpClient smtpClient;
-        protected string sendEmail { get; set; }
+        protected string senderMail { get; set; }
         protected string password { get; set; }
         protected string host { get; set; }
         protected int port { get; set; }
@@ -21,7 +21,7 @@ namespace DataAccess.MailServices
         protected void initializeSmptClient()
         {
             smtpClient = new SmtpClient();
-            smtpClient.Credentials = new NetworkCredential(sendEmail, password);
+            smtpClient.Credentials = new NetworkCredential(senderMail, password);
             smtpClient.Host = host;
             smtpClient.Port = port;
             smtpClient.EnableSsl = ssl; 
@@ -32,7 +32,7 @@ namespace DataAccess.MailServices
             var mailMessage = new MailMessage();
             try
             {
-                mailMessage.From = new MailAddress(sendEmail);
+                mailMessage.From = new MailAddress(senderMail);
                 foreach (string mail in recipientMail)
                 {
                     mailMessage.To.Add(mail);
@@ -42,7 +42,7 @@ namespace DataAccess.MailServices
                 mailMessage.Priority = MailPriority.Normal;
                 smtpClient.Send(mailMessage); //enviar mensaje
             }
-            catch(Exception ex){ }
+            catch (Exception ex) { }
             finally
             {
                 mailMessage.Dispose();
