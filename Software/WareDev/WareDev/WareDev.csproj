@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InventarioMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioMP.Designer.cs">
+      <DependentUpon>InventarioMP.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="UsersListcs.Designer.cs">
       <DependentUpon>UsersListcs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InventarioMP.resx">
+      <DependentUpon>InventarioMP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </EmbeddedResource>

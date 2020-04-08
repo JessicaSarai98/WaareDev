@@ -220,6 +220,7 @@ namespace WareDev
         private void btnInven_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            AbrirFormInPanel(new InventarioMP());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -250,6 +251,34 @@ namespace WareDev
         {
             hora.Text = DateTime.Now.ToString("hh:mm:ss ");
             fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnminimizar_MouseHover(object sender, EventArgs e)
+        {
+            btnminimizar.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void btnminimizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnminimizar.BackColor = Color.FromArgb(91, 210, 43);
+            btnexit.BackColor = Color.FromArgb(91, 210, 43);
+            btnmaximizar.BackColor = Color.FromArgb(91, 210, 43);
+            btnrestaur.BackColor = Color.FromArgb(91, 210, 43);
+        }
+
+        private void btnexit_MouseHover(object sender, EventArgs e)
+        {
+            btnexit.BackColor = Color.FromArgb(187, 73, 51);
+        }
+
+        private void btnmaximizar_MouseHover(object sender, EventArgs e)
+        {
+            btnmaximizar.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
+        private void btnrestaur_MouseHover(object sender, EventArgs e)
+        {
+            btnrestaur.BackColor = Color.FromArgb(240, 240, 240);
         }
     }
 }
