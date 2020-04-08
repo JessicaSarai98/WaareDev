@@ -14,7 +14,7 @@ namespace DataAccess.MailServices
         {
            
             senderMail = "jessicabautista1698@gmail.com";
-            password = "silenthill1698";
+            password = "*******";
             host = "smtp.gmail.com";
             port = 587;
             ssl = true;
