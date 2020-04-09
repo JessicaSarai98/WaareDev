@@ -13,8 +13,8 @@ namespace DataAccess.MailServices
         public SystemSupportMail()
         {
            
-            sendEmail = "jessicabautista1698@gmail.com";
-            password = "****";
+            senderMail = "jessicabautista1698@gmail.com";
+            password = "*******";
             host = "smtp.gmail.com";
             port = 587;
             ssl = true;

@@ -30,6 +30,8 @@
         {
             this.reg = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // reg
@@ -54,11 +56,32 @@
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Enter your username or email:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(469, 107);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(61, 13);
+            this.lblResult.TabIndex = 5;
+            this.lblResult.Text = "Resultado: ";
+            // 
             // olvidoContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 192);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.reg);
             this.Name = "olvidoContra";
@@ -72,5 +95,7 @@
 
         private System.Windows.Forms.Button reg;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblResult;
     }
 }

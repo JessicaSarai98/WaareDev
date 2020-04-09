@@ -20,10 +20,10 @@ namespace WareDev
         
         private void button1_Click(object sender, EventArgs e)
         {
-            var user = new UserModel();
+            UserModel user = new UserModel();
             var result = user.recoverPassword(txtEmail.Text);
-            MessageBox.Show("Enviado: " + txtEmail.Text + ".");
-            //lblResult.Text = result; 
+            lblResult.Text = result;
+            
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -31,5 +31,9 @@ namespace WareDev
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
