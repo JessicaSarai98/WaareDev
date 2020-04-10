@@ -31,11 +31,12 @@ namespace DataAccess
             string city, string state, string country, string cp, string identy, float tasaa, string stat, string 
             vendedor, string pm, string cfdi, string note)
         {
+            SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into clientes values("+ID+",'"+name+ "','"+rfc+ "','"+phone+ "','"+email+ "','"+address+"','"+city+ "'," +
                 "'"+state+"', '"+country+ "','"+cp+ "','"+identy+ "',"+tasaa+ ",'"+stat+ "','"+vendedor+ "','"+pm+ "','"+cfdi+ "','"+note+"')"; 
          
-           // comando.CommandType = CommandType.StoredProcedure;
+           comando.CommandType = CommandType.Text;
 
             /*comando.Parameters.AddWithValue("@Id", ID);
             comando.Parameters.AddWithValue("@name", name);
@@ -59,18 +60,20 @@ namespace DataAccess
             //conexion.CerrarConexion(); 
 
         }
-        public void Editar(string name, string phone, string email)
+        public void Editar(string name, string phone, string email, int id)
         {
+            SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EditarCliente";
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@name", name);
+            comando.CommandText = "update data set name=@name, phone=@phone,email=@email where Id=@id";
+            comando.CommandType = CommandType.Text;
+            
+            /*comando.Parameters.AddWithValue("@name", name);
             comando.Parameters.AddWithValue("@phone",phone);
-            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@email", email);*/
             comando.ExecuteNonQuery();
-
-            comando.Parameters.Clear();
-            conexion.CerrarConexion(); 
+            
+            //comando.Parameters.Clear();
+            //conexion.CerrarConexion(); 
         }
         public void Eliminar(int id)
         {
@@ -81,8 +84,8 @@ namespace DataAccess
             comando.Parameters.AddWithValue("Id", id);
 
             comando.ExecuteNonQuery();
-            comando.Parameters.Clear();
-            conexion.CerrarConexion(); 
+            //comando.Parameters.Clear();
+            //conexion.CerrarConexion(); 
         }
     }
 }

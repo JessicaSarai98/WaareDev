@@ -29,9 +29,9 @@ namespace Domain
                 country, cp, identy,Convert.ToInt32(tasaa), stat, vendedor, pm, cfdi, note);
         }
 
-        public void EditarClie(string name, string phone, string email)
+        public void EditarClie(string name, string phone, string email, string id)
         {
-            objetoCD.Editar(name, phone, email);
+            objetoCD.Editar(name, phone, email, Convert.ToInt32(id));
         }
         public void EliminarCli(string id)
         {

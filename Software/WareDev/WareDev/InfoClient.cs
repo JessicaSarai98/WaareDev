@@ -48,13 +48,39 @@ namespace WareDev
 
         private void button2_Click(object sender, EventArgs e)
         {
-            objectCN.InsertarClie(IDtxtbox.Text, Nametxt.Text,RFCtxt.Text, phonetxt.Text,
-                mailtxt.Text,addrestxt.Text, citytxt.Text, statettxt.Text, countrytxt.Text,
-                CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text
-                , paytxt.Text, cfditxt.Text, note.Text );
-            MessageBox.Show("Se ha insertado corretamente");
-            MostrarClientes(); 
-      
+            Menuclientescs menucliente = new Menuclientescs();
+            
+            if (menucliente.Editar == false)
+            {
+                try
+                {
+
+                    objectCN.InsertarClie(IDtxtbox.Text, Nametxt.Text, RFCtxt.Text, phonetxt.Text,
+                    mailtxt.Text, addrestxt.Text, citytxt.Text, statettxt.Text, countrytxt.Text,
+                    CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text
+                    , paytxt.Text, cfditxt.Text, note.Text);
+                    MessageBox.Show("Se ha insertado corretamente");
+                    MostrarClientes();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo introducir los datos por: " + ex);
+                }
+            }
+            if (menucliente.Editar == true)
+            {
+                try
+                {
+                    objectCN.EditarClie(Nametxt.Text, phonetxt.Text,mailtxt.Text, IDtxtbox.Text);
+                    MessageBox.Show("Se edito corretamente");
+                    MostrarClientes();
+                    menucliente.Editar = false; 
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("No se pudo editar los datos por: " + ex);
+                }
+            }
 
             //string id, string name, string rfc, string phone,
             //string email, string address, string city, string state,
