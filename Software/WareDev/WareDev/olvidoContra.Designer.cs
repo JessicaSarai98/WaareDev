@@ -86,6 +86,7 @@
             this.Controls.Add(this.reg);
             this.Name = "olvidoContra";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.olvidoContra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

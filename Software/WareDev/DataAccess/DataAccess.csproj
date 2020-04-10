@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CD_Clientes.cs" />
+    <Compile Include="CD_Conexion.cs" />
     <Compile Include="MailServices\SystemSupportMail.cs" />
     <Compile Include="MailServices\MasterMailServer.cs" />
     <Compile Include="SqlServer\UserDao.cs" />

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Common.cache;
+using Domain; 
+
+
 
 namespace WareDev
 {
@@ -84,6 +88,11 @@ namespace WareDev
             textUserReg.Clear();
             textemail.Clear();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

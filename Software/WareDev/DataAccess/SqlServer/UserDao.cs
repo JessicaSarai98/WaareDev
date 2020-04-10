@@ -14,6 +14,28 @@ namespace DataAccess
 {
     public class UserDao : ConnectionToSql
     {
+        //función para agregar usuario y actualizarlo en la db
+        public void AddUser(int id, string userName, string pass, string name, string lastname, string mail)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open(); 
+                using (var command= new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update set username= @userName, password=@pass, firstName=@name, lastName= @lastname, email=@mail where ID=@id";
+                    command.Parameters.AddWithValue("@userName", userName);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@lastname", lastname);
+                    command.Parameters.AddWithValue("@mail", mail);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+
+                }
+            }
+        }
         public bool Login(string user, string pass)
         {
             using (var connection = GetConnection())
@@ -46,6 +68,7 @@ namespace DataAccess
                 }
             }
         }
+
         public string recoverPassword(string userRequesting)
         {
             using (var connection = GetConnection())

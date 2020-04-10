@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using Common.cache;
+using Domain; 
 namespace WareDev
 {
     public partial class MenuInicio : Form
@@ -103,6 +104,7 @@ namespace WareDev
 
         private void btnNombreUsuario_Click(object sender, EventArgs e)
         {
+          
             ModalUsuario user = new ModalUsuario();
             user.ShowDialog();
         }
@@ -210,6 +212,9 @@ namespace WareDev
         {
             ActivateButton(sender);
             AbrirFormInPanel(new Start());
+            UserModel user = new UserModel();
+            var result = UserCache.username;
+            label1.Text = result;
         }
 
         private void btnProve_Click(object sender, EventArgs e)
@@ -250,6 +255,11 @@ namespace WareDev
         {
             hora.Text = DateTime.Now.ToString("hh:mm:ss ");
             fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

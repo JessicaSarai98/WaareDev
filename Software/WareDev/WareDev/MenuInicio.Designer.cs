@@ -52,6 +52,7 @@
             this.fecha = new System.Windows.Forms.Label();
             this.hora = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -228,6 +229,7 @@
             // 
             this.top.AutoScroll = true;
             this.top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.top.Controls.Add(this.label1);
             this.top.Controls.Add(this.btnmaximizar);
             this.top.Controls.Add(this.btnrestaur);
             this.top.Controls.Add(this.btnminimizar);
@@ -360,7 +362,7 @@
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(278, 29);
+            this.fecha.Size = new System.Drawing.Size(242, 26);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
@@ -371,7 +373,7 @@
             this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.Location = new System.Drawing.Point(697, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(159, 39);
+            this.hora.Size = new System.Drawing.Size(149, 37);
             this.hora.TabIndex = 0;
             this.hora.Text = "17:52:00";
             // 
@@ -382,6 +384,16 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1034, 515);
             this.contenedor.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(236, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MenuInicio
             // 
@@ -434,5 +446,6 @@
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Label label1;
     }
 }

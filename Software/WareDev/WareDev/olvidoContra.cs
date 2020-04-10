@@ -35,5 +35,10 @@ namespace WareDev
         {
 
         }
+
+        private void olvidoContra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

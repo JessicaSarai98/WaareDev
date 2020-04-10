@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain; 
 
 namespace WareDev
 {
     public partial class Menuclientescs : Form
     {
+        CN_Clientes objetoCN = new CN_Clientes(); 
+        
+     
         public Menuclientescs()
         {
             InitializeComponent();
+        }
+
+        private void MostrarClientes()
+        {
+            CN_Clientes objeto = new CN_Clientes();
+            dataGridView1.DataSource = objetoCN.MostrarCli(); 
+
         }
 
         private void InsertarFilas()
@@ -55,6 +66,28 @@ namespace WareDev
         {
             InfoClient client= new InfoClient();
             client.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Menuclientescs_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'usersDataSet.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
+            MostrarClientes(); 
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
