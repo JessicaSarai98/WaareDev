@@ -92,8 +92,8 @@ namespace WareDev
         private void btnClient_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //AbrirFormInPanel(new Menuclientescs());
-            AbrirFormInPanel(new InfoClient());
+            AbrirFormInPanel(new Menuclientescs());
+            //AbrirFormInPanel(new InfoClient());
 
         }
 
