@@ -83,8 +83,8 @@ namespace WareDev
         private void Menuclientescs_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'usersDataSet.clientes' Puede moverla o quitarla según sea necesario.
-            this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
-            MostrarClientes(); 
+            //this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
+            //MostrarClientes(); 
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
