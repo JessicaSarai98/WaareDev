@@ -96,10 +96,6 @@
     <Compile Include="registro.Designer.cs">
       <DependentUpon>registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes.Designer.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,7 +105,9 @@
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start.Designer.cs" />
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
     <Compile Include="usersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,10 +119,6 @@
     <Compile Include="UsersListcs.Designer.cs">
       <DependentUpon>UsersListcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventas.Designer.cs" />
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,11 +153,12 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start.resx" />
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersListcs.resx">
       <DependentUpon>UsersListcs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -230,7 +230,6 @@ namespace WareDev
         private void btnReportes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            AbrirFormInPanel(new Reportes());
         }
 
         private void btnCotizar_Click(object sender, EventArgs e)
