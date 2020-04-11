@@ -157,3 +157,32 @@ C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareD
 C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Start.resources
 C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Start.resources
 C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.UsersListcs.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Start.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.UsersListcs.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Ventas.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
