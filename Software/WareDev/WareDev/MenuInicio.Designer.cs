@@ -53,6 +53,8 @@
             this.hora = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nombreEmpresa = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -62,6 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
             this.panel1.SuspendLayout();
+            this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
@@ -229,7 +233,6 @@
             // 
             this.top.AutoScroll = true;
             this.top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.top.Controls.Add(this.label1);
             this.top.Controls.Add(this.btnmaximizar);
             this.top.Controls.Add(this.btnrestaur);
             this.top.Controls.Add(this.btnminimizar);
@@ -362,7 +365,7 @@
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(242, 26);
+            this.fecha.Size = new System.Drawing.Size(278, 29);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
@@ -373,12 +376,16 @@
             this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.Location = new System.Drawing.Point(697, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(149, 37);
+            this.hora.Size = new System.Drawing.Size(159, 39);
             this.hora.TabIndex = 0;
             this.hora.Text = "17:52:00";
             // 
             // contenedor
             // 
+            this.contenedor.BackColor = System.Drawing.Color.Khaki;
+            this.contenedor.Controls.Add(this.label1);
+            this.contenedor.Controls.Add(this.pictureBox1);
+            this.contenedor.Controls.Add(this.nombreEmpresa);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(250, 57);
             this.contenedor.Name = "contenedor";
@@ -387,13 +394,42 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(236, 13);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 48.22641F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(347, 232);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(380, 108);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Welcome";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo3;
+            this.pictureBox1.Location = new System.Drawing.Point(377, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(298, 171);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // nombreEmpresa
+            // 
+            this.nombreEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nombreEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.nombreEmpresa.Font = new System.Drawing.Font("Nirmala UI", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreEmpresa.Location = new System.Drawing.Point(324, 340);
+            this.nombreEmpresa.Name = "nombreEmpresa";
+            this.nombreEmpresa.Size = new System.Drawing.Size(429, 108);
+            this.nombreEmpresa.TabIndex = 21;
+            this.nombreEmpresa.Text = "AGROINDUSTRIAS  LUMA\r\nCOMERCIALIZADORA S.A. DE C.V.\r\n";
+            this.nombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MenuInicio
             // 
@@ -418,6 +454,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,6 +484,8 @@
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Label nombreEmpresa;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -93,7 +93,8 @@ namespace WareDev
         {
             ActivateButton(sender);
             AbrirFormInPanel(new Menuclientescs());
-            
+            //AbrirFormInPanel(new InfoClient());
+
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -214,7 +215,7 @@ namespace WareDev
             AbrirFormInPanel(new Start());
             UserModel user = new UserModel();
             var result = UserCache.username;
-            label1.Text = result;
+            //label1.Text = result;
         }
 
         private void btnProve_Click(object sender, EventArgs e)

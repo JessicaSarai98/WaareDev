@@ -16,5 +16,10 @@ namespace WareDev
         {
             InitializeComponent();
         }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
