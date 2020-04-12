@@ -93,7 +93,8 @@ namespace WareDev
         {
             ActivateButton(sender);
             AbrirFormInPanel(new Menuclientescs());
-            
+            //AbrirFormInPanel(new InfoClient());
+
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -214,7 +215,7 @@ namespace WareDev
             AbrirFormInPanel(new Start());
             UserModel user = new UserModel();
             var result = UserCache.username;
-            label1.Text = result;
+            //label1.Text = result;
         }
 
         private void btnProve_Click(object sender, EventArgs e)
@@ -260,6 +261,34 @@ namespace WareDev
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnminimizar_MouseHover(object sender, EventArgs e)
+        {
+            btnminimizar.BackColor = Color.FromArgb(109, 252, 51);
+        }
+
+        private void btnminimizar_MouseLeave(object sender, EventArgs e)
+        {
+            btnminimizar.BackColor = Color.FromArgb(91, 210, 43);
+            btnexit.BackColor = Color.FromArgb(91, 210, 43);
+            btnmaximizar.BackColor = Color.FromArgb(91, 210, 43);
+            btnrestaur.BackColor = Color.FromArgb(91, 210, 43);
+        }
+
+        private void btnmaximizar_MouseHover(object sender, EventArgs e)
+        {
+            btnmaximizar.BackColor = Color.FromArgb(109, 252, 51);
+        }
+
+        private void btnexit_MouseHover(object sender, EventArgs e)
+        {
+            btnexit.BackColor = Color.FromArgb(187, 73, 51);
+        }
+
+        private void btnrestaur_MouseHover(object sender, EventArgs e)
+        {
+            btnrestaur.BackColor = Color.FromArgb(109, 252, 51);
         }
     }
 }

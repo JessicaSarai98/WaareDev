@@ -49,7 +49,7 @@
             this.CerrarSesion.Name = "CerrarSesion";
             this.CerrarSesion.Size = new System.Drawing.Size(145, 64);
             this.CerrarSesion.TabIndex = 0;
-            this.CerrarSesion.Text = "Cerrar Sesión";
+            this.CerrarSesion.Text = "Logout";
             this.CerrarSesion.UseVisualStyleBackColor = false;
             this.CerrarSesion.Click += new System.EventHandler(this.CerrarSesion_Click);
             // 

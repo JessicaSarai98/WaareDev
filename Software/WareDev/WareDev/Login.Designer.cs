@@ -93,7 +93,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo2;
+            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo3;
             this.pictureBox1.Location = new System.Drawing.Point(188, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(321, 219);

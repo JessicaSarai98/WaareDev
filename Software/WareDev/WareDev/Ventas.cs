@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WareDev
 {
-    public partial class Ventas : Form
+    public partial class ventas : Form
     {
-        public Ventas()
+        public ventas()
         {
             InitializeComponent();
         }
