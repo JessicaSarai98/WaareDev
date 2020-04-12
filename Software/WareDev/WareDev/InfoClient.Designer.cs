@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.vendortxt = new System.Windows.Forms.TextBox();
             this.Imprimir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,6 +125,18 @@
             this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(816, 296);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 24);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "Celler";
+            this.label15.UseWaitCursor = true;
+            // 
             // vendortxt
             // 
             this.vendortxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -144,7 +156,7 @@
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(114, 48);
             this.Imprimir.TabIndex = 37;
-            this.Imprimir.Text = "Print";
+            this.Imprimir.Text = "Export To PDF";
             this.Imprimir.UseVisualStyleBackColor = false;
             this.Imprimir.UseWaitCursor = true;
             this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
@@ -524,18 +536,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CLIENT INFORMATION";
             this.label1.UseWaitCursor = true;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(816, 296);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 24);
-            this.label15.TabIndex = 39;
-            this.label15.Text = "Celler";
-            this.label15.UseWaitCursor = true;
             // 
             // InfoClient
             // 
