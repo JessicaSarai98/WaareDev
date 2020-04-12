@@ -410,7 +410,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo2;
+            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo3;
             this.pictureBox1.Location = new System.Drawing.Point(377, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(298, 171);
@@ -423,10 +423,10 @@
             this.nombreEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nombreEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.nombreEmpresa.Font = new System.Drawing.Font("Nirmala UI", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreEmpresa.Location = new System.Drawing.Point(346, 340);
+            this.nombreEmpresa.Font = new System.Drawing.Font("Nirmala UI", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreEmpresa.Location = new System.Drawing.Point(324, 340);
             this.nombreEmpresa.Name = "nombreEmpresa";
-            this.nombreEmpresa.Size = new System.Drawing.Size(380, 108);
+            this.nombreEmpresa.Size = new System.Drawing.Size(429, 108);
             this.nombreEmpresa.TabIndex = 21;
             this.nombreEmpresa.Text = "AGROINDUSTRIAS  LUMA\r\nCOMERCIALIZADORA S.A. DE C.V.\r\n";
             this.nombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
