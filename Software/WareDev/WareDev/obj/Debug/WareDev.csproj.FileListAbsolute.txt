@@ -223,3 +223,6 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ventas.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ventas.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuProve.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Supplier.resources

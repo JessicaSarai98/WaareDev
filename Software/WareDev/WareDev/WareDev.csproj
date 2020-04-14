@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="Menuclientescs.Designer.cs">
       <DependentUpon>Menuclientescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuProve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuProve.Designer.cs">
+      <DependentUpon>MenuProve.cs</DependentUpon>
     </Compile>
     <Compile Include="ModalUsuario.cs">
       <SubType>Form</SubType>
@@ -134,6 +146,9 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menuclientescs.resx">
       <DependentUpon>Menuclientescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuProve.resx">
+      <DependentUpon>MenuProve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalUsuario.resx">
       <DependentUpon>ModalUsuario.cs</DependentUpon>

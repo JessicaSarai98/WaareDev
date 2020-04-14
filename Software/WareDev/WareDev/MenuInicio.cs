@@ -221,6 +221,7 @@ namespace WareDev
         private void btnProve_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            AbrirFormInPanel(new MenuProve());
         }
 
         private void btnInven_Click(object sender, EventArgs e)
