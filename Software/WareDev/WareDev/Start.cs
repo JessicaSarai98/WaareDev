@@ -41,5 +41,10 @@ namespace WareDev
         {
             AbrirFormInPanel(new ventas());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new compras());
+        }
     }
 }

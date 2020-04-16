@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace WareDev
 {
@@ -16,20 +17,42 @@ namespace WareDev
         {
             InitializeComponent();
         }
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        private void ventas_Load(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.FromArgb(255, 255, 255);
-        }
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox1.BackColor = Color.FromArgb(192, 192, 192);
-        }
-
+            dateTimePicker1.Value = DateTime.Today;
+        } 
         private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
-                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Sólo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+        Regex rx = new Regex(@"^[0-9]+\.[0-9]{2}?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
+        {            
+            if ((rx.IsMatch(txtIva.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar) )
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((rx.IsMatch(txtTotal.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtSubtotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((rx.IsMatch(txtSubtotal.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar))
+            {
                 e.Handled = true;
                 return;
             }
