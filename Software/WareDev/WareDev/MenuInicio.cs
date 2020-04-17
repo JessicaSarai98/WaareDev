@@ -31,8 +31,6 @@ namespace WareDev
             InitializeComponent();
         }
 
-       
-
         /*Libreria para general el efecto de movel con el mouse*/
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -290,6 +288,11 @@ namespace WareDev
         private void btnrestaur_MouseHover(object sender, EventArgs e)
         {
             btnrestaur.BackColor = Color.FromArgb(109, 252, 51);
+        }
+
+        private void MenuInicio_SizeChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

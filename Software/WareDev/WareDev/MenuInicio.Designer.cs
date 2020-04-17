@@ -221,7 +221,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::WareDev.Properties.Resources.Logo2;
+            this.panel2.BackgroundImage = global::WareDev.Properties.Resources.Logo3;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -448,9 +448,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.top);
             this.Controls.Add(this.menu);
-            this.MinimumSize = new System.Drawing.Size(850, 500);
+            this.MinimumSize = new System.Drawing.Size(1100, 630);
             this.Name = "MenuInicio";
             this.Text = "WareDev";
+            this.SizeChanged += new System.EventHandler(this.MenuInicio_SizeChanged);
             this.menu.ResumeLayout(false);
             this.top.ResumeLayout(false);
             this.top.PerformLayout();

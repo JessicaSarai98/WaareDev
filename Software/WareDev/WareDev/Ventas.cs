@@ -20,7 +20,21 @@ namespace WareDev
         private void ventas_Load(object sender, EventArgs e)
         {
             dateTimePicker1.Value = DateTime.Today;
-        } 
+        }
+        private void AbrirFormInPanel(object Formhijo)
+        {
+            if (this.contenedor.Controls.Count > 0)
+                this.contenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            this.contenedor.Controls.Add(fh);
+            this.contenedor.Tag = fh;
+            fh.BringToFront();
+            fh.Show();
+
+        }
         private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -56,6 +70,13 @@ namespace WareDev
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void btrRegreso_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panelTitulo.Visible = false;
+            AbrirFormInPanel(new Start());
         }
     }
 }

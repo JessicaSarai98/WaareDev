@@ -31,14 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventas));
             this.contenedor = new System.Windows.Forms.Panel();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PalletContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -66,6 +58,13 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,7 +95,6 @@
             this.TablaDeVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
-            this.PalletContenido,
             this.tam,
             this.medida,
             this.descripcion,
@@ -105,48 +103,8 @@
             this.importe});
             this.TablaDeVenta.Location = new System.Drawing.Point(12, 332);
             this.TablaDeVenta.Name = "TablaDeVenta";
-            this.TablaDeVenta.Size = new System.Drawing.Size(994, 132);
+            this.TablaDeVenta.Size = new System.Drawing.Size(968, 132);
             this.TablaDeVenta.TabIndex = 30;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Name";
-            this.nombre.Name = "nombre";
-            // 
-            // PalletContenido
-            // 
-            this.PalletContenido.HeaderText = "Pallet for content";
-            this.PalletContenido.Name = "PalletContenido";
-            // 
-            // tam
-            // 
-            this.tam.HeaderText = "Size";
-            this.tam.Name = "tam";
-            // 
-            // medida
-            // 
-            this.medida.HeaderText = "Measure";
-            this.medida.Name = "medida";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Description";
-            this.descripcion.Name = "descripcion";
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Price";
-            this.precio.Name = "precio";
-            // 
-            // cajasPorContenido
-            // 
-            this.cajasPorContenido.HeaderText = "Boxes per content";
-            this.cajasPorContenido.Name = "cajasPorContenido";
-            // 
-            // importe
-            // 
-            this.importe.HeaderText = "Amount";
-            this.importe.Name = "importe";
             // 
             // tableLayoutPanel1
             // 
@@ -192,11 +150,11 @@
             this.txt1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt1.AutoSize = true;
             this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(4, 1);
+            this.txt1.Location = new System.Drawing.Point(14, 1);
             this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(69, 36);
+            this.txt1.Size = new System.Drawing.Size(50, 36);
             this.txt1.TabIndex = 7;
-            this.txt1.Text = "Folio de venta";
+            this.txt1.Text = "Sales folio";
             this.txt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTotal
@@ -245,11 +203,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 48);
+            this.label4.Location = new System.Drawing.Point(17, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Fecha";
+            this.label4.Text = "Date";
             // 
             // txtIva
             // 
@@ -297,11 +255,11 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(233, 1);
+            this.label8.Location = new System.Drawing.Point(236, 1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 36);
+            this.label8.Size = new System.Drawing.Size(95, 36);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Número del \r\ncliente\r\n";
+            this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -364,7 +322,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 36);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Nombre del\r\ncliente";
+            this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePicker1
@@ -404,7 +362,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 24);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Moneda";
+            this.label5.Text = "Currency";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -435,7 +393,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(306, 18);
+            this.label1.Location = new System.Drawing.Point(185, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 42);
             this.label1.TabIndex = 3;
@@ -455,9 +413,10 @@
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
             this.btrRegreso.TabIndex = 12;
-            this.btrRegreso.Text = "New";
+            this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
+            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
             // btnGuardar
             // 
@@ -518,12 +477,55 @@
             // imgVentas
             // 
             this.imgVentas.Image = ((System.Drawing.Image)(resources.GetObject("imgVentas.Image")));
-            this.imgVentas.Location = new System.Drawing.Point(138, 0);
+            this.imgVentas.Location = new System.Drawing.Point(219, -6);
             this.imgVentas.Name = "imgVentas";
-            this.imgVentas.Size = new System.Drawing.Size(107, 83);
-            this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgVentas.Size = new System.Drawing.Size(96, 96);
+            this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
+            // 
+            // nombre
+            // 
+            this.nombre.FillWeight = 120F;
+            this.nombre.HeaderText = "Product\'s name";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            // 
+            // tam
+            // 
+            this.tam.FillWeight = 38.49408F;
+            this.tam.HeaderText = "Size";
+            this.tam.Name = "tam";
+            // 
+            // medida
+            // 
+            this.medida.FillWeight = 38.49408F;
+            this.medida.HeaderText = "Measure";
+            this.medida.Name = "medida";
+            // 
+            // descripcion
+            // 
+            this.descripcion.FillWeight = 38.49408F;
+            this.descripcion.HeaderText = "Description";
+            this.descripcion.Name = "descripcion";
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 38.49408F;
+            this.precio.HeaderText = "Price";
+            this.precio.Name = "precio";
+            // 
+            // cajasPorContenido
+            // 
+            this.cajasPorContenido.FillWeight = 38.49408F;
+            this.cajasPorContenido.HeaderText = "Boxes per content";
+            this.cajasPorContenido.Name = "cajasPorContenido";
+            // 
+            // importe
+            // 
+            this.importe.FillWeight = 38.49408F;
+            this.importe.HeaderText = "Amount";
+            this.importe.Name = "importe";
             // 
             // ventas
             // 
@@ -540,6 +542,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
             this.ResumeLayout(false);
 
@@ -576,14 +579,13 @@
         private System.Windows.Forms.TextBox txtTimbre;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView TablaDeVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn palletContenido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tam;
         private System.Windows.Forms.DataGridViewTextBoxColumn medida;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cajasPorContenido;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PalletContenido;
     }
 }
