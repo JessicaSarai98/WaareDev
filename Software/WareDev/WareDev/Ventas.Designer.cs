@@ -39,12 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.txt = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNoCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTimbre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtFolio = new System.Windows.Forms.TextBox();
@@ -122,19 +120,17 @@
             this.tableLayoutPanel1.Controls.Add(this.txtCliente, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboMoneda, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtIva, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtSubtotal, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNoCliente, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtTimbre, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtFolio, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtIva, 1, 2);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 166);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -216,10 +212,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIva.BackColor = System.Drawing.Color.White;
             this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(348, 79);
+            this.txtIva.Location = new System.Drawing.Point(81, 79);
             this.txtIva.Multiline = true;
             this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(133, 32);
+            this.txtIva.Size = new System.Drawing.Size(138, 32);
             this.txtIva.TabIndex = 18;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
@@ -238,17 +234,6 @@
             this.txtSubtotal.TabIndex = 17;
             this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
-            // 
-            // txt
-            // 
-            this.txt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt.AutoSize = true;
-            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.Location = new System.Drawing.Point(9, 86);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(60, 18);
-            this.txt.TabIndex = 16;
-            this.txt.Text = "Timbre";
             // 
             // label8
             // 
@@ -292,26 +277,12 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(232, 83);
+            this.label6.Location = new System.Drawing.Point(3, 83);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 24);
+            this.label6.Size = new System.Drawing.Size(72, 24);
             this.label6.TabIndex = 12;
             this.label6.Text = "IVA (%)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTimbre
-            // 
-            this.txtTimbre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimbre.BackColor = System.Drawing.Color.White;
-            this.txtTimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtTimbre.Location = new System.Drawing.Point(81, 79);
-            this.txtTimbre.Multiline = true;
-            this.txtTimbre.Name = "txtTimbre";
-            this.txtTimbre.Size = new System.Drawing.Size(138, 32);
-            this.txtTimbre.TabIndex = 15;
-            this.txtTimbre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -559,7 +530,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnFactura;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label txt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -576,7 +546,6 @@
         private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtNoCliente;
-        private System.Windows.Forms.TextBox txtTimbre;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView TablaDeVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn palletContenido;
