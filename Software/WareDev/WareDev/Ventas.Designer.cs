@@ -31,23 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventas));
             this.contenedor = new System.Windows.Forms.Panel();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.comboMoneda = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIva = new System.Windows.Forms.TextBox();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNoCliente = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIva = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
@@ -56,13 +63,6 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -103,6 +103,49 @@
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.Size = new System.Drawing.Size(968, 132);
             this.TablaDeVenta.TabIndex = 30;
+            // 
+            // nombre
+            // 
+            this.nombre.FillWeight = 120F;
+            this.nombre.HeaderText = "Product\'s name";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            // 
+            // tam
+            // 
+            this.tam.FillWeight = 38.49408F;
+            this.tam.HeaderText = "Size";
+            this.tam.Name = "tam";
+            // 
+            // medida
+            // 
+            this.medida.FillWeight = 38.49408F;
+            this.medida.HeaderText = "Measure";
+            this.medida.Name = "medida";
+            // 
+            // descripcion
+            // 
+            this.descripcion.FillWeight = 38.49408F;
+            this.descripcion.HeaderText = "Description";
+            this.descripcion.Name = "descripcion";
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 38.49408F;
+            this.precio.HeaderText = "Price";
+            this.precio.Name = "precio";
+            // 
+            // cajasPorContenido
+            // 
+            this.cajasPorContenido.FillWeight = 38.49408F;
+            this.cajasPorContenido.HeaderText = "Boxes per content";
+            this.cajasPorContenido.Name = "cajasPorContenido";
+            // 
+            // importe
+            // 
+            this.importe.FillWeight = 38.49408F;
+            this.importe.HeaderText = "Amount";
+            this.importe.Name = "importe";
             // 
             // tableLayoutPanel1
             // 
@@ -205,21 +248,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Date";
             // 
-            // txtIva
-            // 
-            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIva.BackColor = System.Drawing.Color.White;
-            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(81, 79);
-            this.txtIva.Multiline = true;
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(138, 32);
-            this.txtIva.TabIndex = 18;
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
-            // 
             // txtSubtotal
             // 
             this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,17 +300,6 @@
             this.txtNoCliente.TabIndex = 16;
             this.txtNoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "IVA (%)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -346,6 +363,32 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "IVA (%)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtIva
+            // 
+            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIva.BackColor = System.Drawing.Color.White;
+            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtIva.Location = new System.Drawing.Point(81, 79);
+            this.txtIva.Multiline = true;
+            this.txtIva.Name = "txtIva";
+            this.txtIva.Size = new System.Drawing.Size(138, 32);
+            this.txtIva.TabIndex = 18;
+            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
             // 
             // panel1
             // 
@@ -454,49 +497,6 @@
             this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 120F;
-            this.nombre.HeaderText = "Product\'s name";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            // 
-            // tam
-            // 
-            this.tam.FillWeight = 38.49408F;
-            this.tam.HeaderText = "Size";
-            this.tam.Name = "tam";
-            // 
-            // medida
-            // 
-            this.medida.FillWeight = 38.49408F;
-            this.medida.HeaderText = "Measure";
-            this.medida.Name = "medida";
-            // 
-            // descripcion
-            // 
-            this.descripcion.FillWeight = 38.49408F;
-            this.descripcion.HeaderText = "Description";
-            this.descripcion.Name = "descripcion";
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 38.49408F;
-            this.precio.HeaderText = "Price";
-            this.precio.Name = "precio";
-            // 
-            // cajasPorContenido
-            // 
-            this.cajasPorContenido.FillWeight = 38.49408F;
-            this.cajasPorContenido.HeaderText = "Boxes per content";
-            this.cajasPorContenido.Name = "cajasPorContenido";
-            // 
-            // importe
-            // 
-            this.importe.FillWeight = 38.49408F;
-            this.importe.HeaderText = "Amount";
-            this.importe.Name = "importe";
             // 
             // ventas
             // 
