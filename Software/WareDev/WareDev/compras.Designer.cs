@@ -78,8 +78,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -88,7 +87,7 @@
             this.tam,
             this.cantidad,
             this.precio});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 284);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 283);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(976, 142);
             this.dataGridView1.TabIndex = 9;
@@ -135,7 +134,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNoPro, 3, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 187);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 184);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -287,7 +286,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(258, 19);
+            this.label1.Location = new System.Drawing.Point(57, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 42);
             this.label1.TabIndex = 3;
@@ -353,7 +352,7 @@
             // imgVentas
             // 
             this.imgVentas.Image = ((System.Drawing.Image)(resources.GetObject("imgVentas.Image")));
-            this.imgVentas.Location = new System.Drawing.Point(191, 0);
+            this.imgVentas.Location = new System.Drawing.Point(183, 0);
             this.imgVentas.Name = "imgVentas";
             this.imgVentas.Size = new System.Drawing.Size(98, 84);
             this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -400,12 +399,12 @@
         private System.Windows.Forms.TextBox txtFolioCompra;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtNoPro;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotalCompra;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn tam;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

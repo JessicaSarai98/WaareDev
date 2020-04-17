@@ -364,7 +364,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(185, 18);
+            this.label1.Location = new System.Drawing.Point(54, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 42);
             this.label1.TabIndex = 3;

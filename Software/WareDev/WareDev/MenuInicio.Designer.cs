@@ -448,7 +448,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.top);
             this.Controls.Add(this.menu);
-            this.MinimumSize = new System.Drawing.Size(1100, 630);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MenuInicio";
             this.Text = "WareDev";
             this.SizeChanged += new System.EventHandler(this.MenuInicio_SizeChanged);
