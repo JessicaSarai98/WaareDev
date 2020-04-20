@@ -42,17 +42,17 @@
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.comboMoneda = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtNoCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtFolio = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboMoneda = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -222,21 +222,6 @@
             this.txtCliente.Size = new System.Drawing.Size(376, 32);
             this.txtCliente.TabIndex = 19;
             // 
-            // comboMoneda
-            // 
-            this.comboMoneda.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboMoneda.ForeColor = System.Drawing.Color.Black;
-            this.comboMoneda.Items.AddRange(new object[] {
-            "Peso",
-            "Dolar",
-            "Euro"});
-            this.comboMoneda.Location = new System.Drawing.Point(348, 41);
-            this.comboMoneda.Name = "comboMoneda";
-            this.comboMoneda.Size = new System.Drawing.Size(133, 28);
-            this.comboMoneda.TabIndex = 20;
-            this.comboMoneda.TabStop = false;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -247,21 +232,6 @@
             this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Date";
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSubtotal.BackColor = System.Drawing.Color.White;
-            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtSubtotal.Location = new System.Drawing.Point(598, 41);
-            this.txtSubtotal.Multiline = true;
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(376, 32);
-            this.txtSubtotal.TabIndex = 17;
-            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
             // 
             // label8
             // 
@@ -274,17 +244,6 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(487, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 24);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Subtotal";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNoCliente
             // 
@@ -342,6 +301,17 @@
             this.txtFolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(491, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 24);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Total";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -353,16 +323,46 @@
             this.label5.Text = "Currency";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // comboMoneda
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(491, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 24);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Total";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comboMoneda.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboMoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboMoneda.ForeColor = System.Drawing.Color.Black;
+            this.comboMoneda.Items.AddRange(new object[] {
+            "Peso",
+            "Dolar",
+            "Euro"});
+            this.comboMoneda.Location = new System.Drawing.Point(348, 41);
+            this.comboMoneda.Name = "comboMoneda";
+            this.comboMoneda.Size = new System.Drawing.Size(133, 28);
+            this.comboMoneda.TabIndex = 20;
+            this.comboMoneda.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(487, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 24);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Subtotal";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubtotal.BackColor = System.Drawing.Color.White;
+            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtSubtotal.Location = new System.Drawing.Point(598, 41);
+            this.txtSubtotal.Multiline = true;
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(376, 32);
+            this.txtSubtotal.TabIndex = 17;
+            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
             // 
             // label6
             // 
