@@ -61,6 +61,24 @@
     <Compile Include="compras.Designer.cs">
       <DependentUpon>compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ganancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ganancias.Designer.cs">
+      <DependentUpon>ganancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventarios.Designer.cs">
+      <DependentUpon>inventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte.Designer.cs">
+      <DependentUpon>reporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +172,9 @@
     </Compile>
     <EmbeddedResource Include="compras.resx">
       <DependentUpon>compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ganancias.resx">
+      <DependentUpon>ganancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>

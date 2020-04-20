@@ -101,7 +101,7 @@
             this.importe});
             this.TablaDeVenta.Location = new System.Drawing.Point(12, 332);
             this.TablaDeVenta.Name = "TablaDeVenta";
-            this.TablaDeVenta.Size = new System.Drawing.Size(968, 132);
+            this.TablaDeVenta.Size = new System.Drawing.Size(965, 132);
             this.TablaDeVenta.TabIndex = 30;
             // 
             // nombre
@@ -161,17 +161,17 @@
             this.tableLayoutPanel1.Controls.Add(this.txt1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTotal, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtCliente, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.comboMoneda, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtSubtotal, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNoCliente, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtFolio, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.comboMoneda, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtSubtotal, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtIva, 1, 2);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
@@ -231,9 +231,9 @@
             "Peso",
             "Dolar",
             "Euro"});
-            this.comboMoneda.Location = new System.Drawing.Point(598, 41);
+            this.comboMoneda.Location = new System.Drawing.Point(348, 41);
             this.comboMoneda.Name = "comboMoneda";
-            this.comboMoneda.Size = new System.Drawing.Size(151, 28);
+            this.comboMoneda.Size = new System.Drawing.Size(133, 28);
             this.comboMoneda.TabIndex = 20;
             this.comboMoneda.TabStop = false;
             // 
@@ -255,10 +255,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubtotal.BackColor = System.Drawing.Color.White;
             this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtSubtotal.Location = new System.Drawing.Point(348, 41);
+            this.txtSubtotal.Location = new System.Drawing.Point(598, 41);
             this.txtSubtotal.Multiline = true;
             this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(133, 32);
+            this.txtSubtotal.Size = new System.Drawing.Size(376, 32);
             this.txtSubtotal.TabIndex = 17;
             this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
@@ -279,7 +279,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(231, 45);
+            this.label7.Location = new System.Drawing.Point(487, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 24);
             this.label7.TabIndex = 13;
@@ -346,7 +346,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(491, 45);
+            this.label5.Location = new System.Drawing.Point(235, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 24);
             this.label5.TabIndex = 11;

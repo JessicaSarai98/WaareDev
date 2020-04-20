@@ -229,3 +229,4 @@ C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Supplier.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuProve.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ganancias.resources
