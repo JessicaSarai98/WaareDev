@@ -12,6 +12,7 @@ using iTextSharp.text.pdf;
 using System.Runtime.InteropServices;
 using System.IO;
 using Domain;
+using Common.cache;
 
 namespace WareDev
 {
@@ -20,18 +21,45 @@ namespace WareDev
         CN_Clientes objectCN = new CN_Clientes(); 
         public InfoClient()
         {
-            InitializeComponent();
-            
-        }
+             InitializeComponent();
+            //loadUserData();
 
+        }
+       /* private void reset()
+        {
+            loadUserData();
+        }*/
         
 
         private void MostrarClientes()
         {
             CN_Clientes objeto = new CN_Clientes();
-            //dataGridView1.DataSource = objetoCN.MostrarCli();
+            //dataGridView1.DataSource = objeto.MostrarCli();
+            Nametxt.Text = UserCache.username; 
 
         }
+
+        //cargar datos
+       /* public void loadUserData()
+        {
+           IDtxtbox.Text = UserCache.ID.ToString();
+            Nametxt.Text = UserCache.username;
+            RFCtxt.Text = UserCache.RFC;
+            phonetxt.Text = UserCache.phone;
+            mailtxt.Text = UserCache.email;
+            addrestxt.Text = UserCache.address;
+            citytxt.Text = UserCache.city;
+            statettxt.Text = UserCache.state;
+            countrytxt.Text = UserCache.country;
+            CPtxt.Text = UserCache.CP;
+            identytxt.Text = UserCache.IF;
+            tasatxt.Text = UserCache.tasa.ToString();
+            statustxt.Text = UserCache.status;
+            vendortxt.Text = UserCache.vendedor;
+            paytxt.Text = UserCache.payment;
+            cfditxt.Text = UserCache.CFDI;
+            note.Text = UserCache.note;
+        }*/
 
         private void InfoClient_Load(object sender, EventArgs e)
         {
@@ -53,17 +81,41 @@ namespace WareDev
 
         }
 
+        //guardado
         private void button2_Click(object sender, EventArgs e)
         {
             Menuclientescs menucliente = new Menuclientescs();
-            
+
+            /*var userModel = new UserModel(
+                ID: UserCache.ID,
+                username: Nametxt.Text,
+                RFC: RFCtxt.Text,
+                phone: phonetxt.Text,
+                email: mailtxt.Text,
+                address: addrestxt.Text,
+                city: citytxt.Text,
+                state: statettxt.Text,
+                country: countrytxt.Text,
+                CP: CPtxt.Text,
+                identy: identytxt.Text,
+                tasa: UserCache.tasa,
+                status: statettxt.Text,
+                vendedor: vendortxt.Text,
+                pay: paytxt.Text,
+                cfdi: cfditxt.Text,
+                note: note.Text
+                );
+            var result = userModel.editUserProfile();
+            MessageBox.Show(result);
+            reset();
+            panel1.Visible = false; */
             if (menucliente.Editar == false)
             {
                 try
                 {
 
                     objectCN.InsertarClie(IDtxtbox.Text, Nametxt.Text, RFCtxt.Text, phonetxt.Text,
-                    mailtxt.Text, addrestxt.Text, citytxt.Text, statettxt.Text, countrytxt.Text,
+                    mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
                     CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text
                     , paytxt.Text, cfditxt.Text, note.Text);
                     MessageBox.Show("Se ha insertado corretamente");
@@ -209,7 +261,7 @@ namespace WareDev
                 table.AddCell("City");
                 table.AddCell(citytxt.Text);
                 table.AddCell("State");
-                table.AddCell(statettxt.Text);
+                table.AddCell(statetxt.Text);
                 table.AddCell("Country");
                 table.AddCell(countrytxt.Text);
                 table.AddCell("CP");
@@ -240,7 +292,7 @@ namespace WareDev
                 phonetxt.Clear();
                 mailtxt.Clear();
                 addrestxt.Clear();
-                statettxt.Clear();
+                statetxt.Clear();
                 countrytxt.Clear();
                 CPtxt.Clear();
                 identytxt.Clear();

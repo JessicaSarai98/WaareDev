@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Domain; 
+using Domain;
+using Common.cache; 
 
 namespace WareDev
 {
@@ -33,11 +34,32 @@ namespace WareDev
             dataGridView1.Rows.Insert(0, "1", "Rafael Fernandez", "56465","50A40H","adriflb@hotmail.com", "AV. Melgar","","","","","","","","","");
         }
 
+        //carga los datos del cliente seleccionado
             private void btnEditar_Click(object sender, EventArgs e)
-        {
+            {
             InfoClient client = new InfoClient();
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                //client.loadUserData(); 
+                /*client.IDtxtbox.Text = UserCache.ID.ToString();
+                client.Nametxt.Text = UserCache.username;
+                client.RFCtxt.Text = UserCache.RFC;
+                client.phonetxt.Text = UserCache.phone;
+                client.mailtxt.Text = UserCache.email;
+                client.addrestxt.Text = UserCache.address;
+                client.citytxt.Text = UserCache.city;
+                client.statettxt.Text = UserCache.state;
+                client.countrytxt.Text = UserCache.country;
+                client.CPtxt.Text = UserCache.CP;
+                client.identytxt.Text = UserCache.IF;
+                client.tasatxt.Text = UserCache.tasa.ToString();
+                client.statustxt.Text = UserCache.status;
+                client.vendortxt.Text = UserCache.vendedor;
+                client.paytxt.Text = UserCache.payment;
+                client.cfditxt.Text = UserCache.CFDI;
+                client.note.Text = UserCache.note; */
+               
+
                 Editar = true; 
                 client.IDtxtbox.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 client.Nametxt.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
@@ -46,7 +68,7 @@ namespace WareDev
                 client.mailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
                 client.addrestxt.Text = dataGridView1.CurrentRow.Cells["address"].Value.ToString();
                 client.citytxt.Text = dataGridView1.CurrentRow.Cells["city"].Value.ToString();
-                // client.statettxt.Text = dataGridView1.CurrentRow.Cells["state"].Value.ToString();
+                client.statetxt.Text = dataGridView1.CurrentRow.Cells["state"].Value.ToString();
                 client.countrytxt.Text = dataGridView1.CurrentRow.Cells["country"].Value.ToString();
                 client.CPtxt.Text = dataGridView1.CurrentRow.Cells["codigopostal"].Value.ToString();
                 client.identytxt.Text = dataGridView1.CurrentRow.Cells["identidadfiscal"].Value.ToString();
@@ -56,12 +78,13 @@ namespace WareDev
                 client.paytxt.Text = dataGridView1.CurrentRow.Cells["payment"].Value.ToString();
                 client.cfditxt.Text = dataGridView1.CurrentRow.Cells["CFDI"].Value.ToString();
                 client.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
-                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString(); 
+                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 client.ShowDialog();
 
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -83,8 +106,8 @@ namespace WareDev
         private void Menuclientescs_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'usersDataSet.clientes' Puede moverla o quitarla según sea necesario.
-            //this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
-            //MostrarClientes(); 
+            this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
+            MostrarClientes(); 
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

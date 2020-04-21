@@ -68,7 +68,44 @@ namespace DataAccess
                 }
             }
         }
-
+        /*
+        public void editProfile(int id, string username, string RFC, string phone, string email, string address,
+            string city, string state, string country, string CP, string identy, float tasa, string status,
+            string vendedor, string pay, string cfdi, string note)
+        {
+            using(var connection = GetConnection())
+            {
+                connection.Open(); 
+                using(var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update clientes set username=@username, RFC =@RFC, phone = @phone, email=@email," +
+                        "address=@address, city=@city, state=@state, country=@country, codigopostal=@CP, identidadfiscal=@identy," +
+                        "tasa=@tasa, status=@status, vendedor=@vendedor, payment=@pay, " +
+                        "CFDI=@cfdi, note=@note where Id=@id";
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@RFC",RFC);
+                    command.Parameters.AddWithValue("@phone",phone);
+                    command.Parameters.AddWithValue("@email",email);
+                    command.Parameters.AddWithValue("@address",address);
+                    command.Parameters.AddWithValue("@city",city);
+                    command.Parameters.AddWithValue("@state",state);
+                    command.Parameters.AddWithValue("@country",country);
+                    command.Parameters.AddWithValue("@codigopostal",CP);
+                    command.Parameters.AddWithValue("@identidadfiscal",identy);
+                    command.Parameters.AddWithValue("@tasa",tasa);
+                    command.Parameters.AddWithValue("@status",status);
+                    command.Parameters.AddWithValue("@vendedor",vendedor);
+                    command.Parameters.AddWithValue("@payment",pay);
+                    command.Parameters.AddWithValue("@CFDI", cfdi);
+                    command.Parameters.AddWithValue("@note", note);
+                    command.Parameters.AddWithValue("@Id",id);
+                   // command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery(); 
+                }
+            }
+        }
+        */
         public string recoverPassword(string userRequesting)
         {
             using (var connection = GetConnection())
