@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WareDev
 {
-    public partial class nventarios : Form
+    public partial class Generador : Form
     {
-        public nventarios()
+        public Generador()
         {
             InitializeComponent();
         }

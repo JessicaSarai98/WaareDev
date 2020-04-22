@@ -61,11 +61,23 @@
     <Compile Include="compras.Designer.cs">
       <DependentUpon>compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones.Designer.cs">
+      <DependentUpon>Cotizaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="ganancias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ganancias.Designer.cs">
       <DependentUpon>ganancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generador.Designer.cs">
+      <DependentUpon>Generador.cs</DependentUpon>
     </Compile>
     <Compile Include="inventarios.cs">
       <SubType>Form</SubType>
@@ -173,8 +185,17 @@
     <EmbeddedResource Include="compras.resx">
       <DependentUpon>compras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cotizaciones.resx">
+      <DependentUpon>Cotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ganancias.resx">
       <DependentUpon>ganancias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generador.resx">
+      <DependentUpon>Generador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventarios.resx">
+      <DependentUpon>inventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
@@ -343,6 +364,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

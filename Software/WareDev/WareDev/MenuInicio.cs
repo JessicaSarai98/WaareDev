@@ -236,6 +236,7 @@ namespace WareDev
         private void btnCotizar_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            AbrirFormInPanel(new Cotizaciones());
         }
 
         private void top_Paint_MouseDown(object sender, MouseEventArgs e)

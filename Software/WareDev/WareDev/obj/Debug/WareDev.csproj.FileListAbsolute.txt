@@ -230,3 +230,13 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuProve.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ganancias.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ganancias.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.ResolveComReference.cache
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizaciones.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Generador.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.nventarios.resources
