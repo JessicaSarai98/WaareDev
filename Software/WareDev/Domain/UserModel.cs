@@ -17,7 +17,22 @@ namespace Domain
         private string firstName;
         private string lastName;
         private string email;
-
+        /*
+        private string RFC;
+        private string phone;
+        private string address;
+        private string city;
+        private string state;
+        private string country;
+        private string CP;
+        private string identy;
+        private float tasa;
+        private string status; 
+        private string vendedor;
+        private string pay;
+        private string cfdi;
+        private string note; 
+        */
         public UserModel(int ID, string username, string password, string firstName, string lastName, string email)
         {
             ID = ID;
@@ -31,6 +46,35 @@ namespace Domain
         {
 
         }
+        /*public UserModel(int ID, string username, string RFC, string phone, string email, 
+            string address, string city, string state, string country, string CP, string identy,
+            float tasa, string status, string vendedor, string pay, string cfdi, string note)
+        {
+            ID = ID;
+            this.username = username;
+            this.RFC = RFC;
+            this.phone = phone;
+            this.email = email;
+            this.address = address;
+            this.city = city;
+            this.state = state;
+            this.country = country;
+            this.CP = CP;
+            this.identy = identy;
+            tasa = tasa;
+            this.status = status;
+            this.vendedor = vendedor;
+            this.pay = pay;
+            this.cfdi = cfdi;
+            this.note = note;
+        }
+        public string editUserProfile()
+        {
+            userDao.editProfile(ID,username, RFC, phone, email, address, city,
+             state, country, CP, identy, tasa, status, vendedor, pay, cfdi, note);
+                return "Your profile has been successfully updated";
+            
+        }*/
 
         public string AddUserProfile()
         {

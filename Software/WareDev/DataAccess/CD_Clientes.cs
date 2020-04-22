@@ -33,8 +33,7 @@ namespace DataAccess
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into clientes values("+ID+",'"+name+ "','"+rfc+ "','"+phone+ "','"+email+ "','"+address+"','"+city+ "'," +
-                "'"+state+"', '"+country+ "','"+cp+ "','"+identy+ "',"+tasaa+ ",'"+stat+ "','"+vendedor+ "','"+pm+ "','"+cfdi+ "','"+note+"')"; 
+            comando.CommandText = "insert into clientes values("+ID+",'"+name+ "','"+rfc+ "','"+phone+ "','"+email+ "','"+address+"','"+city+ "','"+state+"','"+country+ "','"+cp+ "','"+identy+ "',"+tasaa+ ",'"+stat+ "','"+vendedor+ "','"+pm+ "','"+cfdi+ "','"+note+"')"; 
          
            comando.CommandType = CommandType.Text;
 
