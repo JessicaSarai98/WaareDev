@@ -25,7 +25,7 @@ namespace WareDev
         private void MostrarClientes()
         {
             CN_Clientes objeto = new CN_Clientes();
-            dataGridView1.DataSource = objetoCN.MostrarCli(); 
+            dataGridView1.DataSource = objeto.MostrarCli(); 
 
         }
 
@@ -68,7 +68,7 @@ namespace WareDev
                 client.mailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
                 client.addrestxt.Text = dataGridView1.CurrentRow.Cells["address"].Value.ToString();
                 client.citytxt.Text = dataGridView1.CurrentRow.Cells["city"].Value.ToString();
-                client.statetxt.Text = dataGridView1.CurrentRow.Cells["state"].Value.ToString();
+                //client.statetxt.Text = dataGridView1.CurrentRow.Cells["state"].Value.ToString();
                 client.countrytxt.Text = dataGridView1.CurrentRow.Cells["country"].Value.ToString();
                 client.CPtxt.Text = dataGridView1.CurrentRow.Cells["codigopostal"].Value.ToString();
                 client.identytxt.Text = dataGridView1.CurrentRow.Cells["identidadfiscal"].Value.ToString();

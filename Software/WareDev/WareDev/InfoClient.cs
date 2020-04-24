@@ -33,9 +33,9 @@ namespace WareDev
 
         private void MostrarClientes()
         {
-            CN_Clientes objeto = new CN_Clientes();
+            //CN_Clientes objeto = new CN_Clientes();
             //dataGridView1.DataSource = objeto.MostrarCli();
-            Nametxt.Text = UserCache.username; 
+            //Nametxt.Text = UserCache.username; 
 
         }
 
@@ -84,7 +84,19 @@ namespace WareDev
         //guardado
         private void button2_Click(object sender, EventArgs e)
         {
-            Menuclientescs menucliente = new Menuclientescs();
+
+            //Menuclientescs menucliente = new Menuclientescs();
+            try
+            {
+                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+               citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
+               vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
+                MessageBox.Show("Se ha actualizado correctamente.");
+                MostrarClientes();
+            }catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo por: " + ex);
+            }
 
             /*var userModel = new UserModel(
                 ID: UserCache.ID,
@@ -108,7 +120,7 @@ namespace WareDev
             var result = userModel.editUserProfile();
             MessageBox.Show(result);
             reset();
-            panel1.Visible = false; */
+            panel1.Visible = false; 
             if (menucliente.Editar == false)
             {
                 try
@@ -139,7 +151,7 @@ namespace WareDev
                 {
                     MessageBox.Show("No se pudo editar los datos por: " + ex);
                 }
-            }
+            }*/
 
             //string id, string name, string rfc, string phone,
             //string email, string address, string city, string state,
