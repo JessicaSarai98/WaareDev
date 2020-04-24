@@ -27,13 +27,13 @@ namespace DataAccess
             return tabla;
         }
 
-        public void Insertar(string name, string rfc, string phone, string email, string address, 
+        public void Insertar(int id, string name, string rfc, string phone, string email, string address, 
             string city, string state, string country, string cp, string identy, double tasaa, string stat, string 
             vendedor, string pm, string cfdi, string note)
         {
            // SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into clientes values('"+name+"','"+rfc+"','"+phone+"','"+email+"','"+address+"','"+city+ "','"+state+"','"+country+ "','"+cp+"','"+identy+"',"+tasaa+",'"+stat+"','"+vendedor+"','"+pm+"','"+cfdi+"','"+note+"')"; 
+            comando.CommandText = "insert into clientes values("+id+",'"+name+"','"+rfc+"','"+phone+"','"+email+"','"+address+"','"+city+ "','"+state+"','"+country+ "','"+cp+"','"+identy+"',"+tasaa+",'"+stat+"','"+vendedor+"','"+pm+"','"+cfdi+"','"+note+"')"; 
          
            comando.CommandType = CommandType.Text;
 
@@ -61,7 +61,7 @@ namespace DataAccess
         }
         public void Editar(string name, string phone, string email, int id)
         {
-            SqlCommand comando = new SqlCommand();
+           // SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update data set name=@name, phone=@phone,email=@email where Id=@id";
             comando.CommandType = CommandType.Text;

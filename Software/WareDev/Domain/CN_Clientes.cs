@@ -21,11 +21,11 @@ namespace Domain
             tabla = objetoCD.Mostrar(); 
             return tabla;
         }
-        public void InsertarClie(string name, string rfc, string phone, string email, string address, 
+        public void InsertarClie(string id, string name, string rfc, string phone, string email, string address, 
             string city, string state, string country, string cp, string identy, string tasaa, string stat, string 
             vendedor, string pm, string cfdi, string note)
         {
-            objetoCD.Insertar(name, rfc, phone, email, address, city, state,
+            objetoCD.Insertar(Convert.ToInt32(id), name, rfc, phone, email, address, city, state,
                 country, cp, identy,Convert.ToDouble(tasaa), stat, vendedor, pm, cfdi, note);
         }
 

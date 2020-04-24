@@ -33,7 +33,7 @@ namespace WareDev
 
         private void MostrarClientes()
         {
-            //CN_Clientes objeto = new CN_Clientes();
+            CN_Clientes objeto = new CN_Clientes();
             //dataGridView1.DataSource = objeto.MostrarCli();
             //Nametxt.Text = UserCache.username; 
 
@@ -86,17 +86,13 @@ namespace WareDev
         {
 
             //Menuclientescs menucliente = new Menuclientescs();
-            try
-            {
-                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+            
+                objectCN.InsertarClie(IDtxtbox.Text,Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
                citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
                vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
-                MessageBox.Show("Se ha actualizado correctamente.");
+                MessageBox.Show("Se ha insertado correctamente.");
                 MostrarClientes();
-            }catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo por: " + ex);
-            }
+            
 
             /*var userModel = new UserModel(
                 ID: UserCache.ID,

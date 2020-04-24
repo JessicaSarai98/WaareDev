@@ -15,8 +15,8 @@ namespace WareDev
     public partial class Menuclientescs : Form
     {
         CN_Clientes objetoCN = new CN_Clientes();
-        public string idCliente = null;
-        public bool Editar = false; 
+        /*public string idCliente = null;
+        public bool Editar = false;*/ 
         public Menuclientescs()
         {
             InitializeComponent();
@@ -59,7 +59,7 @@ namespace WareDev
                 client.vendortxt.Text = UserCache.vendedor;
                 client.paytxt.Text = UserCache.payment;
                 client.cfditxt.Text = UserCache.CFDI;
-                client.note.Text = UserCache.note; */
+                client.note.Text = UserCache.note; 
                
 
                 Editar = true; 
@@ -81,7 +81,7 @@ namespace WareDev
                 client.cfditxt.Text = dataGridView1.CurrentRow.Cells["CFDI"].Value.ToString();
                 client.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
                 idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                client.ShowDialog();
+                client.ShowDialog();*/
 
             }
             else
