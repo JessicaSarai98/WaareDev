@@ -38,6 +38,8 @@ namespace WareDev
             private void btnEditar_Click(object sender, EventArgs e)
             {
             InfoClient client = new InfoClient();
+            client.SaveEdit.Visible = true;
+            client.save.Visible = false;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 //client.loadUserData(); 
@@ -90,7 +92,10 @@ namespace WareDev
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             InfoClient client= new InfoClient();
+            client.save.Visible = true;
+            client.SaveEdit.Visible = false;
             client.ShowDialog();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
