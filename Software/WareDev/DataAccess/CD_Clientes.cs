@@ -15,6 +15,16 @@ namespace DataAccess
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
+        public DataTable MostrarU()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from data";
+            //comando.CommandText = "select Id= "+id+", username='"+username+"', firstName='"+firstName+"', lastName='"+lastName+"' from data ";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla; 
+        }
         public DataTable Mostrar()
         {
             comando.Connection = conexion.AbrirConexion();

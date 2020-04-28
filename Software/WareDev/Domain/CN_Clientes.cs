@@ -15,6 +15,12 @@ namespace Domain
     {
         private CD_Clientes objetoCD = new CD_Clientes(); 
 
+        public DataTable MostrarUsu()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarU();
+            return tabla; 
+        }
         public DataTable MostrarCli()
         {
             DataTable tabla = new DataTable();

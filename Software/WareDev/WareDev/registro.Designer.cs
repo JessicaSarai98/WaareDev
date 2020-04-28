@@ -40,11 +40,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textemail = new System.Windows.Forms.TextBox();
-            this.textName = new System.Windows.Forms.TextBox();
-            this.textKeyConfirm = new System.Windows.Forms.TextBox();
-            this.textKeyReg = new System.Windows.Forms.TextBox();
-            this.textUserReg = new System.Windows.Forms.TextBox();
+            this.emailtxt = new System.Windows.Forms.TextBox();
+            this.nametxt = new System.Windows.Forms.TextBox();
+            this.passconfirmtxt = new System.Windows.Forms.TextBox();
+            this.passtxt = new System.Windows.Forms.TextBox();
+            this.usertxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IconUser = new System.Windows.Forms.PictureBox();
             this.User.SuspendLayout();
@@ -80,11 +80,11 @@
             this.User.Controls.Add(this.button3);
             this.User.Controls.Add(this.pictureBox5);
             this.User.Controls.Add(this.pictureBox2);
-            this.User.Controls.Add(this.textemail);
-            this.User.Controls.Add(this.textName);
-            this.User.Controls.Add(this.textKeyConfirm);
-            this.User.Controls.Add(this.textKeyReg);
-            this.User.Controls.Add(this.textUserReg);
+            this.User.Controls.Add(this.emailtxt);
+            this.User.Controls.Add(this.nametxt);
+            this.User.Controls.Add(this.passconfirmtxt);
+            this.User.Controls.Add(this.passtxt);
+            this.User.Controls.Add(this.usertxt);
             this.User.Controls.Add(this.pictureBox4);
             this.User.Controls.Add(this.IconUser);
             this.User.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -229,65 +229,60 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // textemail
+            // emailtxt
             // 
-            this.textemail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.textemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textemail.Location = new System.Drawing.Point(133, 259);
-            this.textemail.Multiline = true;
-            this.textemail.Name = "textemail";
-            this.textemail.Size = new System.Drawing.Size(223, 37);
-            this.textemail.TabIndex = 6;
-            this.textemail.Text = "textemail";
-            this.textemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.emailtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailtxt.Location = new System.Drawing.Point(133, 259);
+            this.emailtxt.Multiline = true;
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(223, 37);
+            this.emailtxt.TabIndex = 6;
+            this.emailtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textName
+            // nametxt
             // 
-            this.textName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.textName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textName.Location = new System.Drawing.Point(133, 328);
-            this.textName.Multiline = true;
-            this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(223, 33);
-            this.textName.TabIndex = 5;
-            this.textName.Text = "textName";
-            this.textName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.nametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nametxt.Location = new System.Drawing.Point(133, 328);
+            this.nametxt.Multiline = true;
+            this.nametxt.Name = "nametxt";
+            this.nametxt.Size = new System.Drawing.Size(223, 33);
+            this.nametxt.TabIndex = 5;
+            this.nametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textKeyConfirm
+            // passconfirmtxt
             // 
-            this.textKeyConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.textKeyConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textKeyConfirm.Location = new System.Drawing.Point(133, 196);
-            this.textKeyConfirm.Multiline = true;
-            this.textKeyConfirm.Name = "textKeyConfirm";
-            this.textKeyConfirm.Size = new System.Drawing.Size(223, 33);
-            this.textKeyConfirm.TabIndex = 4;
-            this.textKeyConfirm.Text = "textKeyConfirm";
-            this.textKeyConfirm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.passconfirmtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.passconfirmtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passconfirmtxt.Location = new System.Drawing.Point(133, 196);
+            this.passconfirmtxt.Multiline = true;
+            this.passconfirmtxt.Name = "passconfirmtxt";
+            this.passconfirmtxt.Size = new System.Drawing.Size(223, 33);
+            this.passconfirmtxt.TabIndex = 4;
+            this.passconfirmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textKeyReg
+            // passtxt
             // 
-            this.textKeyReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.textKeyReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textKeyReg.Location = new System.Drawing.Point(133, 128);
-            this.textKeyReg.Multiline = true;
-            this.textKeyReg.Name = "textKeyReg";
-            this.textKeyReg.Size = new System.Drawing.Size(223, 37);
-            this.textKeyReg.TabIndex = 3;
-            this.textKeyReg.Text = "textKeyReg";
-            this.textKeyReg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.passtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.passtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passtxt.Location = new System.Drawing.Point(133, 128);
+            this.passtxt.Multiline = true;
+            this.passtxt.Name = "passtxt";
+            this.passtxt.Size = new System.Drawing.Size(223, 37);
+            this.passtxt.TabIndex = 3;
+            this.passtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textUserReg
+            // usertxt
             // 
-            this.textUserReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.textUserReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textUserReg.Location = new System.Drawing.Point(133, 60);
-            this.textUserReg.Multiline = true;
-            this.textUserReg.Name = "textUserReg";
-            this.textUserReg.Size = new System.Drawing.Size(223, 40);
-            this.textUserReg.TabIndex = 2;
-            this.textUserReg.Text = "textUserReg";
-            this.textUserReg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.usertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertxt.Location = new System.Drawing.Point(133, 60);
+            this.usertxt.Multiline = true;
+            this.usertxt.Name = "usertxt";
+            this.usertxt.Size = new System.Drawing.Size(223, 40);
+            this.usertxt.TabIndex = 2;
+            this.usertxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox4
             // 
@@ -346,11 +341,11 @@
         public System.Windows.Forms.PictureBox pictureBox6;
         public System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.PictureBox pictureBox2;
-        public System.Windows.Forms.TextBox textemail;
-        public System.Windows.Forms.TextBox textName;
-        public System.Windows.Forms.TextBox textKeyConfirm;
-        public System.Windows.Forms.TextBox textKeyReg;
-        public System.Windows.Forms.TextBox textUserReg;
+        public System.Windows.Forms.TextBox emailtxt;
+        public System.Windows.Forms.TextBox nametxt;
+        public System.Windows.Forms.TextBox passconfirmtxt;
+        public System.Windows.Forms.TextBox passtxt;
+        public System.Windows.Forms.TextBox usertxt;
         public System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.PictureBox IconUser;
         public System.Windows.Forms.Panel User;

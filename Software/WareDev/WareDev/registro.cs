@@ -82,11 +82,11 @@ namespace WareDev
         private void button2_Click(object sender, EventArgs e)
         {
            
-            textKeyConfirm.Clear();
-            textKeyReg.Clear();
-            textName.Clear();
-            textUserReg.Clear();
-            textemail.Clear();
+            passconfirmtxt.Clear();
+            passtxt.Clear();
+            nametxt.Clear();
+            usertxt.Clear();
+            emailtxt.Clear();
             this.Close();
         }
 
