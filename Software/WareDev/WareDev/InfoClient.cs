@@ -18,7 +18,8 @@ namespace WareDev
 {
     public partial class InfoClient : Form
     {
-        CN_Clientes objectCN = new CN_Clientes(); 
+        CN_Clientes objectCN = new CN_Clientes();
+        Menuclientescs menu = new Menuclientescs(); 
         public InfoClient()
         {
              InitializeComponent();
@@ -86,76 +87,21 @@ namespace WareDev
         {
 
             //Menuclientescs menucliente = new Menuclientescs();
-            
+
+            try
+            {
                 objectCN.InsertarClie(IDtxtbox.Text,Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
-               citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
-               vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
+           citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
+           vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
                 MessageBox.Show("Se ha insertado correctamente.");
-                MostrarClientes();
-            
-
-            /*var userModel = new UserModel(
-                ID: UserCache.ID,
-                username: Nametxt.Text,
-                RFC: RFCtxt.Text,
-                phone: phonetxt.Text,
-                email: mailtxt.Text,
-                address: addrestxt.Text,
-                city: citytxt.Text,
-                state: statettxt.Text,
-                country: countrytxt.Text,
-                CP: CPtxt.Text,
-                identy: identytxt.Text,
-                tasa: UserCache.tasa,
-                status: statettxt.Text,
-                vendedor: vendortxt.Text,
-                pay: paytxt.Text,
-                cfdi: cfditxt.Text,
-                note: note.Text
-                );
-            var result = userModel.editUserProfile();
-            MessageBox.Show(result);
-            reset();
-            panel1.Visible = false; 
-            if (menucliente.Editar == false)
-            {
-                try
-                {
-
-                    objectCN.InsertarClie(IDtxtbox.Text, Nametxt.Text, RFCtxt.Text, phonetxt.Text,
-                    mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
-                    CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text
-                    , paytxt.Text, cfditxt.Text, note.Text);
-                    MessageBox.Show("Se ha insertado corretamente");
-                    MostrarClientes();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo introducir los datos por: " + ex);
-                }
+                
+                this.Close(); 
             }
-            if (menucliente.Editar == true)
-            {
-                try
-                {
-                    objectCN.EditarClie(Nametxt.Text, phonetxt.Text,mailtxt.Text, IDtxtbox.Text);
-                    MessageBox.Show("Se edito corretamente");
-                    MostrarClientes();
-                    menucliente.Editar = false; 
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
-                }
-            }*/
+            catch (Exception ex) {
+                MessageBox.Show("No se pudo insertar los datos por: "+ex);
+            }
 
-            //string id, string name, string rfc, string phone,
-            //string email, string address, string city, string state,
-            //string country, string cp, string identy, string tasaa, string stat,
-            //string vendedor, string pm, string cfdi, string note
-
-
-        }
+            }
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
@@ -316,6 +262,21 @@ namespace WareDev
                 MessageBox.Show("Close the PDF to be modified");
             }
            
+        }
+        //Editar
+        private void SaveEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                objectCN.EditarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, estado.Text, countrytxt.Text,
+                CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text, IDtxtbox.Text);
+                MessageBox.Show("Se ha editado correctamente.");
+                this.Close();
+                  
+            } catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo editar los datos por: "+ex); 
+            }
         }
     }
 }

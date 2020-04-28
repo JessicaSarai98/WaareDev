@@ -16,7 +16,6 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Dat
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe.config
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\AxInterop.AcroPDFLib.dll
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.ResolveComReference.cache
@@ -43,3 +42,4 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\War
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache

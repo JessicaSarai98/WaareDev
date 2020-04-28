@@ -39,6 +39,7 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter = new WareDev.usersDataSetTableAdapters.clientesTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 33);
+            this.label1.Size = new System.Drawing.Size(145, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Client List";
             // 
@@ -97,6 +98,7 @@
             this.button2.Text = "Delete";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnEditar
             // 
@@ -183,12 +185,23 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
+            // actualizar
+            // 
+            this.actualizar.Location = new System.Drawing.Point(416, 34);
+            this.actualizar.Name = "actualizar";
+            this.actualizar.Size = new System.Drawing.Size(130, 59);
+            this.actualizar.TabIndex = 14;
+            this.actualizar.Text = "Actualizar";
+            this.actualizar.UseVisualStyleBackColor = true;
+            this.actualizar.Click += new System.EventHandler(this.actualizar_Click);
+            // 
             // Menuclientescs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(920, 526);
+            this.Controls.Add(this.actualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private usersDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button actualizar;
     }
 }

@@ -59,11 +59,16 @@ namespace DataAccess
             //conexion.CerrarConexion(); 
 
         }
-        public void Editar(string name, string phone, string email, int id)
+        //actualizar datos 
+        public void Editar(string name, string RFC, string phone, string email, string address,
+            string city, string state, string country, string cp, string identy, double tasaa, string stat, string
+            vendedor, string pm, string cfdi, string note, int id)
         {
            // SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update data set name=@name, phone=@phone,email=@email where Id=@id";
+            comando.CommandText = "update clientes set name='"+name+"', RFC= '"+RFC+"', phone= '"+phone+ "',email='"+email+ "', address='"+address+"'," +
+                "city='"+city+ "', state='"+state+ "', country='"+country+ "', codigopostal='"+cp+ "', identidadfiscal='"+identy+ "', tasa="+tasaa+ ", status='"+stat+"'," +
+                "vendedor='"+vendedor+ "',payment='"+pm+ "', CFDI='"+cfdi+ "', note='"+note+ "'  where Id='"+id+"'";
             comando.CommandType = CommandType.Text;
             
             /*comando.Parameters.AddWithValue("@name", name);
@@ -77,10 +82,11 @@ namespace DataAccess
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "EliminarCliente";
-            comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = "delete from clientes where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
 
-            comando.Parameters.AddWithValue("Id", id);
+           // comando.Parameters.AddWithValue("Id", id);
 
             comando.ExecuteNonQuery();
             //comando.Parameters.Clear();
