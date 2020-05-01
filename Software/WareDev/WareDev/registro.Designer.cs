@@ -47,6 +47,7 @@
             this.usertxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IconUser = new System.Windows.Forms.PictureBox();
+            this.lasttxt = new System.Windows.Forms.TextBox();
             this.User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fotouser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -71,6 +72,7 @@
             this.User.AutoSize = true;
             this.User.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.User.Controls.Add(this.lasttxt);
             this.User.Controls.Add(this.button6);
             this.User.Controls.Add(this.button5);
             this.User.Controls.Add(this.button1);
@@ -92,6 +94,7 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(1018, 476);
             this.User.TabIndex = 21;
+            this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
             // 
             // button6
             // 
@@ -306,6 +309,17 @@
             this.IconUser.TabIndex = 0;
             this.IconUser.TabStop = false;
             // 
+            // lasttxt
+            // 
+            this.lasttxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.lasttxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lasttxt.Location = new System.Drawing.Point(133, 383);
+            this.lasttxt.Multiline = true;
+            this.lasttxt.Name = "lasttxt";
+            this.lasttxt.Size = new System.Drawing.Size(223, 33);
+            this.lasttxt.TabIndex = 27;
+            this.lasttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,5 +363,6 @@
         public System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.PictureBox IconUser;
         public System.Windows.Forms.Panel User;
+        public System.Windows.Forms.TextBox lasttxt;
     }
 }

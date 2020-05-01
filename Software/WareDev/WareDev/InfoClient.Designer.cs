@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.estado = new System.Windows.Forms.TextBox();
             this.SaveEdit = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.vendortxt = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.estado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +128,14 @@
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // estado
+            // 
+            this.estado.Location = new System.Drawing.Point(498, 318);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(261, 20);
+            this.estado.TabIndex = 41;
+            this.estado.UseWaitCursor = true;
             // 
             // SaveEdit
             // 
@@ -353,6 +361,7 @@
             // 
             // IDtxtbox
             // 
+            this.IDtxtbox.Enabled = false;
             this.IDtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDtxtbox.Location = new System.Drawing.Point(203, 108);
             this.IDtxtbox.Name = "IDtxtbox";
@@ -554,13 +563,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CLIENT INFORMATION";
             this.label1.UseWaitCursor = true;
-            // 
-            // estado
-            // 
-            this.estado.Location = new System.Drawing.Point(498, 318);
-            this.estado.Name = "estado";
-            this.estado.Size = new System.Drawing.Size(261, 20);
-            this.estado.TabIndex = 41;
             // 
             // InfoClient
             // 

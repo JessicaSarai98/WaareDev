@@ -36,38 +36,28 @@ namespace DataAccess
             conexion.CerrarConexion();
             return tabla;
         }
-
-        public void Insertar(int id, string name, string rfc, string phone, string email, string address, 
+        //insertar clientes
+        public void Insertar(string name, string rfc, string phone, string email, string address, 
             string city, string state, string country, string cp, string identy, double tasaa, string stat, string 
             vendedor, string pm, string cfdi, string note)
         {
            // SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into clientes values("+id+",'"+name+"','"+rfc+"','"+phone+"','"+email+"','"+address+"','"+city+ "','"+state+"','"+country+ "','"+cp+"','"+identy+"',"+tasaa+",'"+stat+"','"+vendedor+"','"+pm+"','"+cfdi+"','"+note+"')"; 
+            comando.CommandText = "insert into clientes values('"+name+"','"+rfc+"','"+phone+"','"+email+"','"+address+"','"+city+ "','"+state+"','"+country+ "','"+cp+"','"+identy+"',"+tasaa+",'"+stat+"','"+vendedor+"','"+pm+"','"+cfdi+"','"+note+"')"; 
          
            comando.CommandType = CommandType.Text;
 
-           /* comando.Parameters.AddWithValue("@Id", ID);
-            comando.Parameters.AddWithValue("@name", name);
-            comando.Parameters.AddWithValue("@RFC", rfc);
-            comando.Parameters.AddWithValue("@phone", phone);
-            comando.Parameters.AddWithValue("@email", email);
-            comando.Parameters.AddWithValue("@address", address);
-            comando.Parameters.AddWithValue("@city", city);
-            comando.Parameters.AddWithValue("@state", state);
-            comando.Parameters.AddWithValue("@country", country);
-            comando.Parameters.AddWithValue("@codigopostal", cp);
-            comando.Parameters.AddWithValue("@identidadfiscal", identy);
-            comando.Parameters.AddWithValue("@tasa", tasaa);
-            comando.Parameters.AddWithValue("@status", stat);
-            comando.Parameters.AddWithValue("@vendedor",vendedor);
-            comando.Parameters.AddWithValue("@payment", pm);
-            comando.Parameters.AddWithValue("@CFDI", cfdi);
-            comando.Parameters.AddWithValue("@note", note);*/
             comando.ExecuteNonQuery();
-            //comando.Parameters.Clear();
-            //conexion.CerrarConexion(); 
+           
+        }
 
+        //insertar datos de usuarios
+        public void InsertarU(string username, string pass, string email, string firstname, string lastname )
+        {
+            comando.Connection = conexion.AbrirConexion(); 
+            comando.CommandText = "insert into data values('"+username+ "', '"+pass+ "', '"+email+ "', '"+firstname+ "', '"+lastname+"')";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
         }
         //actualizar datos 
         public void Editar(string name, string RFC, string phone, string email, string address,
@@ -89,6 +79,8 @@ namespace DataAccess
             //comando.Parameters.Clear();
             //conexion.CerrarConexion(); 
         }
+
+        //Eliminar clientes
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
@@ -101,6 +93,15 @@ namespace DataAccess
             comando.ExecuteNonQuery();
             //comando.Parameters.Clear();
             //conexion.CerrarConexion(); 
+        }
+
+        //eliminar usuarios 
+        public void EliminarU(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from data where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
         }
     }
 }

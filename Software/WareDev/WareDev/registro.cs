@@ -17,6 +17,8 @@ namespace WareDev
 {
     public partial class registro : Form
     {
+        CN_Clientes objetoCN = new CN_Clientes();
+        UsersListcs obj = new UsersListcs();
         public registro()
         {
             InitializeComponent();
@@ -89,8 +91,21 @@ namespace WareDev
             emailtxt.Clear();
             this.Close();
         }
-
+        //guardar usuario
         private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
+                MessageBox.Show("Se ha agregado el usuario al sistema.");
+                obj.MostrarUsuarios(); 
+            }catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos por: "+ex); 
+            }
+        }
+
+        private void User_Paint(object sender, PaintEventArgs e)
         {
 
         }

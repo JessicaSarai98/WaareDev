@@ -90,7 +90,7 @@ namespace WareDev
 
             try
             {
-                objectCN.InsertarClie(IDtxtbox.Text,Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
            citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
            vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
                 MessageBox.Show("Se ha insertado correctamente.");
