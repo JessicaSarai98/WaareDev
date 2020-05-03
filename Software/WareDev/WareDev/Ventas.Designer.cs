@@ -101,6 +101,7 @@
             this.importe});
             this.TablaDeVenta.Location = new System.Drawing.Point(12, 332);
             this.TablaDeVenta.Name = "TablaDeVenta";
+            this.TablaDeVenta.RowHeadersWidth = 45;
             this.TablaDeVenta.Size = new System.Drawing.Size(965, 132);
             this.TablaDeVenta.TabIndex = 30;
             // 
@@ -115,36 +116,42 @@
             // 
             this.tam.FillWeight = 38.49408F;
             this.tam.HeaderText = "Size";
+            this.tam.MinimumWidth = 6;
             this.tam.Name = "tam";
             // 
             // medida
             // 
             this.medida.FillWeight = 38.49408F;
             this.medida.HeaderText = "Measure";
+            this.medida.MinimumWidth = 6;
             this.medida.Name = "medida";
             // 
             // descripcion
             // 
             this.descripcion.FillWeight = 38.49408F;
             this.descripcion.HeaderText = "Description";
+            this.descripcion.MinimumWidth = 6;
             this.descripcion.Name = "descripcion";
             // 
             // precio
             // 
             this.precio.FillWeight = 38.49408F;
             this.precio.HeaderText = "Price";
+            this.precio.MinimumWidth = 6;
             this.precio.Name = "precio";
             // 
             // cajasPorContenido
             // 
             this.cajasPorContenido.FillWeight = 38.49408F;
             this.cajasPorContenido.HeaderText = "Boxes per content";
+            this.cajasPorContenido.MinimumWidth = 6;
             this.cajasPorContenido.Name = "cajasPorContenido";
             // 
             // importe
             // 
             this.importe.FillWeight = 38.49408F;
             this.importe.HeaderText = "Amount";
+            this.importe.MinimumWidth = 6;
             this.importe.Name = "importe";
             // 
             // tableLayoutPanel1
@@ -189,9 +196,9 @@
             this.txt1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt1.AutoSize = true;
             this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(14, 1);
+            this.txt1.Location = new System.Drawing.Point(11, 0);
             this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(50, 36);
+            this.txt1.Size = new System.Drawing.Size(56, 38);
             this.txt1.TabIndex = 7;
             this.txt1.Text = "Sales folio";
             this.txt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,9 +234,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 48);
+            this.label4.Location = new System.Drawing.Point(14, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 18);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Date";
             // 
@@ -238,9 +245,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(236, 1);
+            this.label8.Location = new System.Drawing.Point(231, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 36);
+            this.label8.Size = new System.Drawing.Size(105, 38);
             this.label8.TabIndex = 14;
             this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,9 +272,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(492, 1);
+            this.label9.Location = new System.Drawing.Point(487, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 36);
+            this.label9.Size = new System.Drawing.Size(105, 38);
             this.label9.TabIndex = 15;
             this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,7 +289,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(81, 41);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(138, 27);
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -334,7 +341,7 @@
             "Euro"});
             this.comboMoneda.Location = new System.Drawing.Point(348, 41);
             this.comboMoneda.Name = "comboMoneda";
-            this.comboMoneda.Size = new System.Drawing.Size(133, 28);
+            this.comboMoneda.Size = new System.Drawing.Size(133, 30);
             this.comboMoneda.TabIndex = 20;
             this.comboMoneda.TabStop = false;
             // 

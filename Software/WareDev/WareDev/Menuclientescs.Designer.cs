@@ -54,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 31);
+            this.label1.Size = new System.Drawing.Size(155, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Client List";
             // 
@@ -72,7 +72,7 @@
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(614, 29);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(104, 65);
+            this.btnNuevo.Size = new System.Drawing.Size(108, 65);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "New";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,15 +181,16 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 143);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(712, 321);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // actualizar
             // 
-            this.actualizar.Location = new System.Drawing.Point(416, 34);
+            this.actualizar.Location = new System.Drawing.Point(454, 29);
             this.actualizar.Name = "actualizar";
-            this.actualizar.Size = new System.Drawing.Size(130, 59);
+            this.actualizar.Size = new System.Drawing.Size(116, 65);
             this.actualizar.TabIndex = 14;
             this.actualizar.Text = "Actualizar";
             this.actualizar.UseVisualStyleBackColor = true;
