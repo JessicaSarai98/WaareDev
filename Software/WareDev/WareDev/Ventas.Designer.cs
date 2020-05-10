@@ -32,6 +32,7 @@
             this.contenedor = new System.Windows.Forms.Panel();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,10 +90,10 @@
             this.TablaDeVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TablaDeVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaDeVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
+            this.foto,
             this.tam,
             this.medida,
             this.descripcion,
@@ -102,8 +103,11 @@
             this.TablaDeVenta.Location = new System.Drawing.Point(12, 332);
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.RowHeadersWidth = 45;
+            this.TablaDeVenta.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.TablaDeVenta.Size = new System.Drawing.Size(965, 132);
+            this.TablaDeVenta.StandardTab = true;
             this.TablaDeVenta.TabIndex = 30;
+            this.TablaDeVenta.TabStop = false;
             // 
             // nombre
             // 
@@ -111,6 +115,13 @@
             this.nombre.HeaderText = "Product\'s name";
             this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
+            this.nombre.Width = 244;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Photo";
+            this.foto.Name = "foto";
+            this.foto.Width = 204;
             // 
             // tam
             // 
@@ -118,6 +129,7 @@
             this.tam.HeaderText = "Size";
             this.tam.MinimumWidth = 6;
             this.tam.Name = "tam";
+            this.tam.Width = 78;
             // 
             // medida
             // 
@@ -125,6 +137,7 @@
             this.medida.HeaderText = "Measure";
             this.medida.MinimumWidth = 6;
             this.medida.Name = "medida";
+            this.medida.Width = 79;
             // 
             // descripcion
             // 
@@ -132,6 +145,7 @@
             this.descripcion.HeaderText = "Description";
             this.descripcion.MinimumWidth = 6;
             this.descripcion.Name = "descripcion";
+            this.descripcion.Width = 78;
             // 
             // precio
             // 
@@ -139,6 +153,7 @@
             this.precio.HeaderText = "Price";
             this.precio.MinimumWidth = 6;
             this.precio.Name = "precio";
+            this.precio.Width = 78;
             // 
             // cajasPorContenido
             // 
@@ -146,6 +161,7 @@
             this.cajasPorContenido.HeaderText = "Boxes per content";
             this.cajasPorContenido.MinimumWidth = 6;
             this.cajasPorContenido.Name = "cajasPorContenido";
+            this.cajasPorContenido.Width = 79;
             // 
             // importe
             // 
@@ -153,6 +169,7 @@
             this.importe.HeaderText = "Amount";
             this.importe.MinimumWidth = 6;
             this.importe.Name = "importe";
+            this.importe.Width = 78;
             // 
             // tableLayoutPanel1
             // 
@@ -196,9 +213,9 @@
             this.txt1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt1.AutoSize = true;
             this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt1.Location = new System.Drawing.Point(11, 0);
+            this.txt1.Location = new System.Drawing.Point(14, 1);
             this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(56, 38);
+            this.txt1.Size = new System.Drawing.Size(50, 36);
             this.txt1.TabIndex = 7;
             this.txt1.Text = "Sales folio";
             this.txt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,9 +251,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 47);
+            this.label4.Location = new System.Drawing.Point(17, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Date";
             // 
@@ -245,9 +262,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(231, 0);
+            this.label8.Location = new System.Drawing.Point(236, 1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 38);
+            this.label8.Size = new System.Drawing.Size(95, 36);
             this.label8.TabIndex = 14;
             this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,9 +289,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(487, 0);
+            this.label9.Location = new System.Drawing.Point(492, 1);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 38);
+            this.label9.Size = new System.Drawing.Size(95, 36);
             this.label9.TabIndex = 15;
             this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,7 +306,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(81, 41);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(138, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(138, 26);
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -341,7 +358,7 @@
             "Euro"});
             this.comboMoneda.Location = new System.Drawing.Point(348, 41);
             this.comboMoneda.Name = "comboMoneda";
-            this.comboMoneda.Size = new System.Drawing.Size(133, 30);
+            this.comboMoneda.Size = new System.Drawing.Size(133, 28);
             this.comboMoneda.TabIndex = 20;
             this.comboMoneda.TabStop = false;
             // 
@@ -401,9 +418,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btrRegreso);
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.btnFactura);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 84);
             this.panel1.Name = "panel1";
@@ -430,9 +444,9 @@
             this.btrRegreso.ForeColor = System.Drawing.Color.Black;
             this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
             this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btrRegreso.Location = new System.Drawing.Point(911, 6);
+            this.btrRegreso.Location = new System.Drawing.Point(911, 7);
             this.btrRegreso.Name = "btrRegreso";
-            this.btrRegreso.Size = new System.Drawing.Size(104, 65);
+            this.btrRegreso.Size = new System.Drawing.Size(104, 74);
             this.btrRegreso.TabIndex = 12;
             this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -449,9 +463,9 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(775, 6);
+            this.btnGuardar.Location = new System.Drawing.Point(784, 7);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
+            this.btnGuardar.Size = new System.Drawing.Size(104, 74);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -467,17 +481,21 @@
             this.btnFactura.ForeColor = System.Drawing.Color.Black;
             this.btnFactura.Image = ((System.Drawing.Image)(resources.GetObject("btnFactura.Image")));
             this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFactura.Location = new System.Drawing.Point(628, 0);
+            this.btnFactura.Location = new System.Drawing.Point(648, 7);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(104, 74);
             this.btnFactura.TabIndex = 10;
             this.btnFactura.Text = "Generate invoice";
             this.btnFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // panelTitulo
             // 
             this.panelTitulo.Controls.Add(this.txtVentas);
+            this.panelTitulo.Controls.Add(this.btnFactura);
+            this.panelTitulo.Controls.Add(this.btnGuardar);
+            this.panelTitulo.Controls.Add(this.btrRegreso);
             this.panelTitulo.Controls.Add(this.imgVentas);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
@@ -491,7 +509,7 @@
             this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
             this.txtVentas.Location = new System.Drawing.Point(338, 21);
             this.txtVentas.Name = "txtVentas";
-            this.txtVentas.Size = new System.Drawing.Size(342, 42);
+            this.txtVentas.Size = new System.Drawing.Size(287, 42);
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Start   >>>   Sales";
             // 
@@ -557,6 +575,7 @@
         private System.Windows.Forms.DataGridView TablaDeVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn palletContenido;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn tam;
         private System.Windows.Forms.DataGridViewTextBoxColumn medida;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;

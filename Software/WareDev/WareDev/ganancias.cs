@@ -42,5 +42,11 @@ namespace WareDev
             panelTitulo.Visible = false;
             AbrirFormInPanel(new Start());
         }
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            panelResultado.Visible = true;
+            panel2.Visible = true;
+        }
     }
 }

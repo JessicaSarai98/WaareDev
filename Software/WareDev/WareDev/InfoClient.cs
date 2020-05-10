@@ -88,18 +88,18 @@ namespace WareDev
 
             //Menuclientescs menucliente = new Menuclientescs();
 
-            try
-            {
-                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
-           citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
-           vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
-                MessageBox.Show("Se ha insertado correctamente.");
+           // try
+           // {
+           //     objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+           //citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
+           //vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
+           //     MessageBox.Show("Se ha insertado correctamente.");
                 
-                this.Close(); 
-            }
-            catch (Exception ex) {
-                MessageBox.Show("No se pudo insertar los datos por: "+ex);
-            }
+           //     this.Close(); 
+           // }
+           // catch (Exception ex) {
+           //     MessageBox.Show("No se pudo insertar los datos por: "+ex);
+           // }
 
             }
 
@@ -266,17 +266,17 @@ namespace WareDev
         //Editar
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                objectCN.EditarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, estado.Text, countrytxt.Text,
-                CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text, IDtxtbox.Text);
-                MessageBox.Show("Se ha editado correctamente.");
-                this.Close();
+            //try
+            //{
+            //    objectCN.EditarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, estado.Text, countrytxt.Text,
+            //    CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text, IDtxtbox.Text);
+            //    MessageBox.Show("Se ha editado correctamente.");
+            //    this.Close();
                   
-            } catch(Exception ex)
-            {
-                MessageBox.Show("No se pudo editar los datos por: "+ex); 
-            }
+            //} catch(Exception ex)
+            //{
+            //    MessageBox.Show("No se pudo editar los datos por: "+ex); 
+            //}
         }
     }
 }

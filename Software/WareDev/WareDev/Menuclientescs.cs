@@ -25,8 +25,8 @@ namespace WareDev
 
         private void MostrarClientes()
         {
-            CN_Clientes objeto = new CN_Clientes();
-            dataGridView1.DataSource = objeto.MostrarCli(); 
+            //CN_Clientes objeto = new CN_Clientes();
+            //dataGridView1.DataSource = objeto.MostrarCli(); 
 
         }
 
@@ -107,8 +107,8 @@ namespace WareDev
         {
             if(dataGridView1.SelectedRows.Count > 0)
             {
-                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                objetoCN.EliminarCli(idCliente);
+                //idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                //objetoCN.EliminarCli(idCliente);
                 MessageBox.Show("Cliente eliminado correctamente.");
                 MostrarClientes();
             }

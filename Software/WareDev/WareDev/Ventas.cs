@@ -78,5 +78,23 @@ namespace WareDev
             panelTitulo.Visible = false;
             AbrirFormInPanel(new Start());
         }
+        FacturaVentas ventas1;
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            if (ventas1 == null)
+            {
+                ventas1 = new FacturaVentas();
+                ventas1.Owner = this;
+                ventas1.FormClosed += Ventas1_FormClosed;
+                ventas1.Show();
+            }
+            else ventas1.Activate();
+
+        }
+
+        private void Ventas1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ventas1 = null;
+        }
     }
 }

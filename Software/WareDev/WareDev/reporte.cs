@@ -16,5 +16,18 @@ namespace WareDev
         {
             InitializeComponent();
         }
+
+        private void reporte_Load(object sender, EventArgs e)
+        {
+            desdeTime.Value = DateTime.Today;
+            hastaTime.Value = DateTime.Today;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true; 
+            int indice = cmdReporte.SelectedIndex;
+            lblTitulo.Text = cmdReporte.Items[indice].ToString();
+        }
     }
 }

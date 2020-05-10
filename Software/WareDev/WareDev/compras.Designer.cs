@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(compras));
             this.contenedor = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtProveedor = new System.Windows.Forms.TextBox();
@@ -53,6 +49,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -80,10 +81,10 @@
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.producto,
+            this.foto,
             this.tam,
             this.cantidad,
             this.precio});
@@ -91,31 +92,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(976, 142);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // producto
-            // 
-            this.producto.FillWeight = 120F;
-            this.producto.HeaderText = "Product";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            // 
-            // tam
-            // 
-            this.tam.FillWeight = 54.72081F;
-            this.tam.HeaderText = "Size";
-            this.tam.Name = "tam";
-            // 
-            // cantidad
-            // 
-            this.cantidad.FillWeight = 54.72081F;
-            this.cantidad.HeaderText = "Amount";
-            this.cantidad.Name = "cantidad";
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 54.72081F;
-            this.precio.HeaderText = "Unit price ";
-            this.precio.Name = "precio";
             // 
             // tableLayoutPanel1
             // 
@@ -359,6 +335,41 @@
             this.imgVentas.TabIndex = 1;
             this.imgVentas.TabStop = false;
             // 
+            // producto
+            // 
+            this.producto.FillWeight = 120F;
+            this.producto.HeaderText = "Product";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
+            this.producto.Width = 291;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Photo";
+            this.foto.Name = "foto";
+            this.foto.Width = 243;
+            // 
+            // tam
+            // 
+            this.tam.FillWeight = 54.72081F;
+            this.tam.HeaderText = "Size";
+            this.tam.Name = "tam";
+            this.tam.Width = 133;
+            // 
+            // cantidad
+            // 
+            this.cantidad.FillWeight = 54.72081F;
+            this.cantidad.HeaderText = "Amount";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 133;
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 54.72081F;
+            this.precio.HeaderText = "Unit price ";
+            this.precio.Name = "precio";
+            this.precio.Width = 133;
+            // 
             // compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,10 +412,11 @@
         private System.Windows.Forms.TextBox txtNoPro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotalCompra;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn tam;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

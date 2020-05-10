@@ -63,14 +63,14 @@ namespace WareDev
                 Document doc = new Document(PageSize.A5);
 
                 // Indicamos donde vamos a guardar el documento
-                string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Cotizacion" + Nametxt.Text + ".pdf";
+                //string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Cotizacion" + Nametxt.Text + ".pdf";
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
                 //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
                 //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
 
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
+                //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
 
 
 
@@ -153,8 +153,8 @@ namespace WareDev
 
                
                 doc.Close();
-                writer.Close();
-                MessageBox.Show("Created PDF sent to the next path:" + pdfName);
+                //writer.Close();
+                //MessageBox.Show("Created PDF sent to the next path:" + pdfName);
 
                 //Dejar en blanco los text.box
                

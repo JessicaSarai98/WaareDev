@@ -34,9 +34,9 @@ namespace WareDev
         
         public void MostrarUsuarios()
         {
-            CN_Clientes objeto = new CN_Clientes(); 
-            dataGridView1.DataSource = objeto.MostrarUsu();
-            this.dataGridView1.Columns[2].Visible = false; 
+            //CN_Clientes objeto = new CN_Clientes(); 
+            //dataGridView1.DataSource = objeto.MostrarUsu();
+            //this.dataGridView1.Columns[2].Visible = false; 
         }
 
 
@@ -48,19 +48,19 @@ namespace WareDev
         //eliminar usuario
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString(); 
-                objectCN.EliminarUsu(idCliente);
-                MessageBox.Show("Usuario "+Name+" eliminado");
-                MostrarUsuarios(); 
+            //if (dataGridView1.SelectedRows.Count > 0)
+            //{
+            //    idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            //    Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString(); 
+            //    objectCN.EliminarUsu(idCliente);
+            //    MessageBox.Show("Usuario "+Name+" eliminado");
+            //    MostrarUsuarios(); 
 
-            }
-            else
-            {
-                MessageBox.Show("Seleccione una fila."); 
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Seleccione una fila."); 
+            //}
         }
     }
 }
