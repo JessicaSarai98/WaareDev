@@ -12,9 +12,17 @@ namespace WareDev
 {
     public partial class Cotizacion : Form
     {
+
+        
         public Cotizacion()
         {
             InitializeComponent();
+           
+        }
+
+        private void PDFcot_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

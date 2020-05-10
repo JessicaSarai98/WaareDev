@@ -13,14 +13,19 @@ using System.Runtime.InteropServices;
 using System.IO;
 using Domain;
 using Common.cache;
+using Org.BouncyCastle.Asn1.Crmf;
 
 namespace WareDev
 {
     public partial class Cotizaciones : Form
     {
+
+        public Array pdfByte;
+
         public Cotizaciones()
         {
             InitializeComponent();
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +68,7 @@ namespace WareDev
                 Document doc = new Document(PageSize.A5);
 
                 // Indicamos donde vamos a guardar el documento
-                string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Cotizacion" + Nametxt.Text + ".pdf";
+                string pdfName =  Customer.Text + ".pdf";
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
@@ -140,20 +145,91 @@ namespace WareDev
                 doc.Add(Chunk.NEWLINE);
                 doc.Add(spacer);
 
-                // Creamos la tabla con la informacion de el cliente 
+                // Creamos la tabla con con la infromacion de cliente y vendedor 
 
-                var table = new PdfPTable(new[] { 1f, 2f })
+                var headertable = new PdfPTable(new[] { .75f, 2f })
                 {
                     HorizontalAlignment = Left,
-                    WidthPercentage = 100,
-
+                    WidthPercentage = 75,
+                    DefaultCell = {MinimumHeight = 22f}
 
                 };
                 doc.Add(spacer);
 
-               
+                //Creacion de Tabla de datos de comprador 
+                headertable.AddCell("Date");
+                headertable.AddCell(DateTime.Now.ToString());
+                headertable.AddCell("No.");
+                headertable.AddCell(No.Text);
+                headertable.AddCell("Customer");
+                headertable.AddCell(Customer.Text);
+                headertable.AddCell("RFC");
+                headertable.AddCell(RFC.Text);
+                headertable.AddCell("Expiration");
+                headertable.AddCell(Expiration.Text);
+                headertable.AddCell("Currency");
+                headertable.AddCell(comboBox1.Text);
+
+                doc.Add(headertable);
+                doc.Add(spacer);
+
+
+                //Creacion de Tabla de Cotizacion
+
+                var columCount = TablaDeVenta.ColumnCount;
+                var columAncho = new[] {2.5f,1f,1f,2f,.75f };
+
+
+                var table = new PdfPTable(columAncho)
+                {
+                    HorizontalAlignment = Left,
+                    WidthPercentage = 100,
+                    DefaultCell = {MinimumHeight = 22f}
+
+                };
+
+                var cell = new PdfPCell(new Phrase("Product Quote"))
+                {
+
+                    Colspan = columCount,
+                    HorizontalAlignment = 1,
+                    MinimumHeight = 30f
+
+                };
+
+                table.AddCell(cell);
+
+                //Encabezados del DataGridview
+                TablaDeVenta.Columns
+                    .OfType<DataGridViewColumn>()
+                    .ToList()
+                    .ForEach(c => table.AddCell(c.Name));
+
+                //Columnas
+                TablaDeVenta.Rows
+                    .OfType<DataGridViewRow>()
+                    .ToList()
+                    .ForEach(r =>
+                    {
+                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
+
+                    });
+
+                doc.Add(table);
+
+                //Convertir el Archivo pdf en un arreglo de bytes 
+                MemoryStream Archivo = new MemoryStream();
+                PdfWriter.GetInstance(doc, Archivo);
+                doc.Open();
                 doc.Close();
                 writer.Close();
+
+
+                pdfByte = Archivo.ToArray();
+                
+                Cotizacion cot = new Cotizacion();
+                cot.ShowDialog();
                 MessageBox.Show("Created PDF sent to the next path:" + pdfName);
 
                 //Dejar en blanco los text.box
@@ -167,8 +243,7 @@ namespace WareDev
                 MessageBox.Show("Close the PDF to be modified");
             }
 
-            Cotizacion cot = new Cotizacion();
-            cot.ShowDialog();
+           
         }
     }
 }
