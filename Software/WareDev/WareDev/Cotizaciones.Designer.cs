@@ -39,7 +39,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtNoCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +57,13 @@
             this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.No = new System.Windows.Forms.TextBox();
+            this.RFC = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Expiration = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +119,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.22723F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.38211F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.92276F));
+            this.tableLayoutPanel1.Controls.Add(this.RFC, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.txt1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTotal, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.Customer, 5, 0);
@@ -120,7 +128,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtNoCliente, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Date, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtFolio, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
@@ -130,7 +138,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtIva, 1, 2);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 94);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 67);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -225,11 +233,12 @@
             this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker1
+            // Date
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Date.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(75, 41);
@@ -238,6 +247,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(127, 26);
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
+=======
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(75, 41);
+            this.Date.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(127, 27);
+            this.Date.TabIndex = 14;
+            this.Date.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
+>>>>>>> c8a0d327b61898b05baa66241327c4812d226411
             // 
             // txtFolio
             // 
@@ -358,7 +377,7 @@
             this.TablaDeVenta.Location = new System.Drawing.Point(29, 267);
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.RowHeadersWidth = 45;
-            this.TablaDeVenta.Size = new System.Drawing.Size(908, 277);
+            this.TablaDeVenta.Size = new System.Drawing.Size(907, 277);
             this.TablaDeVenta.TabIndex = 49;
             // 
             // nombre
@@ -414,26 +433,99 @@
             // 
             this.Numero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numero.Location = new System.Drawing.Point(34, 223);
+            this.Numero.Location = new System.Drawing.Point(33, 191);
             this.Numero.Name = "Numero";
             this.Numero.Size = new System.Drawing.Size(66, 24);
             this.Numero.TabIndex = 50;
             this.Numero.Text = "No.";
             this.Numero.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // No
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.No.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.textBox1.Location = new System.Drawing.Point(106, 220);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 32);
-            this.textBox1.TabIndex = 51;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.No.BackColor = System.Drawing.Color.White;
+            this.No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.No.Location = new System.Drawing.Point(105, 187);
+            this.No.Multiline = true;
+            this.No.Name = "No";
+            this.No.Size = new System.Drawing.Size(127, 32);
+            this.No.TabIndex = 51;
+            this.No.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RFC
+            // 
+            this.RFC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RFC.BackColor = System.Drawing.Color.White;
+            this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.RFC.Location = new System.Drawing.Point(322, 79);
+            this.RFC.Multiline = true;
+            this.RFC.Name = "RFC";
+            this.RFC.Size = new System.Drawing.Size(123, 32);
+            this.RFC.TabIndex = 53;
+            this.RFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(229, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "RFC";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(239, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 30);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Expiration";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Expiration
+            // 
+            this.Expiration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Expiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expiration.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Expiration.Location = new System.Drawing.Point(352, 189);
+            this.Expiration.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.Expiration.Name = "Expiration";
+            this.Expiration.Size = new System.Drawing.Size(123, 27);
+            this.Expiration.TabIndex = 54;
+            this.Expiration.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(487, 187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 24);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "Currency";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Peso",
+            "Euro",
+            "Dolar"});
+            this.comboBox1.Location = new System.Drawing.Point(586, 185);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 21);
+            this.comboBox1.TabIndex = 56;
             // 
             // Cotizaciones
             // 
@@ -441,7 +533,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1114, 571);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Expiration);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.No);
             this.Controls.Add(this.Numero);
             this.Controls.Add(this.TablaDeVenta);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -471,7 +567,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNoCliente;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -489,6 +585,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cajasPorContenido;
         private System.Windows.Forms.DataGridViewTextBoxColumn importe;
         private System.Windows.Forms.Label Numero;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox No;
+        private System.Windows.Forms.TextBox RFC;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker Expiration;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
