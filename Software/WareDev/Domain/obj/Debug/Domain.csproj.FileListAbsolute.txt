@@ -1,67 +1,3 @@
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Common.pdb
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe.config
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.pdb
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe.config
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.Properties.Resources.resources
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe.config
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe.config
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.Properties.Resources.resources
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Common.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.Properties.Resources.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
-<<<<<<< HEAD
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.pdb
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe.config
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.pdb
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe.config
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.Properties.Resources.resources
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
-=======
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
@@ -77,4 +13,3 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\obj\Debug\Doma
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
->>>>>>> bee63e34198263eb3a2a5cabdcae3a3ecf1d2bb9

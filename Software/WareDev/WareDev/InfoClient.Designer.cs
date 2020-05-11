@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.estado = new System.Windows.Forms.TextBox();
             this.SaveEdit = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.vendortxt = new System.Windows.Forms.TextBox();
@@ -80,7 +79,6 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.estado);
             this.panel1.Controls.Add(this.SaveEdit);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.vendortxt);
@@ -128,14 +126,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // estado
-            // 
-            this.estado.Location = new System.Drawing.Point(498, 318);
-            this.estado.Name = "estado";
-            this.estado.Size = new System.Drawing.Size(261, 20);
-            this.estado.TabIndex = 41;
-            this.estado.UseWaitCursor = true;
             // 
             // SaveEdit
             // 
@@ -621,6 +611,5 @@
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.Button SaveEdit;
         public System.Windows.Forms.Button save;
-        public System.Windows.Forms.TextBox estado;
     }
 }

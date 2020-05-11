@@ -17,22 +17,7 @@ namespace Domain
         private string firstName;
         private string lastName;
         private string email;
-        /*
-        private string RFC;
-        private string phone;
-        private string address;
-        private string city;
-        private string state;
-        private string country;
-        private string CP;
-        private string identy;
-        private float tasa;
-        private string status; 
-        private string vendedor;
-        private string pay;
-        private string cfdi;
-        private string note; 
-        */
+   
         public UserModel(int ID, string username, string password, string firstName, string lastName, string email)
         {
             ID = ID;
