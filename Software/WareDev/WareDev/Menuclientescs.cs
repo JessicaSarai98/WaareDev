@@ -25,8 +25,9 @@ namespace WareDev
 
         private void MostrarClientes()
         {
-            //CN_Clientes objeto = new CN_Clientes();
-            //dataGridView1.DataSource = objeto.MostrarCli(); 
+            CN_Clientes objeto = new CN_Clientes();
+            //dataGridView1.DataSource = objeto.MostrarCli();
+            dataGridView1.DataSource = objeto.MostrarCli();
 
         }
 
@@ -86,10 +87,44 @@ namespace WareDev
 
         }
 
+        //Info client
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            InfoClient cli = new InfoClient();
+            cli.SaveEdit.Visible = true;
+            cli.save.Visible = false;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                //Editar = true; 
+                cli.IDtxtbox.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                cli.Nametxt.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
+                cli.RFCtxt.Text = dataGridView1.CurrentRow.Cells["RFC"].Value.ToString();
+                cli.phonetxt.Text = dataGridView1.CurrentRow.Cells["phone"].Value.ToString();
+                cli.mailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+                cli.addrestxt.Text = dataGridView1.CurrentRow.Cells["address"].Value.ToString();
+                cli.citytxt.Text = dataGridView1.CurrentRow.Cells["city"].Value.ToString();
+                cli.statetxt.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                cli.countrytxt.Text = dataGridView1.CurrentRow.Cells["country"].Value.ToString();
+                cli.CPtxt.Text = dataGridView1.CurrentRow.Cells["codigopostal"].Value.ToString();
+                cli.identytxt.Text = dataGridView1.CurrentRow.Cells["identidadfiscal"].Value.ToString();
+                cli.tasatxt.Text = dataGridView1.CurrentRow.Cells["tasa"].Value.ToString();
+                cli.statustxt.Text = dataGridView1.CurrentRow.Cells["status"].Value.ToString();
+                cli.vendortxt.Text = dataGridView1.CurrentRow.Cells["vendedor"].Value.ToString();
+                cli.paytxt.Text = dataGridView1.CurrentRow.Cells["payment"].Value.ToString();
+                cli.cfditxt.Text = dataGridView1.CurrentRow.Cells["CFDI"].Value.ToString();
+                cli.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
+                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                cli.ShowDialog();
+
+
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+
         }
+
+    
 
         private void Menuclientescs_Load(object sender, EventArgs e)
         {
@@ -107,8 +142,8 @@ namespace WareDev
         {
             if(dataGridView1.SelectedRows.Count > 0)
             {
-                //idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                //objetoCN.EliminarCli(idCliente);
+                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                objetoCN.EliminarCli(idCliente);
                 MessageBox.Show("Cliente eliminado correctamente.");
                 MostrarClientes();
             }

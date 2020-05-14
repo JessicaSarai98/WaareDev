@@ -1,4 +1,6 @@
-﻿namespace WareDev
+﻿using System;
+
+namespace WareDev
 {
     partial class Cotizaciones
     {
@@ -263,10 +265,15 @@
             this.Date.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Date.Location = new System.Drawing.Point(75, 41);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(127, 26);
-            this.Date.TabIndex = 54;
+            this.Date.Size = new System.Drawing.Size(127, 27);
+            this.Date.TabIndex = 14;
+            this.Date.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
+
             // 
             // txtFolio
             // 
@@ -538,6 +545,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Cotizaciones_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

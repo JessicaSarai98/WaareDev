@@ -1,55 +1,3 @@
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
-C:\Users\Jessica\Desktop\Úl\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
-<<<<<<< HEAD
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
-C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
-=======
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
@@ -62,4 +10,15 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
->>>>>>> bee63e34198263eb3a2a5cabdcae3a3ecf1d2bb9
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb

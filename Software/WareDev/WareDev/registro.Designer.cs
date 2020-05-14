@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registro));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.User = new System.Windows.Forms.Panel();
+            this.lasttxt = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.usertxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IconUser = new System.Windows.Forms.PictureBox();
-            this.lasttxt = new System.Windows.Forms.TextBox();
             this.User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fotouser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -95,6 +95,17 @@
             this.User.Size = new System.Drawing.Size(1018, 476);
             this.User.TabIndex = 21;
             this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
+            // 
+            // lasttxt
+            // 
+            this.lasttxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.lasttxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lasttxt.Location = new System.Drawing.Point(133, 383);
+            this.lasttxt.Multiline = true;
+            this.lasttxt.Name = "lasttxt";
+            this.lasttxt.Size = new System.Drawing.Size(223, 33);
+            this.lasttxt.TabIndex = 27;
+            this.lasttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button6
             // 
@@ -261,6 +272,7 @@
             this.passconfirmtxt.Location = new System.Drawing.Point(133, 196);
             this.passconfirmtxt.Multiline = true;
             this.passconfirmtxt.Name = "passconfirmtxt";
+            this.passconfirmtxt.PasswordChar = '*';
             this.passconfirmtxt.Size = new System.Drawing.Size(223, 33);
             this.passconfirmtxt.TabIndex = 4;
             this.passconfirmtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -272,6 +284,7 @@
             this.passtxt.Location = new System.Drawing.Point(133, 128);
             this.passtxt.Multiline = true;
             this.passtxt.Name = "passtxt";
+            this.passtxt.PasswordChar = '*';
             this.passtxt.Size = new System.Drawing.Size(223, 37);
             this.passtxt.TabIndex = 3;
             this.passtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -308,17 +321,6 @@
             this.IconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconUser.TabIndex = 0;
             this.IconUser.TabStop = false;
-            // 
-            // lasttxt
-            // 
-            this.lasttxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.lasttxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lasttxt.Location = new System.Drawing.Point(133, 383);
-            this.lasttxt.Multiline = true;
-            this.lasttxt.Name = "lasttxt";
-            this.lasttxt.Size = new System.Drawing.Size(223, 33);
-            this.lasttxt.TabIndex = 27;
-            this.lasttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // registro
             // 

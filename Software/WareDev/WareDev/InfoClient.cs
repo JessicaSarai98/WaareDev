@@ -86,22 +86,23 @@ namespace WareDev
         private void button2_Click(object sender, EventArgs e)
         {
 
-            //Menuclientescs menucliente = new Menuclientescs();
+            Menuclientescs menucliente = new Menuclientescs();
 
-           // try
-           // {
-           //     objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
-           //citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
-           //vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
-           //     MessageBox.Show("Se ha insertado correctamente.");
-                
-           //     this.Close(); 
-           // }
-           // catch (Exception ex) {
-           //     MessageBox.Show("No se pudo insertar los datos por: "+ex);
-           // }
+            try
+            {
+                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+           citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
+           vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
+                MessageBox.Show("Se ha insertado correctamente.");
 
+                this.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos por: " + ex);
+            }
+
+        }
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
@@ -112,7 +113,7 @@ namespace WareDev
                 Document doc = new Document(PageSize.A5);
 
                 // Indicamos donde vamos a guardar el documento
-                string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Cliente-" + Nametxt.Text + ".pdf";
+                string pdfName = @"C:\Users\Jessica\Desktop\" + "Cliente-" + Nametxt.Text + ".pdf";
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
@@ -150,9 +151,9 @@ namespace WareDev
                     SpacingAfter = 10f,
                 };
 
-
+                //@"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg"
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg";
+                var imagenpath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Informacion.jpeg";
 
                 using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                 {
@@ -165,7 +166,7 @@ namespace WareDev
                 }
 
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Logo.jpeg";
+                var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
 
                 using (FileStream im = new FileStream(Logopath, FileMode.Open))
                 {
@@ -266,17 +267,18 @@ namespace WareDev
         //Editar
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    objectCN.EditarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, estado.Text, countrytxt.Text,
-            //    CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text, IDtxtbox.Text);
-            //    MessageBox.Show("Se ha editado correctamente.");
-            //    this.Close();
-                  
-            //} catch(Exception ex)
-            //{
-            //    MessageBox.Show("No se pudo editar los datos por: "+ex); 
-            //}
+            try
+            {
+                objectCN.EditarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
+                CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text, IDtxtbox.Text);
+                MessageBox.Show("Se ha editado correctamente.");
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo editar los datos por: " + ex);
+            }
         }
     }
 }

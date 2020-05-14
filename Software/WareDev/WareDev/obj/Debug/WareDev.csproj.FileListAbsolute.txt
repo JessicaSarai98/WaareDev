@@ -19,6 +19,7 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.ResolveComReference.cache
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Agregar.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizacion.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizaciones.resources
@@ -27,6 +28,7 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Insumos.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.inventarios.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MateriaPrima.resources
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ProductoTerminado.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.reporte.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Supplier.resources
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources
@@ -46,6 +48,3 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Agregar.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ProductoTerminado.resources

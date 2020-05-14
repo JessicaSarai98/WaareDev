@@ -15,6 +15,7 @@ namespace WareDev
     {
         CN_Clientes objectCN = new CN_Clientes();
         public string idCliente = null;
+
         public UsersListcs()
         {
             InitializeComponent();
@@ -34,33 +35,77 @@ namespace WareDev
         
         public void MostrarUsuarios()
         {
-            //CN_Clientes objeto = new CN_Clientes(); 
-            //dataGridView1.DataSource = objeto.MostrarUsu();
-            //this.dataGridView1.Columns[2].Visible = false; 
+            CN_Clientes objeto = new CN_Clientes();
+            dataGridView1.DataSource = objeto.MostrarUsu();
+            this.dataGridView1.Columns[2].Visible = false;
         }
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //dataGridView1.Columns[2].Visible = false; 
+           // dataGridView1.Columns[2].Visible = false;
         }
 
         //eliminar usuario
         private void button2_Click(object sender, EventArgs e)
         {
-            //if (dataGridView1.SelectedRows.Count > 0)
-            //{
-            //    idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-            //    Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString(); 
-            //    objectCN.EliminarUsu(idCliente);
-            //    MessageBox.Show("Usuario "+Name+" eliminado");
-            //    MostrarUsuarios(); 
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
+                objectCN.EliminarUsu(idCliente);
+                MessageBox.Show("Usuario " + Name + " eliminado");
+                MostrarUsuarios();
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Seleccione una fila."); 
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila.");
+            }
+        }
+
+        //info user 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            registro reg = new registro();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                reg.usertxt.Text = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
+                reg.passtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
+                reg.passconfirmtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
+                reg.emailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+                reg.nametxt.Text = dataGridView1.CurrentRow.Cells["firstName"].Value.ToString();
+                reg.lasttxt.Text = dataGridView1.CurrentRow.Cells["lastName"].Value.ToString();
+                reg.ShowDialog(); 
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+        }
+        //editar usuario
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            registro reg = new registro();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                reg.usertxt.Text = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
+                reg.passtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
+                reg.passconfirmtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
+                reg.emailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+                reg.nametxt.Text = dataGridView1.CurrentRow.Cells["firstName"].Value.ToString();
+                reg.lasttxt.Text = dataGridView1.CurrentRow.Cells["lastName"].Value.ToString();
+                reg.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+        }
+
+        private void act_Click(object sender, EventArgs e)
+        {
+            MostrarUsuarios(); 
         }
     }
 }

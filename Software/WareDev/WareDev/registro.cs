@@ -24,12 +24,6 @@ namespace WareDev
             InitializeComponent();
         }
 
-
-
-
-       
-
-       
         private void butrurn_Click(object sender, EventArgs e)
         {
 
@@ -94,15 +88,16 @@ namespace WareDev
         //guardar usuario
         private void button3_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
-            //    MessageBox.Show("Se ha agregado el usuario al sistema.");
-            //    obj.MostrarUsuarios(); 
-            //}catch(Exception ex)
-            //{
-            //    MessageBox.Show("No se pudo insertar los datos por: "+ex); 
-            //}
+            try
+            {
+                objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
+                MessageBox.Show("Se ha agregado el usuario al sistema.");
+                obj.MostrarUsuarios();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos por: " + ex);
+            }
         }
 
         private void User_Paint(object sender, PaintEventArgs e)

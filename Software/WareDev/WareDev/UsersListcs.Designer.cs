@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.act = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             this.btnEditar.Text = "Edit";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label1
             // 
@@ -152,15 +154,37 @@
             this.button3.Text = "Info User";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(93, 111);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(539, 338);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // act
+            // 
+            this.act.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.act.BackColor = System.Drawing.SystemColors.Desktop;
+            this.act.Cursor = System.Windows.Forms.Cursors.Default;
+            this.act.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.act.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.act.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.act.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.act.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.act.ForeColor = System.Drawing.Color.Silver;
+            this.act.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.act.Location = new System.Drawing.Point(449, 29);
+            this.act.Name = "act";
+            this.act.Size = new System.Drawing.Size(104, 65);
+            this.act.TabIndex = 21;
+            this.act.Text = "Actualizar";
+            this.act.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.act.UseVisualStyleBackColor = false;
+            this.act.Click += new System.EventHandler(this.act_Click);
             // 
             // UsersListcs
             // 
@@ -168,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(907, 505);
+            this.Controls.Add(this.act);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -193,5 +218,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button act;
     }
 }

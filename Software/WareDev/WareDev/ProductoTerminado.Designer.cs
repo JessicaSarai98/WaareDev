@@ -30,40 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoTerminado));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.TablaProdTermi = new System.Windows.Forms.TableLayoutPanel();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnFoto = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNombreMateria = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPrecioInsumo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtCajasContenido = new System.Windows.Forms.TextBox();
             this.txtUniMedInsu = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCajasContenido = new System.Windows.Forms.TextBox();
+            this.txtNameInputs = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtPallet = new System.Windows.Forms.TextBox();
+            this.txtCantiMatPrima = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCantidadInsumo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
-            this.FotoProduc = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreMateria = new System.Windows.Forms.TextBox();
-            this.txtNameInputs = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCantiMatPrima = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCantidadInsumo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.TablaProdTermi.SuspendLayout();
             this.top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -79,6 +79,20 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1100, 500);
             this.contenedor.TabIndex = 3;
+            // 
+            // FotoProduc
+            // 
+            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
+            this.FotoProduc.Location = new System.Drawing.Point(874, 349);
+            this.FotoProduc.Name = "FotoProduc";
+            this.FotoProduc.Size = new System.Drawing.Size(214, 148);
+            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FotoProduc.TabIndex = 31;
+            this.FotoProduc.TabStop = false;
+            this.FotoProduc.Visible = false;
             // 
             // TablaProdTermi
             // 
@@ -127,37 +141,55 @@
             this.TablaProdTermi.Size = new System.Drawing.Size(945, 222);
             this.TablaProdTermi.TabIndex = 30;
             // 
-            // txtDescripcion
+            // label9
             // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(52, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 18);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Quantity used (I)";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(513, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 18);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Quantity used (RM)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNombreMateria
+            // 
+            this.txtNombreMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtDescripcion.Location = new System.Drawing.Point(711, 75);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(231, 30);
-            this.txtDescripcion.TabIndex = 36;
-            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombreMateria.BackColor = System.Drawing.Color.White;
+            this.txtNombreMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtNombreMateria.Location = new System.Drawing.Point(711, 111);
+            this.txtNombreMateria.Multiline = true;
+            this.txtNombreMateria.Name = "txtNombreMateria";
+            this.txtNombreMateria.Size = new System.Drawing.Size(231, 30);
+            this.txtNombreMateria.TabIndex = 57;
+            this.txtNombreMateria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnFoto
+            // label1
             // 
-            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFoto.BackColor = System.Drawing.Color.Silver;
-            this.btnFoto.FlatAppearance.BorderSize = 0;
-            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnFoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoto.Location = new System.Drawing.Point(553, 389);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnFoto.Size = new System.Drawing.Size(231, 30);
-            this.btnFoto.TabIndex = 44;
-            this.btnFoto.Text = "ADD PICTURE";
-            this.btnFoto.UseVisualStyleBackColor = false;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(514, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 18);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Raw material name";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPrecioInsumo
             // 
@@ -172,6 +204,18 @@
             this.txtPrecioInsumo.Size = new System.Drawing.Size(231, 30);
             this.txtPrecioInsumo.TabIndex = 50;
             this.txtPrecioInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(563, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Photo";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNombreInsumo
             // 
@@ -237,20 +281,6 @@
             this.dateTimePicker1.TabIndex = 26;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
-            // txtCajasContenido
-            // 
-            this.txtCajasContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCajasContenido.BackColor = System.Drawing.Color.White;
-            this.txtCajasContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCajasContenido.Location = new System.Drawing.Point(239, 111);
-            this.txtCajasContenido.Multiline = true;
-            this.txtCajasContenido.Name = "txtCajasContenido";
-            this.txtCajasContenido.Size = new System.Drawing.Size(230, 30);
-            this.txtCajasContenido.TabIndex = 35;
-            this.txtCajasContenido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtUniMedInsu
             // 
             this.txtUniMedInsu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -265,18 +295,6 @@
             this.txtUniMedInsu.TabIndex = 45;
             this.txtUniMedInsu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(49, 117);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 18);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "Boxes by content";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -289,29 +307,45 @@
             this.label10.Text = "Unit of measure";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label11
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 18);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "Pallet by content";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(49, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(138, 18);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Boxes by content";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // txtCajasContenido
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(563, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Photo";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtCajasContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCajasContenido.BackColor = System.Drawing.Color.White;
+            this.txtCajasContenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtCajasContenido.Location = new System.Drawing.Point(239, 111);
+            this.txtCajasContenido.Multiline = true;
+            this.txtCajasContenido.Name = "txtCajasContenido";
+            this.txtCajasContenido.Size = new System.Drawing.Size(230, 30);
+            this.txtCajasContenido.TabIndex = 35;
+            this.txtCajasContenido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNameInputs
+            // 
+            this.txtNameInputs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNameInputs.BackColor = System.Drawing.Color.White;
+            this.txtNameInputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtNameInputs.Location = new System.Drawing.Point(239, 147);
+            this.txtNameInputs.Multiline = true;
+            this.txtNameInputs.Name = "txtNameInputs";
+            this.txtNameInputs.Size = new System.Drawing.Size(230, 30);
+            this.txtNameInputs.TabIndex = 58;
+            this.txtNameInputs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -324,6 +358,32 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Description";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtDescripcion.Location = new System.Drawing.Point(711, 75);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(231, 30);
+            this.txtDescripcion.TabIndex = 36;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(51, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 18);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Pallet by content";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPallet
             // 
@@ -338,6 +398,64 @@
             this.txtPallet.Size = new System.Drawing.Size(230, 30);
             this.txtPallet.TabIndex = 53;
             this.txtPallet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCantiMatPrima
+            // 
+            this.txtCantiMatPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCantiMatPrima.BackColor = System.Drawing.Color.White;
+            this.txtCantiMatPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtCantiMatPrima.Location = new System.Drawing.Point(711, 147);
+            this.txtCantiMatPrima.Multiline = true;
+            this.txtCantiMatPrima.Name = "txtCantiMatPrima";
+            this.txtCantiMatPrima.Size = new System.Drawing.Size(231, 30);
+            this.txtCantiMatPrima.TabIndex = 59;
+            this.txtCantiMatPrima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(68, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 18);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Inputs name";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCantidadInsumo
+            // 
+            this.txtCantidadInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCantidadInsumo.BackColor = System.Drawing.Color.White;
+            this.txtCantidadInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtCantidadInsumo.Location = new System.Drawing.Point(239, 183);
+            this.txtCantidadInsumo.Multiline = true;
+            this.txtCantidadInsumo.Name = "txtCantidadInsumo";
+            this.txtCantidadInsumo.Size = new System.Drawing.Size(230, 36);
+            this.txtCantidadInsumo.TabIndex = 61;
+            this.txtCantidadInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(874, 90);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(88, 57);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "Save";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // top
             // 
@@ -359,38 +477,6 @@
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Add Finished Products";
             // 
-            // FotoProduc
-            // 
-            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
-            this.FotoProduc.Location = new System.Drawing.Point(874, 349);
-            this.FotoProduc.Name = "FotoProduc";
-            this.FotoProduc.Size = new System.Drawing.Size(214, 148);
-            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FotoProduc.TabIndex = 31;
-            this.FotoProduc.TabStop = false;
-            this.FotoProduc.Visible = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(874, 90);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(88, 57);
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
             // btrRegreso
             // 
             this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -410,109 +496,23 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // label1
+            // btnFoto
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(514, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 18);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Raw material name";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNombreMateria
-            // 
-            this.txtNombreMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreMateria.BackColor = System.Drawing.Color.White;
-            this.txtNombreMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNombreMateria.Location = new System.Drawing.Point(711, 111);
-            this.txtNombreMateria.Multiline = true;
-            this.txtNombreMateria.Name = "txtNombreMateria";
-            this.txtNombreMateria.Size = new System.Drawing.Size(231, 30);
-            this.txtNombreMateria.TabIndex = 57;
-            this.txtNombreMateria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNameInputs
-            // 
-            this.txtNameInputs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameInputs.BackColor = System.Drawing.Color.White;
-            this.txtNameInputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNameInputs.Location = new System.Drawing.Point(239, 147);
-            this.txtNameInputs.Multiline = true;
-            this.txtNameInputs.Name = "txtNameInputs";
-            this.txtNameInputs.Size = new System.Drawing.Size(230, 30);
-            this.txtNameInputs.TabIndex = 58;
-            this.txtNameInputs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 18);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Inputs name";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCantiMatPrima
-            // 
-            this.txtCantiMatPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantiMatPrima.BackColor = System.Drawing.Color.White;
-            this.txtCantiMatPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCantiMatPrima.Location = new System.Drawing.Point(711, 147);
-            this.txtCantiMatPrima.Multiline = true;
-            this.txtCantiMatPrima.Name = "txtCantiMatPrima";
-            this.txtCantiMatPrima.Size = new System.Drawing.Size(231, 30);
-            this.txtCantiMatPrima.TabIndex = 59;
-            this.txtCantiMatPrima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(513, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 18);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Quantity used (RM)";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCantidadInsumo
-            // 
-            this.txtCantidadInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantidadInsumo.BackColor = System.Drawing.Color.White;
-            this.txtCantidadInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCantidadInsumo.Location = new System.Drawing.Point(239, 183);
-            this.txtCantidadInsumo.Multiline = true;
-            this.txtCantidadInsumo.Name = "txtCantidadInsumo";
-            this.txtCantidadInsumo.Size = new System.Drawing.Size(230, 36);
-            this.txtCantidadInsumo.TabIndex = 61;
-            this.txtCantidadInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(52, 192);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 18);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Quantity used (I)";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFoto.BackColor = System.Drawing.Color.Silver;
+            this.btnFoto.FlatAppearance.BorderSize = 0;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnFoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFoto.Location = new System.Drawing.Point(553, 389);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnFoto.Size = new System.Drawing.Size(231, 30);
+            this.btnFoto.TabIndex = 44;
+            this.btnFoto.Text = "ADD PICTURE";
+            this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // ProductoTerminado
             // 
@@ -525,10 +525,10 @@
             this.Text = "ProductoTerminado";
             this.Load += new System.EventHandler(this.ProductoTerminado_Load);
             this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.TablaProdTermi.ResumeLayout(false);
             this.TablaProdTermi.PerformLayout();
             this.top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.ResumeLayout(false);
 
         }
