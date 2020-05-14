@@ -68,11 +68,7 @@ namespace WareDev
                 Document doc = new Document(PageSize.A5);
 
                 // Indicamos donde vamos a guardar el documento
-<<<<<<< HEAD
-                //string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Cotizacion" + Nametxt.Text + ".pdf";
-=======
-                string pdfName =  Customer.Text + ".pdf";
->>>>>>> c8a0d327b61898b05baa66241327c4812d226411
+                //string pdfName =  Customer.Text + ".pdf";
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
@@ -226,20 +222,13 @@ namespace WareDev
                 MemoryStream Archivo = new MemoryStream();
                 PdfWriter.GetInstance(doc, Archivo);
                 doc.Open();
-                doc.Close();
-<<<<<<< HEAD
+                //doc.Close();
                 //writer.Close();
-                //MessageBox.Show("Created PDF sent to the next path:" + pdfName);
-=======
-                writer.Close();
-
-
-                pdfByte = Archivo.ToArray();
+                //pdfByte = Archivo.ToArray();
                 
-                Cotizacion cot = new Cotizacion();
-                cot.ShowDialog();
-                MessageBox.Show("Created PDF sent to the next path:" + pdfName);
->>>>>>> c8a0d327b61898b05baa66241327c4812d226411
+                //Cotizacion cot = new Cotizacion();
+                //cot.ShowDialog();
+                //MessageBox.Show("Created PDF sent to the next path:" + pdfName);
 
                 //Dejar en blanco los text.box
                

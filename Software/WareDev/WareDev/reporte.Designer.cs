@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reporte));
             this.contenedor = new System.Windows.Forms.Panel();
-            this.panelResultado = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelResultado = new System.Windows.Forms.Panel();
             this.cmdReporte = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tablaReportes = new System.Windows.Forms.TableLayoutPanel();
@@ -45,7 +46,6 @@
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.contenedor.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tablaReportes.SuspendLayout();
@@ -69,17 +69,16 @@
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 0;
             // 
-            // panelResultado
+            // label1
             // 
-            this.panelResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelResultado.BackColor = System.Drawing.Color.Transparent;
-            this.panelResultado.Location = new System.Drawing.Point(12, 215);
-            this.panelResultado.Name = "panelResultado";
-            this.panelResultado.Size = new System.Drawing.Size(994, 225);
-            this.panelResultado.TabIndex = 22;
-            this.panelResultado.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 18);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Select the report";
             // 
             // panel2
             // 
@@ -103,6 +102,18 @@
             this.lblTitulo.Size = new System.Drawing.Size(342, 42);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelResultado
+            // 
+            this.panelResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelResultado.BackColor = System.Drawing.Color.Transparent;
+            this.panelResultado.Location = new System.Drawing.Point(12, 215);
+            this.panelResultado.Name = "panelResultado";
+            this.panelResultado.Size = new System.Drawing.Size(994, 225);
+            this.panelResultado.TabIndex = 22;
+            this.panelResultado.Visible = false;
             // 
             // cmdReporte
             // 
@@ -154,7 +165,7 @@
             this.tablaReportes.Name = "tablaReportes";
             this.tablaReportes.RowCount = 1;
             this.tablaReportes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tablaReportes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablaReportes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tablaReportes.Size = new System.Drawing.Size(668, 40);
             this.tablaReportes.TabIndex = 9;
             // 
@@ -245,17 +256,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Select the report";
             // 
             // reporte
             // 

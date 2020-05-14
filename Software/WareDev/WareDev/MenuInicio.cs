@@ -225,6 +225,7 @@ namespace WareDev
         private void btnInven_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            AbrirFormInPanel(new inventarios());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)

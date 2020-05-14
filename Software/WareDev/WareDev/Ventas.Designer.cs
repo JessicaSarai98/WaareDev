@@ -58,11 +58,11 @@
             this.txtIva = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btrRegreso = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnFactura = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
+            this.btnFactura = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
@@ -434,62 +434,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "NEW SALE";
             // 
-            // btrRegreso
-            // 
-            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
-            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
-            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
-            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btrRegreso.Location = new System.Drawing.Point(911, 7);
-            this.btrRegreso.Name = "btrRegreso";
-            this.btrRegreso.Size = new System.Drawing.Size(104, 74);
-            this.btrRegreso.TabIndex = 12;
-            this.btrRegreso.Text = "Return";
-            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btrRegreso.UseVisualStyleBackColor = false;
-            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(784, 7);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(104, 74);
-            this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // btnFactura
-            // 
-            this.btnFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(176)))), ((int)(((byte)(106)))));
-            this.btnFactura.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFactura.ForeColor = System.Drawing.Color.Black;
-            this.btnFactura.Image = ((System.Drawing.Image)(resources.GetObject("btnFactura.Image")));
-            this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFactura.Location = new System.Drawing.Point(648, 7);
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(104, 74);
-            this.btnFactura.TabIndex = 10;
-            this.btnFactura.Text = "Generate invoice";
-            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnFactura.UseVisualStyleBackColor = false;
-            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
             // panelTitulo
             // 
             this.panelTitulo.Controls.Add(this.txtVentas);
@@ -512,6 +456,62 @@
             this.txtVentas.Size = new System.Drawing.Size(287, 42);
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Start   >>>   Sales";
+            // 
+            // btnFactura
+            // 
+            this.btnFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(176)))), ((int)(((byte)(106)))));
+            this.btnFactura.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactura.ForeColor = System.Drawing.Color.Black;
+            this.btnFactura.Image = ((System.Drawing.Image)(resources.GetObject("btnFactura.Image")));
+            this.btnFactura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFactura.Location = new System.Drawing.Point(648, 7);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Size = new System.Drawing.Size(104, 74);
+            this.btnFactura.TabIndex = 10;
+            this.btnFactura.Text = "Generate invoice";
+            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(784, 7);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 74);
+            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.Text = "Save";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btrRegreso
+            // 
+            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
+            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
+            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
+            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btrRegreso.Location = new System.Drawing.Point(911, 7);
+            this.btrRegreso.Name = "btrRegreso";
+            this.btrRegreso.Size = new System.Drawing.Size(104, 74);
+            this.btrRegreso.TabIndex = 12;
+            this.btrRegreso.Text = "Return";
+            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btrRegreso.UseVisualStyleBackColor = false;
+            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
             // imgVentas
             // 

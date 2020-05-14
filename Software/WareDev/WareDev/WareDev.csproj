@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarInsumo.Designer.cs">
+      <DependentUpon>AgregarInsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="compras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,29 @@
     <Compile Include="ganancias.Designer.cs">
       <DependentUpon>ganancias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Insumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insumos.Designer.cs">
+      <DependentUpon>Insumos.cs</DependentUpon>
+    </Compile>
     <Compile Include="inventarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inventarios.Designer.cs">
       <DependentUpon>inventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MateriaPrima.Designer.cs">
+      <DependentUpon>MateriaPrima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoTerminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoTerminado.Designer.cs">
+      <DependentUpon>ProductoTerminado.cs</DependentUpon>
     </Compile>
     <Compile Include="reporte.cs">
       <SubType>Form</SubType>
@@ -188,6 +212,9 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarInsumo.resx">
+      <DependentUpon>AgregarInsumo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="compras.resx">
       <DependentUpon>compras.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,8 +230,17 @@
     <EmbeddedResource Include="ganancias.resx">
       <DependentUpon>ganancias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Insumos.resx">
+      <DependentUpon>Insumos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="inventarios.resx">
       <DependentUpon>inventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriaPrima.resx">
+      <DependentUpon>MateriaPrima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoTerminado.resx">
+      <DependentUpon>ProductoTerminado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte.resx">
       <DependentUpon>reporte.cs</DependentUpon>

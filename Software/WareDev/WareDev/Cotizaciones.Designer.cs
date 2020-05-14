@@ -32,6 +32,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.RFC = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.Customer = new System.Windows.Forms.TextBox();
@@ -58,8 +60,6 @@
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.Label();
             this.No = new System.Windows.Forms.TextBox();
-            this.RFC = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Expiration = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
@@ -146,6 +146,31 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 114);
             this.tableLayoutPanel1.TabIndex = 48;
+            // 
+            // RFC
+            // 
+            this.RFC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RFC.BackColor = System.Drawing.Color.White;
+            this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.RFC.Location = new System.Drawing.Point(322, 79);
+            this.RFC.Multiline = true;
+            this.RFC.Name = "RFC";
+            this.RFC.Size = new System.Drawing.Size(123, 32);
+            this.RFC.TabIndex = 53;
+            this.RFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(229, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "RFC";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt1
             // 
@@ -238,25 +263,10 @@
             this.Date.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 41);
-            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 26);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
-=======
-            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Date.Location = new System.Drawing.Point(75, 41);
-            this.Date.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(127, 27);
-            this.Date.TabIndex = 14;
-            this.Date.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
->>>>>>> c8a0d327b61898b05baa66241327c4812d226411
+            this.Date.Size = new System.Drawing.Size(127, 26);
+            this.Date.TabIndex = 54;
             // 
             // txtFolio
             // 
@@ -454,31 +464,6 @@
             this.No.TabIndex = 51;
             this.No.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // RFC
-            // 
-            this.RFC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RFC.BackColor = System.Drawing.Color.White;
-            this.RFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.RFC.Location = new System.Drawing.Point(322, 79);
-            this.RFC.Multiline = true;
-            this.RFC.Name = "RFC";
-            this.RFC.Size = new System.Drawing.Size(123, 32);
-            this.RFC.TabIndex = 53;
-            this.RFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(229, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "RFC";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -500,7 +485,7 @@
             this.Expiration.Location = new System.Drawing.Point(352, 189);
             this.Expiration.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.Expiration.Name = "Expiration";
-            this.Expiration.Size = new System.Drawing.Size(123, 27);
+            this.Expiration.Size = new System.Drawing.Size(123, 26);
             this.Expiration.TabIndex = 54;
             this.Expiration.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
