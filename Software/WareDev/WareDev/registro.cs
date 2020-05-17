@@ -88,15 +88,22 @@ namespace WareDev
         //guardar usuario
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            if (this.passtxt.Text.Equals(this.passconfirmtxt.Text))
             {
-                objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
-                MessageBox.Show("Se ha agregado el usuario al sistema.");
-                obj.MostrarUsuarios();
-            }
-            catch (Exception ex)
+
+                try
+                {
+                    objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
+                    MessageBox.Show("Se ha agregado el usuario al sistema.");
+                    obj.MostrarUsuarios();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex);
+                }
+            } else
             {
-                MessageBox.Show("No se pudo insertar los datos por: " + ex);
+                MessageBox.Show("Las contraseñas no son iguales, vuelva a intentar.");
             }
         }
 

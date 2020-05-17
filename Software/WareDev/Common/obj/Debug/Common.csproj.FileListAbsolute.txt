@@ -5,3 +5,4 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Comm
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.csprojAssemblyReference.cache
