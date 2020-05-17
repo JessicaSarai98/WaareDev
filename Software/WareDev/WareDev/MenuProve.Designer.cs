@@ -47,7 +47,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 33);
+            this.label1.Size = new System.Drawing.Size(136, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Suppliers";
             // 
@@ -151,6 +151,7 @@
             this.btnEditar.Text = "Edit";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dataGridView1
             // 
@@ -178,6 +179,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MenuProve";
             this.Text = "MenuProve";
+            this.Load += new System.EventHandler(this.MenuProve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

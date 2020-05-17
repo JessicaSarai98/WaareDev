@@ -40,7 +40,7 @@ namespace WareDev
                 Document doc = new Document(PageSize.A5);
 
                 // Indicamos donde vamos a guardar el documento
-                string pdfName = @"C:\Users\AdriFdez18\Desktop\" + "Proveedor-" + Nametxt.Text + ".pdf";
+                string pdfName = @"C:\Users\Jessica\Desktop\" + "Proveedor-" + Nametxt.Text + ".pdf";
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
@@ -78,9 +78,10 @@ namespace WareDev
                     SpacingAfter = 10f,
                 };
 
-
+                //C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes
+                //C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg"
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg";
+                var imagenpath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Informacion.jpeg";
 
                 using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                 {
@@ -93,7 +94,7 @@ namespace WareDev
                 }
 
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Logo.jpeg";
+                var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
 
                 using (FileStream im = new FileStream(Logopath, FileMode.Open))
                 {
@@ -170,6 +171,11 @@ namespace WareDev
             {
                 MessageBox.Show("Close the PDF to be modified");
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

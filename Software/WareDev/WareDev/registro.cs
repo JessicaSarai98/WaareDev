@@ -85,7 +85,7 @@ namespace WareDev
             emailtxt.Clear();
             this.Close();
         }
-        //guardar usuario
+        //guardar usuario (Nuevo)
         private void button3_Click(object sender, EventArgs e)
         {
             if (this.passtxt.Text.Equals(this.passconfirmtxt.Text))
