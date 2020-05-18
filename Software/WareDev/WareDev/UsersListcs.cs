@@ -14,7 +14,7 @@ namespace WareDev
     public partial class UsersListcs : Form
     {
         CN_Clientes objectCN = new CN_Clientes();
-        public string idCliente = null;
+        public string idUser = null;
 
         public UsersListcs()
         {
@@ -29,6 +29,8 @@ namespace WareDev
         {
 
             registro reg = new registro();
+            reg.saveEdit.Visible = false;
+            reg.button3.Visible = true; 
             reg.ShowDialog();
         }
 
@@ -51,9 +53,9 @@ namespace WareDev
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                idUser = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
-                objectCN.EliminarUsu(idCliente);
+                objectCN.EliminarUsu(idUser);
                 MessageBox.Show("Usuario " + Name + " eliminado");
                 MostrarUsuarios();
 
@@ -87,14 +89,19 @@ namespace WareDev
         private void btnEditar_Click(object sender, EventArgs e)
         {
             registro reg = new registro();
+            reg.saveEdit.Visible = true;
+            reg.button3.Visible = false; 
+            
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                reg.ID.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString(); 
                 reg.usertxt.Text = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
                 reg.passtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
                 reg.passconfirmtxt.Text = dataGridView1.CurrentRow.Cells["password"].Value.ToString();
                 reg.emailtxt.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
                 reg.nametxt.Text = dataGridView1.CurrentRow.Cells["firstName"].Value.ToString();
                 reg.lasttxt.Text = dataGridView1.CurrentRow.Cells["lastName"].Value.ToString();
+                idUser = dataGridView1.CurrentRow.Cells["Id"].Value.ToString(); 
                 reg.ShowDialog();
             }
             else

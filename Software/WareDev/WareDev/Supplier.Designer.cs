@@ -48,11 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Imprimir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.saveNew = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.citytxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.saveEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // statettxt
@@ -262,18 +263,19 @@
             this.Imprimir.UseWaitCursor = true;
             this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
-            // button2
+            // saveNew
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(543, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 48);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.UseWaitCursor = true;
+            this.saveNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveNew.BackColor = System.Drawing.Color.Black;
+            this.saveNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveNew.Location = new System.Drawing.Point(543, 390);
+            this.saveNew.Name = "saveNew";
+            this.saveNew.Size = new System.Drawing.Size(115, 48);
+            this.saveNew.TabIndex = 46;
+            this.saveNew.Text = "Save";
+            this.saveNew.UseVisualStyleBackColor = false;
+            this.saveNew.UseWaitCursor = true;
+            this.saveNew.Click += new System.EventHandler(this.saveNew_Click);
             // 
             // button1
             // 
@@ -322,17 +324,32 @@
             this.listBox1.TabIndex = 50;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // saveEdit
+            // 
+            this.saveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveEdit.BackColor = System.Drawing.Color.Black;
+            this.saveEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveEdit.Location = new System.Drawing.Point(527, 391);
+            this.saveEdit.Name = "saveEdit";
+            this.saveEdit.Size = new System.Drawing.Size(115, 48);
+            this.saveEdit.TabIndex = 51;
+            this.saveEdit.Text = "Save";
+            this.saveEdit.UseVisualStyleBackColor = false;
+            this.saveEdit.UseWaitCursor = true;
+            this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1018, 476);
+            this.Controls.Add(this.saveEdit);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.citytxt);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Imprimir);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.saveNew);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.divisa);
@@ -383,10 +400,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Imprimir;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox citytxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.Button saveNew;
+        public System.Windows.Forms.Button saveEdit;
     }
 }

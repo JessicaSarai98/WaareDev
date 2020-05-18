@@ -23,13 +23,8 @@ namespace WareDev
         public InfoClient()
         {
              InitializeComponent();
-            //loadUserData();
-
         }
-       /* private void reset()
-        {
-            loadUserData();
-        }*/
+       
         
 
         private void MostrarClientes()

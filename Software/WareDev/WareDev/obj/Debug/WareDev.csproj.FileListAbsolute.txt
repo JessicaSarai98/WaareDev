@@ -1,71 +1,3 @@
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Common.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Primitives.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.xml
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.pdb
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe.config
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\Interop.AcroPDFLib.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\bin\Debug\AxInterop.AcroPDFLib.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\Interop.AcroPDFLib.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\AxInterop.AcroPDFLib.dll
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.ResolveComReference.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Agregar.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizacion.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizaciones.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.FacturaVentas.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ganancias.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Insumos.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.inventarios.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MateriaPrima.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ProductoTerminado.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.reporte.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Supplier.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuInicio.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoClient.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Menuclientescs.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MenuProve.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ModalUsuario.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.olvidoContra.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Login.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Properties.Resources.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.registro.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Settings.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Start.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.UsersListcs.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ventas.resources
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
-C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.dll
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Common.dll
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Primitives.dll
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.pdb
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe.config
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.pdb
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe.config
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.xml
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.pdb
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe.config
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Interop.AcroPDFLib.dll
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\AxInterop.AcroPDFLib.dll
@@ -96,6 +28,24 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\War
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.UsersListcs.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ventas.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.dll
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Common.dll
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe.config
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Domain.exe.config
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\itextsharp.xml
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\DataAccess.exe.config
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb

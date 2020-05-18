@@ -70,12 +70,19 @@ namespace Domain
         }
        
         //actualizar datos de usuario
-        public void EditarUsu(string username, string pass, string email, string firstname, string lastname)
+        public void EditarUsu(string username, string pass, string email, string firstname, string lastname, string id)
         {
-            objetoCD.EditarU(username, pass, email, firstname, lastname);
+            objetoCD.EditarU(username, pass, email, firstname, lastname, Convert.ToInt32(id));
         }
 
         //actualizar datos de proveedor
+        public void EditarSup(string name, string RFC, string phone, string email, string addres, string country, string state,
+           string city, string currency, string id)
+        {
+            objetoCD.EditarS(name, RFC, phone, email, addres, country, state, city, currency, Convert.ToInt32(id));
+        } 
+
+        //-----ELIMINAR---------
 
         //eliminar cliente
         public void EliminarCli(string id)
@@ -87,6 +94,12 @@ namespace Domain
         public void EliminarUsu(string id)
         {
             objetoCD.EliminarU(Convert.ToInt32(id));
+        }
+
+        //eliminar proveedor
+        public void EliminarSup(string id)
+        {
+            objetoCD.EliminarS(Convert.ToInt32(id));
         }
     }
 }

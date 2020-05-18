@@ -69,6 +69,7 @@ namespace WareDev
             //NO MUEVAN NADA DE AQUI PLOX o los mato :)
 
             /*SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+            //Debo cambiar la tabla login a data.
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);

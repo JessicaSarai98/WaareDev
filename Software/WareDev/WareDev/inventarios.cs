@@ -109,5 +109,10 @@ namespace WareDev
             }
             else producto.Activate();
         }
+
+        private void TablaMatPrima_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

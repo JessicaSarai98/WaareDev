@@ -19,8 +19,10 @@ namespace WareDev
     {
         CN_Clientes objetoCN = new CN_Clientes();
         UsersListcs obj = new UsersListcs();
+       
         public registro()
         {
+            
             InitializeComponent();
         }
 
@@ -95,7 +97,7 @@ namespace WareDev
                 {
                     objetoCN.InsertarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text);
                     MessageBox.Show("Se ha agregado el usuario al sistema.");
-                    obj.MostrarUsuarios();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -110,6 +112,29 @@ namespace WareDev
         private void User_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //editar usuario
+        private void saveEdit_Click(object sender, EventArgs e)
+        {
+            if (this.passtxt.Text.Equals(this.passconfirmtxt.Text))
+            {
+
+                try
+                {
+                    objetoCN.EditarUsu(usertxt.Text, passtxt.Text, emailtxt.Text, nametxt.Text, lasttxt.Text, ID.Text);
+                    MessageBox.Show("Se ha editado correctamente.");
+                    this.Close(); 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no son iguales, vuelva a intentar.");
+            }
         }
     }
 }

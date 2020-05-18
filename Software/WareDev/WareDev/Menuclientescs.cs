@@ -91,7 +91,7 @@ namespace WareDev
         private void button1_Click(object sender, EventArgs e)
         {
             InfoClient cli = new InfoClient();
-            cli.SaveEdit.Visible = true;
+            cli.SaveEdit.Visible = false;
             cli.save.Visible = false;
             if (dataGridView1.SelectedRows.Count > 0)
             {

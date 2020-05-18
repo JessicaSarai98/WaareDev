@@ -46,12 +46,12 @@ namespace DataAccess
             comando.CommandText = "select * from supplier";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
-            conexion.CerrarConexion(); 
-            return tabla; 
+            conexion.CerrarConexion();
+            return tabla;
 
         }
 
-        //-----AGREGA--------
+        //-----AGREGAR--------
 
         //insertar clientes
         public void Insertar(string name, string rfc, string phone, string email, string address,
@@ -81,15 +81,15 @@ namespace DataAccess
         public void InsertarS(string name, string rfc, string phone, string email, string addres, string country, string state, string city, string divisa)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into supplier values('"+name+ "', '"+rfc+ "', '"+phone+ "', '"+email+ "', '"+addres+ "', '"+country+ "', '"+state+ "', '"+city+ "', '"+divisa+"')";
+            comando.CommandText = "insert into supplier values('" + name + "', '" + rfc + "', '" + phone + "', '" + email + "', '" + addres + "', '" + country + "', '" + state + "', '" + city + "', '" + divisa + "')";
             comando.CommandType = CommandType.Text;
-            comando.ExecuteNonQuery(); 
+            comando.ExecuteNonQuery();
         }
 
         //----EDITAR----
 
         //actualizar datos CLIENTE 
-        
+
         public void Editar(string name, string RFC, string phone, string email, string address,
             string city, string state, string country, string cp, string identy, double tasaa, string stat, string
             vendedor, string pm, string cfdi, string note, int id)
@@ -103,16 +103,28 @@ namespace DataAccess
 
             comando.ExecuteNonQuery();
 
-             
-        }
 
+        }
+        
         //actualizar datos de USUARIO
-        public void EditarU(string username, string pass, string email, string firstname, string lastname)
+        public void EditarU(string username, string pass, string email, string firstname, string lastname, int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update data set username='" + username + "', password='" + pass + "',email='" + email + "',firstName='" + firstname + "'," +
-                "lastName='" + lastname + "'";
+                "lastName='" + lastname + "' where Id='"+id+"'";
             comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
+        }
+
+        //actualizar datos de proveedores
+        public void EditarS(string name, string rfc, string phone, string email, string addres, string country, string state, string city, string divisa, int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "update supplier set name='"+name+ "',RFC='"+rfc+ "', " +
+                "phone='"+phone+ "',email='"+email+ "', addres='"+addres+ "',country='"+country+"',state='"+state+"'," +
+                "city='"+city+ "', currency='"+divisa+ "' where Id='" + id + "'";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
         }
 
 
@@ -139,6 +151,15 @@ namespace DataAccess
             comando.CommandText = "delete from data where Id=" + id + "";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+        }
+
+        //eliminar proveedores
+        public void EliminarS(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from supplier where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
         }
     }
 }
