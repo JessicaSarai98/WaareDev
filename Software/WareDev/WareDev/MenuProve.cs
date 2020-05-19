@@ -69,7 +69,17 @@ namespace WareDev
 
         private void MenuProve_Load(object sender, EventArgs e)
         {
-            MostrarProvee(); 
+            MostrarProvee();
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Name";
+            dataGridView1.Columns[2].HeaderText = "RFC";
+            dataGridView1.Columns[3].HeaderText = "Phone";
+            dataGridView1.Columns[4].HeaderText = "E-mail";
+            dataGridView1.Columns[5].HeaderText = "Address";
+            dataGridView1.Columns[6].HeaderText = "Country";
+            dataGridView1.Columns[7].HeaderText = "State";
+            dataGridView1.Columns[8].HeaderText = "City";
+            dataGridView1.Columns[9].HeaderText = "Currency";
         }
 
         //áctualizar
@@ -122,6 +132,11 @@ namespace WareDev
             {
                 MessageBox.Show("Seleccione una fila por favor.");
             } 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

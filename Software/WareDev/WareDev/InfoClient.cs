@@ -89,7 +89,7 @@ namespace WareDev
            citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
            vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
                 MessageBox.Show("Se ha insertado correctamente.");
-
+                 
                 this.Close();
             }
             catch (Exception ex)

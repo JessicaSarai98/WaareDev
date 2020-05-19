@@ -47,9 +47,9 @@ namespace Domain
                 country, cp, identy, Convert.ToDouble(tasaa), stat, vendedor, pm, cfdi, note);
         }
         //insertar datos de usuario
-        public void InsertarUsu(string username, string pass, string email, string firstname, string lastname)
+        public void InsertarUsu(string username, string pass, string email, string firstname, string lastname, byte[]foto)
         {
-            objetoCD.InsertarU(username, pass, email, firstname, lastname);
+            objetoCD.InsertarU(username, pass, email, firstname, lastname, foto);
         }
         
         //insertar datos de proveedor
@@ -70,9 +70,9 @@ namespace Domain
         }
        
         //actualizar datos de usuario
-        public void EditarUsu(string username, string pass, string email, string firstname, string lastname, string id)
+        public void EditarUsu(string username, string pass, string email, string firstname, string lastname,byte[] foto,string id)
         {
-            objetoCD.EditarU(username, pass, email, firstname, lastname, Convert.ToInt32(id));
+            objetoCD.EditarU(username, pass, email, firstname, lastname, foto,Convert.ToInt32(id));
         }
 
         //actualizar datos de proveedor

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registro));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.User = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.saveEdit = new System.Windows.Forms.Button();
             this.lasttxt = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -48,8 +50,7 @@
             this.usertxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IconUser = new System.Windows.Forms.PictureBox();
-            this.saveEdit = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fotouser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -74,6 +76,7 @@
             this.User.AutoSize = true;
             this.User.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.User.Controls.Add(this.pictureBox1);
             this.User.Controls.Add(this.ID);
             this.User.Controls.Add(this.saveEdit);
             this.User.Controls.Add(this.lasttxt);
@@ -100,6 +103,37 @@
             this.User.TabIndex = 21;
             this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
             // 
+            // ID
+            // 
+            this.ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.ID.Enabled = false;
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.Location = new System.Drawing.Point(214, 12);
+            this.ID.Multiline = true;
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(45, 40);
+            this.ID.TabIndex = 29;
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // saveEdit
+            // 
+            this.saveEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.saveEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveEdit.BackColor = System.Drawing.Color.Gold;
+            this.saveEdit.FlatAppearance.BorderSize = 0;
+            this.saveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveEdit.Image = ((System.Drawing.Image)(resources.GetObject("saveEdit.Image")));
+            this.saveEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveEdit.Location = new System.Drawing.Point(271, 422);
+            this.saveEdit.Name = "saveEdit";
+            this.saveEdit.Size = new System.Drawing.Size(143, 42);
+            this.saveEdit.TabIndex = 28;
+            this.saveEdit.Text = "SAVE";
+            this.saveEdit.UseVisualStyleBackColor = false;
+            this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
+            // 
             // lasttxt
             // 
             this.lasttxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
@@ -120,7 +154,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(529, 308);
+            this.button6.Location = new System.Drawing.Point(562, 308);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(157, 56);
@@ -138,7 +172,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(721, 308);
+            this.button5.Location = new System.Drawing.Point(725, 308);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(157, 56);
@@ -326,36 +360,13 @@
             this.IconUser.TabIndex = 0;
             this.IconUser.TabStop = false;
             // 
-            // saveEdit
+            // pictureBox1
             // 
-            this.saveEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.saveEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.saveEdit.BackColor = System.Drawing.Color.Gold;
-            this.saveEdit.FlatAppearance.BorderSize = 0;
-            this.saveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.saveEdit.Image = ((System.Drawing.Image)(resources.GetObject("saveEdit.Image")));
-            this.saveEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveEdit.Location = new System.Drawing.Point(271, 422);
-            this.saveEdit.Name = "saveEdit";
-            this.saveEdit.Size = new System.Drawing.Size(143, 42);
-            this.saveEdit.TabIndex = 28;
-            this.saveEdit.Text = "SAVE";
-            this.saveEdit.UseVisualStyleBackColor = false;
-            this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
-            // 
-            // ID
-            // 
-            this.ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.ID.Enabled = false;
-            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(214, 12);
-            this.ID.Multiline = true;
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(45, 40);
-            this.ID.TabIndex = 29;
-            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 126);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 159);
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
             // 
             // registro
             // 
@@ -376,6 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,9 +397,6 @@
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox Fotouser;
-        private System.Windows.Forms.Button button6;
         public System.Windows.Forms.PictureBox pictureBox6;
         public System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.PictureBox pictureBox2;
@@ -403,5 +412,9 @@
         public System.Windows.Forms.Button saveEdit;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.TextBox ID;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox Fotouser;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
     }
 }

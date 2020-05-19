@@ -69,10 +69,10 @@ namespace DataAccess
         }
 
         //insertar datos de usuarios
-        public void InsertarU(string username, string pass, string email, string firstname, string lastname)
+        public void InsertarU(string username, string pass, string email, string firstname, string lastname, byte[] foto)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into data values('" + username + "', '" + pass + "', '" + email + "', '" + firstname + "', '" + lastname + "')";
+            comando.CommandText = "insert into data values('" + username + "', '" + pass + "', '" + email + "', '" + firstname + "', '" + lastname + "','" + @foto + "')";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
@@ -105,13 +105,13 @@ namespace DataAccess
 
 
         }
-        
+
         //actualizar datos de USUARIO
-        public void EditarU(string username, string pass, string email, string firstname, string lastname, int id)
+        public void EditarU(string username, string pass, string email, string firstname, string lastname, byte[] imagen, int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update data set username='" + username + "', password='" + pass + "',email='" + email + "',firstName='" + firstname + "'," +
-                "lastName='" + lastname + "' where Id='"+id+"'";
+                "lastName='" + lastname + "',imagen=@imagen where Id='"+id+"'";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery(); 
         }

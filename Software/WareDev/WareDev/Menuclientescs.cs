@@ -16,19 +16,23 @@ namespace WareDev
     {
         CN_Clientes objetoCN = new CN_Clientes();
         public string idCliente = null;
+        
         //public bool Editar = false; 
         public Menuclientescs()
         {
+             
             InitializeComponent();
+            dataGridView1.Update();
+            dataGridView1.Refresh(); 
         }
         
 
-        private void MostrarClientes()
+        public void MostrarClientes()
         {
             CN_Clientes objeto = new CN_Clientes();
             //dataGridView1.DataSource = objeto.MostrarCli();
             dataGridView1.DataSource = objeto.MostrarCli();
-
+            
         }
 
         private void InsertarFilas()
@@ -65,6 +69,7 @@ namespace WareDev
                    client.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
                    idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                    client.ShowDialog();
+                
             
 
             }
@@ -79,12 +84,13 @@ namespace WareDev
             client.save.Visible = true;
             client.SaveEdit.Visible = false;
             client.ShowDialog();
+
             
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridView1.ReadOnly = true; 
         }
 
         //Info client
@@ -116,7 +122,7 @@ namespace WareDev
                 cli.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
                 idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 cli.ShowDialog();
-
+                 
 
             }
             else
@@ -130,12 +136,31 @@ namespace WareDev
         {
             // TODO: esta línea de código carga datos en la tabla 'usersDataSet.clientes' Puede moverla o quitarla según sea necesario.
             //this.clientesTableAdapter.Fill(this.usersDataSet.clientes);
-            MostrarClientes(); 
+            MostrarClientes();
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Username";
+            dataGridView1.Columns[2].HeaderText = "RFC";
+            dataGridView1.Columns[3].HeaderText = "Phone";
+            dataGridView1.Columns[4].HeaderText = "E-mail";
+            dataGridView1.Columns[5].HeaderText = "Address";
+            dataGridView1.Columns[6].HeaderText = "City";
+            dataGridView1.Columns[7].HeaderText = "State";
+            dataGridView1.Columns[8].HeaderText = "Country";
+            dataGridView1.Columns[9].HeaderText = "Código Postal";
+            dataGridView1.Columns[10].HeaderText = "Identy";
+            dataGridView1.Columns[11].HeaderText = "Tasa";
+            dataGridView1.Columns[12].HeaderText = "Status";
+            dataGridView1.Columns[13].HeaderText = "Celler";
+            dataGridView1.Columns[14].HeaderText = "Payment Method";
+            dataGridView1.Columns[15].HeaderText = "CFDI";
+            dataGridView1.Columns[16].HeaderText = "Note";
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Update();
+            dataGridView1.Refresh(); 
         }
 
         //Eliminar cliente

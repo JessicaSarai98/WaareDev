@@ -234,7 +234,7 @@
         private usersDataSet usersDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private usersDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button Actualizar;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
