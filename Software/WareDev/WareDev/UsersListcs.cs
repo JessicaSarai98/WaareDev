@@ -30,6 +30,11 @@ namespace WareDev
             dataGridView1.Columns[3].HeaderText = "E-mail";
             dataGridView1.Columns[4].HeaderText = "Name";
             dataGridView1.Columns[5].HeaderText = "Last Name";
+            dataGridView1.RowTemplate.Height = 35;
+            
+            //dataGridView1.CurrentRow.("").Value = Image.FromFile("C:\Users\Jessica\Desktop\WareDev\WaareDev\Iconos\user.png");
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            
             dataGridView1.Columns[6].HeaderText = "Imagen";
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -49,6 +54,7 @@ namespace WareDev
             CN_Clientes objeto = new CN_Clientes();
             dataGridView1.DataSource = objeto.MostrarUsu();
             this.dataGridView1.Columns[2].Visible = false;
+            this.dataGridView1.Columns[6].Visible = false; 
         }
 
 

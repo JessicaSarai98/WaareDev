@@ -80,6 +80,7 @@ namespace WareDev
             dataGridView1.Columns[7].HeaderText = "State";
             dataGridView1.Columns[8].HeaderText = "City";
             dataGridView1.Columns[9].HeaderText = "Currency";
+            dataGridView1.RowTemplate.Height = 35;
         }
 
         //áctualizar

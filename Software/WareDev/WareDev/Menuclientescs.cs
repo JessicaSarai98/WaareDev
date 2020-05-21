@@ -154,6 +154,7 @@ namespace WareDev
             dataGridView1.Columns[14].HeaderText = "Payment Method";
             dataGridView1.Columns[15].HeaderText = "CFDI";
             dataGridView1.Columns[16].HeaderText = "Note";
+            dataGridView1.RowTemplate.Height = 35;
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
