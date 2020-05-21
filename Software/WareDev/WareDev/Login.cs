@@ -68,52 +68,59 @@ namespace WareDev
         {
             //NO MUEVAN NADA DE AQUI PLOX o los mato :)
 
-            /*SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-            //Debo cambiar la tabla login a data.
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE username='" + textUser.Text + "'AND password= '" + textKey.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
-            {*/
-            //Empezando otro codigo
-            ////if (textUser.Text != "username" && textUser.TextLength > 0)
-            ////{
-            ////    if (textKey.Text != "password")
-            ////    {
-            ////        UserModel user = new UserModel();
-            ////        var validLogin = user.LoginUser(textUser.Text, textKey.Text);
-            ////        if (validLogin == true)
-            ////        {
-            ////            //MessageBox.Show("Bienvenido" + UserCache.firstName + "," + UserCache.lastName);
 
-            ////            var tam = this.WindowState;
-            ////            MenuInicio ini = new MenuInicio(tam);
-            ////            ini.Show();
-            ////            this.Hide();
-            ////        }
-            ////        else
-            ////        {
-            ////            MessageBox.Show("Invalid username or password");
-            ////            textKey.Text = "Password";
-            ////            textKey.UseSystemPasswordChar = false;
-            ////            textUser.Focus();
+            //if (textUser.Text != "username" && textUser.TextLength > 0)
+            //{
+            //    if (textKey.Text != "password")
+            //    {
+            //        UserModel user = new UserModel();
+            //        var validLogin = user.LoginUser(textUser.Text, textKey.Text);
+            //        if (validLogin == true)
+            //        {
+            //            //MessageBox.Show("Bienvenido" + UserCache.firstName + "," + UserCache.lastName);
 
-            ////        }
-            ////    }
-            ////}
+            //            var tam = this.WindowState;
+            //            MenuInicio ini = new MenuInicio(tam);
+            //            ini.name.Text = ""+UserCache.firstName; 
+            //            ini.Show();
+            //            this.Hide();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Invalid username or password");
+            //            //textKey.Text = "Password";
+            //            textKey.UseSystemPasswordChar = false;
+            //            textUser.Focus();
 
-            //cuando no este en comentarios lo anterior, comentar las siguientes lineas.
-            this.Hide();
-            var tam = this.WindowState;
-            MenuInicio ini = new MenuInicio(tam);
-            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
-            ini.Show();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Please enter password");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please enter the username");
+            //}
 
+
+
+
+
+            ////cuando no este en comentarios lo anterior, comentar las siguientes lineas.
+            //this.Hide();
+            //var tam = this.WindowState;
+            //MenuInicio ini = new MenuInicio(tam);
+            ////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            //ini.Show();
         }
 
 
+    
 
-        private void titulo2_MouseDown(object sender, MouseEventArgs e)
+
+            private void titulo2_MouseDown(object sender, MouseEventArgs e)
             {
                 ReleaseCapture();
                 SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -134,6 +141,8 @@ namespace WareDev
             {
                 this.WindowState = FormWindowState.Minimized;
             }
-        }
     }
+    
+}
+
 
