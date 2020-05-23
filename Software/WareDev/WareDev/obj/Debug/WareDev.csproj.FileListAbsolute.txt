@@ -48,3 +48,4 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\W
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache
