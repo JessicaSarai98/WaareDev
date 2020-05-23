@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registro));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.User = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.saveEdit = new System.Windows.Forms.Button();
             this.lasttxt = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IconUser = new System.Windows.Forms.PictureBox();
             this.User.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fotouser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -76,7 +74,6 @@
             this.User.AutoSize = true;
             this.User.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
-            this.User.Controls.Add(this.pictureBox1);
             this.User.Controls.Add(this.ID);
             this.User.Controls.Add(this.saveEdit);
             this.User.Controls.Add(this.lasttxt);
@@ -102,14 +99,6 @@
             this.User.Size = new System.Drawing.Size(1018, 476);
             this.User.TabIndex = 21;
             this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(400, 126);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 159);
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
             // 
             // ID
             // 
@@ -382,7 +371,6 @@
             this.Load += new System.EventHandler(this.registro_Load);
             this.User.ResumeLayout(false);
             this.User.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fotouser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -413,7 +401,6 @@
         public System.Windows.Forms.Button saveEdit;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.TextBox ID;
-        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox Fotouser;
         public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button6;

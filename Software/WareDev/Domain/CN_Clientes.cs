@@ -37,6 +37,14 @@ namespace Domain
             return tabla; 
         }
 
+        //Mostrar raw
+        public DataTable MostrarRaw()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarR();
+            return tabla; 
+        }
+
         //------NUEVO----------
         //insertar cliente
         public void InsertarClie(string name, string rfc, string phone, string email, string address,

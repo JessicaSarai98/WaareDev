@@ -109,11 +109,11 @@ namespace WareDev
 
 
             ////cuando no este en comentarios lo anterior, comentar las siguientes lineas.
-            //this.Hide();
-            //var tam = this.WindowState;
-            //MenuInicio ini = new MenuInicio(tam);
-            ////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
-            //ini.Show();
+            this.Hide();
+            var tam = this.WindowState;
+            MenuInicio ini = new MenuInicio(tam);
+            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            ini.Show();
         }
 
 

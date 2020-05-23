@@ -51,6 +51,18 @@ namespace DataAccess
 
         }
 
+        //mostrar raw 
+
+            public DataTable MostrarR()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from raw";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla; 
+        }
+
         //-----AGREGAR--------
 
         //insertar clientes

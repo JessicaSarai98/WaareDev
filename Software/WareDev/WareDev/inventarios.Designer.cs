@@ -86,6 +86,7 @@
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.btnPTerminado = new System.Windows.Forms.RadioButton();
             this.btnMPrima = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabPage1.SuspendLayout();
@@ -99,6 +100,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -129,6 +131,7 @@
             // 
             this.TabPage1.AutoScroll = true;
             this.TabPage1.BackColor = System.Drawing.Color.Khaki;
+            this.TabPage1.Controls.Add(this.dataGridView1);
             this.TabPage1.Controls.Add(this.btnAgregarProducto);
             this.TabPage1.Controls.Add(this.BtnAgregar);
             this.TabPage1.Controls.Add(this.BtnEliminar);
@@ -907,6 +910,17 @@
             this.btnMPrima.UseVisualStyleBackColor = true;
             this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 202);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(798, 207);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // inventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -934,6 +948,7 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -997,5 +1012,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedidaInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDispoInsumo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
