@@ -56,7 +56,7 @@ namespace DataAccess
             public DataTable MostrarR()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from raw";
+            comando.CommandText = "select * from rawMaterials";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();
