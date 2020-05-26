@@ -32,6 +32,7 @@
             this.contenedor = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -86,10 +87,10 @@
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.btnPTerminado = new System.Windows.Forms.RadioButton();
             this.btnMPrima = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaMatPrima)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -100,7 +101,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -145,6 +145,17 @@
             this.TabPage1.Size = new System.Drawing.Size(1010, 443);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Raw material";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 143);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(798, 292);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAgregarProducto
             // 
@@ -226,6 +237,7 @@
             this.btnEditar.Text = "Edit";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // TablaMatPrima
             // 
@@ -910,17 +922,6 @@
             this.btnMPrima.UseVisualStyleBackColor = true;
             this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 202);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(798, 207);
-            this.dataGridView1.TabIndex = 37;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // inventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -934,6 +935,7 @@
             this.contenedor.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaMatPrima)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -948,7 +950,6 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -972,7 +973,6 @@
         private System.Windows.Forms.TextBox txtUnidadB;
         private System.Windows.Forms.TextBox txtNombreB;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView TablaMatPrima;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -1013,5 +1013,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDispoInsumo;
         private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView TablaMatPrima;
     }
 }

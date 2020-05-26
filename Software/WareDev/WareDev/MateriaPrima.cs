@@ -101,5 +101,20 @@ namespace WareDev
                 MessageBox.Show("Ingrese todos los campos."); 
             }
         }
+
+        private void SaveEdit_Click(object sender, EventArgs e)
+        {
+            byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
+            connection.Open();
+            string sqlQuery = "update rawMaterials set name='"+txtNombre.Text+ "',date=@fecha,customsUnitOfMeasure='"+txtUniMedAduana.Text+ "',unitOfMeasure='"+txtUniMedida.Text+ "',description='"+txtDescripcion.Text+ "',IVA='"+txtIva.Text+ "',SAT='"+txtSat.Text+ "',tariffFraction='"+txtFraccion.Text+ "',status='"+txtEstado.Text+ "',percentage='"+txtPorcentaje.Text+ "',amountPurchased='"+txtCantiAdquirida.Text+ "',customsAmount='"+txtCanAduana.Text+ "',price='"+txtPrecio.Text+ "',photo=@imagen where Id='"+ID.Text+"'";
+
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
+            cmd.Parameters.Add("@imagen", byteArrayImagen);
+            int N=cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show(N.ToString()+"Se ha editado correctamente");
+            this.Close(); 
+        }
     }
 }

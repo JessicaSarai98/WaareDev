@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MateriaPrima));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.SaveEdit = new System.Windows.Forms.Button();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
             this.txtCantiAdquirida = new System.Windows.Forms.TextBox();
@@ -74,6 +76,8 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.ID);
+            this.contenedor.Controls.Add(this.SaveEdit);
             this.contenedor.Controls.Add(this.FotoProduc);
             this.contenedor.Controls.Add(this.tablaFacVentas);
             this.contenedor.Controls.Add(this.btnGuardar);
@@ -84,6 +88,34 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.Enabled = false;
+            this.ID.Location = new System.Drawing.Point(538, 122);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(100, 20);
+            this.ID.TabIndex = 3;
+            // 
+            // SaveEdit
+            // 
+            this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.SaveEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveEdit.ForeColor = System.Drawing.Color.Black;
+            this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
+            this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveEdit.Location = new System.Drawing.Point(770, 90);
+            this.SaveEdit.Name = "SaveEdit";
+            this.SaveEdit.Size = new System.Drawing.Size(104, 65);
+            this.SaveEdit.TabIndex = 32;
+            this.SaveEdit.Text = "Save";
+            this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SaveEdit.UseVisualStyleBackColor = false;
+            this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
             // 
             // FotoProduc
             // 
@@ -614,9 +646,10 @@
             this.Controls.Add(this.contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MateriaPrima";
-            this.Text = "MateriaPrima";
+            this.Text = "2";
             this.Load += new System.EventHandler(this.MateriaPrima_Load_1);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();
@@ -629,40 +662,42 @@
 
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.TableLayoutPanel tablaFacVentas;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label nombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSat;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtFraccion;
         private System.Windows.Forms.TextBox txtUnidadMedida;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Label txtVentas;
         private System.Windows.Forms.Button btrRegreso;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtUniMedAduana;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCanAduana;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIva;
-        private System.Windows.Forms.TextBox txtPorcentaje;
-        private System.Windows.Forms.TextBox txtUniMedida;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox FotoProduc;
         private System.Windows.Forms.Button btnFoto;
-        private System.Windows.Forms.TextBox txtCantiAdquirida;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button SaveEdit;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox ID;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtSat;
+        public System.Windows.Forms.TextBox txtFraccion;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtUniMedAduana;
+        public System.Windows.Forms.TextBox txtCanAduana;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtIva;
+        public System.Windows.Forms.TextBox txtPorcentaje;
+        public System.Windows.Forms.TextBox txtUniMedida;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.TextBox txtCantiAdquirida;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.PictureBox FotoProduc;
     }
 }

@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Domain; 
-
+using Domain;
+using System.IO;
+using System.Globalization;
 
 namespace WareDev
 {
@@ -31,7 +32,7 @@ namespace WareDev
             this.dataGridView1.Columns[8].Visible = false;
             this.dataGridView1.Columns[9].Visible = false;
             this.dataGridView1.Columns[10].Visible = false;
-            this.dataGridView1.Columns[11].Visible = false;
+            //this.dataGridView1.Columns[11].Visible = false;
             this.dataGridView1.Columns[12].Visible = false;
             this.dataGridView1.Columns[14].Visible = false;
             //TablaMatPrima = objeto.MostrarRaw();
@@ -47,8 +48,10 @@ namespace WareDev
             dataGridView1.Columns[1].HeaderText = "Name";
             dataGridView1.Columns[4].HeaderText = "Unit of measure";
             dataGridView1.Columns[7].HeaderText = "SAT key";
+            dataGridView1.Columns[11].HeaderText = "Available Quantity";
             dataGridView1.Columns[13].HeaderText = "Price";
-
+            //DataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill);
+            
         }
         private void btnMPrima_CheckedChanged(object sender, EventArgs e)
         {
@@ -148,6 +151,42 @@ namespace WareDev
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //this.dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill); 
+            
+        }
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            MateriaPrima mat = new MateriaPrima();
+            mat.btnGuardar.Visible = false;
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                mat.ID.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                mat.txtNombre.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
+                mat.dateTimePicker1.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                mat.txtUniMedAduana.Text = dataGridView1.CurrentRow.Cells["customsUnitOfMeasure"].Value.ToString();
+                mat.txtUniMedida.Text= dataGridView1.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
+                mat.txtDescripcion.Text= dataGridView1.CurrentRow.Cells["description"].Value.ToString();
+                mat.txtIva.Text= dataGridView1.CurrentRow.Cells["IVA"].Value.ToString();
+                mat.txtSat.Text= dataGridView1.CurrentRow.Cells["SAT"].Value.ToString();
+                mat.txtFraccion.Text= dataGridView1.CurrentRow.Cells["tariffFraction"].Value.ToString();
+                mat.txtEstado.Text= dataGridView1.CurrentRow.Cells["status"].Value.ToString();
+                mat.txtPorcentaje.Text= dataGridView1.CurrentRow.Cells["percentage"].Value.ToString();
+                mat.txtCantiAdquirida.Text= dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
+                mat.txtCanAduana.Text= dataGridView1.CurrentRow.Cells["customsAmount"].Value.ToString();
+                mat.txtPrecio.Text= dataGridView1.CurrentRow.Cells["price"].Value.ToString();
+                
+                byte[] img = (byte[])dataGridView1.CurrentRow.Cells["photo"].Value;
+                MemoryStream ms = new MemoryStream(img);
+                mat.FotoProduc.Image = Image.FromStream(ms, true, true);
+                mat.ShowDialog(); 
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor"); 
+            }
         }
     }
 }
