@@ -430,6 +430,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(165, 37);
             this.txtPrecio.TabIndex = 29;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrecio.Enter += new System.EventHandler(this.txtPrecio_Enter);
             // 
             // label3
             // 

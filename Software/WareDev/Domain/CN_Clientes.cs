@@ -45,6 +45,22 @@ namespace Domain
             return tabla; 
         }
 
+        //mostrar inputs
+        public DataTable MostrarInp()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarI();
+            return tabla; 
+        }
+
+        //mostrar finished products
+        public DataTable MostrarFinished()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarF();
+            return tabla; 
+        }
+
         //------NUEVO----------
         //insertar cliente
         public void InsertarClie(string name, string rfc, string phone, string email, string address,
@@ -108,6 +124,19 @@ namespace Domain
         public void EliminarSup(string id)
         {
             objetoCD.EliminarS(Convert.ToInt32(id));
+        }
+
+        //eliminar Materia Prima (Raw)
+        public void EliminarRaw(string id)
+        {
+            objetoCD.EliminarR(Convert.ToInt32(id));
+        }
+
+        //eliminar insumo (inputs)
+
+        public void EliminarInp(string id)
+        {
+            objetoCD.EliminarI(Convert.ToInt32(id));
         }
     }
 }

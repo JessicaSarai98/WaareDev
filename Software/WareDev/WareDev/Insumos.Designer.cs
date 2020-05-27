@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insumos));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.SaveEditinputs = new System.Windows.Forms.Button();
+            this.IDinputs = new System.Windows.Forms.TextBox();
+            this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
             this.txtDesInsumo = new System.Windows.Forms.TextBox();
             this.btnFoto = new System.Windows.Forms.Button();
@@ -47,19 +50,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCostoTotalInsumo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
-            this.FotoProduc = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
+            this.mult = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
             this.top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.mult);
+            this.contenedor.Controls.Add(this.SaveEditinputs);
+            this.contenedor.Controls.Add(this.IDinputs);
             this.contenedor.Controls.Add(this.FotoProduc);
             this.contenedor.Controls.Add(this.tablaFacVentas);
             this.contenedor.Controls.Add(this.btnGuardar);
@@ -70,6 +76,47 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 2;
+            // 
+            // SaveEditinputs
+            // 
+            this.SaveEditinputs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveEditinputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.SaveEditinputs.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveEditinputs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveEditinputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveEditinputs.ForeColor = System.Drawing.Color.Black;
+            this.SaveEditinputs.Image = ((System.Drawing.Image)(resources.GetObject("SaveEditinputs.Image")));
+            this.SaveEditinputs.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveEditinputs.Location = new System.Drawing.Point(682, 90);
+            this.SaveEditinputs.Name = "SaveEditinputs";
+            this.SaveEditinputs.Size = new System.Drawing.Size(104, 65);
+            this.SaveEditinputs.TabIndex = 33;
+            this.SaveEditinputs.Text = "Save";
+            this.SaveEditinputs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SaveEditinputs.UseVisualStyleBackColor = false;
+            this.SaveEditinputs.Click += new System.EventHandler(this.SaveEditinputs_Click);
+            // 
+            // IDinputs
+            // 
+            this.IDinputs.Location = new System.Drawing.Point(316, 126);
+            this.IDinputs.Name = "IDinputs";
+            this.IDinputs.Size = new System.Drawing.Size(52, 20);
+            this.IDinputs.TabIndex = 32;
+            this.IDinputs.Visible = false;
+            // 
+            // FotoProduc
+            // 
+            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
+            this.FotoProduc.Location = new System.Drawing.Point(777, 329);
+            this.FotoProduc.Name = "FotoProduc";
+            this.FotoProduc.Size = new System.Drawing.Size(164, 144);
+            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FotoProduc.TabIndex = 31;
+            this.FotoProduc.TabStop = false;
+            this.FotoProduc.Visible = false;
             // 
             // tablaFacVentas
             // 
@@ -154,6 +201,7 @@
             this.txtPrecioInsumo.Size = new System.Drawing.Size(247, 34);
             this.txtPrecioInsumo.TabIndex = 50;
             this.txtPrecioInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrecioInsumo.Enter += new System.EventHandler(this.txtPrecioInsumo_Enter);
             // 
             // txtNombreInsumo
             // 
@@ -313,13 +361,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCostoTotalInsumo.BackColor = System.Drawing.Color.White;
+            this.txtCostoTotalInsumo.Enabled = false;
             this.txtCostoTotalInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtCostoTotalInsumo.Location = new System.Drawing.Point(756, 83);
             this.txtCostoTotalInsumo.Multiline = true;
             this.txtCostoTotalInsumo.Name = "txtCostoTotalInsumo";
+            this.txtCostoTotalInsumo.ReadOnly = true;
             this.txtCostoTotalInsumo.Size = new System.Drawing.Size(247, 34);
             this.txtCostoTotalInsumo.TabIndex = 53;
             this.txtCostoTotalInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCostoTotalInsumo.TextChanged += new System.EventHandler(this.txtCostoTotalInsumo_TextChanged);
+            this.txtCostoTotalInsumo.Leave += new System.EventHandler(this.txtCostoTotalInsumo_Leave);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "Save";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // top
             // 
@@ -341,38 +412,6 @@
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Add inputs";
             // 
-            // FotoProduc
-            // 
-            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
-            this.FotoProduc.Location = new System.Drawing.Point(777, 329);
-            this.FotoProduc.Name = "FotoProduc";
-            this.FotoProduc.Size = new System.Drawing.Size(164, 144);
-            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FotoProduc.TabIndex = 31;
-            this.FotoProduc.TabStop = false;
-            this.FotoProduc.Visible = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
             // btrRegreso
             // 
             this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -392,6 +431,16 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
+            // mult
+            // 
+            this.mult.Location = new System.Drawing.Point(682, 329);
+            this.mult.Name = "mult";
+            this.mult.Size = new System.Drawing.Size(61, 24);
+            this.mult.TabIndex = 34;
+            this.mult.Text = "Calculate";
+            this.mult.UseVisualStyleBackColor = true;
+            this.mult.Click += new System.EventHandler(this.mult_Click);
+            // 
             // Insumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,10 +452,11 @@
             this.Text = "Insumos";
             this.Load += new System.EventHandler(this.Insumos_Load);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();
             this.top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,27 +464,30 @@
         #endregion
 
         private System.Windows.Forms.Panel contenedor;
-        private System.Windows.Forms.PictureBox FotoProduc;
         private System.Windows.Forms.TableLayoutPanel tablaFacVentas;
         private System.Windows.Forms.Button btnFoto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCanAdqInsumos;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Label txtVentas;
         private System.Windows.Forms.Button btrRegreso;
-        private System.Windows.Forms.TextBox txtUniMedInsu;
-        private System.Windows.Forms.TextBox txtNombreInsumo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPrecioInsumo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCostoTotalInsumo;
-        private System.Windows.Forms.TextBox txtDesInsumo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox IDinputs;
+        public System.Windows.Forms.PictureBox FotoProduc;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtCanAdqInsumos;
+        public System.Windows.Forms.TextBox txtUniMedInsu;
+        public System.Windows.Forms.TextBox txtNombreInsumo;
+        public System.Windows.Forms.TextBox txtPrecioInsumo;
+        public System.Windows.Forms.TextBox txtCostoTotalInsumo;
+        public System.Windows.Forms.TextBox txtDesInsumo;
+        public System.Windows.Forms.Button SaveEditinputs;
+        public System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button mult;
     }
 }

@@ -63,6 +63,28 @@ namespace DataAccess
             return tabla; 
         }
 
+        //mostrar inputs
+
+            public DataTable MostrarI()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from inputs";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla; 
+        }
+        //mostrar finished products
+
+            public DataTable MostrarF()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from FinishedProducts";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla; 
+        }
         //-----AGREGAR--------
 
         //insertar clientes
@@ -172,6 +194,26 @@ namespace DataAccess
             comando.CommandText = "delete from supplier where Id="+id+"";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery(); 
+        }
+
+        //eliminar Materia Prima (Raw)
+        public void EliminarR(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from rawMaterials where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
+        }
+
+        //eliminar insumos (inputs)
+
+        public void EliminarI(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from inputs where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery(); 
+
         }
     }
 }

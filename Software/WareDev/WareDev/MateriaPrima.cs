@@ -84,9 +84,9 @@ namespace WareDev
                     cmd = new SqlCommand(sqlQuery, connection);
                     cmd.Parameters.Add(new SqlParameter("@images",images));
                     cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
-                    int N = cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show(N.ToString()+"Se ha agregado la materia prima");
+                    MessageBox.Show("Se ha agregado la materia prima");
                     this.Close();
 
                 }
@@ -104,17 +104,33 @@ namespace WareDev
 
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
-            connection.Open();
-            string sqlQuery = "update rawMaterials set name='"+txtNombre.Text+ "',date=@fecha,customsUnitOfMeasure='"+txtUniMedAduana.Text+ "',unitOfMeasure='"+txtUniMedida.Text+ "',description='"+txtDescripcion.Text+ "',IVA='"+txtIva.Text+ "',SAT='"+txtSat.Text+ "',tariffFraction='"+txtFraccion.Text+ "',status='"+txtEstado.Text+ "',percentage='"+txtPorcentaje.Text+ "',amountPurchased='"+txtCantiAdquirida.Text+ "',customsAmount='"+txtCanAduana.Text+ "',price='"+txtPrecio.Text+ "',photo=@imagen where Id='"+ID.Text+"'";
+            if ((this.txtNombre.Text.Length >= 1) && (this.txtUniMedAduana.Text.Length >= 1) && (this.txtUniMedida.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.txtIva.Text.Length >= 1) && (this.txtSat.Text.Length >= 1) && (this.txtFraccion.Text.Length >= 1) &&
+                (this.txtEstado.Text.Length >= 1) && (this.txtPorcentaje.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtCanAduana.Text.Length >= 1) && (this.txtPrecio.Text.Length >= 1))
+            {
 
-            cmd = new SqlCommand(sqlQuery, connection);
-            cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
-            cmd.Parameters.Add("@imagen", byteArrayImagen);
-            int N=cmd.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show(N.ToString()+"Se ha editado correctamente");
-            this.Close(); 
+                byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
+                connection.Open();
+                string sqlQuery = "update rawMaterials set name='" + txtNombre.Text + "',date=@fecha,customsUnitOfMeasure='" + txtUniMedAduana.Text + "',unitOfMeasure='" + txtUniMedida.Text + "',description='" + txtDescripcion.Text + "',IVA='" + txtIva.Text + "',SAT='" + txtSat.Text + "',tariffFraction='" + txtFraccion.Text + "',status='" + txtEstado.Text + "',percentage='" + txtPorcentaje.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',customsAmount='" + txtCanAduana.Text + "',price='" + txtPrecio.Text + "',photo=@imagen where Id='" + ID.Text + "'";
+
+                cmd = new SqlCommand(sqlQuery, connection);
+                cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
+                cmd.Parameters.Add("@imagen", byteArrayImagen);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Se ha editado correctamente");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese todos los campos.");
+            }
         }
+
+        private void txtPrecio_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
