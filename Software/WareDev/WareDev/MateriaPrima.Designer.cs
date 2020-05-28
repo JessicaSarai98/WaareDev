@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MateriaPrima));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.SaveEdit = new System.Windows.Forms.Button();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
             this.txtCantiAdquirida = new System.Windows.Forms.TextBox();
@@ -74,6 +76,8 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.ID);
+            this.contenedor.Controls.Add(this.SaveEdit);
             this.contenedor.Controls.Add(this.FotoProduc);
             this.contenedor.Controls.Add(this.tablaFacVentas);
             this.contenedor.Controls.Add(this.btnGuardar);
@@ -83,7 +87,35 @@
             this.contenedor.Location = new System.Drawing.Point(0, 0);
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
-            this.contenedor.TabIndex = 1;
+            this.contenedor.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.Enabled = false;
+            this.ID.Location = new System.Drawing.Point(538, 122);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(100, 20);
+            this.ID.TabIndex = 3;
+            // 
+            // SaveEdit
+            // 
+            this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.SaveEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveEdit.ForeColor = System.Drawing.Color.Black;
+            this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
+            this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveEdit.Location = new System.Drawing.Point(770, 90);
+            this.SaveEdit.Name = "SaveEdit";
+            this.SaveEdit.Size = new System.Drawing.Size(104, 65);
+            this.SaveEdit.TabIndex = 16;
+            this.SaveEdit.Text = "Save";
+            this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SaveEdit.UseVisualStyleBackColor = false;
+            this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
             // 
             // FotoProduc
             // 
@@ -152,7 +184,7 @@
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablaFacVentas.Size = new System.Drawing.Size(1006, 261);
-            this.tablaFacVentas.TabIndex = 30;
+            this.tablaFacVentas.TabIndex = 0;
             // 
             // txtCantiAdquirida
             // 
@@ -165,7 +197,7 @@
             this.txtCantiAdquirida.Multiline = true;
             this.txtCantiAdquirida.Name = "txtCantiAdquirida";
             this.txtCantiAdquirida.Size = new System.Drawing.Size(161, 38);
-            this.txtCantiAdquirida.TabIndex = 46;
+            this.txtCantiAdquirida.TabIndex = 13;
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
@@ -176,7 +208,7 @@
             this.label11.Location = new System.Drawing.Point(343, 189);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 18);
-            this.label11.TabIndex = 45;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Amount purchased";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -188,7 +220,7 @@
             this.label13.Location = new System.Drawing.Point(36, 189);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 18);
-            this.label13.TabIndex = 42;
+            this.label13.TabIndex = 0;
             this.label13.Text = "Description";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -203,7 +235,7 @@
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(161, 37);
-            this.txtEstado.TabIndex = 25;
+            this.txtEstado.TabIndex = 8;
             this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -214,7 +246,7 @@
             this.label2.Location = new System.Drawing.Point(389, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
-            this.label2.TabIndex = 24;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Status";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -226,7 +258,7 @@
             this.label1.Location = new System.Drawing.Point(19, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 36);
-            this.label1.TabIndex = 23;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Customs unit of measure ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -238,7 +270,7 @@
             this.nombre.Location = new System.Drawing.Point(57, 13);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(52, 18);
-            this.nombre.TabIndex = 7;
+            this.nombre.TabIndex = 0;
             this.nombre.Text = "Name";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -250,7 +282,7 @@
             this.label4.Location = new System.Drawing.Point(62, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 18);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Date";
             // 
             // label8
@@ -261,7 +293,7 @@
             this.label8.Location = new System.Drawing.Point(382, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 18);
-            this.label8.TabIndex = 14;
+            this.label8.TabIndex = 0;
             this.label8.Text = "SAT key";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -276,7 +308,7 @@
             this.txtSat.Multiline = true;
             this.txtSat.Name = "txtSat";
             this.txtSat.Size = new System.Drawing.Size(161, 38);
-            this.txtSat.TabIndex = 16;
+            this.txtSat.TabIndex = 2;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -287,7 +319,7 @@
             this.label9.Location = new System.Drawing.Point(687, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 18);
-            this.label9.TabIndex = 15;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Unit of measure";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -302,7 +334,7 @@
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(161, 38);
-            this.txtNombre.TabIndex = 13;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUnidadMedida
@@ -316,7 +348,7 @@
             this.txtUnidadMedida.Multiline = true;
             this.txtUnidadMedida.Name = "txtUnidadMedida";
             this.txtUnidadMedida.Size = new System.Drawing.Size(165, 38);
-            this.txtUnidadMedida.TabIndex = 19;
+            this.txtUnidadMedida.TabIndex = 3;
             // 
             // label5
             // 
@@ -325,7 +357,7 @@
             this.label5.Location = new System.Drawing.Point(363, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 40);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Tariff fraction ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -340,7 +372,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(161, 26);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.TabIndex = 4;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
             // txtFraccion
@@ -354,7 +386,7 @@
             this.txtFraccion.Multiline = true;
             this.txtFraccion.Name = "txtFraccion";
             this.txtFraccion.Size = new System.Drawing.Size(161, 38);
-            this.txtFraccion.TabIndex = 18;
+            this.txtFraccion.TabIndex = 5;
             this.txtFraccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUniMedAduana
@@ -368,7 +400,7 @@
             this.txtUniMedAduana.Multiline = true;
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(161, 37);
-            this.txtUniMedAduana.TabIndex = 27;
+            this.txtUniMedAduana.TabIndex = 7;
             this.txtUniMedAduana.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCanAduana
@@ -382,7 +414,7 @@
             this.txtCanAduana.Multiline = true;
             this.txtCanAduana.Name = "txtCanAduana";
             this.txtCanAduana.Size = new System.Drawing.Size(165, 38);
-            this.txtCanAduana.TabIndex = 28;
+            this.txtCanAduana.TabIndex = 6;
             this.txtCanAduana.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPrecio
@@ -396,8 +428,9 @@
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(165, 37);
-            this.txtPrecio.TabIndex = 29;
+            this.txtPrecio.TabIndex = 9;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrecio.Enter += new System.EventHandler(this.txtPrecio_Enter);
             // 
             // label3
             // 
@@ -407,7 +440,7 @@
             this.label3.Location = new System.Drawing.Point(680, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 18);
-            this.label3.TabIndex = 30;
+            this.label3.TabIndex = 0;
             this.label3.Text = " Customs amount";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -419,7 +452,7 @@
             this.label6.Location = new System.Drawing.Point(728, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 18);
-            this.label6.TabIndex = 31;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Price";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -434,7 +467,7 @@
             this.txtPorcentaje.Multiline = true;
             this.txtPorcentaje.Name = "txtPorcentaje";
             this.txtPorcentaje.Size = new System.Drawing.Size(161, 39);
-            this.txtPorcentaje.TabIndex = 35;
+            this.txtPorcentaje.TabIndex = 11;
             this.txtPorcentaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUniMedida
@@ -448,7 +481,7 @@
             this.txtUniMedida.Multiline = true;
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(161, 39);
-            this.txtUniMedida.TabIndex = 32;
+            this.txtUniMedida.TabIndex = 10;
             this.txtUniMedida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDescripcion
@@ -462,7 +495,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(161, 38);
-            this.txtDescripcion.TabIndex = 36;
+            this.txtDescripcion.TabIndex = 12;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
@@ -473,7 +506,7 @@
             this.label10.Location = new System.Drawing.Point(19, 144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 18);
-            this.label10.TabIndex = 39;
+            this.label10.TabIndex = 0;
             this.label10.Text = "Unit of measure";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -485,7 +518,7 @@
             this.label7.Location = new System.Drawing.Point(360, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 36);
-            this.label7.TabIndex = 38;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Percentage o amount added";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -497,7 +530,7 @@
             this.label12.Location = new System.Drawing.Point(67, 231);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 18);
-            this.label12.TabIndex = 41;
+            this.label12.TabIndex = 0;
             this.label12.Text = "IVA";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -512,7 +545,7 @@
             this.txtIva.Multiline = true;
             this.txtIva.Name = "txtIva";
             this.txtIva.Size = new System.Drawing.Size(161, 35);
-            this.txtIva.TabIndex = 33;
+            this.txtIva.TabIndex = 14;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnFoto
@@ -530,7 +563,7 @@
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnFoto.Size = new System.Drawing.Size(165, 39);
-            this.btnFoto.TabIndex = 44;
+            this.btnFoto.TabIndex = 15;
             this.btnFoto.Text = "ADD PICTURE";
             this.btnFoto.UseVisualStyleBackColor = false;
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
@@ -560,7 +593,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(792, 90);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -573,7 +606,7 @@
             this.top.Location = new System.Drawing.Point(0, 0);
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(1018, 84);
-            this.top.TabIndex = 18;
+            this.top.TabIndex = 0;
             // 
             // txtVentas
             // 
@@ -583,7 +616,7 @@
             this.txtVentas.Location = new System.Drawing.Point(393, 22);
             this.txtVentas.Name = "txtVentas";
             this.txtVentas.Size = new System.Drawing.Size(342, 42);
-            this.txtVentas.TabIndex = 2;
+            this.txtVentas.TabIndex = 0;
             this.txtVentas.Text = "Add raw material";
             // 
             // btrRegreso
@@ -599,7 +632,7 @@
             this.btrRegreso.Location = new System.Drawing.Point(902, 90);
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
-            this.btrRegreso.TabIndex = 13;
+            this.btrRegreso.TabIndex = 17;
             this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
@@ -614,9 +647,10 @@
             this.Controls.Add(this.contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MateriaPrima";
-            this.Text = "MateriaPrima";
+            this.Text = "2";
             this.Load += new System.EventHandler(this.MateriaPrima_Load_1);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();
@@ -629,40 +663,42 @@
 
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.TableLayoutPanel tablaFacVentas;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label nombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSat;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtFraccion;
         private System.Windows.Forms.TextBox txtUnidadMedida;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Label txtVentas;
         private System.Windows.Forms.Button btrRegreso;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtUniMedAduana;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCanAduana;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIva;
-        private System.Windows.Forms.TextBox txtPorcentaje;
-        private System.Windows.Forms.TextBox txtUniMedida;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox FotoProduc;
         private System.Windows.Forms.Button btnFoto;
-        private System.Windows.Forms.TextBox txtCantiAdquirida;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Button SaveEdit;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox ID;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtSat;
+        public System.Windows.Forms.TextBox txtFraccion;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtUniMedAduana;
+        public System.Windows.Forms.TextBox txtCanAduana;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtIva;
+        public System.Windows.Forms.TextBox txtPorcentaje;
+        public System.Windows.Forms.TextBox txtUniMedida;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.TextBox txtCantiAdquirida;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.PictureBox FotoProduc;
     }
 }

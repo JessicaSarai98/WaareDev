@@ -97,7 +97,7 @@
             this.User.Location = new System.Drawing.Point(0, 0);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(1018, 476);
-            this.User.TabIndex = 21;
+            this.User.TabIndex = 0;
             this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
             // 
             // ID
@@ -126,7 +126,7 @@
             this.saveEdit.Location = new System.Drawing.Point(271, 422);
             this.saveEdit.Name = "saveEdit";
             this.saveEdit.Size = new System.Drawing.Size(143, 42);
-            this.saveEdit.TabIndex = 28;
+            this.saveEdit.TabIndex = 9;
             this.saveEdit.Text = "SAVE";
             this.saveEdit.UseVisualStyleBackColor = false;
             this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
@@ -155,7 +155,7 @@
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(157, 56);
-            this.button6.TabIndex = 26;
+            this.button6.TabIndex = 7;
             this.button6.Text = "CHANGE PIC";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -173,7 +173,7 @@
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(157, 56);
-            this.button5.TabIndex = 25;
+            this.button5.TabIndex = 6;
             this.button5.Text = "ADD PICTURE";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -192,7 +192,7 @@
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(161, 42);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 11;
             this.button1.Text = "HELP";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -221,7 +221,7 @@
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(148, 41);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -251,7 +251,7 @@
             this.button3.Location = new System.Drawing.Point(78, 422);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 42);
-            this.button3.TabIndex = 23;
+            this.button3.TabIndex = 8;
             this.button3.Text = "SAVE";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);

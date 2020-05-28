@@ -106,7 +106,7 @@
             this.TablaDeVenta.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.TablaDeVenta.Size = new System.Drawing.Size(965, 132);
             this.TablaDeVenta.StandardTab = true;
-            this.TablaDeVenta.TabIndex = 30;
+            this.TablaDeVenta.TabIndex = 0;
             this.TablaDeVenta.TabStop = false;
             // 
             // nombre
@@ -206,7 +206,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(977, 114);
-            this.tableLayoutPanel1.TabIndex = 29;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txt1
             // 
@@ -216,7 +216,7 @@
             this.txt1.Location = new System.Drawing.Point(14, 1);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(50, 36);
-            this.txt1.TabIndex = 7;
+            this.txt1.TabIndex = 0;
             this.txt1.Text = "Sales folio";
             this.txt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -230,7 +230,7 @@
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(151, 32);
-            this.txtTotal.TabIndex = 21;
+            this.txtTotal.TabIndex = 8;
             this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
             // txtCliente
@@ -244,7 +244,7 @@
             this.txtCliente.Multiline = true;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(376, 32);
-            this.txtCliente.TabIndex = 19;
+            this.txtCliente.TabIndex = 3;
             // 
             // label4
             // 
@@ -254,7 +254,7 @@
             this.label4.Location = new System.Drawing.Point(17, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 18);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Date";
             // 
             // label8
@@ -265,7 +265,7 @@
             this.label8.Location = new System.Drawing.Point(236, 1);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 36);
-            this.label8.TabIndex = 14;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -280,7 +280,7 @@
             this.txtNoCliente.Multiline = true;
             this.txtNoCliente.Name = "txtNoCliente";
             this.txtNoCliente.Size = new System.Drawing.Size(133, 32);
-            this.txtNoCliente.TabIndex = 16;
+            this.txtNoCliente.TabIndex = 2;
             this.txtNoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
@@ -292,7 +292,7 @@
             this.label9.Location = new System.Drawing.Point(492, 1);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 36);
-            this.label9.TabIndex = 15;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -307,7 +307,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(138, 26);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.TabIndex = 4;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // txtFolio
@@ -321,7 +321,7 @@
             this.txtFolio.Multiline = true;
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(138, 32);
-            this.txtFolio.TabIndex = 13;
+            this.txtFolio.TabIndex = 1;
             this.txtFolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
@@ -332,7 +332,7 @@
             this.label3.Location = new System.Drawing.Point(491, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 24);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -343,7 +343,7 @@
             this.label5.Location = new System.Drawing.Point(235, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 24);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Currency";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -359,7 +359,7 @@
             this.comboMoneda.Location = new System.Drawing.Point(348, 41);
             this.comboMoneda.Name = "comboMoneda";
             this.comboMoneda.Size = new System.Drawing.Size(133, 28);
-            this.comboMoneda.TabIndex = 20;
+            this.comboMoneda.TabIndex = 5;
             this.comboMoneda.TabStop = false;
             // 
             // label7
@@ -369,7 +369,7 @@
             this.label7.Location = new System.Drawing.Point(487, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 24);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Subtotal";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -384,7 +384,7 @@
             this.txtSubtotal.Multiline = true;
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(376, 32);
-            this.txtSubtotal.TabIndex = 17;
+            this.txtSubtotal.TabIndex = 6;
             this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSubtotal_KeyPress);
             // 
@@ -395,7 +395,7 @@
             this.label6.Location = new System.Drawing.Point(3, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 0;
             this.label6.Text = "IVA (%)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -410,7 +410,7 @@
             this.txtIva.Multiline = true;
             this.txtIva.Name = "txtIva";
             this.txtIva.Size = new System.Drawing.Size(138, 32);
-            this.txtIva.TabIndex = 18;
+            this.txtIva.TabIndex = 7;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
             // 
@@ -422,7 +422,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1018, 76);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -431,7 +431,7 @@
             this.label1.Location = new System.Drawing.Point(54, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 42);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "NEW SALE";
             // 
             // panelTitulo
@@ -470,7 +470,7 @@
             this.btnFactura.Location = new System.Drawing.Point(648, 7);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(104, 74);
-            this.btnFactura.TabIndex = 10;
+            this.btnFactura.TabIndex = 9;
             this.btnFactura.Text = "Generate invoice";
             this.btnFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFactura.UseVisualStyleBackColor = false;
@@ -489,7 +489,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(784, 7);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 74);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -507,7 +507,7 @@
             this.btrRegreso.Location = new System.Drawing.Point(911, 7);
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 74);
-            this.btrRegreso.TabIndex = 12;
+            this.btrRegreso.TabIndex = 11;
             this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;

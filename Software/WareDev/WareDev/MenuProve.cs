@@ -22,7 +22,7 @@ namespace WareDev
         private void MostrarProvee()
         {
             CN_Clientes objeto = new CN_Clientes();
-            //dataGridView1.DataSource = objeto.MostrarSup(); 
+            dataGridView1.DataSource = objeto.MostrarSup(); 
         }
         public MenuProve()
         {
@@ -125,7 +125,7 @@ namespace WareDev
 
 
                 idSup = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                //objetoCN.EliminarSup(idSup);
+                objetoCN.EliminarSup(idSup);
                 MessageBox.Show("Proveedor eliminado.");
                 MostrarProvee();
             }

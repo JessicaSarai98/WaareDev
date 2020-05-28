@@ -102,12 +102,6 @@ namespace WareDev
             set.ShowDialog();
         }
 
-        private void btnNombreUsuario_Click(object sender, EventArgs e)
-        {
-          
-            ModalUsuario user = new ModalUsuario();
-            user.ShowDialog();
-        }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -276,7 +270,8 @@ namespace WareDev
             btnminimizar.BackColor = Color.FromArgb(91, 210, 43);
             btnexit.BackColor = Color.FromArgb(91, 210, 43);
             btnmaximizar.BackColor = Color.FromArgb(91, 210, 43);
-            btnrestaur.BackColor = Color.FromArgb(91, 210, 43);
+            btnrestaur.BackColor = Color.FromArgb(91, 210, 43); 
+            name.BackColor = Color.FromArgb(91, 210, 43);
         }
 
         private void btnmaximizar_MouseHover(object sender, EventArgs e)
@@ -299,9 +294,15 @@ namespace WareDev
             
         }
 
-        public void textBox1_TextChanged(object sender, EventArgs e)
+        private void name_MouseHover(object sender, EventArgs e)
         {
-            
+            name.BackColor = Color.FromArgb(98, 226, 45);
+        }
+
+        private void name_Click(object sender, EventArgs e)
+        {
+            ModalUsuario user = new ModalUsuario();
+            user.ShowDialog();
         }
     }
 }

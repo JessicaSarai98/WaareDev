@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(compras));
             this.contenedor = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtProveedor = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,7 +91,42 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 283);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(976, 142);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // producto
+            // 
+            this.producto.FillWeight = 120F;
+            this.producto.HeaderText = "Product";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
+            this.producto.Width = 291;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Photo";
+            this.foto.Name = "foto";
+            this.foto.Width = 243;
+            // 
+            // tam
+            // 
+            this.tam.FillWeight = 54.72081F;
+            this.tam.HeaderText = "Size";
+            this.tam.Name = "tam";
+            this.tam.Width = 133;
+            // 
+            // cantidad
+            // 
+            this.cantidad.FillWeight = 54.72081F;
+            this.cantidad.HeaderText = "Amount";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 133;
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 54.72081F;
+            this.precio.HeaderText = "Unit price ";
+            this.precio.Name = "precio";
+            this.precio.Width = 133;
             // 
             // tableLayoutPanel1
             // 
@@ -116,7 +151,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(994, 78);
-            this.tableLayoutPanel1.TabIndex = 8;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
@@ -129,7 +164,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(168, 26);
-            this.dateTimePicker1.TabIndex = 23;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // txtProveedor
@@ -143,7 +178,7 @@
             this.txtProveedor.Multiline = true;
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(452, 33);
-            this.txtProveedor.TabIndex = 20;
+            this.txtProveedor.TabIndex = 2;
             this.txtProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtFolioCompra
@@ -157,7 +192,7 @@
             this.txtFolioCompra.Multiline = true;
             this.txtFolioCompra.Name = "txtFolioCompra";
             this.txtFolioCompra.Size = new System.Drawing.Size(168, 33);
-            this.txtFolioCompra.TabIndex = 19;
+            this.txtFolioCompra.TabIndex = 1;
             this.txtFolioCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFolioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolioCompra_KeyPress);
             // 
@@ -169,7 +204,7 @@
             this.label4.Location = new System.Drawing.Point(374, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 18);
-            this.label4.TabIndex = 18;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Provider\'s name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -181,7 +216,7 @@
             this.label2.Location = new System.Drawing.Point(62, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 18);
-            this.label2.TabIndex = 16;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Date";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -193,7 +228,7 @@
             this.label8.Location = new System.Drawing.Point(25, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 18);
-            this.label8.TabIndex = 15;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Purchase folio";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -205,7 +240,7 @@
             this.label3.Location = new System.Drawing.Point(366, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 18);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Provider\'s number";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -219,7 +254,7 @@
             this.txtNoPro.Multiline = true;
             this.txtNoPro.Name = "txtNoPro";
             this.txtNoPro.Size = new System.Drawing.Size(151, 33);
-            this.txtNoPro.TabIndex = 24;
+            this.txtNoPro.TabIndex = 4;
             this.txtNoPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolioCompra_KeyPress);
             // 
             // label5
@@ -256,7 +291,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1018, 76);
-            this.panel2.TabIndex = 7;
+            this.panel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -281,7 +316,7 @@
             this.btrRegreso.Location = new System.Drawing.Point(911, 6);
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
-            this.btrRegreso.TabIndex = 12;
+            this.btrRegreso.TabIndex = 6;
             this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
@@ -300,7 +335,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(775, 6);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -334,41 +369,6 @@
             this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgVentas.TabIndex = 1;
             this.imgVentas.TabStop = false;
-            // 
-            // producto
-            // 
-            this.producto.FillWeight = 120F;
-            this.producto.HeaderText = "Product";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            this.producto.Width = 291;
-            // 
-            // foto
-            // 
-            this.foto.HeaderText = "Photo";
-            this.foto.Name = "foto";
-            this.foto.Width = 243;
-            // 
-            // tam
-            // 
-            this.tam.FillWeight = 54.72081F;
-            this.tam.HeaderText = "Size";
-            this.tam.Name = "tam";
-            this.tam.Width = 133;
-            // 
-            // cantidad
-            // 
-            this.cantidad.FillWeight = 54.72081F;
-            this.cantidad.HeaderText = "Amount";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 133;
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 54.72081F;
-            this.precio.HeaderText = "Unit price ";
-            this.precio.Name = "precio";
-            this.precio.Width = 133;
             // 
             // compras
             // 

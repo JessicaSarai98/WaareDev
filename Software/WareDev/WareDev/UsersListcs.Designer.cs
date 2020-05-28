@@ -54,7 +54,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(601, 29);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(104, 65);
-            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.TabIndex = 3;
             this.btnNuevo.Text = "New";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@
             this.button2.Location = new System.Drawing.Point(769, 227);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 41);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Delete";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
@@ -96,7 +96,7 @@
             this.btnEditar.Location = new System.Drawing.Point(769, 134);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(104, 41);
-            this.btnEditar.TabIndex = 12;
+            this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Edit";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 31);
-            this.label1.TabIndex = 15;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Users List";
             // 
             // button1
@@ -130,7 +130,7 @@
             this.button1.Location = new System.Drawing.Point(769, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 65);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Help";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             this.button3.Location = new System.Drawing.Point(769, 323);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 41);
-            this.button3.TabIndex = 19;
+            this.button3.TabIndex = 7;
             this.button3.Text = "Info User";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -163,7 +163,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(535, 338);
-            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // act
@@ -181,7 +181,7 @@
             this.act.Location = new System.Drawing.Point(449, 29);
             this.act.Name = "act";
             this.act.Size = new System.Drawing.Size(104, 65);
-            this.act.TabIndex = 21;
+            this.act.TabIndex = 2;
             this.act.Text = "Actualizar";
             this.act.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.act.UseVisualStyleBackColor = false;

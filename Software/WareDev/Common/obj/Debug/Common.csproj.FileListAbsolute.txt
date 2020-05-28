@@ -5,6 +5,7 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Comm
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
+<<<<<<< HEAD
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe.config
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\bin\Debug\Common.pdb
@@ -13,3 +14,6 @@ C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\C
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
+=======
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\Common\obj\Debug\Common.csprojAssemblyReference.cache
+>>>>>>> baaa131a6a1202f0b848701d0db7a8fee16567ce
