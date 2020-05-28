@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Common.cache;
-using Domain; 
+using Domain;
+using Common.cache; 
 namespace WareDev
 {
     public partial class MenuInicio : Form
@@ -294,6 +295,11 @@ namespace WareDev
         }
 
         private void MenuInicio_SizeChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
             
         }

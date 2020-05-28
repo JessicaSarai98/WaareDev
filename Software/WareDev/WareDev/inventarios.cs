@@ -7,18 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain; 
+
 
 namespace WareDev
 {
     public partial class inventarios : Form
     {
+        //CN_Clientes objetoCN = new CN_Clientes(); 
+
         public inventarios()
         {
             InitializeComponent();
         }
+        //public void MostrarRaw()
+        //{
+        //    CN_Clientes objeto = new CN_Clientes();
+        //    dataGridView1.DataSource = objeto.MostrarRaw();
+        //    this.dataGridView1.Columns[2].Visible = false;
+        //    this.dataGridView1.Columns[3].Visible = false;
+        //    this.dataGridView1.Columns[5].Visible = false;
+        //    this.dataGridView1.Columns[6].Visible = false;
+        //    this.dataGridView1.Columns[8].Visible = false;
+        //    this.dataGridView1.Columns[9].Visible = false;
+        //    this.dataGridView1.Columns[10].Visible = false;
+        //    this.dataGridView1.Columns[11].Visible = false;
+        //    this.dataGridView1.Columns[12].Visible = false;
+        //    this.dataGridView1.Columns[14].Visible = false;
+        //    //TablaMatPrima = objeto.MostrarRaw();
+
+        //}
         private void inventarios_Load(object sender, EventArgs e)
         {
             TabControl.SelectedTab = TabPage1;
+            //MostrarRaw();
+            //DataTable dt = new DataTable();
+            //dt = (DataTable)dataGridView1.DataSource;
+            //dataGridView1.Columns[0].HeaderText = "ID";
+            //dataGridView1.Columns[1].HeaderText = "Name";
+            //dataGridView1.Columns[4].HeaderText = "Unit of measure";
+            //dataGridView1.Columns[7].HeaderText = "SAT key";
+            //dataGridView1.Columns[13].HeaderText = "Price";
+
         }
         private void btnMPrima_CheckedChanged(object sender, EventArgs e)
         {
@@ -108,6 +138,16 @@ namespace WareDev
                 producto.Show();
             }
             else producto.Activate();
+        }
+
+        private void TablaMatPrima_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //this.dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.Fill); 
         }
     }
 }

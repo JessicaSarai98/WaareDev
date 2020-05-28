@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nombreEmpresa = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -233,6 +234,7 @@
             // 
             this.top.AutoScroll = true;
             this.top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.top.Controls.Add(this.name);
             this.top.Controls.Add(this.btnmaximizar);
             this.top.Controls.Add(this.btnrestaur);
             this.top.Controls.Add(this.btnminimizar);
@@ -439,6 +441,19 @@
             this.nombreEmpresa.Text = "AGROINDUSTRIAS  LUMA\r\nCOMERCIALIZADORA S.A. DE C.V.\r\n";
             this.nombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // name
+            // 
+            this.name.BackColor = System.Drawing.Color.LimeGreen;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(329, 13);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Size = new System.Drawing.Size(192, 31);
+            this.name.TabIndex = 14;
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // MenuInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,5 +511,6 @@
         private System.Windows.Forms.Label nombreEmpresa;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox name;
     }
 }

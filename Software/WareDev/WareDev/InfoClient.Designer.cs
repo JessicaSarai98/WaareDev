@@ -189,7 +189,7 @@
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
             this.save.UseWaitCursor = true;
-            this.save.Click += new System.EventHandler(this.button2_Click);
+            //this.save.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

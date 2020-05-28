@@ -39,7 +39,7 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter = new WareDev.usersDataSetTableAdapters.clientesTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.actualizar = new System.Windows.Forms.Button();
+            this.Actualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -181,20 +181,23 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(35, 116);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(712, 321);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // actualizar
+            // Actualizar
             // 
-            this.actualizar.Location = new System.Drawing.Point(454, 29);
-            this.actualizar.Name = "actualizar";
-            this.actualizar.Size = new System.Drawing.Size(116, 65);
-            this.actualizar.TabIndex = 14;
-            this.actualizar.Text = "Actualizar";
-            this.actualizar.UseVisualStyleBackColor = true;
-            this.actualizar.Click += new System.EventHandler(this.actualizar_Click);
+            this.Actualizar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.Actualizar.ForeColor = System.Drawing.Color.Silver;
+            this.Actualizar.Location = new System.Drawing.Point(470, 29);
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Size = new System.Drawing.Size(116, 65);
+            this.Actualizar.TabIndex = 14;
+            this.Actualizar.Text = "Actualizar";
+            this.Actualizar.UseVisualStyleBackColor = false;
+            this.Actualizar.Click += new System.EventHandler(this.actualizar_Click);
             // 
             // Menuclientescs
             // 
@@ -202,7 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(920, 526);
-            this.Controls.Add(this.actualizar);
+            this.Controls.Add(this.Actualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -232,7 +235,7 @@
         private usersDataSet usersDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private usersDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.Button actualizar;
+        public System.Windows.Forms.Button Actualizar;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

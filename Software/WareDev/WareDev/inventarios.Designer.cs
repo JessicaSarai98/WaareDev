@@ -43,6 +43,7 @@
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,38 +55,38 @@
             this.btnBorrarInsu = new System.Windows.Forms.Button();
             this.btnEditInsu = new System.Windows.Forms.Button();
             this.tablaInsumo = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNameInsumo = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panelTitulo = new System.Windows.Forms.Panel();
-            this.btnInsumos = new System.Windows.Forms.RadioButton();
-            this.txtVentas = new System.Windows.Forms.Label();
-            this.btnPTerminado = new System.Windows.Forms.RadioButton();
-            this.btnMPrima = new System.Windows.Forms.RadioButton();
-            this.btnAddProductos = new System.Windows.Forms.Button();
-            this.btnAddCantiProducto = new System.Windows.Forms.Button();
-            this.btnElimProdTerm = new System.Windows.Forms.Button();
-            this.btnEditProdTer = new System.Windows.Forms.Button();
-            this.TablaProducTermi = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNomProdTerm = new System.Windows.Forms.TextBox();
-            this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.btnBusProdTermi = new System.Windows.Forms.Button();
-            this.IDProdTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameProduTer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantDisponibleProduTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedidaInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadDispoInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNameInsumo = new System.Windows.Forms.TextBox();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnAddProductos = new System.Windows.Forms.Button();
+            this.btnAddCantiProducto = new System.Windows.Forms.Button();
+            this.btnElimProdTerm = new System.Windows.Forms.Button();
+            this.btnEditProdTer = new System.Windows.Forms.Button();
+            this.TablaProducTermi = new System.Windows.Forms.DataGridView();
+            this.IDProdTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduTer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantDisponibleProduTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBusProdTermi = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNomProdTerm = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.btnInsumos = new System.Windows.Forms.RadioButton();
+            this.txtVentas = new System.Windows.Forms.Label();
+            this.imgVentas = new System.Windows.Forms.PictureBox();
+            this.btnPTerminado = new System.Windows.Forms.RadioButton();
+            this.btnMPrima = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabPage1.SuspendLayout();
@@ -95,10 +96,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaInsumo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -129,6 +131,7 @@
             // 
             this.TabPage1.AutoScroll = true;
             this.TabPage1.BackColor = System.Drawing.Color.Khaki;
+            this.TabPage1.Controls.Add(this.dataGridView1);
             this.TabPage1.Controls.Add(this.btnAgregarProducto);
             this.TabPage1.Controls.Add(this.BtnAgregar);
             this.TabPage1.Controls.Add(this.BtnEliminar);
@@ -250,6 +253,7 @@
             this.TablaMatPrima.StandardTab = true;
             this.TablaMatPrima.TabIndex = 32;
             this.TablaMatPrima.TabStop = false;
+            this.TablaMatPrima.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaMatPrima_CellContentClick);
             // 
             // numero
             // 
@@ -292,6 +296,23 @@
             this.importe.HeaderText = "Available quantity";
             this.importe.MinimumWidth = 6;
             this.importe.Name = "importe";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(752, 63);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(79, 47);
+            this.btnBuscar.TabIndex = 31;
+            this.btnBuscar.Text = "Find";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -483,6 +504,41 @@
             this.tablaInsumo.TabIndex = 39;
             this.tablaInsumo.TabStop = false;
             // 
+            // IDInsumo
+            // 
+            this.IDInsumo.FillWeight = 38.49408F;
+            this.IDInsumo.HeaderText = "ID";
+            this.IDInsumo.MinimumWidth = 6;
+            this.IDInsumo.Name = "IDInsumo";
+            // 
+            // NombreInsu
+            // 
+            this.NombreInsu.FillWeight = 38.49408F;
+            this.NombreInsu.HeaderText = "Name";
+            this.NombreInsu.MinimumWidth = 6;
+            this.NombreInsu.Name = "NombreInsu";
+            // 
+            // UnidadMedidaInsumo
+            // 
+            this.UnidadMedidaInsumo.FillWeight = 38.49408F;
+            this.UnidadMedidaInsumo.HeaderText = "Unit of measure";
+            this.UnidadMedidaInsumo.MinimumWidth = 6;
+            this.UnidadMedidaInsumo.Name = "UnidadMedidaInsumo";
+            // 
+            // PrecioInsumo
+            // 
+            this.PrecioInsumo.FillWeight = 38.49408F;
+            this.PrecioInsumo.HeaderText = "Price";
+            this.PrecioInsumo.MinimumWidth = 6;
+            this.PrecioInsumo.Name = "PrecioInsumo";
+            // 
+            // CantidadDispoInsumo
+            // 
+            this.CantidadDispoInsumo.FillWeight = 38.49408F;
+            this.CantidadDispoInsumo.HeaderText = "Available quantity";
+            this.CantidadDispoInsumo.MinimumWidth = 6;
+            this.CantidadDispoInsumo.Name = "CantidadDispoInsumo";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -523,6 +579,23 @@
             this.txtNameInsumo.Size = new System.Drawing.Size(205, 33);
             this.txtNameInsumo.TabIndex = 21;
             // 
+            // btnBuscarInsumo
+            // 
+            this.btnBuscarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarInsumo.Image")));
+            this.btnBuscarInsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(522, 78);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(79, 47);
+            this.btnBuscarInsumo.TabIndex = 38;
+            this.btnBuscarInsumo.Text = "Find";
+            this.btnBuscarInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Khaki;
@@ -538,95 +611,6 @@
             this.tabPage3.Size = new System.Drawing.Size(1010, 443);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finished products";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Khaki;
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1010, 443);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.Khaki;
-            this.panelTitulo.Controls.Add(this.btnInsumos);
-            this.panelTitulo.Controls.Add(this.txtVentas);
-            this.panelTitulo.Controls.Add(this.imgVentas);
-            this.panelTitulo.Controls.Add(this.btnPTerminado);
-            this.panelTitulo.Controls.Add(this.btnMPrima);
-            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1018, 84);
-            this.panelTitulo.TabIndex = 3;
-            // 
-            // btnInsumos
-            // 
-            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsumos.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnInsumos.FlatAppearance.BorderSize = 0;
-            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsumos.Location = new System.Drawing.Point(797, 32);
-            this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(132, 46);
-            this.btnInsumos.TabIndex = 5;
-            this.btnInsumos.TabStop = true;
-            this.btnInsumos.Text = "Finished products";
-            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnInsumos.UseVisualStyleBackColor = true;
-            this.btnInsumos.CheckedChanged += new System.EventHandler(this.btnInsumos_CheckedChanged);
-            // 
-            // txtVentas
-            // 
-            this.txtVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVentas.AutoSize = true;
-            this.txtVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
-            this.txtVentas.Location = new System.Drawing.Point(187, 19);
-            this.txtVentas.Name = "txtVentas";
-            this.txtVentas.Size = new System.Drawing.Size(136, 31);
-            this.txtVentas.TabIndex = 2;
-            this.txtVentas.Text = "Inventory";
-            // 
-            // btnPTerminado
-            // 
-            this.btnPTerminado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPTerminado.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnPTerminado.FlatAppearance.BorderSize = 0;
-            this.btnPTerminado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPTerminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPTerminado.Location = new System.Drawing.Point(629, 32);
-            this.btnPTerminado.Name = "btnPTerminado";
-            this.btnPTerminado.Size = new System.Drawing.Size(132, 46);
-            this.btnPTerminado.TabIndex = 4;
-            this.btnPTerminado.TabStop = true;
-            this.btnPTerminado.Text = "Inputs";
-            this.btnPTerminado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPTerminado.UseVisualStyleBackColor = true;
-            this.btnPTerminado.CheckedChanged += new System.EventHandler(this.btnPTerminado_CheckedChanged);
-            // 
-            // btnMPrima
-            // 
-            this.btnMPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMPrima.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnMPrima.Checked = true;
-            this.btnMPrima.FlatAppearance.BorderSize = 0;
-            this.btnMPrima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMPrima.Location = new System.Drawing.Point(461, 32);
-            this.btnMPrima.Name = "btnMPrima";
-            this.btnMPrima.Size = new System.Drawing.Size(132, 46);
-            this.btnMPrima.TabIndex = 3;
-            this.btnMPrima.TabStop = true;
-            this.btnMPrima.Text = "Raw material";
-            this.btnMPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMPrima.UseVisualStyleBackColor = true;
-            this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
             // btnAddProductos
             // 
@@ -735,6 +719,58 @@
             this.TablaProducTermi.TabIndex = 46;
             this.TablaProducTermi.TabStop = false;
             // 
+            // IDProdTerm
+            // 
+            this.IDProdTerm.FillWeight = 38.49408F;
+            this.IDProdTerm.HeaderText = "ID";
+            this.IDProdTerm.MinimumWidth = 6;
+            this.IDProdTerm.Name = "IDProdTerm";
+            // 
+            // nameProduTer
+            // 
+            this.nameProduTer.FillWeight = 38.49408F;
+            this.nameProduTer.HeaderText = "Name";
+            this.nameProduTer.MinimumWidth = 6;
+            this.nameProduTer.Name = "nameProduTer";
+            // 
+            // UnidadProdTermi
+            // 
+            this.UnidadProdTermi.FillWeight = 38.49408F;
+            this.UnidadProdTermi.HeaderText = "Unit of measure";
+            this.UnidadProdTermi.MinimumWidth = 6;
+            this.UnidadProdTermi.Name = "UnidadProdTermi";
+            // 
+            // precioProdTermi
+            // 
+            this.precioProdTermi.FillWeight = 38.49408F;
+            this.precioProdTermi.HeaderText = "Price";
+            this.precioProdTermi.MinimumWidth = 6;
+            this.precioProdTermi.Name = "precioProdTermi";
+            // 
+            // CantDisponibleProduTermi
+            // 
+            this.CantDisponibleProduTermi.FillWeight = 38.49408F;
+            this.CantDisponibleProduTermi.HeaderText = "Available quantity";
+            this.CantDisponibleProduTermi.MinimumWidth = 6;
+            this.CantDisponibleProduTermi.Name = "CantDisponibleProduTermi";
+            // 
+            // btnBusProdTermi
+            // 
+            this.btnBusProdTermi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.btnBusProdTermi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBusProdTermi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusProdTermi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusProdTermi.ForeColor = System.Drawing.Color.Black;
+            this.btnBusProdTermi.Image = ((System.Drawing.Image)(resources.GetObject("btnBusProdTermi.Image")));
+            this.btnBusProdTermi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBusProdTermi.Location = new System.Drawing.Point(536, 78);
+            this.btnBusProdTermi.Name = "btnBusProdTermi";
+            this.btnBusProdTermi.Size = new System.Drawing.Size(79, 47);
+            this.btnBusProdTermi.TabIndex = 45;
+            this.btnBusProdTermi.Text = "Find";
+            this.btnBusProdTermi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBusProdTermi.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -775,6 +811,60 @@
             this.txtNomProdTerm.Size = new System.Drawing.Size(205, 33);
             this.txtNomProdTerm.TabIndex = 21;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1010, 443);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.Khaki;
+            this.panelTitulo.Controls.Add(this.btnInsumos);
+            this.panelTitulo.Controls.Add(this.txtVentas);
+            this.panelTitulo.Controls.Add(this.imgVentas);
+            this.panelTitulo.Controls.Add(this.btnPTerminado);
+            this.panelTitulo.Controls.Add(this.btnMPrima);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1018, 84);
+            this.panelTitulo.TabIndex = 3;
+            // 
+            // btnInsumos
+            // 
+            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsumos.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnInsumos.FlatAppearance.BorderSize = 0;
+            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsumos.Location = new System.Drawing.Point(797, 32);
+            this.btnInsumos.Name = "btnInsumos";
+            this.btnInsumos.Size = new System.Drawing.Size(132, 46);
+            this.btnInsumos.TabIndex = 5;
+            this.btnInsumos.TabStop = true;
+            this.btnInsumos.Text = "Finished products";
+            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInsumos.UseVisualStyleBackColor = true;
+            this.btnInsumos.CheckedChanged += new System.EventHandler(this.btnInsumos_CheckedChanged);
+            // 
+            // txtVentas
+            // 
+            this.txtVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtVentas.AutoSize = true;
+            this.txtVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
+            this.txtVentas.Location = new System.Drawing.Point(187, 19);
+            this.txtVentas.Name = "txtVentas";
+            this.txtVentas.Size = new System.Drawing.Size(136, 31);
+            this.txtVentas.TabIndex = 2;
+            this.txtVentas.Text = "Inventory";
+            // 
             // imgVentas
             // 
             this.imgVentas.Image = ((System.Drawing.Image)(resources.GetObject("imgVentas.Image")));
@@ -785,126 +875,51 @@
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
             // 
-            // btnBuscar
+            // btnPTerminado
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(752, 63);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscar.TabIndex = 31;
-            this.btnBuscar.Text = "Find";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnPTerminado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPTerminado.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnPTerminado.FlatAppearance.BorderSize = 0;
+            this.btnPTerminado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPTerminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPTerminado.Location = new System.Drawing.Point(629, 32);
+            this.btnPTerminado.Name = "btnPTerminado";
+            this.btnPTerminado.Size = new System.Drawing.Size(132, 46);
+            this.btnPTerminado.TabIndex = 4;
+            this.btnPTerminado.TabStop = true;
+            this.btnPTerminado.Text = "Inputs";
+            this.btnPTerminado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPTerminado.UseVisualStyleBackColor = true;
+            this.btnPTerminado.CheckedChanged += new System.EventHandler(this.btnPTerminado_CheckedChanged);
             // 
-            // btnBuscarInsumo
+            // btnMPrima
             // 
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarInsumo.Image")));
-            this.btnBuscarInsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(522, 78);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscarInsumo.TabIndex = 38;
-            this.btnBuscarInsumo.Text = "Find";
-            this.btnBuscarInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnMPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMPrima.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnMPrima.Checked = true;
+            this.btnMPrima.FlatAppearance.BorderSize = 0;
+            this.btnMPrima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMPrima.Location = new System.Drawing.Point(461, 32);
+            this.btnMPrima.Name = "btnMPrima";
+            this.btnMPrima.Size = new System.Drawing.Size(132, 46);
+            this.btnMPrima.TabIndex = 3;
+            this.btnMPrima.TabStop = true;
+            this.btnMPrima.Text = "Raw material";
+            this.btnMPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMPrima.UseVisualStyleBackColor = true;
+            this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
-            // btnBusProdTermi
+            // dataGridView1
             // 
-            this.btnBusProdTermi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBusProdTermi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBusProdTermi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusProdTermi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusProdTermi.ForeColor = System.Drawing.Color.Black;
-            this.btnBusProdTermi.Image = ((System.Drawing.Image)(resources.GetObject("btnBusProdTermi.Image")));
-            this.btnBusProdTermi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusProdTermi.Location = new System.Drawing.Point(536, 78);
-            this.btnBusProdTermi.Name = "btnBusProdTermi";
-            this.btnBusProdTermi.Size = new System.Drawing.Size(79, 47);
-            this.btnBusProdTermi.TabIndex = 45;
-            this.btnBusProdTermi.Text = "Find";
-            this.btnBusProdTermi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBusProdTermi.UseVisualStyleBackColor = false;
-            // 
-            // IDProdTerm
-            // 
-            this.IDProdTerm.FillWeight = 38.49408F;
-            this.IDProdTerm.HeaderText = "ID";
-            this.IDProdTerm.MinimumWidth = 6;
-            this.IDProdTerm.Name = "IDProdTerm";
-            // 
-            // nameProduTer
-            // 
-            this.nameProduTer.FillWeight = 38.49408F;
-            this.nameProduTer.HeaderText = "Name";
-            this.nameProduTer.MinimumWidth = 6;
-            this.nameProduTer.Name = "nameProduTer";
-            // 
-            // UnidadProdTermi
-            // 
-            this.UnidadProdTermi.FillWeight = 38.49408F;
-            this.UnidadProdTermi.HeaderText = "Unit of measure";
-            this.UnidadProdTermi.MinimumWidth = 6;
-            this.UnidadProdTermi.Name = "UnidadProdTermi";
-            // 
-            // precioProdTermi
-            // 
-            this.precioProdTermi.FillWeight = 38.49408F;
-            this.precioProdTermi.HeaderText = "Price";
-            this.precioProdTermi.MinimumWidth = 6;
-            this.precioProdTermi.Name = "precioProdTermi";
-            // 
-            // CantDisponibleProduTermi
-            // 
-            this.CantDisponibleProduTermi.FillWeight = 38.49408F;
-            this.CantDisponibleProduTermi.HeaderText = "Available quantity";
-            this.CantDisponibleProduTermi.MinimumWidth = 6;
-            this.CantDisponibleProduTermi.Name = "CantDisponibleProduTermi";
-            // 
-            // IDInsumo
-            // 
-            this.IDInsumo.FillWeight = 38.49408F;
-            this.IDInsumo.HeaderText = "ID";
-            this.IDInsumo.MinimumWidth = 6;
-            this.IDInsumo.Name = "IDInsumo";
-            // 
-            // NombreInsu
-            // 
-            this.NombreInsu.FillWeight = 38.49408F;
-            this.NombreInsu.HeaderText = "Name";
-            this.NombreInsu.MinimumWidth = 6;
-            this.NombreInsu.Name = "NombreInsu";
-            // 
-            // UnidadMedidaInsumo
-            // 
-            this.UnidadMedidaInsumo.FillWeight = 38.49408F;
-            this.UnidadMedidaInsumo.HeaderText = "Unit of measure";
-            this.UnidadMedidaInsumo.MinimumWidth = 6;
-            this.UnidadMedidaInsumo.Name = "UnidadMedidaInsumo";
-            // 
-            // PrecioInsumo
-            // 
-            this.PrecioInsumo.FillWeight = 38.49408F;
-            this.PrecioInsumo.HeaderText = "Price";
-            this.PrecioInsumo.MinimumWidth = 6;
-            this.PrecioInsumo.Name = "PrecioInsumo";
-            // 
-            // CantidadDispoInsumo
-            // 
-            this.CantidadDispoInsumo.FillWeight = 38.49408F;
-            this.CantidadDispoInsumo.HeaderText = "Available quantity";
-            this.CantidadDispoInsumo.MinimumWidth = 6;
-            this.CantidadDispoInsumo.Name = "CantidadDispoInsumo";
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 202);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(798, 207);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // inventarios
             // 
@@ -927,12 +942,13 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.panelTitulo.ResumeLayout(false);
-            this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -996,5 +1012,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedidaInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDispoInsumo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

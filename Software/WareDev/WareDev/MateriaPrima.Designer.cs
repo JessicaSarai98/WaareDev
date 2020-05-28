@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MateriaPrima));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFoto = new System.Windows.Forms.Button();
+            this.txtCantiAdquirida = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,25 +53,23 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIva = new System.Windows.Forms.TextBox();
             this.txtPorcentaje = new System.Windows.Forms.TextBox();
             this.txtUniMedida = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtIva = new System.Windows.Forms.TextBox();
+            this.btnFoto = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
-            this.FotoProduc = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCantiAdquirida = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
             this.top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -84,6 +84,20 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 1;
+            // 
+            // FotoProduc
+            // 
+            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
+            this.FotoProduc.Location = new System.Drawing.Point(792, 350);
+            this.FotoProduc.Name = "FotoProduc";
+            this.FotoProduc.Size = new System.Drawing.Size(161, 114);
+            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FotoProduc.TabIndex = 31;
+            this.FotoProduc.TabStop = false;
+            this.FotoProduc.Visible = false;
             // 
             // tablaFacVentas
             // 
@@ -132,33 +146,39 @@
             this.tablaFacVentas.RowCount = 6;
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.54545F));
+            this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.45455F));
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tablaFacVentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablaFacVentas.Size = new System.Drawing.Size(1006, 261);
             this.tablaFacVentas.TabIndex = 30;
             // 
-            // btnFoto
+            // txtCantiAdquirida
             // 
-            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCantiAdquirida.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFoto.BackColor = System.Drawing.Color.Silver;
-            this.btnFoto.FlatAppearance.BorderSize = 0;
-            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnFoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoto.Location = new System.Drawing.Point(838, 135);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnFoto.Size = new System.Drawing.Size(165, 38);
-            this.btnFoto.TabIndex = 44;
-            this.btnFoto.Text = "ADD PICTURE";
-            this.btnFoto.UseVisualStyleBackColor = false;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            this.txtCantiAdquirida.BackColor = System.Drawing.Color.White;
+            this.txtCantiAdquirida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtCantiAdquirida.Location = new System.Drawing.Point(504, 179);
+            this.txtCantiAdquirida.Multiline = true;
+            this.txtCantiAdquirida.Name = "txtCantiAdquirida";
+            this.txtCantiAdquirida.Size = new System.Drawing.Size(161, 38);
+            this.txtCantiAdquirida.TabIndex = 46;
+            this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(343, 189);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(148, 18);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Amount purchased";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -182,7 +202,7 @@
             this.txtEstado.Location = new System.Drawing.Point(504, 91);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(161, 38);
+            this.txtEstado.Size = new System.Drawing.Size(161, 37);
             this.txtEstado.TabIndex = 25;
             this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -191,7 +211,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(389, 101);
+            this.label2.Location = new System.Drawing.Point(389, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 24;
@@ -203,7 +223,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 92);
+            this.label1.Location = new System.Drawing.Point(19, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 36);
             this.label1.TabIndex = 23;
@@ -347,7 +367,7 @@
             this.txtUniMedAduana.Location = new System.Drawing.Point(170, 91);
             this.txtUniMedAduana.Multiline = true;
             this.txtUniMedAduana.Name = "txtUniMedAduana";
-            this.txtUniMedAduana.Size = new System.Drawing.Size(161, 38);
+            this.txtUniMedAduana.Size = new System.Drawing.Size(161, 37);
             this.txtUniMedAduana.TabIndex = 27;
             this.txtUniMedAduana.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -375,7 +395,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(838, 91);
             this.txtPrecio.Multiline = true;
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(165, 38);
+            this.txtPrecio.Size = new System.Drawing.Size(165, 37);
             this.txtPrecio.TabIndex = 29;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -396,26 +416,12 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(728, 101);
+            this.label6.Location = new System.Drawing.Point(728, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 18);
             this.label6.TabIndex = 31;
             this.label6.Text = "Price";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtIva
-            // 
-            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIva.BackColor = System.Drawing.Color.White;
-            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(170, 223);
-            this.txtIva.Multiline = true;
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(161, 35);
-            this.txtIva.TabIndex = 33;
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPorcentaje
             // 
@@ -424,10 +430,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPorcentaje.BackColor = System.Drawing.Color.White;
             this.txtPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPorcentaje.Location = new System.Drawing.Point(504, 135);
+            this.txtPorcentaje.Location = new System.Drawing.Point(504, 134);
             this.txtPorcentaje.Multiline = true;
             this.txtPorcentaje.Name = "txtPorcentaje";
-            this.txtPorcentaje.Size = new System.Drawing.Size(161, 38);
+            this.txtPorcentaje.Size = new System.Drawing.Size(161, 39);
             this.txtPorcentaje.TabIndex = 35;
             this.txtPorcentaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -438,10 +444,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUniMedida.BackColor = System.Drawing.Color.White;
             this.txtUniMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtUniMedida.Location = new System.Drawing.Point(170, 135);
+            this.txtUniMedida.Location = new System.Drawing.Point(170, 134);
             this.txtUniMedida.Multiline = true;
             this.txtUniMedida.Name = "txtUniMedida";
-            this.txtUniMedida.Size = new System.Drawing.Size(161, 38);
+            this.txtUniMedida.Size = new System.Drawing.Size(161, 39);
             this.txtUniMedida.TabIndex = 32;
             this.txtUniMedida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -464,7 +470,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 145);
+            this.label10.Location = new System.Drawing.Point(19, 144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 18);
             this.label10.TabIndex = 39;
@@ -476,7 +482,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(360, 136);
+            this.label7.Location = new System.Drawing.Point(360, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 36);
             this.label7.TabIndex = 38;
@@ -495,17 +501,70 @@
             this.label12.Text = "IVA";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtIva
+            // 
+            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIva.BackColor = System.Drawing.Color.White;
+            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtIva.Location = new System.Drawing.Point(170, 223);
+            this.txtIva.Multiline = true;
+            this.txtIva.Name = "txtIva";
+            this.txtIva.Size = new System.Drawing.Size(161, 35);
+            this.txtIva.TabIndex = 33;
+            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFoto.BackColor = System.Drawing.Color.Silver;
+            this.btnFoto.FlatAppearance.BorderSize = 0;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnFoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFoto.Location = new System.Drawing.Point(838, 134);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnFoto.Size = new System.Drawing.Size(165, 39);
+            this.btnFoto.TabIndex = 44;
+            this.btnFoto.Text = "ADD PICTURE";
+            this.btnFoto.UseVisualStyleBackColor = false;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(725, 145);
+            this.label14.Location = new System.Drawing.Point(725, 144);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 18);
             this.label14.TabIndex = 43;
             this.label14.Text = "Photo";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "Save";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // top
             // 
@@ -527,38 +586,6 @@
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Add raw material";
             // 
-            // FotoProduc
-            // 
-            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
-            this.FotoProduc.Location = new System.Drawing.Point(792, 350);
-            this.FotoProduc.Name = "FotoProduc";
-            this.FotoProduc.Size = new System.Drawing.Size(161, 114);
-            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FotoProduc.TabIndex = 31;
-            this.FotoProduc.TabStop = false;
-            this.FotoProduc.Visible = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
             // btrRegreso
             // 
             this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -578,32 +605,6 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(343, 189);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 18);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Amount purchased";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCantiAdquirida
-            // 
-            this.txtCantiAdquirida.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantiAdquirida.BackColor = System.Drawing.Color.White;
-            this.txtCantiAdquirida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCantiAdquirida.Location = new System.Drawing.Point(504, 179);
-            this.txtCantiAdquirida.Multiline = true;
-            this.txtCantiAdquirida.Name = "txtCantiAdquirida";
-            this.txtCantiAdquirida.Size = new System.Drawing.Size(161, 38);
-            this.txtCantiAdquirida.TabIndex = 46;
-            this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // MateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,10 +617,10 @@
             this.Text = "MateriaPrima";
             this.Load += new System.EventHandler(this.MateriaPrima_Load_1);
             this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();
             this.top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.ResumeLayout(false);
 
         }
