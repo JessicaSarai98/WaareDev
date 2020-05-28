@@ -44,9 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSat = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtUnidadMedida = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtFraccion = new System.Windows.Forms.TextBox();
@@ -152,9 +150,7 @@
             this.tablaFacVentas.Controls.Add(this.label4, 0, 1);
             this.tablaFacVentas.Controls.Add(this.label8, 2, 0);
             this.tablaFacVentas.Controls.Add(this.txtSat, 3, 0);
-            this.tablaFacVentas.Controls.Add(this.label9, 4, 0);
             this.tablaFacVentas.Controls.Add(this.txtNombre, 1, 0);
-            this.tablaFacVentas.Controls.Add(this.txtUnidadMedida, 5, 0);
             this.tablaFacVentas.Controls.Add(this.label5, 2, 1);
             this.tablaFacVentas.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tablaFacVentas.Controls.Add(this.txtFraccion, 3, 1);
@@ -168,10 +164,10 @@
             this.tablaFacVentas.Controls.Add(this.txtDescripcion, 1, 4);
             this.tablaFacVentas.Controls.Add(this.label10, 0, 3);
             this.tablaFacVentas.Controls.Add(this.label7, 2, 3);
-            this.tablaFacVentas.Controls.Add(this.label12, 0, 5);
-            this.tablaFacVentas.Controls.Add(this.txtIva, 1, 5);
             this.tablaFacVentas.Controls.Add(this.btnFoto, 5, 3);
             this.tablaFacVentas.Controls.Add(this.label14, 4, 3);
+            this.tablaFacVentas.Controls.Add(this.txtIva, 5, 0);
+            this.tablaFacVentas.Controls.Add(this.label12, 4, 0);
             this.tablaFacVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.tablaFacVentas.Location = new System.Drawing.Point(9, 161);
             this.tablaFacVentas.Name = "tablaFacVentas";
@@ -311,18 +307,6 @@
             this.txtSat.TabIndex = 2;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(687, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 18);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Unit of measure";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtNombre
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -336,19 +320,6 @@
             this.txtNombre.Size = new System.Drawing.Size(161, 38);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtUnidadMedida
-            // 
-            this.txtUnidadMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUnidadMedida.BackColor = System.Drawing.Color.White;
-            this.txtUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtUnidadMedida.Location = new System.Drawing.Point(838, 3);
-            this.txtUnidadMedida.Multiline = true;
-            this.txtUnidadMedida.Name = "txtUnidadMedida";
-            this.txtUnidadMedida.Size = new System.Drawing.Size(165, 38);
-            this.txtUnidadMedida.TabIndex = 3;
             // 
             // label5
             // 
@@ -527,7 +498,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(67, 231);
+            this.label12.Location = new System.Drawing.Point(735, 13);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 18);
             this.label12.TabIndex = 0;
@@ -541,10 +512,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIva.BackColor = System.Drawing.Color.White;
             this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(170, 223);
+            this.txtIva.Location = new System.Drawing.Point(838, 3);
             this.txtIva.Multiline = true;
             this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(161, 35);
+            this.txtIva.Size = new System.Drawing.Size(165, 38);
             this.txtIva.TabIndex = 14;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -668,8 +639,6 @@
         private System.Windows.Forms.Label nombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtUnidadMedida;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Label txtVentas;
