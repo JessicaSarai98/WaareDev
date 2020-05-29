@@ -30,7 +30,7 @@ namespace WareDev
         private void MostrarClientes()
         {
             CN_Clientes objeto = new CN_Clientes();
-            dataGridView1.DataSource = objeto.MostrarCli();
+            menu.dataGridView1.DataSource = objeto.MostrarCli();
             Nametxt.Text = UserCache.username;
 
         }

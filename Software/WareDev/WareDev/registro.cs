@@ -173,11 +173,6 @@ namespace WareDev
                     {
 
 
-                        //byte[] images = null;
-                        //FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                        //BinaryReader brs = new BinaryReader(Streem);
-                        //images = brs.ReadBytes((int)Streem.Length);
-
                         byte[] byteArrayImagen = ImageToByteArray(Fotouser.Image);
 
                         connection.Open();
@@ -185,10 +180,7 @@ namespace WareDev
 
                         cmd = new SqlCommand(sqlQuery, connection);
                         cmd.Parameters.Add("@imagen", byteArrayImagen);
-                        ///MemoryStream ms = new MemoryStream();
-                        //pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        ///cmd.Parameters["@imagen"].Value = ms.GetBuffer(); 
-
+                       
                         int N = cmd.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show(N.ToString() + "Se ha editado correctamente.");

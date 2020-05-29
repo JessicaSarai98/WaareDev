@@ -39,7 +39,7 @@ namespace WareDev
 
         private void Insumos_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //dateTimePicker1.Value = DateTime.Today;
         }
 
         private void btrRegreso_Click(object sender, EventArgs e)
@@ -102,17 +102,24 @@ namespace WareDev
         {
             if ((this.txtUniMedInsu.Text.Length >= 1) && (this.txtCanAdqInsumos.Text.Length >= 1) && (this.txtDesInsumo.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtCostoTotalInsumo.Text.Length >= 1))
             {
-                byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
-                connection.Open();
-                string sqlQuery = "update inputs set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',amountPurchased='" + txtCanAdqInsumos.Text + "',description='" + txtDesInsumo.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',total='" + txtCostoTotalInsumo.Text + "',photo=@imagen where Id='" + IDinputs.Text + "'";
+                if (this.FotoProduc.Image != null)
+                {
+                    byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
+                    connection.Open();
+                    string sqlQuery = "update inputs set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',amountPurchased='" + txtCanAdqInsumos.Text + "',description='" + txtDesInsumo.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',total='" + txtCostoTotalInsumo.Text + "',photo=@imagen where Id='" + IDinputs.Text + "'";
 
-                cmd = new SqlCommand(sqlQuery, connection);
-                cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
-                cmd.Parameters.Add("@imagen", byteArrayImagen);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show( "Se ha editado correctamente");
-                this.Close();
+                    cmd = new SqlCommand(sqlQuery, connection);
+                    cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
+                    cmd.Parameters.Add("@imagen", byteArrayImagen);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Se ha editado correctamente");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Agregue una imagen"); 
+                }
             }
             else
             {

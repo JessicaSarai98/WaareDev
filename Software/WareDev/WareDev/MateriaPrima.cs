@@ -62,7 +62,7 @@ namespace WareDev
 
         private void MateriaPrima_Load_1(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //dateTimePicker1.Value = DateTime.Today;
             
         }
 

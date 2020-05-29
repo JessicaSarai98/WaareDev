@@ -14,7 +14,7 @@ namespace WareDev
 {
     public partial class Menuclientescs : Form
     {
-        //CN_Clientes objetoCN = new CN_Clientes();
+        CN_Clientes objetoCN = new CN_Clientes();
         public string idCliente = null;
         
         //public bool Editar = false; 
@@ -29,9 +29,9 @@ namespace WareDev
 
         public void MostrarClientes()
         {
-            //CN_Clientes objeto = new CN_Clientes();
+            CN_Clientes objeto = new CN_Clientes();
             //dataGridView1.DataSource = objeto.MostrarCli();
-            //dataGridView1.DataSource = objeto.MostrarCli();
+            dataGridView1.DataSource = objeto.MostrarCli();
             
         }
 
@@ -170,7 +170,7 @@ namespace WareDev
             if(dataGridView1.SelectedRows.Count > 0)
             {
                 idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                //objetoCN.EliminarCli(idCliente);
+                objetoCN.EliminarCli(idCliente);
                 MessageBox.Show("Cliente eliminado correctamente.");
                 MostrarClientes();
             }

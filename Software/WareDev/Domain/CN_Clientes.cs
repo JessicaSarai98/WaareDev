@@ -12,38 +12,39 @@ namespace Domain
 {
     public class CN_Clientes
     {
-        //private CD_Clientes objetoCD = new CD_Clientes();
+        private CD_Clientes objetoCD = new CD_Clientes();
+        
         //----------MOSTRAR EN TABLA-----
         //Mostrar usuarios
-        //public DataTable MostrarUsu()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = objetoCD.MostrarU();
-        //    return tabla;
-        //}
-        ////Mostrar clientes
-        //public DataTable MostrarCli()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = objetoCD.Mostrar();
-        //    return tabla;
-        //}
+        public DataTable MostrarUsu()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarU();
+            return tabla;
+        }
+        //Mostrar clientes
+        public DataTable MostrarCli()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.Mostrar();
+            return tabla;
+        }
 
-        ////Mostrar proveedores
-        //public DataTable MostrarSup()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = objetoCD.MostrarS();
-        //    return tabla; 
-        //}
+        //Mostrar proveedores
+        public DataTable MostrarSup()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarS();
+            return tabla;
+        }
 
-        ////Mostrar raw
-        //public DataTable MostrarRaw()
-        //{
-        //    DataTable tabla = new DataTable();
-        //    tabla = objetoCD.MostrarR();
-        //    return tabla; 
-        //}
+        //Mostrar raw
+        public DataTable MostrarRaw()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarR();
+            return tabla;
+        }
 
         //mostrar inputs
         public DataTable MostrarInp()

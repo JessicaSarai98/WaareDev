@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Common.cache;
 using Domain;
-using Common.cache; 
+
 namespace WareDev
 {
     public partial class MenuInicio : Form

@@ -62,6 +62,10 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
+            this.SaveEdit = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.existencia = new System.Windows.Forms.TextBox();
+            this.exis = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.TablaProdTermi.SuspendLayout();
@@ -70,6 +74,10 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.exis);
+            this.contenedor.Controls.Add(this.existencia);
+            this.contenedor.Controls.Add(this.ID);
+            this.contenedor.Controls.Add(this.SaveEdit);
             this.contenedor.Controls.Add(this.FotoProduc);
             this.contenedor.Controls.Add(this.TablaProdTermi);
             this.contenedor.Controls.Add(this.btnGuardar);
@@ -505,6 +513,7 @@
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // top
             // 
@@ -545,6 +554,51 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
+            // SaveEdit
+            // 
+            this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.SaveEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveEdit.ForeColor = System.Drawing.Color.Black;
+            this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
+            this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveEdit.Location = new System.Drawing.Point(769, 90);
+            this.SaveEdit.Name = "SaveEdit";
+            this.SaveEdit.Size = new System.Drawing.Size(88, 57);
+            this.SaveEdit.TabIndex = 32;
+            this.SaveEdit.Text = "Save";
+            this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SaveEdit.UseVisualStyleBackColor = false;
+            this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
+            // 
+            // ID
+            // 
+            this.ID.Location = new System.Drawing.Point(379, 126);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(100, 20);
+            this.ID.TabIndex = 33;
+            this.ID.Visible = false;
+            // 
+            // existencia
+            // 
+            this.existencia.Location = new System.Drawing.Point(743, 434);
+            this.existencia.Name = "existencia";
+            this.existencia.Size = new System.Drawing.Size(100, 20);
+            this.existencia.TabIndex = 34;
+            this.existencia.TextChanged += new System.EventHandler(this.existencia_TextChanged);
+            // 
+            // exis
+            // 
+            this.exis.Location = new System.Drawing.Point(592, 434);
+            this.exis.Name = "exis";
+            this.exis.Size = new System.Drawing.Size(125, 23);
+            this.exis.TabIndex = 35;
+            this.exis.Text = "Ver existencia";
+            this.exis.UseVisualStyleBackColor = true;
+            this.exis.Click += new System.EventHandler(this.exis_Click);
+            // 
             // ProductoTerminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +610,7 @@
             this.Text = "ProductoTerminado";
             this.Load += new System.EventHandler(this.ProductoTerminado_Load);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.TablaProdTermi.ResumeLayout(false);
             this.TablaProdTermi.PerformLayout();
@@ -567,37 +622,41 @@
         #endregion
 
         private System.Windows.Forms.Panel contenedor;
-        private System.Windows.Forms.PictureBox FotoProduc;
         private System.Windows.Forms.TableLayoutPanel TablaProdTermi;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnFoto;
-        private System.Windows.Forms.TextBox txtPrecioInsumo;
-        private System.Windows.Forms.TextBox txtNombreInsumo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtCajasContenido;
-        private System.Windows.Forms.TextBox txtUniMedInsu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPallet;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel top;
         private System.Windows.Forms.Label txtVentas;
         private System.Windows.Forms.Button btrRegreso;
-        private System.Windows.Forms.TextBox txtNombreMateria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNameInputs;
-        private System.Windows.Forms.TextBox txtCantiMatPrima;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCantidadInsumo;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtCantiAdquirida;
+        public System.Windows.Forms.Button SaveEdit;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.PictureBox FotoProduc;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.TextBox txtPrecioInsumo;
+        public System.Windows.Forms.TextBox txtNombreInsumo;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtCajasContenido;
+        public System.Windows.Forms.TextBox txtUniMedInsu;
+        public System.Windows.Forms.TextBox txtPallet;
+        public System.Windows.Forms.TextBox txtNombreMateria;
+        public System.Windows.Forms.TextBox txtNameInputs;
+        public System.Windows.Forms.TextBox txtCantiMatPrima;
+        public System.Windows.Forms.TextBox txtCantidadInsumo;
+        public System.Windows.Forms.TextBox ID;
+        public System.Windows.Forms.TextBox existencia;
+        private System.Windows.Forms.Button exis;
     }
 }

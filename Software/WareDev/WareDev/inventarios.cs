@@ -16,7 +16,7 @@ namespace WareDev
 {
     public partial class inventarios : Form
     {
-        //CN_Clientes objetoCN = new CN_Clientes();
+        CN_Clientes objetoCN = new CN_Clientes();
         public string idRaw = null;
         public string idInput = null;
         public string idFinished = null;
@@ -29,6 +29,8 @@ namespace WareDev
         }
         public void MostrarRaw()
         {
+
+           
             CN_Clientes objeto = new CN_Clientes();
             dataGridView1.DataSource = objeto.MostrarRaw();
             this.dataGridView1.Columns[2].Visible = false;
@@ -60,16 +62,19 @@ namespace WareDev
 
         public void MostrarFinishedP()
         {
+            this.dataGridView3.Update();
+            this.dataGridView3.Refresh();
             CN_Clientes objeto = new CN_Clientes();
             dataGridView3.DataSource = objeto.MostrarFinished();
-            this.dataGridView3.Columns[2].Visible = false;
+            this.dataGridView3.Columns[1].Visible = false;
             this.dataGridView3.Columns[3].Visible = false;
             this.dataGridView3.Columns[4].Visible = false;
             this.dataGridView3.Columns[5].Visible = false;
-            this.dataGridView3.Columns[8].Visible = false;
-            this.dataGridView3.Columns[9].Visible = false;
+            this.dataGridView3.Columns[6].Visible = false;
             this.dataGridView3.Columns[10].Visible = false;
             this.dataGridView3.Columns[11].Visible = false;
+            this.dataGridView3.Columns[12].Visible = false;
+            this.dataGridView3.Columns[13].Visible = false; 
         }
 
         //principal
@@ -107,13 +112,7 @@ namespace WareDev
             this.dataGridView1.Visible = true;
             this.dataGridView2.Visible = false;
 
-            //MostrarInputs();
-            //DataTable dt = new DataTable();
-            //dataGridView2.Columns[0].HeaderText = "ID";
-            //dataGridView2.Columns[2].HeaderText = "Unit of Meausre";
-            //dataGridView2.Columns[3].HeaderText = "Available Quantity";
-            //dataGridView2.Columns[5].HeaderText = "Name";
-            //dataGridView2.Columns[6].HeaderText = "Price";
+         
 
         }
 
@@ -140,15 +139,11 @@ namespace WareDev
             MostrarFinishedP();
             DataTable dt = new DataTable();
             dataGridView3.Columns[0].HeaderText = "ID";
-            dataGridView3.Columns[1].HeaderText = "Unit of Measure";
-            dataGridView3.Columns[6].HeaderText = "Name";
-            dataGridView3.Columns[7].HeaderText = "Price";
-            //preguntar
-            //|
-            //|
-            //v
-            //dataGridView3.Columns[].HeaderText = "Available Quantity";
-
+            dataGridView3.Columns[2].HeaderText = "Unit of Measure";
+            dataGridView3.Columns[7].HeaderText = "Available Quantity";
+            dataGridView3.Columns[8].HeaderText = "Name";
+            dataGridView3.Columns[9].HeaderText = "Price";
+            
         }
         MateriaPrima materia;
         Agregar agregar;
@@ -230,6 +225,8 @@ namespace WareDev
                 producto = new ProductoTerminado();
                 producto.Owner = this;
                 producto.FormClosed += materia_FormClosed;
+                producto.SaveEdit.Visible = false;
+                producto.existencia.Visible = false;
                 producto.Show();
             }
             else producto.Activate();
@@ -271,6 +268,7 @@ namespace WareDev
                 mat.txtCantiAdquirida.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
                 mat.txtCanAduana.Text = dataGridView1.CurrentRow.Cells["customsAmount"].Value.ToString();
                 mat.txtPrecio.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();
+                
 
                 byte[] img = (byte[])dataGridView1.CurrentRow.Cells["photo"].Value;
                 MemoryStream ms = new MemoryStream(img);
@@ -308,12 +306,49 @@ namespace WareDev
                 ins.IDinputs.Visible = false;
                 ins.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
 
         }
         //editar prod terminado
         private void btnEditProdTer_Click(object sender, EventArgs e)
         {
+            ProductoTerminado prod = new ProductoTerminado();
+            prod.btnGuardar.Visible = false;
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                prod.ID.Text = dataGridView3.CurrentRow.Cells["Id"].Value.ToString();
+                prod.dateTimePicker1.Value=Convert.ToDateTime(dataGridView3.CurrentRow.Cells["date"].Value.ToString());
+                prod.txtUniMedInsu.Text= dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
+                prod.txtPallet.Text= dataGridView3.CurrentRow.Cells["pallet"].Value.ToString();
+                prod.txtCajasContenido.Text= dataGridView3.CurrentRow.Cells["boxes"].Value.ToString();
+                prod.txtNameInputs.Text= dataGridView3.CurrentRow.Cells["input"].Value.ToString();
+                prod.txtCantidadInsumo.Text= dataGridView3.CurrentRow.Cells["quantityUsedI"].Value.ToString();
+                prod.txtCantiAdquirida.Text= dataGridView3.CurrentRow.Cells["amountPurchased"].Value.ToString();
+                prod.txtNombreInsumo.Text= dataGridView3.CurrentRow.Cells["name"].Value.ToString();
+                prod.txtPrecioInsumo.Text= dataGridView3.CurrentRow.Cells["unitPrice"].Value.ToString();
+                prod.txtDescripcion.Text= dataGridView3.CurrentRow.Cells["description"].Value.ToString();
+                prod.txtNombreMateria.Text= dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString();
+                prod.txtCantiMatPrima.Text= dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();
 
+
+                prod.txtCantiAdquirida.Enabled = false;
+
+                byte[] img = (byte[])dataGridView3.CurrentRow.Cells["photo"].Value;
+                MemoryStream ms = new MemoryStream(img);
+                
+                prod.FotoProduc.Image = Image.FromStream(ms, true, true);
+                prod.ID.Visible = false;
+                prod.ShowDialog();
+                dataGridView3.Update();
+                dataGridView3.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
         }
 
         //eliminar materia prima
@@ -407,8 +442,23 @@ namespace WareDev
         //textbox prod terminado -buscar
         private void txtNomProdTerm_KeyUp(object sender, KeyEventArgs e)
         {
+            connection.Open();
+            string sqlQuery = "select * from FinishedProducts where name like('"+txtNomProdTerm.Text+"%')";
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.ExecuteNonQuery();
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView3.DataSource = dt;
+            connection.Close();
+        }
+
+        private void txtNomProdTerm_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
+       
     }
 }

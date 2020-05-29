@@ -14,7 +14,7 @@ namespace WareDev
 {
     public partial class UsersListcs : Form
     {
-        //CN_Clientes objectCN = new CN_Clientes();
+        CN_Clientes objectCN = new CN_Clientes();
         public string idUser = null;
 
         public UsersListcs()
@@ -51,8 +51,8 @@ namespace WareDev
         
         public void MostrarUsuarios()
         {
-            //CN_Clientes objeto = new CN_Clientes();
-            //dataGridView1.DataSource = objeto.MostrarUsu();
+            CN_Clientes objeto = new CN_Clientes();
+            dataGridView1.DataSource = objeto.MostrarUsu();
             this.dataGridView1.Columns[2].Visible = false;
             this.dataGridView1.Columns[6].Visible = false; 
         }
@@ -71,7 +71,7 @@ namespace WareDev
             {
                 idUser = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                 Name = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
-                //objectCN.EliminarUsu(idUser);
+                objectCN.EliminarUsu(idUser);
                 MessageBox.Show("Usuario " + Name + " eliminado");
                 MostrarUsuarios();
 

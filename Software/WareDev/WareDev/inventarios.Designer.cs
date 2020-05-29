@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inventarios));
             this.contenedor = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
@@ -44,13 +45,13 @@
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUnidadB = new System.Windows.Forms.TextBox();
             this.txtNombreB = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnAgregarIns = new System.Windows.Forms.Button();
             this.btnAgreInsum = new System.Windows.Forms.Button();
             this.btnBorrarInsu = new System.Windows.Forms.Button();
@@ -64,8 +65,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNameInsumo = new System.Windows.Forms.TextBox();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.btnAddProductos = new System.Windows.Forms.Button();
             this.btnAddCantiProducto = new System.Windows.Forms.Button();
             this.btnElimProdTerm = new System.Windows.Forms.Button();
@@ -76,7 +77,6 @@
             this.UnidadProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantDisponibleProduTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBusProdTermi = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNomProdTerm = new System.Windows.Forms.TextBox();
@@ -87,8 +87,7 @@
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.btnPTerminado = new System.Windows.Forms.RadioButton();
             this.btnMPrima = new System.Windows.Forms.RadioButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contenedor.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabPage1.SuspendLayout();
@@ -96,15 +95,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.TablaMatPrima)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaInsumo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -141,7 +140,6 @@
             this.TabPage1.Controls.Add(this.BtnEliminar);
             this.TabPage1.Controls.Add(this.btnEditar);
             this.TabPage1.Controls.Add(this.TablaMatPrima);
-            this.TabPage1.Controls.Add(this.btnBuscar);
             this.TabPage1.Controls.Add(this.tableLayoutPanel1);
             this.TabPage1.Location = new System.Drawing.Point(4, 29);
             this.TabPage1.Name = "TabPage1";
@@ -315,24 +313,6 @@
             this.importe.MinimumWidth = 6;
             this.importe.Name = "importe";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(752, 63);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscar.TabIndex = 31;
-            this.btnBuscar.Text = "Find";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -411,13 +391,22 @@
             this.tabPage2.Controls.Add(this.btnEditInsu);
             this.tabPage2.Controls.Add(this.tablaInsumo);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Controls.Add(this.btnBuscarInsumo);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1010, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Supplies";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(20, 143);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(797, 292);
+            this.dataGridView2.TabIndex = 44;
             // 
             // btnAgregarIns
             // 
@@ -605,23 +594,6 @@
             this.txtNameInsumo.TabIndex = 21;
             this.txtNameInsumo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameInsumo_KeyUp);
             // 
-            // btnBuscarInsumo
-            // 
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarInsumo.Image")));
-            this.btnBuscarInsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(522, 78);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscarInsumo.TabIndex = 38;
-            this.btnBuscarInsumo.Text = "Find";
-            this.btnBuscarInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Khaki;
@@ -631,13 +603,22 @@
             this.tabPage3.Controls.Add(this.btnElimProdTerm);
             this.tabPage3.Controls.Add(this.btnEditProdTer);
             this.tabPage3.Controls.Add(this.TablaProducTermi);
-            this.tabPage3.Controls.Add(this.btnBusProdTermi);
             this.tabPage3.Controls.Add(this.tableLayoutPanel3);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1010, 443);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finished products";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(34, 143);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(797, 195);
+            this.dataGridView3.TabIndex = 51;
             // 
             // btnAddProductos
             // 
@@ -784,23 +765,6 @@
             this.CantDisponibleProduTermi.MinimumWidth = 6;
             this.CantDisponibleProduTermi.Name = "CantDisponibleProduTermi";
             // 
-            // btnBusProdTermi
-            // 
-            this.btnBusProdTermi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBusProdTermi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBusProdTermi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusProdTermi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusProdTermi.ForeColor = System.Drawing.Color.Black;
-            this.btnBusProdTermi.Image = ((System.Drawing.Image)(resources.GetObject("btnBusProdTermi.Image")));
-            this.btnBusProdTermi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusProdTermi.Location = new System.Drawing.Point(536, 78);
-            this.btnBusProdTermi.Name = "btnBusProdTermi";
-            this.btnBusProdTermi.Size = new System.Drawing.Size(79, 47);
-            this.btnBusProdTermi.TabIndex = 45;
-            this.btnBusProdTermi.Text = "Find";
-            this.btnBusProdTermi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBusProdTermi.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -840,6 +804,7 @@
             this.txtNomProdTerm.Name = "txtNomProdTerm";
             this.txtNomProdTerm.Size = new System.Drawing.Size(205, 33);
             this.txtNomProdTerm.TabIndex = 21;
+            this.txtNomProdTerm.TextChanged += new System.EventHandler(this.txtNomProdTerm_TextChanged);
             this.txtNomProdTerm.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNomProdTerm_KeyUp);
             // 
             // tabPage4
@@ -941,26 +906,6 @@
             this.btnMPrima.UseVisualStyleBackColor = true;
             this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 143);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(797, 292);
-            this.dataGridView2.TabIndex = 44;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(34, 186);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(797, 152);
-            this.dataGridView3.TabIndex = 51;
-            // 
             // inventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,18 +924,18 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaInsumo)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1013,7 +958,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUnidadB;
         private System.Windows.Forms.TextBox txtNombreB;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -1030,7 +974,6 @@
         private System.Windows.Forms.Button btnBorrarInsu;
         private System.Windows.Forms.Button btnEditInsu;
         private System.Windows.Forms.DataGridView tablaInsumo;
-        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNameInsumo;
@@ -1039,10 +982,8 @@
         private System.Windows.Forms.Button btnElimProdTerm;
         private System.Windows.Forms.Button btnEditProdTer;
         private System.Windows.Forms.DataGridView TablaProducTermi;
-        private System.Windows.Forms.Button btnBusProdTermi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNomProdTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProdTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameProduTer;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadProdTermi;
@@ -1056,6 +997,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.DataGridView TablaMatPrima;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        public System.Windows.Forms.TextBox txtNomProdTerm;
+        public System.Windows.Forms.DataGridView dataGridView3;
+        public System.Windows.Forms.Timer timer1;
     }
 }

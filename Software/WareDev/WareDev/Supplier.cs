@@ -187,8 +187,8 @@ namespace WareDev
             MenuProve menu = new MenuProve();
             try
             {
-                //objetoCN.InsertarSupp(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
-                    //citytxt.Text, divisa.Text);
+                objetoCN.InsertarSupp(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
+                    citytxt.Text, divisa.Text);
                 MessageBox.Show("Se ha insertado correctamente.");
                 this.Close(); 
 
@@ -202,8 +202,8 @@ namespace WareDev
         {
             try
             {
-                //objetoCN.EditarSup(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
-                   // citytxt.Text, divisa.Text, IDtxtbox.Text);
+                objetoCN.EditarSup(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
+                    citytxt.Text, divisa.Text, IDtxtbox.Text);
                 MessageBox.Show("Se ha editado correctamente.");
                 this.Close();
             }catch(Exception ex)
