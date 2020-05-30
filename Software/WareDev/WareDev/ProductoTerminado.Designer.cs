@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoTerminado));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.exis = new System.Windows.Forms.Button();
+            this.existencia = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.SaveEdit = new System.Windows.Forms.Button();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.TablaProdTermi = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,10 +66,8 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.SaveEdit = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.TextBox();
-            this.existencia = new System.Windows.Forms.TextBox();
-            this.exis = new System.Windows.Forms.Button();
+            this.existenciaI = new System.Windows.Forms.Button();
+            this.exisI = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.TablaProdTermi.SuspendLayout();
@@ -74,6 +76,8 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.exisI);
+            this.contenedor.Controls.Add(this.existenciaI);
             this.contenedor.Controls.Add(this.exis);
             this.contenedor.Controls.Add(this.existencia);
             this.contenedor.Controls.Add(this.ID);
@@ -88,6 +92,51 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1100, 500);
             this.contenedor.TabIndex = 0;
+            // 
+            // exis
+            // 
+            this.exis.Location = new System.Drawing.Point(592, 434);
+            this.exis.Name = "exis";
+            this.exis.Size = new System.Drawing.Size(125, 23);
+            this.exis.TabIndex = 35;
+            this.exis.Text = "Ver existencia - Raw";
+            this.exis.UseVisualStyleBackColor = true;
+            this.exis.Click += new System.EventHandler(this.exis_Click);
+            // 
+            // existencia
+            // 
+            this.existencia.Location = new System.Drawing.Point(743, 434);
+            this.existencia.Name = "existencia";
+            this.existencia.Size = new System.Drawing.Size(100, 20);
+            this.existencia.TabIndex = 34;
+            this.existencia.TextChanged += new System.EventHandler(this.existencia_TextChanged);
+            // 
+            // ID
+            // 
+            this.ID.Location = new System.Drawing.Point(379, 126);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(100, 20);
+            this.ID.TabIndex = 33;
+            this.ID.Visible = false;
+            // 
+            // SaveEdit
+            // 
+            this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.SaveEdit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SaveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveEdit.ForeColor = System.Drawing.Color.Black;
+            this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
+            this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SaveEdit.Location = new System.Drawing.Point(769, 90);
+            this.SaveEdit.Name = "SaveEdit";
+            this.SaveEdit.Size = new System.Drawing.Size(88, 57);
+            this.SaveEdit.TabIndex = 32;
+            this.SaveEdit.Text = "Save";
+            this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SaveEdit.UseVisualStyleBackColor = false;
+            this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
             // 
             // FotoProduc
             // 
@@ -554,50 +603,22 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // SaveEdit
+            // existenciaI
             // 
-            this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.SaveEdit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SaveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveEdit.ForeColor = System.Drawing.Color.Black;
-            this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
-            this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveEdit.Location = new System.Drawing.Point(769, 90);
-            this.SaveEdit.Name = "SaveEdit";
-            this.SaveEdit.Size = new System.Drawing.Size(88, 57);
-            this.SaveEdit.TabIndex = 32;
-            this.SaveEdit.Text = "Save";
-            this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.SaveEdit.UseVisualStyleBackColor = false;
-            this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
+            this.existenciaI.Location = new System.Drawing.Point(189, 431);
+            this.existenciaI.Name = "existenciaI";
+            this.existenciaI.Size = new System.Drawing.Size(125, 23);
+            this.existenciaI.TabIndex = 36;
+            this.existenciaI.Text = "Ver existencia - Input";
+            this.existenciaI.UseVisualStyleBackColor = true;
+            this.existenciaI.Click += new System.EventHandler(this.existenciaI_Click);
             // 
-            // ID
+            // exisI
             // 
-            this.ID.Location = new System.Drawing.Point(379, 126);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(100, 20);
-            this.ID.TabIndex = 33;
-            this.ID.Visible = false;
-            // 
-            // existencia
-            // 
-            this.existencia.Location = new System.Drawing.Point(743, 434);
-            this.existencia.Name = "existencia";
-            this.existencia.Size = new System.Drawing.Size(100, 20);
-            this.existencia.TabIndex = 34;
-            this.existencia.TextChanged += new System.EventHandler(this.existencia_TextChanged);
-            // 
-            // exis
-            // 
-            this.exis.Location = new System.Drawing.Point(592, 434);
-            this.exis.Name = "exis";
-            this.exis.Size = new System.Drawing.Size(125, 23);
-            this.exis.TabIndex = 35;
-            this.exis.Text = "Ver existencia";
-            this.exis.UseVisualStyleBackColor = true;
-            this.exis.Click += new System.EventHandler(this.exis_Click);
+            this.exisI.Location = new System.Drawing.Point(367, 431);
+            this.exisI.Name = "exisI";
+            this.exisI.Size = new System.Drawing.Size(100, 20);
+            this.exisI.TabIndex = 37;
             // 
             // ProductoTerminado
             // 
@@ -657,6 +678,8 @@
         public System.Windows.Forms.TextBox txtCantidadInsumo;
         public System.Windows.Forms.TextBox ID;
         public System.Windows.Forms.TextBox existencia;
-        private System.Windows.Forms.Button exis;
+        public System.Windows.Forms.Button exis;
+        public System.Windows.Forms.TextBox exisI;
+        public System.Windows.Forms.Button existenciaI;
     }
 }

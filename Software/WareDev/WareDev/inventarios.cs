@@ -226,7 +226,7 @@ namespace WareDev
                 producto.Owner = this;
                 producto.FormClosed += materia_FormClosed;
                 producto.SaveEdit.Visible = false;
-                producto.existencia.Visible = false;
+                //producto.existencia.Visible = false;
                 producto.Show();
             }
             else producto.Activate();
@@ -249,6 +249,8 @@ namespace WareDev
         {
             MateriaPrima mat = new MateriaPrima();
             mat.btnGuardar.Visible = false;
+            mat.txtCantiAdquirida.Enabled = false;
+            
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -287,6 +289,7 @@ namespace WareDev
         {
             Insumos ins = new Insumos();
             ins.btnGuardar.Visible = false;
+            ins.txtCanAdqInsumos.Enabled = false; 
             if (dataGridView2.SelectedRows.Count > 0)
             {
                 ins.IDinputs.Text = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
@@ -317,6 +320,13 @@ namespace WareDev
         {
             ProductoTerminado prod = new ProductoTerminado();
             prod.btnGuardar.Visible = false;
+            prod.txtCantidadInsumo.Enabled = false;
+            prod.txtCantiMatPrima.Enabled = false;
+            prod.txtNameInputs.Enabled = false;
+            prod.txtNombreMateria.Enabled = false;
+            prod.existencia.Visible = false;
+            prod.exis.Visible = false;
+            
             if (dataGridView3.SelectedRows.Count > 0)
             {
                 prod.ID.Text = dataGridView3.CurrentRow.Cells["Id"].Value.ToString();

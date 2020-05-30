@@ -58,10 +58,10 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtIva = new System.Windows.Forms.TextBox();
             this.btnFoto = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.txtIva = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
@@ -493,32 +493,6 @@
             this.label7.Text = "Percentage o amount added";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(735, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 18);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "IVA";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtIva
-            // 
-            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIva.BackColor = System.Drawing.Color.White;
-            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(838, 3);
-            this.txtIva.Multiline = true;
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(165, 38);
-            this.txtIva.TabIndex = 14;
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnFoto
             // 
             this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -550,6 +524,32 @@
             this.label14.TabIndex = 43;
             this.label14.Text = "Photo";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtIva
+            // 
+            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIva.BackColor = System.Drawing.Color.White;
+            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtIva.Location = new System.Drawing.Point(838, 3);
+            this.txtIva.Multiline = true;
+            this.txtIva.Name = "txtIva";
+            this.txtIva.Size = new System.Drawing.Size(165, 38);
+            this.txtIva.TabIndex = 14;
+            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(735, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 18);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "IVA";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnGuardar
             // 
