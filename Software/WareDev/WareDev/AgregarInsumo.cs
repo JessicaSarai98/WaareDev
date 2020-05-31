@@ -8,11 +8,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace WareDev
 {
     public partial class Agregar : Form
     {
+
+        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        SqlCommand cmd;
         public Agregar()
         {
             InitializeComponent();
@@ -36,6 +39,43 @@ namespace WareDev
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void addR_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string sqlQuery = "update rawMaterials set amountPurchased = amountPurchased + @cant where name = '"+textBox1.Text+"'";
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Se ha agregado la cantidad a "+textBox1.Text);
+            this.Close();
+        }
+
+        private void addI_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string sqlQuery = "update inputs set amountPurchased = amountPurchased + @cant where name = '" + textBox1.Text + "'";
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+            this.Close();
+            
+        }
+
+        private void addF_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string sqlQuery = "update FinishedProducts set amountPurchased = amountPurchased + @cant where name = '" + textBox1.Text + "'";
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+            this.Close();
         }
     }
 }

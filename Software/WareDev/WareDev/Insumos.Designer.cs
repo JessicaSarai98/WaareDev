@@ -215,7 +215,6 @@
             this.txtPrecioInsumo.Size = new System.Drawing.Size(247, 34);
             this.txtPrecioInsumo.TabIndex = 6;
             this.txtPrecioInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPrecioInsumo.Enter += new System.EventHandler(this.txtPrecioInsumo_Enter);
             // 
             // txtNombreInsumo
             // 

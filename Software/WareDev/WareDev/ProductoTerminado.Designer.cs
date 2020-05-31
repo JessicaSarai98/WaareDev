@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoTerminado));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.exisI = new System.Windows.Forms.TextBox();
+            this.existenciaI = new System.Windows.Forms.Button();
             this.exis = new System.Windows.Forms.Button();
             this.existencia = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
@@ -38,7 +41,6 @@
             this.TablaProdTermi = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNombreMateria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPrecioInsumo = new System.Windows.Forms.TextBox();
             this.btnFoto = new System.Windows.Forms.Button();
@@ -52,7 +54,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCajasContenido = new System.Windows.Forms.TextBox();
-            this.txtNameInputs = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,8 +67,7 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.existenciaI = new System.Windows.Forms.Button();
-            this.exisI = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.TablaProdTermi.SuspendLayout();
@@ -92,6 +92,31 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1100, 500);
             this.contenedor.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(711, 108);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 28);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // exisI
+            // 
+            this.exisI.Location = new System.Drawing.Point(367, 431);
+            this.exisI.Name = "exisI";
+            this.exisI.Size = new System.Drawing.Size(100, 20);
+            this.exisI.TabIndex = 37;
+            // 
+            // existenciaI
+            // 
+            this.existenciaI.Location = new System.Drawing.Point(189, 431);
+            this.existenciaI.Name = "existenciaI";
+            this.existenciaI.Size = new System.Drawing.Size(125, 23);
+            this.existenciaI.TabIndex = 36;
+            this.existenciaI.Text = "Ver existencia - Input";
+            this.existenciaI.UseVisualStyleBackColor = true;
+            this.existenciaI.Click += new System.EventHandler(this.existenciaI_Click);
             // 
             // exis
             // 
@@ -163,9 +188,10 @@
             this.TablaProdTermi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.TablaProdTermi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TablaProdTermi.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TablaProdTermi.Controls.Add(this.comboBox2, 1, 4);
+            this.TablaProdTermi.Controls.Add(this.comboBox1, 3, 3);
             this.TablaProdTermi.Controls.Add(this.label9, 0, 5);
             this.TablaProdTermi.Controls.Add(this.label8, 2, 4);
-            this.TablaProdTermi.Controls.Add(this.txtNombreMateria, 3, 3);
             this.TablaProdTermi.Controls.Add(this.label1, 2, 3);
             this.TablaProdTermi.Controls.Add(this.txtPrecioInsumo, 3, 1);
             this.TablaProdTermi.Controls.Add(this.btnFoto, 2, 6);
@@ -179,7 +205,6 @@
             this.TablaProdTermi.Controls.Add(this.label10, 0, 1);
             this.TablaProdTermi.Controls.Add(this.label11, 0, 3);
             this.TablaProdTermi.Controls.Add(this.txtCajasContenido, 1, 3);
-            this.TablaProdTermi.Controls.Add(this.txtNameInputs, 1, 4);
             this.TablaProdTermi.Controls.Add(this.label7, 2, 2);
             this.TablaProdTermi.Controls.Add(this.txtDescripcion, 3, 2);
             this.TablaProdTermi.Controls.Add(this.label4, 0, 2);
@@ -226,20 +251,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Quantity used (RM)";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNombreMateria
-            // 
-            this.txtNombreMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreMateria.BackColor = System.Drawing.Color.White;
-            this.txtNombreMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNombreMateria.Location = new System.Drawing.Point(711, 108);
-            this.txtNombreMateria.Multiline = true;
-            this.txtNombreMateria.Name = "txtNombreMateria";
-            this.txtNombreMateria.Size = new System.Drawing.Size(231, 29);
-            this.txtNombreMateria.TabIndex = 9;
-            this.txtNombreMateria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -412,20 +423,6 @@
             this.txtCajasContenido.Size = new System.Drawing.Size(231, 29);
             this.txtCajasContenido.TabIndex = 8;
             this.txtCajasContenido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtNameInputs
-            // 
-            this.txtNameInputs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameInputs.BackColor = System.Drawing.Color.White;
-            this.txtNameInputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNameInputs.Location = new System.Drawing.Point(239, 143);
-            this.txtNameInputs.Multiline = true;
-            this.txtNameInputs.Name = "txtNameInputs";
-            this.txtNameInputs.Size = new System.Drawing.Size(231, 29);
-            this.txtNameInputs.TabIndex = 10;
-            this.txtNameInputs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -603,22 +600,13 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // existenciaI
+            // comboBox2
             // 
-            this.existenciaI.Location = new System.Drawing.Point(189, 431);
-            this.existenciaI.Name = "existenciaI";
-            this.existenciaI.Size = new System.Drawing.Size(125, 23);
-            this.existenciaI.TabIndex = 36;
-            this.existenciaI.Text = "Ver existencia - Input";
-            this.existenciaI.UseVisualStyleBackColor = true;
-            this.existenciaI.Click += new System.EventHandler(this.existenciaI_Click);
-            // 
-            // exisI
-            // 
-            this.exisI.Location = new System.Drawing.Point(367, 431);
-            this.exisI.Name = "exisI";
-            this.exisI.Size = new System.Drawing.Size(100, 20);
-            this.exisI.TabIndex = 37;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(239, 143);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(231, 28);
+            this.comboBox2.TabIndex = 38;
             // 
             // ProductoTerminado
             // 
@@ -672,8 +660,6 @@
         public System.Windows.Forms.TextBox txtCajasContenido;
         public System.Windows.Forms.TextBox txtUniMedInsu;
         public System.Windows.Forms.TextBox txtPallet;
-        public System.Windows.Forms.TextBox txtNombreMateria;
-        public System.Windows.Forms.TextBox txtNameInputs;
         public System.Windows.Forms.TextBox txtCantiMatPrima;
         public System.Windows.Forms.TextBox txtCantidadInsumo;
         public System.Windows.Forms.TextBox ID;
@@ -681,5 +667,7 @@
         public System.Windows.Forms.Button exis;
         public System.Windows.Forms.TextBox exisI;
         public System.Windows.Forms.Button existenciaI;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
     }
 }

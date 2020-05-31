@@ -275,5 +275,20 @@ namespace WareDev
                 MessageBox.Show("No se pudo editar los datos por: " + ex);
             }
         }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
+                CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
+                MessageBox.Show("Se ha agregado correctamente.");
+                this.Close();
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo agregar los datos por: "+ex);
+            }
+        }
     }
 }

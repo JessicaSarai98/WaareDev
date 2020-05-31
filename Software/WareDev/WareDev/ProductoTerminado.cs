@@ -52,30 +52,34 @@ namespace WareDev
         private void ProductoTerminado_Load(object sender, EventArgs e)
         {
             //dateTimePicker1.Value = DateTime.Today;
+
+            SqlCommand cm = new SqlCommand("select name from rawMaterials", connection);
+            connection.Open();
+            SqlDataReader registro = cm.ExecuteReader();
+            while (registro.Read())
+            {
+                comboBox1.Items.Add(registro["name"].ToString());
+            }
+            connection.Close();
+
+            SqlCommand c = new SqlCommand("select name from inputs",connection);
+            connection.Open();
+            SqlDataReader regi = c.ExecuteReader();
+            while (regi.Read())
+            {
+                comboBox2.Items.Add(regi["name"].ToString());
+            }
+            connection.Close();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            SqlCommand com = new SqlCommand("Select * from rawMaterials where name=@name", connection);
-            com.Parameters.AddWithValue("@name", txtNombreMateria.Text);
-            connection.Open();
-            
-            SqlDataReader reg = com.ExecuteReader();
-            //if (reg.Read())
-            //{
-            //    existencia.Text = reg["amountPurchased"].ToString();
-            //}
-            
-
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.txtNameInputs.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.txtNombreMateria.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
+            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
             {
                 if (this.FotoProduc.Image != null)
                 {
 
-                    if (reg.Read())
-                    {
-
-                        connection.Close();
+                        
                         byte[] images = null;
                         FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                         BinaryReader brs = new BinaryReader(Streem);
@@ -88,9 +92,9 @@ namespace WareDev
 
 
                         connection.Open();
-                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo) values(@fecha,'" + txtUniMedInsu.Text + "','" + txtPallet.Text + "','" + txtCajasContenido.Text + "','" + txtNameInputs.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','" + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + txtNombreMateria.Text + "','" + txtCantiMatPrima.Text + "',@images)";
-                        string sqlQuery2 = "update rawMaterials set amountPurchased= amountPurchased - @cant where name='" + txtNombreMateria.Text + "'";
-                        string sqlQuery3 = "update inputs set amountPurchased= amountPurchased - @canti where name= '" + txtNameInputs.Text + "'";
+                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo) values(@fecha,'" + txtUniMedInsu.Text + "','" + txtPallet.Text + "','" + txtCajasContenido.Text + "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','" + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images)";
+                        string sqlQuery2 = "update rawMaterials set amountPurchased= amountPurchased - @cant where name='" + comboBox1.Text + "'";
+                        string sqlQuery3 = "update inputs set amountPurchased= amountPurchased - @canti where name= '" + comboBox2.Text + "'";
 
                         cmd = new SqlCommand(sqlQuery, connection);
                         cmd2 = new SqlCommand(sqlQuery2, connection);
@@ -107,11 +111,6 @@ namespace WareDev
                         connection.Close();
                         MessageBox.Show("Se ha agregado la materia prima");
                         this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encuentra en la base el raw");
-                    }
                     
                     
                 }
@@ -130,7 +129,7 @@ namespace WareDev
 
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.txtNameInputs.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.txtNombreMateria.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
+            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
             {
 
                 byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
@@ -141,7 +140,7 @@ namespace WareDev
                 //n2 = Convert.ToInt32(existencia.Text);
                 //r = n2 - n1;
 
-                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',pallet='" + txtPallet.Text + "',boxes='" + txtCajasContenido.Text + "',input='" + txtNameInputs.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',description='" + txtDescripcion.Text + "',rawMaterial='" + txtNombreMateria.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "',photo=@imagen where Id='" + ID.Text + "'";
+                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',pallet='" + txtPallet.Text + "',boxes='" + txtCajasContenido.Text + "',input='" + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "',photo=@imagen where Id='" + ID.Text + "'";
                // string sqlQuery2 = "update rawMaterials set amountPurchased='"+r+ "' where Id='"+txtNombreMateria.Text+"'";
                 cmd = new SqlCommand(sqlQuery, connection);
                 //cmd2 = new SqlCommand(sqlQuery2, connection);
@@ -173,7 +172,7 @@ namespace WareDev
         private void exis_Click(object sender, EventArgs e)
         {
             SqlCommand com = new SqlCommand("Select * from rawMaterials where name=@name",connection);
-            com.Parameters.AddWithValue("@name",txtNombreMateria.Text);
+            com.Parameters.AddWithValue("@name",comboBox1.Text);
             connection.Open();
             SqlDataReader reg = com.ExecuteReader();
             if (reg.Read())
@@ -188,7 +187,7 @@ namespace WareDev
         private void existenciaI_Click(object sender, EventArgs e)
         {
             SqlCommand com = new SqlCommand("Select * from inputs where name=@name", connection);
-            com.Parameters.AddWithValue("@name", txtNameInputs.Text);
+            com.Parameters.AddWithValue("@name", comboBox2.Text);
             connection.Open();
             SqlDataReader reg = com.ExecuteReader();
             if (reg.Read())

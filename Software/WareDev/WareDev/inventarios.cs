@@ -158,11 +158,29 @@ namespace WareDev
             }
             else materia.Activate();
         }
+
+        //agregar cantidad - raw
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            Abrir_Agregar();
-            agregar.titulo.Text = "Add quantity of raw material: PONER AQUÍ EL NOMBRE DEL PRODUCTO QUE HAYA SELECCIADO " +
-                "EN LA TABLA";
+            //Abrir_Agregar();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+               
+                Abrir_Agregar();
+
+                agregar.titulo.Text = "Add quantity of Raw Materials: "+dataGridView1.CurrentRow.Cells["name"].Value.ToString();
+                agregar.textBox1.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
+                agregar.addI.Visible = false;
+                agregar.addF.Visible = false;
+                //"Add quantity of raw material: PONER AQUÍ EL NOMBRE DEL PRODUCTO QUE HAYA SELECCIADO " +
+                    //"EN LA TABLA";
+
+            }
+            else
+                MessageBox.Show("Seleccione una fila por favor");
+           
+
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -202,19 +220,40 @@ namespace WareDev
             else insumos.Activate();
         }
 
+
+        //agregar cantidad - inputs
         private void btnAgreInsum_Click(object sender, EventArgs e)
         {
-            Abrir_Agregar();
-            agregar.titulo.Text = "Add quantity of Inputs: PONER AQUÍ EL NOMBRE DEL PRODUCTO QUE HAYA SELECCIADO " +
-                "EN LA TABLA";
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                Abrir_Agregar();
+                agregar.titulo.Text = "Add quantity of Inputs: " + dataGridView2.CurrentRow.Cells["name"].Value.ToString();
+                agregar.textBox1.Text = dataGridView2.CurrentRow.Cells["name"].Value.ToString();
+                agregar.addR.Visible = false;
+                agregar.addF.Visible = false;
+
+            }
+            else
+                MessageBox.Show("Seleccione una fila por favor");
         }
 
+        //Agregar cantidad - Finished products
         private void btnAddCantiProducto_Click(object sender, EventArgs e)
         {
-            Abrir_Agregar();
-            agregar.titulo.Text = "Add quantity of Finished products: PONER AQUÍ EL NOMBRE DEL PRODUCTO QUE HAYA SELECCIADO " +
-                "EN LA TABLA";
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                Abrir_Agregar();
+                agregar.titulo.Text = "Add quantity of Finished products: " + dataGridView3.CurrentRow.Cells["name"].Value.ToString();
+                agregar.textBox1.Text = dataGridView3.CurrentRow.Cells["name"].Value.ToString();
+                agregar.addI.Visible = false;
+                agregar.addR.Visible = false;
+            }
+            else
+                MessageBox.Show("Selecciona una fila por favor");
+
         }
+
+       
 
         //agregar producto terminado
         ProductoTerminado producto;
@@ -322,10 +361,12 @@ namespace WareDev
             prod.btnGuardar.Visible = false;
             prod.txtCantidadInsumo.Enabled = false;
             prod.txtCantiMatPrima.Enabled = false;
-            prod.txtNameInputs.Enabled = false;
-            prod.txtNombreMateria.Enabled = false;
+            prod.comboBox1.Enabled = false;
+            prod.comboBox2.Enabled = false;
             prod.existencia.Visible = false;
             prod.exis.Visible = false;
+            prod.exisI.Visible = false;
+            prod.existenciaI.Visible = false;
             
             if (dataGridView3.SelectedRows.Count > 0)
             {
@@ -334,13 +375,13 @@ namespace WareDev
                 prod.txtUniMedInsu.Text= dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
                 prod.txtPallet.Text= dataGridView3.CurrentRow.Cells["pallet"].Value.ToString();
                 prod.txtCajasContenido.Text= dataGridView3.CurrentRow.Cells["boxes"].Value.ToString();
-                prod.txtNameInputs.Text= dataGridView3.CurrentRow.Cells["input"].Value.ToString();
+                prod.comboBox2.Text= dataGridView3.CurrentRow.Cells["input"].Value.ToString();
                 prod.txtCantidadInsumo.Text= dataGridView3.CurrentRow.Cells["quantityUsedI"].Value.ToString();
                 prod.txtCantiAdquirida.Text= dataGridView3.CurrentRow.Cells["amountPurchased"].Value.ToString();
                 prod.txtNombreInsumo.Text= dataGridView3.CurrentRow.Cells["name"].Value.ToString();
                 prod.txtPrecioInsumo.Text= dataGridView3.CurrentRow.Cells["unitPrice"].Value.ToString();
                 prod.txtDescripcion.Text= dataGridView3.CurrentRow.Cells["description"].Value.ToString();
-                prod.txtNombreMateria.Text= dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString();
+                prod.comboBox1.Text= dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString();
                 prod.txtCantiMatPrima.Text= dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();
 
 
@@ -385,13 +426,22 @@ namespace WareDev
                 objetoCN.EliminarInp(idInput);
                 MessageBox.Show("Insumo eliminado");
                 MostrarInputs();
-            }
+            }else 
+            MessageBox.Show("Seleccione una fila");
         }
 
         //eliminar prod terminado
         private void btnElimProdTerm_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView3.SelectedRows.Count > 0)
+            {
+                idFinished = dataGridView3.CurrentRow.Cells["Id"].Value.ToString();
+                objetoCN.EliminarF(idFinished);
+                MessageBox.Show("Producto eliminado");
+                MostrarFinishedP();
+            }
+            else
+                MessageBox.Show("Seleccione una fila");
         }
 
         //se va a eliminar el boton de buscar

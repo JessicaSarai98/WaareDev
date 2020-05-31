@@ -215,5 +215,15 @@ namespace DataAccess
             comando.ExecuteNonQuery(); 
 
         }
+
+        //eliminar finishedProducts 
+
+    public void EliminarFini(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText ="delete from FinishedProducts where Id="+id+"";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
     }
 }

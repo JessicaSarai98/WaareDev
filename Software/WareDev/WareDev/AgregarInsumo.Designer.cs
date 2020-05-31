@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.contenedor = new System.Windows.Forms.Panel();
-            this.btrRegreso = new System.Windows.Forms.Button();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.titulo = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btrRegreso = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addR = new System.Windows.Forms.Button();
+            this.addI = new System.Windows.Forms.Button();
+            this.addF = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +46,10 @@
             // contenedor
             // 
             this.contenedor.BackColor = System.Drawing.SystemColors.Control;
+            this.contenedor.Controls.Add(this.addF);
+            this.contenedor.Controls.Add(this.addI);
+            this.contenedor.Controls.Add(this.addR);
+            this.contenedor.Controls.Add(this.textBox1);
             this.contenedor.Controls.Add(this.txtCantidad);
             this.contenedor.Controls.Add(this.titulo);
             this.contenedor.Controls.Add(this.panel1);
@@ -50,24 +58,32 @@
             this.contenedor.Size = new System.Drawing.Size(342, 236);
             this.contenedor.TabIndex = 0;
             // 
-            // btrRegreso
+            // txtCantidad
             // 
-            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
-            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
-            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
-            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btrRegreso.Location = new System.Drawing.Point(235, 3);
-            this.btrRegreso.Name = "btrRegreso";
-            this.btrRegreso.Size = new System.Drawing.Size(104, 65);
-            this.btrRegreso.TabIndex = 14;
-            this.btrRegreso.Text = "Return";
-            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btrRegreso.UseVisualStyleBackColor = false;
-            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
+            this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtCantidad.Location = new System.Drawing.Point(51, 152);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(245, 34);
+            this.txtCantidad.TabIndex = 46;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress_1);
+            // 
+            // titulo
+            // 
+            this.titulo.BackColor = System.Drawing.SystemColors.Control;
+            this.titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.titulo.Location = new System.Drawing.Point(0, 80);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(342, 40);
+            this.titulo.TabIndex = 1;
+            this.titulo.Text = "titulo";
+            this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -89,32 +105,62 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Add Product";
             // 
-            // titulo
+            // btrRegreso
             // 
-            this.titulo.BackColor = System.Drawing.SystemColors.Control;
-            this.titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.titulo.Location = new System.Drawing.Point(0, 80);
-            this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(342, 40);
-            this.titulo.TabIndex = 1;
-            this.titulo.Text = "titulo";
-            this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
+            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
+            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
+            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btrRegreso.Location = new System.Drawing.Point(235, 3);
+            this.btrRegreso.Name = "btrRegreso";
+            this.btrRegreso.Size = new System.Drawing.Size(104, 65);
+            this.btrRegreso.TabIndex = 14;
+            this.btrRegreso.Text = "Return";
+            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btrRegreso.UseVisualStyleBackColor = false;
+            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // txtCantidad
+            // textBox1
             // 
-            this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCantidad.Location = new System.Drawing.Point(51, 152);
-            this.txtCantidad.Multiline = true;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(245, 34);
-            this.txtCantidad.TabIndex = 46;
-            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress_1);
+            this.textBox1.Location = new System.Drawing.Point(302, 205);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(33, 20);
+            this.textBox1.TabIndex = 47;
+            this.textBox1.Visible = false;
+            // 
+            // addR
+            // 
+            this.addR.Location = new System.Drawing.Point(31, 205);
+            this.addR.Name = "addR";
+            this.addR.Size = new System.Drawing.Size(48, 23);
+            this.addR.TabIndex = 48;
+            this.addR.Text = "Save";
+            this.addR.UseVisualStyleBackColor = true;
+            this.addR.Click += new System.EventHandler(this.addR_Click);
+            // 
+            // addI
+            // 
+            this.addI.Location = new System.Drawing.Point(153, 205);
+            this.addI.Name = "addI";
+            this.addI.Size = new System.Drawing.Size(48, 23);
+            this.addI.TabIndex = 49;
+            this.addI.Text = "Save";
+            this.addI.UseVisualStyleBackColor = true;
+            this.addI.Click += new System.EventHandler(this.addI_Click);
+            // 
+            // addF
+            // 
+            this.addF.Location = new System.Drawing.Point(248, 205);
+            this.addF.Name = "addF";
+            this.addF.Size = new System.Drawing.Size(48, 23);
+            this.addF.TabIndex = 50;
+            this.addF.Text = "Save";
+            this.addF.UseVisualStyleBackColor = true;
+            this.addF.Click += new System.EventHandler(this.addF_Click);
             // 
             // Agregar
             // 
@@ -144,5 +190,9 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label titulo;
         private System.Windows.Forms.TextBox txtCantidad;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Button addF;
+        public System.Windows.Forms.Button addI;
+        public System.Windows.Forms.Button addR;
     }
 }

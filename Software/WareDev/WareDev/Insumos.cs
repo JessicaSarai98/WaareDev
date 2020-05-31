@@ -150,14 +150,7 @@ namespace WareDev
             txtCostoTotalInsumo.Text = r.ToString();
         }
 
-        private void txtPrecioInsumo_Enter(object sender, EventArgs e)
-        {
-            int n1, n2, r;
-                n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
-            n2 = Convert.ToInt32(txtPrecioInsumo.Text);
-            r = n1 * n2;
-            txtCostoTotalInsumo.Text = r.ToString();
-        }
+       
     }
     
 }

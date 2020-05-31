@@ -141,5 +141,10 @@ namespace Domain
             objetoCD.EliminarI(Convert.ToInt32(id));
         }
 
+        //eliminar finished products
+        public void EliminarF(string id)
+        {
+            objetoCD.EliminarFini(Convert.ToInt32(id));
+        }
     }
 }
