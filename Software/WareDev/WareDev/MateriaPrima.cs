@@ -80,7 +80,7 @@ namespace WareDev
                     images = brs.ReadBytes((int)Streem.Length);
 
                     connection.Open();
-                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,IVA,SAT,tariffFraction,status, percentage,amountPurchased,customsAmount,price,photo) values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.Text+ "','"+txtUniMedida.Text+ "','"+txtDescripcion.Text+ "','"+txtIva.Text+ "','"+txtSat.Text+ "','"+txtFraccion.Text+ "','"+txtEstado.Text+ "','"+txtPorcentaje.Text+ "','"+txtCantiAdquirida.Text+ "','"+txtCanAduana.Text+ "','"+txtPrecio.Text+"',@images)";
+                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,IVA,SAT,tariffFraction,status, percentage,amountPurchased,customsAmount,price,photo,mat) values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.Text+ "','"+txtUniMedida.Text+ "','"+txtDescripcion.Text+ "','"+txtIva.Text+ "','"+txtSat.Text+ "','"+txtFraccion.Text+ "','"+txtEstado.Text+ "','"+txtPorcentaje.Text+ "','"+txtCantiAdquirida.Text+ "','"+txtCanAduana.Text+ "','"+txtPrecio.Text+"',@images, '"+mat.Text+"')";
                     cmd = new SqlCommand(sqlQuery, connection);
                     cmd.Parameters.Add(new SqlParameter("@images",images));
                     cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);

@@ -66,6 +66,7 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
+            this.mat = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.mat);
             this.contenedor.Controls.Add(this.ID);
             this.contenedor.Controls.Add(this.SaveEdit);
             this.contenedor.Controls.Add(this.FotoProduc);
@@ -609,6 +611,14 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
+            // mat
+            // 
+            this.mat.Location = new System.Drawing.Point(584, 443);
+            this.mat.Name = "mat";
+            this.mat.Size = new System.Drawing.Size(100, 20);
+            this.mat.TabIndex = 32;
+            this.mat.Text = "Materia prima";
+            // 
             // MateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,5 +679,6 @@
         public System.Windows.Forms.TextBox txtCantiAdquirida;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.PictureBox FotoProduc;
+        public System.Windows.Forms.TextBox mat;
     }
 }

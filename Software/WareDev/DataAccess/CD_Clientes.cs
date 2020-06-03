@@ -13,6 +13,8 @@ namespace DataAccess
         private CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
+        DataTable tabla2 = new DataTable();
+        DataTable tabla3 = new DataTable();
         SqlCommand comando = new SqlCommand();
         //---- MOSTRAR TABLA----------
         //Mostrar usuario 
@@ -90,7 +92,7 @@ namespace DataAccess
         public DataTable MostrarRawStart()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select name, amountPurchased, description from rawMaterials";
+            comando.CommandText = "select name, amountPurchased, description, mat as 'Almacen' from rawMaterials UNION select name, amountPurchased, description, insu as 'Almacen' from inputs UNION select name, amountPurchased, description, fin as 'Almacen' from FinishedProducts ORDER BY Almacen asc;";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();
@@ -98,28 +100,29 @@ namespace DataAccess
 
         }
 
-        //mostrar inputs en start
-        public DataTable MostrarInputStart()
-        {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select name, amountPurchased, description from inputs";
-            leer = comando.ExecuteReader();
-            tabla.Load(leer);
-            conexion.CerrarConexion();
-            return tabla;
+        ////mostrar inputs en start
+        //public DataTable MostrarInputStart()
+        //{
+        //    comando.Connection = conexion.AbrirConexion();
+        //    comando.CommandText = "select name, amountPurchased, description, insu from inputs";
+        //    leer = comando.ExecuteReader();
+        //    tabla2.Load(leer);
+        //    conexion.CerrarConexion();
+        //    return tabla2;
 
-        }
-        //mostrar finished products en start
-        public DataTable MostrarFinishedStart()
-        {
-            comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select name, amountPurchased, description from FinishedProducts";
-            leer = comando.ExecuteReader();
-            tabla.Load(leer);
-            conexion.CerrarConexion();
-            return tabla;
+        //}
+        ////mostrar finished products en start
+        //public DataTable MostrarFinishedStart()
+        //{
+        //    comando.Connection = conexion.AbrirConexion();
+        //    comando.CommandText = "select name, amountPurchased, description, fin from FinishedProducts";
+        //    leer = comando.ExecuteReader();
+        //    tabla3.Load(leer);
+        //    conexion.CerrarConexion();
+        //    return tabla3;
 
-        }
+        //}
+
         //-----AGREGAR--------
 
         //insertar clientes

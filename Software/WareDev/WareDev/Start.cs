@@ -43,22 +43,20 @@ namespace WareDev
         {
             CN_Clientes objeto = new CN_Clientes();
             dataGridView1.DataSource = objeto.MostrarRS();
+            //dataGridView1.DataSource = objeto.MostrarIS();
+            //dataGridView1.DataSource = objeto.MostrarFPS();
 
-            
 
-            dataGridView1.DataSource = objeto.MostrarIS();
-            dataGridView1.DataSource = objeto.MostrarFPS();
-
-        
         }
 
         private void Start_Load(object sender, EventArgs e)
         {
             MostrarR();
-            
-            dataGridView1.Columns[1].HeaderText = "Nombre del producto";
-            dataGridView1.Columns[2].HeaderText = "Cantidad disponible";
-            dataGridView1.Columns[3].HeaderText = "Descripción";
+
+            dataGridView1.Columns[0].HeaderText = "Nombre del Producto";
+            dataGridView1.Columns[1].HeaderText = "Cantidad disponible";
+            dataGridView1.Columns[2].HeaderText = "Descripción";
+            dataGridView1.Columns[3].HeaderText = "Almacén";
 
             SqlCommand comando = new SqlCommand();
             SqlCommand comando1 = new SqlCommand();

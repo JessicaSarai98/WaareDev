@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoTerminado));
             this.contenedor = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.fin = new System.Windows.Forms.TextBox();
             this.exisI = new System.Windows.Forms.TextBox();
             this.existenciaI = new System.Windows.Forms.Button();
             this.exis = new System.Windows.Forms.Button();
@@ -39,6 +39,8 @@
             this.SaveEdit = new System.Windows.Forms.Button();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.TablaProdTermi = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +69,6 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.TablaProdTermi.SuspendLayout();
@@ -76,6 +77,7 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.fin);
             this.contenedor.Controls.Add(this.exisI);
             this.contenedor.Controls.Add(this.existenciaI);
             this.contenedor.Controls.Add(this.exis);
@@ -93,13 +95,14 @@
             this.contenedor.Size = new System.Drawing.Size(1100, 500);
             this.contenedor.TabIndex = 0;
             // 
-            // comboBox1
+            // fin
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(711, 108);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 28);
-            this.comboBox1.TabIndex = 38;
+            this.fin.Enabled = false;
+            this.fin.Location = new System.Drawing.Point(75, 468);
+            this.fin.Name = "fin";
+            this.fin.Size = new System.Drawing.Size(100, 20);
+            this.fin.TabIndex = 38;
+            this.fin.Text = "Producto terminado";
             // 
             // exisI
             // 
@@ -227,6 +230,22 @@
             this.TablaProdTermi.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.TablaProdTermi.Size = new System.Drawing.Size(945, 242);
             this.TablaProdTermi.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(239, 143);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(231, 28);
+            this.comboBox2.TabIndex = 38;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(711, 108);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 28);
+            this.comboBox1.TabIndex = 38;
             // 
             // label9
             // 
@@ -600,14 +619,6 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(239, 143);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 28);
-            this.comboBox2.TabIndex = 38;
-            // 
             // ProductoTerminado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,5 +680,6 @@
         public System.Windows.Forms.Button existenciaI;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.TextBox fin;
     }
 }

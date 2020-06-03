@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insumos));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.ins = new System.Windows.Forms.TextBox();
             this.mult = new System.Windows.Forms.Button();
             this.SaveEditinputs = new System.Windows.Forms.Button();
             this.IDinputs = new System.Windows.Forms.TextBox();
@@ -63,6 +64,7 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.ins);
             this.contenedor.Controls.Add(this.mult);
             this.contenedor.Controls.Add(this.SaveEditinputs);
             this.contenedor.Controls.Add(this.IDinputs);
@@ -76,6 +78,15 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 0;
+            // 
+            // ins
+            // 
+            this.ins.Enabled = false;
+            this.ins.Location = new System.Drawing.Point(155, 420);
+            this.ins.Name = "ins";
+            this.ins.Size = new System.Drawing.Size(100, 20);
+            this.ins.TabIndex = 32;
+            this.ins.Text = "Insumos";
             // 
             // mult
             // 
@@ -492,5 +503,6 @@
         public System.Windows.Forms.Button SaveEditinputs;
         public System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button mult;
+        public System.Windows.Forms.TextBox ins;
     }
 }

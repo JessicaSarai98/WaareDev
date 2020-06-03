@@ -69,20 +69,21 @@ namespace Domain
             tabla = objetoCD.MostrarRawStart();
             return tabla;
         }
+
         //mostrar inputs en start
-        public DataTable MostrarIS()
-        {
-            DataTable tabla = new DataTable();
-            tabla = objetoCD.MostrarInputStart();
-            return tabla;
-        }
+        //public DataTable MostrarIS()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = objetoCD.MostrarInputStart();
+        //    return tabla;
+        //}
         //mostrar finished products en start
-        public DataTable MostrarFPS()
-        {
-            DataTable tabla = new DataTable();
-            tabla = objetoCD.MostrarFinishedStart();
-            return tabla;
-        }
+        //public DataTable MostrarFPS()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = objetoCD.MostrarFinishedStart();
+        //    return tabla;
+        //}
 
         //------NUEVO----------
         //insertar cliente

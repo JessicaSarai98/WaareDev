@@ -78,13 +78,13 @@ namespace WareDev
                     images = brs.ReadBytes((int)Streem.Length);
 
                     connection.Open();
-                    string sqlQuery = "insert into inputs(date,unitOfMeasure,amountPurchased,description,name,unitPrice,total,photo) values(@fecha,'" +txtUniMedInsu.Text+ "','" +txtCanAdqInsumos.Text+ "','" + txtDesInsumo.Text + "','" + txtNombreInsumo.Text + "','" +txtPrecioInsumo.Text + "','" + txtCostoTotalInsumo.Text+ "',@images)";
+                    string sqlQuery = "insert into inputs(date,unitOfMeasure,amountPurchased,description,name,unitPrice,total,photo,insu) values(@fecha,'" +txtUniMedInsu.Text+ "','" +txtCanAdqInsumos.Text+ "','" + txtDesInsumo.Text + "','" + txtNombreInsumo.Text + "','" +txtPrecioInsumo.Text + "','" + txtCostoTotalInsumo.Text+ "',@images, '"+ins.Text+"')";
                     cmd = new SqlCommand(sqlQuery, connection);
                     cmd.Parameters.Add(new SqlParameter("@images", images));
                     cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
-                    int N = cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show(N.ToString() + "Se ha agregado la materia prima");
+                    MessageBox.Show("Se ha agregado la materia prima");
                     this.Close();
                 }
                 else
