@@ -33,13 +33,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almacen1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almacen2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almacen3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciocompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +42,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.exis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contenedor.SuspendLayout();
             this.SuspendLayout();
@@ -100,55 +98,23 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Unidad,
-            this.Almacen1,
-            this.Almacen2,
-            this.Almacen3,
-            this.Precio,
-            this.preciocompra});
-            this.dataGridView1.Location = new System.Drawing.Point(31, 191);
+            this.alm});
+            this.dataGridView1.Location = new System.Drawing.Point(31, 192);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(540, 259);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Producto
+            // alm
             // 
-            this.Producto.HeaderText = "Product";
-            this.Producto.Name = "Producto";
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unit";
-            this.Unidad.Name = "Unidad";
-            // 
-            // Almacen1
-            // 
-            this.Almacen1.HeaderText = "Warehouse1";
-            this.Almacen1.Name = "Almacen1";
-            // 
-            // Almacen2
-            // 
-            this.Almacen2.HeaderText = "Warehouse2";
-            this.Almacen2.Name = "Almacen2";
-            // 
-            // Almacen3
-            // 
-            this.Almacen3.HeaderText = "Wharehouse3";
-            this.Almacen3.Name = "Almacen3";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Selling Price";
-            this.Precio.Name = "Precio";
-            // 
-            // preciocompra
-            // 
-            this.preciocompra.HeaderText = "Purchase Price";
-            this.preciocompra.Name = "preciocompra";
+            this.alm.HeaderText = "almacen";
+            this.alm.Name = "alm";
+            this.alm.ReadOnly = true;
             // 
             // label1
             // 
@@ -244,6 +210,10 @@
             // 
             // contenedor
             // 
+            this.contenedor.Controls.Add(this.textBox3);
+            this.contenedor.Controls.Add(this.textBox2);
+            this.contenedor.Controls.Add(this.textBox1);
+            this.contenedor.Controls.Add(this.exis);
             this.contenedor.Controls.Add(this.button2);
             this.contenedor.Controls.Add(this.label6);
             this.contenedor.Controls.Add(this.button5);
@@ -261,6 +231,40 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 474);
             this.contenedor.TabIndex = 16;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(801, 315);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(41, 20);
+            this.textBox3.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(801, 270);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(41, 20);
+            this.textBox2.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(801, 218);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(41, 20);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // exis
+            // 
+            this.exis.Location = new System.Drawing.Point(767, 182);
+            this.exis.Name = "exis";
+            this.exis.Size = new System.Drawing.Size(104, 23);
+            this.exis.TabIndex = 11;
+            this.exis.Text = "Ver existencia";
+            this.exis.UseVisualStyleBackColor = true;
+            this.exis.Visible = false;
+            this.exis.Click += new System.EventHandler(this.exis_Click);
             // 
             // Start
             // 
@@ -294,13 +298,11 @@
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almacen1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almacen2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almacen3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preciocompra;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alm;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button exis;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

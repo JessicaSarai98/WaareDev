@@ -85,6 +85,41 @@ namespace DataAccess
             conexion.CerrarConexion();
             return tabla; 
         }
+
+        //mostrar rawMaterials en start
+        public DataTable MostrarRawStart()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select name, amountPurchased, description from rawMaterials";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla; 
+
+        }
+
+        //mostrar inputs en start
+        public DataTable MostrarInputStart()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select name, amountPurchased, description from inputs";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+        //mostrar finished products en start
+        public DataTable MostrarFinishedStart()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select name, amountPurchased, description from FinishedProducts";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
         //-----AGREGAR--------
 
         //insertar clientes

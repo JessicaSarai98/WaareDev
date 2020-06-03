@@ -84,12 +84,17 @@ namespace WareDev
             MostrarRaw();
             DataTable dt = new DataTable();
             dt = (DataTable)dataGridView1.DataSource;
+
+            dataGridView1.Refresh();
+            dataGridView1.Update(); 
+
             dataGridView1.Columns[0].HeaderText = "ID";
             dataGridView1.Columns[1].HeaderText = "Name";
             dataGridView1.Columns[4].HeaderText = "Unit of measure";
             dataGridView1.Columns[7].HeaderText = "SAT key";
             dataGridView1.Columns[11].HeaderText = "Available Quantity";
             dataGridView1.Columns[13].HeaderText = "Price";
+            
             //this.dataGridView1.Visible = true; 
             //this.dataGridView2.Visible = false;
 

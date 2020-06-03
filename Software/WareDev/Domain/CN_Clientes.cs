@@ -13,7 +13,7 @@ namespace Domain
     public class CN_Clientes
     {
         private CD_Clientes objetoCD = new CD_Clientes();
-        
+
         //----------MOSTRAR EN TABLA-----
         //Mostrar usuarios
         public DataTable MostrarUsu()
@@ -51,7 +51,7 @@ namespace Domain
         {
             DataTable tabla = new DataTable();
             tabla = objetoCD.MostrarI();
-            return tabla; 
+            return tabla;
         }
 
         //mostrar finished products
@@ -59,7 +59,29 @@ namespace Domain
         {
             DataTable tabla = new DataTable();
             tabla = objetoCD.MostrarF();
-            return tabla; 
+            return tabla;
+        }
+
+        //mostrar rawMaterials en start
+        public DataTable MostrarRS()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarRawStart();
+            return tabla;
+        }
+        //mostrar inputs en start
+        public DataTable MostrarIS()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarInputStart();
+            return tabla;
+        }
+        //mostrar finished products en start
+        public DataTable MostrarFPS()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarFinishedStart();
+            return tabla;
         }
 
         //------NUEVO----------
@@ -83,6 +105,8 @@ namespace Domain
         {
             objetoCD.InsertarS(name, RFC, phone, email, addres, country, state, city, currency);
         }
+
+        
 
         //-------EDITAR DATOS-------
         //actualizar datos de cliente
