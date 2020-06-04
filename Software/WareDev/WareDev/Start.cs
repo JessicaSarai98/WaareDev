@@ -62,7 +62,13 @@ namespace WareDev
             SqlCommand comando1 = new SqlCommand();
             SqlCommand comando2 = new SqlCommand();
 
-            string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
+            // jess
+            //string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
+            // karina
+            string con = "Data Source = (LocalDB)-MSSQLLocalDB; Initial Catalog = users;Integrated Security = True; Connect Timeout = 30";
+
+
+
             SqlConnection conn = new SqlConnection(con);
             comando.Connection = conn;
             comando1.Connection = conn;

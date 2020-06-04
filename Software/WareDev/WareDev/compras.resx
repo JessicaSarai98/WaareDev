@@ -117,21 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="producto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="foto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tam.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="precio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btrRegreso.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -141,15 +126,6 @@
         Zi6HyyZsJpZxlIGrJkaonNqYuSSbqOpT3ELlu8dRAdRElT8ja+AWRzVgS7CLoxrYoBrI3YQuWKCK6xi2
         NeCDJmra7c31IRpjKfSgNIrG3+rNSxcXlsAoGksdty1qzb1NeyAQKEEUvQEH5X1seqYMnQAAAABJRU5E
         rkJggg==
-</value>
-  </data>
-  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAALRJREFUWEft
-        klEKwzAMQ3OKMXr/I42Nnma1YS7GaIld5aMfeSAai0hNQ9ticVe+E/QWPUWXQIVXtIs2URkr8CBPib7N
-        H/cs30QsVZCnRN/mh+j1W5dvIpYqyEP4ffrldhP6T6RBL0MeIu7TQ2SzJyhgXlYe5HXplWTlQV6XcmDA
-        OgB9AJurMuI85F9BVUach7AFbJ4uYPN0AZunC9g8XcDm6QI2Txew+TMwW2lQeIYWi7vR2gGH3/5qNIPO
-        0wAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="imgVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -173,6 +149,15 @@
         dbElRc9nhF4jWo6yfc5Tjw+FBm1im/hrCPU3yb7dTx39jURowGYZ/Ogz32w5m44so5pxaMAmNvBmv6hR
         yDKvI/a3UqpCxv5CJrS3NrpqZx1VHPXlmTtoFepHIxZVNDbD/2Udw1Bkn+fxLj6ASq9PopW8iFXQs9na
         bXXh6tzR8Ri7fl64sp6hAwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAALRJREFUWEft
+        klEKwzAMQ3OKMXr/I42Nnma1YS7GaIld5aMfeSAai0hNQ9ticVe+E/QWPUWXQIVXtIs2URkr8CBPib7N
+        H/cs30QsVZCnRN/mh+j1W5dvIpYqyEP4ffrldhP6T6RBL0MeIu7TQ2SzJyhgXlYe5HXplWTlQV6XcmDA
+        OgB9AJurMuI85F9BVUach7AFbJ4uYPN0AZunC9g8XcDm6QI2Txew+TMwW2lQeIYWi7vR2gGH3/5qNIPO
+        0wAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
