@@ -184,8 +184,10 @@ namespace WareDev
         {
 
 
-            string query = "select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'";
-            TablaDeVenta.DataSource = GetData(query);
+            //string query = "select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'";
+            //TablaDeVenta.DataSource = GetData(query);
+
+
 
             //decimal total = 0;
 
@@ -206,13 +208,13 @@ namespace WareDev
             //t = n1 * n2;
             //txtSubtotal.Text = t.ToString(); 
 
-            this.TablaDeVenta.Columns[0].HeaderText = "Name";
-            this.TablaDeVenta.Columns[1].HeaderText = "Size";
-            this.TablaDeVenta.Columns[2].HeaderText = "Measure";
-            this.TablaDeVenta.Columns[3].HeaderText = "Description";
-            this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
-            this.TablaDeVenta.Columns[5].HeaderText = "Boxes";
-            this.TablaDeVenta.Columns[6].HeaderText = "Amount Purchased";
+            //this.TablaDeVenta.Columns[0].HeaderText = "Name";
+            //this.TablaDeVenta.Columns[1].HeaderText = "Size";
+            //this.TablaDeVenta.Columns[2].HeaderText = "Measure";
+            //this.TablaDeVenta.Columns[3].HeaderText = "Description";
+            //this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
+            //this.TablaDeVenta.Columns[5].HeaderText = "Boxes";
+            //this.TablaDeVenta.Columns[6].HeaderText = "Amount Purchased";
         }
 
 
@@ -227,10 +229,36 @@ namespace WareDev
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'",connection);
-            SqlDataAdapter da = new SqlDataAdapter(c);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            
+
+            if (textBox1.Text.Length >= 1 && comboBox1.Text.Length >= 1)
+            {
+                const string message = "¿Estás seguro?";
+                const string caption = "Advertencia";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
+                    SqlDataAdapter da = new SqlDataAdapter(c);
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
+
+                    connection.Open();
+                    string sql = "update FinishedProducts set amountPurchased=amountPurchased - @cant where name= '" + comboBox1.Text + "'";
+                    cmd = new SqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@cant", textBox1.Text);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    textBox1.Clear();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una cantidad");
+            }
+            
             //string query = "select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'";
             //ablaDeVenta.DataSource = GetData(query);
         }
