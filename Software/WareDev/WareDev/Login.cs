@@ -69,51 +69,51 @@ namespace WareDev
             //NO MUEVAN NADA DE AQUI PLOX o los mato :)
 
 
-            //if (textUser.Text != "username" && textUser.TextLength > 0)
-            //{
-            //    if (textKey.Text != "password")
-            //    {
-            //        UserModel user = new UserModel();
-            //        var validLogin = user.LoginUser(textUser.Text, textKey.Text);
-            //        if (validLogin == true)
-            //        {
-            //            //MessageBox.Show("Bienvenido" + UserCache.firstName + "," + UserCache.lastName);
+            if (textUser.Text != "username" && textUser.TextLength > 0)
+            {
+                if (textKey.Text != "password")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(textUser.Text, textKey.Text);
+                    if (validLogin == true)
+                    {
+                        //MessageBox.Show("Bienvenido" + UserCache.firstName + "," + UserCache.lastName);
 
-            //            var tam = this.WindowState;
-            //            MenuInicio ini = new MenuInicio(tam);
-            //            ini.name.Text = ""+UserCache.firstName; 
-            //            ini.Show();
-            //            this.Hide();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Invalid username or password");
-            //            //textKey.Text = "Password";
-            //            textKey.UseSystemPasswordChar = false;
-            //            textUser.Focus();
+                        var tam = this.WindowState;
+                        MenuInicio ini = new MenuInicio(tam);
+                        ini.name.Text = "" + UserCache.firstName;
+                        ini.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password");
+                        //textKey.Text = "Password";
+                        textKey.UseSystemPasswordChar = false;
+                        textUser.Focus();
 
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Please enter password");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please enter the username");
-            //}
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter password");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter the username");
+            }
 
 
 
 
 
             ////cuando no este en comentarios lo anterior, comentar las siguientes lineas.
-            this.Hide();
-            var tam = this.WindowState;
-            MenuInicio ini = new MenuInicio(tam);
-            //MessageBox.Show("Bienvenido: " + textUser.Text + ".");
-            ini.Show();
+            //this.Hide();
+            //var tam = this.WindowState;
+            //MenuInicio ini = new MenuInicio(tam);
+            ////MessageBox.Show("Bienvenido: " + textUser.Text + ".");
+            //ini.Show();
         }
 
 

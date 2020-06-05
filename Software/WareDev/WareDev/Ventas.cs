@@ -291,12 +291,21 @@ namespace WareDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double n1, n2, t, i;
-            n1 = Convert.ToDouble(textBox1.Text);
-            n2 = Convert.ToDouble(textBox2.Text);
-            t = n1 * n2;
-            i = Convert.ToDouble(txtIva.Text);
 
+            //total = sub + (iva*subt)
+            //sub = suma de los productos 
+
+            double n2, t, i;
+
+
+
+            //n1 = Convert.ToDouble(textBox1.Text);
+
+            //subtotal
+            n2 = Convert.ToDouble(textBox2.Text);
+            //t = n1 * n2;
+            i = Convert.ToDouble(txtIva.Text);
+            t = i * n2;
             txtSubtotal.Text = t.ToString();
 
             double a= t+(i*t);

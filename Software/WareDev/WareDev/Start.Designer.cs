@@ -30,8 +30,6 @@
         {
             this.btnVentas = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,11 +39,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.contenedor = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.exis = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.exis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contenedor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -54,7 +52,7 @@
             // btnVentas
             // 
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.Location = new System.Drawing.Point(31, 46);
+            this.btnVentas.Location = new System.Drawing.Point(288, 46);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(181, 88);
             this.btnVentas.TabIndex = 2;
@@ -65,34 +63,13 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(787, 46);
+            this.button2.Location = new System.Drawing.Point(523, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 88);
             this.button2.TabIndex = 5;
             this.button2.Text = "Shopping";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(281, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 88);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Finished Product";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(539, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 88);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Profits";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -202,54 +179,12 @@
             this.contenedor.Controls.Add(this.button2);
             this.contenedor.Controls.Add(this.button5);
             this.contenedor.Controls.Add(this.btnVentas);
-            this.contenedor.Controls.Add(this.button3);
-            this.contenedor.Controls.Add(this.button4);
             this.contenedor.Controls.Add(this.dataGridView1);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 0);
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 474);
             this.contenedor.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(174, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(41, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(174, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(41, 20);
-            this.textBox2.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(174, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(41, 20);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // exis
-            // 
-            this.exis.BackColor = System.Drawing.Color.Silver;
-            this.exis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.exis.Location = new System.Drawing.Point(753, 166);
-            this.exis.Name = "exis";
-            this.exis.Size = new System.Drawing.Size(130, 41);
-            this.exis.TabIndex = 11;
-            this.exis.Text = "Ver existencia";
-            this.exis.UseVisualStyleBackColor = false;
-            this.exis.Visible = false;
-            this.exis.Click += new System.EventHandler(this.exis_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -258,7 +193,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
@@ -276,6 +211,46 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 127);
             this.tableLayoutPanel1.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(174, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(41, 20);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Location = new System.Drawing.Point(174, 54);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(41, 20);
+            this.textBox2.TabIndex = 13;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3.Location = new System.Drawing.Point(174, 96);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(41, 20);
+            this.textBox3.TabIndex = 14;
+            // 
+            // exis
+            // 
+            this.exis.BackColor = System.Drawing.Color.Silver;
+            this.exis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.exis.Location = new System.Drawing.Point(753, 166);
+            this.exis.Name = "exis";
+            this.exis.Size = new System.Drawing.Size(130, 41);
+            this.exis.TabIndex = 11;
+            this.exis.Text = "Ver existencia";
+            this.exis.UseVisualStyleBackColor = false;
+            this.exis.Visible = false;
+            this.exis.Click += new System.EventHandler(this.exis_Click);
             // 
             // Start
             // 
@@ -300,8 +275,6 @@
 
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
