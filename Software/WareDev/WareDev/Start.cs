@@ -20,8 +20,6 @@ namespace WareDev
             InitializeComponent();
         }
 
-        
-
 
         //Funcion para crear Forms hijos 
         private void AbrirFormInPanel(object Formhijo)
@@ -64,8 +62,8 @@ namespace WareDev
 
             // jess
             //string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
-            // karina
-            string con = "Data Source = (LocalDB)-MSSQLLocalDB; Initial Catalog = users;Integrated Security = True; Connect Timeout = 30";
+            // karina Data Source = (LocalDB)-MSSQLLocalDB; Initial Catalog = users;Integrated Security = True; Connect Timeout = 30
+            string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
 
 
 
@@ -83,13 +81,16 @@ namespace WareDev
             textBox2.Text = comando1.ExecuteScalar().ToString();
             textBox3.Text = comando2.ExecuteScalar().ToString();
             conn.Close();
-            //dataGridView1.Columns[4].HeaderText = "Almacén";
-            //dataGridView1.Columns[0].Selected= dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+
+            
+        
+        
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new ventas());
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

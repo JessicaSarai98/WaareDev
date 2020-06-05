@@ -74,8 +74,8 @@ namespace WareDev
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
-            {
+            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtSize.Text.Length >=1) &&(this.txtMeasure.Text.Length>=1))
+            { 
                 if (this.FotoProduc.Image != null)
                 {
 
@@ -92,7 +92,7 @@ namespace WareDev
 
 
                         connection.Open();
-                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo, fin) values(@fecha,'" + txtUniMedInsu.Text + "','" + txtPallet.Text + "','" + txtCajasContenido.Text + "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','" + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images, '"+fin.Text+"')";
+                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo,size,measure, fin) values(@fecha,'" + txtUniMedInsu.Text + "','" + txtPallet.Text + "','" + txtCajasContenido.Text + "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','" + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images,'"+this.txtSize.Text+"','"+this.txtMeasure.Text+"', '"+fin.Text+"')";
                         string sqlQuery2 = "update rawMaterials set amountPurchased= amountPurchased - @cant where name='" + comboBox1.Text + "'";
                         string sqlQuery3 = "update inputs set amountPurchased= amountPurchased - @canti where name= '" + comboBox2.Text + "'";
 
@@ -129,7 +129,7 @@ namespace WareDev
 
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1))
+            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtSize.Text.Length >= 1) &&(this.txtMeasure.Text.Length>=1))
             {
 
                 byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
@@ -140,7 +140,7 @@ namespace WareDev
                 //n2 = Convert.ToInt32(existencia.Text);
                 //r = n2 - n1;
 
-                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',pallet='" + txtPallet.Text + "',boxes='" + txtCajasContenido.Text + "',input='" + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "',photo=@imagen where Id='" + ID.Text + "'";
+                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',pallet='" + txtPallet.Text + "',boxes='" + txtCajasContenido.Text + "',input='" + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "', size = '"+txtSize.Text+"', measure = '"+txtMeasure.Text+"',photo=@imagen where Id='" + ID.Text + "'";
                // string sqlQuery2 = "update rawMaterials set amountPurchased='"+r+ "' where Id='"+txtNombreMateria.Text+"'";
                 cmd = new SqlCommand(sqlQuery, connection);
                 //cmd2 = new SqlCommand(sqlQuery2, connection);
@@ -195,6 +195,11 @@ namespace WareDev
                 exisI.Text = reg["amountPurchased"].ToString();
             }
             connection.Close();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

@@ -79,6 +79,8 @@ namespace WareDev
             this.dataGridView3.Columns[12].Visible = false;
             this.dataGridView3.Columns[13].Visible = false;
             this.dataGridView3.Columns[14].Visible = false;
+            this.dataGridView3.Columns[15].Visible = false;
+            this.dataGridView3.Columns[16].Visible = false;
         }
 
         //principal
@@ -399,6 +401,8 @@ namespace WareDev
                 prod.txtDescripcion.Text= dataGridView3.CurrentRow.Cells["description"].Value.ToString();
                 prod.comboBox1.Text= dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString();
                 prod.txtCantiMatPrima.Text= dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();
+                prod.txtSize.Text = dataGridView3.CurrentRow.Cells["size"].Value.ToString();
+                prod.txtMeasure.Text = dataGridView3.CurrentRow.Cells["measure"].Value.ToString(); 
 
 
                 prod.txtCantiAdquirida.Enabled = false;

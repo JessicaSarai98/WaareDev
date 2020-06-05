@@ -30,22 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventas));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cajasPorContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtNoCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtFolio = new System.Windows.Forms.TextBox();
@@ -56,6 +53,8 @@
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIva = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
@@ -64,22 +63,26 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sumar = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
             // 
             this.contenedor.BackColor = System.Drawing.Color.White;
+            this.contenedor.Controls.Add(this.sumar);
+            this.contenedor.Controls.Add(this.dataGridView1);
+            this.contenedor.Controls.Add(this.button1);
+            this.contenedor.Controls.Add(this.textBox2);
+            this.contenedor.Controls.Add(this.textBox1);
             this.contenedor.Controls.Add(this.tableLayoutPanel2);
             this.contenedor.Controls.Add(this.TablaDeVenta);
             this.contenedor.Controls.Add(this.tableLayoutPanel1);
@@ -91,91 +94,108 @@
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(468, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Calculate subtotal and total";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(20, 291);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(362, 250);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
+            this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(132, 271);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(769, 43);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.AccessibleName = "";
+            this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnAgregar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
+            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregar.Location = new System.Drawing.Point(638, 3);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
+            this.BtnAgregar.TabIndex = 36;
+            this.BtnAgregar.Text = "Add";
+            this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Select product";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(207, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(394, 26);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // TablaDeVenta
             // 
             this.TablaDeVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TablaDeVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TablaDeVenta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.TablaDeVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaDeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.foto,
-            this.tam,
-            this.medida,
-            this.descripcion,
-            this.precio,
-            this.cajasPorContenido,
-            this.importe});
-            this.TablaDeVenta.Location = new System.Drawing.Point(12, 332);
+            this.TablaDeVenta.Location = new System.Drawing.Point(20, 320);
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.RowHeadersWidth = 45;
             this.TablaDeVenta.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TablaDeVenta.Size = new System.Drawing.Size(965, 132);
+            this.TablaDeVenta.Size = new System.Drawing.Size(402, 144);
             this.TablaDeVenta.StandardTab = true;
             this.TablaDeVenta.TabIndex = 0;
             this.TablaDeVenta.TabStop = false;
-            // 
-            // nombre
-            // 
-            this.nombre.FillWeight = 120F;
-            this.nombre.HeaderText = "Product\'s name";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 244;
-            // 
-            // foto
-            // 
-            this.foto.HeaderText = "Photo";
-            this.foto.Name = "foto";
-            this.foto.Width = 204;
-            // 
-            // tam
-            // 
-            this.tam.FillWeight = 38.49408F;
-            this.tam.HeaderText = "Size";
-            this.tam.MinimumWidth = 6;
-            this.tam.Name = "tam";
-            this.tam.Width = 78;
-            // 
-            // medida
-            // 
-            this.medida.FillWeight = 38.49408F;
-            this.medida.HeaderText = "Measure";
-            this.medida.MinimumWidth = 6;
-            this.medida.Name = "medida";
-            this.medida.Width = 79;
-            // 
-            // descripcion
-            // 
-            this.descripcion.FillWeight = 38.49408F;
-            this.descripcion.HeaderText = "Description";
-            this.descripcion.MinimumWidth = 6;
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Width = 78;
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 38.49408F;
-            this.precio.HeaderText = "Price";
-            this.precio.MinimumWidth = 6;
-            this.precio.Name = "precio";
-            this.precio.Width = 78;
-            // 
-            // cajasPorContenido
-            // 
-            this.cajasPorContenido.FillWeight = 38.49408F;
-            this.cajasPorContenido.HeaderText = "Boxes per content";
-            this.cajasPorContenido.MinimumWidth = 6;
-            this.cajasPorContenido.Name = "cajasPorContenido";
-            this.cajasPorContenido.Width = 79;
-            // 
-            // importe
-            // 
-            this.importe.FillWeight = 38.49408F;
-            this.importe.HeaderText = "Amount";
-            this.importe.MinimumWidth = 6;
-            this.importe.Name = "importe";
-            this.importe.Width = 78;
+            this.TablaDeVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaDeVenta_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -190,10 +210,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.92276F));
             this.tableLayoutPanel1.Controls.Add(this.txt1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTotal, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtCliente, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtNoCliente, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtFolio, 1, 0);
@@ -204,6 +222,8 @@
             this.tableLayoutPanel1.Controls.Add(this.txtSubtotal, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtIva, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 5, 0);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 130);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -231,6 +251,7 @@
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTotal.BackColor = System.Drawing.Color.White;
+            this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtTotal.Location = new System.Drawing.Point(598, 79);
             this.txtTotal.Multiline = true;
@@ -238,19 +259,6 @@
             this.txtTotal.Size = new System.Drawing.Size(151, 32);
             this.txtTotal.TabIndex = 8;
             this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCliente.Location = new System.Drawing.Point(598, 3);
-            this.txtCliente.Multiline = true;
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(376, 32);
-            this.txtCliente.TabIndex = 3;
             // 
             // label4
             // 
@@ -274,21 +282,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Customer\'s number";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNoCliente
-            // 
-            this.txtNoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNoCliente.BackColor = System.Drawing.Color.White;
-            this.txtNoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNoCliente.Location = new System.Drawing.Point(348, 3);
-            this.txtNoCliente.Multiline = true;
-            this.txtNoCliente.Name = "txtNoCliente";
-            this.txtNoCliente.Size = new System.Drawing.Size(133, 32);
-            this.txtNoCliente.TabIndex = 2;
-            this.txtNoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // label9
             // 
@@ -322,6 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFolio.BackColor = System.Drawing.Color.White;
+            this.txtFolio.Enabled = false;
             this.txtFolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFolio.Location = new System.Drawing.Point(81, 3);
             this.txtFolio.Multiline = true;
@@ -385,6 +379,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubtotal.BackColor = System.Drawing.Color.White;
+            this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtSubtotal.Location = new System.Drawing.Point(598, 41);
             this.txtSubtotal.Multiline = true;
@@ -419,6 +414,22 @@
             this.txtIva.TabIndex = 7;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(348, 3);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(133, 28);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(598, 3);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(376, 28);
+            this.comboBox3.TabIndex = 10;
             // 
             // panel1
             // 
@@ -499,6 +510,7 @@
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btrRegreso
             // 
@@ -529,64 +541,26 @@
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
             // 
-            // tableLayoutPanel2
+            // dataGridView1
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(132, 271);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(769, 43);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(468, 320);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(538, 144);
+            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label2
+            // sumar
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Select product";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(394, 26);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.AccessibleName = "";
-            this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnAgregar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
-            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(639, 3);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
-            this.BtnAgregar.TabIndex = 36;
-            this.BtnAgregar.Text = "Add";
-            this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.sumar.Location = new System.Drawing.Point(32, 262);
+            this.sumar.Name = "sumar";
+            this.sumar.Size = new System.Drawing.Size(75, 23);
+            this.sumar.TabIndex = 6;
+            this.sumar.Text = "Sumar";
+            this.sumar.UseVisualStyleBackColor = true;
+            this.sumar.Click += new System.EventHandler(this.sumar_Click);
             // 
             // ventas
             // 
@@ -598,6 +572,9 @@
             this.Text = "ventas";
             this.Load += new System.EventHandler(this.ventas_Load);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -605,8 +582,7 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -632,26 +608,23 @@
         private System.Windows.Forms.Label txt1;
         private System.Windows.Forms.ComboBox comboMoneda;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtFolio;
-        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtNoCliente;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView TablaDeVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn palletContenido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cajasPorContenido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn importe;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        public System.Windows.Forms.TextBox txtFolio;
+        public System.Windows.Forms.DataGridView TablaDeVenta;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button sumar;
     }
 }
