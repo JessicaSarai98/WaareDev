@@ -33,6 +33,7 @@ namespace WareDev
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.IdClient = new System.Windows.Forms.ComboBox();
             this.ico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt1 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace WareDev
             this.Condicion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.IdClient = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Place = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -141,6 +141,18 @@ namespace WareDev
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 114);
             this.tableLayoutPanel1.TabIndex = 48;
+            // 
+            // IdClient
+            // 
+            this.IdClient.FormattingEnabled = true;
+            this.IdClient.Items.AddRange(new object[] {
+            "Peso",
+            "Euro",
+            "Dolar"});
+            this.IdClient.Location = new System.Drawing.Point(369, 40);
+            this.IdClient.Name = "IdClient";
+            this.IdClient.Size = new System.Drawing.Size(150, 30);
+            this.IdClient.TabIndex = 57;
             // 
             // ico
             // 
@@ -521,18 +533,6 @@ namespace WareDev
             this.button2.UseVisualStyleBackColor = false;
             this.button2.UseWaitCursor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // IdClient
-            // 
-            this.IdClient.FormattingEnabled = true;
-            this.IdClient.Items.AddRange(new object[] {
-            "Peso",
-            "Euro",
-            "Dolar"});
-            this.IdClient.Location = new System.Drawing.Point(369, 40);
-            this.IdClient.Name = "IdClient";
-            this.IdClient.Size = new System.Drawing.Size(150, 30);
-            this.IdClient.TabIndex = 57;
             // 
             // label12
             // 
