@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(compras));
             this.contenedor = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtProveedor = new System.Windows.Forms.TextBox();
@@ -49,11 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -90,8 +90,48 @@
             this.precio});
             this.dataGridView1.Location = new System.Drawing.Point(12, 283);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(976, 142);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // producto
+            // 
+            this.producto.FillWeight = 120F;
+            this.producto.HeaderText = "Product";
+            this.producto.MinimumWidth = 6;
+            this.producto.Name = "producto";
+            this.producto.Width = 291;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Photo";
+            this.foto.MinimumWidth = 6;
+            this.foto.Name = "foto";
+            this.foto.Width = 243;
+            // 
+            // tam
+            // 
+            this.tam.FillWeight = 54.72081F;
+            this.tam.HeaderText = "Size";
+            this.tam.MinimumWidth = 6;
+            this.tam.Name = "tam";
+            this.tam.Width = 133;
+            // 
+            // cantidad
+            // 
+            this.cantidad.FillWeight = 54.72081F;
+            this.cantidad.HeaderText = "Amount";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 133;
+            // 
+            // precio
+            // 
+            this.precio.FillWeight = 54.72081F;
+            this.precio.HeaderText = "Unit price ";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.Width = 133;
             // 
             // tableLayoutPanel1
             // 
@@ -128,7 +168,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(171, 42);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(168, 27);
             this.dateTimePicker1.TabIndex = 23;
             this.dateTimePicker1.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -166,9 +206,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(374, 10);
+            this.label4.Location = new System.Drawing.Point(366, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 18);
+            this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 18;
             this.label4.Text = "Provider\'s name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,9 +218,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 49);
+            this.label2.Location = new System.Drawing.Point(59, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Date";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,9 +230,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 10);
+            this.label8.Location = new System.Drawing.Point(19, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 18);
+            this.label8.Size = new System.Drawing.Size(130, 20);
             this.label8.TabIndex = 15;
             this.label8.Text = "Purchase folio";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,9 +242,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(366, 49);
+            this.label3.Location = new System.Drawing.Point(358, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 18);
+            this.label3.Size = new System.Drawing.Size(162, 20);
             this.label3.TabIndex = 17;
             this.label3.Text = "Provider\'s number";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +269,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(798, 450);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 18);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 25;
             this.label5.Text = "Total ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,41 +374,6 @@
             this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgVentas.TabIndex = 1;
             this.imgVentas.TabStop = false;
-            // 
-            // producto
-            // 
-            this.producto.FillWeight = 120F;
-            this.producto.HeaderText = "Product";
-            this.producto.MinimumWidth = 6;
-            this.producto.Name = "producto";
-            this.producto.Width = 291;
-            // 
-            // foto
-            // 
-            this.foto.HeaderText = "Photo";
-            this.foto.Name = "foto";
-            this.foto.Width = 243;
-            // 
-            // tam
-            // 
-            this.tam.FillWeight = 54.72081F;
-            this.tam.HeaderText = "Size";
-            this.tam.Name = "tam";
-            this.tam.Width = 133;
-            // 
-            // cantidad
-            // 
-            this.cantidad.FillWeight = 54.72081F;
-            this.cantidad.HeaderText = "Amount";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Width = 133;
-            // 
-            // precio
-            // 
-            this.precio.FillWeight = 54.72081F;
-            this.precio.HeaderText = "Unit price ";
-            this.precio.Name = "precio";
-            this.precio.Width = 133;
             // 
             // compras
             // 

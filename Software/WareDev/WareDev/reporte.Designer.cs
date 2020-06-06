@@ -76,7 +76,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(44, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 18);
+            this.label1.Size = new System.Drawing.Size(150, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Select the report";
             // 
@@ -128,7 +128,7 @@
             "Quotes"});
             this.cmdReporte.Location = new System.Drawing.Point(15, 112);
             this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(195, 28);
+            this.cmdReporte.Size = new System.Drawing.Size(195, 30);
             this.cmdReporte.TabIndex = 21;
             this.cmdReporte.TabStop = false;
             // 
@@ -179,7 +179,7 @@
             this.desdeTime.Location = new System.Drawing.Point(170, 3);
             this.desdeTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.desdeTime.Name = "desdeTime";
-            this.desdeTime.Size = new System.Drawing.Size(161, 26);
+            this.desdeTime.Size = new System.Drawing.Size(161, 27);
             this.desdeTime.TabIndex = 15;
             this.desdeTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -188,9 +188,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 11);
+            this.label4.Location = new System.Drawing.Point(54, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "From:";
             // 
@@ -199,9 +199,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(394, 11);
+            this.label2.Location = new System.Drawing.Point(390, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Until:";
             // 
@@ -215,7 +215,7 @@
             this.hastaTime.Location = new System.Drawing.Point(504, 3);
             this.hastaTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.hastaTime.Name = "hastaTime";
-            this.hastaTime.Size = new System.Drawing.Size(161, 26);
+            this.hastaTime.Size = new System.Drawing.Size(161, 27);
             this.hastaTime.TabIndex = 16;
             this.hastaTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -254,6 +254,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 

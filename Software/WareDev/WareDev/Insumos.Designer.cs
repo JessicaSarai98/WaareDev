@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insumos));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
             this.txtDesInsumo = new System.Windows.Forms.TextBox();
             this.btnFoto = new System.Windows.Forms.Button();
@@ -47,15 +48,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCostoTotalInsumo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
-            this.FotoProduc = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
             this.top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -70,6 +70,20 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 2;
+            // 
+            // FotoProduc
+            // 
+            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
+            this.FotoProduc.Location = new System.Drawing.Point(777, 329);
+            this.FotoProduc.Name = "FotoProduc";
+            this.FotoProduc.Size = new System.Drawing.Size(164, 144);
+            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FotoProduc.TabIndex = 31;
+            this.FotoProduc.TabStop = false;
+            this.FotoProduc.Visible = false;
             // 
             // tablaFacVentas
             // 
@@ -174,9 +188,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 11);
+            this.label2.Location = new System.Drawing.Point(101, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Date";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,9 +200,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(601, 11);
+            this.label6.Location = new System.Drawing.Point(599, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 18);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 31;
             this.label6.Text = "Name";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,9 +212,9 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(587, 51);
+            this.label12.Location = new System.Drawing.Point(582, 50);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 18);
+            this.label12.Size = new System.Drawing.Size(91, 20);
             this.label12.TabIndex = 41;
             this.label12.Text = "Unit price";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,7 +229,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(254, 3);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 27);
             this.dateTimePicker1.TabIndex = 26;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
@@ -252,9 +266,9 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(51, 91);
+            this.label11.Location = new System.Drawing.Point(43, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 18);
+            this.label11.Size = new System.Drawing.Size(165, 20);
             this.label11.TabIndex = 48;
             this.label11.Text = "Amount purchased";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,9 +278,9 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(61, 51);
+            this.label10.Location = new System.Drawing.Point(54, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 18);
+            this.label10.Size = new System.Drawing.Size(143, 20);
             this.label10.TabIndex = 47;
             this.label10.Text = "Unit of measure";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,9 +290,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(585, 91);
+            this.label4.Location = new System.Drawing.Point(581, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 18);
+            this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 52;
             this.label4.Text = "Total cost";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,9 +302,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(601, 132);
+            this.label5.Location = new System.Drawing.Point(599, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 54;
             this.label5.Text = "Photo";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,9 +314,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(78, 132);
+            this.label7.Location = new System.Drawing.Point(72, 131);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 18);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 55;
             this.label7.Text = "Description";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -320,6 +334,24 @@
             this.txtCostoTotalInsumo.Size = new System.Drawing.Size(247, 34);
             this.txtCostoTotalInsumo.TabIndex = 53;
             this.txtCostoTotalInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "Save";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // top
             // 
@@ -340,38 +372,6 @@
             this.txtVentas.Size = new System.Drawing.Size(212, 42);
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Add inputs";
-            // 
-            // FotoProduc
-            // 
-            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
-            this.FotoProduc.Location = new System.Drawing.Point(777, 329);
-            this.FotoProduc.Name = "FotoProduc";
-            this.FotoProduc.Size = new System.Drawing.Size(164, 144);
-            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FotoProduc.TabIndex = 31;
-            this.FotoProduc.TabStop = false;
-            this.FotoProduc.Visible = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(213)))), ((int)(((byte)(227)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(792, 90);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // btrRegreso
             // 
@@ -403,10 +403,10 @@
             this.Text = "Insumos";
             this.Load += new System.EventHandler(this.Insumos_Load);
             this.contenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();
             this.top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.ResumeLayout(false);
 
         }

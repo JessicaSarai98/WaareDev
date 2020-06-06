@@ -103,9 +103,11 @@ namespace WareDev
 
         private void btnNombreUsuario_Click(object sender, EventArgs e)
         {
-          
-            ModalUsuario user = new ModalUsuario();
-            user.ShowDialog();
+            this.Close();
+            Login logi = new Login();
+            logi.Show();
+
+
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
