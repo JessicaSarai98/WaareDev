@@ -163,11 +163,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(715, 185);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 47);
-<<<<<<< HEAD
-            this.btnBuscar.TabIndex = 17;
-=======
             this.btnBuscar.TabIndex = 3;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.btnBuscar.Text = "Find";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -201,13 +197,8 @@
             this.desdeTime.Location = new System.Drawing.Point(170, 3);
             this.desdeTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.desdeTime.Name = "desdeTime";
-<<<<<<< HEAD
-            this.desdeTime.Size = new System.Drawing.Size(161, 27);
-            this.desdeTime.TabIndex = 15;
-=======
             this.desdeTime.Size = new System.Drawing.Size(161, 26);
             this.desdeTime.TabIndex = 1;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.desdeTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // label4
@@ -215,15 +206,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(54, 10);
+            this.label4.Location = new System.Drawing.Point(57, 11);
             this.label4.Name = "label4";
-<<<<<<< HEAD
-            this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 10;
-=======
             this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label4.Text = "From:";
             // 
             // label2
@@ -231,15 +217,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(390, 10);
+            this.label2.Location = new System.Drawing.Point(394, 11);
             this.label2.Name = "label2";
-<<<<<<< HEAD
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 11;
-=======
             this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label2.Text = "Until:";
             // 
             // hastaTime
@@ -252,13 +233,8 @@
             this.hastaTime.Location = new System.Drawing.Point(504, 3);
             this.hastaTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.hastaTime.Name = "hastaTime";
-<<<<<<< HEAD
-            this.hastaTime.Size = new System.Drawing.Size(161, 27);
-            this.hastaTime.TabIndex = 16;
-=======
             this.hastaTime.Size = new System.Drawing.Size(161, 26);
             this.hastaTime.TabIndex = 2;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.hastaTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // panel1
@@ -298,11 +274,7 @@
             this.label1.Location = new System.Drawing.Point(99, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 42);
-<<<<<<< HEAD
-            this.label1.TabIndex = 3;
-=======
             this.label1.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label1.Text = "Profits";
             // 
             // btrRegreso
@@ -332,11 +304,7 @@
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1018, 84);
-<<<<<<< HEAD
-            this.panelTitulo.TabIndex = 1;
-=======
             this.panelTitulo.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // 
             // txtVentas
             // 
@@ -345,11 +313,7 @@
             this.txtVentas.Location = new System.Drawing.Point(338, 21);
             this.txtVentas.Name = "txtVentas";
             this.txtVentas.Size = new System.Drawing.Size(342, 42);
-<<<<<<< HEAD
-            this.txtVentas.TabIndex = 2;
-=======
             this.txtVentas.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.txtVentas.Text = "Start   >>>   Profits";
             // 
             // img

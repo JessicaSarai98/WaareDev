@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MateriaPrima));
             this.contenedor = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
             this.ID = new System.Windows.Forms.TextBox();
             this.SaveEdit = new System.Windows.Forms.Button();
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.tablaFacVentas = new System.Windows.Forms.TableLayoutPanel();
             this.txtCantiAdquirida = new System.Windows.Forms.TextBox();
@@ -61,25 +58,15 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtIva = new System.Windows.Forms.TextBox();
-            this.btnFoto = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-=======
             this.btnFoto = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-=======
             this.mat = new System.Windows.Forms.TextBox();
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
@@ -129,20 +116,6 @@
             this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SaveEdit.UseVisualStyleBackColor = false;
             this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
-            // 
-            // FotoProduc
-            // 
-            this.FotoProduc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FotoProduc.BackColor = System.Drawing.Color.Silver;
-            this.FotoProduc.Location = new System.Drawing.Point(792, 350);
-            this.FotoProduc.Name = "FotoProduc";
-            this.FotoProduc.Size = new System.Drawing.Size(161, 114);
-            this.FotoProduc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FotoProduc.TabIndex = 31;
-            this.FotoProduc.TabStop = false;
-            this.FotoProduc.Visible = false;
             // 
             // FotoProduc
             // 
@@ -222,11 +195,7 @@
             this.txtCantiAdquirida.Multiline = true;
             this.txtCantiAdquirida.Name = "txtCantiAdquirida";
             this.txtCantiAdquirida.Size = new System.Drawing.Size(161, 38);
-<<<<<<< HEAD
-            this.txtCantiAdquirida.TabIndex = 46;
-=======
             this.txtCantiAdquirida.TabIndex = 13;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
@@ -234,17 +203,10 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label11.Location = new System.Drawing.Point(369, 178);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 40);
-            this.label11.TabIndex = 45;
-=======
             this.label11.Location = new System.Drawing.Point(343, 189);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 18);
             this.label11.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label11.Text = "Amount purchased";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -253,15 +215,10 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(30, 188);
+            this.label13.Location = new System.Drawing.Point(36, 189);
             this.label13.Name = "label13";
-<<<<<<< HEAD
-            this.label13.Size = new System.Drawing.Size(106, 20);
-            this.label13.TabIndex = 42;
-=======
             this.label13.Size = new System.Drawing.Size(94, 18);
             this.label13.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label13.Text = "Description";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -284,17 +241,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(386, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 24;
-=======
             this.label2.Location = new System.Drawing.Point(389, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label2.Text = "Status";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -303,17 +253,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(12, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 40);
-            this.label1.TabIndex = 23;
-=======
             this.label1.Location = new System.Drawing.Point(19, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 36);
             this.label1.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label1.Text = "Customs unit of measure ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -322,15 +265,10 @@
             this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nombre.AutoSize = true;
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(55, 12);
+            this.nombre.Location = new System.Drawing.Point(57, 13);
             this.nombre.Name = "nombre";
-<<<<<<< HEAD
-            this.nombre.Size = new System.Drawing.Size(57, 20);
-            this.nombre.TabIndex = 7;
-=======
             this.nombre.Size = new System.Drawing.Size(52, 18);
             this.nombre.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.nombre.Text = "Name";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -339,15 +277,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 56);
+            this.label4.Location = new System.Drawing.Point(62, 57);
             this.label4.Name = "label4";
-<<<<<<< HEAD
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 9;
-=======
             this.label4.Size = new System.Drawing.Size(43, 18);
             this.label4.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label4.Text = "Date";
             // 
             // label8
@@ -355,15 +288,10 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(378, 12);
+            this.label8.Location = new System.Drawing.Point(382, 13);
             this.label8.Name = "label8";
-<<<<<<< HEAD
-            this.label8.Size = new System.Drawing.Size(78, 20);
-            this.label8.TabIndex = 14;
-=======
             this.label8.Size = new System.Drawing.Size(70, 18);
             this.label8.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label8.Text = "SAT key";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -381,21 +309,6 @@
             this.txtSat.TabIndex = 2;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-<<<<<<< HEAD
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(680, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 20);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Unit of measure";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-=======
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // txtNombre
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -431,13 +344,8 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(170, 47);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-<<<<<<< HEAD
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 27);
-            this.dateTimePicker1.TabIndex = 26;
-=======
             this.dateTimePicker1.Size = new System.Drawing.Size(161, 26);
             this.dateTimePicker1.TabIndex = 4;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
             // txtFraccion
@@ -502,15 +410,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(673, 56);
+            this.label3.Location = new System.Drawing.Point(680, 57);
             this.label3.Name = "label3";
-<<<<<<< HEAD
-            this.label3.Size = new System.Drawing.Size(156, 20);
-            this.label3.TabIndex = 30;
-=======
             this.label3.Size = new System.Drawing.Size(142, 18);
             this.label3.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label3.Text = " Customs amount";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -519,17 +422,10 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label6.Location = new System.Drawing.Point(725, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
-            this.label6.TabIndex = 31;
-=======
             this.label6.Location = new System.Drawing.Point(728, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 18);
             this.label6.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label6.Text = "Price";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -580,17 +476,10 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label10.Location = new System.Drawing.Point(12, 144);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 20);
-            this.label10.TabIndex = 39;
-=======
             this.label10.Location = new System.Drawing.Point(19, 144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 18);
             this.label10.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label10.Text = "Unit of measure";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -599,33 +488,15 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label7.Location = new System.Drawing.Point(354, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 40);
-            this.label7.TabIndex = 38;
-=======
             this.label7.Location = new System.Drawing.Point(360, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 36);
             this.label7.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label7.Text = "Percentage o amount added";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFoto
             // 
-<<<<<<< HEAD
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(64, 230);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 20);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "IVA";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-=======
             this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -643,60 +514,19 @@
             this.btnFoto.Text = "ADD PICTURE";
             this.btnFoto.UseVisualStyleBackColor = false;
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
-            // 
-            // txtIva
-            // 
-            this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIva.BackColor = System.Drawing.Color.White;
-            this.txtIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIva.Location = new System.Drawing.Point(170, 223);
-            this.txtIva.Multiline = true;
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(161, 35);
-            this.txtIva.TabIndex = 33;
-            this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnFoto
-            // 
-            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFoto.BackColor = System.Drawing.Color.Silver;
-            this.btnFoto.FlatAppearance.BorderSize = 0;
-            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnFoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFoto.Location = new System.Drawing.Point(838, 135);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnFoto.Size = new System.Drawing.Size(165, 38);
-            this.btnFoto.TabIndex = 44;
-            this.btnFoto.Text = "ADD PICTURE";
-            this.btnFoto.UseVisualStyleBackColor = false;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.label14.Location = new System.Drawing.Point(723, 144);
-=======
             this.label14.Location = new System.Drawing.Point(725, 144);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 20);
+            this.label14.Size = new System.Drawing.Size(53, 18);
             this.label14.TabIndex = 43;
             this.label14.Text = "Photo";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-<<<<<<< HEAD
-=======
             // txtIva
             // 
             this.txtIva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -723,7 +553,6 @@
             this.label12.Text = "IVA";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -737,18 +566,11 @@
             this.btnGuardar.Location = new System.Drawing.Point(792, 90);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-<<<<<<< HEAD
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-=======
             this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // 
             // top
             // 
@@ -757,11 +579,7 @@
             this.top.Location = new System.Drawing.Point(0, 0);
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(1018, 84);
-<<<<<<< HEAD
-            this.top.TabIndex = 18;
-=======
             this.top.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // 
             // txtVentas
             // 
@@ -771,11 +589,7 @@
             this.txtVentas.Location = new System.Drawing.Point(393, 22);
             this.txtVentas.Name = "txtVentas";
             this.txtVentas.Size = new System.Drawing.Size(342, 42);
-<<<<<<< HEAD
-            this.txtVentas.TabIndex = 2;
-=======
             this.txtVentas.TabIndex = 0;
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.txtVentas.Text = "Add raw material";
             // 
             // btrRegreso
@@ -797,8 +611,6 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-<<<<<<< HEAD
-=======
             // mat
             // 
             this.mat.Location = new System.Drawing.Point(584, 443);
@@ -807,7 +619,6 @@
             this.mat.TabIndex = 32;
             this.mat.Text = "Materia prima";
             // 
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // MateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -820,10 +631,7 @@
             this.Text = "2";
             this.Load += new System.EventHandler(this.MateriaPrima_Load_1);
             this.contenedor.ResumeLayout(false);
-<<<<<<< HEAD
-=======
             this.contenedor.PerformLayout();
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();
             this.tablaFacVentas.ResumeLayout(false);
             this.tablaFacVentas.PerformLayout();

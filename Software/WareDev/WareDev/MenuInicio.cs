@@ -102,17 +102,6 @@ namespace WareDev
             set.ShowDialog();
         }
 
-<<<<<<< HEAD
-        private void btnNombreUsuario_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Login logi = new Login();
-            logi.Show();
-
-
-        }
-=======
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -314,13 +303,6 @@ namespace WareDev
         {
             ModalUsuario user = new ModalUsuario();
             user.ShowDialog();
-        }
-
-        private void name_TextChanged(object sender, EventArgs e)
-        {
-            this.Close();
-            Login log = new Login();
-            log.Show();
         }
     }
 }

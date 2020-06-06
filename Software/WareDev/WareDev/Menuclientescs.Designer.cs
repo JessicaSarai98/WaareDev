@@ -33,6 +33,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.usersDataSet = new WareDev.usersDataSet();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 33);
+            this.label1.Size = new System.Drawing.Size(145, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Client List";
             // 
@@ -120,8 +121,6 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-<<<<<<< HEAD
-=======
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -143,7 +142,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,6 +208,7 @@
             this.Controls.Add(this.Actualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEditar);
@@ -231,6 +230,7 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private usersDataSet usersDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;

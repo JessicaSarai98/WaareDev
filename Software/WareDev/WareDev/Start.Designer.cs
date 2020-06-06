@@ -52,11 +52,7 @@
             // btnVentas
             // 
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.btnVentas.Location = new System.Drawing.Point(196, 46);
-=======
             this.btnVentas.Location = new System.Drawing.Point(288, 46);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(181, 88);
             this.btnVentas.TabIndex = 2;
@@ -67,11 +63,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button2.Location = new System.Drawing.Point(539, 35);
-=======
             this.button2.Location = new System.Drawing.Point(523, 46);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 88);
             this.button2.TabIndex = 5;
@@ -89,65 +81,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 192);
             this.dataGridView1.Name = "dataGridView1";
-<<<<<<< HEAD
-            this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 259);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Product";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 110;
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unit";
-            this.Unidad.MinimumWidth = 6;
-            this.Unidad.Name = "Unidad";
-            this.Unidad.Width = 110;
-            // 
-            // Almacen1
-            // 
-            this.Almacen1.HeaderText = "Warehouse1";
-            this.Almacen1.MinimumWidth = 6;
-            this.Almacen1.Name = "Almacen1";
-            this.Almacen1.Width = 110;
-            // 
-            // Almacen2
-            // 
-            this.Almacen2.HeaderText = "Warehouse2";
-            this.Almacen2.MinimumWidth = 6;
-            this.Almacen2.Name = "Almacen2";
-            this.Almacen2.Width = 110;
-            // 
-            // Almacen3
-            // 
-            this.Almacen3.HeaderText = "Wharehouse3";
-            this.Almacen3.MinimumWidth = 6;
-            this.Almacen3.Name = "Almacen3";
-            this.Almacen3.Width = 110;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Selling Price";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 110;
-            // 
-            // preciocompra
-            // 
-            this.preciocompra.HeaderText = "Purchase Price";
-            this.preciocompra.MinimumWidth = 6;
-            this.preciocompra.Name = "preciocompra";
-            this.preciocompra.Width = 110;
-=======
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(540, 259);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             // 
             // label1
             // 
@@ -156,11 +93,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(40, 98);
             this.label1.Name = "label1";
-<<<<<<< HEAD
-            this.label1.Size = new System.Drawing.Size(115, 20);
-=======
             this.label1.Size = new System.Drawing.Size(50, 17);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label1.TabIndex = 5;
             this.label1.Text = "Total:";
             // 
@@ -171,7 +104,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.Size = new System.Drawing.Size(101, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Raw Material";
             // 
@@ -182,11 +115,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 56);
             this.label3.Name = "label3";
-<<<<<<< HEAD
-            this.label3.Size = new System.Drawing.Size(115, 20);
-=======
             this.label3.Size = new System.Drawing.Size(50, 17);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label3.TabIndex = 7;
             this.label3.Text = "Total:";
             // 
@@ -197,7 +126,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(291, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Supplies";
             // 
@@ -208,11 +137,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(40, 13);
             this.label5.Name = "label5";
-<<<<<<< HEAD
-            this.label5.Size = new System.Drawing.Size(115, 20);
-=======
             this.label5.Size = new System.Drawing.Size(50, 17);
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.label5.TabIndex = 9;
             this.label5.Text = "Total:";
             // 
@@ -223,7 +148,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(274, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 20);
+            this.label6.Size = new System.Drawing.Size(104, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Final Product";
             // 
@@ -254,12 +179,6 @@
             this.contenedor.Controls.Add(this.button2);
             this.contenedor.Controls.Add(this.button5);
             this.contenedor.Controls.Add(this.btnVentas);
-<<<<<<< HEAD
-            this.contenedor.Controls.Add(this.label4);
-            this.contenedor.Controls.Add(this.label3);
-            this.contenedor.Controls.Add(this.label2);
-=======
->>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.contenedor.Controls.Add(this.dataGridView1);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 0);
