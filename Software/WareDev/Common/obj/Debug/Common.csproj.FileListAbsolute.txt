@@ -25,3 +25,12 @@ C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe.config
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\bin\Debug\Common.exe
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\bin\Debug\Common.pdb
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.Properties.Resources.resources
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.GenerateResource.cache
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.exe
+C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\Common\obj\Debug\Common.pdb
