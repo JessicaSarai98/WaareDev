@@ -31,35 +31,7 @@ namespace Domain
         {
 
         }
-        /*public UserModel(int ID, string username, string RFC, string phone, string email, 
-            string address, string city, string state, string country, string CP, string identy,
-            float tasa, string status, string vendedor, string pay, string cfdi, string note)
-        {
-            ID = ID;
-            this.username = username;
-            this.RFC = RFC;
-            this.phone = phone;
-            this.email = email;
-            this.address = address;
-            this.city = city;
-            this.state = state;
-            this.country = country;
-            this.CP = CP;
-            this.identy = identy;
-            tasa = tasa;
-            this.status = status;
-            this.vendedor = vendedor;
-            this.pay = pay;
-            this.cfdi = cfdi;
-            this.note = note;
-        }
-        public string editUserProfile()
-        {
-            userDao.editProfile(ID,username, RFC, phone, email, address, city,
-             state, country, CP, identy, tasa, status, vendedor, pay, cfdi, note);
-                return "Your profile has been successfully updated";
-            
-        }*/
+        
 
         public string AddUserProfile()
         {

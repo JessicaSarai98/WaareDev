@@ -40,10 +40,10 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.top = new System.Windows.Forms.Panel();
+            this.name = new System.Windows.Forms.TextBox();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnrestaur = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
-            this.btnNombreUsuario = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.PictureBox();
             this.btnexit = new System.Windows.Forms.PictureBox();
@@ -99,7 +99,7 @@
             this.btnCotizar.Name = "btnCotizar";
             this.btnCotizar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCotizar.Size = new System.Drawing.Size(250, 46);
-            this.btnCotizar.TabIndex = 19;
+            this.btnCotizar.TabIndex = 8;
             this.btnCotizar.Text = "Quotations";
             this.btnCotizar.UseVisualStyleBackColor = false;
             this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
@@ -118,7 +118,7 @@
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(250, 54);
-            this.btnReportes.TabIndex = 18;
+            this.btnReportes.TabIndex = 7;
             this.btnReportes.Text = "Reports";
             this.btnReportes.UseVisualStyleBackColor = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
@@ -137,7 +137,7 @@
             this.btnInven.Name = "btnInven";
             this.btnInven.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnInven.Size = new System.Drawing.Size(250, 54);
-            this.btnInven.TabIndex = 17;
+            this.btnInven.TabIndex = 6;
             this.btnInven.Text = "Inventory";
             this.btnInven.UseVisualStyleBackColor = false;
             this.btnInven.Click += new System.EventHandler(this.btnInven_Click);
@@ -156,7 +156,7 @@
             this.btnProve.Name = "btnProve";
             this.btnProve.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnProve.Size = new System.Drawing.Size(250, 54);
-            this.btnProve.TabIndex = 16;
+            this.btnProve.TabIndex = 5;
             this.btnProve.Text = "Suppliers";
             this.btnProve.UseVisualStyleBackColor = false;
             this.btnProve.Click += new System.EventHandler(this.btnProve_Click);
@@ -175,7 +175,7 @@
             this.btnClient.Name = "btnClient";
             this.btnClient.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnClient.Size = new System.Drawing.Size(250, 54);
-            this.btnClient.TabIndex = 15;
+            this.btnClient.TabIndex = 4;
             this.btnClient.Text = "Customers";
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
@@ -194,7 +194,7 @@
             this.btnuser.Name = "btnuser";
             this.btnuser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnuser.Size = new System.Drawing.Size(250, 54);
-            this.btnuser.TabIndex = 14;
+            this.btnuser.TabIndex = 3;
             this.btnuser.Text = "Users";
             this.btnuser.UseVisualStyleBackColor = false;
             this.btnuser.Click += new System.EventHandler(this.btnuser_Click);
@@ -213,7 +213,7 @@
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnInicio.Size = new System.Drawing.Size(250, 54);
-            this.btnInicio.TabIndex = 13;
+            this.btnInicio.TabIndex = 2;
             this.btnInicio.Text = "Start";
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -227,16 +227,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 196);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 0;
             // 
             // top
             // 
             this.top.AutoScroll = true;
             this.top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.top.Controls.Add(this.name);
             this.top.Controls.Add(this.btnmaximizar);
             this.top.Controls.Add(this.btnrestaur);
             this.top.Controls.Add(this.btnminimizar);
-            this.top.Controls.Add(this.btnNombreUsuario);
             this.top.Controls.Add(this.btnMenu);
             this.top.Controls.Add(this.btnSettings);
             this.top.Controls.Add(this.btnexit);
@@ -244,8 +244,30 @@
             this.top.Location = new System.Drawing.Point(250, 0);
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(1034, 57);
-            this.top.TabIndex = 4;
+            this.top.TabIndex = 0;
             this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_Paint_MouseDown);
+            // 
+            // name
+            // 
+            this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.name.Cursor = System.Windows.Forms.Cursors.Default;
+            this.name.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.SystemColors.Window;
+            this.name.Location = new System.Drawing.Point(514, 7);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Size = new System.Drawing.Size(296, 44);
+            this.name.TabIndex = 14;
+            this.name.TabStop = false;
+            this.name.Text = "Karina Carmona";
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.Click += new System.EventHandler(this.name_Click);
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
+            this.name.MouseLeave += new System.EventHandler(this.btnminimizar_MouseLeave);
+            this.name.MouseHover += new System.EventHandler(this.name_MouseHover);
             // 
             // btnmaximizar
             // 
@@ -289,26 +311,6 @@
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             this.btnminimizar.MouseLeave += new System.EventHandler(this.btnminimizar_MouseLeave);
             this.btnminimizar.MouseHover += new System.EventHandler(this.btnminimizar_MouseHover);
-            // 
-            // btnNombreUsuario
-            // 
-            this.btnNombreUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNombreUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btnNombreUsuario.FlatAppearance.BorderSize = 0;
-            this.btnNombreUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNombreUsuario.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNombreUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNombreUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnNombreUsuario.Image")));
-            this.btnNombreUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNombreUsuario.Location = new System.Drawing.Point(556, 4);
-            this.btnNombreUsuario.Name = "btnNombreUsuario";
-            this.btnNombreUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnNombreUsuario.Size = new System.Drawing.Size(250, 44);
-            this.btnNombreUsuario.TabIndex = 12;
-            this.btnNombreUsuario.Text = "Nombre del usuario";
-            this.btnNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNombreUsuario.UseVisualStyleBackColor = false;
-            this.btnNombreUsuario.Click += new System.EventHandler(this.btnNombreUsuario_Click);
             // 
             // btnMenu
             // 
@@ -364,7 +366,7 @@
             this.panel1.Location = new System.Drawing.Point(250, 572);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1034, 77);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 0;
             // 
             // fecha
             // 
@@ -398,7 +400,7 @@
             this.contenedor.Location = new System.Drawing.Point(250, 57);
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1034, 515);
-            this.contenedor.TabIndex = 6;
+            this.contenedor.TabIndex = 0;
             // 
             // label1
             // 
@@ -484,7 +486,6 @@
         private System.Windows.Forms.PictureBox btnmaximizar;
         private System.Windows.Forms.PictureBox btnrestaur;
         private System.Windows.Forms.PictureBox btnminimizar;
-        private System.Windows.Forms.Button btnNombreUsuario;
         private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.PictureBox btnSettings;
         private System.Windows.Forms.PictureBox btnexit;
@@ -496,5 +497,6 @@
         private System.Windows.Forms.Label nombreEmpresa;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox name;
     }
 }

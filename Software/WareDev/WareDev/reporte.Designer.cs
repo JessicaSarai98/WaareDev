@@ -89,7 +89,7 @@
             this.panel2.Location = new System.Drawing.Point(15, 162);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1015, 47);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 0;
             this.panel2.Visible = false;
             // 
             // lblTitulo
@@ -112,7 +112,7 @@
             this.panelResultado.Location = new System.Drawing.Point(12, 215);
             this.panelResultado.Name = "panelResultado";
             this.panelResultado.Size = new System.Drawing.Size(994, 225);
-            this.panelResultado.TabIndex = 22;
+            this.panelResultado.TabIndex = 0;
             this.panelResultado.Visible = false;
             // 
             // cmdReporte
@@ -128,8 +128,13 @@
             "Quotes"});
             this.cmdReporte.Location = new System.Drawing.Point(15, 112);
             this.cmdReporte.Name = "cmdReporte";
+<<<<<<< HEAD
             this.cmdReporte.Size = new System.Drawing.Size(195, 30);
             this.cmdReporte.TabIndex = 21;
+=======
+            this.cmdReporte.Size = new System.Drawing.Size(195, 28);
+            this.cmdReporte.TabIndex = 2;
+>>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.cmdReporte.TabStop = false;
             // 
             // btnBuscar
@@ -144,7 +149,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(927, 93);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Find";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -167,7 +172,7 @@
             this.tablaReportes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tablaReportes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tablaReportes.Size = new System.Drawing.Size(668, 40);
-            this.tablaReportes.TabIndex = 9;
+            this.tablaReportes.TabIndex = 0;
             // 
             // desdeTime
             // 
@@ -179,8 +184,13 @@
             this.desdeTime.Location = new System.Drawing.Point(170, 3);
             this.desdeTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.desdeTime.Name = "desdeTime";
+<<<<<<< HEAD
             this.desdeTime.Size = new System.Drawing.Size(161, 27);
             this.desdeTime.TabIndex = 15;
+=======
+            this.desdeTime.Size = new System.Drawing.Size(161, 26);
+            this.desdeTime.TabIndex = 3;
+>>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.desdeTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // label4
@@ -215,8 +225,13 @@
             this.hastaTime.Location = new System.Drawing.Point(504, 3);
             this.hastaTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.hastaTime.Name = "hastaTime";
+<<<<<<< HEAD
             this.hastaTime.Size = new System.Drawing.Size(161, 27);
             this.hastaTime.TabIndex = 16;
+=======
+            this.hastaTime.Size = new System.Drawing.Size(161, 26);
+            this.hastaTime.TabIndex = 4;
+>>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
             this.hastaTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
             // panelTitulo
@@ -239,7 +254,7 @@
             this.txtVentas.Location = new System.Drawing.Point(338, 21);
             this.txtVentas.Name = "txtVentas";
             this.txtVentas.Size = new System.Drawing.Size(560, 42);
-            this.txtVentas.TabIndex = 2;
+            this.txtVentas.TabIndex = 0;
             this.txtVentas.Text = "Reports";
             // 
             // imgVentas

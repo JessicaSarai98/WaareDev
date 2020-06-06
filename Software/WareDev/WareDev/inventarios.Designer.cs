@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inventarios));
             this.contenedor = new System.Windows.Forms.Panel();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -49,55 +51,58 @@
             this.txtUnidadB = new System.Windows.Forms.TextBox();
             this.txtNombreB = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnAgregarIns = new System.Windows.Forms.Button();
             this.btnAgreInsum = new System.Windows.Forms.Button();
             this.btnBorrarInsu = new System.Windows.Forms.Button();
             this.btnEditInsu = new System.Windows.Forms.Button();
             this.tablaInsumo = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNameInsumo = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panelTitulo = new System.Windows.Forms.Panel();
-            this.btnInsumos = new System.Windows.Forms.RadioButton();
-            this.txtVentas = new System.Windows.Forms.Label();
-            this.btnPTerminado = new System.Windows.Forms.RadioButton();
-            this.btnMPrima = new System.Windows.Forms.RadioButton();
-            this.btnAddProductos = new System.Windows.Forms.Button();
-            this.btnAddCantiProducto = new System.Windows.Forms.Button();
-            this.btnElimProdTerm = new System.Windows.Forms.Button();
-            this.btnEditProdTer = new System.Windows.Forms.Button();
-            this.TablaProducTermi = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNomProdTerm = new System.Windows.Forms.TextBox();
-            this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.btnBusProdTermi = new System.Windows.Forms.Button();
-            this.IDProdTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameProduTer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantDisponibleProduTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedidaInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadDispoInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNameInsumo = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.btnAddProductos = new System.Windows.Forms.Button();
+            this.btnAddCantiProducto = new System.Windows.Forms.Button();
+            this.btnElimProdTerm = new System.Windows.Forms.Button();
+            this.btnEditProdTer = new System.Windows.Forms.Button();
+            this.TablaProducTermi = new System.Windows.Forms.DataGridView();
+            this.IDProdTerm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduTer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioProdTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantDisponibleProduTermi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNomProdTerm = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.btnInsumos = new System.Windows.Forms.RadioButton();
+            this.txtVentas = new System.Windows.Forms.Label();
+            this.imgVentas = new System.Windows.Forms.PictureBox();
+            this.btnPTerminado = new System.Windows.Forms.RadioButton();
+            this.btnMPrima = new System.Windows.Forms.RadioButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contenedor.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.TabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaMatPrima)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaInsumo)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,12 +134,12 @@
             // 
             this.TabPage1.AutoScroll = true;
             this.TabPage1.BackColor = System.Drawing.Color.Khaki;
+            this.TabPage1.Controls.Add(this.dataGridView1);
             this.TabPage1.Controls.Add(this.btnAgregarProducto);
             this.TabPage1.Controls.Add(this.BtnAgregar);
             this.TabPage1.Controls.Add(this.BtnEliminar);
             this.TabPage1.Controls.Add(this.btnEditar);
             this.TabPage1.Controls.Add(this.TablaMatPrima);
-            this.TabPage1.Controls.Add(this.btnBuscar);
             this.TabPage1.Controls.Add(this.tableLayoutPanel1);
             this.TabPage1.Location = new System.Drawing.Point(4, 29);
             this.TabPage1.Name = "TabPage1";
@@ -142,6 +147,17 @@
             this.TabPage1.Size = new System.Drawing.Size(1010, 443);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Raw material";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 136);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(842, 304);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAgregarProducto
             // 
@@ -152,7 +168,7 @@
             this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProducto.ForeColor = System.Drawing.Color.Black;
             this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(876, 98);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(893, 98);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(104, 60);
             this.btnAgregarProducto.TabIndex = 36;
@@ -173,7 +189,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(876, 391);
+            this.BtnAgregar.Location = new System.Drawing.Point(893, 368);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 41);
             this.BtnAgregar.TabIndex = 35;
@@ -195,13 +211,14 @@
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.Silver;
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(876, 295);
+            this.BtnEliminar.Location = new System.Drawing.Point(893, 285);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(104, 41);
             this.BtnEliminar.TabIndex = 34;
             this.BtnEliminar.Text = "Delete";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -216,13 +233,14 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.Silver;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(876, 202);
+            this.btnEditar.Location = new System.Drawing.Point(893, 202);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(104, 41);
             this.btnEditar.TabIndex = 33;
             this.btnEditar.Text = "Edit";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // TablaMatPrima
             // 
@@ -246,10 +264,12 @@
             this.TablaMatPrima.Name = "TablaMatPrima";
             this.TablaMatPrima.RowHeadersWidth = 45;
             this.TablaMatPrima.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TablaMatPrima.Size = new System.Drawing.Size(798, 292);
+            this.TablaMatPrima.Size = new System.Drawing.Size(815, 295);
             this.TablaMatPrima.StandardTab = true;
             this.TablaMatPrima.TabIndex = 32;
             this.TablaMatPrima.TabStop = false;
+            this.TablaMatPrima.Visible = false;
+            this.TablaMatPrima.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaMatPrima_CellContentClick);
             // 
             // numero
             // 
@@ -346,6 +366,7 @@
             this.txtUnidadB.Name = "txtUnidadB";
             this.txtUnidadB.Size = new System.Drawing.Size(174, 33);
             this.txtUnidadB.TabIndex = 23;
+            this.txtUnidadB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUnidadB_KeyUp);
             // 
             // txtNombreB
             // 
@@ -358,23 +379,34 @@
             this.txtNombreB.Name = "txtNombreB";
             this.txtNombreB.Size = new System.Drawing.Size(174, 33);
             this.txtNombreB.TabIndex = 21;
+            this.txtNombreB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombreB_KeyUp);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.btnAgregarIns);
             this.tabPage2.Controls.Add(this.btnAgreInsum);
             this.tabPage2.Controls.Add(this.btnBorrarInsu);
             this.tabPage2.Controls.Add(this.btnEditInsu);
             this.tabPage2.Controls.Add(this.tablaInsumo);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Controls.Add(this.btnBuscarInsumo);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1010, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Supplies";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 136);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(797, 292);
+            this.dataGridView2.TabIndex = 44;
             // 
             // btnAgregarIns
             // 
@@ -435,6 +467,7 @@
             this.btnBorrarInsu.Text = "Delete";
             this.btnBorrarInsu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrarInsu.UseVisualStyleBackColor = false;
+            this.btnBorrarInsu.Click += new System.EventHandler(this.btnBorrarInsu_Click);
             // 
             // btnEditInsu
             // 
@@ -456,6 +489,7 @@
             this.btnEditInsu.Text = "Edit";
             this.btnEditInsu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditInsu.UseVisualStyleBackColor = false;
+            this.btnEditInsu.Click += new System.EventHandler(this.btnEditInsu_Click);
             // 
             // tablaInsumo
             // 
@@ -482,6 +516,42 @@
             this.tablaInsumo.StandardTab = true;
             this.tablaInsumo.TabIndex = 39;
             this.tablaInsumo.TabStop = false;
+            this.tablaInsumo.Visible = false;
+            // 
+            // IDInsumo
+            // 
+            this.IDInsumo.FillWeight = 38.49408F;
+            this.IDInsumo.HeaderText = "ID";
+            this.IDInsumo.MinimumWidth = 6;
+            this.IDInsumo.Name = "IDInsumo";
+            // 
+            // NombreInsu
+            // 
+            this.NombreInsu.FillWeight = 38.49408F;
+            this.NombreInsu.HeaderText = "Name";
+            this.NombreInsu.MinimumWidth = 6;
+            this.NombreInsu.Name = "NombreInsu";
+            // 
+            // UnidadMedidaInsumo
+            // 
+            this.UnidadMedidaInsumo.FillWeight = 38.49408F;
+            this.UnidadMedidaInsumo.HeaderText = "Unit of measure";
+            this.UnidadMedidaInsumo.MinimumWidth = 6;
+            this.UnidadMedidaInsumo.Name = "UnidadMedidaInsumo";
+            // 
+            // PrecioInsumo
+            // 
+            this.PrecioInsumo.FillWeight = 38.49408F;
+            this.PrecioInsumo.HeaderText = "Price";
+            this.PrecioInsumo.MinimumWidth = 6;
+            this.PrecioInsumo.Name = "PrecioInsumo";
+            // 
+            // CantidadDispoInsumo
+            // 
+            this.CantidadDispoInsumo.FillWeight = 38.49408F;
+            this.CantidadDispoInsumo.HeaderText = "Available quantity";
+            this.CantidadDispoInsumo.MinimumWidth = 6;
+            this.CantidadDispoInsumo.Name = "CantidadDispoInsumo";
             // 
             // tableLayoutPanel2
             // 
@@ -522,16 +592,17 @@
             this.txtNameInsumo.Name = "txtNameInsumo";
             this.txtNameInsumo.Size = new System.Drawing.Size(205, 33);
             this.txtNameInsumo.TabIndex = 21;
+            this.txtNameInsumo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameInsumo_KeyUp);
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Controls.Add(this.btnAddProductos);
             this.tabPage3.Controls.Add(this.btnAddCantiProducto);
             this.tabPage3.Controls.Add(this.btnElimProdTerm);
             this.tabPage3.Controls.Add(this.btnEditProdTer);
             this.tabPage3.Controls.Add(this.TablaProducTermi);
-            this.tabPage3.Controls.Add(this.btnBusProdTermi);
             this.tabPage3.Controls.Add(this.tableLayoutPanel3);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
@@ -539,94 +610,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finished products";
             // 
-            // tabPage4
+            // dataGridView3
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Khaki;
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1010, 443);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.Khaki;
-            this.panelTitulo.Controls.Add(this.btnInsumos);
-            this.panelTitulo.Controls.Add(this.txtVentas);
-            this.panelTitulo.Controls.Add(this.imgVentas);
-            this.panelTitulo.Controls.Add(this.btnPTerminado);
-            this.panelTitulo.Controls.Add(this.btnMPrima);
-            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1018, 84);
-            this.panelTitulo.TabIndex = 3;
-            // 
-            // btnInsumos
-            // 
-            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsumos.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnInsumos.FlatAppearance.BorderSize = 0;
-            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsumos.Location = new System.Drawing.Point(797, 32);
-            this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(132, 46);
-            this.btnInsumos.TabIndex = 5;
-            this.btnInsumos.TabStop = true;
-            this.btnInsumos.Text = "Finished products";
-            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnInsumos.UseVisualStyleBackColor = true;
-            this.btnInsumos.CheckedChanged += new System.EventHandler(this.btnInsumos_CheckedChanged);
-            // 
-            // txtVentas
-            // 
-            this.txtVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVentas.AutoSize = true;
-            this.txtVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
-            this.txtVentas.Location = new System.Drawing.Point(187, 19);
-            this.txtVentas.Name = "txtVentas";
-            this.txtVentas.Size = new System.Drawing.Size(136, 31);
-            this.txtVentas.TabIndex = 2;
-            this.txtVentas.Text = "Inventory";
-            // 
-            // btnPTerminado
-            // 
-            this.btnPTerminado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPTerminado.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnPTerminado.FlatAppearance.BorderSize = 0;
-            this.btnPTerminado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPTerminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPTerminado.Location = new System.Drawing.Point(629, 32);
-            this.btnPTerminado.Name = "btnPTerminado";
-            this.btnPTerminado.Size = new System.Drawing.Size(132, 46);
-            this.btnPTerminado.TabIndex = 4;
-            this.btnPTerminado.TabStop = true;
-            this.btnPTerminado.Text = "Inputs";
-            this.btnPTerminado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPTerminado.UseVisualStyleBackColor = true;
-            this.btnPTerminado.CheckedChanged += new System.EventHandler(this.btnPTerminado_CheckedChanged);
-            // 
-            // btnMPrima
-            // 
-            this.btnMPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMPrima.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnMPrima.Checked = true;
-            this.btnMPrima.FlatAppearance.BorderSize = 0;
-            this.btnMPrima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMPrima.Location = new System.Drawing.Point(461, 32);
-            this.btnMPrima.Name = "btnMPrima";
-            this.btnMPrima.Size = new System.Drawing.Size(132, 46);
-            this.btnMPrima.TabIndex = 3;
-            this.btnMPrima.TabStop = true;
-            this.btnMPrima.Text = "Raw material";
-            this.btnMPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMPrima.UseVisualStyleBackColor = true;
-            this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 136);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(797, 291);
+            this.dataGridView3.TabIndex = 51;
             // 
             // btnAddProductos
             // 
@@ -687,6 +679,7 @@
             this.btnElimProdTerm.Text = "Delete";
             this.btnElimProdTerm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnElimProdTerm.UseVisualStyleBackColor = false;
+            this.btnElimProdTerm.Click += new System.EventHandler(this.btnElimProdTerm_Click);
             // 
             // btnEditProdTer
             // 
@@ -708,6 +701,7 @@
             this.btnEditProdTer.Text = "Edit";
             this.btnEditProdTer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditProdTer.UseVisualStyleBackColor = false;
+            this.btnEditProdTer.Click += new System.EventHandler(this.btnEditProdTer_Click);
             // 
             // TablaProducTermi
             // 
@@ -734,6 +728,42 @@
             this.TablaProducTermi.StandardTab = true;
             this.TablaProducTermi.TabIndex = 46;
             this.TablaProducTermi.TabStop = false;
+            this.TablaProducTermi.Visible = false;
+            // 
+            // IDProdTerm
+            // 
+            this.IDProdTerm.FillWeight = 38.49408F;
+            this.IDProdTerm.HeaderText = "ID";
+            this.IDProdTerm.MinimumWidth = 6;
+            this.IDProdTerm.Name = "IDProdTerm";
+            // 
+            // nameProduTer
+            // 
+            this.nameProduTer.FillWeight = 38.49408F;
+            this.nameProduTer.HeaderText = "Name";
+            this.nameProduTer.MinimumWidth = 6;
+            this.nameProduTer.Name = "nameProduTer";
+            // 
+            // UnidadProdTermi
+            // 
+            this.UnidadProdTermi.FillWeight = 38.49408F;
+            this.UnidadProdTermi.HeaderText = "Unit of measure";
+            this.UnidadProdTermi.MinimumWidth = 6;
+            this.UnidadProdTermi.Name = "UnidadProdTermi";
+            // 
+            // precioProdTermi
+            // 
+            this.precioProdTermi.FillWeight = 38.49408F;
+            this.precioProdTermi.HeaderText = "Price";
+            this.precioProdTermi.MinimumWidth = 6;
+            this.precioProdTermi.Name = "precioProdTermi";
+            // 
+            // CantDisponibleProduTermi
+            // 
+            this.CantDisponibleProduTermi.FillWeight = 38.49408F;
+            this.CantDisponibleProduTermi.HeaderText = "Available quantity";
+            this.CantDisponibleProduTermi.MinimumWidth = 6;
+            this.CantDisponibleProduTermi.Name = "CantDisponibleProduTermi";
             // 
             // tableLayoutPanel3
             // 
@@ -774,6 +804,62 @@
             this.txtNomProdTerm.Name = "txtNomProdTerm";
             this.txtNomProdTerm.Size = new System.Drawing.Size(205, 33);
             this.txtNomProdTerm.TabIndex = 21;
+            this.txtNomProdTerm.TextChanged += new System.EventHandler(this.txtNomProdTerm_TextChanged);
+            this.txtNomProdTerm.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNomProdTerm_KeyUp);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Khaki;
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1010, 443);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.Khaki;
+            this.panelTitulo.Controls.Add(this.btnInsumos);
+            this.panelTitulo.Controls.Add(this.txtVentas);
+            this.panelTitulo.Controls.Add(this.imgVentas);
+            this.panelTitulo.Controls.Add(this.btnPTerminado);
+            this.panelTitulo.Controls.Add(this.btnMPrima);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1018, 84);
+            this.panelTitulo.TabIndex = 3;
+            // 
+            // btnInsumos
+            // 
+            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsumos.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnInsumos.FlatAppearance.BorderSize = 0;
+            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsumos.Location = new System.Drawing.Point(797, 32);
+            this.btnInsumos.Name = "btnInsumos";
+            this.btnInsumos.Size = new System.Drawing.Size(132, 46);
+            this.btnInsumos.TabIndex = 5;
+            this.btnInsumos.TabStop = true;
+            this.btnInsumos.Text = "Finished products";
+            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInsumos.UseVisualStyleBackColor = true;
+            this.btnInsumos.CheckedChanged += new System.EventHandler(this.btnInsumos_CheckedChanged);
+            // 
+            // txtVentas
+            // 
+            this.txtVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtVentas.AutoSize = true;
+            this.txtVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
+            this.txtVentas.Location = new System.Drawing.Point(187, 19);
+            this.txtVentas.Name = "txtVentas";
+            this.txtVentas.Size = new System.Drawing.Size(136, 31);
+            this.txtVentas.TabIndex = 2;
+            this.txtVentas.Text = "Inventory";
             // 
             // imgVentas
             // 
@@ -785,126 +871,40 @@
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
             // 
-            // btnBuscar
+            // btnPTerminado
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(752, 63);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscar.TabIndex = 31;
-            this.btnBuscar.Text = "Find";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnPTerminado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPTerminado.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnPTerminado.FlatAppearance.BorderSize = 0;
+            this.btnPTerminado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPTerminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPTerminado.Location = new System.Drawing.Point(629, 32);
+            this.btnPTerminado.Name = "btnPTerminado";
+            this.btnPTerminado.Size = new System.Drawing.Size(132, 46);
+            this.btnPTerminado.TabIndex = 4;
+            this.btnPTerminado.TabStop = true;
+            this.btnPTerminado.Text = "Inputs";
+            this.btnPTerminado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPTerminado.UseVisualStyleBackColor = true;
+            this.btnPTerminado.CheckedChanged += new System.EventHandler(this.btnPTerminado_CheckedChanged);
             // 
-            // btnBuscarInsumo
+            // btnMPrima
             // 
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBuscarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarInsumo.Image")));
-            this.btnBuscarInsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(522, 78);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(79, 47);
-            this.btnBuscarInsumo.TabIndex = 38;
-            this.btnBuscarInsumo.Text = "Find";
-            this.btnBuscarInsumo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            // 
-            // btnBusProdTermi
-            // 
-            this.btnBusProdTermi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.btnBusProdTermi.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBusProdTermi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusProdTermi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusProdTermi.ForeColor = System.Drawing.Color.Black;
-            this.btnBusProdTermi.Image = ((System.Drawing.Image)(resources.GetObject("btnBusProdTermi.Image")));
-            this.btnBusProdTermi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusProdTermi.Location = new System.Drawing.Point(536, 78);
-            this.btnBusProdTermi.Name = "btnBusProdTermi";
-            this.btnBusProdTermi.Size = new System.Drawing.Size(79, 47);
-            this.btnBusProdTermi.TabIndex = 45;
-            this.btnBusProdTermi.Text = "Find";
-            this.btnBusProdTermi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBusProdTermi.UseVisualStyleBackColor = false;
-            // 
-            // IDProdTerm
-            // 
-            this.IDProdTerm.FillWeight = 38.49408F;
-            this.IDProdTerm.HeaderText = "ID";
-            this.IDProdTerm.MinimumWidth = 6;
-            this.IDProdTerm.Name = "IDProdTerm";
-            // 
-            // nameProduTer
-            // 
-            this.nameProduTer.FillWeight = 38.49408F;
-            this.nameProduTer.HeaderText = "Name";
-            this.nameProduTer.MinimumWidth = 6;
-            this.nameProduTer.Name = "nameProduTer";
-            // 
-            // UnidadProdTermi
-            // 
-            this.UnidadProdTermi.FillWeight = 38.49408F;
-            this.UnidadProdTermi.HeaderText = "Unit of measure";
-            this.UnidadProdTermi.MinimumWidth = 6;
-            this.UnidadProdTermi.Name = "UnidadProdTermi";
-            // 
-            // precioProdTermi
-            // 
-            this.precioProdTermi.FillWeight = 38.49408F;
-            this.precioProdTermi.HeaderText = "Price";
-            this.precioProdTermi.MinimumWidth = 6;
-            this.precioProdTermi.Name = "precioProdTermi";
-            // 
-            // CantDisponibleProduTermi
-            // 
-            this.CantDisponibleProduTermi.FillWeight = 38.49408F;
-            this.CantDisponibleProduTermi.HeaderText = "Available quantity";
-            this.CantDisponibleProduTermi.MinimumWidth = 6;
-            this.CantDisponibleProduTermi.Name = "CantDisponibleProduTermi";
-            // 
-            // IDInsumo
-            // 
-            this.IDInsumo.FillWeight = 38.49408F;
-            this.IDInsumo.HeaderText = "ID";
-            this.IDInsumo.MinimumWidth = 6;
-            this.IDInsumo.Name = "IDInsumo";
-            // 
-            // NombreInsu
-            // 
-            this.NombreInsu.FillWeight = 38.49408F;
-            this.NombreInsu.HeaderText = "Name";
-            this.NombreInsu.MinimumWidth = 6;
-            this.NombreInsu.Name = "NombreInsu";
-            // 
-            // UnidadMedidaInsumo
-            // 
-            this.UnidadMedidaInsumo.FillWeight = 38.49408F;
-            this.UnidadMedidaInsumo.HeaderText = "Unit of measure";
-            this.UnidadMedidaInsumo.MinimumWidth = 6;
-            this.UnidadMedidaInsumo.Name = "UnidadMedidaInsumo";
-            // 
-            // PrecioInsumo
-            // 
-            this.PrecioInsumo.FillWeight = 38.49408F;
-            this.PrecioInsumo.HeaderText = "Price";
-            this.PrecioInsumo.MinimumWidth = 6;
-            this.PrecioInsumo.Name = "PrecioInsumo";
-            // 
-            // CantidadDispoInsumo
-            // 
-            this.CantidadDispoInsumo.FillWeight = 38.49408F;
-            this.CantidadDispoInsumo.HeaderText = "Available quantity";
-            this.CantidadDispoInsumo.MinimumWidth = 6;
-            this.CantidadDispoInsumo.Name = "CantidadDispoInsumo";
+            this.btnMPrima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMPrima.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnMPrima.Checked = true;
+            this.btnMPrima.FlatAppearance.BorderSize = 0;
+            this.btnMPrima.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMPrima.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMPrima.Location = new System.Drawing.Point(461, 32);
+            this.btnMPrima.Name = "btnMPrima";
+            this.btnMPrima.Size = new System.Drawing.Size(132, 46);
+            this.btnMPrima.TabIndex = 3;
+            this.btnMPrima.TabStop = true;
+            this.btnMPrima.Text = "Raw material";
+            this.btnMPrima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMPrima.UseVisualStyleBackColor = true;
+            this.btnMPrima.CheckedChanged += new System.EventHandler(this.btnMPrima_CheckedChanged);
             // 
             // inventarios
             // 
@@ -919,19 +919,22 @@
             this.contenedor.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaMatPrima)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaInsumo)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.panelTitulo.ResumeLayout(false);
-            this.panelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProducTermi)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
             this.ResumeLayout(false);
 
@@ -955,8 +958,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUnidadB;
         private System.Windows.Forms.TextBox txtNombreB;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView TablaMatPrima;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
@@ -973,7 +974,6 @@
         private System.Windows.Forms.Button btnBorrarInsu;
         private System.Windows.Forms.Button btnEditInsu;
         private System.Windows.Forms.DataGridView tablaInsumo;
-        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNameInsumo;
@@ -982,10 +982,8 @@
         private System.Windows.Forms.Button btnElimProdTerm;
         private System.Windows.Forms.Button btnEditProdTer;
         private System.Windows.Forms.DataGridView TablaProducTermi;
-        private System.Windows.Forms.Button btnBusProdTermi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNomProdTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProdTerm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameProduTer;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadProdTermi;
@@ -996,5 +994,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedidaInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDispoInsumo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView TablaMatPrima;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.TextBox txtNomProdTerm;
+        public System.Windows.Forms.DataGridView dataGridView3;
+        public System.Windows.Forms.Timer timer1;
     }
 }

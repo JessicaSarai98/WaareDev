@@ -17,6 +17,9 @@ namespace WareDev
 {
     public partial class Supplier : Form
     {
+        CN_Clientes objetoCN = new CN_Clientes();
+        MenuProve menu = new MenuProve(); 
+
         public Supplier()
         {
             InitializeComponent();
@@ -176,6 +179,37 @@ namespace WareDev
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        //Guardado (nuevo)
+        private void saveNew_Click(object sender, EventArgs e)
+        {
+            MenuProve menu = new MenuProve();
+            try
+            {
+                objetoCN.InsertarSupp(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
+                    citytxt.Text, divisa.Text);
+                MessageBox.Show("Se ha insertado correctamente.");
+                this.Close(); 
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos por: "+ex); 
+            }
+        }
+
+        private void saveEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                objetoCN.EditarSup(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
+                    citytxt.Text, divisa.Text, IDtxtbox.Text);
+                MessageBox.Show("Se ha editado correctamente.");
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("No se puedo editar los datos por "+ex); 
+            }
         }
     }
 }

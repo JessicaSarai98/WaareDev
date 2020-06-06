@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Common.cache;
-using Domain; 
+using Domain;
+
 namespace WareDev
 {
     public partial class MenuInicio : Form
@@ -101,6 +102,7 @@ namespace WareDev
             set.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void btnNombreUsuario_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -109,6 +111,8 @@ namespace WareDev
 
 
         }
+=======
+>>>>>>> 35b4983bb7a33d5bafa053f5968d4e7872e9c1cc
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -277,7 +281,8 @@ namespace WareDev
             btnminimizar.BackColor = Color.FromArgb(91, 210, 43);
             btnexit.BackColor = Color.FromArgb(91, 210, 43);
             btnmaximizar.BackColor = Color.FromArgb(91, 210, 43);
-            btnrestaur.BackColor = Color.FromArgb(91, 210, 43);
+            btnrestaur.BackColor = Color.FromArgb(91, 210, 43); 
+            name.BackColor = Color.FromArgb(91, 210, 43);
         }
 
         private void btnmaximizar_MouseHover(object sender, EventArgs e)
@@ -298,6 +303,24 @@ namespace WareDev
         private void MenuInicio_SizeChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void name_MouseHover(object sender, EventArgs e)
+        {
+            name.BackColor = Color.FromArgb(98, 226, 45);
+        }
+
+        private void name_Click(object sender, EventArgs e)
+        {
+            ModalUsuario user = new ModalUsuario();
+            user.ShowDialog();
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+            this.Close();
+            Login log = new Login();
+            log.Show();
         }
     }
 }

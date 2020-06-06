@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registro));
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.User = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.saveEdit = new System.Windows.Forms.Button();
             this.lasttxt = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,6 +74,8 @@
             this.User.AutoSize = true;
             this.User.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.User.Controls.Add(this.ID);
+            this.User.Controls.Add(this.saveEdit);
             this.User.Controls.Add(this.lasttxt);
             this.User.Controls.Add(this.button6);
             this.User.Controls.Add(this.button5);
@@ -93,8 +97,39 @@
             this.User.Location = new System.Drawing.Point(0, 0);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(1018, 476);
-            this.User.TabIndex = 21;
+            this.User.TabIndex = 0;
             this.User.Paint += new System.Windows.Forms.PaintEventHandler(this.User_Paint);
+            // 
+            // ID
+            // 
+            this.ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(176)))), ((int)(((byte)(77)))));
+            this.ID.Enabled = false;
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.Location = new System.Drawing.Point(214, 12);
+            this.ID.Multiline = true;
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(45, 40);
+            this.ID.TabIndex = 29;
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // saveEdit
+            // 
+            this.saveEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.saveEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveEdit.BackColor = System.Drawing.Color.Gold;
+            this.saveEdit.FlatAppearance.BorderSize = 0;
+            this.saveEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.saveEdit.Image = ((System.Drawing.Image)(resources.GetObject("saveEdit.Image")));
+            this.saveEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveEdit.Location = new System.Drawing.Point(271, 422);
+            this.saveEdit.Name = "saveEdit";
+            this.saveEdit.Size = new System.Drawing.Size(143, 42);
+            this.saveEdit.TabIndex = 9;
+            this.saveEdit.Text = "SAVE";
+            this.saveEdit.UseVisualStyleBackColor = false;
+            this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
             // 
             // lasttxt
             // 
@@ -116,11 +151,11 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(529, 308);
+            this.button6.Location = new System.Drawing.Point(617, 305);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(157, 56);
-            this.button6.TabIndex = 26;
+            this.button6.TabIndex = 7;
             this.button6.Text = "CHANGE PIC";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -134,11 +169,11 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(721, 308);
+            this.button5.Location = new System.Drawing.Point(617, 240);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(157, 56);
-            this.button5.TabIndex = 25;
+            this.button5.TabIndex = 6;
             this.button5.Text = "ADD PICTURE";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -157,7 +192,7 @@
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(161, 42);
-            this.button1.TabIndex = 22;
+            this.button1.TabIndex = 11;
             this.button1.Text = "HELP";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -186,7 +221,7 @@
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(148, 41);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -213,11 +248,11 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(198, 422);
+            this.button3.Location = new System.Drawing.Point(78, 422);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 42);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "   ADD";
+            this.button3.TabIndex = 8;
+            this.button3.Text = "SAVE";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -321,6 +356,7 @@
             this.IconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconUser.TabIndex = 0;
             this.IconUser.TabStop = false;
+            this.IconUser.Click += new System.EventHandler(this.IconUser_Click);
             // 
             // registro
             // 
@@ -349,11 +385,7 @@
         #endregion
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox Fotouser;
-        private System.Windows.Forms.Button button6;
         public System.Windows.Forms.PictureBox pictureBox6;
         public System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.PictureBox pictureBox2;
@@ -366,5 +398,11 @@
         public System.Windows.Forms.PictureBox IconUser;
         public System.Windows.Forms.Panel User;
         public System.Windows.Forms.TextBox lasttxt;
+        public System.Windows.Forms.Button saveEdit;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox ID;
+        public System.Windows.Forms.PictureBox Fotouser;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button button6;
     }
 }

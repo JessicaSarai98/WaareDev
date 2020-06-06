@@ -218,7 +218,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(247, 491);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(169, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(149, 13);
             this.linkLabel1.TabIndex = 28;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado tu contraseña?";
@@ -339,7 +339,6 @@
         private System.Windows.Forms.PictureBox btnSettings;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textKey;
-        private System.Windows.Forms.TextBox textUser;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox IconUser;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -351,6 +350,7 @@
         private System.Windows.Forms.Panel titulo2;
         private System.Windows.Forms.Label nombreEmpresa;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox textUser;
     }
 }
 

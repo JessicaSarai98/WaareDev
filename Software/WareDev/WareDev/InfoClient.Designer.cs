@@ -135,7 +135,7 @@
             this.SaveEdit.Location = new System.Drawing.Point(665, 613);
             this.SaveEdit.Name = "SaveEdit";
             this.SaveEdit.Size = new System.Drawing.Size(115, 48);
-            this.SaveEdit.TabIndex = 40;
+            this.SaveEdit.TabIndex = 18;
             this.SaveEdit.Text = "Save";
             this.SaveEdit.UseVisualStyleBackColor = false;
             this.SaveEdit.UseWaitCursor = true;
@@ -149,7 +149,7 @@
             this.label15.Location = new System.Drawing.Point(816, 296);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 20);
-            this.label15.TabIndex = 39;
+            this.label15.TabIndex = 0;
             this.label15.Text = "Celler";
             this.label15.UseWaitCursor = true;
             // 
@@ -160,7 +160,7 @@
             this.vendortxt.Location = new System.Drawing.Point(1017, 294);
             this.vendortxt.Name = "vendortxt";
             this.vendortxt.Size = new System.Drawing.Size(174, 24);
-            this.vendortxt.TabIndex = 38;
+            this.vendortxt.TabIndex = 14;
             this.vendortxt.UseWaitCursor = true;
             // 
             // Imprimir
@@ -171,7 +171,7 @@
             this.Imprimir.Location = new System.Drawing.Point(974, 613);
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(114, 48);
-            this.Imprimir.TabIndex = 37;
+            this.Imprimir.TabIndex = 20;
             this.Imprimir.Text = "Export To PDF";
             this.Imprimir.UseVisualStyleBackColor = false;
             this.Imprimir.UseWaitCursor = true;
@@ -185,11 +185,11 @@
             this.save.Location = new System.Drawing.Point(829, 613);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(115, 48);
-            this.save.TabIndex = 36;
+            this.save.TabIndex = 19;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
             this.save.UseWaitCursor = true;
-            this.save.Click += new System.EventHandler(this.button2_Click);
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // button1
             // 
@@ -199,7 +199,7 @@
             this.button1.Location = new System.Drawing.Point(1110, 613);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 48);
-            this.button1.TabIndex = 35;
+            this.button1.TabIndex = 21;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
@@ -213,7 +213,7 @@
             this.note.Multiline = true;
             this.note.Name = "note";
             this.note.Size = new System.Drawing.Size(357, 62);
-            this.note.TabIndex = 34;
+            this.note.TabIndex = 17;
             this.note.UseWaitCursor = true;
             // 
             // cfditxt
@@ -223,7 +223,7 @@
             this.cfditxt.Location = new System.Drawing.Point(1017, 424);
             this.cfditxt.Name = "cfditxt";
             this.cfditxt.Size = new System.Drawing.Size(174, 24);
-            this.cfditxt.TabIndex = 33;
+            this.cfditxt.TabIndex = 16;
             this.cfditxt.UseWaitCursor = true;
             // 
             // paytxt
@@ -233,7 +233,7 @@
             this.paytxt.Location = new System.Drawing.Point(1017, 358);
             this.paytxt.Name = "paytxt";
             this.paytxt.Size = new System.Drawing.Size(174, 24);
-            this.paytxt.TabIndex = 32;
+            this.paytxt.TabIndex = 15;
             this.paytxt.UseWaitCursor = true;
             // 
             // statustxt
@@ -243,7 +243,7 @@
             this.statustxt.Location = new System.Drawing.Point(1017, 234);
             this.statustxt.Name = "statustxt";
             this.statustxt.Size = new System.Drawing.Size(174, 24);
-            this.statustxt.TabIndex = 30;
+            this.statustxt.TabIndex = 13;
             this.statustxt.UseWaitCursor = true;
             // 
             // tasatxt
@@ -253,7 +253,7 @@
             this.tasatxt.Location = new System.Drawing.Point(1017, 167);
             this.tasatxt.Name = "tasatxt";
             this.tasatxt.Size = new System.Drawing.Size(174, 24);
-            this.tasatxt.TabIndex = 29;
+            this.tasatxt.TabIndex = 12;
             this.tasatxt.UseWaitCursor = true;
             // 
             // identytxt
@@ -263,7 +263,7 @@
             this.identytxt.Location = new System.Drawing.Point(1017, 104);
             this.identytxt.Name = "identytxt";
             this.identytxt.Size = new System.Drawing.Size(174, 24);
-            this.identytxt.TabIndex = 28;
+            this.identytxt.TabIndex = 11;
             this.identytxt.UseWaitCursor = true;
             // 
             // CPtxt
@@ -273,7 +273,7 @@
             this.CPtxt.Location = new System.Drawing.Point(1017, 49);
             this.CPtxt.Name = "CPtxt";
             this.CPtxt.Size = new System.Drawing.Size(174, 24);
-            this.CPtxt.TabIndex = 27;
+            this.CPtxt.TabIndex = 10;
             this.CPtxt.UseWaitCursor = true;
             // 
             // countrytxt
@@ -282,7 +282,7 @@
             this.countrytxt.Location = new System.Drawing.Point(203, 628);
             this.countrytxt.Name = "countrytxt";
             this.countrytxt.Size = new System.Drawing.Size(191, 26);
-            this.countrytxt.TabIndex = 26;
+            this.countrytxt.TabIndex = 9;
             this.countrytxt.UseWaitCursor = true;
             // 
             // statetxt
@@ -291,7 +291,7 @@
             this.statetxt.Location = new System.Drawing.Point(203, 567);
             this.statetxt.Name = "statetxt";
             this.statetxt.Size = new System.Drawing.Size(191, 26);
-            this.statetxt.TabIndex = 25;
+            this.statetxt.TabIndex = 8;
             this.statetxt.UseWaitCursor = true;
             // 
             // citytxt
@@ -300,7 +300,7 @@
             this.citytxt.Location = new System.Drawing.Point(203, 504);
             this.citytxt.Name = "citytxt";
             this.citytxt.Size = new System.Drawing.Size(191, 26);
-            this.citytxt.TabIndex = 24;
+            this.citytxt.TabIndex = 7;
             this.citytxt.UseWaitCursor = true;
             // 
             // addrestxt
@@ -310,7 +310,7 @@
             this.addrestxt.Multiline = true;
             this.addrestxt.Name = "addrestxt";
             this.addrestxt.Size = new System.Drawing.Size(286, 58);
-            this.addrestxt.TabIndex = 23;
+            this.addrestxt.TabIndex = 6;
             this.addrestxt.UseWaitCursor = true;
             // 
             // mailtxt
@@ -319,7 +319,7 @@
             this.mailtxt.Location = new System.Drawing.Point(203, 360);
             this.mailtxt.Name = "mailtxt";
             this.mailtxt.Size = new System.Drawing.Size(213, 26);
-            this.mailtxt.TabIndex = 22;
+            this.mailtxt.TabIndex = 5;
             this.mailtxt.UseWaitCursor = true;
             // 
             // phonetxt
@@ -328,7 +328,7 @@
             this.phonetxt.Location = new System.Drawing.Point(203, 296);
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.Size = new System.Drawing.Size(213, 26);
-            this.phonetxt.TabIndex = 21;
+            this.phonetxt.TabIndex = 4;
             this.phonetxt.UseWaitCursor = true;
             // 
             // RFCtxt
@@ -337,7 +337,7 @@
             this.RFCtxt.Location = new System.Drawing.Point(203, 231);
             this.RFCtxt.Name = "RFCtxt";
             this.RFCtxt.Size = new System.Drawing.Size(213, 26);
-            this.RFCtxt.TabIndex = 20;
+            this.RFCtxt.TabIndex = 3;
             this.RFCtxt.UseWaitCursor = true;
             // 
             // Nametxt
@@ -346,7 +346,7 @@
             this.Nametxt.Location = new System.Drawing.Point(203, 167);
             this.Nametxt.Name = "Nametxt";
             this.Nametxt.Size = new System.Drawing.Size(213, 26);
-            this.Nametxt.TabIndex = 19;
+            this.Nametxt.TabIndex = 2;
             this.Nametxt.UseWaitCursor = true;
             // 
             // IDtxtbox
@@ -356,7 +356,7 @@
             this.IDtxtbox.Location = new System.Drawing.Point(203, 108);
             this.IDtxtbox.Name = "IDtxtbox";
             this.IDtxtbox.Size = new System.Drawing.Size(213, 26);
-            this.IDtxtbox.TabIndex = 18;
+            this.IDtxtbox.TabIndex = 1;
             this.IDtxtbox.UseWaitCursor = true;
             this.IDtxtbox.TextChanged += new System.EventHandler(this.IDtxtbox_TextChanged);
             // 
@@ -368,7 +368,7 @@
             this.label18.Location = new System.Drawing.Point(825, 477);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(48, 20);
-            this.label18.TabIndex = 17;
+            this.label18.TabIndex = 0;
             this.label18.Text = "Note";
             this.label18.UseWaitCursor = true;
             // 
@@ -380,7 +380,7 @@
             this.label17.Location = new System.Drawing.Point(826, 422);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 20);
-            this.label17.TabIndex = 16;
+            this.label17.TabIndex = 0;
             this.label17.Text = "CFDI";
             this.label17.UseWaitCursor = true;
             // 
@@ -392,7 +392,7 @@
             this.label16.Location = new System.Drawing.Point(816, 360);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 20);
-            this.label16.TabIndex = 15;
+            this.label16.TabIndex = 0;
             this.label16.Text = "Payment Method";
             this.label16.UseWaitCursor = true;
             // 
@@ -404,7 +404,7 @@
             this.label14.Location = new System.Drawing.Point(816, 235);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 20);
-            this.label14.TabIndex = 13;
+            this.label14.TabIndex = 0;
             this.label14.Text = "Status";
             this.label14.UseWaitCursor = true;
             // 
@@ -416,7 +416,7 @@
             this.label13.Location = new System.Drawing.Point(816, 170);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 20);
-            this.label13.TabIndex = 12;
+            this.label13.TabIndex = 0;
             this.label13.Text = "Tasa";
             this.label13.UseWaitCursor = true;
             // 
@@ -428,7 +428,7 @@
             this.label12.Location = new System.Drawing.Point(816, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 20);
-            this.label12.TabIndex = 11;
+            this.label12.TabIndex = 0;
             this.label12.Text = "Identy";
             this.label12.UseWaitCursor = true;
             // 
@@ -440,7 +440,7 @@
             this.label11.Location = new System.Drawing.Point(816, 49);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 20);
-            this.label11.TabIndex = 10;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Codigo Postal";
             this.label11.UseWaitCursor = true;
             // 
@@ -451,7 +451,7 @@
             this.label10.Location = new System.Drawing.Point(52, 624);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 20);
-            this.label10.TabIndex = 9;
+            this.label10.TabIndex = 0;
             this.label10.Text = "Country";
             this.label10.UseWaitCursor = true;
             // 
@@ -462,7 +462,7 @@
             this.label9.Location = new System.Drawing.Point(53, 563);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
-            this.label9.TabIndex = 8;
+            this.label9.TabIndex = 0;
             this.label9.Text = "State";
             this.label9.UseWaitCursor = true;
             // 
@@ -473,7 +473,7 @@
             this.label8.Location = new System.Drawing.Point(53, 500);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 20);
-            this.label8.TabIndex = 7;
+            this.label8.TabIndex = 0;
             this.label8.Text = "City";
             this.label8.UseWaitCursor = true;
             // 
@@ -484,7 +484,7 @@
             this.label7.Location = new System.Drawing.Point(53, 418);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 20);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Addres";
             this.label7.UseWaitCursor = true;
             // 
@@ -495,7 +495,7 @@
             this.label6.Location = new System.Drawing.Point(52, 360);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 0;
             this.label6.Text = "E-mail";
             this.label6.UseWaitCursor = true;
             // 
@@ -506,7 +506,7 @@
             this.label5.Location = new System.Drawing.Point(53, 296);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 20);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Phone";
             this.label5.UseWaitCursor = true;
             // 
@@ -517,7 +517,7 @@
             this.label4.Location = new System.Drawing.Point(52, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 0;
             this.label4.Text = "RFC";
             this.label4.UseWaitCursor = true;
             // 
@@ -528,7 +528,7 @@
             this.label3.Location = new System.Drawing.Point(53, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Name";
             this.label3.UseWaitCursor = true;
             // 
@@ -539,7 +539,7 @@
             this.label2.Location = new System.Drawing.Point(53, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 20);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "ID";
             this.label2.UseWaitCursor = true;
             // 
