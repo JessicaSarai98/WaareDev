@@ -63,7 +63,7 @@ namespace WareDev
             // jess
             //string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
             // karina Data Source = (LocalDB)-MSSQLLocalDB; Initial Catalog = users;Integrated Security = True; Connect Timeout = 30
-            string con = "Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False";
+            string con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30";
 
 
 

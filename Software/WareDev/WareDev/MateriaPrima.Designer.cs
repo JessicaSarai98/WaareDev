@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MateriaPrima));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.mat = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.SaveEdit = new System.Windows.Forms.Button();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
@@ -66,7 +67,6 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.mat = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
             this.tablaFacVentas.SuspendLayout();
@@ -88,6 +88,14 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1018, 476);
             this.contenedor.TabIndex = 0;
+            // 
+            // mat
+            // 
+            this.mat.Location = new System.Drawing.Point(584, 443);
+            this.mat.Name = "mat";
+            this.mat.Size = new System.Drawing.Size(100, 20);
+            this.mat.TabIndex = 32;
+            this.mat.Text = "Materia prima";
             // 
             // ID
             // 
@@ -610,14 +618,6 @@
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
-            // 
-            // mat
-            // 
-            this.mat.Location = new System.Drawing.Point(584, 443);
-            this.mat.Name = "mat";
-            this.mat.Size = new System.Drawing.Size(100, 20);
-            this.mat.TabIndex = 32;
-            this.mat.Text = "Materia prima";
             // 
             // MateriaPrima
             // 

@@ -126,13 +126,13 @@ namespace DataAccess
         //-----AGREGAR--------
 
         //insertar clientes
-        public void Insertar(string name, string rfc, string phone, string email, string address,
+        public void Insertar(int id, string name, string rfc, string phone, string email, string address,
             string city, string state, string country, string cp, string identy, double tasaa, string stat, string
             vendedor, string pm, string cfdi, string note)
         {
             // SqlCommand comando = new SqlCommand();
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into clientes values('" + name + "','" + rfc + "','" + phone + "','" + email + "','" + address + "','" + city + "','" + state + "','" + country + "','" + cp + "','" + identy + "'," + tasaa + ",'" + stat + "','" + vendedor + "','" + pm + "','" + cfdi + "','" + note + "')";
+            comando.CommandText = "insert into clientes values("+id+",'" + name + "','" + rfc + "','" + phone + "','" + email + "','" + address + "','" + city + "','" + state + "','" + country + "','" + cp + "','" + identy + "'," + tasaa + ",'" + stat + "','" + vendedor + "','" + pm + "','" + cfdi + "','" + note + "')";
 
             comando.CommandType = CommandType.Text;
 
@@ -150,10 +150,10 @@ namespace DataAccess
         }
 
         //insertar datos de proveedores 
-        public void InsertarS(string name, string rfc, string phone, string email, string addres, string country, string state, string city, string divisa)
+        public void InsertarS(int id, string name, string rfc, string phone, string email, string addres, string country, string state, string city, string divisa)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into supplier values('" + name + "', '" + rfc + "', '" + phone + "', '" + email + "', '" + addres + "', '" + country + "', '" + state + "', '" + city + "', '" + divisa + "')";
+            comando.CommandText = "insert into supplier values("+id+",'" + name + "', '" + rfc + "', '" + phone + "', '" + email + "', '" + addres + "', '" + country + "', '" + state + "', '" + city + "', '" + divisa + "')";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }

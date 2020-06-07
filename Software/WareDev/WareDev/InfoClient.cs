@@ -35,27 +35,6 @@ namespace WareDev
 
         }
 
-        //cargar datos
-       /* public void loadUserData()
-        {
-           IDtxtbox.Text = UserCache.ID.ToString();
-            Nametxt.Text = UserCache.username;
-            RFCtxt.Text = UserCache.RFC;
-            phonetxt.Text = UserCache.phone;
-            mailtxt.Text = UserCache.email;
-            addrestxt.Text = UserCache.address;
-            citytxt.Text = UserCache.city;
-            statettxt.Text = UserCache.state;
-            countrytxt.Text = UserCache.country;
-            CPtxt.Text = UserCache.CP;
-            identytxt.Text = UserCache.IF;
-            tasatxt.Text = UserCache.tasa.ToString();
-            statustxt.Text = UserCache.status;
-            vendortxt.Text = UserCache.vendedor;
-            paytxt.Text = UserCache.payment;
-            cfditxt.Text = UserCache.CFDI;
-            note.Text = UserCache.note;
-        }*/
 
         private void InfoClient_Load(object sender, EventArgs e)
         {
@@ -85,7 +64,7 @@ namespace WareDev
 
             try
             {
-                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
+                objectCN.InsertarClie(IDtxtbox.Text,Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text,
            citytxt.Text, statetxt.Text, countrytxt.Text, CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text,
            vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
                 MessageBox.Show("Se ha insertado correctamente.");
@@ -280,7 +259,7 @@ namespace WareDev
         {
             try
             {
-                objectCN.InsertarClie(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
+                objectCN.InsertarClie(IDtxtbox.Text,Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, citytxt.Text, statetxt.Text, countrytxt.Text,
                 CPtxt.Text, identytxt.Text, tasatxt.Text, statustxt.Text, vendortxt.Text, paytxt.Text, cfditxt.Text, note.Text);
                 MessageBox.Show("Se ha agregado correctamente.");
                 this.Close();

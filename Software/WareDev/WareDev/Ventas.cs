@@ -19,7 +19,7 @@ namespace WareDev
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -58,7 +58,7 @@ namespace WareDev
 
             ventas ven = new ventas();
             string query = "select max(Id) from ventas";
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
 
             SqlCommand cmd = new SqlCommand(query, con);
             try
@@ -238,10 +238,10 @@ namespace WareDev
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
-                    SqlDataAdapter da = new SqlDataAdapter(c);
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
+                    //SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
+                    //SqlDataAdapter da = new SqlDataAdapter(c);
+                    //da.Fill(dt);
+                    //dataGridView1.DataSource = dt;
 
 
                     connection.Open();
@@ -249,6 +249,26 @@ namespace WareDev
                     cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@cant", textBox1.Text);
                     cmd.ExecuteNonQuery();
+                    SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
+                    SqlDataAdapter da = new SqlDataAdapter(c);
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    this.dataGridView1.Columns[0].HeaderText = "Product's name";
+                    this.dataGridView1.Columns[1].HeaderText = "Size";
+                    this.dataGridView1.Columns[2].HeaderText = "Measure";
+                    this.dataGridView1.Columns[3].HeaderText = "Description";
+                    this.dataGridView1.Columns[4].HeaderText = "Price";
+                    this.dataGridView1.Columns[5].HeaderText = "Amount per acount";
+                    this.dataGridView1.Columns[6].HeaderText = "Amount";
+                    //sumar mientras se va agregando
+                    double total = 0;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+
+                        total += Convert.ToDouble(row.Cells[4].Value);
+
+                    }
+                    textBox2.Text = total.ToString();
                     connection.Close();
                     textBox1.Clear();
                 }
@@ -269,7 +289,7 @@ namespace WareDev
             if((this.dateTimePicker1!=null) &&(this.txtIva.Text.Length>=1) && (this.comboBox2.Text.Length>= 1) && (this.comboMoneda.Text.Length>= 1) && (this.comboBox3.Text.Length>= 1) && (this.txtSubtotal.Text.Length>= 1) && (this.txtTotal.Text.Length>= 1))
             {
                 connection.Open();
-                string sqlQuery = "insert into ventas(Id,fecha,iva,num,nombreP, currency,subtotal,total) values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+comboBox2.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"')";
+                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,subtotal,total) values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+comboBox2.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"')";
                string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-@cant where name='"+comboBox1.Text+"'";
                 
                 cmd = new SqlCommand(sqlQuery, connection);
@@ -282,6 +302,7 @@ namespace WareDev
                 cmd2.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Se ha agregado la venta");
+                this.Hide(); 
             }
             else
             {

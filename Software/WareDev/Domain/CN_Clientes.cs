@@ -87,11 +87,11 @@ namespace Domain
 
         //------NUEVO----------
         //insertar cliente
-        public void InsertarClie(string name, string rfc, string phone, string email, string address,
+        public void InsertarClie(string id, string name, string rfc, string phone, string email, string address,
             string city, string state, string country, string cp, string identy, string tasaa, string stat, string
             vendedor, string pm, string cfdi, string note)
         {
-            objetoCD.Insertar(name, rfc, phone, email, address, city, state,
+            objetoCD.Insertar(Convert.ToInt32(id),name, rfc, phone, email, address, city, state,
                 country, cp, identy, Convert.ToDouble(tasaa), stat, vendedor, pm, cfdi, note);
         }
         //insertar datos de usuario
@@ -101,10 +101,10 @@ namespace Domain
         }
 
         //insertar datos de proveedor
-        public void InsertarSupp(string name, string RFC, string phone, string email, string addres, string country, string state,
+        public void InsertarSupp(string id, string name, string RFC, string phone, string email, string addres, string country, string state,
            string city, string currency)
         {
-            objetoCD.InsertarS(name, RFC, phone, email, addres, country, state, city, currency);
+            objetoCD.InsertarS(Convert.ToInt32(id),name, RFC, phone, email, addres, country, state, city, currency);
         }
 
         

@@ -73,7 +73,6 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\AxI
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.ResolveComReference.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Agregar.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.compras.resources
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizacion.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Cotizaciones.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.FacturaVentas.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ganancias.resources
