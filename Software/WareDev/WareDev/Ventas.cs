@@ -384,6 +384,9 @@ namespace WareDev
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //int index;
+            //index = comboBox3.SelectedIndex;
+            //case inde
             SqlCommand d = new SqlCommand("select Id from supplier where name= '" + comboBox3.Text + "'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
@@ -392,6 +395,11 @@ namespace WareDev
                 txtNumCliente.Text = r["Id"].ToString();
             }
             connection.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

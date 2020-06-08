@@ -41,6 +41,7 @@ namespace WareDev
         {
 
             registro reg = new registro();
+            reg.ID.Visible = false;
             reg.saveEdit.Visible = false;
             reg.button3.Visible = true;
             reg.button6.Visible = false;
@@ -86,6 +87,7 @@ namespace WareDev
         private void button3_Click(object sender, EventArgs e)
         {
             registro reg = new registro();
+            
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 reg.usertxt.Text = dataGridView1.CurrentRow.Cells["username"].Value.ToString();
@@ -113,6 +115,7 @@ namespace WareDev
             reg.button3.Visible = false;
             reg.button6.Visible = true;
             reg.button5.Visible = false;
+            
             
             if (dataGridView1.SelectedRows.Count > 0)
             {
