@@ -230,7 +230,7 @@ namespace WareDev
                 cfditxt.Clear();
                 note.Clear();
 
-                //this.Close();
+                this.Close();
             }
 
             else{

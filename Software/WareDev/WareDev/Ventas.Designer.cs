@@ -55,6 +55,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtIva = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtNumCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.txtNumCliente = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -141,7 +141,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
@@ -165,7 +165,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(635, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(634, 3);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
             this.BtnAgregar.TabIndex = 36;
@@ -191,7 +191,7 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(203, 8);
+            this.comboBox1.Location = new System.Drawing.Point(202, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(394, 26);
             this.comboBox1.TabIndex = 2;
@@ -424,6 +424,19 @@
             this.comboBox3.TabIndex = 10;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
+            // txtNumCliente
+            // 
+            this.txtNumCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNumCliente.BackColor = System.Drawing.Color.White;
+            this.txtNumCliente.Enabled = false;
+            this.txtNumCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtNumCliente.Location = new System.Drawing.Point(348, 3);
+            this.txtNumCliente.Multiline = true;
+            this.txtNumCliente.Name = "txtNumCliente";
+            this.txtNumCliente.Size = new System.Drawing.Size(133, 32);
+            this.txtNumCliente.TabIndex = 11;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -533,19 +546,6 @@
             this.imgVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
-            // 
-            // txtNumCliente
-            // 
-            this.txtNumCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNumCliente.BackColor = System.Drawing.Color.White;
-            this.txtNumCliente.Enabled = false;
-            this.txtNumCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNumCliente.Location = new System.Drawing.Point(348, 3);
-            this.txtNumCliente.Multiline = true;
-            this.txtNumCliente.Name = "txtNumCliente";
-            this.txtNumCliente.Size = new System.Drawing.Size(133, 32);
-            this.txtNumCliente.TabIndex = 11;
             // 
             // ventas
             // 

@@ -265,6 +265,7 @@
             this.name.Text = "Karina Carmona";
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.name.Click += new System.EventHandler(this.name_Click);
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             this.name.MouseLeave += new System.EventHandler(this.btnminimizar_MouseLeave);
             this.name.MouseHover += new System.EventHandler(this.name_MouseHover);
             // 

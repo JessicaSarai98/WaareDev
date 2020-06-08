@@ -304,5 +304,10 @@ namespace WareDev
             ModalUsuario user = new ModalUsuario();
             user.ShowDialog();
         }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

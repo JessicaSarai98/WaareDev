@@ -27,6 +27,7 @@ namespace WareDev
 
         private void InfoProve_Load(object sender, EventArgs e)
         {
+          
 
         }
 
@@ -167,7 +168,7 @@ namespace WareDev
                 countrytxt.Clear();
                 citytxt.Clear();
 
-                //this.Close();
+                this.Close();
             }
 
             else
@@ -176,10 +177,6 @@ namespace WareDev
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         //Guardado (nuevo)
         private void saveNew_Click(object sender, EventArgs e)
@@ -207,12 +204,14 @@ namespace WareDev
 
         private void saveEdit_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 objetoCN.EditarSup(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
                     citytxt.Text, divisa.Text, IDtxtbox.Text);
                 MessageBox.Show("Se ha editado correctamente.");
-                this.Close();
+               
+               this.Close();
             }catch(Exception ex)
             {
                 MessageBox.Show("No se puedo editar los datos por "+ex); 

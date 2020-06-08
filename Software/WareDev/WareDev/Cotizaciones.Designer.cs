@@ -40,6 +40,8 @@ namespace WareDev
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.IdClient = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Condicion = new System.Windows.Forms.TextBox();
+            this.place = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.Expiration = new System.Windows.Forms.DateTimePicker();
@@ -51,20 +53,18 @@ namespace WareDev
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.ico = new System.Windows.Forms.ComboBox();
             this.Customer = new System.Windows.Forms.ComboBox();
+            this.divisa = new System.Windows.Forms.ComboBox();
+            this.producto = new System.Windows.Forms.TextBox();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.agregar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.Condicion = new System.Windows.Forms.TextBox();
-            this.place = new System.Windows.Forms.TextBox();
-            this.divisa = new System.Windows.Forms.ComboBox();
-            this.producto = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -205,10 +205,11 @@ namespace WareDev
             // 
             // IdClient
             // 
+            this.IdClient.Enabled = false;
             this.IdClient.FormattingEnabled = true;
             this.IdClient.Location = new System.Drawing.Point(369, 36);
             this.IdClient.Name = "IdClient";
-            this.IdClient.Size = new System.Drawing.Size(150, 28);
+            this.IdClient.Size = new System.Drawing.Size(156, 28);
             this.IdClient.TabIndex = 57;
             this.IdClient.SelectedIndexChanged += new System.EventHandler(this.IdClient_SelectedIndexChanged);
             // 
@@ -222,6 +223,23 @@ namespace WareDev
             this.label2.TabIndex = 52;
             this.label2.Text = "Icoterm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Condicion
+            // 
+            this.Condicion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Condicion.Location = new System.Drawing.Point(632, 102);
+            this.Condicion.Name = "Condicion";
+            this.Condicion.Size = new System.Drawing.Size(401, 26);
+            this.Condicion.TabIndex = 81;
+            // 
+            // place
+            // 
+            this.place.Location = new System.Drawing.Point(86, 102);
+            this.place.Name = "place";
+            this.place.Size = new System.Drawing.Size(147, 26);
+            this.place.TabIndex = 82;
             // 
             // txt1
             // 
@@ -357,18 +375,6 @@ namespace WareDev
             this.label7.Text = "Subtotal";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSubtotal.BackColor = System.Drawing.Color.White;
-            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtSubtotal.Location = new System.Drawing.Point(632, 36);
-            this.txtSubtotal.Multiline = true;
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(115, 27);
-            this.txtSubtotal.TabIndex = 17;
-            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -379,18 +385,6 @@ namespace WareDev
             this.label6.TabIndex = 12;
             this.label6.Text = "Pallet";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(531, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 33);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Customer\'s name";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ico
             // 
@@ -407,93 +401,7 @@ namespace WareDev
             this.Customer.Name = "Customer";
             this.Customer.Size = new System.Drawing.Size(401, 28);
             this.Customer.TabIndex = 59;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(966, 281);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 48);
-            this.button2.TabIndex = 80;
-            this.button2.Text = "Generate";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.UseWaitCursor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(967, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 48);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // Delete
-            // 
-            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete.BackColor = System.Drawing.Color.Black;
-            this.Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Delete.Location = new System.Drawing.Point(966, 443);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(119, 48);
-            this.Delete.TabIndex = 78;
-            this.Delete.Text = "Delate";
-            this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.UseWaitCursor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // agregar
-            // 
-            this.agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.agregar.BackColor = System.Drawing.Color.Black;
-            this.agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.agregar.Location = new System.Drawing.Point(966, 389);
-            this.agregar.Name = "agregar";
-            this.agregar.Size = new System.Drawing.Size(119, 48);
-            this.agregar.TabIndex = 77;
-            this.agregar.Text = "Add";
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.UseWaitCursor = true;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(967, 496);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 48);
-            this.button5.TabIndex = 76;
-            this.button5.Text = "Cancel ";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.UseWaitCursor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // Condicion
-            // 
-            this.Condicion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Condicion.Location = new System.Drawing.Point(632, 102);
-            this.Condicion.Name = "Condicion";
-            this.Condicion.Size = new System.Drawing.Size(401, 26);
-            this.Condicion.TabIndex = 81;
-            // 
-            // place
-            // 
-            this.place.Location = new System.Drawing.Point(86, 102);
-            this.place.Name = "place";
-            this.place.Size = new System.Drawing.Size(147, 26);
-            this.place.TabIndex = 82;
+            this.Customer.SelectedIndexChanged += new System.EventHandler(this.Customer_SelectedIndexChanged);
             // 
             // divisa
             // 
@@ -516,6 +424,100 @@ namespace WareDev
             this.producto.Size = new System.Drawing.Size(401, 26);
             this.producto.TabIndex = 84;
             // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtSubtotal.BackColor = System.Drawing.Color.White;
+            this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtSubtotal.Location = new System.Drawing.Point(632, 36);
+            this.txtSubtotal.Multiline = true;
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(115, 27);
+            this.txtSubtotal.TabIndex = 17;
+            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(531, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 33);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Customer\'s name";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(967, 253);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 48);
+            this.button2.TabIndex = 80;
+            this.button2.Text = "Generate";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(967, 307);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 48);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseWaitCursor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Delete
+            // 
+            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete.BackColor = System.Drawing.Color.Black;
+            this.Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Delete.Location = new System.Drawing.Point(966, 415);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(119, 48);
+            this.Delete.TabIndex = 78;
+            this.Delete.Text = "Delate";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.UseWaitCursor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // agregar
+            // 
+            this.agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.agregar.BackColor = System.Drawing.Color.Black;
+            this.agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.agregar.Location = new System.Drawing.Point(967, 361);
+            this.agregar.Name = "agregar";
+            this.agregar.Size = new System.Drawing.Size(119, 48);
+            this.agregar.TabIndex = 77;
+            this.agregar.Text = "Add";
+            this.agregar.UseVisualStyleBackColor = false;
+            this.agregar.UseWaitCursor = true;
+            this.agregar.Click += new System.EventHandler(this.agregar_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(966, 469);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(119, 48);
+            this.button5.TabIndex = 76;
+            this.button5.Text = "Cancel ";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.UseWaitCursor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -525,7 +527,7 @@ namespace WareDev
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(172, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(400, 26);
+            this.comboBox1.Size = new System.Drawing.Size(398, 26);
             this.comboBox1.TabIndex = 85;
             // 
             // label14
@@ -543,7 +545,7 @@ namespace WareDev
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.44711F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.55289F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);

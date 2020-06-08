@@ -30,8 +30,8 @@ namespace WareDev
         }
         // JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        // karina @"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True"
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         SqlCommand cmd;
 
@@ -102,11 +102,12 @@ namespace WareDev
             {
                 connection.Close();
             }
-            
+
+            //IdClient_SelectedIndexChanged(null, null);
+            Customer_SelectedIndexChanged(null, null);
 
 
 
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -144,7 +145,7 @@ namespace WareDev
 
                 // Indicamos donde vamos a guardar el documento
 
-                string pdfName = Customer.Text + ".pdf";
+                string pdfName = @"C:\Users\Jessica\Desktop\" + "Cotizacion"+ Customer.Text + ".pdf";
 
 
                 //SaveFileDialog save = new SaveFileDialog();
@@ -185,7 +186,7 @@ namespace WareDev
 
 
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg";
+                var imagenpath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Informacion.jpeg";
 
                 using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                 {
@@ -198,7 +199,9 @@ namespace WareDev
                 }
 
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Logo.jpeg";
+                //C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes
+                //"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Logo.jpeg
+                var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
 
                 using (FileStream im = new FileStream(Logopath, FileMode.Open))
                 {
@@ -291,15 +294,15 @@ namespace WareDev
                     .ForEach(c => table.AddCell(c.Name));
 
                 //Columnas
-                TablaDeVenta.Rows
-                    .OfType<DataGridViewRow>()
-                    .ToList()
-                    .ForEach(r =>
-                    {
-                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
+                //TablaDeVenta.Rows
+                //    .OfType<DataGridViewRow>()
+                //    .ToList()
+                //    .ForEach(r =>
+                //    {
+                //        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                //        cells.ForEach(c => table.AddCell(c.Value.ToString()));
 
-                    });
+                //    });
 
                 doc.Add(table);
 
@@ -382,6 +385,8 @@ namespace WareDev
             
 
             connection.Close();
+
+           
             
         
             
@@ -435,7 +440,7 @@ namespace WareDev
 
         private void LoadComboBox2()
         {
-            DataRow dr;
+            //DataRow dr;
             connection.Open();
             SqlCommand a = new SqlCommand("select name from clientes where Id=@ID",connection);
             SqlDataAdapter sda = new SqlDataAdapter(a);
@@ -452,9 +457,19 @@ namespace WareDev
 
         private void IdClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string val = IdClient.SelectedValue.ToString();
-            //LoadComboBox2(); 
 
+        }
+
+        private void Customer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand d = new SqlCommand("Select Id from clientes where name = '"+Customer.Text+"'", connection);
+            connection.Open();
+            SqlDataReader r = d.ExecuteReader();
+            while (r.Read())
+            {
+                IdClient.Text = r["Id"].ToString(); 
+            }
+            connection.Close();
         }
     }
 }
