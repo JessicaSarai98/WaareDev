@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
-using Common.cache; 
+using Common.cache;
+using System.Data.SqlClient; 
 
 namespace WareDev
 {
@@ -32,7 +33,35 @@ namespace WareDev
         //nuevo proveedor
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Supplier sup = new Supplier();
+            Supplier sup = new Supplier(); 
+            string query = "select max(Id) from supplier";
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            try
+            {
+                con.Open();
+                string pcount = Convert.ToString(cmd.ExecuteScalar());
+                if (pcount.Length == 0)
+                {
+                    sup.IDtxtbox.Text = "1";
+                }
+                else
+                {
+                    int pcount1 = Convert.ToInt32(pcount);
+                    int pcountAdd = pcount1 + 1;
+                    sup.IDtxtbox.Text = pcountAdd.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            
             sup.saveNew.Visible = true;
             sup.saveEdit.Visible = false;
             sup.ShowDialog();

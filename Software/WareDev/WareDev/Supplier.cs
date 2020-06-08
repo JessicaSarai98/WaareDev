@@ -185,16 +185,23 @@ namespace WareDev
         private void saveNew_Click(object sender, EventArgs e)
         {
             MenuProve menu = new MenuProve();
-            try
+            if ((this.Nametxt.Text.Length >= 1)&& (this.RFCtxt.Text.Length >= 1) && (this.phonetxt.Text.Length >= 1) && (this.mailtxt.Text.Length >= 1) && (this.addrestxt.Text.Length >= 1) && (this.countrytxt.Text.Length >= 1) && (this.statettxt.Text.Length >= 1) && (this.citytxt.Text.Length >= 1) && (this.divisa.Text.Length >= 1))
             {
-                objetoCN.InsertarSupp(Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
-                    citytxt.Text, divisa.Text);
-                MessageBox.Show("Se ha insertado correctamente.");
-                this.Close(); 
+                try
+                {
+                    objetoCN.InsertarSupp(IDtxtbox.Text, Nametxt.Text, RFCtxt.Text, phonetxt.Text, mailtxt.Text, addrestxt.Text, countrytxt.Text, statettxt.Text,
+                        citytxt.Text, divisa.Text);
+                    MessageBox.Show("Se ha insertado correctamente.");
+                    this.Close();
 
-            }catch(Exception ex)
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex);
+                }
+            }
+            else
             {
-                MessageBox.Show("No se pudo insertar los datos por: "+ex); 
+                MessageBox.Show("Complete todos los campos");
             }
         }
 

@@ -39,14 +39,14 @@ namespace WareDev
             }
             connection.Close();
 
-            SqlCommand c = new SqlCommand("select Id from supplier", connection);
-            connection.Open();
-            SqlDataReader reg = c.ExecuteReader();
-            while (reg.Read())
-            {
-                comboBox2.Items.Add(reg["Id"].ToString());
-            }
-            connection.Close();
+            //SqlCommand c = new SqlCommand("select Id from supplier", connection);
+            //connection.Open();
+            //SqlDataReader reg = c.ExecuteReader();
+            //while (reg.Read())
+            //{
+            //    comboBox2.Items.Add(reg["Id"].ToString());
+            //}
+            //connection.Close();
 
             SqlCommand d = new SqlCommand("select name from supplier", connection);
             connection.Open();
@@ -60,8 +60,10 @@ namespace WareDev
 
             ventas ven = new ventas();
             string query = "select max(Id) from ventas";
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-
+            // jess
+            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
+            // karina
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -96,6 +98,7 @@ namespace WareDev
 
             comboBox1_SelectedIndexChanged(null, null);
         }
+
         private void AbrirFormInPanel(object Formhijo)
         {
             if (this.contenedor.Controls.Count > 0)
@@ -231,8 +234,6 @@ namespace WareDev
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            
-
             if (textBox1.Text.Length >= 1 && comboBox1.Text.Length >= 1)
             {
                 const string message = "¿Estás seguro?";
@@ -240,10 +241,10 @@ namespace WareDev
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
-                    SqlDataAdapter da = new SqlDataAdapter(c);
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
+                    //SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
+                    //SqlDataAdapter da = new SqlDataAdapter(c);
+                    //da.Fill(dt);
+                    //dataGridView1.DataSource = dt;
 
 
                     connection.Open();
@@ -251,6 +252,26 @@ namespace WareDev
                     cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@cant", textBox1.Text);
                     cmd.ExecuteNonQuery();
+                    SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
+                    SqlDataAdapter da = new SqlDataAdapter(c);
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    this.dataGridView1.Columns[0].HeaderText = "Product's name";
+                    this.dataGridView1.Columns[1].HeaderText = "Size";
+                    this.dataGridView1.Columns[2].HeaderText = "Measure";
+                    this.dataGridView1.Columns[3].HeaderText = "Description";
+                    this.dataGridView1.Columns[4].HeaderText = "Price";
+                    this.dataGridView1.Columns[5].HeaderText = "Amount";
+                    this.dataGridView1.Columns[6].HeaderText = "Boxes by content/CANTIDAD RESTADA";
+                    //sumar mientras se va agregando
+                    double total = 0;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+
+                        total += Convert.ToDouble(row.Cells[4].Value);
+
+                    }
+                    textBox2.Text = total.ToString();
                     connection.Close();
                     textBox1.Clear();
                 }
@@ -268,10 +289,12 @@ namespace WareDev
         //Guardar 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if((this.dateTimePicker1!=null) &&(this.txtIva.Text.Length>=1) && (this.comboBox2.Text.Length>= 1) && (this.comboMoneda.Text.Length>= 1) && (this.comboBox3.Text.Length>= 1) && (this.txtSubtotal.Text.Length>= 1) && (this.txtTotal.Text.Length>= 1))
+            if((this.dateTimePicker1!=null) &&(this.txtIva.Text.Length>=1) && (this.txtNumCliente.Text.Length>= 1) && (this.comboMoneda.Text.Length>= 1) &&
+                (this.comboBox3.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1))
             {
                 connection.Open();
-                string sqlQuery = "insert into ventas(Id,fecha,iva,num,nombreP, currency,subtotal,total) values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+comboBox2.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"')";
+                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,subtotal,total) " +
+                    "values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+ txtNumCliente.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"')";
                string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-@cant where name='"+comboBox1.Text+"'";
                 
                 cmd = new SqlCommand(sqlQuery, connection);
@@ -284,6 +307,7 @@ namespace WareDev
                 cmd2.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Se ha agregado la venta");
+                this.Hide(); 
             }
             else
             {
@@ -297,21 +321,29 @@ namespace WareDev
             //total = sub + (iva*subt)
             //sub = suma de los productos 
 
-            double n2, t, i;
+            float n2, t, i;
 
 
 
             //n1 = Convert.ToDouble(textBox1.Text);
 
             //subtotal
-            n2 = Convert.ToDouble(textBox2.Text);
-            //t = n1 * n2;
-            i = Convert.ToDouble(txtIva.Text);
-            t = i * n2;
-            txtSubtotal.Text = t.ToString();
+            if (textBox2.Text != "" && txtIva.Text != "")
+            {
+                n2 = Convert.ToSingle(textBox2.Text);
+                //t = n1 * n2;
+                i = Convert.ToSingle(txtIva.Text);
+                t = i * n2;
+                txtSubtotal.Text = t.ToString();
 
-            double a= t+(i*t);
-            txtTotal.Text = a.ToString(); 
+                double a = t + ((i / 100) * t);
+                txtTotal.Text = a.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el IVA o seleccione la opción de sumar");
+            }
+            
 
         }
 
@@ -348,6 +380,18 @@ namespace WareDev
 
             }
             textBox2.Text = total.ToString();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand d = new SqlCommand("select Id from supplier where name= '" + comboBox3.Text + "'", connection);
+            connection.Open();
+            SqlDataReader r = d.ExecuteReader();
+            while (r.Read())
+            {
+                txtNumCliente.Text = r["Id"].ToString();
+            }
+            connection.Close();
         }
     }
 }

@@ -68,12 +68,6 @@
     <Compile Include="compras.Designer.cs">
       <DependentUpon>compras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cotizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cotizacion.Designer.cs">
-      <DependentUpon>Cotizacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +109,11 @@
     </Compile>
     <Compile Include="ProductoTerminado.Designer.cs">
       <DependentUpon>ProductoTerminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="reporte.cs">
       <SubType>Form</SubType>
@@ -219,9 +218,6 @@
     <EmbeddedResource Include="compras.resx">
       <DependentUpon>compras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cotizacion.resx">
-      <DependentUpon>Cotizacion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cotizaciones.resx">
       <DependentUpon>Cotizaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,14 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="registro.resx">
       <DependentUpon>registro.cs</DependentUpon>
     </EmbeddedResource>

@@ -112,7 +112,7 @@ namespace WareDev
                         cmd2.ExecuteNonQuery();
                         cmd3.ExecuteNonQuery();
                         connection.Close();
-                        MessageBox.Show("Se ha agregado la materia prima");
+                        MessageBox.Show("Se ha agregado el producto terminado");
                         this.Close();
                     
                     

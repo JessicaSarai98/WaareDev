@@ -46,20 +46,23 @@
             this.txtVentas = new System.Windows.Forms.Label();
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelResultado.SuspendLayout();
             this.tablaReportes.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
             // 
             this.contenedor.BackColor = System.Drawing.Color.Khaki;
             this.contenedor.Controls.Add(this.label1);
+            this.contenedor.Controls.Add(this.cmdReporte);
             this.contenedor.Controls.Add(this.panel2);
             this.contenedor.Controls.Add(this.panelResultado);
-            this.contenedor.Controls.Add(this.cmdReporte);
             this.contenedor.Controls.Add(this.btnBuscar);
             this.contenedor.Controls.Add(this.tablaReportes);
             this.contenedor.Controls.Add(this.panelTitulo);
@@ -109,6 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelResultado.BackColor = System.Drawing.Color.Transparent;
+            this.panelResultado.Controls.Add(this.dataGridView1);
             this.panelResultado.Location = new System.Drawing.Point(12, 215);
             this.panelResultado.Name = "panelResultado";
             this.panelResultado.Size = new System.Drawing.Size(994, 225);
@@ -126,9 +130,9 @@
             "Profits",
             "Invoices",
             "Quotes"});
-            this.cmdReporte.Location = new System.Drawing.Point(15, 112);
+            this.cmdReporte.Location = new System.Drawing.Point(12, 138);
             this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(195, 28);
+            this.cmdReporte.Size = new System.Drawing.Size(291, 28);
             this.cmdReporte.TabIndex = 2;
             this.cmdReporte.TabStop = false;
             // 
@@ -257,6 +261,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, -1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(994, 226);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,10 +283,12 @@
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panelResultado.ResumeLayout(false);
             this.tablaReportes.ResumeLayout(false);
             this.tablaReportes.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +311,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

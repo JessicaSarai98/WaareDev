@@ -263,6 +263,7 @@
             // 
             this.IconUser.BackColor = System.Drawing.Color.Transparent;
             this.IconUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IconUser.Image = ((System.Drawing.Image)(resources.GetObject("IconUser.Image")));
             this.IconUser.Location = new System.Drawing.Point(187, 365);
             this.IconUser.Name = "IconUser";
             this.IconUser.Size = new System.Drawing.Size(38, 38);

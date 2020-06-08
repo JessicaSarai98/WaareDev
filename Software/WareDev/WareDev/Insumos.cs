@@ -86,7 +86,7 @@ namespace WareDev
                     cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
                     cmd.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Se ha agregado la materia prima");
+                    MessageBox.Show("Se ha agregado el insumo");
                     this.Close();
                 }
                 else
