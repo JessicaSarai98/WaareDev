@@ -261,8 +261,8 @@ namespace WareDev
                     this.dataGridView1.Columns[2].HeaderText = "Measure";
                     this.dataGridView1.Columns[3].HeaderText = "Description";
                     this.dataGridView1.Columns[4].HeaderText = "Price";
-                    this.dataGridView1.Columns[5].HeaderText = "Amount";
-                    this.dataGridView1.Columns[6].HeaderText = "Boxes by content/CANTIDAD RESTADA";
+                    this.dataGridView1.Columns[5].HeaderText = "Boxes by content";
+                    this.dataGridView1.Columns[6].HeaderText = "Amount/CANTIDAD RESTADA";
                     //sumar mientras se va agregando
                     double total = 0;
                     foreach (DataGridViewRow row in dataGridView1.Rows)
