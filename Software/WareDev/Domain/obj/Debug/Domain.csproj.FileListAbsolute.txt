@@ -43,3 +43,18 @@ C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Domain.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Common.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\Common.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\bin\Debug\DataAccess.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.Properties.Resources.resources
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\Domain\obj\Debug\Domain.pdb

@@ -26,8 +26,8 @@ namespace WareDev.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Poolin" +
-            "g=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source = (LocalDB)\\MSSQLLocalDB; Initial Catalog = C:\\Users\\William carmona\\" +
+            "Documents\\users.mdf;Integrated Security = True")]
         public string usersConnectionString {
             get {
                 return ((string)(this["usersConnectionString"]));

@@ -19,8 +19,10 @@ namespace WareDev
         {
             InitializeComponent();
         }
-
-        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        // JESS
+        //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        // KARINA
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True; Connect Timeout = 30");
         string imgLocation = "";
         SqlCommand cmd;
 
@@ -134,18 +136,18 @@ namespace WareDev
 
         private void txtCostoTotalInsumo_Leave(object sender, EventArgs e)
         {
-            int n1, n2, r;
+            float n1, n2, r;
             n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
-            n2 = Convert.ToInt32(txtPrecioInsumo.Text);
+            n2 = Convert.ToSingle(txtPrecioInsumo.Text);
             r = n1 * n2;
             txtCostoTotalInsumo.Text = r.ToString(); 
         }
 
         private void mult_Click(object sender, EventArgs e)
         {
-            int n1, n2, r;
+            float n1, n2, r;
             n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
-            n2 = Convert.ToInt32(txtPrecioInsumo.Text);
+            n2 = Convert.ToSingle(txtPrecioInsumo.Text);
             r = n1 * n2;
             txtCostoTotalInsumo.Text = r.ToString();
         }

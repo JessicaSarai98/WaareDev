@@ -221,7 +221,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::WareDev.Properties.Resources.Logo3;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -327,7 +327,6 @@
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.Image = global::WareDev.Properties.Resources.settings;
             this.btnSettings.Location = new System.Drawing.Point(826, 4);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(47, 47);
@@ -419,7 +418,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo3;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(377, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(298, 171);

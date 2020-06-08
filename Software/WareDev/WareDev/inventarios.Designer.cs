@@ -155,6 +155,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 136);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(842, 304);
             this.dataGridView1.TabIndex = 37;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -405,6 +406,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(6, 136);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(797, 292);
             this.dataGridView2.TabIndex = 44;
             // 
@@ -612,11 +614,15 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(6, 136);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(797, 291);
             this.dataGridView3.TabIndex = 51;
             // 
@@ -994,11 +1000,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedidaInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDispoInsumo;
-        private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.DataGridView TablaMatPrima;
-        private System.Windows.Forms.DataGridView dataGridView2;
         public System.Windows.Forms.TextBox txtNomProdTerm;
         public System.Windows.Forms.DataGridView dataGridView3;
         public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -188,8 +188,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -216,6 +215,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(174, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(41, 20);
@@ -225,6 +225,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(174, 54);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(41, 20);
@@ -233,6 +234,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(174, 96);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(41, 20);

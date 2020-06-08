@@ -93,7 +93,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WareDev.Properties.Resources.Logo3;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(188, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(321, 219);
@@ -194,7 +195,6 @@
             // btnSettings
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSettings.Image = global::WareDev.Properties.Resources.settings;
             this.btnSettings.Location = new System.Drawing.Point(492, 9);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(47, 47);
@@ -263,7 +263,6 @@
             // 
             this.IconUser.BackColor = System.Drawing.Color.Transparent;
             this.IconUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IconUser.Image = global::WareDev.Properties.Resources.user1;
             this.IconUser.Location = new System.Drawing.Point(187, 365);
             this.IconUser.Name = "IconUser";
             this.IconUser.Size = new System.Drawing.Size(38, 38);
@@ -293,7 +292,6 @@
             // 
             // btnSupport
             // 
-            this.btnSupport.Image = global::WareDev.Properties.Resources.Support;
             this.btnSupport.Location = new System.Drawing.Point(42, 7);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(183, 30);

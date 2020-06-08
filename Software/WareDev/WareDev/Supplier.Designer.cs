@@ -54,6 +54,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.saveEdit = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // statettxt
@@ -313,14 +314,16 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold);
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Items.AddRange(new object[] {
             "Euros",
             "Mexicanos",
             "Dolares"});
-            this.listBox1.Location = new System.Drawing.Point(165, 447);
+            this.listBox1.Location = new System.Drawing.Point(180, 444);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(77, 17);
+            this.listBox1.Size = new System.Drawing.Size(156, 24);
             this.listBox1.TabIndex = 50;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -338,12 +341,24 @@
             this.saveEdit.UseWaitCursor = true;
             this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(30, 444);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 20);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "Divisa";
+            this.label12.UseWaitCursor = true;
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1018, 476);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.saveEdit);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.citytxt);
@@ -370,6 +385,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Supplier";
             this.Text = "Supplier";
             this.Load += new System.EventHandler(this.InfoProve_Load);
@@ -406,5 +422,6 @@
         private System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.Button saveNew;
         public System.Windows.Forms.Button saveEdit;
+        private System.Windows.Forms.Label label12;
     }
 }

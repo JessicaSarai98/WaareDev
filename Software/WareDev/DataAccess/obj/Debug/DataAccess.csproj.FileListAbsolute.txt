@@ -34,3 +34,15 @@ C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\William carmona\Documents\Desarrollo\cagada2.0\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb

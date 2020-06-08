@@ -342,6 +342,7 @@
             // 
             // Nametxt
             // 
+            this.Nametxt.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Nametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nametxt.Location = new System.Drawing.Point(203, 167);
             this.Nametxt.Name = "Nametxt";
@@ -351,6 +352,7 @@
             // 
             // IDtxtbox
             // 
+            this.IDtxtbox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.IDtxtbox.Enabled = false;
             this.IDtxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDtxtbox.Location = new System.Drawing.Point(203, 108);
@@ -561,6 +563,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1300, 749);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoClient";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.InfoClient_Load);
