@@ -39,17 +39,43 @@ namespace WareDev
             //connection.Close();
         }
 
+        DataTable dt = new DataTable(); 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true; 
-            int indice = cmdReporte.SelectedIndex;
-            lblTitulo.Text = cmdReporte.Items[indice].ToString();
+            //panel2.Visible = true;
+            // int indice = cmdReporte.SelectedIndex;
+            //lblTitulo.Text = cmdReporte.Items[indice].ToString();
+            //dataGridView1.Rows.Clear(); 
 
+            dataGridView1.Refresh();
             connection.Open();
 
-            SqlCommand cm = new SqlCommand("select *  from '"+cmdReporte.Text+"' where date=@date and datef=@datef ", connection);
+            if (cmdReporte.Text.Equals("Sales"))
+            {
+                connection.Open(); 
+                SqlDataAdapter da = new SqlDataAdapter("select * from ventas where date >='" + desdeTime.Text + "' and date <='" + hastaTime.Text + "'", connection);
 
-            connection.Close(); 
+                DataSet dt = new DataSet();
+                da.Fill(dt, "Ventas");
+                dataGridView1.DataSource = dt.Tables["Ventas"];
+                connection.Close();
+                
+
+
+            }
+            else if (cmdReporte.Text.Equals("Quotes"))
+            {
+                connection.Close();
+                SqlDataAdapter d = new SqlDataAdapter("select * from quotations where date >='" +desdeTime.Text+ "' and date <='" + hastaTime.Text + "'", connection) ;
+
+                DataSet de = new DataSet();
+                d.Fill(de, "Quotations");
+                dataGridView1.DataSource = de.Tables["Quotations"];
+                connection.Close(); 
+                
+            }
+           
+
         }
     }
 }

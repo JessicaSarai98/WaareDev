@@ -32,10 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reporte));
             this.contenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmdReporte = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.panelResultado = new System.Windows.Forms.Panel();
-            this.cmdReporte = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tablaReportes = new System.Windows.Forms.TableLayoutPanel();
             this.desdeTime = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +48,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelResultado.SuspendLayout();
             this.tablaReportes.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
@@ -59,10 +57,10 @@
             // contenedor
             // 
             this.contenedor.BackColor = System.Drawing.Color.Khaki;
+            this.contenedor.Controls.Add(this.dataGridView1);
             this.contenedor.Controls.Add(this.label1);
             this.contenedor.Controls.Add(this.cmdReporte);
             this.contenedor.Controls.Add(this.panel2);
-            this.contenedor.Controls.Add(this.panelResultado);
             this.contenedor.Controls.Add(this.btnBuscar);
             this.contenedor.Controls.Add(this.tablaReportes);
             this.contenedor.Controls.Add(this.panelTitulo);
@@ -82,6 +80,23 @@
             this.label1.Size = new System.Drawing.Size(133, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "Select the report";
+            // 
+            // cmdReporte
+            // 
+            this.cmdReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmdReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReporte.ForeColor = System.Drawing.Color.Black;
+            this.cmdReporte.Items.AddRange(new object[] {
+            "Sales",
+            "Shopping",
+            "Profits",
+            "Invoices",
+            "Quotes"});
+            this.cmdReporte.Location = new System.Drawing.Point(12, 138);
+            this.cmdReporte.Name = "cmdReporte";
+            this.cmdReporte.Size = new System.Drawing.Size(291, 28);
+            this.cmdReporte.TabIndex = 2;
+            this.cmdReporte.TabStop = false;
             // 
             // panel2
             // 
@@ -105,36 +120,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(342, 42);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelResultado
-            // 
-            this.panelResultado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelResultado.BackColor = System.Drawing.Color.Transparent;
-            this.panelResultado.Controls.Add(this.dataGridView1);
-            this.panelResultado.Location = new System.Drawing.Point(12, 215);
-            this.panelResultado.Name = "panelResultado";
-            this.panelResultado.Size = new System.Drawing.Size(994, 225);
-            this.panelResultado.TabIndex = 0;
-            this.panelResultado.Visible = false;
-            // 
-            // cmdReporte
-            // 
-            this.cmdReporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmdReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdReporte.ForeColor = System.Drawing.Color.Black;
-            this.cmdReporte.Items.AddRange(new object[] {
-            "Sales",
-            "Shopping",
-            "Profits",
-            "Invoices",
-            "Quotes"});
-            this.cmdReporte.Location = new System.Drawing.Point(12, 138);
-            this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(291, 28);
-            this.cmdReporte.TabIndex = 2;
-            this.cmdReporte.TabStop = false;
             // 
             // btnBuscar
             // 
@@ -266,10 +251,10 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, -1);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 248);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(994, 226);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(871, 150);
+            this.dataGridView1.TabIndex = 24;
             // 
             // reporte
             // 
@@ -283,7 +268,6 @@
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panelResultado.ResumeLayout(false);
             this.tablaReportes.ResumeLayout(false);
             this.tablaReportes.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
@@ -307,7 +291,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ComboBox cmdReporte;
-        private System.Windows.Forms.Panel panelResultado;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
