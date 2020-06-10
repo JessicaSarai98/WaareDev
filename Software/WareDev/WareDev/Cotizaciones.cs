@@ -30,8 +30,9 @@ namespace WareDev
         }
         // JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        // karina @"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True"
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        // karina 
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         SqlCommand cmd;
 
@@ -470,6 +471,22 @@ namespace WareDev
                 IdClient.Text = r["Id"].ToString(); 
             }
             connection.Close();
+        }
+        Productos materia;
+        private void btnArticulo_Click(object sender, EventArgs e)
+        {
+            if (materia == null)
+            {
+                materia = new Productos();
+                materia.Owner = this;
+                materia.FormClosed += materia_FormClosed;
+                materia.Show();
+            }
+            else materia.Activate();
+        }
+        private void materia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            materia = null;
         }
     }
 }

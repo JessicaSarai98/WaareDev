@@ -21,9 +21,9 @@ namespace WareDev
         public string idInput = null;
         public string idFinished = null;
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
 
         public inventarios()
@@ -201,6 +201,7 @@ namespace WareDev
             materia = null;
             agregar = null;
             insumos = null;
+            producto = null;
         }
 
         //Agregar materia prima
@@ -275,6 +276,7 @@ namespace WareDev
         ProductoTerminado producto;
         private void btnAddProductos_Click(object sender, EventArgs e)
         {
+
             if (producto == null)
             {
                 producto = new ProductoTerminado();

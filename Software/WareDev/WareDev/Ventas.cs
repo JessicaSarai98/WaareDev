@@ -20,8 +20,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -152,7 +153,6 @@ namespace WareDev
 
         private void btrRegreso_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
             panelTitulo.Visible = false;
             AbrirFormInPanel(new Start());
         }
@@ -398,6 +398,28 @@ namespace WareDev
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+            Productos materia;
+        private void btnArticulo_Click(object sender, EventArgs e)
+        {
+            if (materia == null)
+            {
+                materia = new Productos();
+                materia.Owner = this;
+                materia.FormClosed += materia_FormClosed;
+                materia.Show();
+            }
+            else materia.Activate();
+        }
+        private void materia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            materia = null;
+        }
+
+        private void btnAgregarProd_Click(object sender, EventArgs e)
         {
 
         }

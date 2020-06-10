@@ -175,6 +175,7 @@
             this.Imprimir.Text = "Export To PDF";
             this.Imprimir.UseVisualStyleBackColor = false;
             this.Imprimir.UseWaitCursor = true;
+            this.Imprimir.Visible = false;
             this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
             // 
             // save
@@ -429,9 +430,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(816, 104);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.Size = new System.Drawing.Size(165, 20);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Identy";
+            this.label12.Text = "Identificador fiscal";
             this.label12.UseWaitCursor = true;
             // 
             // label11

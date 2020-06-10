@@ -30,6 +30,7 @@ namespace WareDev
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizaciones));
             this.label1 = new System.Windows.Forms.Label();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,9 +69,34 @@ namespace WareDev
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAgregarProd = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtMedida = new System.Windows.Forms.TextBox();
+            this.txtTam = new System.Windows.Forms.TextBox();
+            this.txtPallet = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnArticulo = new System.Windows.Forms.Button();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -95,10 +121,10 @@ namespace WareDev
             this.TablaDeVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cantidad});
-            this.TablaDeVenta.Location = new System.Drawing.Point(24, 286);
+            this.TablaDeVenta.Location = new System.Drawing.Point(12, 362);
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.RowHeadersWidth = 45;
-            this.TablaDeVenta.Size = new System.Drawing.Size(907, 258);
+            this.TablaDeVenta.Size = new System.Drawing.Size(907, 197);
             this.TablaDeVenta.TabIndex = 49;
             this.TablaDeVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaDeVenta_CellContentClick);
             // 
@@ -453,7 +479,7 @@ namespace WareDev
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(967, 253);
+            this.button2.Location = new System.Drawing.Point(964, 357);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 48);
             this.button2.TabIndex = 80;
@@ -467,7 +493,7 @@ namespace WareDev
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(967, 307);
+            this.button1.Location = new System.Drawing.Point(964, 411);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 48);
             this.button1.TabIndex = 79;
@@ -481,7 +507,7 @@ namespace WareDev
             this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Delete.BackColor = System.Drawing.Color.Black;
             this.Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Delete.Location = new System.Drawing.Point(966, 415);
+            this.Delete.Location = new System.Drawing.Point(964, 463);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(119, 48);
             this.Delete.TabIndex = 78;
@@ -495,13 +521,14 @@ namespace WareDev
             this.agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.agregar.BackColor = System.Drawing.Color.Black;
             this.agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.agregar.Location = new System.Drawing.Point(967, 361);
+            this.agregar.Location = new System.Drawing.Point(839, 517);
             this.agregar.Name = "agregar";
             this.agregar.Size = new System.Drawing.Size(119, 48);
             this.agregar.TabIndex = 77;
             this.agregar.Text = "Add";
             this.agregar.UseVisualStyleBackColor = false;
             this.agregar.UseWaitCursor = true;
+            this.agregar.Visible = false;
             this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // button5
@@ -509,7 +536,7 @@ namespace WareDev
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(966, 469);
+            this.button5.Location = new System.Drawing.Point(964, 517);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(119, 48);
             this.button5.TabIndex = 76;
@@ -525,16 +552,16 @@ namespace WareDev
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(172, 3);
+            this.comboBox1.Location = new System.Drawing.Point(186, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(398, 26);
+            this.comboBox1.Size = new System.Drawing.Size(434, 26);
             this.comboBox1.TabIndex = 85;
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(23, 7);
+            this.label14.Location = new System.Drawing.Point(30, 7);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(122, 18);
             this.label14.TabIndex = 86;
@@ -542,10 +569,9 @@ namespace WareDev
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.44711F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.55289F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
@@ -553,8 +579,308 @@ namespace WareDev
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(853, 32);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(623, 32);
             this.tableLayoutPanel2.TabIndex = 87;
+            this.tableLayoutPanel2.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnAgregarProd);
+            this.panel2.Controls.Add(this.tableLayoutPanel5);
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.tableLayoutPanel4);
+            this.panel2.Controls.Add(this.tableLayoutPanel3);
+            this.panel2.Location = new System.Drawing.Point(12, 227);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1090, 124);
+            this.panel2.TabIndex = 88;
+            // 
+            // btnAgregarProd
+            // 
+            this.btnAgregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProd.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnAgregarProd.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarProd.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnAgregarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnAgregarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnAgregarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProd.ForeColor = System.Drawing.Color.Silver;
+            this.btnAgregarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarProd.Location = new System.Drawing.Point(968, 18);
+            this.btnAgregarProd.Name = "btnAgregarProd";
+            this.btnAgregarProd.Size = new System.Drawing.Size(104, 33);
+            this.btnAgregarProd.TabIndex = 25;
+            this.btnAgregarProd.Text = "Agregar";
+            this.btnAgregarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarProd.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.50643F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.49358F));
+            this.tableLayoutPanel5.Controls.Add(this.txtDescripcion, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 84);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(389, 33);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(109, 3);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(277, 27);
+            this.txtDescripcion.TabIndex = 16;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(4, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 18);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Descripción";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Silver;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(968, 57);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(104, 33);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.Controls.Add(this.txtPrecio, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtMedida, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtTam, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtPallet, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label16, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label17, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label19, 2, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(435, 12);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(497, 97);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtPrecio.Location = new System.Drawing.Point(375, 51);
+            this.txtPrecio.Multiline = true;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(119, 43);
+            this.txtPrecio.TabIndex = 23;
+            // 
+            // txtMedida
+            // 
+            this.txtMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMedida.BackColor = System.Drawing.Color.White;
+            this.txtMedida.Enabled = false;
+            this.txtMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtMedida.Location = new System.Drawing.Point(127, 51);
+            this.txtMedida.Multiline = true;
+            this.txtMedida.Name = "txtMedida";
+            this.txtMedida.Size = new System.Drawing.Size(118, 43);
+            this.txtMedida.TabIndex = 22;
+            // 
+            // txtTam
+            // 
+            this.txtTam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTam.BackColor = System.Drawing.Color.White;
+            this.txtTam.Enabled = false;
+            this.txtTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtTam.Location = new System.Drawing.Point(375, 3);
+            this.txtTam.Multiline = true;
+            this.txtTam.Name = "txtTam";
+            this.txtTam.Size = new System.Drawing.Size(119, 42);
+            this.txtTam.TabIndex = 21;
+            // 
+            // txtPallet
+            // 
+            this.txtPallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPallet.BackColor = System.Drawing.Color.White;
+            this.txtPallet.Enabled = false;
+            this.txtPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtPallet.Location = new System.Drawing.Point(127, 3);
+            this.txtPallet.Multiline = true;
+            this.txtPallet.Name = "txtPallet";
+            this.txtPallet.Size = new System.Drawing.Size(118, 42);
+            this.txtPallet.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 42);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Pallet por contenido";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(251, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 42);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Tamaño";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 51);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 42);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Medida";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(251, 51);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(118, 42);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "Precio unitario";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel3.Controls.Add(this.txtCantidad, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnArticulo, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtProducto, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label21, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 12);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(392, 66);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.Enabled = false;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(180, 36);
+            this.txtCantidad.Multiline = true;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(87, 27);
+            this.txtCantidad.TabIndex = 15;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(51, 40);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(74, 18);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Cantidad";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnArticulo
+            // 
+            this.btnArticulo.FlatAppearance.BorderSize = 0;
+            this.btnArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticulo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btnArticulo.Image")));
+            this.btnArticulo.Location = new System.Drawing.Point(357, 3);
+            this.btnArticulo.Name = "btnArticulo";
+            this.btnArticulo.Size = new System.Drawing.Size(32, 23);
+            this.btnArticulo.TabIndex = 13;
+            this.btnArticulo.UseVisualStyleBackColor = true;
+            this.btnArticulo.Click += new System.EventHandler(this.btnArticulo_Click);
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProducto.BackColor = System.Drawing.Color.White;
+            this.txtProducto.Enabled = false;
+            this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(180, 3);
+            this.txtProducto.Multiline = true;
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(171, 27);
+            this.txtProducto.TabIndex = 2;
+            this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(50, 7);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(77, 18);
+            this.label21.TabIndex = 12;
+            this.label21.Text = "Producto";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Cotizaciones
             // 
@@ -562,6 +888,7 @@ namespace WareDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1114, 571);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -579,6 +906,13 @@ namespace WareDev
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,5 +967,26 @@ namespace WareDev
         private System.Windows.Forms.ComboBox ico;
         private System.Windows.Forms.ComboBox Customer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAgregarProd;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtMedida;
+        private System.Windows.Forms.TextBox txtTam;
+        private System.Windows.Forms.TextBox txtPallet;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        public System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnArticulo;
+        public System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Label label21;
     }
 }
