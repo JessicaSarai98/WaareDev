@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ComboNombre = new System.Windows.Forms.ComboBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
@@ -69,6 +70,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(994, 267);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // lblTotal
             // 
@@ -119,6 +124,7 @@
             this.BtnAgregar.Text = "Buscar";
             this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label1
             // 
@@ -143,9 +149,11 @@
             this.ComboNombre.Name = "ComboNombre";
             this.ComboNombre.Size = new System.Drawing.Size(337, 26);
             this.ComboNombre.TabIndex = 3;
+            this.ComboNombre.SelectedIndexChanged += new System.EventHandler(this.ComboNombre_SelectedIndexChanged);
             // 
             // panelTitulo
             // 
+            this.panelTitulo.Controls.Add(this.textBox1);
             this.panelTitulo.Controls.Add(this.txtVentas);
             this.panelTitulo.Controls.Add(this.btrRegreso);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -153,6 +161,13 @@
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1084, 84);
             this.panelTitulo.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(77, 43);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 12;
             // 
             // txtVentas
             // 
@@ -199,6 +214,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +231,6 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

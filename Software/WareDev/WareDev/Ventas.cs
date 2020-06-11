@@ -20,9 +20,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -90,7 +90,7 @@ namespace WareDev
                 con.Close();
             }
 
-
+            
 
 
             //string query = "select name from FinishedProducts";
@@ -98,6 +98,28 @@ namespace WareDev
             //comboBox1.DisplayMember = "name";
 
             comboBox1_SelectedIndexChanged(null, null);
+        }
+
+        private static ventas _instancia;
+
+        public static ventas GetInstancia()
+        {
+            if(_instancia == null)
+            {
+                _instancia = new ventas();
+            }
+            return _instancia;
+        }
+
+        public void setArticulo(string prod, string cant, string desc, string pall, string med, string tam, string preci)
+        {
+            this.txtProducto.Text = prod;
+            this.txtCantidad.Text = cant;
+            this.txtDescripcion.Text = desc;
+            this.txtPallet.Text = pall;
+            this.txtMedida.Text = med;
+            this.txtTam.Text = tam;
+            this.txtPrecio.Text = preci; 
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -293,18 +315,18 @@ namespace WareDev
                 (this.comboBox3.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1))
             {
                 connection.Open();
-                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,subtotal,total) " +
-                    "values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+ txtNumCliente.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"')";
+                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,subtotal,total, cond, lugar) " +
+                    "values('"+txtFolio.Text+ "',@fecha,'"+txtIva.Text+ "','"+ txtNumCliente.Text+ "','"+comboBox3.Text+ "','"+comboMoneda.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+"','"+txtCondiciones.Text+"','"+txtLugarExpe.Text+"')";
                string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-@cant where name='"+comboBox1.Text+"'";
                 
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha",dateTimePicker1.Value.Date);
 
-                cmd2 = new SqlCommand(sqlQuery2, connection);
-                cmd2.Parameters.AddWithValue("@cant", textBox1.Text);
+                //cmd2 = new SqlCommand(sqlQuery2, connection);
+                //cmd2.Parameters.AddWithValue("@cant", textBox1.Text);
 
                 cmd.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
+                //cmd2.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Se ha agregado la venta");
                 this.Hide(); 
@@ -405,14 +427,17 @@ namespace WareDev
             Productos materia;
         private void btnArticulo_Click(object sender, EventArgs e)
         {
-            if (materia == null)
-            {
-                materia = new Productos();
-                materia.Owner = this;
-                materia.FormClosed += materia_FormClosed;
-                materia.Show();
-            }
-            else materia.Activate();
+
+            Productos prod = new Productos();
+            prod.ShowDialog(); 
+            //if (materia == null)
+            //{
+            //    materia = new Productos();
+            //    materia.Owner = this;
+            //    materia.FormClosed += materia_FormClosed;
+            //    materia.Show();
+            //}
+            //else materia.Activate();
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -421,7 +446,56 @@ namespace WareDev
 
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Add(txtFolio.Text,txtProducto.Text,textBox3.Text,txtDescripcion.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtPrecio.Text,txtSubtotal.Text, txtTotal.Text);
 
+            txtProducto.Text = string.Empty;
+            textBox3.Text = string.Empty; 
+        }
+
+        private void ventas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _instancia = null; 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            float n1, n2, a;
+            n1 = Convert.ToInt32(textBox3.Text);
+            n2 = Convert.ToSingle(txtPrecio.Text);
+            a = n1 * n2;
+            txtSubtotal.Text = a.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.txtIva.Text.Length > 1)
+            {
+                double total = 0;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+
+                    total += Convert.ToDouble(row.Cells[8].Value);
+
+                }
+                double b,c;
+                b = Convert.ToInt32(txtIva.Text);
+                c = b + total;
+                txtTotal.Text = c.ToString();
+            }
+            else
+                MessageBox.Show("Ingrese el iva");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila.");
+            }
         }
     }
 }

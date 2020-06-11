@@ -52,7 +52,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAgregarProd = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtMedida = new System.Windows.Forms.TextBox();
+            this.txtTam = new System.Windows.Forms.TextBox();
+            this.txtPallet = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -75,29 +88,30 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtPallet = new System.Windows.Forms.TextBox();
-            this.txtTam = new System.Windows.Forms.TextBox();
-            this.txtMedida = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnAgregarProd = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contenedor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // contenedor
@@ -130,6 +144,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.22723F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.38211F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.92276F));
+            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txt1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
@@ -150,6 +165,9 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtTotal, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBox4, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 4, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 90);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -424,6 +442,89 @@
             this.panel2.Size = new System.Drawing.Size(1060, 136);
             this.panel2.TabIndex = 7;
             // 
+            // btnAgregarProd
+            // 
+            this.btnAgregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarProd.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnAgregarProd.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarProd.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnAgregarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnAgregarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnAgregarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProd.ForeColor = System.Drawing.Color.Silver;
+            this.btnAgregarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarProd.Location = new System.Drawing.Point(938, 18);
+            this.btnAgregarProd.Name = "btnAgregarProd";
+            this.btnAgregarProd.Size = new System.Drawing.Size(104, 33);
+            this.btnAgregarProd.TabIndex = 25;
+            this.btnAgregarProd.Text = "Agregar";
+            this.btnAgregarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregarProd.UseVisualStyleBackColor = false;
+            this.btnAgregarProd.Click += new System.EventHandler(this.btnAgregarProd_Click);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.50643F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.49358F));
+            this.tableLayoutPanel5.Controls.Add(this.txtDescripcion, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 84);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(389, 33);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(109, 3);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(277, 27);
+            this.txtDescripcion.TabIndex = 16;
+            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(4, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 18);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Descripción";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Silver;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(938, 57);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(104, 33);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -447,6 +548,102 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(497, 97);
             this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Enabled = false;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtPrecio.Location = new System.Drawing.Point(375, 51);
+            this.txtPrecio.Multiline = true;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(119, 43);
+            this.txtPrecio.TabIndex = 23;
+            // 
+            // txtMedida
+            // 
+            this.txtMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMedida.BackColor = System.Drawing.Color.White;
+            this.txtMedida.Enabled = false;
+            this.txtMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtMedida.Location = new System.Drawing.Point(127, 51);
+            this.txtMedida.Multiline = true;
+            this.txtMedida.Name = "txtMedida";
+            this.txtMedida.Size = new System.Drawing.Size(118, 43);
+            this.txtMedida.TabIndex = 22;
+            // 
+            // txtTam
+            // 
+            this.txtTam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTam.BackColor = System.Drawing.Color.White;
+            this.txtTam.Enabled = false;
+            this.txtTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtTam.Location = new System.Drawing.Point(375, 3);
+            this.txtTam.Multiline = true;
+            this.txtTam.Name = "txtTam";
+            this.txtTam.Size = new System.Drawing.Size(119, 42);
+            this.txtTam.TabIndex = 21;
+            // 
+            // txtPallet
+            // 
+            this.txtPallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtPallet.BackColor = System.Drawing.Color.White;
+            this.txtPallet.Enabled = false;
+            this.txtPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
+            this.txtPallet.Location = new System.Drawing.Point(127, 3);
+            this.txtPallet.Multiline = true;
+            this.txtPallet.Name = "txtPallet";
+            this.txtPallet.Size = new System.Drawing.Size(118, 42);
+            this.txtPallet.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 42);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Pallet por contenido";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(251, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 42);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Tamaño";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 51);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 42);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Medida";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(251, 51);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 42);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Precio unitario";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -546,8 +743,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column9,
+            this.Column10});
             this.dataGridView1.Location = new System.Drawing.Point(20, 405);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1052, 144);
@@ -586,7 +795,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -611,7 +820,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(632, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(631, 3);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
             this.BtnAgregar.TabIndex = 36;
@@ -626,7 +835,7 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(199, 8);
+            this.comboBox1.Location = new System.Drawing.Point(198, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(394, 26);
             this.comboBox1.TabIndex = 2;
@@ -747,183 +956,89 @@
             this.imgVentas.TabIndex = 0;
             this.imgVentas.TabStop = false;
             // 
-            // label14
+            // textBox3
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 3);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 42);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Pallet por contenido";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox3.Location = new System.Drawing.Point(86, 123);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(110, 26);
+            this.textBox3.TabIndex = 26;
             // 
-            // label15
+            // button2
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(251, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(118, 42);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Tamaño";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button2.Location = new System.Drawing.Point(3, 123);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 31);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "calcular sub";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label16
+            // textBox4
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 51);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 42);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Medida";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox4.Location = new System.Drawing.Point(636, 123);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(170, 26);
+            this.textBox4.TabIndex = 28;
             // 
-            // label17
+            // button3
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(251, 51);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 42);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Precio unitario";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button3.Location = new System.Drawing.Point(518, 123);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 31);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Total";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // txtPallet
+            // Column8
             // 
-            this.txtPallet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPallet.BackColor = System.Drawing.Color.White;
-            this.txtPallet.Enabled = false;
-            this.txtPallet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPallet.Location = new System.Drawing.Point(127, 3);
-            this.txtPallet.Multiline = true;
-            this.txtPallet.Name = "txtPallet";
-            this.txtPallet.Size = new System.Drawing.Size(118, 42);
-            this.txtPallet.TabIndex = 20;
+            this.Column8.HeaderText = "Folio";
+            this.Column8.Name = "Column8";
             // 
-            // txtTam
+            // Column1
             // 
-            this.txtTam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTam.BackColor = System.Drawing.Color.White;
-            this.txtTam.Enabled = false;
-            this.txtTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtTam.Location = new System.Drawing.Point(375, 3);
-            this.txtTam.Multiline = true;
-            this.txtTam.Name = "txtTam";
-            this.txtTam.Size = new System.Drawing.Size(119, 42);
-            this.txtTam.TabIndex = 21;
+            this.Column1.HeaderText = "Producto";
+            this.Column1.Name = "Column1";
             // 
-            // txtMedida
+            // Column2
             // 
-            this.txtMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMedida.BackColor = System.Drawing.Color.White;
-            this.txtMedida.Enabled = false;
-            this.txtMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtMedida.Location = new System.Drawing.Point(127, 51);
-            this.txtMedida.Multiline = true;
-            this.txtMedida.Name = "txtMedida";
-            this.txtMedida.Size = new System.Drawing.Size(118, 43);
-            this.txtMedida.TabIndex = 22;
+            this.Column2.HeaderText = "Cantidad";
+            this.Column2.Name = "Column2";
             // 
-            // txtPrecio
+            // Column3
             // 
-            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrecio.BackColor = System.Drawing.Color.White;
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPrecio.Location = new System.Drawing.Point(375, 51);
-            this.txtPrecio.Multiline = true;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(119, 43);
-            this.txtPrecio.TabIndex = 23;
+            this.Column3.HeaderText = "Descripcion";
+            this.Column3.Name = "Column3";
             // 
-            // tableLayoutPanel5
+            // Column4
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.50643F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.49358F));
-            this.tableLayoutPanel5.Controls.Add(this.txtDescripcion, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label18, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 84);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(389, 33);
-            this.tableLayoutPanel5.TabIndex = 2;
+            this.Column4.HeaderText = "Pallet";
+            this.Column4.Name = "Column4";
             // 
-            // label18
+            // Column5
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(4, 7);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 18);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "Descripción";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Column5.HeaderText = "Medida";
+            this.Column5.Name = "Column5";
             // 
-            // txtDescripcion
+            // Column6
             // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(109, 3);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(277, 27);
-            this.txtDescripcion.TabIndex = 16;
-            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Column6.HeaderText = "Tamaño";
+            this.Column6.Name = "Column6";
             // 
-            // btnAgregarProd
+            // Column7
             // 
-            this.btnAgregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarProd.BackColor = System.Drawing.SystemColors.Desktop;
-            this.btnAgregarProd.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnAgregarProd.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnAgregarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.btnAgregarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.btnAgregarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProd.ForeColor = System.Drawing.Color.Silver;
-            this.btnAgregarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProd.Location = new System.Drawing.Point(938, 18);
-            this.btnAgregarProd.Name = "btnAgregarProd";
-            this.btnAgregarProd.Size = new System.Drawing.Size(104, 33);
-            this.btnAgregarProd.TabIndex = 25;
-            this.btnAgregarProd.Text = "Agregar";
-            this.btnAgregarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAgregarProd.UseVisualStyleBackColor = false;
-            this.btnAgregarProd.Click += new System.EventHandler(this.btnAgregarProd_Click);
+            this.Column7.HeaderText = "Precio Unitario";
+            this.Column7.Name = "Column7";
             // 
-            // btnEliminar
+            // Column9
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Silver;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(938, 57);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(104, 33);
-            this.btnEliminar.TabIndex = 24;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.Column9.HeaderText = "Subtotal";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Total";
+            this.Column10.Name = "Column10";
             // 
             // ventas
             // 
@@ -934,12 +1049,15 @@
             this.Controls.Add(this.contenedor);
             this.Name = "ventas";
             this.Text = "ventas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ventas_FormClosing);
             this.Load += new System.EventHandler(this.ventas_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -950,8 +1068,6 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -999,8 +1115,6 @@
         private System.Windows.Forms.TextBox txtLugarExpe;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSubtotal;
-        private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCondiciones;
@@ -1009,14 +1123,30 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtMedida;
-        private System.Windows.Forms.TextBox txtTam;
-        private System.Windows.Forms.TextBox txtPallet;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnAgregarProd;
         private System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.TextBox txtPallet;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtMedida;
+        public System.Windows.Forms.TextBox txtTam;
+        public System.Windows.Forms.TextBox txtSubtotal;
+        public System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
