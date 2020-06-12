@@ -20,9 +20,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -63,8 +63,9 @@ namespace WareDev
             string query = "select max(Id) from ventas";
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -98,28 +99,6 @@ namespace WareDev
             //comboBox1.DisplayMember = "name";
 
             comboBox1_SelectedIndexChanged(null, null);
-        }
-
-        private static ventas _instancia;
-
-        public static ventas GetInstancia()
-        {
-            if(_instancia == null)
-            {
-                _instancia = new ventas();
-            }
-            return _instancia;
-        }
-
-        public void setArticulo(string prod, string cant, string desc, string pall, string med, string tam, string preci)
-        {
-            this.txtProducto.Text = prod;
-            this.txtCantidad.Text = cant;
-            this.txtDescripcion.Text = desc;
-            this.txtPallet.Text = pall;
-            this.txtMedida.Text = med;
-            this.txtTam.Text = tam;
-            this.txtPrecio.Text = preci; 
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -427,17 +406,8 @@ namespace WareDev
             Productos materia;
         private void btnArticulo_Click(object sender, EventArgs e)
         {
-
-            Productos prod = new Productos();
-            prod.ShowDialog(); 
-            //if (materia == null)
-            //{
-            //    materia = new Productos();
-            //    materia.Owner = this;
-            //    materia.FormClosed += materia_FormClosed;
-            //    materia.Show();
-            //}
-            //else materia.Activate();
+            materia = new Productos();
+            materia.Show();
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -446,24 +416,32 @@ namespace WareDev
 
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(txtFolio.Text,txtProducto.Text,textBox3.Text,txtDescripcion.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtPrecio.Text,txtSubtotal.Text, txtTotal.Text);
-
+            if(txtProducto.Text!= "")
+            {
+                dataGridView1.Rows.Add(txtFolio.Text,txtProducto.Text,txtCantidad.Text,txtDescripcion.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtPrecio.Text);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para agregarlo a la tabla");
+            }
             txtProducto.Text = string.Empty;
             textBox3.Text = string.Empty; 
-        }
-
-        private void ventas_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _instancia = null; 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             float n1, n2, a;
-            n1 = Convert.ToInt32(textBox3.Text);
-            n2 = Convert.ToSingle(txtPrecio.Text);
-            a = n1 * n2;
-            txtSubtotal.Text = a.ToString();
+            if(txtPrecio.Text != ""){
+                n1 = Convert.ToInt32(textBox3.Text);
+                n2 = Convert.ToSingle(txtPrecio.Text);
+                a = n1 * n2;
+                txtSubtotal.Text = a.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el precio unitario, o seleccione un producto para obtener la información");
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -479,7 +457,7 @@ namespace WareDev
                 }
                 double b,c;
                 b = Convert.ToInt32(txtIva.Text);
-                c = b + total;
+                c = total + (total*(b/100));
                 txtTotal.Text = c.ToString();
             }
             else

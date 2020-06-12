@@ -48,16 +48,13 @@ namespace WareDev
             MenuInicio inv = new MenuInicio(tam);
             this.Close();
 
-            if (MessageBox.Show("Do you want to log out ?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+            if (MessageBox.Show("¿Seguro que quiere cerrar sesión? Al aceptar se cerrará el sistema.", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes) ;
             {
-              
+
                 //inv.Visible = false;
                 //inv.Hide();
                 //inv.Close();
-                this.Close();
-                inv.Close();
-                Login login = new Login();
-                login.Show();
+                Application.Exit();
        
 
             }
