@@ -31,13 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.contenedor = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ComboNombre = new System.Windows.Forms.ComboBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
@@ -49,7 +46,6 @@
             // contenedor
             // 
             this.contenedor.Controls.Add(this.dataGridView1);
-            this.contenedor.Controls.Add(this.lblTotal);
             this.contenedor.Controls.Add(this.tableLayoutPanel1);
             this.contenedor.Controls.Add(this.panelTitulo);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,18 +66,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(994, 267);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(679, 227);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(151, 18);
-            this.lblTotal.TabIndex = 3;
-            this.lblTotal.Text = "Total de registros: ";
             // 
             // tableLayoutPanel1
             // 
@@ -90,7 +76,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.49123F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.50877F));
-            this.tableLayoutPanel1.Controls.Add(this.BtnAgregar, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ComboNombre, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 104);
@@ -100,27 +85,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(481, 95);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.AccessibleName = "";
-            this.BtnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnAgregar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
-            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(360, 57);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(104, 35);
-            this.BtnAgregar.TabIndex = 37;
-            this.BtnAgregar.Text = "Buscar";
-            this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAgregar.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -149,7 +113,6 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.Controls.Add(this.textBox1);
             this.panelTitulo.Controls.Add(this.txtVentas);
             this.panelTitulo.Controls.Add(this.btrRegreso);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -157,13 +120,6 @@
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1084, 84);
             this.panelTitulo.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(77, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 12;
             // 
             // txtVentas
             // 
@@ -205,12 +161,10 @@
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.contenedor.ResumeLayout(false);
-            this.contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
-            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -224,9 +178,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ComboNombre;
-        private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
