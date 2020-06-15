@@ -18,9 +18,9 @@ namespace WareDev
             InitializeComponent();
         }
         //Jess
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         private void btrRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -56,51 +56,43 @@ namespace WareDev
         {
             string query = "select name, size, measure,description, unitPrice, boxes, amountPurchased, pallet from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
             dataGridView1.DataSource = GetData(query);
-            this.dataGridView1.Columns[0].HeaderText = "Name";
-            this.dataGridView1.Columns[1].HeaderText = "Size";
-            this.dataGridView1.Columns[2].HeaderText = "Measure";
-            this.dataGridView1.Columns[3].HeaderText = "Description";
-            this.dataGridView1.Columns[4].HeaderText = "Unit Price";
-            this.dataGridView1.Columns[5].HeaderText = "Boxes";
-            this.dataGridView1.Columns[6].HeaderText = "Amount Purchased";
-            this.dataGridView1.Columns[7].HeaderText = "Pallet";
+            this.dataGridView1.Columns[0].HeaderText = "Nombre";
+            this.dataGridView1.Columns[1].HeaderText = "Tamaño";
+            this.dataGridView1.Columns[2].HeaderText = "Medida";
+            this.dataGridView1.Columns[3].HeaderText = "Descripción";
+            this.dataGridView1.Columns[4].HeaderText = "Precio unitario";
+            this.dataGridView1.Columns[5].HeaderText = "Cajas por contenido";
+            this.dataGridView1.Columns[6].HeaderText = "Cantidad adquirida";
+            this.dataGridView1.Columns[7].HeaderText = "Pallet por contenido";
         }
 
 
-
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ventas ventas = new ventas();
-            string a, b, c, d, f, g, h, k;
-
-            a = this.dataGridView1.CurrentRow.Cells["name"].Value.ToString();
-            c = this.dataGridView1.CurrentRow.Cells["description"].Value.ToString();
-            d = this.dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
-            g = this.dataGridView1.CurrentRow.Cells["size"].Value.ToString();
-            h = this.dataGridView1.CurrentRow.Cells["unitPrice"].Value.ToString();
-            k = this.dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
-
-            foreach ( Form frm in Application.OpenForms)
+            try
             {
-                if(frm.Name == "ventas")
+                ventas ventas = new ventas();
+                foreach (Form frm in Application.OpenForms)
                 {
-                    ventas = (ventas)frm;
-                    ventas.txtProducto.Text = a;
-                    ventas.txtDescripcion.Text = c;
-                    ventas.txtPallet.Text = d;
-                    ventas.txtTam.Text = g;
-                    ventas.txtPrecio.Text = h;
-                    ventas.cantidad.Text = k; 
-                    this.Close();
-                    break;
+                    if(frm.Name == "ventas")
+                    {
+                        ventas = (ventas)frm;
+                        ventas.txtProducto.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                        ventas.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                        ventas.txtPallet.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                        ventas.txtTam.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                        ventas.txtPrecio.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                        ventas.cantidad.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+
+                        this.Close();
+                        break;
+                    }
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

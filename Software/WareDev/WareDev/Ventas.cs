@@ -20,9 +20,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -63,9 +63,9 @@ namespace WareDev
             string query = "select max(Id) from ventas";
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -293,63 +293,50 @@ namespace WareDev
             if ((this.dateTimePicker1 != null) && (this.txtIva.Text.Length >= 1) && (this.txtNumCliente.Text.Length >= 1) && (this.comboMoneda.Text.Length >= 1) &&
                 (this.comboBox3.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.txtCondiciones.Text.Length >= 1) && (this.txtLugarExpe.Text.Length >= 1))
             {
-
-               
-                connection.Open();
            //////string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-@cant where name='" + comboBox1.Text + "'";
 
+                connection.Open();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet, @medida, @tam,  @precio)", connection);
 
-           
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet, @medida, @tam,  @precio)", connection);
-
-                        ag.Parameters.Clear();
-                        ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
-                        ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column1"].Value));
+                        
+                    ag.Parameters.Clear();
+                    ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
+                    ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column1"].Value));
                         //ag.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Column2"].Value));
-                        ag.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column3"].Value));
-                        ag.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column4"].Value));
-                        ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column5"].Value));
-                        ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column6"].Value));
-                        ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column7"].Value));
-                        ag.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
-                        ag.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column2"].Value));
+                    ag.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column3"].Value));
+                    ag.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column4"].Value));
+                    ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column5"].Value));
+                    ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column6"].Value));
+                    ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column7"].Value));
+                    ag.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
+                    ag.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column2"].Value));
 
-                
-
-                ag.ExecuteNonQuery();
-            }
-
-            string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,cond,lugar,subtotal,total) " +
-                "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text + "','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
-            cmd = new SqlCommand(sqlQuery, connection);
-            cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
-            cmd.ExecuteNonQuery();
+                    ag.ExecuteNonQuery();
+                }
+                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,cond,lugar,subtotal,total) " +
+                    "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text + "','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
+                cmd = new SqlCommand(sqlQuery, connection);
+                cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
+                cmd.ExecuteNonQuery();
+                connection.Close();
 
                 decimal total = 0;
                 string a; 
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-
+                    connection.Open();
                     total = Convert.ToDecimal(row.Cells[2].Value);
                     a = Convert.ToString(row.Cells[1].Value);
                     string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'"+total+"' where name='" +a+ "'";
                     cmd2 = new SqlCommand(sqlQuery2,connection);
-                    cmd2.ExecuteNonQuery(); 
-
-
-
+                    cmd2.ExecuteNonQuery();
+                    connection.Close();
                 }
-                
-                //cmd2 = new SqlCommand(sqlQuery2, connection);
-                //cmd2.Parameters.AddWithValue("@cant", textBox1.Text);
-
-                //cmd2.ExecuteNonQuery();
-                connection.Close();
-                    MessageBox.Show("Se ha agregado la venta");
-                    this.Hide();
+                MessageBox.Show("Se ha agregado la venta");
+                this.Close();
                 
             }
             else
