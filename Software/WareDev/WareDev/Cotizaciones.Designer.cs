@@ -33,13 +33,19 @@ namespace WareDev
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizaciones));
             this.label1 = new System.Windows.Forms.Label();
             this.TablaDeVenta = new System.Windows.Forms.DataGridView();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.IdClient = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Condicion = new System.Windows.Forms.TextBox();
             this.place = new System.Windows.Forms.TextBox();
@@ -58,18 +64,20 @@ namespace WareDev
             this.ico = new System.Windows.Forms.ComboBox();
             this.Customer = new System.Windows.Forms.ComboBox();
             this.divisa = new System.Windows.Forms.ComboBox();
-            this.producto = new System.Windows.Forms.TextBox();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtIva = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.IdClient = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.agregar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnAgregarProd = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -90,6 +98,8 @@ namespace WareDev
             this.btnArticulo = new System.Windows.Forms.Button();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.txtPrecioTotal = new System.Windows.Forms.TextBox();
+            this.txtCan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -114,13 +124,22 @@ namespace WareDev
             // 
             // TablaDeVenta
             // 
+            this.TablaDeVenta.AllowUserToAddRows = false;
             this.TablaDeVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TablaDeVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaDeVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDeVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cantidad});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
             this.TablaDeVenta.Location = new System.Drawing.Point(12, 362);
             this.TablaDeVenta.Name = "TablaDeVenta";
             this.TablaDeVenta.RowHeadersWidth = 45;
@@ -128,22 +147,50 @@ namespace WareDev
             this.TablaDeVenta.TabIndex = 49;
             this.TablaDeVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaDeVenta_CellContentClick);
             // 
-            // Cantidad
+            // Column1
             // 
-            this.Cantidad.HeaderText = "Cantidad ";
-            this.Cantidad.Name = "Cantidad";
+            this.Column1.HeaderText = "Folio";
+            this.Column1.Name = "Column1";
             // 
-            // label13
+            // Column2
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(545, 139);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 18);
-            this.label13.TabIndex = 74;
-            this.label13.Text = "Product";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Column2.HeaderText = "Producto";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descripcion";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Pallet";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Medida";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Tamaño";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Precio Unitario";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Total del producto";
+            this.Column9.Name = "Column9";
             // 
             // label12
             // 
@@ -191,7 +238,6 @@ namespace WareDev
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.65098F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.843382F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.04111F));
-            this.tableLayoutPanel1.Controls.Add(this.IdClient, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.Condicion, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.place, 1, 3);
@@ -213,10 +259,11 @@ namespace WareDev
             this.tableLayoutPanel1.Controls.Add(this.Customer, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.divisa, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.producto, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtSubtotal, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label9, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtIva, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label22, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.IdClient, 3, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(31, 56);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -228,16 +275,6 @@ namespace WareDev
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1036, 165);
             this.tableLayoutPanel1.TabIndex = 67;
-            // 
-            // IdClient
-            // 
-            this.IdClient.Enabled = false;
-            this.IdClient.FormattingEnabled = true;
-            this.IdClient.Location = new System.Drawing.Point(369, 36);
-            this.IdClient.Name = "IdClient";
-            this.IdClient.Size = new System.Drawing.Size(156, 28);
-            this.IdClient.TabIndex = 57;
-            this.IdClient.SelectedIndexChanged += new System.EventHandler(this.IdClient_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -283,6 +320,7 @@ namespace WareDev
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtTotal.BackColor = System.Drawing.Color.White;
+            this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtTotal.Location = new System.Drawing.Point(632, 69);
             this.txtTotal.Multiline = true;
@@ -440,20 +478,11 @@ namespace WareDev
             this.divisa.Size = new System.Drawing.Size(156, 28);
             this.divisa.TabIndex = 83;
             // 
-            // producto
-            // 
-            this.producto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.producto.Location = new System.Drawing.Point(632, 135);
-            this.producto.Name = "producto";
-            this.producto.Size = new System.Drawing.Size(401, 26);
-            this.producto.TabIndex = 84;
-            // 
             // txtSubtotal
             // 
             this.txtSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSubtotal.BackColor = System.Drawing.Color.White;
+            this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtSubtotal.Location = new System.Drawing.Point(632, 36);
             this.txtSubtotal.Multiline = true;
@@ -473,6 +502,32 @@ namespace WareDev
             this.label9.TabIndex = 15;
             this.label9.Text = "Customer\'s name";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtIva
+            // 
+            this.txtIva.Location = new System.Drawing.Point(369, 135);
+            this.txtIva.Name = "txtIva";
+            this.txtIva.Size = new System.Drawing.Size(156, 26);
+            this.txtIva.TabIndex = 85;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(255, 136);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(92, 24);
+            this.label22.TabIndex = 86;
+            this.label22.Text = "IVA";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // IdClient
+            // 
+            this.IdClient.Enabled = false;
+            this.IdClient.Location = new System.Drawing.Point(369, 36);
+            this.IdClient.Name = "IdClient";
+            this.IdClient.Size = new System.Drawing.Size(156, 26);
+            this.IdClient.TabIndex = 87;
             // 
             // button2
             // 
@@ -515,21 +570,6 @@ namespace WareDev
             this.Delete.UseVisualStyleBackColor = false;
             this.Delete.UseWaitCursor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
-            // agregar
-            // 
-            this.agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.agregar.BackColor = System.Drawing.Color.Black;
-            this.agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.agregar.Location = new System.Drawing.Point(839, 517);
-            this.agregar.Name = "agregar";
-            this.agregar.Size = new System.Drawing.Size(119, 48);
-            this.agregar.TabIndex = 77;
-            this.agregar.Text = "Add";
-            this.agregar.UseVisualStyleBackColor = false;
-            this.agregar.UseWaitCursor = true;
-            this.agregar.Visible = false;
-            this.agregar.Click += new System.EventHandler(this.agregar_Click);
             // 
             // button5
             // 
@@ -586,6 +626,7 @@ namespace WareDev
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btnAgregarProd);
             this.panel2.Controls.Add(this.tableLayoutPanel5);
             this.panel2.Controls.Add(this.btnEliminar);
@@ -595,6 +636,27 @@ namespace WareDev
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1090, 124);
             this.panel2.TabIndex = 88;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Silver;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(966, 87);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 33);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Finalizar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // btnAgregarProd
             // 
@@ -608,13 +670,14 @@ namespace WareDev
             this.btnAgregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProd.ForeColor = System.Drawing.Color.Silver;
             this.btnAgregarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarProd.Location = new System.Drawing.Point(968, 18);
+            this.btnAgregarProd.Location = new System.Drawing.Point(968, 5);
             this.btnAgregarProd.Name = "btnAgregarProd";
             this.btnAgregarProd.Size = new System.Drawing.Size(104, 33);
             this.btnAgregarProd.TabIndex = 25;
             this.btnAgregarProd.Text = "Agregar";
             this.btnAgregarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgregarProd.UseVisualStyleBackColor = false;
+            this.btnAgregarProd.Click += new System.EventHandler(this.btnAgregarProd_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -669,13 +732,14 @@ namespace WareDev
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Silver;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(968, 57);
+            this.btnEliminar.Location = new System.Drawing.Point(966, 45);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 33);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -719,7 +783,6 @@ namespace WareDev
             this.txtMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMedida.BackColor = System.Drawing.Color.White;
-            this.txtMedida.Enabled = false;
             this.txtMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtMedida.Location = new System.Drawing.Point(127, 51);
             this.txtMedida.Multiline = true;
@@ -820,7 +883,6 @@ namespace WareDev
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCantidad.BackColor = System.Drawing.Color.White;
-            this.txtCantidad.Enabled = false;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(180, 36);
             this.txtCantidad.Multiline = true;
@@ -828,6 +890,8 @@ namespace WareDev
             this.txtCantidad.Size = new System.Drawing.Size(87, 27);
             this.txtCantidad.TabIndex = 15;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label20
             // 
@@ -882,18 +946,35 @@ namespace WareDev
             this.label21.Text = "Producto";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtPrecioTotal
+            // 
+            this.txtPrecioTotal.Location = new System.Drawing.Point(793, 20);
+            this.txtPrecioTotal.Name = "txtPrecioTotal";
+            this.txtPrecioTotal.Size = new System.Drawing.Size(126, 20);
+            this.txtPrecioTotal.TabIndex = 89;
+            this.txtPrecioTotal.Visible = false;
+            // 
+            // txtCan
+            // 
+            this.txtCan.Location = new System.Drawing.Point(925, 20);
+            this.txtCan.Name = "txtCan";
+            this.txtCan.Size = new System.Drawing.Size(100, 20);
+            this.txtCan.TabIndex = 90;
+            this.txtCan.Visible = false;
+            // 
             // Cotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1114, 571);
+            this.Controls.Add(this.txtCan);
+            this.Controls.Add(this.txtPrecioTotal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Delete);
-            this.Controls.Add(this.agregar);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.TablaDeVenta);
@@ -931,12 +1012,10 @@ namespace WareDev
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView TablaDeVenta;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox IdClient;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txt1;
         private System.Windows.Forms.TextBox txtTotal;
@@ -955,15 +1034,12 @@ namespace WareDev
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button agregar;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox Condicion;
         private System.Windows.Forms.TextBox place;
         private System.Windows.Forms.ComboBox divisa;
-        private System.Windows.Forms.TextBox producto;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.ComboBox ico;
         private System.Windows.Forms.ComboBox Customer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -974,10 +1050,6 @@ namespace WareDev
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtMedida;
-        private System.Windows.Forms.TextBox txtTam;
-        private System.Windows.Forms.TextBox txtPallet;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -988,5 +1060,24 @@ namespace WareDev
         private System.Windows.Forms.Button btnArticulo;
         public System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtMedida;
+        public System.Windows.Forms.TextBox txtTam;
+        public System.Windows.Forms.TextBox txtPallet;
+        public System.Windows.Forms.TextBox txtPrecioTotal;
+        public System.Windows.Forms.TextBox txtCan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtIva;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox IdClient;
     }
 }

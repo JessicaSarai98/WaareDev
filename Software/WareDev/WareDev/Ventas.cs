@@ -20,9 +20,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -30,6 +30,7 @@ namespace WareDev
         private void ventas_Load(object sender, EventArgs e)
         {
             dateTimePicker1.Value = DateTime.Today;
+            txtCantidad.Enabled = false;
 
             SqlCommand cm = new SqlCommand("select name from FinishedProducts", connection);
             connection.Open();
@@ -63,9 +64,9 @@ namespace WareDev
             string query = "select max(Id) from ventas";
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -300,7 +301,6 @@ namespace WareDev
                 {
                     SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet, @medida, @tam,  @precio)", connection);
 
-                        
                     ag.Parameters.Clear();
                     ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
                     ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column1"].Value));
@@ -431,6 +431,7 @@ namespace WareDev
         {
             materia = new Productos();
             materia.Show();
+            txtCantidad.Enabled = true;
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -457,6 +458,7 @@ namespace WareDev
                         txtTam.Text = string.Empty;
                         txtPrecio.Text = string.Empty;
                         cantidad.Text = string.Empty;
+                        txtCantidad.Enabled = false;
                     }
                     else
                     {
@@ -513,21 +515,30 @@ namespace WareDev
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
             float n1, n2, a;
-            if (txtCantidad.Text != "")
-            {
-                if ((Convert.ToDecimal(txtCantidad.Text)) <= Convert.ToDecimal(cantidad.Text)) {
-                    n1 = Convert.ToInt32(txtCantidad.Text);
-                    n2 = Convert.ToSingle(txtPrecio.Text);
-                    a = n1 * n2;
-                    textBox3.Text = a.ToString();
+           
+                if (txtCantidad.Text != "")
+                {
+                if (Convert.ToDecimal(cantidad.Text) != 0)
+                {
+                    if ((Convert.ToDecimal(txtCantidad.Text)) <= Convert.ToDecimal(cantidad.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        textBox3.Text = a.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: " + cantidad.Text);
+                        txtCantidad.Text = string.Empty;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: "+cantidad.Text);
-                    txtCantidad.Text = string.Empty;
+                    MessageBox.Show("No hay cantidad disponible");
                 }
-                
-            }
+                }
+            
             
         }
 
@@ -563,6 +574,27 @@ namespace WareDev
             {
                 MessageBox.Show("Ingrese IVA");
             }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

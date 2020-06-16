@@ -29,9 +29,9 @@ namespace WareDev
 
         }
         // JESS
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         SqlCommand cmd;
@@ -40,19 +40,11 @@ namespace WareDev
         private void cotizaciones_Load(object sender, EventArgs e)
         {
             Date.Value = DateTime.Today;
-
+            Expiration.Value = DateTime.Today;
+            txtCantidad.Enabled = false;
             SqlCommand cm = new SqlCommand("select Id from clientes", connection);
 
-            connection.Open();
-            SqlDataReader registro = cm.ExecuteReader();
-            //leyendo clientes - id client
-            while (registro.Read())
-            {
-                IdClient.Items.Add(registro["Id"].ToString());
-                
-
-            }
-            connection.Close();
+           
 
             //leyendp clientes - nombre
             SqlCommand d = new SqlCommand("select name from clientes", connection);
@@ -250,8 +242,8 @@ namespace WareDev
                 headertable.AddCell(Customer.Text);
                 headertable.AddCell("CONDICION COMERCIAL");
                 headertable.AddCell(ico.Text);
-                headertable.AddCell("PRODUCTO");
-                headertable.AddCell(producto.Text);
+                //headertable.AddCell("PRODUCTO");
+                //headertable.AddCell(producto.Text);
                 headertable.AddCell("PALLET");
                 headertable.AddCell(pallet.Text);
                 headertable.AddCell("ICOTERM");
@@ -332,7 +324,7 @@ namespace WareDev
             txtSubtotal.Text = string.Empty;
             txtTotal.Text = string.Empty;
             divisa.Text = string.Empty;
-            producto.Text = string.Empty;
+            
             IdClient.Text = string.Empty;
             ico.Text = string.Empty;
             TablaDeVenta.DataSource = null;
@@ -340,58 +332,9 @@ namespace WareDev
 
         }
 
-        private void AddARow(DataTable table)
-        {
-            DataRow newRow = table.NewRow();
-            table.Rows.Add(newRow);
-        }
         DataTable dt = new DataTable();
         DataTable dt2 = new DataTable(); 
-        private void agregar_Click(object sender, EventArgs e)
-        {
-            
-            connection.Open();
-            SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection); 
-            SqlDataAdapter da = new SqlDataAdapter(c);
-            da.Fill(dt);
-            
-            //DataRow dr;
-
-            //dr = dt2.NewRow();
-            //dr[0] = producto.Text;
-            //dt2.Rows.Add(dr); 
-
-            //foreach(var item in dt2.Rows)
-            //{
-            //    dt.ImportRow((DataRow)item);
-            //}
-
-            TablaDeVenta.DataSource = dt;
-            this.TablaDeVenta.Columns[1].HeaderText = "Product's name";
-            this.TablaDeVenta.Columns[2].HeaderText = "Size";
-            this.TablaDeVenta.Columns[3].HeaderText = "Measure";
-            this.TablaDeVenta.Columns[4].HeaderText = "Description";
-            this.TablaDeVenta.Columns[5].HeaderText = "Price";
-            this.TablaDeVenta.Columns[6].HeaderText = "Boxes per acount";
-            this.TablaDeVenta.Columns[7].HeaderText = "Amount";
-            //int p = Convert.ToInt32(producto.Text);
-            
-            //dt.Rows.Add(producto.Text);
-            //TablaDeVenta.DataSource = dt; 
-
-
-            //TablaDeVenta.Rows.Add(producto.Text);
-           // int a = da.Fill(dt);|
-            //TablaDeVenta.Rows[a].Cells[0].Value = p;
-            
-
-            connection.Close();
-
-           
-            
         
-            
-        }
 
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -407,31 +350,51 @@ namespace WareDev
 
         private void TablaDeVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.TablaDeVenta.Columns[0].HeaderText = "Product's name";
-            this.TablaDeVenta.Columns[1].HeaderText = "Size";
-            this.TablaDeVenta.Columns[2].HeaderText = "Measure";
-            this.TablaDeVenta.Columns[3].HeaderText = "Description";
-            this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
-            this.TablaDeVenta.Columns[5].HeaderText = "Boxes per Content";
-            this.TablaDeVenta.Columns[6].HeaderText = "Amount";
+            //this.TablaDeVenta.Columns[0].HeaderText = "Product's name";
+            //this.TablaDeVenta.Columns[1].HeaderText = "Size";
+            //this.TablaDeVenta.Columns[2].HeaderText = "Measure";
+            //this.TablaDeVenta.Columns[3].HeaderText = "Description";
+            //this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
+            //this.TablaDeVenta.Columns[5].HeaderText = "Boxes per Content";
+            //this.TablaDeVenta.Columns[6].HeaderText = "Amount";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1) && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) && (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) && (this.Customer.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.divisa.Text.Length >= 1) && (this.producto.Text.Length >= 1))
+            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1) && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) && (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) && (this.Customer.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.divisa.Text.Length >= 1))
             {
                 connection.Open();
 
-                string sqlQuery = "insert into quotations(Id,date,pallet, expiration,idCliente,icoterm,customerName, subtotal,total,currency,product,place,cond)values('" + txtFolio.Text + "',@fecha1,'" + pallet.Text + "',@fecha2,'"+IdClient.Text + "','"+ico.Text+"','" + Customer.Text+ "','"+txtSubtotal.Text+ "','"+txtTotal.Text+ "','"+divisa.Text+ "','"+producto.Text+ "','"+place.Text+ "','"+Condicion.Text+"')";
-                cmd = new SqlCommand(sqlQuery,connection);
-                cmd.Parameters.AddWithValue("@fecha1",Date.Value.Date);
-                cmd.Parameters.AddWithValue("@fecha2",Expiration.Value.Date);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Se ha agregado la cotización");
-           
-                this.Hide();
-                
+                foreach (DataGridViewRow row in TablaDeVenta.Rows)
+                {
+                    SqlCommand ad = new SqlCommand("insert into detalleQuo values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet,@medida,@tam,@precio)", connection);
+
+                    ad.Parameters.Clear();
+                    ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column1"].Value));
+                    ad.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
+                    ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column2"].Value));
+                    ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column3"].Value));
+                    ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column4"].Value));
+                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column5"].Value));
+
+                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column6"].Value));
+                    ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column7"].Value));
+                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column8"].Value));
+                    
+                    ad.ExecuteNonQuery();
+
+                }
+
+            string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, icoterm, customerName,subtotal,total,currency, IVA,place,cond) values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" + IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text + "','" + Condicion.Text + "')";
+            cmd = new SqlCommand(sqlQuery, connection);
+            cmd.Parameters.AddWithValue("@date", Date.Value);
+            cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+
+            MessageBox.Show("Se ha agregado la venta");
+                this.Close();
+
             }
             else
             {
@@ -481,12 +444,121 @@ namespace WareDev
                 materia.Owner = this;
                 materia.FormClosed += materia_FormClosed;
                 materia.Show();
+                txtCantidad.Enabled = true;
             }
             else materia.Activate();
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
             materia = null;
+        }
+
+        private void btnAgregarProd_Click(object sender, EventArgs e)
+        {
+            if (txtProducto.Text !="")
+            {
+                if(txtCantidad.Text!= "")
+                {
+                    if(txtMedida.Text != "")
+                    {
+                        TablaDeVenta.Rows.Add(txtFolio.Text,txtProducto.Text,txtCantidad.Text,txtDescripcion.Text,txtPallet.Text, txtMedida.Text,txtTam.Text, txtPrecio.Text,txtPrecioTotal.Text);
+                        txtProducto.Text = string.Empty;
+                        txtCantidad.Text = string.Empty;
+                        txtDescripcion.Text = string.Empty;
+                        txtPallet.Text = string.Empty;
+                        txtMedida.Text = string.Empty;
+                        txtTam.Text = string.Empty;
+                        txtPrecio.Text = string.Empty;
+                        txtCan.Text = string.Empty;
+                        txtPrecioTotal.Text = string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese la medida");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese la cantidad a utilizar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para agregarlo a la tabla");
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if(txtIva.Text!= "")
+            {
+                txtProducto.Text = string.Empty;
+                txtCantidad.Text = string.Empty;
+                txtDescripcion.Text = string.Empty;
+                txtPallet.Text = string.Empty;
+                txtMedida.Text = string.Empty;
+                txtTam.Text = string.Empty;
+                txtPrecio.Text = string.Empty;
+
+                decimal total = 0; 
+                foreach(DataGridViewRow row in TablaDeVenta.Rows)
+                {
+                    total += Convert.ToDecimal(row.Cells[8].Value);
+                }
+                txtSubtotal.Text = total.ToString();
+
+                float g, h, j;
+                g = Convert.ToSingle(txtSubtotal.Text);
+                h = Convert.ToSingle(txtIva.Text);
+                j = g + (h * (g / 100));
+                txtTotal.Text = j.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese IVA");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(TablaDeVenta.SelectedRows.Count > 0)
+            {
+                TablaDeVenta.Rows.Remove(TablaDeVenta.CurrentRow);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila");
+            }
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            float n1, n2, a;
+            if (txtCantidad.Text != "")
+            {
+                n1 = Convert.ToInt32(txtCantidad.Text);
+                n2 = Convert.ToSingle(txtPrecio.Text);
+                a = n1 * n2;
+                txtPrecioTotal.Text = a.ToString(); 
+                
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
