@@ -146,7 +146,7 @@ namespace WareDev
                 //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
                 //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
 
-                //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
 
 
 
@@ -287,17 +287,18 @@ namespace WareDev
                     .ForEach(c => table.AddCell(c.Name));
 
                 //Columnas
-                //TablaDeVenta.Rows
-                //    .OfType<DataGridViewRow>()
-                //    .ToList()
-                //    .ForEach(r =>
-                //    {
-                //        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                //        cells.ForEach(c => table.AddCell(c.Value.ToString()));
+                TablaDeVenta.Rows
+                    .OfType<DataGridViewRow>()
+                    .ToList()
+                    .ForEach(r =>
+                    {
+                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
 
-                //    });
+                    });
 
                 doc.Add(table);
+                doc.Close();
 
 
 
