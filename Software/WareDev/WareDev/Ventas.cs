@@ -50,7 +50,7 @@ namespace WareDev
             //}
             //connection.Close();
 
-            SqlCommand d = new SqlCommand("select name from supplier", connection);
+            SqlCommand d = new SqlCommand("select name from clientes", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
@@ -411,7 +411,7 @@ namespace WareDev
             //int index;
             //index = comboBox3.SelectedIndex;
             //case inde
-            SqlCommand d = new SqlCommand("select Id from supplier where name= '" + comboBox3.Text + "'", connection);
+            SqlCommand d = new SqlCommand("select Id from clientes where name= '" + comboBox3.Text + "'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
@@ -553,6 +553,7 @@ namespace WareDev
                 txtMedida.Text = string.Empty;
                 txtTam.Text = string.Empty;
                 txtPrecio.Text = string.Empty;
+                textBox3.Text = string.Empty;
                 decimal total = 0;
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)

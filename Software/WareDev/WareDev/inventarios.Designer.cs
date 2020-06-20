@@ -380,6 +380,7 @@
             this.txtNombreB.Name = "txtNombreB";
             this.txtNombreB.Size = new System.Drawing.Size(174, 33);
             this.txtNombreB.TabIndex = 21;
+            this.txtNombreB.TextChanged += new System.EventHandler(this.txtNombreB_TextChanged);
             this.txtNombreB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombreB_KeyUp);
             // 
             // tabPage2

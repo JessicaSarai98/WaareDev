@@ -241,7 +241,7 @@ namespace WareDev
                 headertable.AddCell("CLAVE DE CLIENTE");
                 headertable.AddCell(Customer.Text);
                 headertable.AddCell("CONDICION COMERCIAL");
-                headertable.AddCell(ico.Text);
+                headertable.AddCell(Condicion.Text);
                 //headertable.AddCell("PRODUCTO");
                 //headertable.AddCell(producto.Text);
                 headertable.AddCell("PALLET");

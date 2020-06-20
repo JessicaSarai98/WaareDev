@@ -553,5 +553,10 @@ namespace WareDev
         {
             
         }
+
+        private void txtNombreB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
