@@ -92,17 +92,8 @@ namespace WareDev
         {
             ActivateButton(sender);
             AbrirFormInPanel(new Menuclientescs());
-            //AbrirFormInPanel(new InfoClient());
 
         }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            Settings set = new Settings();
-            set.ShowDialog();
-        }
-
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             if (menu.Width == 250)
@@ -189,9 +180,6 @@ namespace WareDev
             btnmaximizar.Visible = true;
             
         }
-
-       
-
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -240,26 +228,12 @@ namespace WareDev
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         //METODO PARA HORA Y FECHA ACTUAL ----------------------------------------------------------
         private void timer1_Tick(object sender, EventArgs e)
         {
             hora.Text = DateTime.Now.ToString("hh:mm:ss ");
             fecha.Text = DateTime.Now.ToLongDateString();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnminimizar_MouseHover(object sender, EventArgs e)
         {
             btnminimizar.BackColor = Color.FromArgb(109, 252, 51);
@@ -288,26 +262,9 @@ namespace WareDev
         {
             btnrestaur.BackColor = Color.FromArgb(109, 252, 51);
         }
-
-        private void MenuInicio_SizeChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void name_MouseHover(object sender, EventArgs e)
         {
             name.BackColor = Color.FromArgb(98, 226, 45);
-        }
-
-        private void name_Click(object sender, EventArgs e)
-        {
-            ModalUsuario user = new ModalUsuario();
-            user.ShowDialog();
-        }
-
-        private void name_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

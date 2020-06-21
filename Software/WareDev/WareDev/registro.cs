@@ -32,30 +32,6 @@ namespace WareDev
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         string imgLocation = "";
         SqlCommand cmd;
-        private void butrurn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btncancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void textKey_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public byte[] ImageToByteArray(System.Drawing.Image imagen)
         {
             MemoryStream ms = new MemoryStream();
@@ -99,15 +75,8 @@ namespace WareDev
             if (file.ShowDialog() == DialogResult.OK)
                 Fotouser.Image = Image.FromFile(file.FileName);
         }
-
-        private void registro_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-
             passconfirmtxt.Clear();
             passtxt.Clear();
             nametxt.Clear();
@@ -120,15 +89,10 @@ namespace WareDev
         {
             if (this.passtxt.Text.Equals(this.passconfirmtxt.Text))
             {
-                //this.passtxt.Text.Equals(0) && this.usertxt.Text.Equals(0) && this.nametxt.Text.Equals(0) && this.lasttxt.Text.Equals(0) && this.Fotouser.Equals(0)
                 if ((this.usertxt.Text.Length >= 1) && (this.passtxt.Text.Length >= 1) && (this.nametxt.Text.Length >= 1) && (this.emailtxt.Text.Length >= 1) && (this.lasttxt.Text.Length >= 1))
                 {
                     if (this.Fotouser.Image != null)
                     {
-                        //byte[] byteArrayImagen = ImageToByteArray(Fotouser.Image);
-
-
-
                         byte[] images = null;
                         FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                         BinaryReader brs = new BinaryReader(Streem);
@@ -159,12 +123,6 @@ namespace WareDev
                 MessageBox.Show("Las contraseñas no son iguales, vuelva a intentar.");
             }
         }
-
-        private void User_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //editar usuario
         private void saveEdit_Click(object sender, EventArgs e)
         {
@@ -202,11 +160,6 @@ namespace WareDev
             else{
                     MessageBox.Show("Las contraseñas no son iguales, vuelva a intentar.");
             }
-        }
-
-        private void IconUser_Click(object sender, EventArgs e)
-        {
-
         }
     }
 } 

@@ -18,47 +18,19 @@ namespace WareDev
             InitializeComponent();
         }
         //jess
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void reporte_Load(object sender, EventArgs e)
         {
             desdeTime.Value = DateTime.Today;
             hastaTime.Value = DateTime.Today;
-
-
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-
-            //SqlCommand cmd = new SqlCommand("select * from sys.tables ", connection);
-            //connection.Open();
-            //SqlDataReader registro = cmd.ExecuteReader();
-            //while (registro.Read())
-            //{
-            //    cmdReporte.Items.Add(registro.ToString());
-            //}
-            //connection.Close();
         }
 
         DataTable dt = new DataTable(); 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //panel2.Visible = true;
-            // int indice = cmdReporte.SelectedIndex;
-            //lblTitulo.Text = cmdReporte.Items[indice].ToString();
-            //dataGridView1.Rows.Clear(); 
-
-            ////connection.Open();
-            ////string sqlQuery = "select * from FinishedProducts where name like('" + txtNomProdTerm.Text + "%')";
-            ////cmd = new SqlCommand(sqlQuery, connection);
-            ////cmd.ExecuteNonQuery();
-
-            ////DataTable dt = new DataTable();
-            ////SqlDataAdapter da = new SqlDataAdapter(cmd);
-            ////da.Fill(dt);
-            ////dataGridView3.DataSource = dt;
-            ////connection.Close();
-
             dataGridView1.Refresh();
             //connection.Open();
             if (cmdReporte.Text != "")

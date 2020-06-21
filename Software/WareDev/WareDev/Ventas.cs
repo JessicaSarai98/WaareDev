@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
@@ -20,9 +14,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -40,16 +34,6 @@ namespace WareDev
                 comboBox1.Items.Add(registro["name"].ToString());
             }
             connection.Close();
-
-            //SqlCommand c = new SqlCommand("select Id from supplier", connection);
-            //connection.Open();
-            //SqlDataReader reg = c.ExecuteReader();
-            //while (reg.Read())
-            //{
-            //    comboBox2.Items.Add(reg["Id"].ToString());
-            //}
-            //connection.Close();
-
             SqlCommand d = new SqlCommand("select name from clientes", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
@@ -64,9 +48,9 @@ namespace WareDev
             string query = "select max(Id) from ventas";
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -91,15 +75,6 @@ namespace WareDev
             {
                 con.Close();
             }
-
-            
-
-
-            //string query = "select name from FinishedProducts";
-            //comboBox1.DataSource = GetData(query);
-            //comboBox1.DisplayMember = "name";
-
-            comboBox1_SelectedIndexChanged(null, null);
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -180,58 +155,10 @@ namespace WareDev
             adapter.Fill(table);
             return table;
         }
-
-
         private void Ventas1_FormClosed(object sender, FormClosedEventArgs e)
         {
             ventas1 = null;
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-            //string query = "select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'";
-            //TablaDeVenta.DataSource = GetData(query);
-
-
-
-            //decimal total = 0;
-
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-
-            //    total += Convert.ToDecimal(row.Cells[4].Value);
-
-            //}
-            //textBox2.Text = total.ToString();
-
-
-
-
-            //decimal n1,n2, t;
-            //n1= Convert.ToDecimal(textBox1.Text);
-            //n2 = Convert.ToDecimal(textBox2.Text);
-            //t = n1 * n2;
-            //txtSubtotal.Text = t.ToString(); 
-
-            //this.TablaDeVenta.Columns[0].HeaderText = "Name";
-            //this.TablaDeVenta.Columns[1].HeaderText = "Size";
-            //this.TablaDeVenta.Columns[2].HeaderText = "Measure";
-            //this.TablaDeVenta.Columns[3].HeaderText = "Description";
-            //this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
-            //this.TablaDeVenta.Columns[5].HeaderText = "Boxes";
-            //this.TablaDeVenta.Columns[6].HeaderText = "Amount Purchased";
-        }
-
-
-
-        private void TablaDeVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //textBox3.Text = TablaDeVenta.CurrentRow.Cells["Name"].Value.ToString();
-
-        }
-
         DataTable dt = new DataTable();
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -243,12 +170,6 @@ namespace WareDev
                 var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    //SqlCommand c = new SqlCommand("select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'", connection);
-                    //SqlDataAdapter da = new SqlDataAdapter(c);
-                    //da.Fill(dt);
-                    //dataGridView1.DataSource = dt;
-
-
                     connection.Open();
                     string sql = "update FinishedProducts set amountPurchased=amountPurchased - @cant where name= '" + comboBox1.Text + "'";
                     cmd = new SqlCommand(sql, connection);
@@ -283,9 +204,6 @@ namespace WareDev
             {
                 MessageBox.Show("Ingrese una cantidad");
             }
-            
-            //string query = "select name, size, measure, description, unitPrice, boxes, amountPurchased from FinishedProducts where name ='" + comboBox1.Text + "'";
-            //ablaDeVenta.DataSource = GetData(query);
         }
 
         //Guardar 
@@ -294,8 +212,6 @@ namespace WareDev
             if ((this.dateTimePicker1 != null) && (this.txtIva.Text.Length >= 1) && (this.txtNumCliente.Text.Length >= 1) && (this.comboMoneda.Text.Length >= 1) &&
                 (this.comboBox3.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.txtCondiciones.Text.Length >= 1) && (this.txtLugarExpe.Text.Length >= 1))
             {
-           //////string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-@cant where name='" + comboBox1.Text + "'";
-
                 connection.Open();
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
@@ -347,21 +263,10 @@ namespace WareDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            //total = sub + (iva*subt)
-            //sub = suma de los productos 
-
             float n2, t, i;
-
-
-
-            //n1 = Convert.ToDouble(textBox1.Text);
-
-            //subtotal
             if (textBox2.Text != "" && txtIva.Text != "")
             {
                 n2 = Convert.ToSingle(textBox2.Text);
-                //t = n1 * n2;
                 i = Convert.ToSingle(txtIva.Text);
                 t = i * n2;
                 txtSubtotal.Text = t.ToString();
@@ -408,9 +313,6 @@ namespace WareDev
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //int index;
-            //index = comboBox3.SelectedIndex;
-            //case inde
             SqlCommand d = new SqlCommand("select Id from clientes where name= '" + comboBox3.Text + "'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
@@ -569,7 +471,6 @@ namespace WareDev
                 h = Convert.ToSingle(txtIva.Text);
                 j = g + (h * (g / 100));
                 txtTotal.Text = j.ToString();
-                //dataGridView1.Rows.Add(txtFolio.Text, txtProducto.Text, txtCantidad.Text, txtDescripcion.Text, txtPallet.Text, txtMedida.Text, txtTam.Text, txtPrecio.Text, textBox3.Text, txtSubtotal.Text, txtTotal.Text);
             }
             else
             {
@@ -579,18 +480,7 @@ namespace WareDev
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-
-            }else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            ValidarDatos.SoloNumeros(e);
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)

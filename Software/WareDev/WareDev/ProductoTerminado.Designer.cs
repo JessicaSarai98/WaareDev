@@ -332,6 +332,7 @@
             this.txtPrecioInsumo.Size = new System.Drawing.Size(231, 32);
             this.txtPrecioInsumo.TabIndex = 5;
             this.txtPrecioInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrecioInsumo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioInsumo_KeyPress);
             // 
             // txtNombreInsumo
             // 
@@ -448,6 +449,7 @@
             this.txtCajasContenido.Size = new System.Drawing.Size(230, 32);
             this.txtCajasContenido.TabIndex = 8;
             this.txtCajasContenido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCajasContenido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCajasContenido_KeyPress);
             // 
             // label7
             // 
@@ -500,6 +502,7 @@
             this.txtPallet.Size = new System.Drawing.Size(230, 32);
             this.txtPallet.TabIndex = 6;
             this.txtPallet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPallet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPallet_KeyPress);
             // 
             // txtCantiMatPrima
             // 
@@ -514,6 +517,7 @@
             this.txtCantiMatPrima.Size = new System.Drawing.Size(231, 32);
             this.txtCantiMatPrima.TabIndex = 11;
             this.txtCantiMatPrima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantiMatPrima.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantiMatPrima_KeyPress);
             // 
             // label3
             // 
@@ -540,6 +544,7 @@
             this.txtCantidadInsumo.Size = new System.Drawing.Size(230, 32);
             this.txtCantidadInsumo.TabIndex = 12;
             this.txtCantidadInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidadInsumo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadInsumo_KeyPress);
             // 
             // label13
             // 
@@ -566,6 +571,7 @@
             this.txtCantiAdquirida.Size = new System.Drawing.Size(230, 39);
             this.txtCantiAdquirida.TabIndex = 13;
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantiAdquirida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantiAdquirida_KeyPress);
             // 
             // btnFoto
             // 
@@ -648,6 +654,7 @@
             this.txtSize.Size = new System.Drawing.Size(231, 32);
             this.txtSize.TabIndex = 42;
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // btnGuardar
             // 

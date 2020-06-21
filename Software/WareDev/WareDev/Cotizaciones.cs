@@ -29,10 +29,9 @@ namespace WareDev
 
         }
         // JESS
-         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
 
@@ -71,7 +70,6 @@ namespace WareDev
             connection.Close();
 
             string query = "select max(Id) from quotations";
-            //SqlConnection c = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             SqlCommand cmd = new SqlCommand(query, connection);
             try
             {
@@ -192,8 +190,6 @@ namespace WareDev
                 }
 
                 //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                //C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes
-                //"C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Logo.jpeg
                 var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
 
                 using (FileStream im = new FileStream(Logopath, FileMode.Open))
@@ -299,14 +295,6 @@ namespace WareDev
 
                 doc.Add(table);
                 doc.Close();
-
-
-
-
-                //Dejar en blanco los text.box
-
-
-                //this.Close();
             }
 
             else
@@ -347,17 +335,6 @@ namespace WareDev
             {
                 MessageBox.Show("Seleccione una fila.");
             }
-        }
-
-        private void TablaDeVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //this.TablaDeVenta.Columns[0].HeaderText = "Product's name";
-            //this.TablaDeVenta.Columns[1].HeaderText = "Size";
-            //this.TablaDeVenta.Columns[2].HeaderText = "Measure";
-            //this.TablaDeVenta.Columns[3].HeaderText = "Description";
-            //this.TablaDeVenta.Columns[4].HeaderText = "Unit Price";
-            //this.TablaDeVenta.Columns[5].HeaderText = "Boxes per Content";
-            //this.TablaDeVenta.Columns[6].HeaderText = "Amount";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -419,12 +396,6 @@ namespace WareDev
             Customer.DataSource = dt;
             connection.Close(); 
         }
-
-        private void IdClient_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand d = new SqlCommand("Select Id from clientes where name = '"+Customer.Text+"'", connection);
@@ -547,19 +518,17 @@ namespace WareDev
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
+            ValidarDatos.SoloNumeros(e);
+        }
 
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void pallet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
         }
     }
 }

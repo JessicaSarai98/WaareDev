@@ -124,7 +124,7 @@
             this.txtTotalCompra.Multiline = true;
             this.txtTotalCompra.Name = "txtTotalCompra";
             this.txtTotalCompra.Size = new System.Drawing.Size(151, 28);
-            this.txtTotalCompra.TabIndex = 26;
+            this.txtTotalCompra.TabIndex = 7;
             this.txtTotalCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalCompra_KeyPress);
             // 
             // label5
@@ -150,7 +150,7 @@
             this.txtPrecioUnitario.Multiline = true;
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.Size = new System.Drawing.Size(168, 28);
-            this.txtPrecioUnitario.TabIndex = 11;
+            this.txtPrecioUnitario.TabIndex = 5;
             this.txtPrecioUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPrecioUnitario.TextChanged += new System.EventHandler(this.txtPrecioUnitario_TextChanged);
             this.txtPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioUnitario_KeyPress);
@@ -270,8 +270,9 @@
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 26);
-            this.txtName.TabIndex = 9;
+            this.txtName.TabIndex = 4;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label9
             // 
@@ -296,7 +297,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(452, 39);
-            this.txtDescripcion.TabIndex = 10;
+            this.txtDescripcion.TabIndex = 8;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -321,7 +322,7 @@
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(151, 26);
-            this.txtCantidad.TabIndex = 14;
+            this.txtCantidad.TabIndex = 6;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
@@ -340,11 +341,12 @@
             // 
             // prov
             // 
+            this.prov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.prov.FormattingEnabled = true;
             this.prov.Location = new System.Drawing.Point(539, 3);
             this.prov.Name = "prov";
-            this.prov.Size = new System.Drawing.Size(279, 21);
-            this.prov.TabIndex = 27;
+            this.prov.Size = new System.Drawing.Size(279, 28);
+            this.prov.TabIndex = 2;
             this.prov.SelectedIndexChanged += new System.EventHandler(this.prov_SelectedIndexChanged);
             // 
             // panel2
@@ -402,7 +404,7 @@
             this.btrRegreso.Location = new System.Drawing.Point(872, 13);
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
-            this.btrRegreso.TabIndex = 6;
+            this.btrRegreso.TabIndex = 10;
             this.btrRegreso.Text = "Return";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
@@ -431,7 +433,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(745, 12);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 65);
-            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Save";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;

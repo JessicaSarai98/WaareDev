@@ -92,7 +92,7 @@ namespace Domain
             vendedor, string pm, string cfdi, string note)
         {
             objetoCD.Insertar(Convert.ToInt32(id),name, rfc, phone, email, address, city, state,
-                country, cp, identy, Convert.ToDouble(tasaa), stat, vendedor, pm, cfdi, note);
+                country, cp, identy, Convert.ToSingle(tasaa), stat, vendedor, pm, cfdi, note);
         }
         //insertar datos de usuario
         public void InsertarUsu(string username, string pass, string email, string firstname, string lastname, byte[]foto)

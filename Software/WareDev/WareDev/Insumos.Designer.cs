@@ -94,7 +94,7 @@
             this.mult.FlatAppearance.BorderSize = 0;
             this.mult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.mult.Location = new System.Drawing.Point(535, 329);
+            this.mult.Location = new System.Drawing.Point(410, 357);
             this.mult.Name = "mult";
             this.mult.Size = new System.Drawing.Size(208, 35);
             this.mult.TabIndex = 8;
@@ -226,6 +226,7 @@
             this.txtPrecioInsumo.Size = new System.Drawing.Size(247, 34);
             this.txtPrecioInsumo.TabIndex = 6;
             this.txtPrecioInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrecioInsumo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioInsumo_KeyPress);
             // 
             // txtNombreInsumo
             // 
@@ -304,6 +305,7 @@
             this.txtCanAdqInsumos.Size = new System.Drawing.Size(245, 34);
             this.txtCanAdqInsumos.TabIndex = 7;
             this.txtCanAdqInsumos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCanAdqInsumos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCanAdqInsumos_KeyPress);
             // 
             // txtUniMedInsu
             // 

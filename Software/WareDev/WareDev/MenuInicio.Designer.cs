@@ -45,7 +45,6 @@
             this.btnrestaur = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.btnSettings = new System.Windows.Forms.PictureBox();
             this.btnexit = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
             this.panel1.SuspendLayout();
             this.contenedor.SuspendLayout();
@@ -238,7 +236,6 @@
             this.top.Controls.Add(this.btnrestaur);
             this.top.Controls.Add(this.btnminimizar);
             this.top.Controls.Add(this.btnMenu);
-            this.top.Controls.Add(this.btnSettings);
             this.top.Controls.Add(this.btnexit);
             this.top.Dock = System.Windows.Forms.DockStyle.Top;
             this.top.Location = new System.Drawing.Point(250, 0);
@@ -253,6 +250,7 @@
             this.name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
             this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.name.Cursor = System.Windows.Forms.Cursors.Default;
+            this.name.Enabled = false;
             this.name.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.SystemColors.Window;
             this.name.Location = new System.Drawing.Point(514, 7);
@@ -264,8 +262,6 @@
             this.name.TabStop = false;
             this.name.Text = "Karina Carmona";
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.name.Click += new System.EventHandler(this.name_Click);
-            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             this.name.MouseLeave += new System.EventHandler(this.btnminimizar_MouseLeave);
             this.name.MouseHover += new System.EventHandler(this.name_MouseHover);
             // 
@@ -323,18 +319,6 @@
             this.btnMenu.TabIndex = 12;
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.btnSettings.Location = new System.Drawing.Point(826, 4);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(47, 47);
-            this.btnSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSettings.TabIndex = 6;
-            this.btnSettings.TabStop = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnexit
             // 
@@ -452,7 +436,6 @@
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MenuInicio";
             this.Text = "WareDev";
-            this.SizeChanged += new System.EventHandler(this.MenuInicio_SizeChanged);
             this.menu.ResumeLayout(false);
             this.top.ResumeLayout(false);
             this.top.PerformLayout();
@@ -460,7 +443,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -486,7 +468,6 @@
         private System.Windows.Forms.PictureBox btnrestaur;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.PictureBox btnSettings;
         private System.Windows.Forms.PictureBox btnexit;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;

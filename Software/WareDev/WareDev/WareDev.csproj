@@ -80,12 +80,6 @@
     <Compile Include="FacturaVentas.Designer.cs">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ganancias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ganancias.Designer.cs">
-      <DependentUpon>ganancias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Insumos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,12 +157,6 @@
     <Compile Include="MenuProve.Designer.cs">
       <DependentUpon>MenuProve.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModalUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModalUsuario.Designer.cs">
-      <DependentUpon>ModalUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="olvidoContra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,12 +177,6 @@
     <Compile Include="registro.Designer.cs">
       <DependentUpon>registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +194,7 @@
     <Compile Include="UsersListcs.Designer.cs">
       <DependentUpon>UsersListcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidarDatos.cs" />
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaVentas.resx">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ganancias.resx">
-      <DependentUpon>ganancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Insumos.resx">
       <DependentUpon>Insumos.cs</DependentUpon>
@@ -266,9 +246,6 @@
     <EmbeddedResource Include="MenuProve.resx">
       <DependentUpon>MenuProve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModalUsuario.resx">
-      <DependentUpon>ModalUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="olvidoContra.resx">
       <DependentUpon>olvidoContra.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,9 +259,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registro.resx">
       <DependentUpon>registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>

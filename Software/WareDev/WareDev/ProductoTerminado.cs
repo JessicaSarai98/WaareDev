@@ -21,9 +21,9 @@ namespace WareDev
 
         //JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False;MultipleActiveResultSets=true");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         string imgLocation = "";
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -54,7 +54,7 @@ namespace WareDev
 
         private void ProductoTerminado_Load(object sender, EventArgs e)
         {
-            //dateTimePicker1.Value = DateTime.Today;
+            dateTimePicker1.Value = DateTime.Today;
 
             SqlCommand cm = new SqlCommand("select name from rawMaterials", connection);
             connection.Open();
@@ -203,6 +203,41 @@ namespace WareDev
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPallet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtCajasContenido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtCantidadInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtCantiAdquirida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtPrecioInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void txtCantiMatPrima_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
         }
     }
     

@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Drawing;
-using System.Data.SqlClient; 
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace WareDev
 {
@@ -62,13 +62,6 @@ namespace WareDev
                 MessageBox.Show("No se puede por: "+ ex); 
             }
         }
-
-        private void MateriaPrima_Load_1(object sender, EventArgs e)
-        {
-            //dateTimePicker1.Value = DateTime.Today;
-            
-        }
-
         //Guardar materia prima
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -129,11 +122,49 @@ namespace WareDev
             }
         }
 
-        private void txtPrecio_Enter(object sender, EventArgs e)
+        private void MateriaPrima_Load(object sender, EventArgs e)
         {
-
+            dateTimePicker1.Value = DateTime.Today;
+        }
+        //float
+        Regex rx = new Regex(@"^[0-9]+\.[0-9]{2}?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((rx.IsMatch(txtIva.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
-        
+        private void txtSat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtFraccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtPorcentaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void txtCantiAdquirida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtCanAduana_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+        }
     }
 }

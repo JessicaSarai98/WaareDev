@@ -68,7 +68,7 @@
             this.statettxt.Location = new System.Drawing.Point(723, 51);
             this.statettxt.Name = "statettxt";
             this.statettxt.Size = new System.Drawing.Size(234, 26);
-            this.statettxt.TabIndex = 9;
+            this.statettxt.TabIndex = 8;
             this.statettxt.UseWaitCursor = true;
             // 
             // countrytxt
@@ -80,7 +80,7 @@
             this.countrytxt.Location = new System.Drawing.Point(723, 3);
             this.countrytxt.Name = "countrytxt";
             this.countrytxt.Size = new System.Drawing.Size(234, 26);
-            this.countrytxt.TabIndex = 8;
+            this.countrytxt.TabIndex = 7;
             this.countrytxt.UseWaitCursor = true;
             // 
             // addrestxt
@@ -93,7 +93,7 @@
             this.addrestxt.Multiline = true;
             this.addrestxt.Name = "addrestxt";
             this.addrestxt.Size = new System.Drawing.Size(234, 42);
-            this.addrestxt.TabIndex = 7;
+            this.addrestxt.TabIndex = 9;
             this.addrestxt.UseWaitCursor = true;
             // 
             // mailtxt
@@ -105,7 +105,7 @@
             this.mailtxt.Location = new System.Drawing.Point(723, 195);
             this.mailtxt.Name = "mailtxt";
             this.mailtxt.Size = new System.Drawing.Size(234, 26);
-            this.mailtxt.TabIndex = 6;
+            this.mailtxt.TabIndex = 11;
             this.mailtxt.UseWaitCursor = true;
             // 
             // phonetxt
@@ -117,7 +117,7 @@
             this.phonetxt.Location = new System.Drawing.Point(243, 195);
             this.phonetxt.Name = "phonetxt";
             this.phonetxt.Size = new System.Drawing.Size(234, 26);
-            this.phonetxt.TabIndex = 5;
+            this.phonetxt.TabIndex = 6;
             this.phonetxt.UseWaitCursor = true;
             // 
             // RFCtxt
@@ -129,7 +129,7 @@
             this.RFCtxt.Location = new System.Drawing.Point(243, 147);
             this.RFCtxt.Name = "RFCtxt";
             this.RFCtxt.Size = new System.Drawing.Size(234, 26);
-            this.RFCtxt.TabIndex = 4;
+            this.RFCtxt.TabIndex = 5;
             this.RFCtxt.UseWaitCursor = true;
             // 
             // Nametxt
@@ -141,7 +141,7 @@
             this.Nametxt.Location = new System.Drawing.Point(243, 99);
             this.Nametxt.Name = "Nametxt";
             this.Nametxt.Size = new System.Drawing.Size(234, 26);
-            this.Nametxt.TabIndex = 3;
+            this.Nametxt.TabIndex = 4;
             this.Nametxt.UseWaitCursor = true;
             // 
             // IDtxtbox
@@ -262,7 +262,7 @@
             this.divisa.Location = new System.Drawing.Point(723, 243);
             this.divisa.Name = "divisa";
             this.divisa.Size = new System.Drawing.Size(234, 26);
-            this.divisa.TabIndex = 11;
+            this.divisa.TabIndex = 12;
             this.divisa.UseWaitCursor = true;
             // 
             // label1
@@ -311,7 +311,7 @@
             this.saveNew.Location = new System.Drawing.Point(688, 391);
             this.saveNew.Name = "saveNew";
             this.saveNew.Size = new System.Drawing.Size(115, 48);
-            this.saveNew.TabIndex = 12;
+            this.saveNew.TabIndex = 14;
             this.saveNew.Text = "Save";
             this.saveNew.UseVisualStyleBackColor = false;
             this.saveNew.UseWaitCursor = true;
@@ -325,7 +325,7 @@
             this.button1.Location = new System.Drawing.Point(824, 390);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 48);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 15;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
@@ -358,10 +358,10 @@
             this.saveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveEdit.BackColor = System.Drawing.Color.Black;
             this.saveEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.saveEdit.Location = new System.Drawing.Point(703, 391);
+            this.saveEdit.Location = new System.Drawing.Point(676, 391);
             this.saveEdit.Name = "saveEdit";
             this.saveEdit.Size = new System.Drawing.Size(115, 48);
-            this.saveEdit.TabIndex = 12;
+            this.saveEdit.TabIndex = 13;
             this.saveEdit.Text = "Save";
             this.saveEdit.UseVisualStyleBackColor = false;
             this.saveEdit.UseWaitCursor = true;
@@ -375,7 +375,7 @@
             this.label12.Location = new System.Drawing.Point(37, 62);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(165, 20);
-            this.label12.TabIndex = 15;
+            this.label12.TabIndex = 0;
             this.label12.Text = "Identificador fiscal";
             this.label12.UseWaitCursor = true;
             // 
@@ -384,12 +384,11 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(243, 51);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(234, 26);
-            this.textBox1.TabIndex = 16;
+            this.textBox1.TabIndex = 3;
             this.textBox1.UseWaitCursor = true;
             // 
             // tableLayoutPanel1

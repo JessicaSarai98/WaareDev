@@ -92,17 +92,16 @@ namespace DataAccess
 
                         mailService.sendMail(
                             subject: "System: Password recovery request", 
-                            body: "Hi, " + userName + "\nYou requested to  recover your " +
-                            "password, \n" + "your current password is: " + accountPassword + "\nHowever, " +
-                            "we ask that you change your password inmediately once you enter the system.",
+                            body: "Hola, " + userName + "\nSolicitaste recuperar tu contraseña " +
+                            ", \n" + "Tu contraseña es: " + accountPassword + "\nSin embargo, " +
+                            "te pedimos que cambies de contraseña cuando ingreses al sistema, con el fin de una mejor seguridad. Gracias.",
                             recipientMail: new List<string> { userMail });
-                        return "Hi," + userName + "\nYou requested to recover your password.\n" +"Please check your mail: "
-                            + userMail + "" +"\nHowever, we ask that you change your password inmediately once you enter " +
-                            "the system.";
+                        return "Hola," + userName + "\nSolicitaste recuperar tu contraseña.\n" + "Por favor, ingresa a tu correo: "
+                            + userMail + "" + "\n te pedimos que cambies de contraseña cuando ingreses al sistema, con el fin de una mejor seguridad. Gracias.";
                     }
                     else
                     {
-                        return "SORRY, you don't have an account with that mail or username";
+                        return "Lo sentimos, no tienes una cuenta o un correo registrado en el sistema";
                     }
             }
         }

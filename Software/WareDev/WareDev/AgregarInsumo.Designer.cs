@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.addF = new System.Windows.Forms.Button();
+            this.addI = new System.Windows.Forms.Button();
+            this.addR = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.addR = new System.Windows.Forms.Button();
-            this.addI = new System.Windows.Forms.Button();
-            this.addF = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,47 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(342, 236);
             this.contenedor.TabIndex = 0;
+            // 
+            // addF
+            // 
+            this.addF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addF.Location = new System.Drawing.Point(168, 202);
+            this.addF.Name = "addF";
+            this.addF.Size = new System.Drawing.Size(128, 23);
+            this.addF.TabIndex = 50;
+            this.addF.Text = "Guardar";
+            this.addF.UseVisualStyleBackColor = true;
+            this.addF.Click += new System.EventHandler(this.addF_Click);
+            // 
+            // addI
+            // 
+            this.addI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addI.Location = new System.Drawing.Point(168, 202);
+            this.addI.Name = "addI";
+            this.addI.Size = new System.Drawing.Size(125, 23);
+            this.addI.TabIndex = 49;
+            this.addI.Text = "Guardar";
+            this.addI.UseVisualStyleBackColor = true;
+            this.addI.Click += new System.EventHandler(this.addI_Click);
+            // 
+            // addR
+            // 
+            this.addR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addR.Location = new System.Drawing.Point(168, 202);
+            this.addR.Name = "addR";
+            this.addR.Size = new System.Drawing.Size(125, 23);
+            this.addR.TabIndex = 48;
+            this.addR.Text = "Guardar";
+            this.addR.UseVisualStyleBackColor = true;
+            this.addR.Click += new System.EventHandler(this.addR_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(302, 205);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(33, 20);
+            this.textBox1.TabIndex = 47;
+            this.textBox1.Visible = false;
             // 
             // txtCantidad
             // 
@@ -124,44 +165,6 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(302, 205);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(33, 20);
-            this.textBox1.TabIndex = 47;
-            this.textBox1.Visible = false;
-            // 
-            // addR
-            // 
-            this.addR.Location = new System.Drawing.Point(31, 205);
-            this.addR.Name = "addR";
-            this.addR.Size = new System.Drawing.Size(48, 23);
-            this.addR.TabIndex = 48;
-            this.addR.Text = "Save";
-            this.addR.UseVisualStyleBackColor = true;
-            this.addR.Click += new System.EventHandler(this.addR_Click);
-            // 
-            // addI
-            // 
-            this.addI.Location = new System.Drawing.Point(153, 205);
-            this.addI.Name = "addI";
-            this.addI.Size = new System.Drawing.Size(48, 23);
-            this.addI.TabIndex = 49;
-            this.addI.Text = "Save";
-            this.addI.UseVisualStyleBackColor = true;
-            this.addI.Click += new System.EventHandler(this.addI_Click);
-            // 
-            // addF
-            // 
-            this.addF.Location = new System.Drawing.Point(248, 205);
-            this.addF.Name = "addF";
-            this.addF.Size = new System.Drawing.Size(48, 23);
-            this.addF.TabIndex = 50;
-            this.addF.Text = "Save";
-            this.addF.UseVisualStyleBackColor = true;
-            this.addF.Click += new System.EventHandler(this.addF_Click);
-            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,7 +176,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar";
             this.Text = "AgregarInsumo";
-            this.Load += new System.EventHandler(this.AgregarInsumo_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -15,20 +15,14 @@ namespace WareDev
     {
         // JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // KARINA
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         public Agregar()
         {
             InitializeComponent();
         }
-
-        private void AgregarInsumo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btrRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -36,12 +30,7 @@ namespace WareDev
 
         private void txtCantidad_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            Regex rx = new Regex(@"^[0-9]+\.[0-9]{2}?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-            if ((rx.IsMatch(txtCantidad.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-                return;
-            }
+            ValidarDatos.SoloNumeros(e);
         }
 
         private void addR_Click(object sender, EventArgs e)
@@ -78,6 +67,7 @@ namespace WareDev
             cmd.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+
             this.Close();
         }
     }

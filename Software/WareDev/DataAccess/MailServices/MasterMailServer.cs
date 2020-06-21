@@ -42,7 +42,8 @@ namespace DataAccess.MailServices
                 mailMessage.Priority = MailPriority.Normal;
                 smtpClient.Send(mailMessage); //enviar mensaje
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { 
+            }
             finally
             {
                 mailMessage.Dispose();

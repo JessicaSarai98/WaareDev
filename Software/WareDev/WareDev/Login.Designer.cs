@@ -39,7 +39,6 @@
             this.titulo2 = new System.Windows.Forms.Panel();
             this.btnexit = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
-            this.btnSettings = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textKey = new System.Windows.Forms.TextBox();
@@ -55,7 +54,6 @@
             this.titulo2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -159,7 +157,6 @@
             // 
             this.titulo2.Controls.Add(this.btnexit);
             this.titulo2.Controls.Add(this.btnminimizar);
-            this.titulo2.Controls.Add(this.btnSettings);
             this.titulo2.Dock = System.Windows.Forms.DockStyle.Top;
             this.titulo2.Location = new System.Drawing.Point(0, 0);
             this.titulo2.Name = "titulo2";
@@ -192,16 +189,6 @@
             this.btnminimizar.TabStop = false;
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSettings.Location = new System.Drawing.Point(492, 9);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(47, 47);
-            this.btnSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSettings.TabIndex = 18;
-            this.btnSettings.TabStop = false;
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -229,10 +216,9 @@
             this.textKey.BackColor = System.Drawing.Color.Gainsboro;
             this.textKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textKey.Location = new System.Drawing.Point(225, 434);
-            this.textKey.Multiline = true;
             this.textKey.Name = "textKey";
             this.textKey.PasswordChar = '*';
-            this.textKey.Size = new System.Drawing.Size(213, 38);
+            this.textKey.Size = new System.Drawing.Size(213, 32);
             this.textKey.TabIndex = 27;
             this.textKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -241,9 +227,8 @@
             this.textUser.BackColor = System.Drawing.Color.Gainsboro;
             this.textUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUser.Location = new System.Drawing.Point(225, 365);
-            this.textUser.Multiline = true;
             this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(213, 38);
+            this.textUser.Size = new System.Drawing.Size(213, 32);
             this.textUser.TabIndex = 26;
             this.textUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -254,7 +239,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(187, 434);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox4.Size = new System.Drawing.Size(38, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 25;
             this.pictureBox4.TabStop = false;
@@ -266,7 +251,7 @@
             this.IconUser.Image = ((System.Drawing.Image)(resources.GetObject("IconUser.Image")));
             this.IconUser.Location = new System.Drawing.Point(187, 365);
             this.IconUser.Name = "IconUser";
-            this.IconUser.Size = new System.Drawing.Size(38, 38);
+            this.IconUser.Size = new System.Drawing.Size(38, 32);
             this.IconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconUser.TabIndex = 24;
             this.IconUser.TabStop = false;
@@ -318,7 +303,6 @@
             this.titulo2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -335,7 +319,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.PictureBox btnexit;
-        private System.Windows.Forms.PictureBox btnSettings;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textKey;
         private System.Windows.Forms.PictureBox pictureBox4;

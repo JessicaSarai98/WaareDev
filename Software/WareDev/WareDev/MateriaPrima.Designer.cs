@@ -116,7 +116,7 @@
             this.SaveEdit.ForeColor = System.Drawing.Color.Black;
             this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
             this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveEdit.Location = new System.Drawing.Point(770, 90);
+            this.SaveEdit.Location = new System.Drawing.Point(792, 90);
             this.SaveEdit.Name = "SaveEdit";
             this.SaveEdit.Size = new System.Drawing.Size(104, 65);
             this.SaveEdit.TabIndex = 16;
@@ -205,6 +205,7 @@
             this.txtCantiAdquirida.Size = new System.Drawing.Size(161, 38);
             this.txtCantiAdquirida.TabIndex = 13;
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantiAdquirida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantiAdquirida_KeyPress);
             // 
             // label11
             // 
@@ -316,6 +317,7 @@
             this.txtSat.Size = new System.Drawing.Size(161, 38);
             this.txtSat.TabIndex = 2;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSat_KeyPress);
             // 
             // txtNombre
             // 
@@ -369,6 +371,7 @@
             this.txtFraccion.Size = new System.Drawing.Size(161, 38);
             this.txtFraccion.TabIndex = 5;
             this.txtFraccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFraccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFraccion_KeyPress);
             // 
             // txtUniMedAduana
             // 
@@ -397,6 +400,7 @@
             this.txtCanAduana.Size = new System.Drawing.Size(165, 38);
             this.txtCanAduana.TabIndex = 6;
             this.txtCanAduana.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCanAduana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCanAduana_KeyPress);
             // 
             // txtPrecio
             // 
@@ -411,7 +415,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(165, 37);
             this.txtPrecio.TabIndex = 9;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPrecio.Enter += new System.EventHandler(this.txtPrecio_Enter);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // label3
             // 
@@ -450,6 +454,7 @@
             this.txtPorcentaje.Size = new System.Drawing.Size(161, 39);
             this.txtPorcentaje.TabIndex = 11;
             this.txtPorcentaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPorcentaje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorcentaje_KeyPress);
             // 
             // txtUniMedida
             // 
@@ -548,6 +553,7 @@
             this.txtIva.Size = new System.Drawing.Size(165, 38);
             this.txtIva.TabIndex = 14;
             this.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIva_KeyPress);
             // 
             // label12
             // 
@@ -629,7 +635,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MateriaPrima";
             this.Text = "2";
-            this.Load += new System.EventHandler(this.MateriaPrima_Load_1);
+            this.Load += new System.EventHandler(this.MateriaPrima_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).EndInit();

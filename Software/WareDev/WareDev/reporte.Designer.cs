@@ -100,7 +100,7 @@
             "Sales",
             "Shopping",
             "Quotes"});
-            this.cmdReporte.Location = new System.Drawing.Point(12, 138);
+            this.cmdReporte.Location = new System.Drawing.Point(12, 146);
             this.cmdReporte.Name = "cmdReporte";
             this.cmdReporte.Size = new System.Drawing.Size(291, 28);
             this.cmdReporte.TabIndex = 2;
@@ -112,7 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
             this.panel2.Controls.Add(this.lblTitulo);
-            this.panel2.Location = new System.Drawing.Point(15, 162);
+            this.panel2.Location = new System.Drawing.Point(3, 182);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1015, 47);
             this.panel2.TabIndex = 0;

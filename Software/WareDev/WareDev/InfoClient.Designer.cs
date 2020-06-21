@@ -73,9 +73,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Silver;
@@ -119,10 +116,11 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.panel1.Location = new System.Drawing.Point(29, 29);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(1250, 701);
+            this.panel1.Size = new System.Drawing.Size(1016, 749);
             this.panel1.TabIndex = 0;
             this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -132,13 +130,14 @@
             this.SaveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveEdit.BackColor = System.Drawing.Color.Black;
             this.SaveEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SaveEdit.Location = new System.Drawing.Point(665, 613);
+            this.SaveEdit.Location = new System.Drawing.Point(483, 628);
             this.SaveEdit.Name = "SaveEdit";
             this.SaveEdit.Size = new System.Drawing.Size(115, 48);
             this.SaveEdit.TabIndex = 18;
-            this.SaveEdit.Text = "Save";
+            this.SaveEdit.Text = "Guardar";
             this.SaveEdit.UseVisualStyleBackColor = false;
             this.SaveEdit.UseWaitCursor = true;
+            this.SaveEdit.Visible = false;
             this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
             // 
             // label15
@@ -146,7 +145,7 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(816, 296);
+            this.label15.Location = new System.Drawing.Point(582, 296);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 20);
             this.label15.TabIndex = 0;
@@ -157,7 +156,7 @@
             // 
             this.vendortxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.vendortxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vendortxt.Location = new System.Drawing.Point(1017, 294);
+            this.vendortxt.Location = new System.Drawing.Point(783, 294);
             this.vendortxt.Name = "vendortxt";
             this.vendortxt.Size = new System.Drawing.Size(174, 24);
             this.vendortxt.TabIndex = 14;
@@ -168,7 +167,7 @@
             this.Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Imprimir.BackColor = System.Drawing.Color.Black;
             this.Imprimir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Imprimir.Location = new System.Drawing.Point(974, 613);
+            this.Imprimir.Location = new System.Drawing.Point(740, 613);
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(114, 48);
             this.Imprimir.TabIndex = 20;
@@ -183,11 +182,11 @@
             this.save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.save.BackColor = System.Drawing.Color.Black;
             this.save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.save.Location = new System.Drawing.Point(829, 613);
+            this.save.Location = new System.Drawing.Point(615, 618);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(115, 48);
             this.save.TabIndex = 19;
-            this.save.Text = "Save";
+            this.save.Text = "Guardar";
             this.save.UseVisualStyleBackColor = false;
             this.save.UseWaitCursor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
@@ -197,7 +196,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(1110, 613);
+            this.button1.Location = new System.Drawing.Point(876, 613);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 48);
             this.button1.TabIndex = 21;
@@ -210,7 +209,7 @@
             // 
             this.note.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.note.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.note.Location = new System.Drawing.Point(829, 515);
+            this.note.Location = new System.Drawing.Point(595, 515);
             this.note.Multiline = true;
             this.note.Name = "note";
             this.note.Size = new System.Drawing.Size(357, 62);
@@ -221,7 +220,7 @@
             // 
             this.cfditxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cfditxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cfditxt.Location = new System.Drawing.Point(1017, 424);
+            this.cfditxt.Location = new System.Drawing.Point(783, 424);
             this.cfditxt.Name = "cfditxt";
             this.cfditxt.Size = new System.Drawing.Size(174, 24);
             this.cfditxt.TabIndex = 16;
@@ -231,7 +230,7 @@
             // 
             this.paytxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.paytxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paytxt.Location = new System.Drawing.Point(1017, 358);
+            this.paytxt.Location = new System.Drawing.Point(783, 358);
             this.paytxt.Name = "paytxt";
             this.paytxt.Size = new System.Drawing.Size(174, 24);
             this.paytxt.TabIndex = 15;
@@ -241,7 +240,7 @@
             // 
             this.statustxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statustxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statustxt.Location = new System.Drawing.Point(1017, 234);
+            this.statustxt.Location = new System.Drawing.Point(783, 234);
             this.statustxt.Name = "statustxt";
             this.statustxt.Size = new System.Drawing.Size(174, 24);
             this.statustxt.TabIndex = 13;
@@ -251,17 +250,18 @@
             // 
             this.tasatxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tasatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tasatxt.Location = new System.Drawing.Point(1017, 167);
+            this.tasatxt.Location = new System.Drawing.Point(783, 167);
             this.tasatxt.Name = "tasatxt";
             this.tasatxt.Size = new System.Drawing.Size(174, 24);
             this.tasatxt.TabIndex = 12;
             this.tasatxt.UseWaitCursor = true;
+            this.tasatxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tasatxt_KeyPress);
             // 
             // identytxt
             // 
             this.identytxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.identytxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.identytxt.Location = new System.Drawing.Point(1017, 104);
+            this.identytxt.Location = new System.Drawing.Point(783, 104);
             this.identytxt.Name = "identytxt";
             this.identytxt.Size = new System.Drawing.Size(174, 24);
             this.identytxt.TabIndex = 11;
@@ -271,7 +271,7 @@
             // 
             this.CPtxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CPtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPtxt.Location = new System.Drawing.Point(1017, 49);
+            this.CPtxt.Location = new System.Drawing.Point(783, 49);
             this.CPtxt.Name = "CPtxt";
             this.CPtxt.Size = new System.Drawing.Size(174, 24);
             this.CPtxt.TabIndex = 10;
@@ -368,7 +368,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(825, 477);
+            this.label18.Location = new System.Drawing.Point(591, 477);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(48, 20);
             this.label18.TabIndex = 0;
@@ -380,7 +380,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(826, 422);
+            this.label17.Location = new System.Drawing.Point(592, 422);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 20);
             this.label17.TabIndex = 0;
@@ -392,7 +392,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(816, 360);
+            this.label16.Location = new System.Drawing.Point(582, 360);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 20);
             this.label16.TabIndex = 0;
@@ -404,7 +404,7 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(816, 235);
+            this.label14.Location = new System.Drawing.Point(582, 235);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 20);
             this.label14.TabIndex = 0;
@@ -416,7 +416,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(816, 170);
+            this.label13.Location = new System.Drawing.Point(582, 170);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 20);
             this.label13.TabIndex = 0;
@@ -428,7 +428,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(816, 104);
+            this.label12.Location = new System.Drawing.Point(582, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(165, 20);
             this.label12.TabIndex = 0;
@@ -440,7 +440,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(816, 49);
+            this.label11.Location = new System.Drawing.Point(582, 49);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 20);
             this.label11.TabIndex = 0;
@@ -562,7 +562,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1300, 749);
+            this.ClientSize = new System.Drawing.Size(1016, 749);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoClient";

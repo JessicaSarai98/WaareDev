@@ -137,6 +137,16 @@
         TkSuQmCC
 </value>
   </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAOdJREFUWEft
+        lUsOwVAUhjvHiCB2wwbYBztgwJpYBkaCXXjEVPj+ykkaSV/Re2twv+RLe27Sc07vo40CgX+nj9PPrX9U
+        /IQvnGnAJz08oIqfcYDeCMVrKd7FI6p4lT5wjyvsYCquGkh6xQmmkjx2uir+lQYOcY3K+0TvTRhzVN4L
+        Zi6HyyZsJpZxlIGrJkaonNqYuSSbqOpT3ELlu8dRAdRElT8ja+AWRzVgS7CLoxrYoBrI3YQuWKCK6xi2
+        NeCDJmra7c31IRpjKfSgNIrG3+rNSxcXlsAoGksdty1qzb1NeyAQKEEUvQEH5X1seqYMnQAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
   <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAAwVJREFUaEPt

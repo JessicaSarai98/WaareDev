@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
-using Common.cache;
 using System.Data.SqlClient; 
 
 namespace WareDev
@@ -164,11 +156,6 @@ namespace WareDev
             {
                 MessageBox.Show("Seleccione una fila por favor.");
             } 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
     }
 }

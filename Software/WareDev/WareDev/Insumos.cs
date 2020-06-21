@@ -42,7 +42,7 @@ namespace WareDev
 
         private void Insumos_Load(object sender, EventArgs e)
         {
-            //dateTimePicker1.Value = DateTime.Today;
+            dateTimePicker1.Value = DateTime.Today;
         }
 
         private void btrRegreso_Click(object sender, EventArgs e)
@@ -153,7 +153,15 @@ namespace WareDev
             txtCostoTotalInsumo.Text = r.ToString();
         }
 
-       
+        private void txtCanAdqInsumos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtPrecioInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+        }
     }
     
 }

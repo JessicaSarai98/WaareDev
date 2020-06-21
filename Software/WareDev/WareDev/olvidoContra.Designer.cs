@@ -61,9 +61,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(70, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 13);
+            this.label1.Size = new System.Drawing.Size(202, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Enter your username or email:";
+            this.label1.Text = "Ingrese su nombre de usuario o su correo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblResult
@@ -85,7 +85,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.reg);
             this.Name = "olvidoContra";
-            this.Text = "Form1";
+            this.Text = "Recuperar contraseña";
             this.Load += new System.EventHandler(this.olvidoContra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

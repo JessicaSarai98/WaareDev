@@ -251,7 +251,7 @@ namespace WareDev
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo editar los datos por: " + ex);
+                MessageBox.Show("No se pudo editar los datos por: \n" + ex);
             }
         }
 
@@ -266,8 +266,14 @@ namespace WareDev
                 
             }catch(Exception ex)
             {
-                MessageBox.Show("No se pudo agregar los datos por: "+ex);
+                MessageBox.Show("No se pudo agregar los datos por: \n"+ex);
             }
+        }
+
+        private void tasatxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
+
         }
     }
 }

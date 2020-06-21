@@ -19,7 +19,9 @@ namespace WareDev
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -154,42 +156,23 @@ namespace WareDev
 
         private void txtPrecioUnitario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar) || e.KeyChar=='.')
-            {
-                e.Handled = false;
-
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            ValidarDatos.NumerosDecimales(e);
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            ValidarDatos.SoloNumeros(e);
         }
 
         private void txtPrecioUnitario_TextChanged(object sender, EventArgs e)
         {
             txtCantidad.Enabled = true;
            
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloLetras(e);
         }
     }
 }
