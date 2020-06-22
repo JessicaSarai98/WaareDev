@@ -21,9 +21,9 @@ namespace WareDev
         public string idInput = null;
         public string idFinished = null;
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
 
         public inventarios()
@@ -215,6 +215,7 @@ namespace WareDev
                 materia.SaveEdit.Visible = false;
                 materia.ID.Visible = false;
                 materia.mat.Visible = false;
+                materia.dateTimePicker1.Value= DateTime.Today;
                 materia.Show();
             }
             else materia.Activate();
@@ -232,6 +233,7 @@ namespace WareDev
                 insumos.SaveEditinputs.Visible = false;
                 insumos.IDinputs.Visible = false;
                 insumos.ins.Visible = false;
+                insumos.dateTimePicker1.Value= DateTime.Today;
                 insumos.Show();
             }
             else insumos.Activate();
@@ -260,8 +262,28 @@ namespace WareDev
             if (dataGridView3.SelectedRows.Count > 0)
             {
                 Abrir_Agregar();
+                SqlCommand d = new SqlCommand("Select amountPurchased from inputs where name = '" + dataGridView3.CurrentRow.Cells["input"].Value.ToString() + "'", connection) ;
+                connection.Open();
+                SqlDataReader r = d.ExecuteReader();
+                while (r.Read())
+                {
+                    agregar.inputC.Text = r["amountPurchased"].ToString();
+                }
+                connection.Close();
+                SqlCommand k = new SqlCommand("Select amountPurchased from rawMaterials where name = '" + dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString()+ "'", connection);
+                connection.Open();
+                SqlDataReader s = k.ExecuteReader();
+                while (s.Read())
+                {
+                    agregar.rawC.Text = s["amountPurchased"].ToString();
+                }
+                connection.Close();
                 agregar.titulo.Text = "Add quantity of Finished products: " + dataGridView3.CurrentRow.Cells["name"].Value.ToString();
                 agregar.textBox1.Text = dataGridView3.CurrentRow.Cells["name"].Value.ToString();
+                agregar.input.Text = dataGridView3.CurrentRow.Cells["quantityUsedI"].Value.ToString();
+                agregar.raw.Text = dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();
+                agregar.inputN.Text = dataGridView3.CurrentRow.Cells["input"].Value.ToString();
+                agregar.rawN.Text = dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString(); 
                 agregar.addI.Visible = false;
                 agregar.addR.Visible = false;
             }
@@ -279,11 +301,13 @@ namespace WareDev
 
             if (producto == null)
             {
+                
                 producto = new ProductoTerminado();
                 producto.Owner = this;
                 producto.FormClosed += materia_FormClosed;
                 producto.SaveEdit.Visible = false;
                 producto.fin.Visible = false;
+                producto.dateTimePicker1.Value = DateTime.Today;
                 //producto.existencia.Visible = false;
                 producto.Show();
             }

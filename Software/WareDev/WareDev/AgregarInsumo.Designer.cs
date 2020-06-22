@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.input = new System.Windows.Forms.TextBox();
+            this.raw = new System.Windows.Forms.TextBox();
             this.addF = new System.Windows.Forms.Button();
             this.addI = new System.Windows.Forms.Button();
             this.addR = new System.Windows.Forms.Button();
@@ -39,6 +41,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
+            this.inputC = new System.Windows.Forms.TextBox();
+            this.rawC = new System.Windows.Forms.TextBox();
+            this.inputN = new System.Windows.Forms.TextBox();
+            this.rawN = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +52,8 @@
             // contenedor
             // 
             this.contenedor.BackColor = System.Drawing.SystemColors.Control;
+            this.contenedor.Controls.Add(this.input);
+            this.contenedor.Controls.Add(this.raw);
             this.contenedor.Controls.Add(this.addF);
             this.contenedor.Controls.Add(this.addI);
             this.contenedor.Controls.Add(this.addR);
@@ -57,6 +65,22 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(342, 236);
             this.contenedor.TabIndex = 0;
+            // 
+            // input
+            // 
+            this.input.Location = new System.Drawing.Point(23, 192);
+            this.input.Name = "input";
+            this.input.Size = new System.Drawing.Size(32, 20);
+            this.input.TabIndex = 52;
+            this.input.Visible = false;
+            // 
+            // raw
+            // 
+            this.raw.Location = new System.Drawing.Point(61, 192);
+            this.raw.Name = "raw";
+            this.raw.Size = new System.Drawing.Size(33, 20);
+            this.raw.TabIndex = 51;
+            this.raw.Visible = false;
             // 
             // addF
             // 
@@ -125,10 +149,15 @@
             this.titulo.TabIndex = 1;
             this.titulo.Text = "titulo";
             this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titulo.Click += new System.EventHandler(this.titulo_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rawN);
+            this.panel1.Controls.Add(this.inputN);
+            this.panel1.Controls.Add(this.rawC);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.inputC);
             this.panel1.Controls.Add(this.btrRegreso);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -165,6 +194,38 @@
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
+            // inputC
+            // 
+            this.inputC.Location = new System.Drawing.Point(3, 17);
+            this.inputC.Name = "inputC";
+            this.inputC.Size = new System.Drawing.Size(30, 20);
+            this.inputC.TabIndex = 55;
+            this.inputC.Visible = false;
+            // 
+            // rawC
+            // 
+            this.rawC.Location = new System.Drawing.Point(3, 48);
+            this.rawC.Name = "rawC";
+            this.rawC.Size = new System.Drawing.Size(30, 20);
+            this.rawC.TabIndex = 56;
+            this.rawC.Visible = false;
+            // 
+            // inputN
+            // 
+            this.inputN.Location = new System.Drawing.Point(39, 17);
+            this.inputN.Name = "inputN";
+            this.inputN.Size = new System.Drawing.Size(30, 20);
+            this.inputN.TabIndex = 57;
+            this.inputN.Visible = false;
+            // 
+            // rawN
+            // 
+            this.rawN.Location = new System.Drawing.Point(39, 48);
+            this.rawN.Name = "rawN";
+            this.rawN.Size = new System.Drawing.Size(30, 20);
+            this.rawN.TabIndex = 58;
+            this.rawN.Visible = false;
+            // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +237,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar";
             this.Text = "AgregarInsumo";
+            this.Load += new System.EventHandler(this.AgregarInsumo_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -196,5 +258,11 @@
         public System.Windows.Forms.Button addF;
         public System.Windows.Forms.Button addI;
         public System.Windows.Forms.Button addR;
+        public System.Windows.Forms.TextBox input;
+        public System.Windows.Forms.TextBox raw;
+        public System.Windows.Forms.TextBox rawC;
+        public System.Windows.Forms.TextBox inputC;
+        public System.Windows.Forms.TextBox rawN;
+        public System.Windows.Forms.TextBox inputN;
     }
 }

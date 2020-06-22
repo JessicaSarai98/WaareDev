@@ -212,9 +212,9 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(370, 178);
+            this.label11.Location = new System.Drawing.Point(339, 189);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 40);
+            this.label11.Size = new System.Drawing.Size(157, 18);
             this.label11.TabIndex = 0;
             this.label11.Text = "Cantidad Comprada";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,9 +224,9 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 188);
+            this.label13.Location = new System.Drawing.Point(34, 189);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 20);
+            this.label13.Size = new System.Drawing.Size(98, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "Descripción";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,9 +250,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(386, 99);
+            this.label2.Location = new System.Drawing.Point(389, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Status";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +262,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 89);
+            this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 40);
+            this.label1.Size = new System.Drawing.Size(142, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Unidad de Medida de Aduana";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,9 +274,9 @@
             this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nombre.AutoSize = true;
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(46, 12);
+            this.nombre.Location = new System.Drawing.Point(49, 13);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(74, 20);
+            this.nombre.Size = new System.Drawing.Size(68, 18);
             this.nombre.TabIndex = 0;
             this.nombre.Text = "Nombre";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,9 +286,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 56);
+            this.label4.Location = new System.Drawing.Point(56, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "Fecha";
             // 
@@ -297,9 +297,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(353, 12);
+            this.label8.Location = new System.Drawing.Point(360, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 20);
+            this.label8.Size = new System.Drawing.Size(114, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Clave de SAT ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +354,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(170, 47);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 26);
             this.dateTimePicker1.TabIndex = 4;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
@@ -422,9 +422,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(697, 46);
+            this.label3.Location = new System.Drawing.Point(673, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 40);
+            this.label3.Size = new System.Drawing.Size(157, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cantidad de Aduana";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,9 +434,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(720, 99);
+            this.label6.Location = new System.Drawing.Point(723, 100);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.Size = new System.Drawing.Size(57, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "Precio";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,9 +489,9 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 143);
+            this.label10.Location = new System.Drawing.Point(12, 144);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 20);
+            this.label10.Size = new System.Drawing.Size(142, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "Unidad de Medida";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,9 +501,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(345, 143);
+            this.label7.Location = new System.Drawing.Point(351, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 20);
+            this.label7.Size = new System.Drawing.Size(132, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "Monto Agregado";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -533,9 +533,9 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(728, 143);
+            this.label14.Location = new System.Drawing.Point(730, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 20);
+            this.label14.Size = new System.Drawing.Size(43, 18);
             this.label14.TabIndex = 43;
             this.label14.Text = "Foto";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -560,9 +560,9 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(732, 12);
+            this.label12.Location = new System.Drawing.Point(735, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 20);
+            this.label12.Size = new System.Drawing.Size(32, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "IVA";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

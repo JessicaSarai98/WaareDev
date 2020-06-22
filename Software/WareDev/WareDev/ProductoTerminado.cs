@@ -21,9 +21,9 @@ namespace WareDev
 
         //JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False;MultipleActiveResultSets=true");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         string imgLocation = "";
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -54,7 +54,7 @@ namespace WareDev
 
         private void ProductoTerminado_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //dateTimePicker1.Value = DateTime.Today;
 
             SqlCommand cm = new SqlCommand("select name from rawMaterials", connection);
             connection.Open();
@@ -73,6 +73,10 @@ namespace WareDev
                 comboBox2.Items.Add(regi["name"].ToString());
             }
             connection.Close();
+
+            txtCantidadInsumo.Enabled = false;
+
+            txtCantiMatPrima.Enabled = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -169,7 +173,14 @@ namespace WareDev
 
         private void existencia_TextChanged(object sender, EventArgs e)
         {
-            
+            //if(existencia.Text != "" && txtCantiMatPrima.Text!="")
+            //{
+            //    if (Convert.ToDecimal(existencia.Text) < Convert.ToDecimal(txtCantiMatPrima.Text))
+            //    {
+            //        MessageBox.Show("Cantidad insuficiente.");
+            //        txtCantiMatPrima.Text = string.Empty;
+            //    }
+            //}
         }
 
         private void exis_Click(object sender, EventArgs e)
@@ -202,7 +213,15 @@ namespace WareDev
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            SqlCommand d = new SqlCommand("select amountPurchased from inputs where name= '" + comboBox2.Text + "'", connection);
+            connection.Open();
+            SqlDataReader r = d.ExecuteReader();
+            while (r.Read())
+            {
+                exisI.Text = r["amountPurchased"].ToString();
+            }
+            connection.Close();
+            txtCantidadInsumo.Enabled = true;
         }
 
         private void txtPallet_KeyPress(object sender, KeyPressEventArgs e)
@@ -238,6 +257,84 @@ namespace WareDev
         private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtCantidadInsumo.Enabled = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand d = new SqlCommand("select amountPurchased from rawMaterials where name= '" + comboBox1.Text + "'", connection);
+            connection.Open();
+            SqlDataReader r = d.ExecuteReader();
+            while (r.Read())
+            {
+                existencia.Text = r["amountPurchased"].ToString();
+            }
+            connection.Close();
+            txtCantiMatPrima.Enabled = true;
+        }
+
+        private void txtCantidadInsumo_TextChanged(object sender, EventArgs e)
+        {
+
+
+            if ((exisI.Text != "") && (txtCantidadInsumo.Text != ""))
+            {
+                if (Convert.ToDecimal(exisI.Text) < Convert.ToDecimal(txtCantidadInsumo.Text))
+                {
+                    MessageBox.Show("No hay cantidad suficiente");
+                    txtCantidadInsumo.Text = string.Empty;
+                }
+            }
+            //if (txtCantidadInsumo.Text != "")
+            //{
+
+            //        if (Convert.ToDecimal(exisI.Text) < Convert.ToDecimal(txtCantidadInsumo.Text))
+            //        {
+            //            MessageBox.Show("No hay cantidad suficiente");
+            //            txtCantidadInsumo.Text = string.Empty;
+            //        }
+
+
+            //}
+
+
+        }
+
+        private void txtCantiMatPrima_TextChanged(object sender, EventArgs e)
+        {
+            if ((existencia.Text != "") && (txtCantiMatPrima.Text != ""))
+            {
+                if (Convert.ToDecimal(existencia.Text) < Convert.ToDecimal(txtCantiMatPrima.Text))
+                {
+                    MessageBox.Show("Cantidad insuficiente.");
+                    txtCantiMatPrima.Text = string.Empty;
+                }
+            }
+            //if (txtCantiMatPrima.Text!="") {
+            //        if (Convert.ToDecimal(existencia.Text) < Convert.ToDecimal(txtCantiMatPrima.Text))
+            //        {
+            //            MessageBox.Show("Cantidad insuficiente.");
+            //            txtCantiMatPrima.Text = string.Empty;
+            //        }
+
+            //}
+
+        }
+
+        private void exisI_TextChanged(object sender, EventArgs e)
+        {
+            //if (exisI.Text != "" && txtCantiMatPrima.Text!="")
+            //{
+            //    if (Convert.ToDecimal(exisI.Text) < Convert.ToDecimal(txtCantidadInsumo.Text))
+            //    {
+            //        MessageBox.Show("No hay cantidad suficiente");
+            //        txtCantidadInsumo.Text = string.Empty;
+            //    }
+            //}
         }
     }
     

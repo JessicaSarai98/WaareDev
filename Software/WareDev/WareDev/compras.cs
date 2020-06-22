@@ -19,9 +19,9 @@ namespace WareDev
             InitializeComponent();
         }
 
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -167,6 +167,14 @@ namespace WareDev
         private void txtPrecioUnitario_TextChanged(object sender, EventArgs e)
         {
             txtCantidad.Enabled = true;
+            if (txtPrecioUnitario.Text != "" && txtCantidad.Text != "")
+            {
+                double n3, n4, b;
+                n3 = Convert.ToDouble(txtCantidad.Text);
+                n4 = Convert.ToDouble(txtPrecioUnitario.Text);
+                b = n4 * n3;
+                txtTotalCompra.Text = b.ToString();
+            }
            
         }
 
