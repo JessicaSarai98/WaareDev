@@ -98,7 +98,7 @@
             this.mult.Name = "mult";
             this.mult.Size = new System.Drawing.Size(208, 35);
             this.mult.TabIndex = 8;
-            this.mult.Text = "Calculate the Total Cost";
+            this.mult.Text = "Calcular Costo";
             this.mult.UseVisualStyleBackColor = false;
             this.mult.Click += new System.EventHandler(this.mult_Click);
             // 
@@ -247,11 +247,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 11);
+            this.label2.Location = new System.Drawing.Point(95, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Date";
+            this.label2.Text = "Fecha";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -259,11 +259,11 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(601, 11);
+            this.label6.Location = new System.Drawing.Point(590, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 18);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Name";
+            this.label6.Text = "Nombre";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -271,11 +271,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(587, 51);
+            this.label12.Location = new System.Drawing.Point(560, 50);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 18);
+            this.label12.Size = new System.Drawing.Size(135, 20);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Unit price";
+            this.label12.Text = "Precio Unitario";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePicker1
@@ -288,7 +288,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(254, 3);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 27);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
@@ -326,11 +326,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(51, 91);
+            this.label11.Location = new System.Drawing.Point(38, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 18);
+            this.label11.Size = new System.Drawing.Size(174, 20);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Amount purchased";
+            this.label11.Text = "Cantidad Comprada";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -338,11 +338,11 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(61, 51);
+            this.label10.Location = new System.Drawing.Point(46, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 18);
+            this.label10.Size = new System.Drawing.Size(159, 20);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Unit of measure";
+            this.label10.Text = "Unidad de Medida";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -350,11 +350,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(585, 91);
+            this.label4.Location = new System.Drawing.Point(571, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 18);
+            this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Total cost";
+            this.label4.Text = "Costo Total ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -362,11 +362,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(601, 132);
+            this.label5.Location = new System.Drawing.Point(604, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Photo";
+            this.label5.Text = "Foto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -374,11 +374,11 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(78, 132);
+            this.label7.Location = new System.Drawing.Point(70, 131);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 18);
+            this.label7.Size = new System.Drawing.Size(110, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Description";
+            this.label7.Text = "Descripción";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCostoTotalInsumo

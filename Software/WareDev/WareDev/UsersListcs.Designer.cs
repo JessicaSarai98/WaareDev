@@ -111,9 +111,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
+            this.label1.Size = new System.Drawing.Size(258, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Users List";
+            this.label1.Text = "Lista de Usuarios";
             // 
             // button1
             // 
@@ -162,6 +162,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(131, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(535, 338);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);

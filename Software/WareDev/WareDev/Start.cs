@@ -91,7 +91,7 @@ namespace WareDev
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new ganancias());
+            //AbrirFormInPanel(new ganancias());
         }
     }
 }

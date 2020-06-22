@@ -98,7 +98,7 @@
             this.btnCotizar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnCotizar.Size = new System.Drawing.Size(250, 46);
             this.btnCotizar.TabIndex = 8;
-            this.btnCotizar.Text = "Quotations";
+            this.btnCotizar.Text = "Cotizaciones";
             this.btnCotizar.UseVisualStyleBackColor = false;
             this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
@@ -117,7 +117,7 @@
             this.btnReportes.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(250, 54);
             this.btnReportes.TabIndex = 7;
-            this.btnReportes.Text = "Reports";
+            this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
@@ -155,7 +155,7 @@
             this.btnProve.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnProve.Size = new System.Drawing.Size(250, 54);
             this.btnProve.TabIndex = 5;
-            this.btnProve.Text = "Suppliers";
+            this.btnProve.Text = "Proveedores";
             this.btnProve.UseVisualStyleBackColor = false;
             this.btnProve.Click += new System.EventHandler(this.btnProve_Click);
             // 
@@ -174,7 +174,7 @@
             this.btnClient.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnClient.Size = new System.Drawing.Size(250, 54);
             this.btnClient.TabIndex = 4;
-            this.btnClient.Text = "Customers";
+            this.btnClient.Text = "Clientes";
             this.btnClient.UseVisualStyleBackColor = false;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
@@ -193,7 +193,7 @@
             this.btnuser.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnuser.Size = new System.Drawing.Size(250, 54);
             this.btnuser.TabIndex = 3;
-            this.btnuser.Text = "Users";
+            this.btnuser.Text = "Usuarios";
             this.btnuser.UseVisualStyleBackColor = false;
             this.btnuser.Click += new System.EventHandler(this.btnuser_Click);
             // 
@@ -358,7 +358,7 @@
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(242, 26);
+            this.fecha.Size = new System.Drawing.Size(278, 29);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
@@ -369,7 +369,7 @@
             this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.Location = new System.Drawing.Point(697, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(149, 37);
+            this.hora.Size = new System.Drawing.Size(159, 39);
             this.hora.TabIndex = 0;
             this.hora.Text = "17:52:00";
             // 

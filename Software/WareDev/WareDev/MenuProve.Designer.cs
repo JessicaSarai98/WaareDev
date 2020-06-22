@@ -47,9 +47,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 31);
+            this.label1.Size = new System.Drawing.Size(191, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Suppliers";
+            this.label1.Text = "Proveedores";
             // 
             // button1
             // 
@@ -144,6 +144,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(35, 143);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(712, 321);
             this.dataGridView1.TabIndex = 0;
             // 

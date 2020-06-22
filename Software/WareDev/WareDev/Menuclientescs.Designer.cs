@@ -53,9 +53,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 31);
+            this.label1.Size = new System.Drawing.Size(248, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Client List";
+            this.label1.Text = "Lista de Clientes";
             // 
             // btnNuevo
             // 
