@@ -132,7 +132,7 @@ namespace WareDev
             if (MessageBox.Show("If you want to modify the same PDF, you must close the document before", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
-                Document doc = new Document(PageSize.A5);
+                Document doc = new Document(PageSize.A4);
 
                 // Indicamos donde vamos a guardar el documento
 
@@ -183,7 +183,7 @@ namespace WareDev
                 {
                     var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    jpg.SetAbsolutePosition(270, 15);
+                    jpg.SetAbsolutePosition(450, 0);
                     jpg.ScalePercent(25, 25);
                     doc.Add(jpg);
 
@@ -196,7 +196,7 @@ namespace WareDev
                 {
                     var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    png.SetAbsolutePosition(0, 525);
+                    png.SetAbsolutePosition(250, 770);
                     png.ScalePercent(15, 15);
                     doc.Add(png);
 
@@ -246,6 +246,8 @@ namespace WareDev
                 headertable.AddCell(ico.Text);
                 headertable.AddCell("Currency");
                 headertable.AddCell(divisa.Text);
+                headertable.AddCell("Total Final");
+                headertable.AddCell(txtTotal.Text);
 
                 doc.Add(headertable);
                 doc.Add(spacer);
@@ -254,7 +256,7 @@ namespace WareDev
                 //Creacion de Tabla de Cotizacion
 
                 var columCount = TablaDeVenta.ColumnCount;
-                var columAncho = new[] { 2.5f, 1f, 1f, 2f, .75f };
+                var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
 
 
                 var table = new PdfPTable(columAncho)
