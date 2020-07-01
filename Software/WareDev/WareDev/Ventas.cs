@@ -14,9 +14,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+       // SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -48,9 +48,9 @@ namespace WareDev
             string query = "select max(Id) from ventas";
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -132,6 +132,7 @@ namespace WareDev
         {
             panelTitulo.Visible = false;
             AbrirFormInPanel(new Start());
+            this.Close();
         }
         FacturaVentas ventas1;
         private void btnFactura_Click(object sender, EventArgs e)
@@ -332,6 +333,18 @@ namespace WareDev
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             materia = new Productos();
+            materia.Owner = this;
+            materia.FormClosed += materia_FormClosed;
+            txtProducto.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtPallet.Text = string.Empty;
+            txtMedida.Text = string.Empty;
+            txtTam.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            textBox3.Text = string.Empty;
+
+            
             materia.Show();
             txtCantidad.Enabled = true;
         }

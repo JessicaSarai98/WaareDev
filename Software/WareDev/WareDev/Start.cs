@@ -81,7 +81,9 @@ namespace WareDev
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new ventas());
+            // AbrirFormInPanel(new ventas());
+            ventas v = new ventas();
+            v.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -92,6 +94,12 @@ namespace WareDev
         private void button4_Click(object sender, EventArgs e)
         {
             //AbrirFormInPanel(new ganancias());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cotizaciones c = new Cotizaciones();
+            c.Show(); 
         }
     }
 }

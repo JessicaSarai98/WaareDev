@@ -64,6 +64,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 270);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(994, 267);
             this.dataGridView1.TabIndex = 6;
@@ -91,9 +92,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(26, 17);
+            this.label1.Location = new System.Drawing.Point(41, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 20);
+            this.label1.Size = new System.Drawing.Size(261, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccione el producto terminado";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,7 +108,7 @@
             this.ComboNombre.FormattingEnabled = true;
             this.ComboNombre.Location = new System.Drawing.Point(3, 57);
             this.ComboNombre.Name = "ComboNombre";
-            this.ComboNombre.Size = new System.Drawing.Size(337, 28);
+            this.ComboNombre.Size = new System.Drawing.Size(337, 26);
             this.ComboNombre.TabIndex = 3;
             this.ComboNombre.SelectedIndexChanged += new System.EventHandler(this.ComboNombre_SelectedIndexChanged);
             // 

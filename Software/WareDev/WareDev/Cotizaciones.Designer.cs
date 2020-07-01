@@ -71,7 +71,6 @@ namespace WareDev
             this.IdClient = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Delete = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -100,6 +99,7 @@ namespace WareDev
             this.label21 = new System.Windows.Forms.Label();
             this.txtPrecioTotal = new System.Windows.Forms.TextBox();
             this.txtCan = new System.Windows.Forms.TextBox();
+            this.btrRegreso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -567,26 +567,12 @@ namespace WareDev
             this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Delete
-            // 
-            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete.BackColor = System.Drawing.Color.Black;
-            this.Delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Delete.Location = new System.Drawing.Point(964, 463);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(119, 48);
-            this.Delete.TabIndex = 78;
-            this.Delete.Text = "Delate";
-            this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.UseWaitCursor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(964, 517);
+            this.button5.Location = new System.Drawing.Point(964, 465);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(119, 48);
             this.button5.TabIndex = 76;
@@ -958,7 +944,7 @@ namespace WareDev
             // 
             // txtPrecioTotal
             // 
-            this.txtPrecioTotal.Location = new System.Drawing.Point(793, 20);
+            this.txtPrecioTotal.Location = new System.Drawing.Point(724, 9);
             this.txtPrecioTotal.Name = "txtPrecioTotal";
             this.txtPrecioTotal.Size = new System.Drawing.Size(126, 20);
             this.txtPrecioTotal.TabIndex = 89;
@@ -966,11 +952,30 @@ namespace WareDev
             // 
             // txtCan
             // 
-            this.txtCan.Location = new System.Drawing.Point(925, 20);
+            this.txtCan.Location = new System.Drawing.Point(618, 9);
             this.txtCan.Name = "txtCan";
             this.txtCan.Size = new System.Drawing.Size(100, 20);
             this.txtCan.TabIndex = 90;
             this.txtCan.Visible = false;
+            // 
+            // btrRegreso
+            // 
+            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
+            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
+            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
+            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btrRegreso.Location = new System.Drawing.Point(1039, -3);
+            this.btrRegreso.Name = "btrRegreso";
+            this.btrRegreso.Size = new System.Drawing.Size(63, 46);
+            this.btrRegreso.TabIndex = 91;
+            this.btrRegreso.Text = "Return";
+            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btrRegreso.UseVisualStyleBackColor = false;
+            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
             // Cotizaciones
             // 
@@ -978,13 +983,13 @@ namespace WareDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1114, 571);
+            this.Controls.Add(this.btrRegreso);
             this.Controls.Add(this.txtCan);
             this.Controls.Add(this.txtPrecioTotal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Delete);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.TablaDeVenta);
@@ -1043,7 +1048,6 @@ namespace WareDev
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox Condicion;
         private System.Windows.Forms.TextBox place;
@@ -1089,5 +1093,6 @@ namespace WareDev
         private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox IdClient;
+        private System.Windows.Forms.Button btrRegreso;
     }
 }

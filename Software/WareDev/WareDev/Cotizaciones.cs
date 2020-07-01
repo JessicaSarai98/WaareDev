@@ -29,9 +29,9 @@ namespace WareDev
 
         }
         // JESS
-         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
 
@@ -313,11 +313,18 @@ namespace WareDev
             txtSubtotal.Text = string.Empty;
             txtTotal.Text = string.Empty;
             divisa.Text = string.Empty;
-            
+
+            txtProducto.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtPallet.Text = string.Empty;
+            txtMedida.Text = string.Empty;
+            txtTam.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+
             IdClient.Text = string.Empty;
             ico.Text = string.Empty;
-            TablaDeVenta.DataSource = null;
-
+            //TablaDeVenta.Rows.Clear(); 
 
         }
 
@@ -529,6 +536,11 @@ namespace WareDev
         private void pallet_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.SoloNumeros(e);
+        }
+
+        private void btrRegreso_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }
