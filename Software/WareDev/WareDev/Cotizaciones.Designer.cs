@@ -464,6 +464,23 @@ namespace WareDev
             // ico
             // 
             this.ico.FormattingEnabled = true;
+            this.ico.Items.AddRange(new object[] {
+            "CFR - Costo y Flete",
+            "CIF - Costo, Seguro y Flete",
+            "CPT - Transporte pagado",
+            "CIP - Transporte seguro y pagado",
+            "DAF - Entrega en frontera",
+            "DAP - Entrega en lugar",
+            "DAT - Entrega en terminal",
+            "DES - Entrega sobre buque",
+            "DEQ - Entrega en muelle",
+            "DDU - Entregada derechos no pagados",
+            "DDP - Entrega derechos pagados",
+            "EXW - En fábrica",
+            "FCA - Franco transportista",
+            "FAS - Franco al costado del buque",
+            "FOB - Franco a bordo",
+            "DPU  - Mercancía entregada y descarga en lugar"});
             this.ico.Location = new System.Drawing.Point(351, 81);
             this.ico.Name = "ico";
             this.ico.Size = new System.Drawing.Size(148, 28);
@@ -484,6 +501,10 @@ namespace WareDev
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.divisa.FormattingEnabled = true;
+            this.divisa.Items.AddRange(new object[] {
+            "Peso",
+            "Dolar",
+            "Euro"});
             this.divisa.Location = new System.Drawing.Point(351, 116);
             this.divisa.Name = "divisa";
             this.divisa.Size = new System.Drawing.Size(148, 28);
@@ -550,7 +571,7 @@ namespace WareDev
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 48);
             this.button2.TabIndex = 80;
-            this.button2.Text = "Generate";
+            this.button2.Text = "Generar PDF";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.UseWaitCursor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -564,7 +585,7 @@ namespace WareDev
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 48);
             this.button1.TabIndex = 79;
-            this.button1.Text = "Save";
+            this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -578,7 +599,7 @@ namespace WareDev
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(119, 48);
             this.button5.TabIndex = 76;
-            this.button5.Text = "Cancel ";
+            this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.UseWaitCursor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
