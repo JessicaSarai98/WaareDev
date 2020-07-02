@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System.Runtime.InteropServices;
 using System.IO;
-using Domain;
-using Common.cache;
-using Org.BouncyCastle.Asn1.Crmf;
 using System.Data.SqlClient;
 
 namespace WareDev
@@ -29,7 +20,7 @@ namespace WareDev
 
         }
         // JESS
-         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
@@ -410,21 +401,10 @@ namespace WareDev
         Productos materia;
         private void btnArticulo_Click(object sender, EventArgs e)
         {
-            if (materia == null)
-            {
-                materia = new Productos();
-                materia.Owner = this;
-                materia.FormClosed += materia_FormClosed;
-                materia.Show();
-                txtCantidad.Enabled = true;
-            }
-            else materia.Activate();
+            materia = new Productos();
+            materia.Show();
+            txtCantidad.Enabled = true;
         }
-        private void materia_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            materia = null;
-        }
-
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
             if (txtProducto.Text !="")
