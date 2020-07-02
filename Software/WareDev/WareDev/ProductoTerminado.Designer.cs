@@ -123,11 +123,11 @@
             this.exis.BackColor = System.Drawing.Color.Silver;
             this.exis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.exis.Location = new System.Drawing.Point(357, 8);
+            this.exis.Location = new System.Drawing.Point(332, 3);
             this.exis.Name = "exis";
-            this.exis.Size = new System.Drawing.Size(134, 23);
+            this.exis.Size = new System.Drawing.Size(185, 34);
             this.exis.TabIndex = 35;
-            this.exis.Text = "See existence - Raw";
+            this.exis.Text = "Ver existencia - Materia prima";
             this.exis.UseVisualStyleBackColor = false;
             this.exis.Click += new System.EventHandler(this.exis_Click);
             // 
@@ -146,11 +146,11 @@
             this.existenciaI.BackColor = System.Drawing.Color.Silver;
             this.existenciaI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.existenciaI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.existenciaI.Location = new System.Drawing.Point(74, 8);
+            this.existenciaI.Location = new System.Drawing.Point(41, 4);
             this.existenciaI.Name = "existenciaI";
-            this.existenciaI.Size = new System.Drawing.Size(134, 23);
+            this.existenciaI.Size = new System.Drawing.Size(200, 31);
             this.existenciaI.TabIndex = 36;
-            this.existenciaI.Text = "See existence - Input";
+            this.existenciaI.Text = "Ver existencia - Insumos";
             this.existenciaI.UseVisualStyleBackColor = false;
             this.existenciaI.Click += new System.EventHandler(this.existenciaI_Click);
             // 
@@ -194,7 +194,7 @@
             this.SaveEdit.Name = "SaveEdit";
             this.SaveEdit.Size = new System.Drawing.Size(88, 57);
             this.SaveEdit.TabIndex = 32;
-            this.SaveEdit.Text = "Save";
+            this.SaveEdit.Text = "Guardar";
             this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SaveEdit.UseVisualStyleBackColor = false;
             this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
@@ -569,12 +569,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantiAdquirida.BackColor = System.Drawing.Color.White;
+            this.txtCantiAdquirida.Enabled = false;
             this.txtCantiAdquirida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtCantiAdquirida.Location = new System.Drawing.Point(239, 231);
             this.txtCantiAdquirida.Multiline = true;
             this.txtCantiAdquirida.Name = "txtCantiAdquirida";
             this.txtCantiAdquirida.Size = new System.Drawing.Size(230, 39);
             this.txtCantiAdquirida.TabIndex = 13;
+            this.txtCantiAdquirida.Text = "1";
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantiAdquirida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantiAdquirida_KeyPress);
             // 
@@ -675,7 +677,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 57);
             this.btnGuardar.TabIndex = 15;
-            this.btnGuardar.Text = "Save";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -714,7 +716,7 @@
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(88, 57);
             this.btrRegreso.TabIndex = 16;
-            this.btrRegreso.Text = "Return";
+            this.btrRegreso.Text = "Regresar";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
