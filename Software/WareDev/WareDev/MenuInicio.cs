@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Common.cache;
@@ -101,7 +95,6 @@ namespace WareDev
                 menu.Width = 80;
                 btnInicio.Text = " ";
                 btnInven.Text = " ";
-                btnCotizar.Text = " ";
                 btnReportes.Text = " ";
                 btnuser.Text = " ";
                 btnClient.Text = " ";
@@ -112,7 +105,6 @@ namespace WareDev
                 menu.Width = 250;
                 btnInicio.Text = "Start";
                 btnInven.Text = "Inventary";
-                btnCotizar.Text = "Quotations";
                 btnReportes.Text = "Reports";
                 btnuser.Text = "Users";
                 btnClient.Text = "Customers";
@@ -215,12 +207,6 @@ namespace WareDev
         {
             ActivateButton(sender);
             AbrirFormInPanel(new reporte());
-        }
-
-        private void btnCotizar_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            AbrirFormInPanel(new Cotizaciones());
         }
 
         private void top_Paint_MouseDown(object sender, MouseEventArgs e)

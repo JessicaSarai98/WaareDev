@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using System.Data.SqlClient;
@@ -78,10 +71,23 @@ namespace WareDev
             textBox3.Text = comando2.ExecuteScalar().ToString();
             conn.Close();
         }
-
+        ventas ventas;
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new ventas());
+            if (ventas == null)
+            {
+                ventas = new ventas();
+                ventas.Owner = this;
+                ventas.FormClosed += ventas_FormClosed;
+                ventas.Show();
+            }
+            else ventas.Activate();
+        }
+
+        private void ventas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ventas = null;
+            cotizaciones = null;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,9 +95,17 @@ namespace WareDev
             AbrirFormInPanel(new compras());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        Cotizaciones cotizaciones;
+        private void button1_Click(object sender, EventArgs e)
         {
-            //AbrirFormInPanel(new ganancias());
+            if (cotizaciones == null)
+            {
+                cotizaciones = new Cotizaciones();
+                cotizaciones.Owner = this;
+                cotizaciones.FormClosed += ventas_FormClosed;
+                cotizaciones.Show();
+            }
+            else cotizaciones.Activate();
         }
     }
 }

@@ -6,25 +6,29 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace WareDev
 {
     public partial class Cotizaciones : Form
     {
-
-
-
         public Cotizaciones()
         {
             InitializeComponent();
 
         }
         // JESS
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
+
+        /*Libreria para general el efecto de movel con el mouse*/
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
 
         private void cotizaciones_Load(object sender, EventArgs e)
@@ -123,7 +127,7 @@ namespace WareDev
             if (MessageBox.Show("If you want to modify the same PDF, you must close the document before", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
-                Document doc = new Document(PageSize.A5);
+                Document doc = new Document(PageSize.A4);
 
                 // Indicamos donde vamos a guardar el documento
 
@@ -174,7 +178,7 @@ namespace WareDev
                 {
                     var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    jpg.SetAbsolutePosition(270, 15);
+                    jpg.SetAbsolutePosition(450, 0);
                     jpg.ScalePercent(25, 25);
                     doc.Add(jpg);
 
@@ -187,7 +191,7 @@ namespace WareDev
                 {
                     var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    png.SetAbsolutePosition(0, 525);
+                    png.SetAbsolutePosition(250, 770);
                     png.ScalePercent(15, 15);
                     doc.Add(png);
 
@@ -237,6 +241,8 @@ namespace WareDev
                 headertable.AddCell(ico.Text);
                 headertable.AddCell("Currency");
                 headertable.AddCell(divisa.Text);
+                headertable.AddCell("Total Final");
+                headertable.AddCell(txtTotal.Text);
 
                 doc.Add(headertable);
                 doc.Add(spacer);
@@ -245,7 +251,7 @@ namespace WareDev
                 //Creacion de Tabla de Cotizacion
 
                 var columCount = TablaDeVenta.ColumnCount;
-                var columAncho = new[] { 2.5f, 1f, 1f, 2f, .75f };
+                var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
 
 
                 var table = new PdfPTable(columAncho)
@@ -304,11 +310,18 @@ namespace WareDev
             txtSubtotal.Text = string.Empty;
             txtTotal.Text = string.Empty;
             divisa.Text = string.Empty;
-            
+
+            txtProducto.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtPallet.Text = string.Empty;
+            txtMedida.Text = string.Empty;
+            txtTam.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+
             IdClient.Text = string.Empty;
             ico.Text = string.Empty;
-            TablaDeVenta.DataSource = null;
-
+            //TablaDeVenta.Rows.Clear(); 
 
         }
 
@@ -509,6 +522,11 @@ namespace WareDev
         private void pallet_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.SoloNumeros(e);
+        }
+
+        private void btrRegreso_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }

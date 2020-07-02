@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using System.IO;
-using System.Globalization;
 using System.Data.SqlClient;
 
 namespace WareDev
@@ -183,7 +177,7 @@ namespace WareDev
                
                 Abrir_Agregar();
 
-                agregar.titulo.Text = "Add quantity of Raw Materials: "+dataGridView1.CurrentRow.Cells["name"].Value.ToString();
+                agregar.titulo.Text = "Añadir cantidad en la materia prima: "+dataGridView1.CurrentRow.Cells["name"].Value.ToString();
                 agregar.textBox1.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
                 agregar.addI.Visible = false;
                 agregar.addF.Visible = false;
@@ -246,7 +240,7 @@ namespace WareDev
             if (dataGridView2.SelectedRows.Count > 0)
             {
                 Abrir_Agregar();
-                agregar.titulo.Text = "Add quantity of Inputs: " + dataGridView2.CurrentRow.Cells["name"].Value.ToString();
+                agregar.titulo.Text = "Añadir cantidad en insumo: " + dataGridView2.CurrentRow.Cells["name"].Value.ToString();
                 agregar.textBox1.Text = dataGridView2.CurrentRow.Cells["name"].Value.ToString();
                 agregar.addR.Visible = false;
                 agregar.addF.Visible = false;
@@ -278,7 +272,7 @@ namespace WareDev
                     agregar.rawC.Text = s["amountPurchased"].ToString();
                 }
                 connection.Close();
-                agregar.titulo.Text = "Add quantity of Finished products: " + dataGridView3.CurrentRow.Cells["name"].Value.ToString();
+                agregar.titulo.Text = "Añadir cantidad en producto terminado: " + dataGridView3.CurrentRow.Cells["name"].Value.ToString();
                 agregar.textBox1.Text = dataGridView3.CurrentRow.Cells["name"].Value.ToString();
                 agregar.input.Text = dataGridView3.CurrentRow.Cells["quantityUsedI"].Value.ToString();
                 agregar.raw.Text = dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();

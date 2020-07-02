@@ -39,12 +39,12 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.titulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btrRegreso = new System.Windows.Forms.Button();
-            this.inputC = new System.Windows.Forms.TextBox();
-            this.rawC = new System.Windows.Forms.TextBox();
-            this.inputN = new System.Windows.Forms.TextBox();
             this.rawN = new System.Windows.Forms.TextBox();
+            this.inputN = new System.Windows.Forms.TextBox();
+            this.rawC = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.inputC = new System.Windows.Forms.TextBox();
+            this.btrRegreso = new System.Windows.Forms.Button();
             this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -165,15 +165,47 @@
             this.panel1.Size = new System.Drawing.Size(342, 80);
             this.panel1.TabIndex = 0;
             // 
+            // rawN
+            // 
+            this.rawN.Location = new System.Drawing.Point(39, 48);
+            this.rawN.Name = "rawN";
+            this.rawN.Size = new System.Drawing.Size(30, 20);
+            this.rawN.TabIndex = 58;
+            this.rawN.Visible = false;
+            // 
+            // inputN
+            // 
+            this.inputN.Location = new System.Drawing.Point(39, 17);
+            this.inputN.Name = "inputN";
+            this.inputN.Size = new System.Drawing.Size(30, 20);
+            this.inputN.TabIndex = 57;
+            this.inputN.Visible = false;
+            // 
+            // rawC
+            // 
+            this.rawC.Location = new System.Drawing.Point(3, 48);
+            this.rawC.Name = "rawC";
+            this.rawC.Size = new System.Drawing.Size(30, 20);
+            this.rawC.TabIndex = 56;
+            this.rawC.Visible = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(88, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 18);
+            this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Add Product";
+            this.label1.Text = "Añadir producto";
+            // 
+            // inputC
+            // 
+            this.inputC.Location = new System.Drawing.Point(3, 17);
+            this.inputC.Name = "inputC";
+            this.inputC.Size = new System.Drawing.Size(30, 20);
+            this.inputC.TabIndex = 55;
+            this.inputC.Visible = false;
             // 
             // btrRegreso
             // 
@@ -189,42 +221,10 @@
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
             this.btrRegreso.TabIndex = 14;
-            this.btrRegreso.Text = "Return";
+            this.btrRegreso.Text = "Regresar";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
-            // 
-            // inputC
-            // 
-            this.inputC.Location = new System.Drawing.Point(3, 17);
-            this.inputC.Name = "inputC";
-            this.inputC.Size = new System.Drawing.Size(30, 20);
-            this.inputC.TabIndex = 55;
-            this.inputC.Visible = false;
-            // 
-            // rawC
-            // 
-            this.rawC.Location = new System.Drawing.Point(3, 48);
-            this.rawC.Name = "rawC";
-            this.rawC.Size = new System.Drawing.Size(30, 20);
-            this.rawC.TabIndex = 56;
-            this.rawC.Visible = false;
-            // 
-            // inputN
-            // 
-            this.inputN.Location = new System.Drawing.Point(39, 17);
-            this.inputN.Name = "inputN";
-            this.inputN.Size = new System.Drawing.Size(30, 20);
-            this.inputN.TabIndex = 57;
-            this.inputN.Visible = false;
-            // 
-            // rawN
-            // 
-            this.rawN.Location = new System.Drawing.Point(39, 48);
-            this.rawN.Name = "rawN";
-            this.rawN.Size = new System.Drawing.Size(30, 20);
-            this.rawN.TabIndex = 58;
-            this.rawN.Visible = false;
             // 
             // Agregar
             // 

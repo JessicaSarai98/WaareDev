@@ -141,10 +141,10 @@
             this.TabPage1.Controls.Add(this.btnEditar);
             this.TabPage1.Controls.Add(this.TablaMatPrima);
             this.TabPage1.Controls.Add(this.tableLayoutPanel1);
-            this.TabPage1.Location = new System.Drawing.Point(4, 31);
+            this.TabPage1.Location = new System.Drawing.Point(4, 29);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(1010, 441);
+            this.TabPage1.Size = new System.Drawing.Size(1010, 443);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Raw material";
             // 
@@ -195,7 +195,7 @@
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 41);
             this.BtnAgregar.TabIndex = 35;
-            this.BtnAgregar.Text = "Add";
+            this.BtnAgregar.Text = "Añadir";
             this.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
@@ -217,7 +217,7 @@
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(104, 41);
             this.BtnEliminar.TabIndex = 34;
-            this.BtnEliminar.Text = "Delete";
+            this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -239,7 +239,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(104, 41);
             this.btnEditar.TabIndex = 33;
-            this.btnEditar.Text = "Edit";
+            this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -331,7 +331,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(729, 44);
             this.tableLayoutPanel1.TabIndex = 30;
             // 
@@ -394,10 +394,10 @@
             this.tabPage2.Controls.Add(this.btnEditInsu);
             this.tabPage2.Controls.Add(this.tablaInsumo);
             this.tabPage2.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1010, 441);
+            this.tabPage2.Size = new System.Drawing.Size(1010, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Supplies";
             // 
@@ -426,7 +426,7 @@
             this.btnAgregarIns.Name = "btnAgregarIns";
             this.btnAgregarIns.Size = new System.Drawing.Size(104, 60);
             this.btnAgregarIns.TabIndex = 43;
-            this.btnAgregarIns.Text = "Add inputs";
+            this.btnAgregarIns.Text = "Añadir insumo";
             this.btnAgregarIns.UseVisualStyleBackColor = false;
             this.btnAgregarIns.Click += new System.EventHandler(this.btnAgregarIns_Click);
             // 
@@ -447,7 +447,7 @@
             this.btnAgreInsum.Name = "btnAgreInsum";
             this.btnAgreInsum.Size = new System.Drawing.Size(104, 41);
             this.btnAgreInsum.TabIndex = 42;
-            this.btnAgreInsum.Text = "Add";
+            this.btnAgreInsum.Text = "Añadir";
             this.btnAgreInsum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAgreInsum.UseVisualStyleBackColor = false;
             this.btnAgreInsum.Click += new System.EventHandler(this.btnAgreInsum_Click);
@@ -469,7 +469,7 @@
             this.btnBorrarInsu.Name = "btnBorrarInsu";
             this.btnBorrarInsu.Size = new System.Drawing.Size(104, 41);
             this.btnBorrarInsu.TabIndex = 41;
-            this.btnBorrarInsu.Text = "Delete";
+            this.btnBorrarInsu.Text = "Eliminar";
             this.btnBorrarInsu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBorrarInsu.UseVisualStyleBackColor = false;
             this.btnBorrarInsu.Click += new System.EventHandler(this.btnBorrarInsu_Click);
@@ -491,7 +491,7 @@
             this.btnEditInsu.Name = "btnEditInsu";
             this.btnEditInsu.Size = new System.Drawing.Size(104, 41);
             this.btnEditInsu.TabIndex = 40;
-            this.btnEditInsu.Text = "Edit";
+            this.btnEditInsu.Text = "Editar";
             this.btnEditInsu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditInsu.UseVisualStyleBackColor = false;
             this.btnEditInsu.Click += new System.EventHandler(this.btnEditInsu_Click);
@@ -609,9 +609,9 @@
             this.tabPage3.Controls.Add(this.btnEditProdTer);
             this.tabPage3.Controls.Add(this.TablaProducTermi);
             this.tabPage3.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1010, 441);
+            this.tabPage3.Size = new System.Drawing.Size(1010, 443);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finished products";
             // 
@@ -643,7 +643,7 @@
             this.btnAddProductos.Name = "btnAddProductos";
             this.btnAddProductos.Size = new System.Drawing.Size(104, 60);
             this.btnAddProductos.TabIndex = 50;
-            this.btnAddProductos.Text = "Add finished Products";
+            this.btnAddProductos.Text = "Añadir producto terminado";
             this.btnAddProductos.UseVisualStyleBackColor = false;
             this.btnAddProductos.Click += new System.EventHandler(this.btnAddProductos_Click);
             // 
@@ -664,7 +664,7 @@
             this.btnAddCantiProducto.Name = "btnAddCantiProducto";
             this.btnAddCantiProducto.Size = new System.Drawing.Size(104, 41);
             this.btnAddCantiProducto.TabIndex = 49;
-            this.btnAddCantiProducto.Text = "Add";
+            this.btnAddCantiProducto.Text = "Añadir";
             this.btnAddCantiProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddCantiProducto.UseVisualStyleBackColor = false;
             this.btnAddCantiProducto.Click += new System.EventHandler(this.btnAddCantiProducto_Click);
@@ -686,7 +686,7 @@
             this.btnElimProdTerm.Name = "btnElimProdTerm";
             this.btnElimProdTerm.Size = new System.Drawing.Size(104, 41);
             this.btnElimProdTerm.TabIndex = 48;
-            this.btnElimProdTerm.Text = "Delete";
+            this.btnElimProdTerm.Text = "Eliminar";
             this.btnElimProdTerm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnElimProdTerm.UseVisualStyleBackColor = false;
             this.btnElimProdTerm.Click += new System.EventHandler(this.btnElimProdTerm_Click);
@@ -708,7 +708,7 @@
             this.btnEditProdTer.Name = "btnEditProdTer";
             this.btnEditProdTer.Size = new System.Drawing.Size(104, 41);
             this.btnEditProdTer.TabIndex = 47;
-            this.btnEditProdTer.Text = "Edit";
+            this.btnEditProdTer.Text = "Editar";
             this.btnEditProdTer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditProdTer.UseVisualStyleBackColor = false;
             this.btnEditProdTer.Click += new System.EventHandler(this.btnEditProdTer_Click);
@@ -820,9 +820,9 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Khaki;
-            this.tabPage4.Location = new System.Drawing.Point(4, 31);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1010, 441);
+            this.tabPage4.Size = new System.Drawing.Size(1010, 443);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -867,7 +867,7 @@
             this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
             this.txtVentas.Location = new System.Drawing.Point(187, 19);
             this.txtVentas.Name = "txtVentas";
-            this.txtVentas.Size = new System.Drawing.Size(153, 33);
+            this.txtVentas.Size = new System.Drawing.Size(144, 31);
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Inventario";
             // 
@@ -893,7 +893,7 @@
             this.btnPTerminado.Size = new System.Drawing.Size(132, 46);
             this.btnPTerminado.TabIndex = 4;
             this.btnPTerminado.TabStop = true;
-            this.btnPTerminado.Text = "Inputs";
+            this.btnPTerminado.Text = "Insumo";
             this.btnPTerminado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPTerminado.UseVisualStyleBackColor = true;
             this.btnPTerminado.CheckedChanged += new System.EventHandler(this.btnPTerminado_CheckedChanged);

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInicio));
             this.menu = new System.Windows.Forms.Panel();
-            this.btnCotizar = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnInven = new System.Windows.Forms.Button();
             this.btnProve = new System.Windows.Forms.Button();
@@ -69,7 +68,6 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
-            this.menu.Controls.Add(this.btnCotizar);
             this.menu.Controls.Add(this.btnReportes);
             this.menu.Controls.Add(this.btnInven);
             this.menu.Controls.Add(this.btnProve);
@@ -82,25 +80,6 @@
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(250, 649);
             this.menu.TabIndex = 1;
-            // 
-            // btnCotizar
-            // 
-            this.btnCotizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCotizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCotizar.FlatAppearance.BorderSize = 0;
-            this.btnCotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCotizar.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCotizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCotizar.Image = ((System.Drawing.Image)(resources.GetObject("btnCotizar.Image")));
-            this.btnCotizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCotizar.Location = new System.Drawing.Point(0, 520);
-            this.btnCotizar.Name = "btnCotizar";
-            this.btnCotizar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCotizar.Size = new System.Drawing.Size(250, 46);
-            this.btnCotizar.TabIndex = 8;
-            this.btnCotizar.Text = "Cotizaciones";
-            this.btnCotizar.UseVisualStyleBackColor = false;
-            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
             // btnReportes
             // 
@@ -260,7 +239,7 @@
             this.name.Size = new System.Drawing.Size(296, 44);
             this.name.TabIndex = 14;
             this.name.TabStop = false;
-            this.name.Text = "Karina Carmona";
+            this.name.Text = "Admin";
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.name.MouseLeave += new System.EventHandler(this.btnminimizar_MouseLeave);
             this.name.MouseHover += new System.EventHandler(this.name_MouseHover);
@@ -358,7 +337,7 @@
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(278, 29);
+            this.fecha.Size = new System.Drawing.Size(242, 26);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
@@ -369,7 +348,7 @@
             this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.Location = new System.Drawing.Point(697, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(159, 39);
+            this.hora.Size = new System.Drawing.Size(149, 37);
             this.hora.TabIndex = 0;
             this.hora.Text = "17:52:00";
             // 
@@ -455,7 +434,6 @@
         #endregion
 
         private System.Windows.Forms.Panel menu;
-        private System.Windows.Forms.Button btnCotizar;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnInven;
         private System.Windows.Forms.Button btnProve;
