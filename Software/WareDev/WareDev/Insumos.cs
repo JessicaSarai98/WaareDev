@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -34,13 +27,7 @@ namespace WareDev
             return ms.ToArray();
         }
 
-        /*Libreria para general el efecto de movel con el mouse*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-        private void Insumos_Load(object sender, EventArgs e)
+             private void Insumos_Load(object sender, EventArgs e)
         {
             //dateTimePicker1.Value = DateTime.Today;
         }
@@ -138,19 +125,36 @@ namespace WareDev
         private void txtCostoTotalInsumo_Leave(object sender, EventArgs e)
         {
             float n1, n2, r;
-            n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
-            n2 = Convert.ToSingle(txtPrecioInsumo.Text);
-            r = n1 * n2;
-            txtCostoTotalInsumo.Text = r.ToString(); 
+            if (txtCanAdqInsumos.Text == "" || txtPrecioInsumo.Text == "")
+            {
+                MessageBox.Show("Favor de ingresar el precio del insumo o la cantidad adquirida para hacer la" +
+                    "operación correspondiente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
+                n2 = Convert.ToSingle(txtPrecioInsumo.Text);
+                r = n1 * n2;
+                txtCostoTotalInsumo.Text = r.ToString();
+            }
         }
 
         private void mult_Click(object sender, EventArgs e)
         {
             float n1, n2, r;
-            n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
-            n2 = Convert.ToSingle(txtPrecioInsumo.Text);
-            r = n1 * n2;
-            txtCostoTotalInsumo.Text = r.ToString();
+            if (txtCanAdqInsumos.Text == "" || txtPrecioInsumo.Text == "")
+            {
+                MessageBox.Show("Favor de ingresar el precio del insumo o la cantidad adquirida para hacer la" +
+                    "operación correspondiente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                n1 = Convert.ToInt32(txtCanAdqInsumos.Text);
+                n2 = Convert.ToSingle(txtPrecioInsumo.Text);
+                r = n1 * n2;
+                txtCostoTotalInsumo.Text = r.ToString();
+            }
+            
         }
 
         private void txtCanAdqInsumos_KeyPress(object sender, KeyPressEventArgs e)
@@ -161,6 +165,21 @@ namespace WareDev
         private void txtPrecioInsumo_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.NumerosDecimales(e);
+        }
+        int posX;
+        int posY;
+        private void top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
         }
     }
     

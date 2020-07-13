@@ -6,7 +6,6 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Data.SqlClient;
-using System.Runtime.InteropServices;
 
 namespace WareDev
 {
@@ -23,14 +22,6 @@ namespace WareDev
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
-
-        /*Libreria para general el efecto de movel con el mouse*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
-
         private void cotizaciones_Load(object sender, EventArgs e)
         {
             Date.Value = DateTime.Today;
@@ -82,7 +73,7 @@ namespace WareDev
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -96,31 +87,6 @@ namespace WareDev
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -296,7 +262,7 @@ namespace WareDev
 
             else
             {
-                MessageBox.Show("Close the PDF to be modified");
+                MessageBox.Show("Cierre el pdf para poder modificarlo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -337,19 +303,23 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Seleccione una fila.");
+                MessageBox.Show("Seleccione una fila.","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1) && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) && (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) && (this.Customer.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.divisa.Text.Length >= 1))
+            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1) 
+                && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) && 
+                (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) && 
+                (this.Customer.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.divisa.Text.Length >= 1))
             {
                 connection.Open();
 
                 foreach (DataGridViewRow row in TablaDeVenta.Rows)
                 {
-                    SqlCommand ad = new SqlCommand("insert into detalleQuo values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet,@medida,@tam,@precio)", connection);
+                    SqlCommand ad = new SqlCommand("insert into detalleQuo values(@folio,@subtotal," +
+                        "@producto,@cantidad,@desc,@pallet,@medida,@tam,@precio)", connection);
 
                     ad.Parameters.Clear();
                     ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column1"].Value));
@@ -367,20 +337,27 @@ namespace WareDev
 
                 }
 
-            string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, icoterm, customerName,subtotal,total,currency, IVA,place,cond) values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" + IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text + "','" + Condicion.Text + "')";
+            string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, " +
+                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond) " +
+                    "values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" +
+                    IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text +
+                    "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text +
+                    "','" + Condicion.Text + "')";
             cmd = new SqlCommand(sqlQuery, connection);
             cmd.Parameters.AddWithValue("@date", Date.Value);
             cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
             cmd.ExecuteNonQuery();
             connection.Close();
 
-            MessageBox.Show("Se ha agregado la venta");
+            MessageBox.Show("Se ha agregado la venta", "Mensaje", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
                 this.Close();
 
             }
             else
             {
-                MessageBox.Show("Complete todos los campos");
+                MessageBox.Show("Complete todos los campos", "Mensaje", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -439,17 +416,20 @@ namespace WareDev
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese la medida");
+                        MessageBox.Show("Ingrese la medida", "Mensaje", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese la cantidad a utilizar");
+                    MessageBox.Show("Ingrese la cantidad a utilizar", "Mensaje",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione un producto para agregarlo a la tabla");
+                MessageBox.Show("Seleccione un producto para agregarlo a la tabla", "Mensaje", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -480,7 +460,7 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Ingrese IVA");
+                MessageBox.Show("Ingrese IVA","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -492,7 +472,7 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Seleccione una fila");
+                MessageBox.Show("Seleccione una fila","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -527,6 +507,21 @@ namespace WareDev
         private void btrRegreso_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+        int posX;
+        int posY;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
         }
     }
 }

@@ -121,6 +121,7 @@
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1084, 84);
             this.panelTitulo.TabIndex = 1;
+            this.panelTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitulo_MouseMove);
             // 
             // txtVentas
             // 
@@ -128,7 +129,7 @@
             this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold);
             this.txtVentas.Location = new System.Drawing.Point(338, 21);
             this.txtVentas.Name = "txtVentas";
-            this.txtVentas.Size = new System.Drawing.Size(412, 42);
+            this.txtVentas.Size = new System.Drawing.Size(309, 42);
             this.txtVentas.TabIndex = 2;
             this.txtVentas.Text = "Productos terminados";
             // 
@@ -159,6 +160,7 @@
             this.Controls.Add(this.contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.contenedor.ResumeLayout(false);

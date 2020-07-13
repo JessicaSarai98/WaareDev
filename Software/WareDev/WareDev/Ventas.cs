@@ -339,7 +339,7 @@ namespace WareDev
             txtDescripcion.Text = string.Empty;
             txtPallet.Text = string.Empty;
             txtMedida.Text = string.Empty;
-            txtTam.Text = string.Empty;
+            txtSAT.Text = string.Empty;
             txtPrecio.Text = string.Empty;
             textBox3.Text = string.Empty;
 
@@ -361,7 +361,7 @@ namespace WareDev
                     if (txtMedida.Text != "")
                     {
 
-                        dataGridView1.Rows.Add(txtFolio.Text, txtProducto.Text, txtCantidad.Text, txtDescripcion.Text, txtPallet.Text, txtMedida.Text, txtTam.Text, txtPrecio.Text, textBox3.Text, txtSubtotal.Text, txtTotal.Text);
+                        dataGridView1.Rows.Add(txtFolio.Text, txtProducto.Text, txtCantidad.Text, txtDescripcion.Text, txtPallet.Text, txtMedida.Text, txtSAT.Text, txtPrecio.Text, textBox3.Text, txtSubtotal.Text, txtTotal.Text);
 
                         textBox3.Text = string.Empty;
                         txtProducto.Text = string.Empty;
@@ -369,7 +369,7 @@ namespace WareDev
                         txtDescripcion.Text = string.Empty;
                         txtPallet.Text = string.Empty;
                         txtMedida.Text = string.Empty;
-                        txtTam.Text = string.Empty;
+                        txtSAT.Text = string.Empty;
                         txtPrecio.Text = string.Empty;
                         cantidad.Text = string.Empty;
                         txtCantidad.Enabled = false;
@@ -465,7 +465,7 @@ namespace WareDev
                 txtDescripcion.Text = string.Empty;
                 txtPallet.Text = string.Empty;
                 txtMedida.Text = string.Empty;
-                txtTam.Text = string.Empty;
+                txtSAT.Text = string.Empty;
                 txtPrecio.Text = string.Empty;
                 textBox3.Text = string.Empty;
                 decimal total = 0;
@@ -498,6 +498,26 @@ namespace WareDev
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        int posX;
+        int posY;
+        private void panelTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void txtCajasContenido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
         }
     }
 }

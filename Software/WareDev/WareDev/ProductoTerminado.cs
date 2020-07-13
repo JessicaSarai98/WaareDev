@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
@@ -28,6 +22,9 @@ namespace WareDev
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlCommand cmd3;
+        private int posX;
+        private int posY;
+
         public byte[] ImageToByteArray(System.Drawing.Image imagen)
         {
             MemoryStream ms = new MemoryStream();
@@ -81,7 +78,10 @@ namespace WareDev
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtSize.Text.Length >=1) &&(this.txtMeasure.Text.Length>=1))
+            if ((this.txtFaccion.Text.Length >= 1) && (this.dateTimePicker1 != null) && 
+                (this.txtSat.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) &&
+                (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) &&
+                (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtEstado.Text.Length >=1) &&(this.txtMeasure.Text.Length>=1))
             { 
                 if (this.FotoProduc.Image != null)
                 {
@@ -99,7 +99,9 @@ namespace WareDev
 
 
                         connection.Open();
-                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo,size,measure, fin) values(@fecha,'" + txtUniMedInsu.Text + "','" + txtPallet.Text + "','" + txtCajasContenido.Text + "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','" + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images,'"+this.txtSize.Text+"','"+this.txtMeasure.Text+"', '"+fin.Text+"')";
+                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo,size,measure, fin) values(@fecha,'" + txtFaccion.Text + "','" + txtSat.Text + "','" + txtCajasContenido.Text + 
+                        "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','"
+                        + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images,'"+this.txtEstado.Text+"','"+this.txtMeasure.Text+"', '"+fin.Text+"')";
                         string sqlQuery2 = "update rawMaterials set amountPurchased= amountPurchased - @cant where name='" + comboBox1.Text + "'";
                         string sqlQuery3 = "update inputs set amountPurchased= amountPurchased - @canti where name= '" + comboBox2.Text + "'";
 
@@ -136,7 +138,9 @@ namespace WareDev
 
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            if ((this.txtUniMedInsu.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtPallet.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtSize.Text.Length >= 1) &&(this.txtMeasure.Text.Length>=1))
+            if ((this.txtFaccion.Text.Length >= 1) && (this.dateTimePicker1 != null) && (this.txtSat.Text.Length >= 1) && (this.txtCajasContenido.Text.Length >= 1) && 
+                (this.comboBox2.Text.Length >= 1) && (this.txtCantidadInsumo.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtNombreInsumo.Text.Length >= 1) && 
+                (this.txtPrecioInsumo.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.comboBox1.Text.Length >= 1) && (this.txtCantiMatPrima.Text.Length >= 1) &&(this.txtEstado.Text.Length >= 1) &&(this.txtMeasure.Text.Length>=1))
             {
 
                 byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
@@ -147,7 +151,9 @@ namespace WareDev
                 //n2 = Convert.ToInt32(existencia.Text);
                 //r = n2 - n1;
 
-                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtUniMedInsu.Text + "',pallet='" + txtPallet.Text + "',boxes='" + txtCajasContenido.Text + "',input='" + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "', size = '"+txtSize.Text+"', measure = '"+txtMeasure.Text+"',photo=@imagen where Id='" + ID.Text + "'";
+                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtFaccion.Text + "',pallet='" + txtSat.Text + "',boxes='" + txtCajasContenido.Text + "',input='" 
+                    + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + 
+                    "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "', size = '"+txtEstado.Text+"', measure = '"+txtMeasure.Text+"',photo=@imagen where Id='" + ID.Text + "'";
                // string sqlQuery2 = "update rawMaterials set amountPurchased='"+r+ "' where Id='"+txtNombreMateria.Text+"'";
                 cmd = new SqlCommand(sqlQuery, connection);
                 //cmd2 = new SqlCommand(sqlQuery2, connection);
@@ -181,34 +187,6 @@ namespace WareDev
             //        txtCantiMatPrima.Text = string.Empty;
             //    }
             //}
-        }
-
-        private void exis_Click(object sender, EventArgs e)
-        {
-            SqlCommand com = new SqlCommand("Select * from rawMaterials where name=@name",connection);
-            com.Parameters.AddWithValue("@name",comboBox1.Text);
-            connection.Open();
-            SqlDataReader reg = com.ExecuteReader();
-            if (reg.Read())
-            {
-                existencia.Text = reg["amountPurchased"].ToString();
-            }
-            connection.Close();
-
-
-        }
-
-        private void existenciaI_Click(object sender, EventArgs e)
-        {
-            SqlCommand com = new SqlCommand("Select * from inputs where name=@name", connection);
-            com.Parameters.AddWithValue("@name", comboBox2.Text);
-            connection.Open();
-            SqlDataReader reg = com.ExecuteReader();
-            if (reg.Read())
-            {
-                exisI.Text = reg["amountPurchased"].ToString();
-            }
-            connection.Close();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -335,6 +313,25 @@ namespace WareDev
             //        txtCantidadInsumo.Text = string.Empty;
             //    }
             //}
+        }
+
+        private void top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.NumerosDecimales(e);
         }
     }
     
