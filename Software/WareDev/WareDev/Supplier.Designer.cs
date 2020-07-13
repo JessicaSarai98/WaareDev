@@ -56,6 +56,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -293,11 +294,11 @@
             this.Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Imprimir.BackColor = System.Drawing.Color.Black;
             this.Imprimir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Imprimir.Location = new System.Drawing.Point(407, 416);
+            this.Imprimir.Location = new System.Drawing.Point(695, 391);
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(114, 48);
             this.Imprimir.TabIndex = 13;
-            this.Imprimir.Text = "Export To PDF";
+            this.Imprimir.Text = "Crear PDF";
             this.Imprimir.UseVisualStyleBackColor = false;
             this.Imprimir.UseWaitCursor = true;
             this.Imprimir.Visible = false;
@@ -308,11 +309,11 @@
             this.saveNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveNew.BackColor = System.Drawing.Color.Black;
             this.saveNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.saveNew.Location = new System.Drawing.Point(688, 391);
+            this.saveNew.Location = new System.Drawing.Point(436, 391);
             this.saveNew.Name = "saveNew";
             this.saveNew.Size = new System.Drawing.Size(115, 48);
             this.saveNew.TabIndex = 14;
-            this.saveNew.Text = "Save";
+            this.saveNew.Text = "Guardar";
             this.saveNew.UseVisualStyleBackColor = false;
             this.saveNew.UseWaitCursor = true;
             this.saveNew.Click += new System.EventHandler(this.saveNew_Click);
@@ -322,11 +323,11 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(824, 390);
+            this.button1.Location = new System.Drawing.Point(564, 391);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 48);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Cancel";
+            this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -358,11 +359,11 @@
             this.saveEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveEdit.BackColor = System.Drawing.Color.Black;
             this.saveEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.saveEdit.Location = new System.Drawing.Point(688, 391);
+            this.saveEdit.Location = new System.Drawing.Point(436, 391);
             this.saveEdit.Name = "saveEdit";
             this.saveEdit.Size = new System.Drawing.Size(115, 48);
             this.saveEdit.TabIndex = 13;
-            this.saveEdit.Text = "Save";
+            this.saveEdit.Text = "Guardar";
             this.saveEdit.UseVisualStyleBackColor = false;
             this.saveEdit.UseWaitCursor = true;
             this.saveEdit.Click += new System.EventHandler(this.saveEdit_Click);
@@ -432,12 +433,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(960, 289);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1018, 45);
+            this.panel1.TabIndex = 18;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1018, 476);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.saveEdit);
             this.Controls.Add(this.Imprimir);
@@ -446,7 +457,8 @@
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Supplier";
-            this.Text = "Supplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.InfoProve_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -485,5 +497,6 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

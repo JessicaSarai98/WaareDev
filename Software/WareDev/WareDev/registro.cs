@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using Common.cache;
 using Domain;
 using System.Data.SqlClient;
 
@@ -159,6 +151,21 @@ namespace WareDev
             }
             else{
                     MessageBox.Show("Las contraseñas no son iguales, vuelva a intentar.");
+            }
+        }
+        int posX;
+        int posY;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
             }
         }
     }

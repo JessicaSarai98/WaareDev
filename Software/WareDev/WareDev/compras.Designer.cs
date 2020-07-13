@@ -56,6 +56,7 @@
             this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtUniMedida = new System.Windows.Forms.ComboBox();
             this.contenedor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +70,7 @@
             this.contenedor.Controls.Add(this.tableLayoutPanel1);
             this.contenedor.Controls.Add(this.panel2);
             this.contenedor.Controls.Add(this.panel1);
+            this.contenedor.Controls.Add(this.txtName);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 0);
             this.contenedor.Name = "contenedor";
@@ -84,6 +86,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.60563F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.61771F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.97586F));
+            this.tableLayoutPanel1.Controls.Add(this.txtUniMedida, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtTotalCompra, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtPrecioUnitario, 1, 3);
@@ -95,7 +98,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNoPro, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.label12, 2, 2);
@@ -171,16 +173,13 @@
             // 
             // txtFolioCompra
             // 
-            this.txtFolioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFolioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFolioCompra.BackColor = System.Drawing.Color.White;
             this.txtFolioCompra.Enabled = false;
             this.txtFolioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFolioCompra.Location = new System.Drawing.Point(171, 3);
-            this.txtFolioCompra.Multiline = true;
+            this.txtFolioCompra.Location = new System.Drawing.Point(171, 7);
             this.txtFolioCompra.Name = "txtFolioCompra";
-            this.txtFolioCompra.Size = new System.Drawing.Size(168, 35);
+            this.txtFolioCompra.Size = new System.Drawing.Size(168, 26);
             this.txtFolioCompra.TabIndex = 1;
             this.txtFolioCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFolioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolioCompra_KeyPress);
@@ -235,15 +234,13 @@
             // 
             // txtNoPro
             // 
-            this.txtNoPro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNoPro.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNoPro.BackColor = System.Drawing.Color.White;
             this.txtNoPro.Enabled = false;
             this.txtNoPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtNoPro.Location = new System.Drawing.Point(539, 44);
-            this.txtNoPro.Multiline = true;
+            this.txtNoPro.Location = new System.Drawing.Point(539, 48);
             this.txtNoPro.Name = "txtNoPro";
-            this.txtNoPro.Size = new System.Drawing.Size(151, 35);
+            this.txtNoPro.Size = new System.Drawing.Size(151, 26);
             this.txtNoPro.TabIndex = 4;
             this.txtNoPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolioCompra_KeyPress);
             // 
@@ -266,7 +263,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(171, 85);
+            this.txtName.Location = new System.Drawing.Point(205, 374);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 26);
@@ -345,7 +342,7 @@
             this.prov.FormattingEnabled = true;
             this.prov.Location = new System.Drawing.Point(539, 3);
             this.prov.Name = "prov";
-            this.prov.Size = new System.Drawing.Size(279, 28);
+            this.prov.Size = new System.Drawing.Size(362, 28);
             this.prov.TabIndex = 2;
             this.prov.SelectedIndexChanged += new System.EventHandler(this.prov_SelectedIndexChanged);
             // 
@@ -439,6 +436,113 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // txtUniMedida
+            // 
+            this.txtUniMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUniMedida.AutoCompleteCustomSource.AddRange(new string[] {
+            "-- Seleccione una medida --",
+            "A76 - Galón",
+            "A9 - Tarifa",
+            "ACT - Actividad",
+            "C62 - Uno",
+            "CCT - Capacidad de carga en toneladas métricas",
+            "CMK - Centimetro cuadrado",
+            "E48 - Unidad de servicio",
+            "E53 - Prueba",
+            "EA - Elemento",
+            "FOT - Pie ",
+            "FTK - Pie cuadrado",
+            "GRM - Gramo",
+            "H87 - Pieza",
+            "HAR - Hectarea",
+            "HEA - Cabeza",
+            "HL - Cien pies (lineal)",
+            "INH - Pulgada",
+            "KGM - Kilogramo",
+            "LBR - Libra",
+            "LC - Centímetro lineal",
+            "LM - Metro lineal",
+            "LTR - Litro",
+            "MIL - Millares",
+            "MTK - Metro cuadrado",
+            "MTQ - Metro cúbico",
+            "MTR - Metro",
+            "NMP - Número de paquetes",
+            "PR - Par",
+            "SMI - Milla",
+            "TNE - Tonelada métrica",
+            " TT - Mil metros lineales",
+            "WSD - Estándar",
+            "X4G - Caja de carton",
+            "X4H - Caja de plástico",
+            "XBJ - Cubeta",
+            "XBX - Caja",
+            "XCX - Lata cilíndrica",
+            "XKI - Kit",
+            "XLT - Lote",
+            "XNA - No disponible",
+            "XOK - Bloque",
+            "XRO - Rollo",
+            "XSA - Saco",
+            "YRD - Yarda",
+            "ZZ - Mutuamente definido"});
+            this.txtUniMedida.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtUniMedida.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtUniMedida.FormattingEnabled = true;
+            this.txtUniMedida.Items.AddRange(new object[] {
+            "-- Seleccione una medida --",
+            "A76 - Galón",
+            "A9 - Tarifa",
+            "ACT - Actividad",
+            "C62 - Uno",
+            "CCT - Capacidad de carga en toneladas métricas",
+            "CMK - Centimetro cuadrado",
+            "E48 - Unidad de servicio",
+            "E53 - Prueba",
+            "EA - Elemento",
+            "FOT - Pie ",
+            "FTK - Pie cuadrado",
+            "GRM - Gramo",
+            "H87 - Pieza",
+            "HAR - Hectarea",
+            "HEA - Cabeza",
+            "HL - Cien pies (lineal)",
+            "INH - Pulgada",
+            "KGM - Kilogramo",
+            "LBR - Libra",
+            "LC - Centímetro lineal",
+            "LM - Metro lineal",
+            "LTR - Litro",
+            "MIL - Millares",
+            "MTK - Metro cuadrado",
+            "MTQ - Metro cúbico",
+            "MTR - Metro",
+            "NMP - Número de paquetes",
+            "PR - Par",
+            "SMI - Milla",
+            "TNE - Tonelada métrica",
+            " TT - Mil metros lineales",
+            "WSD - Estándar",
+            "X4G - Caja de carton",
+            "X4H - Caja de plástico",
+            "XBJ - Cubeta",
+            "XBX - Caja",
+            "XCX - Lata cilíndrica",
+            "XKI - Kit",
+            "XLT - Lote",
+            "XNA - No disponible",
+            "XOK - Bloque",
+            "XRO - Rollo",
+            "XSA - Saco",
+            "YRD - Yarda",
+            "ZZ - Mutuamente definido"});
+            this.txtUniMedida.Location = new System.Drawing.Point(171, 87);
+            this.txtUniMedida.Name = "txtUniMedida";
+            this.txtUniMedida.Size = new System.Drawing.Size(168, 21);
+            this.txtUniMedida.TabIndex = 10;
+            this.txtUniMedida.Text = "-- Seleccione una medida --";
+            this.txtUniMedida.SelectedIndexChanged += new System.EventHandler(this.txtUniMedida_SelectedIndexChanged);
+            // 
             // compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +553,7 @@
             this.Text = "compras";
             this.Load += new System.EventHandler(this.compras_Load);
             this.contenedor.ResumeLayout(false);
+            this.contenedor.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -487,5 +592,6 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.ComboBox prov;
+        public System.Windows.Forms.ComboBox txtUniMedida;
     }
 }

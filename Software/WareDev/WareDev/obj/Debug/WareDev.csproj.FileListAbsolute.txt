@@ -26,6 +26,7 @@ C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\Wa
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Insumos.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.inventarios.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.MateriaPrima.resources
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ProductoExistente.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.Productos.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ProductoTerminado.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.reporte.resources
@@ -45,4 +46,3 @@ C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\Wa
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
-C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache

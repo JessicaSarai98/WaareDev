@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -18,9 +12,9 @@ namespace WareDev
             InitializeComponent();
         }
         //jess
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-       // SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void reporte_Load(object sender, EventArgs e)
         {
@@ -36,7 +30,7 @@ namespace WareDev
             if (cmdReporte.Text != "")
             {
 
-                if (cmdReporte.Text.Equals("Sales"))
+                if (cmdReporte.Text.Equals("Ventas"))
                 {
                     connection.Open();
 
@@ -46,16 +40,16 @@ namespace WareDev
                     sda1.SelectCommand.Parameters.Add(new SqlParameter("@date2", hastaTime.Value));
 
                     DataSet d = new DataSet();
-                    sda1.Fill(d, "Sales");
-                    dataGridView1.DataSource = d.Tables["Sales"];
+                    sda1.Fill(d, "Ventas");
+                    dataGridView1.DataSource = d.Tables["Ventas"];
                     dataGridView1.Columns[0].HeaderText = "Folio";
-                    dataGridView1.Columns[1].HeaderText = "Date";
+                    dataGridView1.Columns[1].HeaderText = "Fecha";
                     dataGridView1.Columns[2].HeaderText = "IVA";
-                    dataGridView1.Columns[3].HeaderText = "Provider Number";
-                    dataGridView1.Columns[4].HeaderText = "Provider Name";
+                    dataGridView1.Columns[3].HeaderText = "Número del proveedor";
+                    dataGridView1.Columns[4].HeaderText = "Nombre del proveedor";
                     dataGridView1.Columns[5].HeaderText = "Currency";
-                    dataGridView1.Columns[6].HeaderText = "Conditions";
-                    dataGridView1.Columns[7].HeaderText = "Place";
+                    dataGridView1.Columns[6].HeaderText = "Condicones";
+                    dataGridView1.Columns[7].HeaderText = "Lugar";
                     dataGridView1.Columns[8].HeaderText = "Subtotal";
                     dataGridView1.Columns[9].HeaderText = "Total";
 
@@ -65,7 +59,7 @@ namespace WareDev
 
 
                 }
-                else if (cmdReporte.Text.Equals("Quotes"))
+                else if (cmdReporte.Text.Equals("Cotizaciones"))
                 {
                     connection.Open();
 
@@ -75,28 +69,28 @@ namespace WareDev
                     sda1.SelectCommand.Parameters.Add(new SqlParameter("@date2", hastaTime.Value));
 
                     DataSet d = new DataSet();
-                    sda1.Fill(d, "Quotes");
-                    dataGridView1.DataSource = d.Tables["Quotes"];
+                    sda1.Fill(d, "Cotizaciones");
+                    dataGridView1.DataSource = d.Tables["Cotizaciones"];
 
                     dataGridView1.Columns[0].HeaderText = "Folio";
-                    dataGridView1.Columns[1].HeaderText = "Date";
+                    dataGridView1.Columns[1].HeaderText = "Fecha";
                     dataGridView1.Columns[2].HeaderText = "Pallet";
-                    dataGridView1.Columns[3].HeaderText = "Expiration";
-                    dataGridView1.Columns[4].HeaderText = "Customer Number";
+                    dataGridView1.Columns[3].HeaderText = "Valido hasta";
+                    dataGridView1.Columns[4].HeaderText = "Número del cliente";
                     dataGridView1.Columns[5].HeaderText = "Icoterm";
-                    dataGridView1.Columns[6].HeaderText = "Customer Name";
+                    dataGridView1.Columns[6].HeaderText = "Nombre del cliente";
                     dataGridView1.Columns[7].HeaderText = "Subtotal";
                     dataGridView1.Columns[8].HeaderText = "Total";
                     dataGridView1.Columns[9].HeaderText = "Currency";
                     dataGridView1.Columns[10].HeaderText = "IVA";
-                    dataGridView1.Columns[11].HeaderText = "Place";
-                    dataGridView1.Columns[12].HeaderText = "Conditions";
+                    dataGridView1.Columns[11].HeaderText = "Lugar";
+                    dataGridView1.Columns[12].HeaderText = "Condiciones";
 
 
                     connection.Close();
 
                 }
-                else if (cmdReporte.Text.Equals("Shopping"))
+                else if (cmdReporte.Text.Equals("Compras"))
                 {
                     connection.Open();
 
@@ -106,19 +100,19 @@ namespace WareDev
                     sda1.SelectCommand.Parameters.Add(new SqlParameter("@date2", hastaTime.Value));
 
                     DataSet d = new DataSet();
-                    sda1.Fill(d, "Shopping");
-                    dataGridView1.DataSource = d.Tables["Shopping"];
+                    sda1.Fill(d, "Compras");
+                    dataGridView1.DataSource = d.Tables["Compras"];
 
                     dataGridView1.Columns[0].HeaderText = "Folio";
-                    dataGridView1.Columns[1].HeaderText = "Date";
-                    dataGridView1.Columns[2].HeaderText = "Product Name";
-                    dataGridView1.Columns[3].HeaderText = "Price Unit";
-                    dataGridView1.Columns[4].HeaderText = "Provider Name";
-                    dataGridView1.Columns[5].HeaderText = "Provider Number";
-                    dataGridView1.Columns[6].HeaderText = "Amount Purchased";
+                    dataGridView1.Columns[1].HeaderText = "Fecha";
+                    dataGridView1.Columns[2].HeaderText = "Nombre del producto";
+                    dataGridView1.Columns[3].HeaderText = "Precio unitario";
+                    dataGridView1.Columns[4].HeaderText = "Nombre del proveedor";
+                    dataGridView1.Columns[5].HeaderText = "Número del proveedor";
+                    dataGridView1.Columns[6].HeaderText = "Cantidad disponible";
                     dataGridView1.Columns[7].HeaderText = "Total";
                     //dataGridView1.Columns[8].Visible = false;
-                    dataGridView1.Columns[8].HeaderText = "Description";
+                    dataGridView1.Columns[8].HeaderText = "Descripción";
                     connection.Close();
                 }
 

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
@@ -34,12 +27,7 @@ namespace WareDev
             return ms.ToArray(); 
         }
 
-        /*Libreria para general el efecto de movel con el mouse*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
+       
         private void btrRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,8 +53,8 @@ namespace WareDev
         //Guardar materia prima
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if ((this.txtNombre.Text.Length>=1) && (this.txtUniMedAduana.Text.Length>=1)&& (this.txtUniMedida.Text.Length>= 1) && (this.txtDescripcion.Text.Length>= 1) && (this.txtIva.Text.Length>= 1) && (this.txtSat.Text.Length>= 1) && (this.txtFraccion.Text.Length>= 1) && 
-                (this.txtEstado.Text.Length>= 1) && (this.txtPorcentaje.Text.Length>= 1) && (this.txtCantiAdquirida.Text.Length>= 1) && (this.txtCanAduana.Text.Length>= 1) && (this.txtPrecio.Text.Length>= 1))
+            if ((this.txtNombre.Text.Length>=1) && (this.txtUniMedAduana.Text.Length>=1)&& (this.txtUniMedida.Text.Length>= 1) && (this.txtDescripcion.Text.Length>= 1) && (this.txtSat.Text.Length>= 1) && (this.txtFraccion.Text.Length>= 1) && 
+                (this.txtEstado.Text.Length>= 1)  && (this.txtCantiAdquirida.Text.Length>= 1) && (this.txtCanAduana.Text.Length>= 1) && (this.txtPrecio.Text.Length>= 1))
             {
                 if (this.FotoProduc.Image != null)
                 {
@@ -76,7 +64,9 @@ namespace WareDev
                     images = brs.ReadBytes((int)Streem.Length);
 
                     connection.Open();
-                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,IVA,SAT,tariffFraction,status, percentage,amountPurchased,customsAmount,price,photo,mat) values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.Text+ "','"+txtUniMedida.Text+ "','"+txtDescripcion.Text+ "','"+txtIva.Text+ "','"+txtSat.Text+ "','"+txtFraccion.Text+ "','"+txtEstado.Text+ "','"+txtPorcentaje.Text+ "','"+txtCantiAdquirida.Text+ "','"+txtCanAduana.Text+ "','"+txtPrecio.Text+"',@images, '"+mat.Text+"')";
+                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,SAT,tariffFraction,status,amountPurchased,customsAmount,price,photo,mat) " +
+                        "values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.SelectedItem+ "','"+txtUniMedida.SelectedItem+ "','"+txtDescripcion.Text+ "','"+txtSat.Text+ "','"+txtFraccion.Text+ "','"+txtEstado.SelectedItem+"','"+txtCantiAdquirida.Text+ 
+                        "','"+txtCanAduana.Text+ "','"+txtPrecio.Text+"',@images, '"+mat.Text+"')";
                     cmd = new SqlCommand(sqlQuery, connection);
                     cmd.Parameters.Add(new SqlParameter("@images",images));
                     cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
@@ -100,13 +90,13 @@ namespace WareDev
 
         private void SaveEdit_Click(object sender, EventArgs e)
         {
-            if ((this.txtNombre.Text.Length >= 1) && (this.txtUniMedAduana.Text.Length >= 1) && (this.txtUniMedida.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.txtIva.Text.Length >= 1) && (this.txtSat.Text.Length >= 1) && (this.txtFraccion.Text.Length >= 1) &&
-                (this.txtEstado.Text.Length >= 1) && (this.txtPorcentaje.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtCanAduana.Text.Length >= 1) && (this.txtPrecio.Text.Length >= 1))
+            if ((this.txtNombre.Text.Length >= 1) && (this.txtUniMedAduana.Text.Length >= 1) && (this.txtUniMedida.Text.Length >= 1) && (this.txtDescripcion.Text.Length >= 1) && (this.txtSat.Text.Length >= 1) && (this.txtFraccion.Text.Length >= 1) &&
+                (this.txtEstado.Text.Length >= 1) && (this.txtCantiAdquirida.Text.Length >= 1) && (this.txtCanAduana.Text.Length >= 1) && (this.txtPrecio.Text.Length >= 1))
             {
 
                 byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
                 connection.Open();
-                string sqlQuery = "update rawMaterials set name='" + txtNombre.Text + "',date=@fecha,customsUnitOfMeasure='" + txtUniMedAduana.Text + "',unitOfMeasure='" + txtUniMedida.Text + "',description='" + txtDescripcion.Text + "',IVA='" + txtIva.Text + "',SAT='" + txtSat.Text + "',tariffFraction='" + txtFraccion.Text + "',status='" + txtEstado.Text + "',percentage='" + txtPorcentaje.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',customsAmount='" + txtCanAduana.Text + "',price='" + txtPrecio.Text + "',photo=@imagen where Id='" + ID.Text + "'";
+                string sqlQuery = "update rawMaterials set name='" + txtNombre.Text + "',date=@fecha,customsUnitOfMeasure='" + txtUniMedAduana.Text + "',unitOfMeasure='" + txtUniMedida.Text + "',description='" + txtDescripcion.Text +  "',SAT='" + txtSat.Text + "',tariffFraction='" + txtFraccion.Text + "',status='" + txtEstado.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',customsAmount='" + txtCanAduana.Text + "',price='" + txtPrecio.Text + "',photo=@imagen where Id='" + ID.Text + "'";
 
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
@@ -124,19 +114,11 @@ namespace WareDev
 
         private void MateriaPrima_Load(object sender, EventArgs e)
         {
-            //dateTimePicker1.Value = DateTime.Today;
+            dateTimePicker1.Value = DateTime.Today;
         }
         //float
         Regex rx = new Regex(@"^[0-9]+\.[0-9]{2}?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((rx.IsMatch(txtIva.Text)) && (e.KeyChar != (char)Keys.Back) || char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
+       
         private void txtSat_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.SoloNumeros(e);
@@ -165,6 +147,26 @@ namespace WareDev
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void tablaFacVentas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        int posX;
+        int posY;
+        private void top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
         }
     }
 }

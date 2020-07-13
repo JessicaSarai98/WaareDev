@@ -308,7 +308,6 @@
             this.top.Name = "top";
             this.top.Size = new System.Drawing.Size(800, 84);
             this.top.TabIndex = 18;
-            this.top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.top_MouseDown);
             // 
             // txtVentas
             // 

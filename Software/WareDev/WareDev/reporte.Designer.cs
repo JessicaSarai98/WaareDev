@@ -88,7 +88,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 20);
+            this.label1.Size = new System.Drawing.Size(171, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "Selecccionar Reporte";
             // 
@@ -98,12 +98,12 @@
             this.cmdReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdReporte.ForeColor = System.Drawing.Color.Black;
             this.cmdReporte.Items.AddRange(new object[] {
-            "Sales",
-            "Shopping",
-            "Quotes"});
+            "Ventas",
+            "Compras",
+            "Cotizaciones"});
             this.cmdReporte.Location = new System.Drawing.Point(12, 146);
             this.cmdReporte.Name = "cmdReporte";
-            this.cmdReporte.Size = new System.Drawing.Size(291, 30);
+            this.cmdReporte.Size = new System.Drawing.Size(291, 28);
             this.cmdReporte.TabIndex = 2;
             this.cmdReporte.TabStop = false;
             // 
@@ -143,7 +143,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 47);
             this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "Find";
+            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -177,7 +177,7 @@
             this.desdeTime.Location = new System.Drawing.Point(170, 3);
             this.desdeTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.desdeTime.Name = "desdeTime";
-            this.desdeTime.Size = new System.Drawing.Size(161, 27);
+            this.desdeTime.Size = new System.Drawing.Size(161, 26);
             this.desdeTime.TabIndex = 3;
             this.desdeTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -186,9 +186,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 10);
+            this.label4.Location = new System.Drawing.Point(53, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(61, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Desde:";
             // 
@@ -197,9 +197,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 10);
+            this.label2.Location = new System.Drawing.Point(389, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Hasta:";
             // 
@@ -213,7 +213,7 @@
             this.hastaTime.Location = new System.Drawing.Point(504, 3);
             this.hastaTime.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.hastaTime.Name = "hastaTime";
-            this.hastaTime.Size = new System.Drawing.Size(161, 27);
+            this.hastaTime.Size = new System.Drawing.Size(161, 26);
             this.hastaTime.TabIndex = 4;
             this.hastaTime.Value = new System.DateTime(2020, 3, 31, 0, 0, 0, 0);
             // 
@@ -263,7 +263,7 @@
             this.ClientSize = new System.Drawing.Size(1018, 476);
             this.Controls.Add(this.contenedor);
             this.Name = "reporte";
-            this.Text = "reporte";
+            this.Text = "Reporte";
             this.Load += new System.EventHandler(this.reporte_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();

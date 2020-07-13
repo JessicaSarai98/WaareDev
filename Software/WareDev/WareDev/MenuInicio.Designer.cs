@@ -115,7 +115,7 @@
             this.btnInven.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnInven.Size = new System.Drawing.Size(250, 54);
             this.btnInven.TabIndex = 6;
-            this.btnInven.Text = "Inventory";
+            this.btnInven.Text = "Inventario";
             this.btnInven.UseVisualStyleBackColor = false;
             this.btnInven.Click += new System.EventHandler(this.btnInven_Click);
             // 
@@ -191,7 +191,7 @@
             this.btnInicio.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnInicio.Size = new System.Drawing.Size(250, 54);
             this.btnInicio.TabIndex = 2;
-            this.btnInicio.Text = "Start";
+            this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
@@ -407,6 +407,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1284, 649);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panel1);

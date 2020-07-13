@@ -39,8 +39,8 @@ namespace WareDev
             this.dataGridView1.Columns[10].Visible = false;
             //this.dataGridView1.Columns[11].Visible = false;
             this.dataGridView1.Columns[12].Visible = false;
-            this.dataGridView1.Columns[14].Visible = false;
-            this.dataGridView1.Columns[15].Visible = false;
+            //this.dataGridView1.Columns[14].Visible = false;
+            //this.dataGridView1.Columns[15].Visible = false;
            
             //TablaMatPrima = objeto.MostrarRaw();
 
@@ -92,11 +92,11 @@ namespace WareDev
             dataGridView1.Update(); 
 
             dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "Name";
-            dataGridView1.Columns[4].HeaderText = "Unit of measure";
-            dataGridView1.Columns[7].HeaderText = "SAT key";
-            dataGridView1.Columns[11].HeaderText = "Available Quantity";
-            dataGridView1.Columns[13].HeaderText = "Price";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[4].HeaderText = "Unidad de medida";
+            dataGridView1.Columns[7].HeaderText = "Clave SAT";
+            dataGridView1.Columns[11].HeaderText = "Cantidad disponible";
+            dataGridView1.Columns[13].HeaderText = "Precio unitario";
             
             //this.dataGridView1.Visible = true; 
             //this.dataGridView2.Visible = false;
@@ -112,11 +112,11 @@ namespace WareDev
             DataTable dt = new DataTable();
             dt = (DataTable)dataGridView1.DataSource;
             dataGridView1.Columns[0].HeaderText = "ID";
-            dataGridView1.Columns[1].HeaderText = "Name";
-            dataGridView1.Columns[4].HeaderText = "Unit of measure";
-            dataGridView1.Columns[7].HeaderText = "SAT key";
-            dataGridView1.Columns[11].HeaderText = "Available Quantity";
-            dataGridView1.Columns[13].HeaderText = "Price";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[4].HeaderText = "Unidad de medida";
+            dataGridView1.Columns[7].HeaderText = "Clave SAT";
+            dataGridView1.Columns[11].HeaderText = "Cantidad disponible";
+            dataGridView1.Columns[13].HeaderText = "Precio unitario";
             this.dataGridView1.Visible = true;
             this.dataGridView2.Visible = false;
 
@@ -131,10 +131,10 @@ namespace WareDev
             MostrarInputs();
             DataTable dt = new DataTable();
             dataGridView2.Columns[0].HeaderText = "ID";
-            dataGridView2.Columns[2].HeaderText = "Unit of Meausre";
-            dataGridView2.Columns[3].HeaderText = "Available Quantity";
-            dataGridView2.Columns[5].HeaderText = "Name";
-            dataGridView2.Columns[6].HeaderText = "Price";
+            dataGridView2.Columns[2].HeaderText = "Unidad de medida";
+            dataGridView2.Columns[3].HeaderText = "Cantidad disponible";
+            dataGridView2.Columns[5].HeaderText = "Nombre";
+            dataGridView2.Columns[6].HeaderText = "Precio unitario";
             this.dataGridView2.Visible = true;
             this.dataGridView1.Visible = false;
 
@@ -147,10 +147,10 @@ namespace WareDev
             MostrarFinishedP();
             DataTable dt = new DataTable();
             dataGridView3.Columns[0].HeaderText = "ID";
-            dataGridView3.Columns[2].HeaderText = "Unit of Measure";
-            dataGridView3.Columns[7].HeaderText = "Available Quantity";
-            dataGridView3.Columns[8].HeaderText = "Name";
-            dataGridView3.Columns[9].HeaderText = "Price";
+            dataGridView3.Columns[2].HeaderText = "Unidad de medida";
+            dataGridView3.Columns[7].HeaderText = "Cantidad disponible";
+            dataGridView3.Columns[8].HeaderText = "Nombre";
+            dataGridView3.Columns[9].HeaderText = "Precio unitario";
             
         }
         MateriaPrima materia;
@@ -196,6 +196,7 @@ namespace WareDev
             agregar = null;
             insumos = null;
             producto = null;
+            Existe = null;
         }
 
         //Agregar materia prima
@@ -290,22 +291,37 @@ namespace WareDev
 
         //agregar producto terminado
         ProductoTerminado producto;
+        ProductoExistente Existe;
         private void btnAddProductos_Click(object sender, EventArgs e)
         {
-
-            if (producto == null)
+            DialogResult r = MessageBox.Show("¿Quiere agregar un producto final con los productos del inventario?","Agregar producto final",MessageBoxButtons.YesNo);
+            if (r == DialogResult.Yes)
             {
+                if (producto == null)
+                {
                 
-                producto = new ProductoTerminado();
-                producto.Owner = this;
-                producto.FormClosed += materia_FormClosed;
-                producto.SaveEdit.Visible = false;
-                producto.fin.Visible = false;
-                producto.dateTimePicker1.Value = DateTime.Today;
-                //producto.existencia.Visible = false;
-                producto.Show();
+                    producto = new ProductoTerminado();
+                    producto.Owner = this;
+                    producto.FormClosed += materia_FormClosed;
+                    producto.SaveEdit.Visible = false;
+                    producto.fin.Visible = false;
+                    producto.dateTimePicker1.Value = DateTime.Today;
+                    //producto.existencia.Visible = false;
+                    producto.Show();
+                }
+                else producto.Activate();
+            } else 
+            {
+                if (Existe == null)
+                {
+                    Existe = new ProductoExistente();
+                    Existe.Owner = this;
+                    Existe.FormClosed += materia_FormClosed;
+                    Existe.SaveEdit.Visible = false;
+                    Existe.Show();
+                }
             }
-            else producto.Activate();
+            
         }
 
         private void TablaMatPrima_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -339,11 +355,9 @@ namespace WareDev
                 mat.txtUniMedAduana.Text = dataGridView1.CurrentRow.Cells["customsUnitOfMeasure"].Value.ToString();
                 mat.txtUniMedida.Text = dataGridView1.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
                 mat.txtDescripcion.Text = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
-                mat.txtIva.Text = dataGridView1.CurrentRow.Cells["IVA"].Value.ToString();
                 mat.txtSat.Text = dataGridView1.CurrentRow.Cells["SAT"].Value.ToString();
                 mat.txtFraccion.Text = dataGridView1.CurrentRow.Cells["tariffFraction"].Value.ToString();
                 mat.txtEstado.Text = dataGridView1.CurrentRow.Cells["status"].Value.ToString();
-                mat.txtPorcentaje.Text = dataGridView1.CurrentRow.Cells["percentage"].Value.ToString();
                 mat.txtCantiAdquirida.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
                 mat.txtCanAduana.Text = dataGridView1.CurrentRow.Cells["customsAmount"].Value.ToString();
                 mat.txtPrecio.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();
@@ -404,7 +418,7 @@ namespace WareDev
             prod.comboBox1.Enabled = false;
             prod.comboBox2.Enabled = false;
             prod.existencia.Visible = false;
-            prod.exis.Visible = false;
+            //prod.exis.Visible = false;
             prod.exisI.Visible = false;
             prod.existenciaI.Visible = false;
             prod.fin.Visible = false;
@@ -413,8 +427,8 @@ namespace WareDev
             {
                 prod.ID.Text = dataGridView3.CurrentRow.Cells["Id"].Value.ToString();
                 prod.dateTimePicker1.Value=Convert.ToDateTime(dataGridView3.CurrentRow.Cells["date"].Value.ToString());
-                prod.txtUniMedInsu.Text= dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
-                prod.txtPallet.Text= dataGridView3.CurrentRow.Cells["pallet"].Value.ToString();
+                prod.txtFaccion.Text= dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
+                prod.txtSat.Text= dataGridView3.CurrentRow.Cells["pallet"].Value.ToString();
                 prod.txtCajasContenido.Text= dataGridView3.CurrentRow.Cells["boxes"].Value.ToString();
                 prod.comboBox2.Text= dataGridView3.CurrentRow.Cells["input"].Value.ToString();
                 prod.txtCantidadInsumo.Text= dataGridView3.CurrentRow.Cells["quantityUsedI"].Value.ToString();
@@ -424,7 +438,7 @@ namespace WareDev
                 prod.txtDescripcion.Text= dataGridView3.CurrentRow.Cells["description"].Value.ToString();
                 prod.comboBox1.Text= dataGridView3.CurrentRow.Cells["rawMaterial"].Value.ToString();
                 prod.txtCantiMatPrima.Text= dataGridView3.CurrentRow.Cells["quantityUsedR"].Value.ToString();
-                prod.txtSize.Text = dataGridView3.CurrentRow.Cells["size"].Value.ToString();
+                prod.txtEstado.Text = dataGridView3.CurrentRow.Cells["size"].Value.ToString();
                 prod.txtMeasure.Text = dataGridView3.CurrentRow.Cells["measure"].Value.ToString(); 
 
 

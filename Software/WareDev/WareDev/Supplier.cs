@@ -30,7 +30,8 @@ namespace WareDev
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("If you want to modify the same PDF, you must close the document before", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Si quiere modificar el mismo PDF, debe cerrar el documento antes." 
+                , "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
                 Document doc = new Document(PageSize.A5);
@@ -207,6 +208,21 @@ namespace WareDev
             }catch(Exception ex)
             {
                 MessageBox.Show("No se puedo editar los datos por "+ex); 
+            }
+        }
+        int posX;
+        int posY;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
             }
         }
     }

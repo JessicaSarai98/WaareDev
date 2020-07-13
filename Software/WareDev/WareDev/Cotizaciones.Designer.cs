@@ -96,11 +96,11 @@ namespace WareDev
             this.label21 = new System.Windows.Forms.Label();
             this.txtPrecioTotal = new System.Windows.Forms.TextBox();
             this.txtCan = new System.Windows.Forms.TextBox();
-            this.btrRegreso = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btrRegreso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -943,25 +943,6 @@ namespace WareDev
             this.txtCan.TabIndex = 90;
             this.txtCan.Visible = false;
             // 
-            // btrRegreso
-            // 
-            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
-            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
-            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
-            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btrRegreso.Location = new System.Drawing.Point(979, 12);
-            this.btrRegreso.Name = "btrRegreso";
-            this.btrRegreso.Size = new System.Drawing.Size(108, 44);
-            this.btrRegreso.TabIndex = 91;
-            this.btrRegreso.Text = "Regreso";
-            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btrRegreso.UseVisualStyleBackColor = false;
-            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -1011,6 +992,26 @@ namespace WareDev
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1114, 69);
             this.panel1.TabIndex = 92;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // btrRegreso
+            // 
+            this.btrRegreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btrRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(208)))), ((int)(((byte)(98)))));
+            this.btrRegreso.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btrRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btrRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btrRegreso.ForeColor = System.Drawing.Color.Black;
+            this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
+            this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btrRegreso.Location = new System.Drawing.Point(979, 12);
+            this.btrRegreso.Name = "btrRegreso";
+            this.btrRegreso.Size = new System.Drawing.Size(108, 44);
+            this.btrRegreso.TabIndex = 91;
+            this.btrRegreso.Text = "Regreso";
+            this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btrRegreso.UseVisualStyleBackColor = false;
+            this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
             // Cotizaciones
             // 
@@ -1030,6 +1031,7 @@ namespace WareDev
             this.Controls.Add(this.TablaDeVenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cotizaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cotizaciones";
             this.Load += new System.EventHandler(this.cotizaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).EndInit();
