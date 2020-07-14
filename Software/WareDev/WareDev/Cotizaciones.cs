@@ -97,7 +97,18 @@ namespace WareDev
 
                 // Indicamos donde vamos a guardar el documento
 
-                string pdfName = @"C:\Users\Jessica\Desktop\" + "Cotizacion"+ Customer.Text + ".pdf";
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = @"C:";
+                saveFileDialog1.Title = "Guardar Reporte";
+                saveFileDialog1.DefaultExt = "pdf";
+                saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                string filename = "";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    filename = saveFileDialog1.FileName;
+                }
 
 
                 //SaveFileDialog save = new SaveFileDialog();
@@ -105,8 +116,13 @@ namespace WareDev
                 //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
                 //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
 
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
-
+                if (filename.Trim() != "")
+                {
+                    FileStream file = new FileStream(filename,
+                        FileMode.OpenOrCreate,
+                        FileAccess.ReadWrite,
+                        FileShare.ReadWrite);
+                PdfWriter.GetInstance(doc, file);
 
 
                 //Margenes del documento 
@@ -123,6 +139,7 @@ namespace WareDev
 
                 //fuente de escritura del titulo 
                 var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
+
 
                 // Abrimos el archivo
                 doc.Open();
@@ -258,8 +275,8 @@ namespace WareDev
 
                 doc.Add(table);
                 doc.Close();
+                }
             }
-
             else
             {
                 MessageBox.Show("Cierre el pdf para poder modificarlo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
