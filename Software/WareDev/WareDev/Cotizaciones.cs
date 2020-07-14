@@ -339,16 +339,16 @@ namespace WareDev
                         "@producto,@cantidad,@desc,@pallet,@medida,@tam,@precio)", connection);
 
                     ad.Parameters.Clear();
-                    ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column1"].Value));
-                    ad.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
-                    ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column2"].Value));
-                    ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column3"].Value));
-                    ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column4"].Value));
-                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column5"].Value));
+                    ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Folio"].Value));
+                    ad.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Total"].Value));
+                    ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Producto"].Value));
+                    ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Cantidad"].Value));
+                    ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Descripcion"].Value));
+                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["pall"].Value));
 
-                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column6"].Value));
-                    ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column7"].Value));
-                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column8"].Value));
+                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Medida"].Value));
+                    ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
+                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["CostoUnidad"].Value));
                     
                     ad.ExecuteNonQuery();
 
