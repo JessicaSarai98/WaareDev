@@ -39,8 +39,8 @@ namespace WareDev
             this.dataGridView1.Columns[10].Visible = false;
             //this.dataGridView1.Columns[11].Visible = false;
             this.dataGridView1.Columns[12].Visible = false;
-            //this.dataGridView1.Columns[14].Visible = false;
-            //this.dataGridView1.Columns[15].Visible = false;
+            this.dataGridView1.Columns[14].Visible = false;
+            this.dataGridView1.Columns[15].Visible = false;
            
             //TablaMatPrima = objeto.MostrarRaw();
 
