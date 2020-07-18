@@ -69,15 +69,17 @@ namespace WareDev
             this.dataGridView3.Columns[1].Visible = false;
             this.dataGridView3.Columns[3].Visible = false;
             this.dataGridView3.Columns[4].Visible = false;
-            this.dataGridView3.Columns[5].Visible = false;
-            this.dataGridView3.Columns[6].Visible = false;
+            // this.dataGridView3.Columns[5].Visible = false;
+            //this.dataGridView3.Columns[6].Visible = false;
+            this.dataGridView3.Columns[9].Visible = false; 
             this.dataGridView3.Columns[10].Visible = false;
             this.dataGridView3.Columns[11].Visible = false;
-            this.dataGridView3.Columns[12].Visible = false;
-            this.dataGridView3.Columns[13].Visible = false;
             this.dataGridView3.Columns[14].Visible = false;
-            this.dataGridView3.Columns[15].Visible = false;
-            this.dataGridView3.Columns[16].Visible = false;
+           // this.dataGridView3.Columns[12].Visible = false;
+            //this.dataGridView3.Columns[13].Visible = false;
+            //this.dataGridView3.Columns[14].Visible = false;
+            //this.dataGridView3.Columns[15].Visible = false;
+            //this.dataGridView3.Columns[16].Visible = false;
         }
 
         //principal
@@ -148,10 +150,20 @@ namespace WareDev
             DataTable dt = new DataTable();
             dataGridView3.Columns[0].HeaderText = "ID";
             dataGridView3.Columns[2].HeaderText = "Unidad de medida";
-            dataGridView3.Columns[7].HeaderText = "Cantidad disponible";
-            dataGridView3.Columns[8].HeaderText = "Nombre";
-            dataGridView3.Columns[9].HeaderText = "Precio unitario";
+            dataGridView3.Columns[5].HeaderText = "Cantidad disponible";
+            dataGridView3.Columns[6].HeaderText = "Nombre";
+            dataGridView3.Columns[7].HeaderText = "Precio unitario";
+            dataGridView3.Columns[8].HeaderText = "Descripción";
+            dataGridView3.Columns[12].HeaderText = "Tamaño";
+            dataGridView3.Columns[13].HeaderText = "Medida";
+            dataGridView3.Columns[15].HeaderText = "Cantidad Aduana";
+            dataGridView3.Columns[16].HeaderText = "IVA";
+            dataGridView3.Columns[17].HeaderText = "Estado";
+            dataGridView3.Columns[18].HeaderText = "SAT";
+            dataGridView3.Columns[19].HeaderText = "Fracción";
+            dataGridView3.Columns[20].HeaderText = "Medida Aduana";
             
+
         }
         MateriaPrima materia;
         Agregar agregar;

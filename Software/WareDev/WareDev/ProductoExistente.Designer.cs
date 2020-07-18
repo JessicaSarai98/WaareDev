@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoExistente));
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.mat = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
@@ -72,7 +73,6 @@
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
             this.btrRegreso = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoProduc)).BeginInit();
@@ -105,6 +105,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(847, 648);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(115, 98);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 34;
+            this.textBox3.Text = "0";
+            this.textBox3.Visible = false;
             // 
             // FotoProduc
             // 
@@ -387,7 +396,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(158, 143);
+            this.txtUniMedida.Location = new System.Drawing.Point(158, 147);
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedida.TabIndex = 9;
@@ -436,7 +445,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(158, 323);
+            this.txtEstado.Location = new System.Drawing.Point(158, 327);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(241, 28);
             this.txtEstado.TabIndex = 4;
@@ -612,7 +621,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 278);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 282);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedAduana.TabIndex = 7;
@@ -803,15 +812,6 @@
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(115, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 34;
-            this.textBox3.Text = "0";
-            this.textBox3.Visible = false;
             // 
             // ProductoExistente
             // 
