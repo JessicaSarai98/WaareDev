@@ -174,7 +174,7 @@ namespace WareDev
                 {
                     var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    png.SetAbsolutePosition(250, 770);
+                    png.SetAbsolutePosition(190, 770);
                     png.ScalePercent(15, 15);
                     doc.Add(png);
 
@@ -194,10 +194,10 @@ namespace WareDev
 
                 // Creamos la tabla con con la infromacion de cliente y vendedor 
 
-                var headertable = new PdfPTable(new[] { .75f, 2f })
+                var headertable = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
                 {
                     HorizontalAlignment = Left,
-                    WidthPercentage = 75,
+                    WidthPercentage = 100,
                     DefaultCell = { MinimumHeight = 22f }
 
                 };
@@ -216,14 +216,18 @@ namespace WareDev
                 headertable.AddCell(Customer.Text);
                 headertable.AddCell("CONDICION COMERCIAL");
                 headertable.AddCell(Condicion.Text);
-                //headertable.AddCell("PRODUCTO");
-                //headertable.AddCell(producto.Text);
+                headertable.AddCell("RCF / ID");
+                headertable.AddCell(IdClient.Text);
+                headertable.AddCell("PRODUCTO");
+                headertable.AddCell(producto.Text);
                 headertable.AddCell("PALLET");
                 headertable.AddCell(pallet.Text);
                 headertable.AddCell("ICOTERM");
                 headertable.AddCell(ico.Text);
-                headertable.AddCell("Currency");
+                headertable.AddCell("Divisa");
                 headertable.AddCell(divisa.Text);
+                headertable.AddCell("Flete x Caja");
+                headertable.AddCell(flete.Text);
                 headertable.AddCell("Total Final");
                 headertable.AddCell(txtTotal.Text);
 
@@ -539,6 +543,16 @@ namespace WareDev
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
