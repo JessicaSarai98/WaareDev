@@ -17,9 +17,9 @@ namespace WareDev
 
         }
         // JESS
-         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
         private void cotizaciones_Load(object sender, EventArgs e)
@@ -46,14 +46,14 @@ namespace WareDev
             connection.Close();
 
             //leyendo name de finished products
-            SqlCommand c = new SqlCommand("Select name from FinishedProducts", connection);
-            connection.Open();
-            SqlDataReader reg = c.ExecuteReader();
-            while (reg.Read())
-            {
-                comboBox1.Items.Add(reg["name"].ToString());
-            }
-            connection.Close();
+            //SqlCommand c = new SqlCommand("Select name from FinishedProducts", connection);
+            //connection.Open();
+            //SqlDataReader reg = c.ExecuteReader();
+            //while (reg.Read())
+            //{
+            //    comboBox1.Items.Add(reg["name"].ToString());
+            //}
+            //connection.Close();
 
             string query = "select max(Id) from quotations";
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -219,7 +219,7 @@ namespace WareDev
                 headertable.AddCell("RCF / ID");
                 headertable.AddCell(IdClient.Text);
                 headertable.AddCell("PRODUCTO");
-                headertable.AddCell(producto.Text);
+                headertable.AddCell(textBox1.Text);
                 headertable.AddCell("PALLET");
                 headertable.AddCell(pallet.Text);
                 headertable.AddCell("ICOTERM");
@@ -359,11 +359,11 @@ namespace WareDev
                 }
 
             string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, " +
-                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond) " +
+                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond, producto, flete) " +
                     "values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" +
                     IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text +
                     "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text +
-                    "','" + Condicion.Text + "')";
+                    "','" + Condicion.Text + "', '"+textBox1.Text+"', '"+flete.Text+"')";
             cmd = new SqlCommand(sqlQuery, connection);
             cmd.Parameters.AddWithValue("@date", Date.Value);
             cmd.Parameters.AddWithValue("@expiration", Expiration.Value);

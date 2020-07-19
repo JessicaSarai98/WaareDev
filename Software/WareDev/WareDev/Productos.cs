@@ -13,9 +13,9 @@ namespace WareDev
             InitializeComponent();
         }
         //Jess
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        // SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         private void btrRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,16 +50,14 @@ namespace WareDev
         }
         private void ComboNombre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select name, size, measure,description, unitPrice, boxes, amountPurchased, pallet from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
+            string query = "select name, size, measure,description, unitPrice, amountPurchased from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
             dataGridView1.DataSource = GetData(query);
             this.dataGridView1.Columns[0].HeaderText = "Nombre";
             this.dataGridView1.Columns[1].HeaderText = "Tamaño";
             this.dataGridView1.Columns[2].HeaderText = "Medida";
             this.dataGridView1.Columns[3].HeaderText = "Descripción";
             this.dataGridView1.Columns[4].HeaderText = "Precio unitario";
-            this.dataGridView1.Columns[5].HeaderText = "Cajas por contenido";
-            this.dataGridView1.Columns[6].HeaderText = "Cantidad adquirida";
-            this.dataGridView1.Columns[7].HeaderText = "Pallet por contenido";
+            this.dataGridView1.Columns[5].HeaderText = "Cantidad adquirida";
         }
 
 
@@ -101,10 +99,11 @@ namespace WareDev
 
                         cot.txtProducto.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                         cot.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                        cot.txtPallet.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                        cot.txtMedida.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                        //cot.txtPallet.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                         cot.txtTam.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                         cot.txtPrecio.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                        cot.txtCan.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                        cot.txtCan.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
 
                        
                         this.Close();
