@@ -838,7 +838,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel3.Controls.Add(this.txtCantidad, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnArticulo, 2, 0);
@@ -861,7 +861,7 @@
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(156, 35);
+            this.txtCantidad.Location = new System.Drawing.Point(155, 35);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(87, 26);
             this.txtCantidad.TabIndex = 12;
@@ -874,7 +874,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 39);
+            this.label11.Location = new System.Drawing.Point(5, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(141, 18);
             this.label11.TabIndex = 14;
@@ -888,7 +888,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btnArticulo.Image")));
-            this.btnArticulo.Location = new System.Drawing.Point(396, 3);
+            this.btnArticulo.Location = new System.Drawing.Point(394, 3);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(47, 23);
             this.btnArticulo.TabIndex = 11;
@@ -903,9 +903,9 @@
             this.txtProducto.BackColor = System.Drawing.Color.White;
             this.txtProducto.Enabled = false;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(156, 3);
+            this.txtProducto.Location = new System.Drawing.Point(155, 3);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(234, 26);
+            this.txtProducto.Size = new System.Drawing.Size(233, 26);
             this.txtProducto.TabIndex = 2;
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -914,7 +914,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(42, 6);
+            this.label10.Location = new System.Drawing.Point(41, 6);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 18);
             this.label10.TabIndex = 12;
@@ -925,7 +925,7 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 66);
+            this.label17.Location = new System.Drawing.Point(19, 66);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(113, 36);
             this.label17.TabIndex = 19;
@@ -938,7 +938,7 @@
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPrecio.Location = new System.Drawing.Point(156, 71);
+            this.txtPrecio.Location = new System.Drawing.Point(155, 71);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(87, 26);
             this.txtPrecio.TabIndex = 23;
@@ -1066,7 +1066,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -1091,7 +1091,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(616, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(615, 3);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
             this.BtnAgregar.TabIndex = 36;
@@ -1106,9 +1106,9 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(186, 8);
+            this.comboBox1.Location = new System.Drawing.Point(185, 8);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(379, 26);
+            this.comboBox1.Size = new System.Drawing.Size(378, 26);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Visible = false;
             // 
@@ -1117,7 +1117,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 12);
+            this.label2.Location = new System.Drawing.Point(32, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 18);
             this.label2.TabIndex = 1;
