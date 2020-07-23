@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoExistente));
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.FotoProduc = new System.Windows.Forms.PictureBox();
             this.mat = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
@@ -90,6 +91,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.FotoProduc);
             this.panel1.Controls.Add(this.mat);
             this.panel1.Controls.Add(this.ID);
@@ -103,6 +105,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(847, 648);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(115, 98);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 34;
+            this.textBox3.Text = "0";
+            this.textBox3.Visible = false;
             // 
             // FotoProduc
             // 
@@ -124,7 +135,7 @@
             this.mat.Name = "mat";
             this.mat.Size = new System.Drawing.Size(100, 20);
             this.mat.TabIndex = 32;
-            this.mat.Text = "Materia prima";
+            this.mat.Text = "Producto terminado ";
             this.mat.Visible = false;
             // 
             // ID
@@ -147,7 +158,7 @@
             this.SaveEdit.ForeColor = System.Drawing.Color.Black;
             this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
             this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveEdit.Location = new System.Drawing.Point(621, 90);
+            this.SaveEdit.Location = new System.Drawing.Point(511, 90);
             this.SaveEdit.Name = "SaveEdit";
             this.SaveEdit.Size = new System.Drawing.Size(104, 65);
             this.SaveEdit.TabIndex = 13;
@@ -760,6 +771,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // top
             // 
@@ -868,5 +880,6 @@
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

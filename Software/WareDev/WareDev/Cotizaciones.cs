@@ -17,9 +17,9 @@ namespace WareDev
 
         }
         // JESS
-         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
         private void cotizaciones_Load(object sender, EventArgs e)
@@ -46,14 +46,14 @@ namespace WareDev
             connection.Close();
 
             //leyendo name de finished products
-            SqlCommand c = new SqlCommand("Select name from FinishedProducts", connection);
-            connection.Open();
-            SqlDataReader reg = c.ExecuteReader();
-            while (reg.Read())
-            {
-                comboBox1.Items.Add(reg["name"].ToString());
-            }
-            connection.Close();
+            //SqlCommand c = new SqlCommand("Select name from FinishedProducts", connection);
+            //connection.Open();
+            //SqlDataReader reg = c.ExecuteReader();
+            //while (reg.Read())
+            //{
+            //    comboBox1.Items.Add(reg["name"].ToString());
+            //}
+            //connection.Close();
 
             string query = "select max(Id) from quotations";
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -97,7 +97,18 @@ namespace WareDev
 
                 // Indicamos donde vamos a guardar el documento
 
-                string pdfName = @"C:\Users\Jessica\Desktop\" + "Cotizacion"+ Customer.Text + ".pdf";
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = @"C:";
+                saveFileDialog1.Title = "Guardar Reporte";
+                saveFileDialog1.DefaultExt = "pdf";
+                saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                string filename = "";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    filename = saveFileDialog1.FileName;
+                }
 
 
                 //SaveFileDialog save = new SaveFileDialog();
@@ -105,8 +116,13 @@ namespace WareDev
                 //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
                 //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
 
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
-
+                if (filename.Trim() != "")
+                {
+                    FileStream file = new FileStream(filename,
+                        FileMode.OpenOrCreate,
+                        FileAccess.ReadWrite,
+                        FileShare.ReadWrite);
+                PdfWriter.GetInstance(doc, file);
 
 
                 //Margenes del documento 
@@ -123,6 +139,7 @@ namespace WareDev
 
                 //fuente de escritura del titulo 
                 var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
+
 
                 // Abrimos el archivo
                 doc.Open();
@@ -157,7 +174,7 @@ namespace WareDev
                 {
                     var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
                     //(x,y)
-                    png.SetAbsolutePosition(250, 770);
+                    png.SetAbsolutePosition(190, 770);
                     png.ScalePercent(15, 15);
                     doc.Add(png);
 
@@ -177,10 +194,10 @@ namespace WareDev
 
                 // Creamos la tabla con con la infromacion de cliente y vendedor 
 
-                var headertable = new PdfPTable(new[] { .75f, 2f })
+                var headertable = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
                 {
                     HorizontalAlignment = Left,
-                    WidthPercentage = 75,
+                    WidthPercentage = 100,
                     DefaultCell = { MinimumHeight = 22f }
 
                 };
@@ -199,14 +216,18 @@ namespace WareDev
                 headertable.AddCell(Customer.Text);
                 headertable.AddCell("CONDICION COMERCIAL");
                 headertable.AddCell(Condicion.Text);
-                //headertable.AddCell("PRODUCTO");
-                //headertable.AddCell(producto.Text);
+                headertable.AddCell("RCF / ID");
+                headertable.AddCell(IdClient.Text);
+                headertable.AddCell("PRODUCTO");
+                headertable.AddCell(textBox1.Text);
                 headertable.AddCell("PALLET");
                 headertable.AddCell(pallet.Text);
                 headertable.AddCell("ICOTERM");
                 headertable.AddCell(ico.Text);
-                headertable.AddCell("Currency");
+                headertable.AddCell("Divisa");
                 headertable.AddCell(divisa.Text);
+                headertable.AddCell("Flete x Caja");
+                headertable.AddCell(flete.Text);
                 headertable.AddCell("Total Final");
                 headertable.AddCell(txtTotal.Text);
 
@@ -258,8 +279,8 @@ namespace WareDev
 
                 doc.Add(table);
                 doc.Close();
+                }
             }
-
             else
             {
                 MessageBox.Show("Cierre el pdf para poder modificarlo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -322,27 +343,27 @@ namespace WareDev
                         "@producto,@cantidad,@desc,@pallet,@medida,@tam,@precio)", connection);
 
                     ad.Parameters.Clear();
-                    ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column1"].Value));
-                    ad.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
-                    ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column2"].Value));
-                    ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column3"].Value));
-                    ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column4"].Value));
-                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column5"].Value));
+                    ad.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Folio"].Value));
+                    ad.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Total"].Value));
+                    ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Producto"].Value));
+                    ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Cantidad"].Value));
+                    ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Descripcion"].Value));
+                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["pall"].Value));
 
-                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column6"].Value));
-                    ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column7"].Value));
-                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column8"].Value));
+                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Medida"].Value));
+                    ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
+                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["CostoUnidad"].Value));
                     
                     ad.ExecuteNonQuery();
 
                 }
 
             string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, " +
-                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond) " +
+                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond, producto, flete) " +
                     "values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" +
                     IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text +
                     "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text +
-                    "','" + Condicion.Text + "')";
+                    "','" + Condicion.Text + "', '"+textBox1.Text+"', '"+flete.Text+"')";
             cmd = new SqlCommand(sqlQuery, connection);
             cmd.Parameters.AddWithValue("@date", Date.Value);
             cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
@@ -522,6 +543,16 @@ namespace WareDev
                 Left = Left + (e.X - posX);
                 Top = Top + (e.Y - posY);
             }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

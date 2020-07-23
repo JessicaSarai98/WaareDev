@@ -40,7 +40,6 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.pdb
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\bin\Debug\Common.exe.config
-C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.Properties.Resources.resources
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
@@ -59,3 +58,4 @@ C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\De
 C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

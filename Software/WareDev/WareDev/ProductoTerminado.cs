@@ -14,7 +14,6 @@ namespace WareDev
         }
 
         //JESS
-        //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False;MultipleActiveResultSets=true");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
@@ -74,6 +73,31 @@ namespace WareDev
             txtCantidadInsumo.Enabled = false;
 
             txtCantiMatPrima.Enabled = false;
+            string query = "select max(Id) from FinishedProducts";
+            SqlCommand cmd1 = new SqlCommand(query, connection);
+            try
+            {
+                connection.Open();
+                string pcount = Convert.ToString(cmd1.ExecuteScalar());
+                if (pcount.Length == 0)
+                {
+                    txtCodigo.Text = "1";
+                }
+                else
+                {
+                    int pcount1 = Convert.ToInt32(pcount);
+                    int pcountAdd = pcount1 + 1;
+                    txtCodigo.Text = pcountAdd.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -92,16 +116,11 @@ namespace WareDev
                         BinaryReader brs = new BinaryReader(Streem);
                         images = brs.ReadBytes((int)Streem.Length);
 
-                        //int n1, n2, r;
-                        //n1 = Convert.ToInt32(txtCantiMatPrima.Text);
-                        //n2 = Convert.ToInt32(existencia.Text);
-                        //r = n2-n1;
-
+                    
 
                         connection.Open();
-                        string sqlQuery = "insert into FinishedProducts(date,unitOfMeasure,pallet,boxes,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo,size,measure, fin) values(@fecha,'" + txtFaccion.Text + "','" + txtSat.Text + "','" + txtCajasContenido.Text + 
-                        "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + "','" + txtCantiAdquirida.Text + "','" + txtNombreInsumo.Text + "','"
-                        + txtPrecioInsumo.Text + "','" + txtDescripcion.Text + "','" + comboBox1.Text + "','" + txtCantiMatPrima.Text + "',@images,'"+this.txtEstado.Text+"','"+this.txtMeasure.Text+"', '"+fin.Text+"')";
+                        string sqlQuery = "insert into FinishedProducts(Id,date,unitOfMeasure,input,quantityUsedI,amountPurchased,name,unitPrice,description,rawMaterial,quantityUsedR,photo,size,measure, fin, cantAduana, IVA, status, SAT, fraccion, medidaAduana ) values('"+txtCodigo.Text+"',@fecha,'" + txtMeasure.Text + "','" + comboBox2.Text + "','" + txtCantidadInsumo.Text + 
+                        "','" + txtCantiAdquirida.Text + "','"+txtNombreInsumo.Text+"', '"+txtPrecioInsumo.Text+ "','"+txtDescripcion.Text+ "','"+comboBox1.Text+ "','"+txtCantiMatPrima.Text+ "',@images,'"+textBox1.Text+ "','"+textBox2.Text+ "','"+fin.Text+ "','"+txtCajasContenido.Text+ "','"+txtIva.Text+ "','"+txtEstado.Text+ "','"+txtSat.Text+"','"+txtFaccion.Text+ "','"+txtUniMedAduana.Text+"')";
                         string sqlQuery2 = "update rawMaterials set amountPurchased= amountPurchased - @cant where name='" + comboBox1.Text + "'";
                         string sqlQuery3 = "update inputs set amountPurchased= amountPurchased - @canti where name= '" + comboBox2.Text + "'";
 
@@ -189,18 +208,18 @@ namespace WareDev
             //}
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlCommand d = new SqlCommand("select amountPurchased from inputs where name= '" + comboBox2.Text + "'", connection);
-            connection.Open();
-            SqlDataReader r = d.ExecuteReader();
-            while (r.Read())
-            {
-                exisI.Text = r["amountPurchased"].ToString();
-            }
-            connection.Close();
-            txtCantidadInsumo.Enabled = true;
-        }
+        //private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    SqlCommand d = new SqlCommand("select amountPurchased from inputs where name= '" + comboBox2.Text + "'", connection);
+        //    //connection.Open();
+        //    SqlDataReader r = d.ExecuteReader();
+        //    while (r.Read())
+        //    {
+        //        exisI.Text = r["amountPurchased"].ToString();
+        //    }
+        //    //connection.Close();
+        //    txtCantidadInsumo.Enabled = true;
+        //}
 
         private void txtPallet_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -244,17 +263,30 @@ namespace WareDev
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("select amountPurchased from rawMaterials where name= '" + comboBox1.Text + "'", connection);
+
+            SqlCommand b = new SqlCommand("select amountPurchased from rawMaterials where name= '" + comboBox1.Text + "'", connection);
             connection.Open();
-            SqlDataReader r = d.ExecuteReader();
-            while (r.Read())
+            SqlDataReader z = b.ExecuteReader();
+            while (z.Read())
             {
-                existencia.Text = r["amountPurchased"].ToString();
+                existencia.Text = z["amountPurchased"].ToString();
             }
             connection.Close();
             txtCantiMatPrima.Enabled = true;
         }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand d = new SqlCommand("select amountPurchased from inputs where name= '" + comboBox2.Text + "'", connection);
+            connection.Open();
+            SqlDataReader r = d.ExecuteReader();
+            while (r.Read())
+            {
+                exisI.Text = r["amountPurchased"].ToString();
+            }
+            connection.Close();
+            txtCantidadInsumo.Enabled = true;
+        }
         private void txtCantidadInsumo_TextChanged(object sender, EventArgs e)
         {
 
