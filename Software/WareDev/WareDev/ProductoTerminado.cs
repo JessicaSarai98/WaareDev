@@ -365,6 +365,11 @@ namespace WareDev
         {
             ValidarDatos.NumerosDecimales(e);
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

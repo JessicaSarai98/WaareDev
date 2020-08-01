@@ -373,6 +373,11 @@ namespace WareDev
                         txtPrecio.Text = string.Empty;
                         cantidad.Text = string.Empty;
                         txtCantidad.Enabled = false;
+                        textBox4.Text = string.Empty;
+                        textBox5.Text = string.Empty;
+                        txtUniMedAduana.Text = string.Empty;
+                        txtAduana.Text = string.Empty;
+                        txtFraccion.Text = string.Empty;
                     }
                     else
                     {

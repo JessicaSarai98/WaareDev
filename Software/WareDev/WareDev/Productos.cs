@@ -50,7 +50,7 @@ namespace WareDev
         }
         private void ComboNombre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select name, size, measure,description, unitPrice, amountPurchased, medidaAduana,SAT, cantAduana, fraccion from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
+            string query = "select name, size, measure,description, unitPrice, amountPurchased, medidaAduana,SAT, cantAduana, unitOfMeasure, fraccion  from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
             dataGridView1.DataSource = GetData(query);
             this.dataGridView1.Columns[0].HeaderText = "Nombre";
             this.dataGridView1.Columns[1].HeaderText = "Tamaño";
@@ -61,7 +61,8 @@ namespace WareDev
             this.dataGridView1.Columns[6].HeaderText = "Unidad de Medida Aduana";
             this.dataGridView1.Columns[7].HeaderText = "Clave SAT";
             this.dataGridView1.Columns[8].HeaderText = "Cantidad Aduana";
-            this.dataGridView1.Columns[9].HeaderText = "Fracción Arrancelaria"; 
+            this.dataGridView1.Columns[9].HeaderText = "Unidad de Medida";
+            this.dataGridView1.Columns[10].HeaderText = "Fracción Arrancelaria"; 
 
         }
 
@@ -92,7 +93,8 @@ namespace WareDev
                         ventas.txtUniMedAduana.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                         ventas.txtSAT.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                         ventas.txtAduana.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                        ventas.txtFraccion.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                        ventas.txtFraccion.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                        ventas.txtMedida.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString(); 
 
 
 
