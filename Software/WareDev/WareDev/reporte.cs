@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections.Generic; 
 
 namespace WareDev
 {
@@ -12,9 +13,9 @@ namespace WareDev
             InitializeComponent();
         }
         //jess
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void reporte_Load(object sender, EventArgs e)
         {
@@ -120,6 +121,57 @@ namespace WareDev
             else
             {
                 MessageBox.Show("Seleccione una categoría");
+            }
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+                InfoVentas inf = new InfoVentas();
+                inf.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            
+           
+            //try
+            //{
+            //    List<Form> OpenForms = new List<Form>();
+            //    InfoVentas inf = new InfoVentas();
+
+            //    foreach (Form frm in Application.OpenForms)
+            //    {
+            //        if (cmdReporte.Text.Equals("Ventas"))
+            //        {
+            //            inf = (InfoVentas)frm;
+
+            //            inf.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString(); 
+
+            //        }
+            //    }
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                List<Form> OpenForms = new List<Form>();
+                foreach (Form fr in Application.OpenForms)
+                {
+                    if (cmdReporte.Text.Equals("Ventas"))
+                    {
+                        //infor = (InfoVentas)fr;
+                        InfoVentas infor = new InfoVentas();
+
+                        infor.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                        //this.Close();
+                        //break; 
+                    }
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

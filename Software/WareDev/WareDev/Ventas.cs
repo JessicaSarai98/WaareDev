@@ -14,9 +14,9 @@ namespace WareDev
         }
 
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-       SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+       //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -47,9 +47,9 @@ namespace WareDev
             ventas ven = new ventas();
             string query = "select max(Id) from ventas";
             // jess
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -215,7 +215,7 @@ namespace WareDev
                 connection.Open();
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet, @medida, @tam,  @precio)", connection);
+                    SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@total,@producto,@cajas,@desc,@pallet, @medida, @tam,  @precio)", connection);
 
                     ag.Parameters.Clear();
                     ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
@@ -226,8 +226,8 @@ namespace WareDev
                     ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column5"].Value));
                     ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column6"].Value));
                     ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column7"].Value));
-                    ag.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
-                    ag.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column2"].Value));
+                    ag.Parameters.AddWithValue("@total", Convert.ToString(row.Cells["Column9"].Value));
+                    ag.Parameters.AddWithValue("@cajas", Convert.ToString(row.Cells["Column2"].Value));
 
                     ag.ExecuteNonQuery();
                 }
@@ -358,10 +358,10 @@ namespace WareDev
             {
                 if (txtCantidad.Text != "" && textBox3.Text != "")
                 {
-                    if (txtMedida.Text != "")
+                    if (txtUniMedAduana.Text != "")
                     {
 
-                        dataGridView1.Rows.Add(txtFolio.Text, txtProducto.Text, txtCantidad.Text, txtDescripcion.Text, txtPallet.Text, txtMedida.Text, txtSAT.Text, txtPrecio.Text, textBox3.Text, txtSubtotal.Text, txtTotal.Text);
+                        dataGridView1.Rows.Add(txtFolio.Text, txtPallet.Text, textBox4.Text,textBox5.Text, txtProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text, textBox3.Text);
 
                         textBox3.Text = string.Empty;
                         txtProducto.Text = string.Empty;

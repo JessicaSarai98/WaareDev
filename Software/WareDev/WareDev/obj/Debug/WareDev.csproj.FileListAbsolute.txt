@@ -95,3 +95,6 @@ C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\War
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoVentas.resources
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoCompras.resources
+C:\Users\Jessica\Desktop\WareDev\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.InfoCotizaciones.resources

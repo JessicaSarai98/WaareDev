@@ -50,7 +50,7 @@ namespace WareDev
         }
         private void ComboNombre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select name, size, measure,description, unitPrice, amountPurchased from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
+            string query = "select name, size, measure,description, unitPrice, amountPurchased, medidaAduana,SAT, cantAduana, fraccion from FinishedProducts where name = '" + ComboNombre.Text + "'  ";
             dataGridView1.DataSource = GetData(query);
             this.dataGridView1.Columns[0].HeaderText = "Nombre";
             this.dataGridView1.Columns[1].HeaderText = "Tamaño";
@@ -58,6 +58,11 @@ namespace WareDev
             this.dataGridView1.Columns[3].HeaderText = "Descripción";
             this.dataGridView1.Columns[4].HeaderText = "Precio unitario";
             this.dataGridView1.Columns[5].HeaderText = "Cantidad adquirida";
+            this.dataGridView1.Columns[6].HeaderText = "Unidad de Medida Aduana";
+            this.dataGridView1.Columns[7].HeaderText = "Clave SAT";
+            this.dataGridView1.Columns[8].HeaderText = "Cantidad Aduana";
+            this.dataGridView1.Columns[9].HeaderText = "Fracción Arrancelaria"; 
+
         }
 
 
@@ -79,12 +84,17 @@ namespace WareDev
                        
                         ventas.txtProducto.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                         ventas.txtDescripcion.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                        ventas.txtPallet.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                        ventas.txtSAT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                       // ventas.txtPallet.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                        ventas.textBox5.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                        ventas.textBox4.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                         ventas.txtPrecio.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                        ventas.cantidad.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                        ventas.cantidad.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                        ventas.txtUniMedAduana.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                        ventas.txtSAT.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                        ventas.txtAduana.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                        ventas.txtFraccion.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
-                         
+
 
                         this.Close();
                         
