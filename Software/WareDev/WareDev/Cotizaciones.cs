@@ -228,8 +228,7 @@ namespace WareDev
                 headertable.AddCell(divisa.Text);
                 headertable.AddCell("Flete x Caja");
                 headertable.AddCell(flete.Text);
-                headertable.AddCell("Total Final");
-                headertable.AddCell(txtTotal.Text);
+                
 
                 doc.Add(headertable);
                 doc.Add(spacer);
@@ -278,7 +277,27 @@ namespace WareDev
                     });
 
                 doc.Add(table);
-                doc.Close();
+
+
+                    var downtable = new PdfPTable(new[] { .5f, .5f})
+                    {
+                        HorizontalAlignment = Right,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 5f }
+
+                    };
+                    doc.Add(spacer);
+
+                   
+                    downtable.AddCell("Subtotal");
+                    downtable.AddCell(txtSubtotal.Text);
+                    downtable.AddCell("IVA");
+                    downtable.AddCell(txtIva.Text);
+                    downtable.AddCell("Total");
+                    downtable.AddCell(txtTotal.Text);
+
+                    doc.Add(downtable);
+                    doc.Close();
                 }
             }
             else
@@ -348,11 +367,11 @@ namespace WareDev
                     ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Producto"].Value));
                     ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Cantidad"].Value));
                     ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Descripcion"].Value));
-                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["pall"].Value));
+                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Pall"].Value));
 
-                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Medida"].Value));
+                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Size"].Value));
                     ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
-                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["CostoUnidad"].Value));
+                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["PrecioxUnidad"].Value));
                     
                     ad.ExecuteNonQuery();
 
