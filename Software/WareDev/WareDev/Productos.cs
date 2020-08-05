@@ -96,8 +96,6 @@ namespace WareDev
                         ventas.txtFraccion.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
                         ventas.txtMedida.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString(); 
 
-
-
                         this.Close();
                         
                         break;

@@ -244,8 +244,8 @@ namespace WareDev
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     connection.Open();
-                    total = Convert.ToDecimal(row.Cells[2].Value);
-                    a = Convert.ToString(row.Cells[1].Value);
+                    total = Convert.ToDecimal(row.Cells[7].Value);
+                    a = Convert.ToString(row.Cells[4].Value);
                     string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'"+total+"' where name='" +a+ "'";
                     cmd2 = new SqlCommand(sqlQuery2,connection);
                     cmd2.ExecuteNonQuery();

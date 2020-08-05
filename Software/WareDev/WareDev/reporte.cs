@@ -46,8 +46,8 @@ namespace WareDev
                     dataGridView1.Columns[0].HeaderText = "Folio";
                     dataGridView1.Columns[1].HeaderText = "Fecha";
                     dataGridView1.Columns[2].HeaderText = "IVA";
-                    dataGridView1.Columns[3].HeaderText = "Número del proveedor";
-                    dataGridView1.Columns[4].HeaderText = "Nombre del proveedor";
+                    dataGridView1.Columns[3].HeaderText = "Número del cliente";
+                    dataGridView1.Columns[4].HeaderText = "Nombre del cliente";
                     dataGridView1.Columns[5].HeaderText = "Currency";
                     dataGridView1.Columns[6].HeaderText = "Condicones";
                     dataGridView1.Columns[7].HeaderText = "Lugar";
@@ -154,24 +154,68 @@ namespace WareDev
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                List<Form> OpenForms = new List<Form>();
-                foreach (Form fr in Application.OpenForms)
-                {
-                    if (cmdReporte.Text.Equals("Ventas"))
-                    {
-                        //infor = (InfoVentas)fr;
-                        InfoVentas infor = new InfoVentas();
+            InfoVentas infor = new InfoVentas(); 
 
-                        infor.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                        //this.Close();
-                        //break; 
-                    }
-                }
-            }catch(Exception ex)
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InfoVentas inf = new InfoVentas();
+            InfoCompras com = new InfoCompras();
+            InfoCotizaciones coti = new InfoCotizaciones(); 
+            if (dataGridView1.SelectedRows.Count >0)
             {
-                MessageBox.Show(ex.Message);
+               if (cmdReporte.Text.Equals("Ventas"))
+                {
+                    inf.txtId.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                    inf.txtDate.Text = dataGridView1.CurrentRow.Cells["date"].Value.ToString();
+                    inf.txtIva.Text = dataGridView1.CurrentRow.Cells["iva"].Value.ToString();
+                    inf.txtNum.Text = dataGridView1.CurrentRow.Cells["num"].Value.ToString();
+                    inf.txtNombre.Text = dataGridView1.CurrentRow.Cells["nombreP"].Value.ToString();
+                    inf.txtCurrency.Text = dataGridView1.CurrentRow.Cells["currency"].Value.ToString();
+                    inf.txtCond.Text = dataGridView1.CurrentRow.Cells["cond"].Value.ToString();
+                    inf.txtLugar.Text = dataGridView1.CurrentRow.Cells["lugar"].Value.ToString();
+                    inf.txtSubtotal.Text = dataGridView1.CurrentRow.Cells["subtotal"].Value.ToString();
+                    inf.txtTotal.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
+                    inf.ShowDialog(); 
+                  }
+               else if (cmdReporte.Text.Equals("Compras"))
+                {
+                    com.txtId.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                    com.txtFecha.Text = dataGridView1.CurrentRow.Cells["fecha"].Value.ToString();
+                    com.txtProduct.Text = dataGridView1.CurrentRow.Cells["product"].Value.ToString();
+                    com.txtPrice.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();
+                    com.txtProvider.Text = dataGridView1.CurrentRow.Cells["provider"].Value.ToString();
+                    com.txtNumberP.Text = dataGridView1.CurrentRow.Cells["numberP"].Value.ToString();
+                    com.txtAmountPurchased.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
+                    com.txtTotal.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
+                    com.txtDescription.Text = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
+                    com.ShowDialog();
+                }
+               else if (cmdReporte.Text.Equals("Cotizaciones"))
+                {
+                    coti.txtId.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                    coti.txtDate.Text = dataGridView1.CurrentRow.Cells["date"].Value.ToString();
+                    coti.txtPallet.Text = dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
+                    coti.txtExpiration.Text = dataGridView1.CurrentRow.Cells["expiration"].Value.ToString();
+                    coti.txtIdClient.Text = dataGridView1.CurrentRow.Cells["idCliente"].Value.ToString();
+                    coti.txtIcoterm.Text = dataGridView1.CurrentRow.Cells["icoterm"].Value.ToString();
+                    coti.txtCustomerName.Text = dataGridView1.CurrentRow.Cells["customerName"].Value.ToString();
+                    coti.txtTotal.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
+                    coti.txtSubtotal.Text = dataGridView1.CurrentRow.Cells["subtotal"].Value.ToString();
+                    coti.txtCurrency.Text = dataGridView1.CurrentRow.Cells["currency"].Value.ToString();
+                    coti.txtIva.Text = dataGridView1.CurrentRow.Cells["IVA"].Value.ToString();
+                    coti.txtPlace.Text = dataGridView1.CurrentRow.Cells["place"].Value.ToString();
+                    coti.txtCond.Text = dataGridView1.CurrentRow.Cells["cond"].Value.ToString();
+                    coti.txtProducto.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
+                    coti.txtFlete.Text = dataGridView1.CurrentRow.Cells["flete"].Value.ToString();
+                    coti.ShowDialog(); 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
             }
         }
     }

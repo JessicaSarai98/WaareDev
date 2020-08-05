@@ -22,6 +22,7 @@ namespace WareDev
         //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
         SqlCommand cmd;
+        SqlCommand cmd2; 
         private void cotizaciones_Load(object sender, EventArgs e)
         {
             Date.Value = DateTime.Today;
@@ -33,7 +34,7 @@ namespace WareDev
 
             //leyendp clientes - nombre
             SqlCommand d = new SqlCommand("select name from clientes", connection);
-            SqlCommand a = new SqlCommand("Select Id from clientes where name='" + Customer.Text + "'", connection);
+            SqlCommand a = new SqlCommand("Select RFC from clientes where name='" + Customer.Text + "'", connection);
 
             connection.Open();
             SqlDataReader r = d.ExecuteReader(); 
@@ -389,6 +390,20 @@ namespace WareDev
             cmd.ExecuteNonQuery();
             connection.Close();
 
+                decimal total = 0;
+                string a; 
+
+                foreach(DataGridViewRow row in TablaDeVenta.Rows)
+                {
+                    connection.Open();
+                    total = Convert.ToDecimal(row.Cells[7].Value);
+                    a = Convert.ToString(row.Cells[4].Value);
+                    string sqlQuery2 = "update FinishedProducts set amountPurchased = amountPurchased - '"+total+"'where name= '"+a+"'";
+                    cmd2 = new SqlCommand(sqlQuery2, connection);
+                    cmd2.ExecuteNonQuery();
+                    connection.Close();
+                }
+
             MessageBox.Show("Se ha agregado la venta", "Mensaje", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
                 this.Close();
@@ -419,12 +434,12 @@ namespace WareDev
         }
         private void Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("Select Id from clientes where name = '"+Customer.Text+"'", connection);
+            SqlCommand d = new SqlCommand("Select RFC from clientes where name = '"+Customer.Text+"'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
             {
-                IdClient.Text = r["Id"].ToString(); 
+                IdClient.Text = r["RFC"].ToString(); 
             }
             connection.Close();
         }
@@ -441,9 +456,9 @@ namespace WareDev
             {
                 if(txtCantidad.Text!= "")
                 {
-                    if(txtMedida.Text != "")
+                    if(txtPallet.Text != "")
                     {
-                        TablaDeVenta.Rows.Add(txtFolio.Text,txtProducto.Text,txtCantidad.Text,txtDescripcion.Text,txtPallet.Text, txtMedida.Text,txtTam.Text, txtPrecio.Text,txtPrecioTotal.Text);
+                        TablaDeVenta.Rows.Add(txtFolio.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtProducto.Text, txtDescripcion.Text,txtPrecio.Text,txtCantidad.Text, txtPrecioTotal.Text);
                         txtProducto.Text = string.Empty;
                         txtCantidad.Text = string.Empty;
                         txtDescripcion.Text = string.Empty;
@@ -456,7 +471,7 @@ namespace WareDev
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese la medida", "Mensaje", MessageBoxButtons.OK,
+                        MessageBox.Show("Ingrese el pallet", "Mensaje", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                 }
@@ -521,13 +536,29 @@ namespace WareDev
             float n1, n2, a;
             if (txtCantidad.Text != "")
             {
-                n1 = Convert.ToInt32(txtCantidad.Text);
-                n2 = Convert.ToSingle(txtPrecio.Text);
-                a = n1 * n2;
-                txtPrecioTotal.Text = a.ToString(); 
-                
+                if (Convert.ToDecimal(txtCan.Text) != 0)
+                {
+                    if (Convert.ToDecimal(txtCantidad.Text) <= Convert.ToDecimal(txtCan.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        txtPrecioTotal.Text = a.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: " + txtCan.Text);
+                        txtCantidad.Text = string.Empty;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay cantidad disponible");
+                }
+
             }
         }
+        
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
