@@ -112,9 +112,9 @@
             this.SaveEdit.ForeColor = System.Drawing.Color.Black;
             this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
             this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveEdit.Location = new System.Drawing.Point(792, 90);
+            this.SaveEdit.Location = new System.Drawing.Point(800, 90);
             this.SaveEdit.Name = "SaveEdit";
-            this.SaveEdit.Size = new System.Drawing.Size(104, 65);
+            this.SaveEdit.Size = new System.Drawing.Size(96, 65);
             this.SaveEdit.TabIndex = 13;
             this.SaveEdit.Text = "Save";
             this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -285,7 +285,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(155, 143);
+            this.txtUniMedida.Location = new System.Drawing.Point(155, 139);
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(236, 28);
             this.txtUniMedida.TabIndex = 9;
@@ -545,7 +545,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(155, 99);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(155, 95);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(236, 28);
             this.txtUniMedAduana.TabIndex = 7;
@@ -582,7 +582,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(155, 55);
+            this.txtEstado.Location = new System.Drawing.Point(155, 52);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(236, 28);
             this.txtEstado.TabIndex = 4;

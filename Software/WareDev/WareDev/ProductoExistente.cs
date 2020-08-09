@@ -32,7 +32,7 @@ namespace WareDev
 
         private void ProductoExistente_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+           // dateTimePicker1.Value = DateTime.Today;
 
             string query = "select max(Id) from FinishedProducts";
             SqlCommand cmd1 = new SqlCommand(query, connection);
@@ -40,15 +40,18 @@ namespace WareDev
             {
                 connection.Open();
                 string pcount = Convert.ToString(cmd1.ExecuteScalar());
-                if(pcount.Length == 0)
+                if (this.txtCodigo.Text.Equals(""))
                 {
-                    txtCodigo.Text = "1";
-                }
-                else
-                {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    txtCodigo.Text = pcountAdd.ToString(); 
+                    if (pcount.Length == 0)
+                    {
+                        txtCodigo.Text = "1";
+                    }
+                    else
+                    {
+                        int pcount1 = Convert.ToInt32(pcount);
+                        int pcountAdd = pcount1 + 1;
+                        txtCodigo.Text = pcountAdd.ToString();
+                    }
                 }
             }catch(Exception ex)
             {

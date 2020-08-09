@@ -25,8 +25,8 @@ namespace WareDev
         SqlCommand cmd2; 
         private void cotizaciones_Load(object sender, EventArgs e)
         {
-            Date.Value = DateTime.Today;
-            Expiration.Value = DateTime.Today;
+            //Date.Value = DateTime.Today;
+            //Expiration.Value = DateTime.Today;
             txtCantidad.Enabled = false;
             SqlCommand cm = new SqlCommand("select Id from clientes", connection);
 
@@ -62,15 +62,18 @@ namespace WareDev
             {
                 connection.Open();
                 string pcount = Convert.ToString(cmd.ExecuteScalar());
-                if (pcount.Length == 0)
+                if (this.txtFolio.Text.Equals(""))
                 {
-                    txtFolio.Text = "1";
-                }
-                else
-                {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    txtFolio.Text = pcountAdd.ToString();
+                    if (pcount.Length == 0)
+                    {
+                        txtFolio.Text = "1";
+                    }
+                    else
+                    {
+                        int pcount1 = Convert.ToInt32(pcount);
+                        int pcountAdd = pcount1 + 1;
+                        txtFolio.Text = pcountAdd.ToString();
+                    }
                 }
             }catch(Exception ex)
             {
@@ -83,7 +86,28 @@ namespace WareDev
 
             //IdClient_SelectedIndexChanged(null, null);
             Customer_SelectedIndexChanged(null, null);
+            SqlCommand com = new SqlCommand("select * from quotations where Id='" + txtFolio.Text + "'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView1.DataSource = tabla;
 
+            this.dataGridView1.Columns[0].HeaderText = "Folio";
+            this.dataGridView1.Columns[1].HeaderText = "Fecha";
+            this.dataGridView1.Columns[2].HeaderText = "Pallet";
+            this.dataGridView1.Columns[3].HeaderText = "Expiración";
+            this.dataGridView1.Columns[4].HeaderText = "RFC/ID";
+            this.dataGridView1.Columns[5].HeaderText = "Icoterm";
+            this.dataGridView1.Columns[6].HeaderText = "Nombre de Cliente";
+            this.dataGridView1.Columns[7].HeaderText = "Subtotal";
+            this.dataGridView1.Columns[8].HeaderText = "Total";
+            this.dataGridView1.Columns[9].HeaderText = "Moneda";
+            this.dataGridView1.Columns[10].HeaderText = "IVA";
+            this.dataGridView1.Columns[11].HeaderText = "Lugar";
+            this.dataGridView1.Columns[12].HeaderText = "Condiciones";
+            this.dataGridView1.Columns[13].HeaderText = "Producto";
+            this.dataGridView1.Columns[14].HeaderText = "Flete";
 
 
         }
@@ -603,6 +627,16 @@ namespace WareDev
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("select * from quotations where Id='" + txtFolio.Text + "'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView1.DataSource = tabla;
         }
     }
 }

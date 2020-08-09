@@ -14,6 +14,7 @@ namespace WareDev
         }
         //Jess
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        
         // karina
         // SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         private void btrRegreso_Click(object sender, EventArgs e)
@@ -94,8 +95,9 @@ namespace WareDev
                         ventas.txtSAT.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                         ventas.txtAduana.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
                         ventas.txtFraccion.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-                        ventas.txtMedida.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString(); 
+                        ventas.txtMedida.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
+                        
                         this.Close();
                         
                         break;

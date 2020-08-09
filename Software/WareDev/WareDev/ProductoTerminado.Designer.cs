@@ -337,7 +337,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(711, 119);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(711, 115);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(231, 28);
             this.txtUniMedAduana.TabIndex = 8;
@@ -443,7 +443,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtMeasure.Location = new System.Drawing.Point(239, 81);
+            this.txtMeasure.Location = new System.Drawing.Point(239, 78);
             this.txtMeasure.Name = "txtMeasure";
             this.txtMeasure.Size = new System.Drawing.Size(230, 28);
             this.txtMeasure.TabIndex = 5;
@@ -469,7 +469,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(239, 341);
+            this.txtEstado.Location = new System.Drawing.Point(239, 338);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(230, 28);
             this.txtEstado.TabIndex = 9;
@@ -721,6 +721,7 @@
             this.txtSat.Size = new System.Drawing.Size(231, 26);
             this.txtSat.TabIndex = 4;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSat.TextChanged += new System.EventHandler(this.txtSat_TextChanged);
             this.txtSat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPallet_KeyPress);
             // 
             // label15

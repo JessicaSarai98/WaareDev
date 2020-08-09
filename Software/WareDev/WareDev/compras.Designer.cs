@@ -57,6 +57,7 @@
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFolio1 = new System.Windows.Forms.TextBox();
             this.contenedor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,6 +105,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtCantidad, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.prov, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtFolio1, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 147);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -543,6 +545,18 @@
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
+            // txtFolio1
+            // 
+            this.txtFolio1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFolio1.BackColor = System.Drawing.Color.White;
+            this.txtFolio1.Enabled = false;
+            this.txtFolio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFolio1.Location = new System.Drawing.Point(3, 157);
+            this.txtFolio1.Name = "txtFolio1";
+            this.txtFolio1.Size = new System.Drawing.Size(162, 26);
+            this.txtFolio1.TabIndex = 26;
+            this.txtFolio1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,20 +592,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtFolioCompra;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox txtNoPro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTotalCompra;
-        private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.ComboBox prov;
         public System.Windows.Forms.ComboBox txtUniMedida;
+        public System.Windows.Forms.TextBox txtFolioCompra;
+        public System.Windows.Forms.TextBox txtFolio1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.TextBox txtNoPro;
+        public System.Windows.Forms.TextBox txtTotalCompra;
+        public System.Windows.Forms.TextBox txtPrecioUnitario;
+        public System.Windows.Forms.TextBox txtDescripcion;
+        public System.Windows.Forms.ComboBox prov;
     }
 }

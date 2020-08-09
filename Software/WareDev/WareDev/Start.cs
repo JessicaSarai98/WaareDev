@@ -78,6 +78,7 @@ namespace WareDev
                 ventas = new ventas();
                 ventas.Owner = this;
                 ventas.FormClosed += ventas_FormClosed;
+                ventas.dateTimePicker1.Value = DateTime.Today;
                 ventas.Show();
             }
             else ventas.Activate();
@@ -102,6 +103,8 @@ namespace WareDev
                 cotizaciones = new Cotizaciones();
                 cotizaciones.Owner = this;
                 cotizaciones.FormClosed += ventas_FormClosed;
+                cotizaciones.Date.Value = DateTime.Today;
+                cotizaciones.Expiration.Value = DateTime.Today; 
                 cotizaciones.Show();
             }
             else cotizaciones.Activate();

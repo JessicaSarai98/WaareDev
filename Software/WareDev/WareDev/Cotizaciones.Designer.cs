@@ -102,6 +102,8 @@ namespace WareDev
             this.txtCan = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btrRegreso = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDeVenta)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,6 +111,7 @@ namespace WareDev
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -652,6 +655,7 @@ namespace WareDev
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btnAgregarProd);
             this.panel2.Controls.Add(this.tableLayoutPanel5);
@@ -1017,12 +1021,38 @@ namespace WareDev
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(961, 38);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 48);
+            this.button4.TabIndex = 93;
+            this.button4.Text = "Mostrar";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.UseWaitCursor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 403);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(917, 173);
+            this.dataGridView1.TabIndex = 93;
+            this.dataGridView1.Visible = false;
+            // 
             // Cotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1124, 588);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCan);
             this.Controls.Add(this.txtPrecioTotal);
@@ -1049,6 +1079,7 @@ namespace WareDev
             this.tableLayoutPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1066,40 +1097,24 @@ namespace WareDev
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView TablaDeVenta;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txt1;
-        private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.DateTimePicker Expiration;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox pallet;
-        private System.Windows.Forms.DateTimePicker Date;
-        private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox Condicion;
-        private System.Windows.Forms.TextBox place;
-        private System.Windows.Forms.ComboBox divisa;
-        private System.Windows.Forms.ComboBox ico;
-        private System.Windows.Forms.ComboBox Customer;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnAgregarProd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -1108,7 +1123,6 @@ namespace WareDev
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         public System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button btnArticulo;
         public System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox txtPrecio;
@@ -1117,15 +1131,10 @@ namespace WareDev
         public System.Windows.Forms.TextBox txtPallet;
         public System.Windows.Forms.TextBox txtPrecioTotal;
         public System.Windows.Forms.TextBox txtCan;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox IdClient;
         private System.Windows.Forms.Button btrRegreso;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox flete;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pall;
@@ -1136,5 +1145,29 @@ namespace WareDev
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioxUnidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        public System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.DateTimePicker Expiration;
+        public System.Windows.Forms.TextBox pallet;
+        public System.Windows.Forms.DateTimePicker Date;
+        public System.Windows.Forms.TextBox txtSubtotal;
+        public System.Windows.Forms.TextBox Condicion;
+        public System.Windows.Forms.TextBox place;
+        public System.Windows.Forms.ComboBox divisa;
+        public System.Windows.Forms.ComboBox ico;
+        public System.Windows.Forms.ComboBox Customer;
+        public System.Windows.Forms.TextBox txtIva;
+        public System.Windows.Forms.TextBox IdClient;
+        public System.Windows.Forms.TextBox flete;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button btnAgregarProd;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnArticulo;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.DataGridView TablaDeVenta;
+        public System.Windows.Forms.TextBox txtFolio;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

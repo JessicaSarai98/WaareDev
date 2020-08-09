@@ -396,7 +396,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(158, 147);
+            this.txtUniMedida.Location = new System.Drawing.Point(158, 143);
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedida.TabIndex = 9;
@@ -418,6 +418,7 @@
             // 
             this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtCodigo.Location = new System.Drawing.Point(158, 9);
             this.txtCodigo.Name = "txtCodigo";
@@ -445,7 +446,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(158, 327);
+            this.txtEstado.Location = new System.Drawing.Point(158, 323);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(241, 28);
             this.txtEstado.TabIndex = 4;
@@ -621,7 +622,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 282);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 278);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedAduana.TabIndex = 7;
