@@ -238,6 +238,7 @@ namespace WareDev
                     coti.textBox1.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
                     coti.flete.Text = dataGridView1.CurrentRow.Cells["flete"].Value.ToString();
 
+                    coti.txtCan.Text = "0";
                     coti.Date.Enabled = false;
                     coti.pallet.Enabled = false;
                     coti.place.Enabled = false;
@@ -249,6 +250,8 @@ namespace WareDev
                     coti.Customer.Enabled = false;
                     coti.Condicion.Enabled = false;
                     coti.flete.Enabled = false;
+                    coti.txtPallet.Enabled = false;
+                    coti.txtMedida.Enabled = false; 
 
 
                     coti.btnArticulo.Visible = false;

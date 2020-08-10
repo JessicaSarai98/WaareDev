@@ -33,12 +33,12 @@ namespace WareDev
             this.dataGridView1.Columns[2].Visible = false;
             this.dataGridView1.Columns[3].Visible = false;
             this.dataGridView1.Columns[5].Visible = false;
-            this.dataGridView1.Columns[7].Visible = false;
-            this.dataGridView1.Columns[9].Visible = false;
+            this.dataGridView1.Columns[6].Visible = false;
+            this.dataGridView1.Columns[8].Visible = false;
             this.dataGridView1.Columns[10].Visible = false;
-            this.dataGridView1.Columns[11].Visible = false;
-            //this.dataGridView1.Columns[11].Visible = false;
             this.dataGridView1.Columns[12].Visible = false;
+            //this.dataGridView1.Columns[11].Visible = false;
+            this.dataGridView1.Columns[13].Visible = false;
             //this.dataGridView1.Columns[14].Visible = false;
             //this.dataGridView1.Columns[15].Visible = false;
            
@@ -96,9 +96,9 @@ namespace WareDev
             dataGridView1.Columns[0].HeaderText = "Folio";
             dataGridView1.Columns[1].HeaderText = "Nombre";
             dataGridView1.Columns[4].HeaderText = "Unidad de medida";
-            dataGridView1.Columns[6].HeaderText = "Clave SAT";
-            dataGridView1.Columns[8].HeaderText = "Cantidad disponible";
-            dataGridView1.Columns[10].HeaderText = "Precio unitario";
+            dataGridView1.Columns[7].HeaderText = "Clave SAT";
+            dataGridView1.Columns[9].HeaderText = "Cantidad disponible";
+            dataGridView1.Columns[11].HeaderText = "Precio unitario";
             
             //this.dataGridView1.Visible = true; 
             //this.dataGridView2.Visible = false;
@@ -441,6 +441,9 @@ namespace WareDev
             prod.exisI.Visible = false;
             prod.existenciaI.Visible = false;
             prod.fin.Visible = false;
+
+            prod.label16.Visible = false;
+            prod.label17.Visible = false; 
 
             if (dataGridView3.SelectedRows.Count > 0)
             {

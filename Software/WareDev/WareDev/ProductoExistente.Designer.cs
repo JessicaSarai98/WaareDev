@@ -396,7 +396,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(158, 143);
+            this.txtUniMedida.Location = new System.Drawing.Point(158, 147);
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedida.TabIndex = 9;
@@ -446,7 +446,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(158, 323);
+            this.txtEstado.Location = new System.Drawing.Point(158, 327);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(241, 28);
             this.txtEstado.TabIndex = 4;
@@ -622,7 +622,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 278);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 282);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedAduana.TabIndex = 7;

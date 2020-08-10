@@ -21,7 +21,7 @@ namespace WareDev
         // karina 
         //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
 
-        SqlCommand cmd;
+        SqlCommand cmd; 
         SqlCommand cmd2; 
         private void cotizaciones_Load(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace WareDev
 
             //IdClient_SelectedIndexChanged(null, null);
             Customer_SelectedIndexChanged(null, null);
-            SqlCommand com = new SqlCommand("select * from quotations where Id='" + txtFolio.Text + "'", connection);
+            SqlCommand com = new SqlCommand("select * from detalleQuo where folio='" + txtFolio.Text + "'", connection);
             SqlDataAdapter adap = new SqlDataAdapter();
             adap.SelectCommand = com;
             DataTable tabla = new DataTable();
@@ -94,21 +94,15 @@ namespace WareDev
             dataGridView1.DataSource = tabla;
 
             this.dataGridView1.Columns[0].HeaderText = "Folio";
-            this.dataGridView1.Columns[1].HeaderText = "Fecha";
-            this.dataGridView1.Columns[2].HeaderText = "Pallet";
-            this.dataGridView1.Columns[3].HeaderText = "Expiración";
-            this.dataGridView1.Columns[4].HeaderText = "RFC/ID";
-            this.dataGridView1.Columns[5].HeaderText = "Icoterm";
-            this.dataGridView1.Columns[6].HeaderText = "Nombre de Cliente";
-            this.dataGridView1.Columns[7].HeaderText = "Subtotal";
-            this.dataGridView1.Columns[8].HeaderText = "Total";
-            this.dataGridView1.Columns[9].HeaderText = "Moneda";
-            this.dataGridView1.Columns[10].HeaderText = "IVA";
-            this.dataGridView1.Columns[11].HeaderText = "Lugar";
-            this.dataGridView1.Columns[12].HeaderText = "Condiciones";
-            this.dataGridView1.Columns[13].HeaderText = "Producto";
-            this.dataGridView1.Columns[14].HeaderText = "Flete";
-
+            this.dataGridView1.Columns[1].HeaderText = "Subtotal";
+            this.dataGridView1.Columns[2].HeaderText = "Producto";
+            this.dataGridView1.Columns[3].HeaderText = "Cantidad";
+            this.dataGridView1.Columns[4].HeaderText = "Descripción";
+            this.dataGridView1.Columns[5].HeaderText = "Pallet";
+            this.dataGridView1.Columns[6].HeaderText = "Medida";
+            this.dataGridView1.Columns[7].HeaderText = "Tamaño";
+            this.dataGridView1.Columns[8].HeaderText = "Precio";
+            
 
         }
 
@@ -575,10 +569,10 @@ namespace WareDev
                         txtCantidad.Text = string.Empty;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No hay cantidad disponible");
-                }
+                //else
+                //{
+                //    MessageBox.Show("No hay cantidad disponible");
+                //}
 
             }
         }
@@ -637,6 +631,39 @@ namespace WareDev
             DataTable tabla = new DataTable();
             adap.Fill(tabla);
             dataGridView1.DataSource = tabla;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtProducto.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
+            txtCantidad.Text =  dataGridView1.CurrentRow.Cells["cantidad"].Value.ToString();
+            txtDescripcion.Text = dataGridView1.CurrentRow.Cells["desc"].Value.ToString();
+            txtPallet.Text =  dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
+            txtMedida.Text = dataGridView1.CurrentRow.Cells["medida"].Value.ToString();
+            txtTam.Text = dataGridView1.CurrentRow.Cells["tam"].Value.ToString();
+            txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
+
+
+        }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+            //if(this.txtProducto.Text.Length >= 1)
+            //{
+            //    SqlCommand c = new SqlCommand("select * from FinishedProducts where name= '"+txtProducto.Text+"'", connection);
+            //    SqlDataAdapter ad = new SqlDataAdapter();
+            //    ad.SelectCommand = c;
+            //    DataTable tab = new DataTable();
+            //    ad.Fill(tab);
+            //    dataGridView1.DataSource = tab; 
+
+
+            //}
         }
     }
 }

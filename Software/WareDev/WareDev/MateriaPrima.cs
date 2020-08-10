@@ -121,7 +121,7 @@ namespace WareDev
        
         private void txtSat_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarDatos.SoloNumeros(e);
+            //ValidarDatos.SoloNumeros(e);
         }
 
         private void txtFraccion_KeyPress(object sender, KeyPressEventArgs e)
