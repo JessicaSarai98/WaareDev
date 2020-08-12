@@ -92,7 +92,26 @@ namespace WareDev
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new compras());
+            if(boxCompras.SelectedText == "Producto Terminado"){
+
+                AbrirFormInPanel(new compras());
+
+            }
+
+            if (boxCompras.SelectedText == "Materia Prima")
+            {
+
+                AbrirFormInPanel(new compras());
+
+            }
+
+            if (boxCompras.SelectedText == "Insumos")
+            {
+
+                AbrirFormInPanel(new compras());
+
+            }
+
         }
 
         Cotizaciones cotizaciones;
