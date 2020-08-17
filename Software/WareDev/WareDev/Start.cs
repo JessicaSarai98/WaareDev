@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using Domain;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO; 
 
 
 namespace WareDev
@@ -92,25 +94,26 @@ namespace WareDev
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(boxCompras.SelectedText == "Producto Terminado"){
+            //if(boxCompras.Text.Equals("Producto Terminado")){
 
-                AbrirFormInPanel(new compras());
+             AbrirFormInPanel(new compras());
 
-            }
+            //}
 
-            if (boxCompras.SelectedText == "Materia Prima")
-            {
+            //if (boxCompras.Text.Equals("Materia Prima"))
+            //{
 
-                AbrirFormInPanel(new compras());
+            //    AbrirFormInPanel(new compras());
 
-            }
+            //}
 
-            if (boxCompras.SelectedText == "Insumos")
-            {
+            //if (boxCompras.Text.Equals("Insumos"))
+            //{
 
-                AbrirFormInPanel(new compras());
+            //    AbrirFormInPanel(new compras());
 
-            }
+            //}
+            
 
         }
 

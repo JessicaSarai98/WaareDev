@@ -209,7 +209,7 @@ namespace WareDev
                   }
                else if (cmdReporte.Text.Equals("Compras"))
                 {
-                    com.txtFolio1.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                    com.txtFolioCompra.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                     com.dateTimePicker1.Text = dataGridView1.CurrentRow.Cells["fecha"].Value.ToString();
                     //com.txtProduct.Text = dataGridView1.CurrentRow.Cells["product"].Value.ToString();
                     com.txtPrecioUnitario.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();

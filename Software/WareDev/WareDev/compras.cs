@@ -12,9 +12,9 @@ namespace WareDev
             InitializeComponent();
         }
 
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
         SqlCommand cmd;
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -50,6 +50,8 @@ namespace WareDev
             }
             connection.Close();
 
+            
+
             string query = "select max(Id) from compras";
             SqlCommand c = new SqlCommand(query, connection);
             try
@@ -76,6 +78,7 @@ namespace WareDev
             }
             txtCantidad.Enabled = false;
             prov_SelectedIndexChanged(null, null);
+
         }
 
         private void txtFolioCompra_KeyPress(object sender, KeyPressEventArgs e)
@@ -178,7 +181,92 @@ namespace WareDev
 
         private void txtUniMedida_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtName.Items.Clear();
+            const string message = "¿Es un producto nuevo?";
+            const string captiom = "Advertencia";
+            if (txtTipo.Text.Equals("Materia Prima"))
+            {
+                var result = MessageBox.Show(message, captiom, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.No)
+                {
+                    SqlCommand j = new SqlCommand("select name from rawMaterials", connection);
+                    connection.Open();
+                    SqlDataReader r = j.ExecuteReader();
+                    while (r.Read())
+                    {
 
+                        txtName.Items.Add(r["name"].ToString());
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    MateriaPrima m = new MateriaPrima();
+                    this.Close(); 
+                    m.Show(); 
+                }
+            }
+            else if (txtTipo.Text.Equals("Producto Terminado"))
+            {
+                var result2 = MessageBox.Show(message, captiom, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result2 == DialogResult.No)
+                {
+                    SqlCommand g = new SqlCommand("select name from FinishedProducts", connection);
+                    connection.Open();
+                    SqlDataReader y = g.ExecuteReader();
+                    while (y.Read())
+                    {
+                        txtName.Items.Add(y["name"].ToString());
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    ProductoExistente prod = new ProductoExistente();
+                    this.Close();
+                    prod.Show();
+
+                }
+            }
+            else if (txtTipo.Text.Equals("Insumo"))
+            {
+                var result3 = MessageBox.Show(message,captiom,MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result3 == DialogResult.No)
+                {
+                    SqlCommand k = new SqlCommand("select name from inputs", connection);
+                    connection.Open();
+                    SqlDataReader z = k.ExecuteReader();
+                    while (z.Read())
+                    {
+                        txtName.Items.Add(z["name"].ToString());
+                    }
+                    connection.Close();
+                }
+                else
+                {
+                    Insumos ins = new Insumos();
+                    this.Close();
+                    ins.Show(); 
+                }
+            }
+        }
+
+        private void txtName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add(txtFolioCompra.Text, txtTipo.Text, txtName.Text, txtDescripcion.Text, txtPrecioUnitario.Text,txtCantidad.Text,txtTotalCompra.Text);
+            txtTipo.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtPrecioUnitario.Text = string.Empty;
+            prov.Text = string.Empty;
+            txtNoPro.Text = string.Empty;
+            txtCantidad.Text = string.Empty;
+            txtTotalCompra.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
         }
     }
 }
