@@ -612,19 +612,26 @@ namespace WareDev
 
         private void txtProducto_TextChanged(object sender, EventArgs e)
         {
-            if (this.txtProducto.Text.Length >=1) {
+            if (this.txtProducto.Text.Length >= 1)
+            {
                 SqlCommand c = new SqlCommand("select * from FinishedProducts where name='" + txtProducto.Text + "'", connection);
                 SqlDataAdapter ad = new SqlDataAdapter();
                 ad.SelectCommand = c;
                 DataTable tab = new DataTable();
                 ad.Fill(tab);
                 dataGridView3.DataSource = tab;
-
-                txtMedida.Text = dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
-                txtUniMedAduana.Text = dataGridView3.CurrentRow.Cells["medidaAduana"].Value.ToString();
-                txtSAT.Text = dataGridView3.CurrentRow.Cells["SAT"].Value.ToString();
-                txtAduana.Text = dataGridView3.CurrentRow.Cells["cantAduana"].Value.ToString();
-                txtFraccion.Text = dataGridView3.CurrentRow.Cells["fraccion"].Value.ToString();
+                if (dataGridView3.Rows.Count != 0)
+                {
+                    txtMedida.Text = dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
+                    txtUniMedAduana.Text = dataGridView3.CurrentRow.Cells["medidaAduana"].Value.ToString();
+                    txtSAT.Text = dataGridView3.CurrentRow.Cells["SAT"].Value.ToString();
+                    txtAduana.Text = dataGridView3.CurrentRow.Cells["cantAduana"].Value.ToString();
+                    txtFraccion.Text = dataGridView3.CurrentRow.Cells["fraccion"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("El producto: '"+txtProducto.Text+"' ya no se encuentra en la base de datos, por lo que no se muestran algunos datos.");
+                }
             }
             else
             {

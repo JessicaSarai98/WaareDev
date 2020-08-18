@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 namespace WareDev
 {
@@ -23,7 +23,7 @@ namespace WareDev
             hastaTime.Value = DateTime.Today;
         }
 
-        DataTable dt = new DataTable(); 
+        DataTable dt = new DataTable();
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
@@ -107,14 +107,9 @@ namespace WareDev
 
                     dataGridView1.Columns[0].HeaderText = "Folio";
                     dataGridView1.Columns[1].HeaderText = "Fecha";
-                    dataGridView1.Columns[2].HeaderText = "Nombre del producto";
-                    dataGridView1.Columns[3].HeaderText = "Precio unitario";
-                    dataGridView1.Columns[4].HeaderText = "Nombre del proveedor";
-                    dataGridView1.Columns[5].HeaderText = "Número del proveedor";
-                    dataGridView1.Columns[6].HeaderText = "Cantidad disponible";
-                    dataGridView1.Columns[7].HeaderText = "Total";
-                    //dataGridView1.Columns[8].Visible = false;
-                    dataGridView1.Columns[8].HeaderText = "Descripción";
+                    dataGridView1.Columns[2].HeaderText = "Nombre del proveedor";
+                    dataGridView1.Columns[3].HeaderText = "Número del proveedor";
+                    dataGridView1.Columns[4].HeaderText = "Total";
                     connection.Close();
                 }
 
@@ -127,10 +122,10 @@ namespace WareDev
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-                InfoVentas inf = new InfoVentas();
-                inf.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            
-           
+            InfoVentas inf = new InfoVentas();
+            inf.txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+
+
             //try
             //{
             //    List<Form> OpenForms = new List<Form>();
@@ -155,17 +150,17 @@ namespace WareDev
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            InfoVentas infor = new InfoVentas(); 
+            InfoVentas infor = new InfoVentas();
 
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ventas inf = new ventas();
             compras com = new compras();
-            Cotizaciones coti = new Cotizaciones(); 
-            if (dataGridView1.SelectedRows.Count >0)
+            Cotizaciones coti = new Cotizaciones();
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 if (cmdReporte.Text.Equals("Ventas"))
                 {
@@ -183,7 +178,7 @@ namespace WareDev
                     //inf.txtCajasContenido.Text = dataGridView1.CurrentRow.Cells[""].Value.ToString(); 
 
                     inf.dateTimePicker1.Enabled = false;
-                    inf.txtIva.Enabled = false; 
+                    inf.txtIva.Enabled = false;
                     inf.txtCajasContenido.Enabled = false;
                     inf.comboBox3.Enabled = false;
                     inf.txtLugarExpe.Enabled = false;
@@ -202,22 +197,42 @@ namespace WareDev
                     //inf.txtFolio.Visible = false;
                     inf.dataGridView1.Visible = false;
                     inf.dataGridView2.Visible = true;
-                   
+                    inf.textBox3.Enabled = false;
 
 
-                    inf.ShowDialog(); 
-                  }
-               else if (cmdReporte.Text.Equals("Compras"))
+
+                    inf.ShowDialog();
+                }
+                else if (cmdReporte.Text.Equals("Compras"))
                 {
                     com.txtFolioCompra.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                     com.dateTimePicker1.Text = dataGridView1.CurrentRow.Cells["fecha"].Value.ToString();
-                    //com.txtProduct.Text = dataGridView1.CurrentRow.Cells["product"].Value.ToString();
-                    com.txtPrecioUnitario.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();
+                    //com.txtTipo.Text = dataGridView1.CurrentRow.Cells["tipo"].Value.ToString(); 
+                    //com.txtName.Text = dataGridView1.CurrentRow.Cells["product"].Value.ToString();
+                    //com.txtPrecioUnitario.Text = dataGridView1.CurrentRow.Cells["price"].Value.ToString();
                     com.prov.Text = dataGridView1.CurrentRow.Cells["provider"].Value.ToString();
                     com.txtNoPro.Text = dataGridView1.CurrentRow.Cells["numberP"].Value.ToString();
-                    com.txtCantidad.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
-                    com.txtTotalCompra.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
-                    com.txtDescripcion.Text = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
+                    com.txtTot.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
+                    //com.txtCantidad.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
+                    //com.txtTotalCompra.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
+                    //com.txtDescripcion.Text = dataGridView1.CurrentRow.Cells["description"].Value.ToString();
+
+                    com.dateTimePicker1.Enabled = false;
+                    com.txtTipo.Enabled = false;
+                    com.dataGridView1.Visible = false;
+                    com.dataGridView2.Visible = true;
+                    com.button2.Visible = false;
+                    com.prov.Enabled = false;
+                    com.txtTot.Enabled = false;
+                    com.txtPrecioUnitario.Enabled = false;
+                    com.txtName.Enabled = false;
+                    com.txtDescripcion.Enabled = false;
+                    com.btnGuardar.Visible = false;
+                    com.btrRegreso.Visible = false;
+                    com.button1.Visible = false; 
+
+
+
                     com.ShowDialog();
                 }
                else if (cmdReporte.Text.Equals("Cotizaciones"))

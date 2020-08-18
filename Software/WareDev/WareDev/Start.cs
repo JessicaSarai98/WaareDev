@@ -91,12 +91,26 @@ namespace WareDev
             ventas = null;
             cotizaciones = null;
         }
+        compras compras;
 
         private void button2_Click(object sender, EventArgs e)
         {
             //if(boxCompras.Text.Equals("Producto Terminado")){
+            if (compras == null)
+            {
+                compras = new compras();
+                compras.Owner = this;
+                compras.FormClosed += ventas_FormClosed;
+                compras.dateTimePicker1.Value = DateTime.Today;
+                //compras.Show();
+                AbrirFormInPanel(new compras());
+            }
+            else compras.Activate();
 
-             AbrirFormInPanel(new compras());
+        }
+        
+            
+            //AbrirFormInPanel(new compras());
 
             //}
 
@@ -115,7 +129,7 @@ namespace WareDev
             //}
             
 
-        }
+        
 
         Cotizaciones cotizaciones;
         private void button1_Click(object sender, EventArgs e)
