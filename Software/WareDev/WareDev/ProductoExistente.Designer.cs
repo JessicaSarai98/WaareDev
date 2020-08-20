@@ -396,7 +396,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(158, 147);
+            this.txtUniMedida.Location = new System.Drawing.Point(158, 143);
             this.txtUniMedida.Name = "txtUniMedida";
             this.txtUniMedida.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedida.TabIndex = 9;
@@ -445,7 +445,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(158, 327);
+            this.txtEstado.Location = new System.Drawing.Point(158, 323);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(241, 28);
             this.txtEstado.TabIndex = 4;
@@ -621,7 +621,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 282);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 278);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(241, 28);
             this.txtUniMedAduana.TabIndex = 7;
@@ -679,11 +679,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(435, 49);
+            this.label11.Location = new System.Drawing.Point(440, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 36);
+            this.label11.Size = new System.Drawing.Size(76, 36);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Cantidad Comprada";
+            this.label11.Text = "Cantidad adquirida";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCantiAdquirida
