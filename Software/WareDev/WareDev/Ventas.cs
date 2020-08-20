@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 
+
 namespace WareDev
 {
     public partial class ventas : Form
@@ -16,14 +17,14 @@ namespace WareDev
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-       SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
         DataTable table;
         private void ventas_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //dateTimePicker1.Value = DateTime.Today;
             txtCantidad.Enabled = false;
 
             SqlCommand cm = new SqlCommand("select name from FinishedProducts", connection);
@@ -49,21 +50,25 @@ namespace WareDev
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
                 con.Open();
                 string pcount = Convert.ToString(cmd.ExecuteScalar());
-                if (pcount.Length == 0)
+                if (this.txtFolio.Text.Equals(""))
                 {
-                    txtFolio.Text = "1";
-                }
-                else
-                {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    txtFolio.Text = pcountAdd.ToString();
+                    //string pcount = Convert.ToString(cmd.ExecuteScalar());
+                    if (pcount.Length == 0)
+                    {
+                        txtFolio.Text = "1";
+                    }
+                    else
+                    {
+                        int pcount1 = Convert.ToInt32(pcount);
+                        int pcountAdd = pcount1 + 1;
+                        txtFolio.Text = pcountAdd.ToString();
+                    }
                 }
             }
             catch (Exception ex)
@@ -74,6 +79,39 @@ namespace WareDev
             {
                 con.Close();
             }
+
+            SqlCommand com = new SqlCommand("select * from detalleVenta where folio='" + txtFolio.Text + "'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView2.DataSource = tabla;
+
+            this.dataGridView2.Columns[0].HeaderText = "Folio";
+            this.dataGridView2.Columns[1].HeaderText = "Pallet x contenido";
+            this.dataGridView2.Columns[2].HeaderText = "Tamaño";
+            this.dataGridView2.Columns[3].HeaderText = "Medida";
+            this.dataGridView2.Columns[4].HeaderText = "Producto";
+            this.dataGridView2.Columns[5].HeaderText = "Descripción";
+            this.dataGridView2.Columns[6].HeaderText = "Precio";
+            this.dataGridView2.Columns[7].HeaderText = "Cajas";
+            this.dataGridView2.Columns[8].HeaderText = "Total";
+         
+
+            //SqlCommand c = new SqlCommand("select * from FinishedProducts where name='"+txtProducto.Text+"'",connection);
+            //SqlDataAdapter ad = new SqlDataAdapter();
+            //ad.SelectCommand = c;
+            //DataTable tab = new DataTable();
+            //ad.Fill(tab);
+            //dataGridView3.DataSource = tab; 
+
+
+
+            //try
+            //{
+            //    List<Form> OpenForms = new List<Form>();
+
+            //}
         }
 
         private void AbrirFormInPanel(object Formhijo)
@@ -215,45 +253,45 @@ namespace WareDev
                 connection.Open();
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@subtotal,@producto,@cantidad,@desc,@pallet, @medida, @tam,  @precio)", connection);
+                    SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@pallet,@tam,@medida,@producto,@desc, @precio, @cajas,  @total)", connection);
 
                     ag.Parameters.Clear();
                     ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
                     ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column1"].Value));
-                        //ag.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Column2"].Value));
+                    //ag.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Column2"].Value));
                     ag.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column3"].Value));
                     ag.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column4"].Value));
                     ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column5"].Value));
                     ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column6"].Value));
                     ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column7"].Value));
-                    ag.Parameters.AddWithValue("@subtotal", Convert.ToString(row.Cells["Column9"].Value));
-                    ag.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Column2"].Value));
+                    ag.Parameters.AddWithValue("@total", Convert.ToString(row.Cells["Column9"].Value));
+                    ag.Parameters.AddWithValue("@cajas", Convert.ToString(row.Cells["Column2"].Value));
 
                     ag.ExecuteNonQuery();
                 }
-                string sqlQuery = "insert into ventas(Id,date,iva,num,nombreP, currency,cond,lugar,subtotal,total) " +
-                    "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text + "','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
+                string sqlQuery = "insert into ventas(Id,date,iva, num,nombreP, currency,cond,lugar,subtotal,total) " +
+                    "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text +"','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
                 cmd.ExecuteNonQuery();
                 connection.Close();
 
                 decimal total = 0;
-                string a; 
+                string a;
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     connection.Open();
-                    total = Convert.ToDecimal(row.Cells[2].Value);
-                    a = Convert.ToString(row.Cells[1].Value);
-                    string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'"+total+"' where name='" +a+ "'";
-                    cmd2 = new SqlCommand(sqlQuery2,connection);
+                    total = Convert.ToDecimal(row.Cells[7].Value);
+                    a = Convert.ToString(row.Cells[4].Value);
+                    string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'" + total + "' where name='" + a + "'";
+                    cmd2 = new SqlCommand(sqlQuery2, connection);
                     cmd2.ExecuteNonQuery();
                     connection.Close();
                 }
                 MessageBox.Show("Se ha agregado la venta");
                 this.Close();
-                
+
             }
             else
             {
@@ -278,7 +316,7 @@ namespace WareDev
             {
                 MessageBox.Show("Ingrese el IVA o seleccione la opción de sumar");
             }
-            
+
 
         }
 
@@ -286,7 +324,6 @@ namespace WareDev
         {
 
 
-            
             decimal total = 0;
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -297,11 +334,12 @@ namespace WareDev
             }
             textBox2.Text = total.ToString();
 
+
         }
 
         private void sumar_Click(object sender, EventArgs e)
         {
-            double total = 0; 
+            double total = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
 
@@ -328,7 +366,7 @@ namespace WareDev
 
         }
 
-            Productos materia;
+        Productos materia;
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             materia = new Productos();
@@ -343,7 +381,7 @@ namespace WareDev
             txtPrecio.Text = string.Empty;
             textBox3.Text = string.Empty;
 
-            
+
             materia.Show();
             txtCantidad.Enabled = true;
         }
@@ -354,14 +392,14 @@ namespace WareDev
 
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
-            if(txtProducto.Text!= "" )
+            if (txtProducto.Text != "")
             {
                 if (txtCantidad.Text != "" && textBox3.Text != "")
                 {
-                    if (txtMedida.Text != "")
+                    if (txtUniMedAduana.Text != "")
                     {
 
-                        dataGridView1.Rows.Add(txtFolio.Text, txtProducto.Text, txtCantidad.Text, txtDescripcion.Text, txtPallet.Text, txtMedida.Text, txtSAT.Text, txtPrecio.Text, textBox3.Text, txtSubtotal.Text, txtTotal.Text);
+                        dataGridView1.Rows.Add(txtFolio.Text, txtPallet.Text, textBox4.Text, textBox5.Text, txtProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text, textBox3.Text);
 
                         textBox3.Text = string.Empty;
                         txtProducto.Text = string.Empty;
@@ -373,12 +411,17 @@ namespace WareDev
                         txtPrecio.Text = string.Empty;
                         cantidad.Text = string.Empty;
                         txtCantidad.Enabled = false;
+                        textBox4.Text = string.Empty;
+                        textBox5.Text = string.Empty;
+                        txtUniMedAduana.Text = string.Empty;
+                        txtAduana.Text = string.Empty;
+                        txtFraccion.Text = string.Empty;
                     }
                     else
                     {
                         MessageBox.Show("Ingrese la medida");
                     }
-                   
+
                 }
                 else
                 {
@@ -389,10 +432,10 @@ namespace WareDev
             {
                 MessageBox.Show("Seleccione un producto para agregarlo a la tabla");
             }
-            
+
         }
 
-       
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -405,9 +448,9 @@ namespace WareDev
                     total += Convert.ToDouble(row.Cells[8].Value);
 
                 }
-                double b,c;
+                double b, c;
                 b = Convert.ToInt32(txtIva.Text);
-                c = total + (total*(b/100));
+                c = total + (total * (b / 100));
                 txtTotal.Text = c.ToString();
             }
             else
@@ -429,9 +472,9 @@ namespace WareDev
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
             float n1, n2, a;
-           
-                if (txtCantidad.Text != "")
-                {
+
+            if (txtCantidad.Text != "")
+            {
                 if (Convert.ToDecimal(cantidad.Text) != 0)
                 {
                     if ((Convert.ToDecimal(txtCantidad.Text)) <= Convert.ToDecimal(cantidad.Text))
@@ -447,13 +490,13 @@ namespace WareDev
                         txtCantidad.Text = string.Empty;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No hay cantidad disponible");
-                }
-                }
-            
-            
+                //else
+                //{
+                //    MessageBox.Show("No hay cantidad disponible");
+                //}
+            }
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -515,9 +558,117 @@ namespace WareDev
             }
         }
 
-        private void txtCajasContenido_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnMostrar_Click(object sender, EventArgs e)
         {
-            ValidarDatos.SoloNumeros(e);
+            SqlCommand com = new SqlCommand("select * from ventas where Id='"+txtFolio.Text+"'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView2.DataSource = tabla; 
+
+        }
+
+        private void txtFolio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //try
+            //{
+            //    txtProducto.Text = dataGridView2.CurrentRow.Cells["producto"].Value.ToString();
+            //    //CajasContenido.Text = dataGridView2.CurrentRow.Cells["cajas"].Value.ToString();
+            //    txtCantidad.Text = dataGridView2.CurrentRow.Cells["cajas"].Value.ToString();
+            //    txtDescripcion.Text = dataGridView2.CurrentRow.Cells["desc"].Value.ToString();
+            //    textBox5.Text = dataGridView2.CurrentRow.Cells["medida"].Value.ToString();
+            //    textBox4.Text = dataGridView2.CurrentRow.Cells["tam"].Value.ToString();
+            //    txtPallet.Text = dataGridView2.CurrentRow.Cells["pallet"].Value.ToString();
+            //    textBox3.Text = dataGridView2.CurrentRow.Cells["total"].Value.ToString();
+            //    txtPrecio.Text = dataGridView2.CurrentRow.Cells["precio"].Value.ToString();
+            //    //txtUniMedAduana.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //    //txtMedida.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //    //txtSAT.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //    //txtAduana.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //    //txtFraccion.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //    //textBox3.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            //}
+            //catch
+            //{
+
+            //}
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (this.txtProducto.Text.Length >= 1)
+            {
+                SqlCommand c = new SqlCommand("select * from FinishedProducts where name='" + txtProducto.Text + "'", connection);
+                SqlDataAdapter ad = new SqlDataAdapter();
+                ad.SelectCommand = c;
+                DataTable tab = new DataTable();
+                ad.Fill(tab);
+                dataGridView3.DataSource = tab;
+                if (dataGridView3.Rows.Count != 0)
+                {
+                    txtMedida.Text = dataGridView3.CurrentRow.Cells["unitOfMeasure"].Value.ToString();
+                    txtUniMedAduana.Text = dataGridView3.CurrentRow.Cells["medidaAduana"].Value.ToString();
+                    txtSAT.Text = dataGridView3.CurrentRow.Cells["SAT"].Value.ToString();
+                    txtAduana.Text = dataGridView3.CurrentRow.Cells["cantAduana"].Value.ToString();
+                    txtFraccion.Text = dataGridView3.CurrentRow.Cells["fraccion"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("El producto: '"+txtProducto.Text+"' ya no se encuentra en la base de datos, por lo que no se muestran algunos datos.");
+                }
+            }
+            else
+            {
+                txtMedida.Text = string.Empty;
+                txtUniMedAduana.Text = string.Empty;
+                txtSAT.Text = string.Empty;
+                txtAduana.Text = string.Empty;
+                txtFraccion.Text = string.Empty;
+
+            }
+
+
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+                txtProducto.Text = dataGridView2.CurrentRow.Cells["producto"].Value.ToString();
+                //CajasContenido.Text = dataGridView2.CurrentRow.Cells["cajas"].Value.ToString();
+                txtCantidad.Text = dataGridView2.CurrentRow.Cells["cajas"].Value.ToString();
+                txtDescripcion.Text = dataGridView2.CurrentRow.Cells["desc"].Value.ToString();
+                textBox5.Text = dataGridView2.CurrentRow.Cells["medida"].Value.ToString();
+                textBox4.Text = dataGridView2.CurrentRow.Cells["tam"].Value.ToString();
+                txtPallet.Text = dataGridView2.CurrentRow.Cells["pallet"].Value.ToString();
+                textBox3.Text = dataGridView2.CurrentRow.Cells["total"].Value.ToString();
+                txtPrecio.Text = dataGridView2.CurrentRow.Cells["precio"].Value.ToString();
+                //txtUniMedAduana.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+                //txtMedida.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+                //txtSAT.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+                //txtAduana.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+                //txtFraccion.Text= dataGridView2.CurrentRow.Cells[""].Value.ToString();
+                //textBox3.Text = dataGridView2.CurrentRow.Cells[""].Value.ToString();
+            
+           
+
+            
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -83,6 +83,24 @@
     <Compile Include="FacturaVentas.Designer.cs">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoCompras.Designer.cs">
+      <DependentUpon>InfoCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoCotizaciones.Designer.cs">
+      <DependentUpon>InfoCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoVentas.Designer.cs">
+      <DependentUpon>InfoVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Insumos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +239,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaVentas.resx">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoCompras.resx">
+      <DependentUpon>InfoCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoCotizaciones.resx">
+      <DependentUpon>InfoCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoVentas.resx">
+      <DependentUpon>InfoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Insumos.resx">
       <DependentUpon>Insumos.cs</DependentUpon>

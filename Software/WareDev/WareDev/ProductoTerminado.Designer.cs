@@ -155,19 +155,23 @@
             // existencia
             // 
             this.existencia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.existencia.Enabled = false;
             this.existencia.Location = new System.Drawing.Point(374, 50);
             this.existencia.Name = "existencia";
             this.existencia.Size = new System.Drawing.Size(100, 20);
             this.existencia.TabIndex = 34;
+            this.existencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.existencia.TextChanged += new System.EventHandler(this.existencia_TextChanged);
             // 
             // exisI
             // 
             this.exisI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.exisI.Enabled = false;
             this.exisI.Location = new System.Drawing.Point(91, 50);
             this.exisI.Name = "exisI";
             this.exisI.Size = new System.Drawing.Size(100, 20);
             this.exisI.TabIndex = 37;
+            this.exisI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.exisI.TextChanged += new System.EventHandler(this.exisI_TextChanged);
             // 
             // existenciaI
@@ -337,7 +341,7 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(711, 115);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(711, 119);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
             this.txtUniMedAduana.Size = new System.Drawing.Size(231, 28);
             this.txtUniMedAduana.TabIndex = 8;
@@ -443,7 +447,7 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtMeasure.Location = new System.Drawing.Point(239, 78);
+            this.txtMeasure.Location = new System.Drawing.Point(239, 81);
             this.txtMeasure.Name = "txtMeasure";
             this.txtMeasure.Size = new System.Drawing.Size(230, 28);
             this.txtMeasure.TabIndex = 5;
@@ -469,7 +473,7 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(239, 338);
+            this.txtEstado.Location = new System.Drawing.Point(239, 341);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(230, 28);
             this.txtEstado.TabIndex = 9;
@@ -721,6 +725,7 @@
             this.txtSat.Size = new System.Drawing.Size(231, 26);
             this.txtSat.TabIndex = 4;
             this.txtSat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSat.TextChanged += new System.EventHandler(this.txtSat_TextChanged);
             this.txtSat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPallet_KeyPress);
             // 
             // label15
@@ -871,6 +876,7 @@
             this.textBox2.Size = new System.Drawing.Size(231, 26);
             this.textBox2.TabIndex = 42;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // comboBox2
             // 
@@ -1055,8 +1061,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.ComboBox txtMeasure;
@@ -1069,5 +1073,7 @@
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label22;
         public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label label16;
     }
 }

@@ -418,6 +418,7 @@
             // 
             this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
             this.txtCodigo.Location = new System.Drawing.Point(158, 9);
             this.txtCodigo.Name = "txtCodigo";

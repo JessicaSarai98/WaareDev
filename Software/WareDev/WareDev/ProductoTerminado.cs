@@ -16,7 +16,7 @@ namespace WareDev
         //JESS
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
         string imgLocation = "";
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -79,15 +79,18 @@ namespace WareDev
             {
                 connection.Open();
                 string pcount = Convert.ToString(cmd1.ExecuteScalar());
-                if (pcount.Length == 0)
+                if (this.txtCodigo.Text.Equals(""))
                 {
-                    txtCodigo.Text = "1";
-                }
-                else
-                {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    txtCodigo.Text = pcountAdd.ToString();
+                    if (pcount.Length == 0)
+                    {
+                        txtCodigo.Text = "1";
+                    }
+                    else
+                    {
+                        int pcount1 = Convert.ToInt32(pcount);
+                        int pcountAdd = pcount1 + 1;
+                        txtCodigo.Text = pcountAdd.ToString();
+                    }
                 }
             }
             catch (Exception ex)
@@ -364,6 +367,16 @@ namespace WareDev
         private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.NumerosDecimales(e);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSat_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

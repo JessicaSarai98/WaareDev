@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using Domain;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO; 
 
 
 namespace WareDev
@@ -52,7 +54,7 @@ namespace WareDev
             // jess
             //string con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30";
             // karina
-            string con = @"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True";
+            string con = @"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True";
 
 
             SqlConnection conn = new SqlConnection(con);
@@ -78,6 +80,7 @@ namespace WareDev
                 ventas = new ventas();
                 ventas.Owner = this;
                 ventas.FormClosed += ventas_FormClosed;
+                ventas.dateTimePicker1.Value = DateTime.Today;
                 ventas.Show();
             }
             else ventas.Activate();
@@ -88,11 +91,45 @@ namespace WareDev
             ventas = null;
             cotizaciones = null;
         }
+        compras compras;
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new compras());
+            //if(boxCompras.Text.Equals("Producto Terminado")){
+            if (compras == null)
+            {
+                compras = new compras();
+                compras.Owner = this;
+                compras.FormClosed += ventas_FormClosed;
+                compras.dateTimePicker1.Value = DateTime.Today;
+                //compras.Show();
+                AbrirFormInPanel(new compras());
+            }
+            else compras.Activate();
+
         }
+        
+            
+            //AbrirFormInPanel(new compras());
+
+            //}
+
+            //if (boxCompras.Text.Equals("Materia Prima"))
+            //{
+
+            //    AbrirFormInPanel(new compras());
+
+            //}
+
+            //if (boxCompras.Text.Equals("Insumos"))
+            //{
+
+            //    AbrirFormInPanel(new compras());
+
+            //}
+            
+
+        
 
         Cotizaciones cotizaciones;
         private void button1_Click(object sender, EventArgs e)
@@ -102,6 +139,8 @@ namespace WareDev
                 cotizaciones = new Cotizaciones();
                 cotizaciones.Owner = this;
                 cotizaciones.FormClosed += ventas_FormClosed;
+                cotizaciones.Date.Value = DateTime.Today;
+                cotizaciones.Expiration.Value = DateTime.Today; 
                 cotizaciones.Show();
             }
             else cotizaciones.Activate();

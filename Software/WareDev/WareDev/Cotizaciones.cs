@@ -17,15 +17,16 @@ namespace WareDev
 
         }
         // JESS
-         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        // SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina 
-        //SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
 
-        SqlCommand cmd;
+        SqlCommand cmd; 
+        SqlCommand cmd2; 
         private void cotizaciones_Load(object sender, EventArgs e)
         {
-            Date.Value = DateTime.Today;
-            Expiration.Value = DateTime.Today;
+            //Date.Value = DateTime.Today;
+            //Expiration.Value = DateTime.Today;
             txtCantidad.Enabled = false;
             SqlCommand cm = new SqlCommand("select Id from clientes", connection);
 
@@ -33,7 +34,7 @@ namespace WareDev
 
             //leyendp clientes - nombre
             SqlCommand d = new SqlCommand("select name from clientes", connection);
-            SqlCommand a = new SqlCommand("Select Id from clientes where name='" + Customer.Text + "'", connection);
+            SqlCommand a = new SqlCommand("Select RFC from clientes where name='" + Customer.Text + "'", connection);
 
             connection.Open();
             SqlDataReader r = d.ExecuteReader(); 
@@ -61,15 +62,18 @@ namespace WareDev
             {
                 connection.Open();
                 string pcount = Convert.ToString(cmd.ExecuteScalar());
-                if (pcount.Length == 0)
+                if (this.txtFolio.Text.Equals(""))
                 {
-                    txtFolio.Text = "1";
-                }
-                else
-                {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    txtFolio.Text = pcountAdd.ToString();
+                    if (pcount.Length == 0)
+                    {
+                        txtFolio.Text = "1";
+                    }
+                    else
+                    {
+                        int pcount1 = Convert.ToInt32(pcount);
+                        int pcountAdd = pcount1 + 1;
+                        txtFolio.Text = pcountAdd.ToString();
+                    }
                 }
             }catch(Exception ex)
             {
@@ -82,8 +86,23 @@ namespace WareDev
 
             //IdClient_SelectedIndexChanged(null, null);
             Customer_SelectedIndexChanged(null, null);
+            SqlCommand com = new SqlCommand("select * from detalleQuo where folio='" + txtFolio.Text + "'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView1.DataSource = tabla;
 
-
+            this.dataGridView1.Columns[0].HeaderText = "Folio";
+            this.dataGridView1.Columns[1].HeaderText = "Subtotal";
+            this.dataGridView1.Columns[2].HeaderText = "Producto";
+            this.dataGridView1.Columns[3].HeaderText = "Cantidad";
+            this.dataGridView1.Columns[4].HeaderText = "Descripción";
+            this.dataGridView1.Columns[5].HeaderText = "Pallet";
+            this.dataGridView1.Columns[6].HeaderText = "Medida";
+            this.dataGridView1.Columns[7].HeaderText = "Tamaño";
+            this.dataGridView1.Columns[8].HeaderText = "Precio";
+            
 
         }
 
@@ -228,8 +247,7 @@ namespace WareDev
                 headertable.AddCell(divisa.Text);
                 headertable.AddCell("Flete x Caja");
                 headertable.AddCell(flete.Text);
-                headertable.AddCell("Total Final");
-                headertable.AddCell(txtTotal.Text);
+                
 
                 doc.Add(headertable);
                 doc.Add(spacer);
@@ -278,7 +296,27 @@ namespace WareDev
                     });
 
                 doc.Add(table);
-                doc.Close();
+
+
+                    var downtable = new PdfPTable(new[] { .5f, .5f})
+                    {
+                        HorizontalAlignment = Right,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 5f }
+
+                    };
+                    doc.Add(spacer);
+
+                   
+                    downtable.AddCell("Subtotal");
+                    downtable.AddCell(txtSubtotal.Text);
+                    downtable.AddCell("IVA");
+                    downtable.AddCell(txtIva.Text);
+                    downtable.AddCell("Total");
+                    downtable.AddCell(txtTotal.Text);
+
+                    doc.Add(downtable);
+                    doc.Close();
                 }
             }
             else
@@ -348,11 +386,11 @@ namespace WareDev
                     ad.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Producto"].Value));
                     ad.Parameters.AddWithValue("@cantidad", Convert.ToString(row.Cells["Cantidad"].Value));
                     ad.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Descripcion"].Value));
-                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["pall"].Value));
+                    ad.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Pall"].Value));
 
-                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Medida"].Value));
+                    ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Size"].Value));
                     ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
-                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["CostoUnidad"].Value));
+                    ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["PrecioxUnidad"].Value));
                     
                     ad.ExecuteNonQuery();
 
@@ -369,6 +407,20 @@ namespace WareDev
             cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
             cmd.ExecuteNonQuery();
             connection.Close();
+
+                decimal total = 0;
+                string a; 
+
+                foreach(DataGridViewRow row in TablaDeVenta.Rows)
+                {
+                    connection.Open();
+                    total = Convert.ToDecimal(row.Cells[7].Value);
+                    a = Convert.ToString(row.Cells[4].Value);
+                    string sqlQuery2 = "update FinishedProducts set amountPurchased = amountPurchased - '"+total+"'where name= '"+a+"'";
+                    cmd2 = new SqlCommand(sqlQuery2, connection);
+                    cmd2.ExecuteNonQuery();
+                    connection.Close();
+                }
 
             MessageBox.Show("Se ha agregado la venta", "Mensaje", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -400,12 +452,12 @@ namespace WareDev
         }
         private void Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("Select Id from clientes where name = '"+Customer.Text+"'", connection);
+            SqlCommand d = new SqlCommand("Select RFC from clientes where name = '"+Customer.Text+"'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
             {
-                IdClient.Text = r["Id"].ToString(); 
+                IdClient.Text = r["RFC"].ToString(); 
             }
             connection.Close();
         }
@@ -422,9 +474,9 @@ namespace WareDev
             {
                 if(txtCantidad.Text!= "")
                 {
-                    if(txtMedida.Text != "")
+                    if(txtPallet.Text != "")
                     {
-                        TablaDeVenta.Rows.Add(txtFolio.Text,txtProducto.Text,txtCantidad.Text,txtDescripcion.Text,txtPallet.Text, txtMedida.Text,txtTam.Text, txtPrecio.Text,txtPrecioTotal.Text);
+                        TablaDeVenta.Rows.Add(txtFolio.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtProducto.Text, txtDescripcion.Text,txtPrecio.Text,txtCantidad.Text, txtPrecioTotal.Text);
                         txtProducto.Text = string.Empty;
                         txtCantidad.Text = string.Empty;
                         txtDescripcion.Text = string.Empty;
@@ -437,7 +489,7 @@ namespace WareDev
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese la medida", "Mensaje", MessageBoxButtons.OK,
+                        MessageBox.Show("Ingrese el pallet", "Mensaje", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                 }
@@ -502,13 +554,29 @@ namespace WareDev
             float n1, n2, a;
             if (txtCantidad.Text != "")
             {
-                n1 = Convert.ToInt32(txtCantidad.Text);
-                n2 = Convert.ToSingle(txtPrecio.Text);
-                a = n1 * n2;
-                txtPrecioTotal.Text = a.ToString(); 
-                
+                if (Convert.ToDecimal(txtCan.Text) != 0)
+                {
+                    if (Convert.ToDecimal(txtCantidad.Text) <= Convert.ToDecimal(txtCan.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        txtPrecioTotal.Text = a.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: " + txtCan.Text);
+                        txtCantidad.Text = string.Empty;
+                    }
+                }
+                //else
+                //{
+                //    MessageBox.Show("No hay cantidad disponible");
+                //}
+
             }
         }
+        
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -553,6 +621,49 @@ namespace WareDev
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlCommand com = new SqlCommand("select * from quotations where Id='" + txtFolio.Text + "'", connection);
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = com;
+            DataTable tabla = new DataTable();
+            adap.Fill(tabla);
+            dataGridView1.DataSource = tabla;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtProducto.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
+            txtCantidad.Text =  dataGridView1.CurrentRow.Cells["cantidad"].Value.ToString();
+            txtDescripcion.Text = dataGridView1.CurrentRow.Cells["desc"].Value.ToString();
+            txtPallet.Text =  dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
+            txtMedida.Text = dataGridView1.CurrentRow.Cells["medida"].Value.ToString();
+            txtTam.Text = dataGridView1.CurrentRow.Cells["tam"].Value.ToString();
+            txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
+
+
+        }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+            //if(this.txtProducto.Text.Length >= 1)
+            //{
+            //    SqlCommand c = new SqlCommand("select * from FinishedProducts where name= '"+txtProducto.Text+"'", connection);
+            //    SqlDataAdapter ad = new SqlDataAdapter();
+            //    ad.SelectCommand = c;
+            //    DataTable tab = new DataTable();
+            //    ad.Fill(tab);
+            //    dataGridView1.DataSource = tab; 
+
+
+            //}
         }
     }
 }

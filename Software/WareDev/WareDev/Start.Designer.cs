@@ -53,9 +53,9 @@
             // btnVentas
             // 
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.Location = new System.Drawing.Point(441, 46);
+            this.btnVentas.Location = new System.Drawing.Point(384, 46);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(181, 88);
+            this.btnVentas.Size = new System.Drawing.Size(216, 88);
             this.btnVentas.TabIndex = 2;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = true;
@@ -64,9 +64,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(725, 46);
+            this.button2.Location = new System.Drawing.Point(708, 46);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 88);
+            this.button2.Size = new System.Drawing.Size(194, 88);
             this.button2.TabIndex = 5;
             this.button2.Text = "Compras";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(553, 312);
             this.dataGridView1.TabIndex = 4;
             // 
             // label1
@@ -165,7 +165,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(779, 389);
+            this.button5.Location = new System.Drawing.Point(877, 448);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(104, 46);
             this.button5.TabIndex = 6;
@@ -185,15 +185,15 @@
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1018, 474);
+            this.contenedor.Size = new System.Drawing.Size(1031, 527);
             this.contenedor.TabIndex = 16;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(165, 46);
+            this.button1.Location = new System.Drawing.Point(49, 46);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 88);
+            this.button1.Size = new System.Drawing.Size(211, 88);
             this.button1.TabIndex = 16;
             this.button1.Text = "Cotizaciones";
             this.button1.UseVisualStyleBackColor = true;
@@ -215,7 +215,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(614, 227);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(617, 289);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -260,9 +260,9 @@
             this.exis.BackColor = System.Drawing.Color.Silver;
             this.exis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.exis.Location = new System.Drawing.Point(753, 166);
+            this.exis.Location = new System.Drawing.Point(642, 448);
             this.exis.Name = "exis";
-            this.exis.Size = new System.Drawing.Size(130, 41);
+            this.exis.Size = new System.Drawing.Size(130, 46);
             this.exis.TabIndex = 11;
             this.exis.Text = "Ver existencia";
             this.exis.UseVisualStyleBackColor = false;
@@ -273,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(1018, 474);
+            this.ClientSize = new System.Drawing.Size(1031, 527);
             this.Controls.Add(this.contenedor);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Start";

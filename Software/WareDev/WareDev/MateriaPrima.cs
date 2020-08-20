@@ -16,7 +16,7 @@ namespace WareDev
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         //karina
-       SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\users.mdf;Integrated Security = True");
+       SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
         string imgLocation = "";
         SqlCommand cmd; 
 
@@ -64,8 +64,8 @@ namespace WareDev
                     images = brs.ReadBytes((int)Streem.Length);
 
                     connection.Open();
-                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,SAT,tariffFraction,status,amountPurchased,customsAmount,price,photo,mat) " +
-                        "values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.SelectedItem+ "','"+txtUniMedida.SelectedItem+ "','"+txtDescripcion.Text+ "','"+txtSat.Text+ "','"+txtFraccion.Text+ "','"+txtEstado.SelectedItem+"','"+txtCantiAdquirida.Text+ 
+                    string sqlQuery = "insert into rawMaterials(name, date,customsUnitOfMeasure,unitOfMeasure,description,arrancel, SAT,status,amountPurchased,customsAmount,price,photo,mat) " +
+                        "values('"+txtNombre.Text+ "',@fecha,'"+txtUniMedAduana.SelectedItem+ "','"+txtUniMedida.SelectedItem+ "','"+txtDescripcion.Text+ "','"+txtFraccion.Text+"','"+txtSat.Text+ "','"+txtEstado.Text+"','"+txtCantiAdquirida.Text+ 
                         "','"+txtCanAduana.Text+ "','"+txtPrecio.Text+"',@images, '"+mat.Text+"')";
                     cmd = new SqlCommand(sqlQuery, connection);
                     cmd.Parameters.Add(new SqlParameter("@images",images));
@@ -96,7 +96,7 @@ namespace WareDev
 
                 byte[] byteArrayImagen = ImageToByteArray(FotoProduc.Image);
                 connection.Open();
-                string sqlQuery = "update rawMaterials set name='" + txtNombre.Text + "',date=@fecha,customsUnitOfMeasure='" + txtUniMedAduana.Text + "',unitOfMeasure='" + txtUniMedida.Text + "',description='" + txtDescripcion.Text +  "',SAT='" + txtSat.Text + "',tariffFraction='" + txtFraccion.Text + "',status='" + txtEstado.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',customsAmount='" + txtCanAduana.Text + "',price='" + txtPrecio.Text + "',photo=@imagen where Id='" + ID.Text + "'";
+                string sqlQuery = "update rawMaterials set name='" + txtNombre.Text + "',date=@fecha,customsUnitOfMeasure='" + txtUniMedAduana.Text + "',unitOfMeasure='" + txtUniMedida.Text + "',description='" + txtDescripcion.Text +  "',arrancel= '"+txtFraccion.Text+"',SAT='" + txtSat.Text + "',status='" + txtEstado.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',customsAmount='" + txtCanAduana.Text + "',price='" + txtPrecio.Text + "',photo=@imagen where Id='" + ID.Text + "'";
 
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
@@ -114,14 +114,14 @@ namespace WareDev
 
         private void MateriaPrima_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
+            //dateTimePicker1.Value = DateTime.Today;
         }
         //float
         Regex rx = new Regex(@"^[0-9]+\.[0-9]{2}?", RegexOptions.Compiled | RegexOptions.IgnoreCase);
        
         private void txtSat_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarDatos.SoloNumeros(e);
+            //ValidarDatos.SoloNumeros(e);
         }
 
         private void txtFraccion_KeyPress(object sender, KeyPressEventArgs e)

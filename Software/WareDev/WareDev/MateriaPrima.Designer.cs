@@ -112,13 +112,14 @@
             this.SaveEdit.ForeColor = System.Drawing.Color.Black;
             this.SaveEdit.Image = ((System.Drawing.Image)(resources.GetObject("SaveEdit.Image")));
             this.SaveEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.SaveEdit.Location = new System.Drawing.Point(792, 90);
+            this.SaveEdit.Location = new System.Drawing.Point(800, 90);
             this.SaveEdit.Name = "SaveEdit";
-            this.SaveEdit.Size = new System.Drawing.Size(104, 65);
+            this.SaveEdit.Size = new System.Drawing.Size(96, 65);
             this.SaveEdit.TabIndex = 13;
             this.SaveEdit.Text = "Save";
             this.SaveEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SaveEdit.UseVisualStyleBackColor = false;
+            this.SaveEdit.Visible = false;
             this.SaveEdit.Click += new System.EventHandler(this.SaveEdit_Click);
             // 
             // FotoProduc
