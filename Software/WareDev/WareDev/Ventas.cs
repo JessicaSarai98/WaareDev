@@ -3,6 +3,10 @@ using System.Data;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Linq;
+using System.IO;
 
 
 namespace WareDev
@@ -17,7 +21,7 @@ namespace WareDev
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
+        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -50,7 +54,7 @@ namespace WareDev
             // jess
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -256,16 +260,16 @@ namespace WareDev
                     SqlCommand ag = new SqlCommand("insert into detalleVenta values(@folio,@pallet,@tam,@medida,@producto,@desc, @precio, @cajas,  @total)", connection);
 
                     ag.Parameters.Clear();
-                    ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Column8"].Value));
-                    ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Column1"].Value));
+                    ag.Parameters.AddWithValue("@folio", Convert.ToInt32(row.Cells["Folio"].Value));
+                    ag.Parameters.AddWithValue("@producto", Convert.ToString(row.Cells["Producto"].Value));
                     //ag.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Column2"].Value));
-                    ag.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Column3"].Value));
-                    ag.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Column4"].Value));
-                    ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Column5"].Value));
-                    ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Column6"].Value));
-                    ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Column7"].Value));
-                    ag.Parameters.AddWithValue("@total", Convert.ToString(row.Cells["Column9"].Value));
-                    ag.Parameters.AddWithValue("@cajas", Convert.ToString(row.Cells["Column2"].Value));
+                    ag.Parameters.AddWithValue("@desc", Convert.ToString(row.Cells["Descripcion"].Value));
+                    ag.Parameters.AddWithValue("@pallet", Convert.ToString(row.Cells["Pallet"].Value));
+                    ag.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Medida"].Value));
+                    ag.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
+                    ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["Precio"].Value));
+                    ag.Parameters.AddWithValue("@total", Convert.ToString(row.Cells["Importe"].Value));
+                    ag.Parameters.AddWithValue("@cajas", Convert.ToString(row.Cells["CajaxContenido"].Value));
 
                     ag.ExecuteNonQuery();
                 }
@@ -668,6 +672,215 @@ namespace WareDev
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Si quieres modificar el mismo PDF, cierralo de aplicaciones externas.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+
+                Document doc = new Document(PageSize.A4);
+
+                // Indicamos donde vamos a guardar el documento
+
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = @"C:";
+                saveFileDialog1.Title = "Guardar Reporte";
+                saveFileDialog1.DefaultExt = "pdf";
+                saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                string file = "";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    file = saveFileDialog1.FileName;
+                }
+
+
+                //SaveFileDialog save = new SaveFileDialog();
+                //save.Filter = "Archivo de pdf |*.pdf";
+                //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
+                //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
+
+                if (file.Trim() != "")
+                {
+                        FileStream fileventas = new FileStream(file,
+                        FileMode.OpenOrCreate,
+                        FileAccess.ReadWrite,
+                        FileShare.ReadWrite);
+                        PdfWriter.GetInstance(doc, fileventas);
+
+
+                    //Margenes del documento 
+                    doc.SetMargins(30, 30, 10, 10);
+
+
+                    // Le colocamos el título y el autor
+                    // Esto no será visible en el documento
+                    doc.AddTitle("Cotizacion");
+
+
+                    //Se estipula de fuente de escritura 
+                    iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+
+                    //fuente de escritura del titulo 
+                    var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
+
+
+                    // Abrimos el archivo
+                    doc.Open();
+
+
+
+                    //Espacio entre parrafos
+                    var spacer = new Paragraph("")
+                    {
+                        SpacingBefore = 10f,
+                        SpacingAfter = 10f,
+                    };
+
+
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+
+                    using (FileStream im = new FileStream(imagenpath, FileMode.Open))
+                    {
+                        var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        jpg.SetAbsolutePosition(450, 0);
+                        jpg.ScalePercent(25, 25);
+                        doc.Add(jpg);
+
+                    }
+
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+
+                    using (FileStream im = new FileStream(Logopath, FileMode.Open))
+                    {
+                        var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        png.SetAbsolutePosition(190, 770);
+                        png.ScalePercent(15, 15);
+                        doc.Add(png);
+
+                    }
+
+
+
+                    // Escribimos el encabezamiento en el documento
+                    var titulo = new Paragraph("PROMOTORA Y COMERCIALIZADORA COSTA MAYA S.A DE C.V.", fuentetitulo);
+
+
+                    titulo.SpacingBefore = 0;
+                    titulo.Alignment = 2;
+                    doc.Add(titulo);
+                    doc.Add(Chunk.NEWLINE);
+                    doc.Add(spacer);
+
+                    // Creamos la tabla con con la infromacion de cliente y vendedor 
+
+                    var headertable = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
+                    {
+                        HorizontalAlignment = Left,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 22f }
+
+                    };
+                    doc.Add(spacer);
+
+                    //Creacion de Tabla de datos de comprador 
+                    headertable.AddCell("FECHA");
+                    headertable.AddCell(DateTime.Now.ToString());
+                    headertable.AddCell("FOLIO");
+                    headertable.AddCell(txtFolio.Text);
+                    headertable.AddCell("LUGAR DE EXPEDICION");
+                    headertable.AddCell(txtLugarExpe.Text);
+                    headertable.AddCell("CLIENTE");
+                    headertable.AddCell(comboBox3.Text);
+                    headertable.AddCell("CLAVE DE CLIENTE");
+                    headertable.AddCell(txtNumCliente.Text);
+                    headertable.AddCell("CONDICION COMERCIAL");
+                    headertable.AddCell(txtCondiciones.Text);
+                    headertable.AddCell("MONEDA");
+                    headertable.AddCell(comboMoneda.Text);
+
+
+                    doc.Add(headertable);
+                    doc.Add(spacer);
+
+
+                    //Creacion de Tabla de Cotizacion
+
+                    var columCount = dataGridView1.ColumnCount;
+                    var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
+
+
+                    var table = new PdfPTable(columAncho)
+                    {
+                        HorizontalAlignment = Left,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 22f }
+
+                    };
+
+                    var cell = new PdfPCell(new Phrase("Product Quote"))
+                    {
+
+                        Colspan = columCount,
+                        HorizontalAlignment = 1,
+                        MinimumHeight = 30f
+
+                    };
+
+                    table.AddCell(cell);
+
+                    //Encabezados del DataGridview
+                    dataGridView1.Columns
+                        .OfType<DataGridViewColumn>()
+                        .ToList()
+                        .ForEach(c => table.AddCell(c.Name));
+
+                    //Columnas
+                    dataGridView1.Rows
+                        .OfType<DataGridViewRow>()
+                        .ToList()
+                        .ForEach(r =>
+                        {
+                            var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                            cells.ForEach(c => table.AddCell(c.Value.ToString()));
+
+                        });
+
+                    doc.Add(table);
+
+
+                    var downtable = new PdfPTable(new[] { .5f, .5f })
+                    {
+                        HorizontalAlignment = Right,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 5f }
+
+                    };
+                    doc.Add(spacer);
+
+
+                    downtable.AddCell("Subtotal");
+                    downtable.AddCell(txtSubtotal.Text);
+                    downtable.AddCell("IVA");
+                    downtable.AddCell(txtIva.Text);
+                    downtable.AddCell("Total");
+                    downtable.AddCell(txtTotal.Text);
+
+                    doc.Add(downtable);
+                    doc.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cierre el pdf para poder modificarlo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
     }
