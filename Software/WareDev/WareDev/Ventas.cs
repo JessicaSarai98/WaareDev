@@ -18,6 +18,7 @@ namespace WareDev
             InitializeComponent();
         }
 
+        //tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172
         //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         // karina
@@ -273,7 +274,7 @@ namespace WareDev
 
                     ag.ExecuteNonQuery();
                 }
-                string sqlQuery = "insert into ventas(Id,date,iva, num,nombreP, currency,cond,lugar,subtotal,total) " +
+                string sqlQuery = "insert into ventas(folio,date,iva, num,nombreP, currency,cond,lugar,subtotal,total) " +
                     "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text +"','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
@@ -355,12 +356,12 @@ namespace WareDev
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("select Id from clientes where name= '" + comboBox3.Text + "'", connection);
+            SqlCommand d = new SqlCommand("select RFC from clientes where name= '" + comboBox3.Text + "'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
             {
-                txtNumCliente.Text = r["Id"].ToString();
+                txtNumCliente.Text = r["RFC"].ToString();
             }
             connection.Close();
         }
@@ -799,7 +800,7 @@ namespace WareDev
                     headertable.AddCell(txtLugarExpe.Text);
                     headertable.AddCell("CLIENTE");
                     headertable.AddCell(comboBox3.Text);
-                    headertable.AddCell("CLAVE DE CLIENTE");
+                    headertable.AddCell("RFC/ID");
                     headertable.AddCell(txtNumCliente.Text);
                     headertable.AddCell("CONDICION COMERCIAL");
                     headertable.AddCell(txtCondiciones.Text);
@@ -814,7 +815,7 @@ namespace WareDev
                     //Creacion de Tabla de Cotizacion
 
                     var columCount = dataGridView1.ColumnCount;
-                    var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
+                    var columAncho = new[] { 1f, 2f, 2f, 3f, 3f, 3f, 2f, 2f, 2f };
 
 
                     var table = new PdfPTable(columAncho)
@@ -825,7 +826,7 @@ namespace WareDev
 
                     };
 
-                    var cell = new PdfPCell(new Phrase("Product Quote"))
+                    var cell = new PdfPCell(new Phrase("Informacion de Venta"))
                     {
 
                         Colspan = columCount,
@@ -881,6 +882,11 @@ namespace WareDev
             {
                 MessageBox.Show("Cierre el pdf para poder modificarlo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
 
         }
     }

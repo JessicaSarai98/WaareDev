@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ventas));
             this.contenedor = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txt1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -104,9 +106,6 @@
             this.btrRegreso = new System.Windows.Forms.Button();
             this.imgVentas = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tamaño = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,7 +115,9 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CajaxContenido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -128,7 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // contenedor
@@ -151,6 +151,20 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(1104, 647);
             this.contenedor.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 491);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 45;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1072, 144);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.Visible = false;
             // 
             // tableLayoutPanel1
             // 
@@ -264,12 +278,13 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(764, 10);
+            this.label8.Location = new System.Drawing.Point(798, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 17);
+            this.label8.Size = new System.Drawing.Size(58, 17);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Clave de Cliente";
+            this.label8.Text = "RFC/ID";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -455,6 +470,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1080, 219);
             this.panel2.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Silver;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(958, 133);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 33);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "PDF";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMostrar
             // 
@@ -837,7 +873,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel3.Controls.Add(this.txtCantidad, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnArticulo, 2, 0);
@@ -887,7 +923,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btnArticulo.Image")));
-            this.btnArticulo.Location = new System.Drawing.Point(377, 3);
+            this.btnArticulo.Location = new System.Drawing.Point(376, 3);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(47, 23);
             this.btnArticulo.TabIndex = 11;
@@ -904,7 +940,7 @@
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.Location = new System.Drawing.Point(148, 3);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(223, 27);
+            this.txtProducto.Size = new System.Drawing.Size(222, 27);
             this.txtProducto.TabIndex = 2;
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
@@ -987,7 +1023,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -1012,7 +1048,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(607, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(606, 3);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
             this.BtnAgregar.TabIndex = 36;
@@ -1029,7 +1065,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(180, 7);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(366, 28);
+            this.comboBox1.Size = new System.Drawing.Size(365, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Visible = false;
             // 
@@ -1185,51 +1221,6 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(316, 541);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 45;
-            this.dataGridView3.Size = new System.Drawing.Size(394, 73);
-            this.dataGridView3.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(958, 133);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 33);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "PDF";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 491);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 45;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1072, 144);
-            this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.Visible = false;
-            // 
             // Folio
             // 
             this.Folio.HeaderText = "Folio";
@@ -1293,6 +1284,16 @@
             this.Importe.Name = "Importe";
             this.Importe.ReadOnly = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(316, 541);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 45;
+            this.dataGridView3.Size = new System.Drawing.Size(394, 73);
+            this.dataGridView3.TabIndex = 9;
+            // 
             // ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1306,6 +1307,7 @@
             this.Load += new System.EventHandler(this.ventas_Load);
             this.contenedor.ResumeLayout(false);
             this.contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1324,7 +1326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }

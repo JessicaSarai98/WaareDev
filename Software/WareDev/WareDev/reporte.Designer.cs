@@ -77,12 +77,12 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(936, 287);
+            this.button1.Location = new System.Drawing.Point(927, 287);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 47);
+            this.button1.Size = new System.Drawing.Size(79, 47);
             this.button1.TabIndex = 25;
             this.button1.Text = "Visualizar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
