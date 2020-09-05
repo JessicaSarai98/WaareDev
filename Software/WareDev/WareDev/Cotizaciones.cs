@@ -252,52 +252,100 @@ namespace WareDev
                 doc.Add(headertable);
                 doc.Add(spacer);
 
-
-                //Creacion de Tabla de Cotizacion
-
-                var columCount = TablaDeVenta.ColumnCount;
-                var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
-
-
-                var table = new PdfPTable(columAncho)
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 100,
-                    DefaultCell = { MinimumHeight = 22f }
-
-                };
-
-                var cell = new PdfPCell(new Phrase("Product Quote"))
-                {
-
-                    Colspan = columCount,
-                    HorizontalAlignment = 1,
-                    MinimumHeight = 30f
-
-                };
-
-                table.AddCell(cell);
-
-                //Encabezados del DataGridview
-                TablaDeVenta.Columns
-                    .OfType<DataGridViewColumn>()
-                    .ToList()
-                    .ForEach(c => table.AddCell(c.Name));
-
-                //Columnas
-                TablaDeVenta.Rows
-                    .OfType<DataGridViewRow>()
-                    .ToList()
-                    .ForEach(r =>
+                    if (TablaDeVenta.Visible = Visible)
                     {
-                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
+                        //Creacion de Tabla de Cotizacion
 
-                    });
-
-                doc.Add(table);
+                        var columCount = TablaDeVenta.ColumnCount;
+                        var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
 
 
+                        var table = new PdfPTable(columAncho)
+                        {
+                            HorizontalAlignment = Left,
+                            WidthPercentage = 100,
+                            DefaultCell = { MinimumHeight = 22f }
+
+                        };
+
+                        var cell = new PdfPCell(new Phrase("Product Quote"))
+                        {
+
+                            Colspan = columCount,
+                            HorizontalAlignment = 1,
+                            MinimumHeight = 30f
+
+                        };
+
+                        table.AddCell(cell);
+
+                        //Encabezados del DataGridview
+                        TablaDeVenta.Columns
+                            .OfType<DataGridViewColumn>()
+                            .ToList()
+                            .ForEach(c => table.AddCell(c.Name));
+
+                        //Columnas
+                        TablaDeVenta.Rows
+                            .OfType<DataGridViewRow>()
+                            .ToList()
+                            .ForEach(r =>
+                            {
+                                var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                                cells.ForEach(c => table.AddCell(c.Value.ToString()));
+
+                            });
+
+                        doc.Add(table);
+
+                    }
+                    if(dataGridView1.Visible = Visible)
+                    {
+                        //Creacion de Tabla de Cotizacion para reportes
+
+                        var colums = dataGridView1.ColumnCount;
+                        var columsAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
+
+
+                        var tableReport = new PdfPTable(columsAncho)
+                        {
+                            HorizontalAlignment = Left,
+                            WidthPercentage = 100,
+                            DefaultCell = { MinimumHeight = 22f }
+
+                        };
+
+                        var cellsa = new PdfPCell(new Phrase("Product Quote"))
+                        {
+
+                            Colspan = colums,
+                            HorizontalAlignment = 1,
+                            MinimumHeight = 30f
+
+                        };
+
+                        tableReport.AddCell(cellsa);
+
+                        //Encabezados del DataGridview
+                        dataGridView1.Columns
+                            .OfType<DataGridViewColumn>()
+                            .ToList()
+                            .ForEach(c => tableReport.AddCell(c.Name));
+
+                        //Columnas
+                        dataGridView1.Rows
+                            .OfType<DataGridViewRow>()
+                            .ToList()
+                            .ForEach(r =>
+                            {
+                                var cellsre = r.Cells.OfType<DataGridViewCell>().ToList();
+                                cellsre.ForEach(c => tableReport.AddCell(c.Value.ToString()));
+
+                            });
+
+                        doc.Add(tableReport);
+
+                    }
                     var downtable = new PdfPTable(new[] { .5f, .5f})
                     {
                         HorizontalAlignment = Right,

@@ -274,7 +274,7 @@ namespace WareDev
 
                     ag.ExecuteNonQuery();
                 }
-                string sqlQuery = "insert into ventas(folio,date,iva, num,nombreP, currency,cond,lugar,subtotal,total) " +
+                string sqlQuery = "insert into ventas(Id,date,iva, num,nombreP, currency,cond,lugar,subtotal,total) " +
                     "values('" + txtFolio.Text + "',@fecha,'" + txtIva.Text +"','" + txtNumCliente.Text + "','" + comboBox3.Text + "','" + comboMoneda.Text + "','" + txtCondiciones.Text + "','" + txtLugarExpe.Text + "','" + txtSubtotal.Text + "','" + txtTotal.Text + "')";
                 cmd = new SqlCommand(sqlQuery, connection);
                 cmd.Parameters.AddWithValue("@fecha", dateTimePicker1.Value.Date);
