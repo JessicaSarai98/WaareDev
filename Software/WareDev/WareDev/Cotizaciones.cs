@@ -252,7 +252,10 @@ namespace WareDev
                 doc.Add(headertable);
                 doc.Add(spacer);
 
-                    if (TablaDeVenta.Visible = Visible)
+                    bool V = true;
+                    
+
+                    if (TablaDeVenta.Visible = V)
                     {
                         //Creacion de Tabla de Cotizacion
 
@@ -299,15 +302,16 @@ namespace WareDev
                         doc.Add(table);
 
                     }
-                    if(dataGridView1.Visible = Visible)
+                    
+                    if(dataGridView1.Visible=V)
                     {
-                        //Creacion de Tabla de Cotizacion para reportes
+                        //Creacion de Tabla de Cotizacion
 
-                        var colums = dataGridView1.ColumnCount;
-                        var columsAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
+                        var columCount = dataGridView1.ColumnCount;
+                        var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
 
 
-                        var tableReport = new PdfPTable(columsAncho)
+                        var table = new PdfPTable(columAncho)
                         {
                             HorizontalAlignment = Left,
                             WidthPercentage = 100,
@@ -315,22 +319,22 @@ namespace WareDev
 
                         };
 
-                        var cellsa = new PdfPCell(new Phrase("Product Quote"))
+                        var cell = new PdfPCell(new Phrase("Cotizacion"))
                         {
 
-                            Colspan = colums,
+                            Colspan = columCount,
                             HorizontalAlignment = 1,
                             MinimumHeight = 30f
 
                         };
 
-                        tableReport.AddCell(cellsa);
+                        table.AddCell(cell);
 
                         //Encabezados del DataGridview
                         dataGridView1.Columns
                             .OfType<DataGridViewColumn>()
                             .ToList()
-                            .ForEach(c => tableReport.AddCell(c.Name));
+                            .ForEach(c => table.AddCell(c.Name));
 
                         //Columnas
                         dataGridView1.Rows
@@ -338,14 +342,16 @@ namespace WareDev
                             .ToList()
                             .ForEach(r =>
                             {
-                                var cellsre = r.Cells.OfType<DataGridViewCell>().ToList();
-                                cellsre.ForEach(c => tableReport.AddCell(c.Value.ToString()));
+                                var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                                cells.ForEach(c => table.AddCell(c.Value.ToString()));
 
                             });
 
-                        doc.Add(tableReport);
+                        doc.Add(table);
+
 
                     }
+
                     var downtable = new PdfPTable(new[] { .5f, .5f})
                     {
                         HorizontalAlignment = Right,
