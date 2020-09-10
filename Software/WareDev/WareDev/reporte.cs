@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Collections.Generic;
 
 namespace WareDev
 {
@@ -14,8 +13,10 @@ namespace WareDev
         }
         //jess
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        //karina
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
+        //karina Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf";Integrated Security=True;Connect Timeout=30
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+
+        //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
         SqlCommand cmd;
         private void reporte_Load(object sender, EventArgs e)
         {
@@ -187,6 +188,7 @@ namespace WareDev
                     inf.txtCantidad.Enabled = false;
                     inf.cantidad.Text = "0";
 
+                    inf.button2.Visible = false;
                     inf.btnArticulo.Visible = false;
                     inf.btnMostrar.Visible = true;
                     inf.button4.Visible = false;
@@ -271,6 +273,7 @@ namespace WareDev
                     coti.btnArticulo.Visible = false;
                     coti.btnAgregarProd.Visible = false;
                     coti.btnEliminar.Visible = false;
+                    coti.button2.Visible = false;
                     coti.button3.Visible = false;
                     coti.button1.Visible = false;
                     coti.button5.Visible = false;

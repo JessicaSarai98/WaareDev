@@ -1,4 +1,6 @@
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.config
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe.manifest
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.application
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\WareDev.pdb
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\bin\Debug\Common.exe
@@ -46,6 +48,10 @@ C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\Wa
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.UsersListcs.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.ventas.resources
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.GenerateResource.cache
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.TrustInfo.xml
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe.manifest
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.application
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csproj.CopyComplete
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.exe
 C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.pdb
+C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\obj\Debug\WareDev.csprojAssemblyReference.cache

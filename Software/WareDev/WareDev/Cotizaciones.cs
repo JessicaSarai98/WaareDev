@@ -15,14 +15,12 @@ namespace WareDev
         {
             InitializeComponent();
 
-        }
-        // JESS
-        // SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        // karina 
-        SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; Initial Catalog = C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security = True");
+        } 
+        //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlCommand cmd; 
-        SqlCommand cmd2; 
+        SqlCommand cmd;
+        SqlCommand cmd2;
         private void cotizaciones_Load(object sender, EventArgs e)
         {
             //Date.Value = DateTime.Today;
@@ -30,15 +28,15 @@ namespace WareDev
             txtCantidad.Enabled = false;
             SqlCommand cm = new SqlCommand("select Id from clientes", connection);
 
-           
+
 
             //leyendp clientes - nombre
             SqlCommand d = new SqlCommand("select name from clientes", connection);
             SqlCommand a = new SqlCommand("Select RFC from clientes where name='" + Customer.Text + "'", connection);
 
             connection.Open();
-            SqlDataReader r = d.ExecuteReader(); 
-            
+            SqlDataReader r = d.ExecuteReader();
+
             while (r.Read())
             {
                 Customer.Items.Add(r["name"].ToString());
@@ -75,7 +73,8 @@ namespace WareDev
                         txtFolio.Text = pcountAdd.ToString();
                     }
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -102,14 +101,14 @@ namespace WareDev
             this.dataGridView1.Columns[6].HeaderText = "Medida";
             this.dataGridView1.Columns[7].HeaderText = "Tamaño";
             this.dataGridView1.Columns[8].HeaderText = "Precio";
-            
+
 
         }
 
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("If you want to modify the same PDF, you must close the document before", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Si quieres modificar el mismo PDF, cierralo de aplicaciones externas.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
                 Document doc = new Document(PageSize.A4);
@@ -141,164 +140,178 @@ namespace WareDev
                         FileMode.OpenOrCreate,
                         FileAccess.ReadWrite,
                         FileShare.ReadWrite);
-                PdfWriter.GetInstance(doc, file);
+                    PdfWriter.GetInstance(doc, file);
 
 
-                //Margenes del documento 
-                doc.SetMargins(30, 30, 10, 10);
+                    //Margenes del documento 
+                    doc.SetMargins(30, 30, 10, 10);
 
 
-                // Le colocamos el título y el autor
-                // Esto no será visible en el documento
-                doc.AddTitle("Cotizacion");
+                    // Le colocamos el título y el autor
+                    // Esto no será visible en el documento
+                    doc.AddTitle("Cotizacion");
 
 
-                //Se estipula de fuente de escritura 
-                iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                    //Se estipula de fuente de escritura 
+                    iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
 
-                //fuente de escritura del titulo 
-                var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
-
-
-                // Abrimos el archivo
-                doc.Open();
+                    //fuente de escritura del titulo 
+                    var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
 
 
-
-                //Espacio entre parrafos
-                var spacer = new Paragraph("")
-                {
-                    SpacingBefore = 10f,
-                    SpacingAfter = 10f,
-                };
-
-
-                //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var imagenpath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Informacion.jpeg";
-
-                using (FileStream im = new FileStream(imagenpath, FileMode.Open))
-                {
-                    var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
-                    //(x,y)
-                    jpg.SetAbsolutePosition(450, 0);
-                    jpg.ScalePercent(25, 25);
-                    doc.Add(jpg);
-
-                }
-
-                //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
-
-                using (FileStream im = new FileStream(Logopath, FileMode.Open))
-                {
-                    var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
-                    //(x,y)
-                    png.SetAbsolutePosition(190, 770);
-                    png.ScalePercent(15, 15);
-                    doc.Add(png);
-
-                }
+                    // Abrimos el archivo
+                    doc.Open();
 
 
 
-                // Escribimos el encabezamiento en el documento
-                var titulo = new Paragraph("PROMOTORA Y COMERCIALIZADORA COSTA MAYA S.A DE C.V.", fuentetitulo);
-
-
-                titulo.SpacingBefore = 0;
-                titulo.Alignment = 2;
-                doc.Add(titulo);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(spacer);
-
-                // Creamos la tabla con con la infromacion de cliente y vendedor 
-
-                var headertable = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 100,
-                    DefaultCell = { MinimumHeight = 22f }
-
-                };
-                doc.Add(spacer);
-
-                //Creacion de Tabla de datos de comprador 
-                headertable.AddCell("FECHA");
-                headertable.AddCell(DateTime.Now.ToString());
-                headertable.AddCell("VALIDO HASTA");
-                headertable.AddCell(Expiration.Text);
-                headertable.AddCell("COTIZACION");
-                headertable.AddCell(txtFolio.Text);
-                headertable.AddCell("LUGAR DE EXPEDICION");
-                headertable.AddCell(place.Text);
-                headertable.AddCell("CLAVE DE CLIENTE");
-                headertable.AddCell(Customer.Text);
-                headertable.AddCell("CONDICION COMERCIAL");
-                headertable.AddCell(Condicion.Text);
-                headertable.AddCell("RCF / ID");
-                headertable.AddCell(IdClient.Text);
-                headertable.AddCell("PRODUCTO");
-                headertable.AddCell(textBox1.Text);
-                headertable.AddCell("PALLET");
-                headertable.AddCell(pallet.Text);
-                headertable.AddCell("ICOTERM");
-                headertable.AddCell(ico.Text);
-                headertable.AddCell("Divisa");
-                headertable.AddCell(divisa.Text);
-                headertable.AddCell("Flete x Caja");
-                headertable.AddCell(flete.Text);
-                
-
-                doc.Add(headertable);
-                doc.Add(spacer);
-
-
-                //Creacion de Tabla de Cotizacion
-
-                var columCount = TablaDeVenta.ColumnCount;
-                var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
-
-
-                var table = new PdfPTable(columAncho)
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 100,
-                    DefaultCell = { MinimumHeight = 22f }
-
-                };
-
-                var cell = new PdfPCell(new Phrase("Product Quote"))
-                {
-
-                    Colspan = columCount,
-                    HorizontalAlignment = 1,
-                    MinimumHeight = 30f
-
-                };
-
-                table.AddCell(cell);
-
-                //Encabezados del DataGridview
-                TablaDeVenta.Columns
-                    .OfType<DataGridViewColumn>()
-                    .ToList()
-                    .ForEach(c => table.AddCell(c.Name));
-
-                //Columnas
-                TablaDeVenta.Rows
-                    .OfType<DataGridViewRow>()
-                    .ToList()
-                    .ForEach(r =>
+                    //Espacio entre parrafos
+                    var spacer = new Paragraph("")
                     {
-                        var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                        cells.ForEach(c => table.AddCell(c.Value.ToString()));
-
-                    });
-
-                doc.Add(table);
+                        SpacingBefore = 10f,
+                        SpacingAfter = 10f,
+                    };
 
 
-                    var downtable = new PdfPTable(new[] { .5f, .5f})
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+
+                    using (FileStream im = new FileStream(imagenpath, FileMode.Open))
+                    {
+                        var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        jpg.SetAbsolutePosition(450, 0);
+                        jpg.ScalePercent(25, 25);
+                        doc.Add(jpg);
+
+                    }
+
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+
+                    using (FileStream im = new FileStream(Logopath, FileMode.Open))
+                    {
+                        var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        png.SetAbsolutePosition(190, 770);
+                        png.ScalePercent(15, 15);
+                        doc.Add(png);
+
+                    }
+
+
+
+                    // Escribimos el encabezamiento en el documento
+                    var titulo = new Paragraph("PROMOTORA Y COMERCIALIZADORA COSTA MAYA S.A DE C.V.", fuentetitulo);
+
+
+                    titulo.SpacingBefore = 0;
+                    titulo.Alignment = 2;
+                    doc.Add(titulo);
+                    doc.Add(Chunk.NEWLINE);
+                    doc.Add(spacer);
+
+                    // Creamos la tabla con con la infromacion de cliente y vendedor 
+
+                    var headertable = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
+                    {
+                        HorizontalAlignment = Left,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 22f }
+
+                    };
+                    doc.Add(spacer);
+
+                    //Creacion de Tabla de datos de comprador 
+                    headertable.AddCell("FECHA");
+                    headertable.AddCell(DateTime.Now.ToString());
+                    headertable.AddCell("VALIDO HASTA");
+                    headertable.AddCell(Expiration.Text);
+                    headertable.AddCell("COTIZACION");
+                    headertable.AddCell(txtFolio.Text);
+                    headertable.AddCell("LUGAR DE EXPEDICION");
+                    headertable.AddCell(place.Text);
+                    headertable.AddCell("CLAVE DE CLIENTE");
+                    headertable.AddCell(Customer.Text);
+                    headertable.AddCell("CONDICION COMERCIAL");
+                    headertable.AddCell(Condicion.Text);
+                    headertable.AddCell("RCF / ID");
+                    headertable.AddCell(IdClient.Text);
+                    headertable.AddCell("PRODUCTO");
+                    headertable.AddCell(textBox1.Text);
+                    headertable.AddCell("PALLET");
+                    headertable.AddCell(pallet.Text);
+                    headertable.AddCell("ICOTERM");
+                    headertable.AddCell(ico.Text);
+                    headertable.AddCell("Divisa");
+                    headertable.AddCell(divisa.Text);
+                    headertable.AddCell("Flete x Caja");
+                    headertable.AddCell(flete.Text);
+
+
+                    doc.Add(headertable);
+                    doc.Add(spacer);
+
+                    bool V = true;
+
+                    TablaDeVenta.Visible = true;
+                    if (TablaDeVenta.Visible = V)
+                    {
+                        dataGridView1.Visible = false;
+                        //Creacion de Tabla de Cotizacion
+
+                        var columCount = TablaDeVenta.ColumnCount;
+                        var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
+
+
+                        var table = new PdfPTable(columAncho)
+                        {
+                            HorizontalAlignment = Left,
+                            WidthPercentage = 100,
+                            DefaultCell = { MinimumHeight = 22f }
+
+                        };
+
+                        var cell = new PdfPCell(new Phrase("Product Quote"))
+                        {
+
+                            Colspan = columCount,
+                            HorizontalAlignment = 1,
+                            MinimumHeight = 30f
+
+                        };
+
+                        table.AddCell(cell);
+
+                        //Encabezados del DataGridview
+                        TablaDeVenta.Columns
+                            .OfType<DataGridViewColumn>()
+                            .ToList()
+                            .ForEach(c => table.AddCell(c.Name));
+
+                        //Columnas
+                        TablaDeVenta.Rows
+                            .OfType<DataGridViewRow>()
+                            .ToList()
+                            .ForEach(r =>
+                            {
+                                var cells = r.Cells.OfType<DataGridViewCell>().ToList();
+                                cells.ForEach(c => table.AddCell(c.Value.ToString()));
+
+                            });
+
+                        doc.Add(table);
+
+                    }
+
+                    dataGridView1.Visible = true;
+
+                    if (dataGridView1.Visible = V)
+                    {
+                        TablaDeVenta.Visible = false;
+                        button2.Visible = false;
+                    }
+
+                    var downtable = new PdfPTable(new[] { .5f, .5f })
                     {
                         HorizontalAlignment = Right,
                         WidthPercentage = 100,
@@ -307,7 +320,7 @@ namespace WareDev
                     };
                     doc.Add(spacer);
 
-                   
+
                     downtable.AddCell("Subtotal");
                     downtable.AddCell(txtSubtotal.Text);
                     downtable.AddCell("IVA");
@@ -329,7 +342,7 @@ namespace WareDev
         private void button5_Click(object sender, EventArgs e)
         {
             pallet.Text = string.Empty;
-            place.Text= string.Empty;
+            place.Text = string.Empty;
             Condicion.Text = string.Empty;
             Customer.Text = string.Empty;
             txtSubtotal.Text = string.Empty;
@@ -351,8 +364,8 @@ namespace WareDev
         }
 
         DataTable dt = new DataTable();
-        DataTable dt2 = new DataTable(); 
-        
+        DataTable dt2 = new DataTable();
+
 
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -362,15 +375,15 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Seleccione una fila.","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccione una fila.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1) 
-                && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) && 
-                (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) && 
+            if ((this.Date != null) && (this.pallet.Text.Length >= 1) && (this.place.Text.Length >= 1)
+                && (this.Condicion.Text.Length >= 1) && (this.Expiration != null) &&
+                (this.IdClient.Text.Length >= 1) && (this.ico.Text.Length >= 1) &&
                 (this.Customer.Text.Length >= 1) && (this.txtSubtotal.Text.Length >= 1) && (this.txtTotal.Text.Length >= 1) && (this.divisa.Text.Length >= 1))
             {
                 connection.Open();
@@ -391,45 +404,45 @@ namespace WareDev
                     ad.Parameters.AddWithValue("@medida", Convert.ToString(row.Cells["Size"].Value));
                     ad.Parameters.AddWithValue("@tam", Convert.ToString(row.Cells["Tamaño"].Value));
                     ad.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["PrecioxUnidad"].Value));
-                    
+
                     ad.ExecuteNonQuery();
 
                 }
 
-            string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, " +
-                    "icoterm, customerName,subtotal,total,currency, IVA,place,cond, producto, flete) " +
-                    "values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" +
-                    IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text +
-                    "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text +
-                    "','" + Condicion.Text + "', '"+textBox1.Text+"', '"+flete.Text+"')";
-            cmd = new SqlCommand(sqlQuery, connection);
-            cmd.Parameters.AddWithValue("@date", Date.Value);
-            cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
-            cmd.ExecuteNonQuery();
-            connection.Close();
+                string sqlQuery = "insert into quotations(Id, date, pallet, expiration, idCliente, " +
+                        "icoterm, customerName,subtotal,total,currency, IVA,place,cond, producto, flete) " +
+                        "values('" + txtFolio.Text + "',@date,'" + pallet.Text + "', @expiration, '" +
+                        IdClient.Text + "','" + ico.Text + "','" + Customer.Text + "','" + txtSubtotal.Text +
+                        "','" + txtTotal.Text + "','" + divisa.Text + "','" + txtIva.Text + "','" + place.Text +
+                        "','" + Condicion.Text + "', '" + textBox1.Text + "', '" + flete.Text + "')";
+                cmd = new SqlCommand(sqlQuery, connection);
+                cmd.Parameters.AddWithValue("@date", Date.Value);
+                cmd.Parameters.AddWithValue("@expiration", Expiration.Value);
+                cmd.ExecuteNonQuery();
+                connection.Close();
 
-                decimal total = 0;
-                string a; 
+                //decimal total = 0;
+                //string a;
 
-                foreach(DataGridViewRow row in TablaDeVenta.Rows)
-                {
-                    connection.Open();
-                    total = Convert.ToDecimal(row.Cells[7].Value);
-                    a = Convert.ToString(row.Cells[4].Value);
-                    string sqlQuery2 = "update FinishedProducts set amountPurchased = amountPurchased - '"+total+"'where name= '"+a+"'";
-                    cmd2 = new SqlCommand(sqlQuery2, connection);
-                    cmd2.ExecuteNonQuery();
-                    connection.Close();
-                }
+                //foreach (DataGridViewRow row in TablaDeVenta.Rows)
+                //{
+                //    connection.Open();
+                //    total = Convert.ToDecimal(row.Cells[7].Value);
+                //    a = Convert.ToString(row.Cells[4].Value);
+                //    string sqlQuery2 = "update FinishedProducts set amountPurchased = amountPurchased - '" + total + "'where name= '" + a + "'";
+                //    cmd2 = new SqlCommand(sqlQuery2, connection);
+                //    cmd2.ExecuteNonQuery();
+                //    connection.Close();
+                //}
 
-            MessageBox.Show("Se ha agregado la venta", "Mensaje", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBox.Show("Se ha agregado la cotización", "Mensaje", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
                 this.Close();
 
             }
             else
             {
-                MessageBox.Show("Complete todos los campos", "Mensaje", 
+                MessageBox.Show("Complete todos los campos", "Mensaje",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -438,7 +451,7 @@ namespace WareDev
         {
             //DataRow dr;
             connection.Open();
-            SqlCommand a = new SqlCommand("select name from clientes where Id=@ID",connection);
+            SqlCommand a = new SqlCommand("select name from clientes where Id=@ID", connection);
             SqlDataAdapter sda = new SqlDataAdapter(a);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -448,16 +461,16 @@ namespace WareDev
             Customer.DisplayMember = "name";
 
             Customer.DataSource = dt;
-            connection.Close(); 
+            connection.Close();
         }
         private void Customer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("Select RFC from clientes where name = '"+Customer.Text+"'", connection);
+            SqlCommand d = new SqlCommand("Select RFC from clientes where name = '" + Customer.Text + "'", connection);
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
             while (r.Read())
             {
-                IdClient.Text = r["RFC"].ToString(); 
+                IdClient.Text = r["RFC"].ToString();
             }
             connection.Close();
         }
@@ -470,13 +483,13 @@ namespace WareDev
         }
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
-            if (txtProducto.Text !="")
+            if (txtProducto.Text != "")
             {
-                if(txtCantidad.Text!= "")
+                if (txtCantidad.Text != "")
                 {
-                    if(txtPallet.Text != "")
+                    if (txtPallet.Text != "")
                     {
-                        TablaDeVenta.Rows.Add(txtFolio.Text,txtPallet.Text,txtMedida.Text,txtTam.Text,txtProducto.Text, txtDescripcion.Text,txtPrecio.Text,txtCantidad.Text, txtPrecioTotal.Text);
+                        TablaDeVenta.Rows.Add(txtFolio.Text, txtPallet.Text, txtMedida.Text, txtTam.Text, txtProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text, txtPrecioTotal.Text);
                         txtProducto.Text = string.Empty;
                         txtCantidad.Text = string.Empty;
                         txtDescripcion.Text = string.Empty;
@@ -501,14 +514,14 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Seleccione un producto para agregarlo a la tabla", "Mensaje", 
+                MessageBox.Show("Seleccione un producto para agregarlo a la tabla", "Mensaje",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if(txtIva.Text!= "")
+            if (txtIva.Text != "")
             {
                 txtProducto.Text = string.Empty;
                 txtCantidad.Text = string.Empty;
@@ -518,8 +531,8 @@ namespace WareDev
                 txtTam.Text = string.Empty;
                 txtPrecio.Text = string.Empty;
 
-                decimal total = 0; 
-                foreach(DataGridViewRow row in TablaDeVenta.Rows)
+                decimal total = 0;
+                foreach (DataGridViewRow row in TablaDeVenta.Rows)
                 {
                     total += Convert.ToDecimal(row.Cells[8].Value);
                 }
@@ -533,50 +546,21 @@ namespace WareDev
             }
             else
             {
-                MessageBox.Show("Ingrese IVA","Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese IVA", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(TablaDeVenta.SelectedRows.Count > 0)
+            if (TablaDeVenta.SelectedRows.Count > 0)
             {
                 TablaDeVenta.Rows.Remove(TablaDeVenta.CurrentRow);
             }
             else
             {
-                MessageBox.Show("Seleccione una fila","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Seleccione una fila", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-            float n1, n2, a;
-            if (txtCantidad.Text != "")
-            {
-                if (Convert.ToDecimal(txtCan.Text) != 0)
-                {
-                    if (Convert.ToDecimal(txtCantidad.Text) <= Convert.ToDecimal(txtCan.Text))
-                    {
-                        n1 = Convert.ToInt32(txtCantidad.Text);
-                        n2 = Convert.ToSingle(txtPrecio.Text);
-                        a = n1 * n2;
-                        txtPrecioTotal.Text = a.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: " + txtCan.Text);
-                        txtCantidad.Text = string.Empty;
-                    }
-                }
-                //else
-                //{
-                //    MessageBox.Show("No hay cantidad disponible");
-                //}
-
-            }
-        }
-        
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -595,7 +579,7 @@ namespace WareDev
 
         private void btrRegreso_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
         int posX;
         int posY;
@@ -613,16 +597,6 @@ namespace WareDev
             }
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             SqlCommand com = new SqlCommand("select * from quotations where Id='" + txtFolio.Text + "'", connection);
@@ -633,17 +607,12 @@ namespace WareDev
             dataGridView1.DataSource = tabla;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtProducto.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
-            txtCantidad.Text =  dataGridView1.CurrentRow.Cells["cantidad"].Value.ToString();
+            txtCantidad.Text = dataGridView1.CurrentRow.Cells["cantidad"].Value.ToString();
             txtDescripcion.Text = dataGridView1.CurrentRow.Cells["desc"].Value.ToString();
-            txtPallet.Text =  dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
+            txtPallet.Text = dataGridView1.CurrentRow.Cells["pallet"].Value.ToString();
             txtMedida.Text = dataGridView1.CurrentRow.Cells["medida"].Value.ToString();
             txtTam.Text = dataGridView1.CurrentRow.Cells["tam"].Value.ToString();
             txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
@@ -665,6 +634,29 @@ namespace WareDev
 
             //}
         }
+
+        private void txtCantidad_TextChanged_1(object sender, EventArgs e)
+        {
+            float n1, n2, a;
+            if (txtCantidad.Text != "")
+            {
+                if (Convert.ToDecimal(txtCan.Text) != 0)
+                {
+                    if (Convert.ToDecimal(txtCantidad.Text) <= Convert.ToDecimal(txtCan.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        txtPrecioTotal.Text = a.ToString();
+                    }
+                }
+
+            }
+        }
+
+        private void txtPallet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarDatos.SoloNumeros(e);
+        }
     }
 }
-

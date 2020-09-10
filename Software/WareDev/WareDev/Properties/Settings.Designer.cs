@@ -12,7 +12,7 @@ namespace WareDev.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace WareDev.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source = (LocalDB)\\MSSQLLocalDB; Initial Catalog = C:\\Users\\William carmona\\" +
-            "Documents\\users.mdf;Integrated Security = True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=tcp:OMEN-LAPTOP18\\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ;" +
+            " Password=cliente1234; Connect Timeout = 30")]
         public string usersConnectionString {
             get {
                 return ((string)(this["usersConnectionString"]));
