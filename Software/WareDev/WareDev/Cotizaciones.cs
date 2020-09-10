@@ -253,10 +253,11 @@ namespace WareDev
                 doc.Add(spacer);
 
                     bool V = true;
-                    
 
+                    TablaDeVenta.Visible = true;
                     if (TablaDeVenta.Visible = V)
                     {
+                        dataGridView1.Visible = false;
                         //Creacion de Tabla de Cotizacion
 
                         var columCount = TablaDeVenta.ColumnCount;
@@ -302,54 +303,13 @@ namespace WareDev
                         doc.Add(table);
 
                     }
-                    
+
+                    dataGridView1.Visible = true;
+
                     if(dataGridView1.Visible=V)
                     {
-                        //Creacion de Tabla de Cotizacion
-
-                        var columCount = dataGridView1.ColumnCount;
-                        var columAncho = new[] { 1f, 2f, 2f, 3f, 1f, 2f, 2f, 2f, 2f };
-
-
-                        var table = new PdfPTable(columAncho)
-                        {
-                            HorizontalAlignment = Left,
-                            WidthPercentage = 100,
-                            DefaultCell = { MinimumHeight = 22f }
-
-                        };
-
-                        var cell = new PdfPCell(new Phrase("Cotizacion"))
-                        {
-
-                            Colspan = columCount,
-                            HorizontalAlignment = 1,
-                            MinimumHeight = 30f
-
-                        };
-
-                        table.AddCell(cell);
-
-                        //Encabezados del DataGridview
-                        dataGridView1.Columns
-                            .OfType<DataGridViewColumn>()
-                            .ToList()
-                            .ForEach(c => table.AddCell(c.Name));
-
-                        //Columnas
-                        dataGridView1.Rows
-                            .OfType<DataGridViewRow>()
-                            .ToList()
-                            .ForEach(r =>
-                            {
-                                var cells = r.Cells.OfType<DataGridViewCell>().ToList();
-                                cells.ForEach(c => table.AddCell(c.Value.ToString()));
-
-                            });
-
-                        doc.Add(table);
-
-
+                        TablaDeVenta.Visible = false;
+                        button2.Visible = false;
                     }
 
                     var downtable = new PdfPTable(new[] { .5f, .5f})
@@ -702,7 +662,7 @@ namespace WareDev
             txtTam.Text = dataGridView1.CurrentRow.Cells["tam"].Value.ToString();
             txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
 
-
+           
         }
 
         private void txtProducto_TextChanged(object sender, EventArgs e)

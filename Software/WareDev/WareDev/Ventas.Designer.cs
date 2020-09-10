@@ -873,7 +873,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel3.Controls.Add(this.txtCantidad, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnArticulo, 2, 0);
@@ -896,7 +896,7 @@
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(148, 34);
+            this.txtCantidad.Location = new System.Drawing.Point(147, 34);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(87, 27);
             this.txtCantidad.TabIndex = 12;
@@ -923,7 +923,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btnArticulo.Image")));
-            this.btnArticulo.Location = new System.Drawing.Point(375, 3);
+            this.btnArticulo.Location = new System.Drawing.Point(374, 3);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(47, 23);
             this.btnArticulo.TabIndex = 11;
@@ -938,7 +938,7 @@
             this.txtProducto.BackColor = System.Drawing.Color.White;
             this.txtProducto.Enabled = false;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(148, 3);
+            this.txtProducto.Location = new System.Drawing.Point(147, 3);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(221, 27);
             this.txtProducto.TabIndex = 2;
@@ -961,7 +961,7 @@
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.830189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(16, 66);
+            this.label17.Location = new System.Drawing.Point(15, 66);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(113, 36);
             this.label17.TabIndex = 19;
@@ -974,7 +974,7 @@
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPrecio.Location = new System.Drawing.Point(148, 70);
+            this.txtPrecio.Location = new System.Drawing.Point(147, 70);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(87, 28);
             this.txtPrecio.TabIndex = 23;
@@ -1023,7 +1023,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -1048,7 +1048,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.Silver;
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(606, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(605, 3);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(104, 37);
             this.BtnAgregar.TabIndex = 36;
@@ -1065,7 +1065,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(179, 7);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(365, 28);
+            this.comboBox1.Size = new System.Drawing.Size(364, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Visible = false;
             // 

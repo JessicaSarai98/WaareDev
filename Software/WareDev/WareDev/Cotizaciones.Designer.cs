@@ -1115,7 +1115,6 @@ namespace WareDev
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public System.Windows.Forms.TextBox txtDescripcion;
@@ -1174,5 +1173,6 @@ namespace WareDev
         public System.Windows.Forms.DataGridView TablaDeVenta;
         public System.Windows.Forms.TextBox txtFolio;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button button2;
     }
 }

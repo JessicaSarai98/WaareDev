@@ -7,7 +7,7 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="WareDev.exe.manifest" size="10413">
+    <dependentAssembly dependencyType="install" codebase="Application Files\WareDev_1_0_0_9\WareDev.exe.manifest" size="10413">
       <assemblyIdentity name="WareDev.exe" version="1.0.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>

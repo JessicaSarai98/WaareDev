@@ -187,6 +187,7 @@ namespace WareDev
                     inf.txtCantidad.Enabled = false;
                     inf.cantidad.Text = "0";
 
+                    inf.button2.Visible = false;
                     inf.btnArticulo.Visible = false;
                     inf.btnMostrar.Visible = true;
                     inf.button4.Visible = false;
@@ -271,6 +272,7 @@ namespace WareDev
                     coti.btnArticulo.Visible = false;
                     coti.btnAgregarProd.Visible = false;
                     coti.btnEliminar.Visible = false;
+                    coti.button2.Visible = false;
                     coti.button3.Visible = false;
                     coti.button1.Visible = false;
                     coti.button5.Visible = false;

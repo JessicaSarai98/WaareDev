@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1732096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1731584">
       <assemblyIdentity name="WareDev" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>74m4PsqpcmgQqhOO2IR1YjTsFxItI/x0AMdhKusyWhw=</dsig:DigestValue>
+        <dsig:DigestValue>ySi06+iws6U52Z6Zj8Vz4/2xwQBBbaopcV1/yMQ6gAQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
