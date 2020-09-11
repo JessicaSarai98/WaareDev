@@ -873,7 +873,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel3.Controls.Add(this.txtCantidad, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnArticulo, 2, 0);
@@ -923,7 +923,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnArticulo.Image = ((System.Drawing.Image)(resources.GetObject("btnArticulo.Image")));
-            this.btnArticulo.Location = new System.Drawing.Point(374, 3);
+            this.btnArticulo.Location = new System.Drawing.Point(373, 3);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(47, 23);
             this.btnArticulo.TabIndex = 11;
@@ -940,7 +940,7 @@
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.Location = new System.Drawing.Point(147, 3);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(221, 27);
+            this.txtProducto.Size = new System.Drawing.Size(220, 27);
             this.txtProducto.TabIndex = 2;
             this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
@@ -1023,7 +1023,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24756F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75244F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
             this.tableLayoutPanel2.Controls.Add(this.BtnAgregar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -1065,7 +1065,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(179, 7);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(364, 28);
+            this.comboBox1.Size = new System.Drawing.Size(363, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Visible = false;
             // 

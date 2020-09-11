@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Common.cache;
 using Domain;
+using System.Data.SqlClient;
 
 namespace WareDev
 {
@@ -25,6 +26,8 @@ namespace WareDev
         {
             InitializeComponent();
         }
+
+        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
 
         /*Libreria para general el efecto de movel con el mouse*/
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -251,6 +254,32 @@ namespace WareDev
         private void name_MouseHover(object sender, EventArgs e)
         {
             name.BackColor = Color.FromArgb(98, 226, 45);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre_copia = (System.DateTime.Today.Day.ToString() + "-" + DateTime.Today.Month.ToString() + "-" + DateTime.Today.Year.ToString() + "-" + DateTime.Today.Hour.ToString() + "-" + DateTime.Today.Minute.ToString() + "-" + DateTime.Today.Second.ToString() + "WareDev_Copy_DB");
+
+            string comando_consulta = "BACKUP DATABASE [fruteria] TO  DISK = N'C:\\Users\\AdriFdez18\\Desktop\\Extra\\RR Tecnology\\Respaldo BD\\" + nombre_copia + "' WITH NOFORMAT, NOINIT,  NAME = N'fruteria-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
+
+            SqlCommand cmd = new SqlCommand(comando_consulta, connection);
+
+            try
+            {
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("La copia de seguridad se creo correctamente");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Si desea otra copia de seguridad, por favor espere o cierra e intentelo de nuevo");
+            }
+            finally{
+
+                connection.Close();
+                connection.Dispose();
+            }
+
         }
     }
 }

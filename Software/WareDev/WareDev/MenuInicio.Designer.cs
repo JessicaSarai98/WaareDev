@@ -53,6 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nombreEmpresa = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -68,6 +69,7 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(210)))), ((int)(((byte)(43)))));
+            this.menu.Controls.Add(this.button1);
             this.menu.Controls.Add(this.btnReportes);
             this.menu.Controls.Add(this.btnInven);
             this.menu.Controls.Add(this.btnProve);
@@ -337,7 +339,7 @@
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(635, 39);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(242, 26);
+            this.fecha.Size = new System.Drawing.Size(278, 29);
             this.fecha.TabIndex = 1;
             this.fecha.Text = "30 de marzo del 2020";
             // 
@@ -348,7 +350,7 @@
             this.hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.Location = new System.Drawing.Point(697, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(149, 37);
+            this.hora.Size = new System.Drawing.Size(159, 39);
             this.hora.TabIndex = 0;
             this.hora.Text = "17:52:00";
             // 
@@ -402,6 +404,25 @@
             this.nombreEmpresa.TabIndex = 21;
             this.nombreEmpresa.Text = "AGROINDUSTRIAS  LUMA\r\nCOMERCIALIZADORA S.A. DE C.V.\r\n";
             this.nombreEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 520);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(250, 54);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Copia de Seguridad";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MenuInicio
             // 
@@ -458,5 +479,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Button button1;
     }
 }
