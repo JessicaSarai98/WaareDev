@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 using Domain;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.IO; 
 
 
 namespace WareDev
@@ -54,7 +52,8 @@ namespace WareDev
             // jess
             //string con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30";
             // karina
-            string con = @"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234";
+            //string con = @"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234";
+            string con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30";
 
 
             SqlConnection conn = new SqlConnection(con);

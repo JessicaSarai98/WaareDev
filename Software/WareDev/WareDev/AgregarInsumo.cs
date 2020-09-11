@@ -5,11 +5,8 @@ namespace WareDev
 {
     public partial class Agregar : Form
     {
-        // JESS
-        //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-SDO1671B;Initial Catalog=users;Integrated Security=True;Pooling=False");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
-        // KARINA
-        SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
+        //SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlCommand cmd3;
@@ -114,6 +111,11 @@ namespace WareDev
         private void titulo_Click(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

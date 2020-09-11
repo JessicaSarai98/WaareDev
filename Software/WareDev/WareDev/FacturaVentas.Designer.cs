@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.certificado = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtNoCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCertificado = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.txtSub = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.top = new System.Windows.Forms.Panel();
             this.txtVentas = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             "Euro"});
             this.comboIncoterm.Location = new System.Drawing.Point(143, 43);
             this.comboIncoterm.Name = "comboIncoterm";
-            this.comboIncoterm.Size = new System.Drawing.Size(114, 30);
+            this.comboIncoterm.Size = new System.Drawing.Size(114, 28);
             this.comboIncoterm.TabIndex = 31;
             this.comboIncoterm.TabStop = false;
             // 
@@ -137,9 +137,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 90);
+            this.label2.Location = new System.Drawing.Point(305, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(50, 18);
             this.label2.TabIndex = 24;
             this.label2.Text = "Clave";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,9 +149,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 90);
+            this.label1.Location = new System.Drawing.Point(23, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(94, 18);
             this.label1.TabIndex = 23;
             this.label1.Text = "Subdivision";
             // 
@@ -160,9 +160,9 @@
             this.certificado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.certificado.AutoSize = true;
             this.certificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.certificado.Location = new System.Drawing.Point(6, 0);
+            this.certificado.Location = new System.Drawing.Point(13, 2);
             this.certificado.Name = "certificado";
-            this.certificado.Size = new System.Drawing.Size(127, 40);
+            this.certificado.Size = new System.Drawing.Size(113, 36);
             this.certificado.TabIndex = 7;
             this.certificado.Text = "Certificado de Origen ";
             this.certificado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,23 +172,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 50);
+            this.label4.Location = new System.Drawing.Point(33, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 20);
+            this.label4.Size = new System.Drawing.Size(74, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Incoterm";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(279, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 40);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "No de Certificado";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNoCliente
             // 
@@ -209,9 +197,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(522, 0);
+            this.label9.Location = new System.Drawing.Point(527, 2);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 40);
+            this.label9.Size = new System.Drawing.Size(98, 36);
             this.label9.TabIndex = 15;
             this.label9.Text = "No de Exportacion";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,7 +229,7 @@
             "Euro"});
             this.comboMoneda.Location = new System.Drawing.Point(400, 43);
             this.comboMoneda.Name = "comboMoneda";
-            this.comboMoneda.Size = new System.Drawing.Size(114, 30);
+            this.comboMoneda.Size = new System.Drawing.Size(114, 28);
             this.comboMoneda.TabIndex = 20;
             this.comboMoneda.TabStop = false;
             // 
@@ -283,6 +271,18 @@
             this.label5.Text = "Moneda";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(285, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 36);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "No de Certificado";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,7 +297,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(104, 65);
             this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Save";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
@@ -334,7 +334,7 @@
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(104, 65);
             this.btnPDF.TabIndex = 17;
-            this.btnPDF.Text = "Export To PDF";
+            this.btnPDF.Text = "Exportar a PDF";
             this.btnPDF.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPDF.UseVisualStyleBackColor = false;
             // 
@@ -352,7 +352,7 @@
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
             this.btrRegreso.TabIndex = 13;
-            this.btrRegreso.Text = "Return";
+            this.btrRegreso.Text = "Regresar";
             this.btrRegreso.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btrRegreso.UseVisualStyleBackColor = false;
             this.btrRegreso.Click += new System.EventHandler(this.btrRegreso_Click);

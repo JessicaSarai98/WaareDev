@@ -61,9 +61,10 @@
             this.contenedor.Controls.Add(this.txtCantidad);
             this.contenedor.Controls.Add(this.titulo);
             this.contenedor.Controls.Add(this.panel1);
-            this.contenedor.Location = new System.Drawing.Point(391, 131);
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(0, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(342, 236);
+            this.contenedor.Size = new System.Drawing.Size(358, 252);
             this.contenedor.TabIndex = 0;
             // 
             // input
@@ -133,7 +134,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(51, 152);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(245, 34);
+            this.txtCantidad.Size = new System.Drawing.Size(261, 50);
             this.txtCantidad.TabIndex = 46;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress_1);
@@ -145,7 +146,7 @@
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.titulo.Location = new System.Drawing.Point(0, 80);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(342, 40);
+            this.titulo.Size = new System.Drawing.Size(358, 40);
             this.titulo.TabIndex = 1;
             this.titulo.Text = "titulo";
             this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,8 +163,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 80);
+            this.panel1.Size = new System.Drawing.Size(358, 80);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // rawN
             // 
@@ -217,7 +219,7 @@
             this.btrRegreso.ForeColor = System.Drawing.Color.Black;
             this.btrRegreso.Image = ((System.Drawing.Image)(resources.GetObject("btrRegreso.Image")));
             this.btrRegreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btrRegreso.Location = new System.Drawing.Point(235, 3);
+            this.btrRegreso.Location = new System.Drawing.Point(251, 3);
             this.btrRegreso.Name = "btrRegreso";
             this.btrRegreso.Size = new System.Drawing.Size(104, 65);
             this.btrRegreso.TabIndex = 14;
@@ -232,7 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1034, 515);
+            this.ClientSize = new System.Drawing.Size(358, 252);
             this.Controls.Add(this.contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Agregar";
