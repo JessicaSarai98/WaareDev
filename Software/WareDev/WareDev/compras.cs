@@ -19,7 +19,8 @@ namespace WareDev
 
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+        //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         SqlCommand cmd;
         SqlCommand cmd1;
         SqlCommand cmd2;
@@ -156,7 +157,7 @@ namespace WareDev
                     ag.Parameters.Clear();
                     ag.Parameters.AddWithValue("@folio", Convert.ToString(row.Cells["Folio"].Value));
                     ag.Parameters.AddWithValue("@tipo", Convert.ToString(row.Cells["Tipo"].Value));
-                    ag.Parameters.AddWithValue("@product", Convert.ToString(row.Cells["Producto"].Value));
+                    ag.Parameters.AddWithValue("@product", Convert.ToString(row.Cells[2].Value));
                     ag.Parameters.AddWithValue("@descripcion", Convert.ToString(row.Cells["Descripcion"].Value));
                     ag.Parameters.AddWithValue("@precio", Convert.ToString(row.Cells["PrecioxUnidad"].Value));
                     ag.Parameters.AddWithValue("@amountPurchased", Convert.ToString(row.Cells["Cantidad"].Value));
@@ -479,8 +480,8 @@ namespace WareDev
 
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
-
+                   // var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+                    var imagenpath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
                     using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                     {
                         var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
@@ -492,8 +493,8 @@ namespace WareDev
                     }
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
-
+                    //var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+                    var Logopath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
                     using (FileStream im = new FileStream(Logopath, FileMode.Open))
                     {
                         var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
@@ -552,12 +553,12 @@ namespace WareDev
                     doc.Add(headertable);
                     doc.Add(spacer);
 
-                    bool V = true;
+                    //bool V = true;
 
-                    dataGridView1.Visible = true;
-                    if (dataGridView1.Visible = V)
-                    {
-                        dataGridView1.Visible = false;
+                    //dataGridView1.Visible = true;
+                    //if (dataGridView1.Visible = V)
+                    //{
+                        //dataGridView1.Visible = false;
                         //Creacion de Tabla de Cotizacion
 
                         var columCount = dataGridView1.ColumnCount;
@@ -602,15 +603,15 @@ namespace WareDev
 
                         doc.Add(table);
 
-                    }
+                   // }
 
-                    dataGridView1.Visible = true;
+                    //dataGridView1.Visible = true;
 
-                    if (dataGridView1.Visible = V)
-                    {
-                        dataGridView1.Visible = false;
-                        button2.Visible = false;
-                    }
+                    //if (dataGridView1.Visible = V)
+                    //{
+                    //    dataGridView1.Visible = false;
+                    //    button2.Visible = false;
+                    //}
 
                     var downtable = new PdfPTable(new[] { .5f, .5f })
                     {
