@@ -230,7 +230,8 @@ namespace WareDev
                     com.txtDescripcion.Enabled = false;
                     com.btnGuardar.Visible = false;
                     com.btrRegreso.Visible = false;
-                    com.button1.Visible = false; 
+                    com.button1.Visible = false;
+                    com.button3.Visible = false;
 
 
 

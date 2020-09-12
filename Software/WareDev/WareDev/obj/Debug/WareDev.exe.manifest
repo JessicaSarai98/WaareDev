@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BjJIc4EaZjz4fKoGzqilh7txhUxLP2f+Bvb6Z+22x98=</dsig:DigestValue>
+        <dsig:DigestValue>IE/xUysrczKUDNQ76z5CYk6qM9/WKCP6XSYRro3KQrY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jQ6Chc5gl8W1xMdYTkxokyzXXEL4eAM1m2ofhkPzdzw=</dsig:DigestValue>
+        <dsig:DigestValue>AeAJZPkreKlNI9YfFT484IxxxCmWreE2hAboZVXIpck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1734144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1736704">
       <assemblyIdentity name="WareDev" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9AwMptickiCzz9qnM+W3ZGOmFihoKxmtnXQQDTGjE64=</dsig:DigestValue>
+        <dsig:DigestValue>mOlPfZgmX634TPD1m2wVCBhJ/PtBtA+75BmYHDo0uNE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
