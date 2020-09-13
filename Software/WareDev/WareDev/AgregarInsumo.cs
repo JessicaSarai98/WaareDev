@@ -5,8 +5,8 @@ namespace WareDev
 {
     public partial class Agregar : Form
     {
-        //SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlCommand cmd3;

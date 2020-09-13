@@ -30,103 +30,120 @@ namespace WareDev
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Si quiere modificar el mismo PDF, debe cerrar el documento antes." 
-                , "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Si quieres modificar el mismo PDF, cierralo de aplicaciones externas.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
 
-                Document doc = new Document(PageSize.A5);
+                Document doc = new Document(PageSize.A4);
 
                 // Indicamos donde vamos a guardar el documento
-                string pdfName = @"C:\Users\Jessica\Desktop\" + "Proveedor-" + Nametxt.Text + ".pdf";
+
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = @"C:";
+                saveFileDialog1.Title = "Guardar Reporte";
+                saveFileDialog1.DefaultExt = "pdf";
+                saveFileDialog1.Filter = "pdf Files (*.pdf)|*.pdf| All Files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                string file = "";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    file = saveFileDialog1.FileName;
+                }
+
 
                 //SaveFileDialog save = new SaveFileDialog();
                 //save.Filter = "Archivo de pdf |*.pdf";
                 //save.InitialDirectory = @"C:\Users\AdriFdez18\Desktop\";
                 //save.FileName ="Cliente:"+ Nametxt.Text + ".pdf";
 
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(pdfName, FileMode.OpenOrCreate));
-
-
-
-                //Margenes del documento 
-                doc.SetMargins(30, 30, 10, 10);
-
-
-                // Le colocamos el título y el autor
-                // Esto no será visible en el documento
-                doc.AddTitle("Info Client");
-                
-
-                //Se estipula de fuente de escritura 
-                iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-
-                //fuente de escritura del titulo 
-                var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
-
-                // Abrimos el archivo
-                doc.Open();
-
-
-
-                //Espacio entre parrafos
-                var spacer = new Paragraph("")
+                if (file.Trim() != "")
                 {
-                    SpacingBefore = 10f,
-                    SpacingAfter = 10f,
-                };
+                    FileStream fileventas = new FileStream(file,
+                    FileMode.OpenOrCreate,
+                    FileAccess.ReadWrite,
+                    FileShare.ReadWrite);
+                    PdfWriter.GetInstance(doc, fileventas);
 
-                //C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes
-                //C:\Users\AdriFdez18\Desktop\Extra\UI\WaareDev\Imagenes\Informacion.jpeg"
-                //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var imagenpath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Informacion.jpeg";
 
-                using (FileStream im = new FileStream(imagenpath, FileMode.Open))
-                {
-                    var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
-                    //(x,y)
-                    jpg.SetAbsolutePosition(270, 15);
-                    jpg.ScalePercent(25, 25);
-                    doc.Add(jpg);
+                    //Margenes del documento 
+                    doc.SetMargins(30, 30, 10, 10);
 
-                }
 
-                //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                var Logopath = @"C:\Users\Jessica\Desktop\WareDev\WaareDev\Imagenes\Logo.jpeg";
+                    // Le colocamos el título y el autor
+                    // Esto no será visible en el documento
+                    doc.AddTitle("Cotizacion");
 
-                using (FileStream im = new FileStream(Logopath, FileMode.Open))
-                {
-                    var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
-                    //(x,y)
-                    png.SetAbsolutePosition(0, 525);
-                    png.ScalePercent(15, 15);
-                    doc.Add(png);
 
-                }
+                    //Se estipula de fuente de escritura 
+                    iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 10, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+
+                    //fuente de escritura del titulo 
+                    var fuentetitulo = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
+
+
+                    // Abrimos el archivo
+                    doc.Open();
 
 
 
-                // Escribimos el encabezamiento en el documento
-                var titulo = new Paragraph("PROMOTORA Y COMERCIALIZADORA COSTA MAYA S.A DE C.V.", fuentetitulo);
+                    //Espacio entre parrafos
+                    var spacer = new Paragraph("")
+                    {
+                        SpacingBefore = 10f,
+                        SpacingAfter = 10f,
+                    };
 
 
-                titulo.SpacingBefore = 0;
-                titulo.Alignment = 2;
-                doc.Add(titulo);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(spacer);
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
 
-                // Creamos la tabla con la informacion de el cliente 
+                    using (FileStream im = new FileStream(imagenpath, FileMode.Open))
+                    {
+                        var jpg = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        jpg.SetAbsolutePosition(450, 0);
+                        jpg.ScalePercent(25, 25);
+                        doc.Add(jpg);
 
-                var table = new PdfPTable(new[] { 1f, 2f })
-                {
-                    HorizontalAlignment = Left,
-                    WidthPercentage = 100,
+                    }
+
+                    //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
+                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+
+                    using (FileStream im = new FileStream(Logopath, FileMode.Open))
+                    {
+                        var png = iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(im), System.Drawing.Imaging.ImageFormat.Png);
+                        //(x,y)
+                        png.SetAbsolutePosition(190, 770);
+                        png.ScalePercent(15, 15);
+                        doc.Add(png);
+
+                    }
 
 
-                };
-                doc.Add(spacer);
 
-                table.AddCell("Date");
+                    // Escribimos el encabezamiento en el documento
+                    var titulo = new Paragraph("PROMOTORA Y COMERCIALIZADORA COSTA MAYA S.A DE C.V.", fuentetitulo);
+
+
+                    titulo.SpacingBefore = 0;
+                    titulo.Alignment = 2;
+                    doc.Add(titulo);
+                    doc.Add(Chunk.NEWLINE);
+                    doc.Add(spacer);
+
+                    // Creamos la tabla con con la infromacion de cliente y vendedor 
+
+                    var table = new PdfPTable(new[] { 3f, 3f, 3f, 3f })
+                    {
+                        HorizontalAlignment = Left,
+                        WidthPercentage = 100,
+                        DefaultCell = { MinimumHeight = 22f }
+
+                    };
+                    doc.Add(spacer);
+
+                    table.AddCell("Date");
                 table.AddCell(DateTime.Now.ToString());
                 table.AddCell("Name");
                 table.AddCell(Nametxt.Text);
@@ -148,20 +165,8 @@ namespace WareDev
                 doc.Add(table);
                 doc.Add(spacer);
                 doc.Close();
-                writer.Close();
-                MessageBox.Show("Created PDF sent to the next path:" + pdfName);
 
-                //Dejar en blanco los text.box
-                Nametxt.Clear();
-                RFCtxt.Clear();
-                phonetxt.Clear();
-                mailtxt.Clear();
-                addrestxt.Clear();
-                statettxt.Clear();
-                countrytxt.Clear();
-                citytxt.Clear();
-
-                this.Close();
+                }
             }
 
             else

@@ -231,9 +231,9 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.textBox1.Location = new System.Drawing.Point(557, 144);
+            this.textBox1.Location = new System.Drawing.Point(557, 143);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 26);
+            this.textBox1.Size = new System.Drawing.Size(165, 28);
             this.textBox1.TabIndex = 34;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -243,9 +243,9 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.textBox2.Location = new System.Drawing.Point(557, 189);
+            this.textBox2.Location = new System.Drawing.Point(557, 188);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 26);
+            this.textBox2.Size = new System.Drawing.Size(165, 28);
             this.textBox2.TabIndex = 35;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -254,9 +254,9 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(443, 148);
+            this.label12.Location = new System.Drawing.Point(440, 147);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 18);
+            this.label12.Size = new System.Drawing.Size(75, 20);
             this.label12.TabIndex = 34;
             this.label12.Text = "Tamaño";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,9 +266,9 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(447, 193);
+            this.label15.Location = new System.Drawing.Point(443, 192);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 18);
+            this.label15.Size = new System.Drawing.Size(69, 20);
             this.label15.TabIndex = 35;
             this.label15.Text = "Medida";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,9 +278,9 @@
             this.txtFraccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFraccion.BackColor = System.Drawing.Color.White;
             this.txtFraccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtFraccion.Location = new System.Drawing.Point(158, 189);
+            this.txtFraccion.Location = new System.Drawing.Point(158, 188);
             this.txtFraccion.Name = "txtFraccion";
-            this.txtFraccion.Size = new System.Drawing.Size(241, 26);
+            this.txtFraccion.Size = new System.Drawing.Size(241, 28);
             this.txtFraccion.TabIndex = 33;
             this.txtFraccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -289,9 +289,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 184);
+            this.label7.Location = new System.Drawing.Point(26, 182);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 36);
+            this.label7.Size = new System.Drawing.Size(103, 40);
             this.label7.TabIndex = 33;
             this.label7.Text = "Fracción arancelaria";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,9 +396,9 @@
             "XSA - Saco",
             "YRD - Yarda",
             "ZZ - Mutuamente definido"});
-            this.txtUniMedida.Location = new System.Drawing.Point(158, 143);
+            this.txtUniMedida.Location = new System.Drawing.Point(158, 146);
             this.txtUniMedida.Name = "txtUniMedida";
-            this.txtUniMedida.Size = new System.Drawing.Size(241, 28);
+            this.txtUniMedida.Size = new System.Drawing.Size(241, 30);
             this.txtUniMedida.TabIndex = 9;
             this.txtUniMedida.Text = "-- Seleccione una medida --";
             // 
@@ -407,9 +407,9 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 148);
+            this.label10.Location = new System.Drawing.Point(31, 137);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 18);
+            this.label10.Size = new System.Drawing.Size(93, 40);
             this.label10.TabIndex = 0;
             this.label10.Text = "Unidad de Medida";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -420,9 +420,9 @@
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCodigo.Location = new System.Drawing.Point(158, 9);
+            this.txtCodigo.Location = new System.Drawing.Point(158, 8);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(139, 26);
+            this.txtCodigo.Size = new System.Drawing.Size(139, 28);
             this.txtCodigo.TabIndex = 33;
             this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -431,9 +431,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 13);
+            this.label5.Location = new System.Drawing.Point(44, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 18);
+            this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 33;
             this.label5.Text = "Código";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -446,9 +446,9 @@
             this.txtEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstado.Location = new System.Drawing.Point(158, 323);
+            this.txtEstado.Location = new System.Drawing.Point(158, 326);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(241, 28);
+            this.txtEstado.Size = new System.Drawing.Size(241, 30);
             this.txtEstado.TabIndex = 4;
             // 
             // label2
@@ -456,9 +456,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 328);
+            this.label2.Location = new System.Drawing.Point(44, 327);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Estado";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -471,7 +471,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(158, 369);
             this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(241, 27);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
             // 
@@ -480,9 +480,9 @@
             this.nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nombre.AutoSize = true;
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(43, 58);
+            this.nombre.Location = new System.Drawing.Point(40, 57);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(68, 18);
+            this.nombre.Size = new System.Drawing.Size(74, 20);
             this.nombre.TabIndex = 0;
             this.nombre.Text = "Nombre";
             this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -492,9 +492,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 373);
+            this.label4.Location = new System.Drawing.Point(47, 372);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 18);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Fecha";
             // 
@@ -505,7 +505,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(158, 54);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(241, 26);
+            this.txtNombre.Size = new System.Drawing.Size(241, 27);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -514,9 +514,9 @@
             this.txtSAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSAT.BackColor = System.Drawing.Color.White;
             this.txtSAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtSAT.Location = new System.Drawing.Point(158, 99);
+            this.txtSAT.Location = new System.Drawing.Point(158, 98);
             this.txtSAT.Name = "txtSAT";
-            this.txtSAT.Size = new System.Drawing.Size(241, 26);
+            this.txtSAT.Size = new System.Drawing.Size(241, 28);
             this.txtSAT.TabIndex = 8;
             this.txtSAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSAT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSAT_KeyPress);
@@ -526,9 +526,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 103);
+            this.label8.Location = new System.Drawing.Point(13, 102);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 18);
+            this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Clave de SAT ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,9 +538,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 229);
+            this.label3.Location = new System.Drawing.Point(23, 227);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 36);
+            this.label3.Size = new System.Drawing.Size(109, 40);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cantidad de Aduana";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -550,9 +550,9 @@
             this.txtCanAduana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCanAduana.BackColor = System.Drawing.Color.White;
             this.txtCanAduana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCanAduana.Location = new System.Drawing.Point(158, 234);
+            this.txtCanAduana.Location = new System.Drawing.Point(158, 233);
             this.txtCanAduana.Name = "txtCanAduana";
-            this.txtCanAduana.Size = new System.Drawing.Size(241, 26);
+            this.txtCanAduana.Size = new System.Drawing.Size(241, 28);
             this.txtCanAduana.TabIndex = 3;
             this.txtCanAduana.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -561,9 +561,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 274);
+            this.label1.Location = new System.Drawing.Point(30, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 36);
+            this.label1.Size = new System.Drawing.Size(95, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Unidad de Medida de Aduana";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -622,9 +622,9 @@
             "20 - Caja",
             "21 - Botella",
             "22 - Servicios"});
-            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 278);
+            this.txtUniMedAduana.Location = new System.Drawing.Point(158, 281);
             this.txtUniMedAduana.Name = "txtUniMedAduana";
-            this.txtUniMedAduana.Size = new System.Drawing.Size(241, 28);
+            this.txtUniMedAduana.Size = new System.Drawing.Size(241, 30);
             this.txtUniMedAduana.TabIndex = 7;
             this.txtUniMedAduana.Text = "-- Seleccione una opción --";
             // 
@@ -633,9 +633,9 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 422);
+            this.label13.Location = new System.Drawing.Point(22, 421);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 18);
+            this.label13.Size = new System.Drawing.Size(110, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "Descripción";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -645,9 +645,9 @@
             this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtDescripcion.Location = new System.Drawing.Point(158, 418);
+            this.txtDescripcion.Location = new System.Drawing.Point(158, 417);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(241, 26);
+            this.txtDescripcion.Size = new System.Drawing.Size(241, 28);
             this.txtDescripcion.TabIndex = 11;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -656,9 +656,9 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(462, 103);
+            this.label9.Location = new System.Drawing.Point(459, 102);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 18);
+            this.label9.Size = new System.Drawing.Size(38, 20);
             this.label9.TabIndex = 33;
             this.label9.Text = "IVA";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -668,9 +668,9 @@
             this.txtIVA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIVA.BackColor = System.Drawing.Color.White;
             this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtIVA.Location = new System.Drawing.Point(557, 99);
+            this.txtIVA.Location = new System.Drawing.Point(557, 98);
             this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Size = new System.Drawing.Size(165, 26);
+            this.txtIVA.Size = new System.Drawing.Size(165, 28);
             this.txtIVA.TabIndex = 33;
             this.txtIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIVA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIVA_KeyPress);
@@ -680,9 +680,9 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(440, 49);
+            this.label11.Location = new System.Drawing.Point(435, 47);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 36);
+            this.label11.Size = new System.Drawing.Size(86, 40);
             this.label11.TabIndex = 0;
             this.label11.Text = "Cantidad adquirida";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,9 +692,9 @@
             this.txtCantiAdquirida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantiAdquirida.BackColor = System.Drawing.Color.White;
             this.txtCantiAdquirida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtCantiAdquirida.Location = new System.Drawing.Point(557, 54);
+            this.txtCantiAdquirida.Location = new System.Drawing.Point(557, 53);
             this.txtCantiAdquirida.Name = "txtCantiAdquirida";
-            this.txtCantiAdquirida.Size = new System.Drawing.Size(165, 26);
+            this.txtCantiAdquirida.Size = new System.Drawing.Size(165, 28);
             this.txtCantiAdquirida.TabIndex = 10;
             this.txtCantiAdquirida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCantiAdquirida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantiAdquirida_KeyPress);
@@ -704,9 +704,9 @@
             this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F);
-            this.txtPrecio.Location = new System.Drawing.Point(557, 9);
+            this.txtPrecio.Location = new System.Drawing.Point(557, 8);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(165, 26);
+            this.txtPrecio.Size = new System.Drawing.Size(165, 28);
             this.txtPrecio.TabIndex = 6;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
@@ -716,9 +716,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(419, 13);
+            this.label6.Location = new System.Drawing.Point(412, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.Size = new System.Drawing.Size(132, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Precio unitario";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -728,9 +728,9 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(456, 238);
+            this.label14.Location = new System.Drawing.Point(455, 237);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 18);
+            this.label14.Size = new System.Drawing.Size(46, 20);
             this.label14.TabIndex = 43;
             this.label14.Text = "Foto";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
