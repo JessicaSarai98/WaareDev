@@ -173,10 +173,10 @@ namespace WareDev
                 //n2 = Convert.ToInt32(existencia.Text);
                 //r = n2 - n1;
 
-                string sqlQuery = "update FinishedProducts set date=@fecha,unitOfMeasure='" + txtFaccion.Text + "',pallet='" + txtSat.Text + "',boxes='" + txtCajasContenido.Text + "',input='" 
-                    + comboBox2.Text + "',quantityUsedI='" + txtCantidadInsumo.Text + "',amountPurchased='" + txtCantiAdquirida.Text + "',name='" + txtNombreInsumo.Text + "',unitPrice='" + txtPrecioInsumo.Text + 
-                    "',description='" + txtDescripcion.Text + "',rawMaterial='" + comboBox1.Text + "',quantityUsedR='" + txtCantiMatPrima.Text + "', size = '"+txtEstado.Text+"', measure = '"+txtMeasure.Text+"',photo=@imagen where Id='" + ID.Text + "'";
-               // string sqlQuery2 = "update rawMaterials set amountPurchased='"+r+ "' where Id='"+txtNombreMateria.Text+"'";
+                string sqlQuery = "update FinishedProducts set date=@fecha,name='" + txtNombreInsumo.Text + "',unitOfMeasure='" + txtMeasure.Text + "',cantAduana='" + txtCajasContenido.Text + "',unitPrice='" + txtPrecioInsumo.Text +
+                     "',description='" + txtDescripcion.Text + "', size = '" + textBox1.Text + "', IVA='" + txtIva.Text + "',SAT='" + txtSat.Text + "',fraccion='" + txtFaccion.Text + "',medidaAduana='" + txtUniMedAduana.Text + "',measure = '" + textBox2.Text + "',status='" + txtEstado.Text + "',photo=@imagen where Id='" + txtCodigo.Text + "'";
+               
+                // string sqlQuery2 = "update rawMaterials set amountPurchased='"+r+ "' where Id='"+txtNombreMateria.Text+"'";
                 cmd = new SqlCommand(sqlQuery, connection);
                 //cmd2 = new SqlCommand(sqlQuery2, connection);
 

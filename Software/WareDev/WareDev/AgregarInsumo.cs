@@ -5,8 +5,10 @@ namespace WareDev
 {
     public partial class Agregar : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=OMEN-LAPTOP18\SQLEXPRESS02;Initial Catalog=fruteria;Integrated Security=True;");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
+        //private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlCommand cmd3;
@@ -59,52 +61,65 @@ namespace WareDev
 
         private void addF_Click(object sender, EventArgs e)
         {
-            
-            int a, b, c, d, f;
-            a = Convert.ToInt32(input.Text);
-            b = Convert.ToInt32(raw.Text);
-            c = Convert.ToInt32(txtCantidad.Text);
-            d = a * c;
-            f = b * c;
-            if (a <= Convert.ToInt32(inputC.Text))
+            if (rawC.Text != "0" && inputC.Text != "0")
             {
-                if (f <= Convert.ToInt32(rawC.Text))
+                int a, b, c, d, f;
+                a = Convert.ToInt32(input.Text);
+                b = Convert.ToInt32(raw.Text);
+                c = Convert.ToInt32(txtCantidad.Text);
+                d = a * c;
+                f = b * c;
+                if (a <= Convert.ToInt32(inputC.Text))
                 {
-                    connection.Open();
-                    string sqlQuery = "update FinishedProducts set amountPurchased = amountPurchased + @cant where name = '" + textBox1.Text + "'";
-                    string sqlQuery1 = "update FinishedProducts set quantityUsedI = '" + d + "' where name = '" + textBox1.Text + "'";
-                    string sqlQuery2 = "update FinishedProducts set quantityUsedR = '" + f + "' where name = '" + textBox1.Text + "'";
+                    if (f <= Convert.ToInt32(rawC.Text))
+                    {
+                        connection.Open();
+                        string sqlQuery = "update FinishedProducts set amountPurchased = amountPurchased + @cant where name = '" + textBox1.Text + "'";
+                        string sqlQuery1 = "update FinishedProducts set quantityUsedI = '" + d + "' where name = '" + textBox1.Text + "'";
+                        string sqlQuery2 = "update FinishedProducts set quantityUsedR = '" + f + "' where name = '" + textBox1.Text + "'";
 
-                    string sqlQuery3 = "update inputs set amountPurchased = amountPurchased - '"+d+"' where name='"+inputN.Text+"'";
-                    string sqlQuery4 = "update rawMaterials set amountPurchased = amountPurchased - '" + f + "' where name= '"+rawN.Text+"'";
-                    
-                    cmd = new SqlCommand(sqlQuery, connection);
-                    cmd2 = new SqlCommand(sqlQuery1, connection);
-                    cmd3 = new SqlCommand(sqlQuery2, connection);
-                    cmd4 = new SqlCommand(sqlQuery3, connection);
-                    cmd5 = new SqlCommand(sqlQuery4, connection);
+                        string sqlQuery3 = "update inputs set amountPurchased = amountPurchased - '" + d + "' where name='" + inputN.Text + "'";
+                        string sqlQuery4 = "update rawMaterials set amountPurchased = amountPurchased - '" + f + "' where name= '" + rawN.Text + "'";
 
-                    cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
-                    //cmd2.Parameters.AddWithValue("@a",input.Text);
-                    //cmd3.Parameters.AddWithValue("@f",raw.Text);
-                    cmd.ExecuteNonQuery();
-                    cmd2.ExecuteNonQuery();
-                    cmd3.ExecuteNonQuery();
-                    cmd4.ExecuteNonQuery();
-                    cmd5.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+                        cmd = new SqlCommand(sqlQuery, connection);
+                        cmd2 = new SqlCommand(sqlQuery1, connection);
+                        cmd3 = new SqlCommand(sqlQuery2, connection);
+                        cmd4 = new SqlCommand(sqlQuery3, connection);
+                        cmd5 = new SqlCommand(sqlQuery4, connection);
 
-                    this.Close();
+                        cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
+                        //cmd2.Parameters.AddWithValue("@a",input.Text);
+                        //cmd3.Parameters.AddWithValue("@f",raw.Text);
+                        cmd.ExecuteNonQuery();
+                        cmd2.ExecuteNonQuery();
+                        cmd3.ExecuteNonQuery();
+                        cmd4.ExecuteNonQuery();
+                        cmd5.ExecuteNonQuery();
+                        connection.Close();
+                        MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay suficiente cantidad en Raw");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No hay suficiente cantidad en Raw");
+                    MessageBox.Show("No hay suficiente cantidad en input");
                 }
             }
             else
             {
-                MessageBox.Show("No hay suficiente cantidad en input");
+                connection.Open();
+                string sqlQuery = "update FinishedProducts set amountPurchased = amountPurchased + @cant where name = '" + textBox1.Text + "'";
+                cmd = new SqlCommand(sqlQuery, connection);
+                cmd.Parameters.AddWithValue("@cant", txtCantidad.Text);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Se ha agregado la cantidad a " + textBox1.Text);
+                this.Close();
             }
         }
 

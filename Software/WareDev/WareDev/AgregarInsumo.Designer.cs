@@ -189,6 +189,7 @@
             this.rawC.Name = "rawC";
             this.rawC.Size = new System.Drawing.Size(30, 20);
             this.rawC.TabIndex = 56;
+            this.rawC.Text = "0";
             this.rawC.Visible = false;
             // 
             // label1
@@ -207,6 +208,7 @@
             this.inputC.Name = "inputC";
             this.inputC.Size = new System.Drawing.Size(30, 20);
             this.inputC.TabIndex = 55;
+            this.inputC.Text = "0";
             this.inputC.Visible = false;
             // 
             // btrRegreso
