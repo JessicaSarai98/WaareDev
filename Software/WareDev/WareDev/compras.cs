@@ -17,9 +17,9 @@ namespace WareDev
             InitializeComponent();
         }
 
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
-        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+       // SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
         SqlCommand cmd;
         SqlCommand cmd1;
@@ -173,6 +173,8 @@ namespace WareDev
                 connection.Close();
 
                 decimal total = 0;
+                decimal p = 0; 
+
                 string a, b;
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -181,6 +183,7 @@ namespace WareDev
                     total = Convert.ToDecimal(row.Cells[5].Value);
                     a = Convert.ToString(row.Cells[2].Value);
                     b = Convert.ToString(row.Cells[1].Value);
+                    
 
                     if (b.Equals("Materia Prima"))
                     {
@@ -217,7 +220,8 @@ namespace WareDev
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
             double n1, n2, a;
-            if (txtPrecioUnitario.Text == "") {
+            if (txtPrecioUnitario.Text == ""
+                ) {
 
                 txtCantidad.Text = string.Empty;
                 //MessageBox.Show("Ingrese el precio unitario");

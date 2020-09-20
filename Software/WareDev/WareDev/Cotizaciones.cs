@@ -15,8 +15,10 @@ namespace WareDev
         {
             InitializeComponent();
 
-        } 
-        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+        }
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+
+        //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         SqlCommand cmd;
@@ -480,6 +482,7 @@ namespace WareDev
             materia = new Productos();
             materia.Show();
             txtCantidad.Enabled = true;
+            txtPrecio.Enabled = true; 
         }
         private void btnAgregarProd_Click(object sender, EventArgs e)
         {
@@ -638,7 +641,7 @@ namespace WareDev
         private void txtCantidad_TextChanged_1(object sender, EventArgs e)
         {
             float n1, n2, a;
-            if (txtCantidad.Text != "")
+            if (txtCantidad.Text != "" && txtPrecio.Text!="")
             {
                 if (Convert.ToDecimal(txtCan.Text) != 0)
                 {
@@ -657,6 +660,25 @@ namespace WareDev
         private void txtPallet_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDatos.SoloNumeros(e);
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            float n1, n2, a;
+            if (txtPrecio.Text != "" && txtCantidad.Text!="")
+            {
+                if (Convert.ToDecimal(txtCan.Text) != 0)
+                {
+                    if (Convert.ToDecimal(txtCantidad.Text) <= Convert.ToDecimal(txtCan.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        txtPrecioTotal.Text = a.ToString();
+                    }
+                }
+
+            }
         }
     }
 }

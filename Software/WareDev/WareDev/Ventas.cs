@@ -18,10 +18,10 @@ namespace WareDev
             InitializeComponent();
         }
 
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         //tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172
-        SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+        //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
         //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlCommand cmd2;
@@ -53,9 +53,9 @@ namespace WareDev
             ventas ven = new ventas();
             string query = "select max(Id) from ventas";
             // jess
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
             // karina
-            SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+            //SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
             SqlCommand cmd = new SqlCommand(query, con);
             try
             {
@@ -282,14 +282,16 @@ namespace WareDev
                 connection.Close();
 
                 decimal total = 0;
+                decimal p = 0; 
                 string a;
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     connection.Open();
                     total = Convert.ToDecimal(row.Cells[7].Value);
+                    p = Convert.ToDecimal(row.Cells[6].Value);
                     a = Convert.ToString(row.Cells[4].Value);
-                    string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'" + total + "' where name='" + a + "'";
+                    string sqlQuery2 = "update FinishedProducts set amountPurchased= amountPurchased-'" + total + "',unitPrice='"+p+"'  where name='" + a + "'";
                     cmd2 = new SqlCommand(sqlQuery2, connection);
                     cmd2.ExecuteNonQuery();
                     connection.Close();
@@ -387,8 +389,10 @@ namespace WareDev
             textBox3.Text = string.Empty;
 
 
+
             materia.Show();
             txtCantidad.Enabled = true;
+            txtPrecio.Enabled = true;
         }
         private void materia_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -403,24 +407,30 @@ namespace WareDev
                 {
                     if (txtUniMedAduana.Text != "")
                     {
+                        if (txtPrecio.Text != "")
+                        {
+                            dataGridView1.Rows.Add(txtFolio.Text, txtPallet.Text, textBox4.Text, textBox5.Text, txtProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text, textBox3.Text);
 
-                        dataGridView1.Rows.Add(txtFolio.Text, txtPallet.Text, textBox4.Text, textBox5.Text, txtProducto.Text, txtDescripcion.Text, txtPrecio.Text, txtCantidad.Text, textBox3.Text);
-
-                        textBox3.Text = string.Empty;
-                        txtProducto.Text = string.Empty;
-                        txtCantidad.Text = string.Empty;
-                        txtDescripcion.Text = string.Empty;
-                        txtPallet.Text = string.Empty;
-                        txtMedida.Text = string.Empty;
-                        txtSAT.Text = string.Empty;
-                        txtPrecio.Text = string.Empty;
-                        cantidad.Text = string.Empty;
-                        txtCantidad.Enabled = false;
-                        textBox4.Text = string.Empty;
-                        textBox5.Text = string.Empty;
-                        txtUniMedAduana.Text = string.Empty;
-                        txtAduana.Text = string.Empty;
-                        txtFraccion.Text = string.Empty;
+                            textBox3.Text = string.Empty;
+                            txtProducto.Text = string.Empty;
+                            txtCantidad.Text = string.Empty;
+                            txtDescripcion.Text = string.Empty;
+                            txtPallet.Text = string.Empty;
+                            txtMedida.Text = string.Empty;
+                            txtSAT.Text = string.Empty;
+                            txtPrecio.Text = string.Empty;
+                            cantidad.Text = string.Empty;
+                            txtCantidad.Enabled = false;
+                            textBox4.Text = string.Empty;
+                            textBox5.Text = string.Empty;
+                            txtUniMedAduana.Text = string.Empty;
+                            txtAduana.Text = string.Empty;
+                            txtFraccion.Text = string.Empty;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ingrese el precio");
+                        }
                     }
                     else
                     {
@@ -478,7 +488,7 @@ namespace WareDev
         {
             float n1, n2, a;
 
-            if (txtCantidad.Text != "")
+            if (txtCantidad.Text != "" && txtPrecio.Text!="")
             {
                 if (Convert.ToDecimal(cantidad.Text) != 0)
                 {
@@ -673,7 +683,26 @@ namespace WareDev
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
+            float n1, n2, a;
 
+            if (txtPrecio.Text != "" && txtCantidad.Text!="")
+            {
+                if (Convert.ToDecimal(cantidad.Text) != 0)
+                {
+                    if ((Convert.ToDecimal(txtCantidad.Text)) <= Convert.ToDecimal(cantidad.Text))
+                    {
+                        n1 = Convert.ToInt32(txtCantidad.Text);
+                        n2 = Convert.ToSingle(txtPrecio.Text);
+                        a = n1 * n2;
+                        textBox3.Text = a.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cantidad insuficiente, la cantidad disponible es: " + cantidad.Text);
+                        txtCantidad.Text = string.Empty;
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
