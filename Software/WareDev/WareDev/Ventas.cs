@@ -18,11 +18,11 @@ namespace WareDev
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         //tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172
         //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlCommand cmd2;
         SqlDataAdapter adapter;
@@ -48,12 +48,20 @@ namespace WareDev
                 comboBox3.Items.Add(r["name"].ToString());
             }
             connection.Close();
+            SqlCommand cm2 = new SqlCommand("select nombres + '-' + primerApellido +'-' + segundoApellido as name from clientesFisicos", connection);
+            connection.Open();
+            SqlDataReader r2 = cm2.ExecuteReader();
+            while (r2.Read())
+            {
+                comboBox3.Items.Add(r2["name"].ToString());
+            }
+            connection.Close();
 
 
             ventas ven = new ventas();
             string query = "select max(Id) from ventas";
             // jess
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
             // karina
             //SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
             SqlCommand cmd = new SqlCommand(query, con);
@@ -366,6 +374,19 @@ namespace WareDev
                 txtNumCliente.Text = r["RFC"].ToString();
             }
             connection.Close();
+            string[] Proveedor = (comboBox3.Text).Split('-');
+            if (Proveedor.Length > 1 && comboBox3.Text != "")
+            {
+                SqlCommand d2 = new SqlCommand("select registroFiscal from clientesFisicos where nombres= '" + Proveedor[0] + "' and primerApellido='" +
+                Proveedor[1] + "' and segundoApellido='" + Proveedor[2] + "'", connection);
+                connection.Open();
+                SqlDataReader r2 = d2.ExecuteReader();
+                while (r2.Read())
+                {
+                    txtNumCliente.Text = r2["registroFiscal"].ToString();
+                }
+                connection.Close();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -772,7 +793,8 @@ namespace WareDev
 
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+                    //var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+                    var imagenpath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
 
                     using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                     {
@@ -785,7 +807,8 @@ namespace WareDev
                     }
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+                    //var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+                    var Logopath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
 
                     using (FileStream im = new FileStream(Logopath, FileMode.Open))
                     {
@@ -820,18 +843,32 @@ namespace WareDev
                     };
                     doc.Add(spacer);
 
+                    string[] cliente = (comboBox3.Text).Split('-');
+                    String Cliente = "";
+                    if (cliente.Length > 1)
+                    {
+                        foreach (var word in cliente)
+                        {
+                            Cliente += word + " ";
+                        }
+                    }
+                    else
+                    {
+                        Cliente = comboBox3.Text;
+                    }
+
                     //Creacion de Tabla de datos de comprador 
                     headertable.AddCell("FECHA");
                     headertable.AddCell(DateTime.Now.ToString());
                     headertable.AddCell("FOLIO");
                     headertable.AddCell(txtFolio.Text);
-                    headertable.AddCell("LUGAR DE EXPEDICION");
+                    headertable.AddCell("LUGAR DE EXPEDICIÓN");
                     headertable.AddCell(txtLugarExpe.Text);
                     headertable.AddCell("CLIENTE");
-                    headertable.AddCell(comboBox3.Text);
+                    headertable.AddCell(Cliente.ToString());
                     headertable.AddCell("RFC/ID");
                     headertable.AddCell(txtNumCliente.Text);
-                    headertable.AddCell("CONDICION COMERCIAL");
+                    headertable.AddCell("CONDICIÓN COMERCIAL");
                     headertable.AddCell(txtCondiciones.Text);
                     headertable.AddCell("MONEDA");
                     headertable.AddCell(comboMoneda.Text);

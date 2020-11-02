@@ -161,7 +161,6 @@
             this.dataGridView1.RowHeadersWidth = 45;
             this.dataGridView1.Size = new System.Drawing.Size(853, 86);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Folio
             // 

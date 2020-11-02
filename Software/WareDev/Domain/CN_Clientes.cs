@@ -24,12 +24,34 @@ namespace Domain
             tabla = objetoCD.Mostrar();
             return tabla;
         }
+        //Mostrar clientes fisicos
+        public DataTable MostrarCliFisicos()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarCli2();
+            return tabla;
+        }
+
+        //Mostrar proveedores fisicos
+        public DataTable MostrarSupFisicos()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarSFisicos();
+            return tabla;
+        }
 
         //Mostrar proveedores
         public DataTable MostrarSup()
         {
             DataTable tabla = new DataTable();
             tabla = objetoCD.MostrarS();
+            return tabla;
+        }
+        //Mostrar proveedores fisicos
+        public DataTable MostrarSupfisicos()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.MostrarSFisicos();
             return tabla;
         }
 
@@ -89,6 +111,14 @@ namespace Domain
             objetoCD.Insertar(Convert.ToInt32(id),name, rfc, phone, email, address, city, state,
                 country, cp, identy, Convert.ToSingle(tasaa), stat, vendedor, pm, cfdi, note);
         }
+
+        //insertar cliente fisico
+        public void InsertarClieFisico(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            objetoCD.Insertar2(Convert.ToInt32(id), nombres, apellido1, apellido2, registro, razon,
+            ciudad, calle, numero, lada, telefono, fax, correo);
+        }
         //insertar datos de usuario
         public void InsertarUsu(string username, string pass, string email, string firstname, string lastname, byte[]foto)
         {
@@ -102,7 +132,15 @@ namespace Domain
             objetoCD.InsertarS(Convert.ToInt32(id),name, RFC, phone, email, addres, country, state, city, currency);
         }
 
-        
+        //insertar datos de proveedor fisico
+        public void InsertarSuppFisicos(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            objetoCD.InsertarSFisicos(Convert.ToInt32(id), nombres, apellido1, apellido2, registro, razon,
+            ciudad, calle, numero, lada, telefono, fax, correo);
+        }
+
+
 
         //-------EDITAR DATOS-------
         //actualizar datos de cliente
@@ -112,6 +150,14 @@ namespace Domain
         {
             objetoCD.Editar(name, RFC, phone, email, address, city, state, country, cp, identy, Convert.ToDouble(tasaa),
                 stat, vendedor, pm, cfdi, note, Convert.ToInt32(id));
+        }
+
+        //cliente fisico
+        public void EditarClieFisica(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            objetoCD.Editarfisica(Convert.ToInt32(id), nombres, apellido1, apellido2, registro, razon,
+            ciudad, calle, numero, lada, telefono, fax, correo);
         }
 
         //actualizar datos de usuario
@@ -127,12 +173,20 @@ namespace Domain
             objetoCD.EditarS(name, RFC, phone, email, addres, country, state, city, currency, Convert.ToInt32(id));
         }
 
+        //actualizar datos de proveedor fisicos
+        public void EditarSupFisicos(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            objetoCD.EditarSFisicos(Convert.ToInt32(id), nombres, apellido1, apellido2, registro, razon,
+            ciudad, calle, numero, lada, telefono, fax, correo);
+        }
+
         //-----ELIMINAR---------
 
         //eliminar cliente
-        public void EliminarCli(string id)
+        public void EliminarCli(string id, string database)
         {
-            objetoCD.Eliminar(Convert.ToInt32(id));
+            objetoCD.Eliminar(Convert.ToInt32(id), database);
         }
 
         //eliminar usuario 
@@ -146,6 +200,12 @@ namespace Domain
         public void EliminarSup(string id)
         {
             objetoCD.EliminarS(Convert.ToInt32(id));
+        }
+
+        //eliminar proveedor fisico
+        public void EliminarSupFisica(string id)
+        {
+            objetoCD.EliminarSFisicos(Convert.ToInt32(id));
         }
 
         //eliminar Materia Prima (Raw)

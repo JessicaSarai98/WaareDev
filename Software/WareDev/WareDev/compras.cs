@@ -17,15 +17,14 @@ namespace WareDev
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
        // SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlCommand cmd1;
         SqlCommand cmd2;
         SqlCommand cmd3;
-        DataTable table;
         private void AbrirFormInPanel(object Formhijo)
         {
             if (this.contenedor.Controls.Count > 0)
@@ -52,11 +51,19 @@ namespace WareDev
         {
             dateTimePicker1.Value = DateTime.Today;
             SqlCommand cm = new SqlCommand("select name from supplier", connection);
+            SqlCommand cm2 = new SqlCommand("select nombres + '-' + primerApellido +'-' + segundoApellido as name from ProveedorFisicos", connection);
             connection.Open();
             SqlDataReader r = cm.ExecuteReader();
             while (r.Read())
             {
                 prov.Items.Add(r["name"].ToString());
+            }
+            connection.Close();
+            connection.Open();
+            SqlDataReader r2 = cm2.ExecuteReader();
+            while (r2.Read())
+            {
+                prov.Items.Add(r2["name"].ToString());
             }
             connection.Close();
 
@@ -133,14 +140,28 @@ namespace WareDev
 
         private void prov_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlCommand d = new SqlCommand("select Id from supplier where name= '" + prov.Text + "'", connection);
-            connection.Open();
-            SqlDataReader r = d.ExecuteReader();
-            while (r.Read())
+            SqlCommand d1 = new SqlCommand("select RFC from supplier where name= '" + prov.Text + "'", connection);
+            string[] Proveedor = (prov.Text).Split('-');
+            if(Proveedor.Length > 1 && prov.Text != "")
             {
-                txtNoPro.Text = r["Id"].ToString();
+                SqlCommand d2 = new SqlCommand("select registroFiscal from ProveedorFisicos where nombres= '" + Proveedor[0] + "' and primerApellido='" +
+                Proveedor[1] + "' and segundoApellido='" + Proveedor[2] + "'", connection);
+                connection.Open();
+                SqlDataReader r2 = d2.ExecuteReader();
+                while (r2.Read())
+                {
+                    txtNoPro.Text = r2["registroFiscal"].ToString();
+                }
+                connection.Close();
             }
-            connection.Close();
+           
+            connection.Open();
+            SqlDataReader r1 = d1.ExecuteReader();
+            while (r1.Read())
+            {
+                txtNoPro.Text = r1["RFC"].ToString();
+            }
+            connection.Close();            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -373,20 +394,7 @@ namespace WareDev
                 MessageBox.Show("Complete todos los campos.");
             }
         }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //txtTipo.Text = dataGridView1.CurrentRow.Cells["tipo"].Value.ToString();
-            //txtName.Text = dataGridView1.CurrentRow.Cells["producto"].Value.ToString();
-            //txtPrecioUnitario.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
-            //prov.Text = dataGridView1.CurrentRow.Cells["provider"].Value.ToString();
-            //txtNoPro.Text = dataGridView1.CurrentRow.Cells["numberP"].Value.ToString();
-            //txtCantidad.Text = dataGridView1.CurrentRow.Cells["amountPurchased"].Value.ToString();
-            //txtTotalCompra.Text = dataGridView1.CurrentRow.Cells["total"].Value.ToString();
-            //txtDescripcion.Text = dataGridView1.CurrentRow.Cells["descripcion"].Value.ToString();
-
-        }
-
+        
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtTipo.Text = dataGridView2.CurrentRow.Cells["tipo"].Value.ToString();
@@ -532,6 +540,20 @@ namespace WareDev
                     };
                     doc.Add(spacer);
 
+
+                    string[] proveedor = (prov.Text).Split('-');
+                    String Proveedor = "";
+                    if (proveedor.Length > 1)
+                    {
+                        foreach (var word in proveedor)
+                        {
+                            Proveedor += word + " ";
+                        }
+                    }
+                    else
+                    {
+                        Proveedor = prov.Text;
+                    }
                     //Creacion de Tabla de datos de comprador 
                     headertable.AddCell("FECHA");
                     headertable.AddCell(DateTime.Now.ToString());
@@ -541,11 +563,11 @@ namespace WareDev
                     headertable.AddCell(txtTipo.Text);
                     headertable.AddCell("PRODUCTO");
                     headertable.AddCell(txtName.Text);
-                    headertable.AddCell("DESCRIPCION");
+                    headertable.AddCell("DESCRIPCIÓN");
                     headertable.AddCell(txtDescripcion.Text);
-                    headertable.AddCell("PROVEDOR");
-                    headertable.AddCell(prov.Text);
-                    headertable.AddCell("NUMERO DE PROVEDOR");
+                    headertable.AddCell("PROVEEDOR");
+                    headertable.AddCell(Proveedor.ToString());
+                    headertable.AddCell("NÚMERO DE PROVEEDOR");
                     headertable.AddCell(txtNoPro.Text);
                     headertable.AddCell("CANTIDAD");
                     headertable.AddCell(txtCantidad.Text);

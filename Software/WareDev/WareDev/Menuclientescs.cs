@@ -16,7 +16,9 @@ namespace WareDev
              
             InitializeComponent();
             dataGridView1.Update();
-            dataGridView1.Refresh(); 
+            dataGridView1.Refresh();
+            dataGridView2.Update();
+            dataGridView2.Refresh();
         }
         
 
@@ -26,6 +28,12 @@ namespace WareDev
             //dataGridView1.DataSource = objeto.MostrarCli();
             dataGridView1.DataSource = objeto.MostrarCli();
             
+        }
+        public void MostrarClientesFisicos()
+        {
+            CN_Clientes objeto = new CN_Clientes();
+            dataGridView2.DataSource = objeto.MostrarCliFisicos();
+
         }
 
         private void InsertarFilas()
@@ -39,10 +47,12 @@ namespace WareDev
             InfoClient client = new InfoClient();
             client.SaveEdit.Visible = true;
             client.save.Visible = false;
+            //clientes fisicos
+            personaFisica fisica = new personaFisica();
+            fisica.btnEditCliente.Visible = true;
+            fisica.guardarCliente.Visible = false;
             if (dataGridView1.SelectedRows.Count > 0)
-            {
-
-                   //Editar = true; 
+            { //Editar = true; 
                    client.IDtxtbox.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                    client.Nametxt.Text = dataGridView1.CurrentRow.Cells["name"].Value.ToString();
                    client.RFCtxt.Text = dataGridView1.CurrentRow.Cells["RFC"].Value.ToString();
@@ -62,8 +72,23 @@ namespace WareDev
                    client.note.Text = dataGridView1.CurrentRow.Cells["note"].Value.ToString();
                    idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
                    client.ShowDialog();
-                
-            
+
+            } if (dataGridView2.SelectedRows.Count > 0) {
+                fisica.IDtxtbox.Text = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
+                fisica.txtNombres.Text = dataGridView2.CurrentRow.Cells["nombres"].Value.ToString();
+                fisica.txtPapellido.Text = dataGridView2.CurrentRow.Cells["primerApellido"].Value.ToString();
+                fisica.txtSapellido.Text = dataGridView2.CurrentRow.Cells["segundoApellido"].Value.ToString();
+                fisica.txtFiscal.Text = dataGridView2.CurrentRow.Cells["registroFiscal"].Value.ToString();
+                fisica.txtRazon.Text = dataGridView2.CurrentRow.Cells["razonSocial"].Value.ToString();
+                fisica.txtCiudad.Text = dataGridView2.CurrentRow.Cells["ciudad"].Value.ToString();
+                fisica.txtCalle.Text = dataGridView2.CurrentRow.Cells["calle"].Value.ToString();
+                fisica.txtNum.Text = dataGridView2.CurrentRow.Cells["numero"].Value.ToString();
+                fisica.txtLada.Text = dataGridView2.CurrentRow.Cells["lada"].Value.ToString();
+                fisica.txtTel.Text = dataGridView2.CurrentRow.Cells["telefono"].Value.ToString();
+                fisica.txtFax.Text = dataGridView2.CurrentRow.Cells["fax"].Value.ToString();
+                fisica.txtCorreo.Text = dataGridView2.CurrentRow.Cells["correo"].Value.ToString();
+                idCliente = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
+                fisica.ShowDialog();
 
             }
             else 
@@ -74,40 +99,123 @@ namespace WareDev
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             InfoClient client = new InfoClient(); 
+            personaFisica fisica = new personaFisica();
 
-            string query = "select max(Id) from clientes";
+            string query1 = "select max(Id) from clientes";
+            string query2 = "select max(Id) from clientesFisicos";
             // jess
-            //SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Jessica\Documents\fruteria.mdf; Integrated Security = True; Connect Timeout = 30");
-                //karina
-            SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
-            SqlCommand cmd = new SqlCommand(query, con);
-            try
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True");
+            //karina
+            //SqlConnection con = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
+            SqlCommand cmd1 = new SqlCommand(query1, con);
+            SqlCommand cmd2 = new SqlCommand(query2, con);
+            DialogResult respuesta = MessageBox.Show("¿Desea agregar a una persona Física?", "Mensaje", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if(respuesta == DialogResult.Yes)
             {
-                con.Open();
-                string pcount = Convert.ToString(cmd.ExecuteScalar());
-                if (pcount.Length == 0)
+                try
                 {
-                    client.IDtxtbox.Text = "1";
+                    con.Open();
+                    string pcount1 = Convert.ToString(cmd1.ExecuteScalar());
+                    string pcount2 = Convert.ToString(cmd2.ExecuteScalar());
+                    int maximo = 0;
+                    if (pcount2 != "" && pcount1 != "")
+                    {
+                        if (Convert.ToInt32(pcount1) > Convert.ToInt32(pcount2))
+                        {
+                            maximo = Convert.ToInt32(pcount1);
+                        }
+                        else
+                        {
+                            maximo = Convert.ToInt32(pcount2);
+                        }
+                    }
+
+                    if (maximo != 0)
+                    {
+                        int pcountAdd = maximo + 1;
+                        fisica.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else if (pcount2 != "")
+                    {
+                        int pcountAdd = Convert.ToInt32(pcount2) + 1;
+                        fisica.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else if (pcount1 != "")
+                    {
+                        int pcountAdd = Convert.ToInt32(pcount1) + 1;
+                        fisica.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else
+                    {
+
+                        fisica.IDtxtbox.Text = "1";
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    int pcount1 = Convert.ToInt32(pcount);
-                    int pcountAdd = pcount1 + 1;
-                    client.IDtxtbox.Text = pcountAdd.ToString();
+                    MessageBox.Show(ex.Message);
                 }
+                finally
+                {
+                    con.Close();
+                }
+                fisica.guardarCliente.Visible = true;
+                fisica.ShowDialog();
             }
-            catch (Exception ex)
+            if(respuesta == DialogResult.No)
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    con.Open();
+                    string pcount1 = Convert.ToString(cmd1.ExecuteScalar());
+                    string pcount2 = Convert.ToString(cmd2.ExecuteScalar());
+                    int maximo = 0;
+                    if (pcount2 != "" && pcount1 != "")
+                    {
+                        if (Convert.ToInt32(pcount1) > Convert.ToInt32(pcount2))
+                        {
+                            maximo = Convert.ToInt32(pcount1);
+                        }
+                        else
+                        {
+                            maximo = Convert.ToInt32(pcount2);
+                        }
+                    }
+
+                    if (maximo != 0)
+                    {
+                        int pcountAdd = maximo + 1;
+                        client.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else if (pcount2 != "")
+                    {
+                        int pcountAdd = Convert.ToInt32(pcount2) + 1;
+                        client.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else if (pcount1 != "")
+                    {
+                        int pcountAdd = Convert.ToInt32(pcount1) + 1;
+                        client.IDtxtbox.Text = pcountAdd.ToString();
+                    }
+                    else
+                    {
+
+                        client.IDtxtbox.Text = "1";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                client.save.Visible = true;
+                client.SaveEdit.Visible = false;
+                client.ShowDialog();
             }
-            finally
-            {
-                con.Close();
-            }
-            //InfoClient client= new InfoClient();
-            client.save.Visible = true;
-            client.SaveEdit.Visible = false;
-            client.ShowDialog();
+            
 
             
         }
@@ -123,6 +231,10 @@ namespace WareDev
             InfoClient cli = new InfoClient();
             cli.SaveEdit.Visible = false;
             cli.save.Visible = false;
+
+            personaFisica fisica = new personaFisica();
+            fisica.btnEditCliente.Visible = false;
+            fisica.guardarCliente.Visible = false;
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
@@ -148,13 +260,31 @@ namespace WareDev
                 cli.ShowDialog();
                  
 
+            } else if (dataGridView2.SelectedRows.Count > 0)
+            {
+                fisica.IDtxtbox.Text = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
+                fisica.txtNombres.Text = dataGridView2.CurrentRow.Cells["nombres"].Value.ToString();
+                fisica.txtPapellido.Text = dataGridView2.CurrentRow.Cells["primerApellido"].Value.ToString();
+                fisica.txtSapellido.Text = dataGridView2.CurrentRow.Cells["segundoApellido"].Value.ToString();
+                fisica.txtFiscal.Text = dataGridView2.CurrentRow.Cells["registroFiscal"].Value.ToString();
+                fisica.txtRazon.Text = dataGridView2.CurrentRow.Cells["razonSocial"].Value.ToString();
+                fisica.txtCiudad.Text = dataGridView2.CurrentRow.Cells["ciudad"].Value.ToString();
+                fisica.txtCalle.Text = dataGridView2.CurrentRow.Cells["calle"].Value.ToString();
+                fisica.txtNum.Text = dataGridView2.CurrentRow.Cells["numero"].Value.ToString();
+                fisica.txtLada.Text = dataGridView2.CurrentRow.Cells["lada"].Value.ToString();
+                fisica.txtTel.Text = dataGridView2.CurrentRow.Cells["telefono"].Value.ToString();
+                fisica.txtFax.Text = dataGridView2.CurrentRow.Cells["fax"].Value.ToString();
+                fisica.txtCorreo.Text = dataGridView2.CurrentRow.Cells["correo"].Value.ToString();
+                idCliente = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
+                fisica.ShowDialog();
+
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
 
         }
 
-    
+
 
         private void Menuclientescs_Load(object sender, EventArgs e)
         {
@@ -179,6 +309,22 @@ namespace WareDev
             dataGridView1.Columns[15].HeaderText = "CFDI";
             dataGridView1.Columns[16].HeaderText = "Note";
             dataGridView1.RowTemplate.Height = 35;
+
+            MostrarClientesFisicos();
+            dataGridView2.Columns[0].HeaderText = "ID";
+            dataGridView2.Columns[1].HeaderText = "Nombre(s)";
+            dataGridView2.Columns[2].HeaderText = "Primer apellido";
+            dataGridView2.Columns[3].HeaderText = "Segundo apellido";
+            dataGridView2.Columns[4].HeaderText = "Número de registro fiscal";
+            dataGridView2.Columns[5].HeaderText = "Razón social";
+            dataGridView2.Columns[6].HeaderText = "Calle";
+            dataGridView2.Columns[7].HeaderText = "Número";
+            dataGridView2.Columns[8].HeaderText = "Lada";
+            dataGridView2.Columns[9].HeaderText = "Teléfono";
+            dataGridView2.Columns[10].HeaderText = "Fax";
+            dataGridView2.Columns[11].HeaderText = "Email";
+            dataGridView2.RowTemplate.Height = 35;
+
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -194,9 +340,15 @@ namespace WareDev
             if(dataGridView1.SelectedRows.Count > 0)
             {
                 idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-                objetoCN.EliminarCli(idCliente);
+                objetoCN.EliminarCli(idCliente, "clientes");
                 MessageBox.Show("Cliente eliminado correctamente.");
                 MostrarClientes();
+            } else if (dataGridView2.SelectedRows.Count > 0)
+            {
+                idCliente = dataGridView2.CurrentRow.Cells["Id"].Value.ToString();
+                objetoCN.EliminarCli(idCliente, "clientesFisicos");
+                MessageBox.Show("Cliente eliminado correctamente.");
+                MostrarClientesFisicos();
             }
             else
             {
@@ -206,7 +358,15 @@ namespace WareDev
 
         private void actualizar_Click(object sender, EventArgs e)
         {
-            MostrarClientes(); 
+            MostrarClientes();
+            MostrarClientesFisicos();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView2.ReadOnly = true;
+            dataGridView2.Update();
+            dataGridView2.Refresh();
         }
     }
 }

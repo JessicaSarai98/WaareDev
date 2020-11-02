@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="WareDev.exe.manifest" size="10414">
+    <dependentAssembly dependencyType="install" codebase="WareDev.exe.manifest" size="10415">
       <assemblyIdentity name="WareDev.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>63Te37SnuS5fVB9uVV1hIFJwSp1ayAkyQhx2Gdw59lU=</dsig:DigestValue>
+        <dsig:DigestValue>BxhC8KbckJTtpM0BjGNKxNZodJAmYr9j81EFxrrbTIw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

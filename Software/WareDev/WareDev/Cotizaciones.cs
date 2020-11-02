@@ -16,45 +16,31 @@ namespace WareDev
             InitializeComponent();
 
         }
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Jessica\Documents\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         //SqlConnection connection = new SqlConnection(@"Server=tcp:OMEN-LAPTOP18\SQLEXPRESS02,49172;DataBase= fruteria; User Id=Cliente ; Password=cliente1234");
-        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\BD\fruteria.mdf;Integrated Security=True;Connect Timeout=30");
 
         SqlCommand cmd;
-        SqlCommand cmd2;
         private void cotizaciones_Load(object sender, EventArgs e)
         {
-            //Date.Value = DateTime.Today;
-            //Expiration.Value = DateTime.Today;
             txtCantidad.Enabled = false;
-            SqlCommand cm = new SqlCommand("select Id from clientes", connection);
-
-
-
-            //leyendp clientes - nombre
             SqlCommand d = new SqlCommand("select name from clientes", connection);
-            SqlCommand a = new SqlCommand("Select RFC from clientes where name='" + Customer.Text + "'", connection);
-
             connection.Open();
             SqlDataReader r = d.ExecuteReader();
-
             while (r.Read())
             {
                 Customer.Items.Add(r["name"].ToString());
-
             }
             connection.Close();
-
-            //leyendo name de finished products
-            //SqlCommand c = new SqlCommand("Select name from FinishedProducts", connection);
-            //connection.Open();
-            //SqlDataReader reg = c.ExecuteReader();
-            //while (reg.Read())
-            //{
-            //    comboBox1.Items.Add(reg["name"].ToString());
-            //}
-            //connection.Close();
+            SqlCommand cm2 = new SqlCommand("select nombres + '-' + primerApellido +'-' + segundoApellido as name from clientesFisicos", connection);
+            connection.Open();
+            SqlDataReader r2 = cm2.ExecuteReader();
+            while (r2.Read())
+            {
+                Customer.Items.Add(r2["name"].ToString());
+            }
+            connection.Close();
 
             string query = "select max(Id) from quotations";
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -175,7 +161,8 @@ namespace WareDev
 
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+                    //var imagenpath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
+                    var imagenpath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Informacion.jpeg";
 
                     using (FileStream im = new FileStream(imagenpath, FileMode.Open))
                     {
@@ -188,7 +175,8 @@ namespace WareDev
                     }
 
                     //Agregar imagen al pdf se debe poner la ruta de la imagen de infromacion esta en la carpta de imagenes del proyecto
-                    var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+                    //var Logopath = @"C:\Users\AdriFdez18\Desktop\Extra\Ware\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
+                    var Logopath = @"C:\Users\William carmona\Documents\Desarrollo\Cagada Adrian\WaareDev\Software\WareDev\WareDev\Imagenes\Logo.jpeg";
 
                     using (FileStream im = new FileStream(Logopath, FileMode.Open))
                     {
@@ -223,18 +211,32 @@ namespace WareDev
                     };
                     doc.Add(spacer);
 
+                    string[] cliente = (Customer.Text).Split('-');
+                    String Cliente = "";
+                    if (cliente.Length > 1)
+                    {
+                        foreach (var word in cliente)
+                        {
+                            Cliente += word + " ";
+                        }
+                    }
+                    else
+                    {
+                        Cliente = Customer.Text;
+                    }
+
                     //Creacion de Tabla de datos de comprador 
                     headertable.AddCell("FECHA");
                     headertable.AddCell(DateTime.Now.ToString());
                     headertable.AddCell("VALIDO HASTA");
                     headertable.AddCell(Expiration.Text);
-                    headertable.AddCell("COTIZACION");
+                    headertable.AddCell("COTIZACIÓN");
                     headertable.AddCell(txtFolio.Text);
-                    headertable.AddCell("LUGAR DE EXPEDICION");
+                    headertable.AddCell("LUGAR DE EXPEDICIÓN");
                     headertable.AddCell(place.Text);
                     headertable.AddCell("CLAVE DE CLIENTE");
-                    headertable.AddCell(Customer.Text);
-                    headertable.AddCell("CONDICION COMERCIAL");
+                    headertable.AddCell(Cliente.ToString());
+                    headertable.AddCell("CONDICIÓN COMERCIAL");
                     headertable.AddCell(Condicion.Text);
                     headertable.AddCell("RCF / ID");
                     headertable.AddCell(IdClient.Text);
@@ -244,9 +246,9 @@ namespace WareDev
                     headertable.AddCell(pallet.Text);
                     headertable.AddCell("ICOTERM");
                     headertable.AddCell(ico.Text);
-                    headertable.AddCell("Divisa");
+                    headertable.AddCell("DIVISA");
                     headertable.AddCell(divisa.Text);
-                    headertable.AddCell("Flete x Caja");
+                    headertable.AddCell("FLETE POR CAJA");
                     headertable.AddCell(flete.Text);
 
 
@@ -475,6 +477,19 @@ namespace WareDev
                 IdClient.Text = r["RFC"].ToString();
             }
             connection.Close();
+            string[] Proveedor = (Customer.Text).Split('-');
+            if (Proveedor.Length > 1 && Customer.Text != "")
+            {
+                SqlCommand d2 = new SqlCommand("select registroFiscal from clientesFisicos where nombres= '" + Proveedor[0] + "' and primerApellido='" +
+                Proveedor[1] + "' and segundoApellido='" + Proveedor[2] + "'", connection);
+                connection.Open();
+                SqlDataReader r2 = d2.ExecuteReader();
+                while (r2.Read())
+                {
+                    IdClient.Text = r2["registroFiscal"].ToString();
+                }
+                connection.Close();
+            }
         }
         Productos materia;
         private void btnArticulo_Click(object sender, EventArgs e)
@@ -621,21 +636,6 @@ namespace WareDev
             txtPrecio.Text = dataGridView1.CurrentRow.Cells["precio"].Value.ToString();
 
 
-        }
-
-        private void txtProducto_TextChanged(object sender, EventArgs e)
-        {
-            //if(this.txtProducto.Text.Length >= 1)
-            //{
-            //    SqlCommand c = new SqlCommand("select * from FinishedProducts where name= '"+txtProducto.Text+"'", connection);
-            //    SqlDataAdapter ad = new SqlDataAdapter();
-            //    ad.SelectCommand = c;
-            //    DataTable tab = new DataTable();
-            //    ad.Fill(tab);
-            //    dataGridView1.DataSource = tab; 
-
-
-            //}
         }
 
         private void txtCantidad_TextChanged_1(object sender, EventArgs e)

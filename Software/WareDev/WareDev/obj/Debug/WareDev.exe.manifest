@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OP+Ro3ovYtrqy92dAjg2qEd6rCv7oaTbQnHwK8jjtPc=</dsig:DigestValue>
+        <dsig:DigestValue>K+jNR1w3x2RuvYaZRdweEkrnroeiWbXRV3Fr0HzC8J8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,31 +62,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hOMBm9d/xxgY+KVPbI5z50VbOvIGX7RTKLdZCLdl5jg=</dsig:DigestValue>
+        <dsig:DigestValue>YxP/6+/MNxqUm8qgRUW+kq2/bbTdWoj2OYXFAkmYcuY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.exe" size="19456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccess.exe" size="22528">
       <assemblyIdentity name="DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>S24flKSfdx55/JL3cnu0scF+cWYsEj8hhpwM0BzK+0k=</dsig:DigestValue>
+        <dsig:DigestValue>C2UaI8l24vMfMkRfASwMHgnAvdEKdo5woGuTwzzQimE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Domain.exe" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Domain.exe" size="10752">
       <assemblyIdentity name="Domain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AEFYilkOTWXuLseIi6q5uD5le4xHOlKeYUKDg3kqEoc=</dsig:DigestValue>
+        <dsig:DigestValue>dUGaRHStUAzXqQWg5TWZqUstULQrzGtyif2EY6tNsjk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e4iTHkiFIq2pYmNa9WmOYsqdlEcRobicGt+ybwEriRc=</dsig:DigestValue>
+        <dsig:DigestValue>MJte4k6SS8Eo24ML74+1n63dSurzAS0SJ9/Zh9hZdrM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1736192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WareDev.exe" size="1756160">
       <assemblyIdentity name="WareDev" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8HE8QVApTAYi8f5w1jRSC3w0Dsb7vukbnu6s9cIqbXI=</dsig:DigestValue>
+        <dsig:DigestValue>CiHxywVhhcnODIU9wrAmA7gZcmGGwsU+dtklCEW+6XQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

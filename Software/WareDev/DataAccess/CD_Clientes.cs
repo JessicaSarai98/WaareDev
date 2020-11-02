@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace DataAccess
@@ -41,6 +36,20 @@ namespace DataAccess
             conexion.CerrarConexion();
             return tabla;
         }
+
+        //mostrar clientes físicos
+        public DataTable MostrarCli2()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from clientesFisicos";
+            //comando.CommandType = CommandType.StoredProcedure;
+
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
         //mostrar proveedores 
         public DataTable MostrarS()
         {
@@ -52,10 +61,21 @@ namespace DataAccess
             return tabla;
 
         }
+        //mostrar proveedores fisicos
+        public DataTable MostrarSFisicos()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from ProveedorFisicos";
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
 
         //mostrar raw 
 
-            public DataTable MostrarR()
+        public DataTable MostrarR()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select * from rawMaterials";
@@ -140,6 +160,22 @@ namespace DataAccess
 
         }
 
+        //insertar clientes fisicos
+        public void Insertar2(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            // SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "insert into clientesFisicos values(" + id + ",'" + nombres + "','" + apellido1 + "','" + 
+                apellido2 + "','" + registro + "','" + razon + "','" + ciudad + "','" + calle + "','" + numero + "','" + 
+                lada + "','" + telefono + "','" + fax + "','" + correo + "')";
+
+            comando.CommandType = CommandType.Text;
+
+            comando.ExecuteNonQuery();
+
+        }
+
         //insertar datos de usuarios
         public void InsertarU(string username, string pass, string email, string firstname, string lastname, byte[] foto)
         {
@@ -157,7 +193,17 @@ namespace DataAccess
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
-
+        //insertar datos de proveedores fisicos
+        public void InsertarSFisicos(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "insert into ProveedorFisicos values(" + id + ",'" + nombres + "','" + apellido1 + "','" +
+                apellido2 + "','" + registro + "','" + razon + "','" + ciudad + "','" + calle + "','" + numero + "','" +
+                lada + "','" + telefono + "','" + fax + "','" + correo + "')";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
         //----EDITAR----
 
         //actualizar datos CLIENTE 
@@ -177,7 +223,18 @@ namespace DataAccess
 
 
         }
-
+        //editar cliente fisico
+        public void Editarfisica(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
+        {
+            // SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "update clientesFisicos set nombres='" + nombres + "', primerApellido= '" + apellido1 + "', segundoApellido= '" + apellido2 + 
+                "', registroFiscal='" + registro + "', razonSocial='" + razon + "', ciudad='" + ciudad + "', calle='" + calle + "', numero='" + numero + 
+                "', lada='" + lada + "', telefono='" + telefono + "', fax='" + fax + "', correo='" + correo + "'  where Id='" + id + "'";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
         //actualizar datos de USUARIO
         public void EditarU(string username, string pass, string email, string firstname, string lastname, byte[] imagen, int id)
         {
@@ -200,12 +257,24 @@ namespace DataAccess
         }
 
 
-        //-----ELIMINAR-----
-        //Eliminar clientes
-        public void Eliminar(int id)
+        //actualizar datos de proveedores fisicos
+        public void EditarSFisicos(int id, string nombres, string apellido1, string apellido2, string registro, string razon,
+            string ciudad, string calle, string numero, string lada, string telefono, string fax, string correo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from clientes where Id=" + id + "";
+            comando.CommandText = "update ProveedorFisicos set nombres='" + nombres + "', primerApellido= '" + apellido1 + "', segundoApellido= '" + apellido2 +
+                "', registroFiscal='" + registro + "', razonSocial='" + razon + "', ciudad='" + ciudad + "', calle='" + calle + "', numero='" + numero +
+                "', lada='" + lada + "', telefono='" + telefono + "', fax='" + fax + "', correo='" + correo + "'  where Id='" + id + "'";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
+
+        //-----ELIMINAR-----
+        //Eliminar clientes
+        public void Eliminar(int id, string database)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from "+ database +" where Id=" + id + "";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
 
@@ -215,6 +284,7 @@ namespace DataAccess
             //comando.Parameters.Clear();
             //conexion.CerrarConexion(); 
         }
+
 
         //eliminar usuarios 
         public void EliminarU(int id)
@@ -234,6 +304,14 @@ namespace DataAccess
             comando.ExecuteNonQuery(); 
         }
 
+        //eliminar proveedores fisicos
+        public void EliminarSFisicos(int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "delete from ProveedorFisicos where Id=" + id + "";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
         //eliminar Materia Prima (Raw)
         public void EliminarR(int id)
         {
